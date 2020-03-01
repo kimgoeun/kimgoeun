@@ -1,0 +1,61 @@
+html {
+    background: #f8f8f8;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 6px 11px rgba(0, 0, 0, 0.16);
+    color: #545454;
+    max-width: 500px;
+    width: 70%;
+    height: 360px;
+    margin: 150px auto;
+}
+
+a {
+    color: burlywood;
+    text-decoration: none;
+}
+
+
+#main{
+    margin: 0 auto;
+    text-align : center;
+    padding: 110px 0;
+}
+
+#main .hello{
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0 auto;
+    font-weight: 100;
+}
+
+#main .name{
+    font-size:28px;
+    font-weight: 500;
+}
+
+#main .birth{
+    margin: 0 auto;
+    font-weight: 200;
+}
+
+#cta{
+    background-color: white;
+    border-radius: 58px;
+    box-shadow: 0 6px 11px rgba(0, 0, 0, 0.16);
+    color: #545454;
+    max-width: 150px;
+    width: 40%;
+    height: 48px;
+    margin: 80px auto;
+}
+
+#cta .intro{
+    margin: 0 auto;
+    text-align : center;
+    padding: 11.5px 0;
+}
