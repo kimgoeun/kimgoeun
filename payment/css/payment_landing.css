@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 hr{
-    border-top : 2px dashed #d3d3d3;
+    border-top : 0.124rem dashed #707070;
     border-bottom: none;
 }
 
@@ -37,19 +37,19 @@ span{
         background-position: center;
     background-color: #DEF5EE;
     height: 40vh;
-    min-height: 250px;
-    max-height: 400px;
+    min-height: 10rem;
+    max-height: 26rem;
 }
 #section1 img{
     display: block;
-    width: 100px;
+    width: 6rem;
     margin: 0 auto;
     padding-top: 7vh;
 }
 #section2{
     text-align: center;
     height: 60vh;
-    max-height: 760px;
+    max-height: 50rem;
     width: 100%;
     background: url("../asset/hand.png");
     background-repeat: no-repeat;
@@ -62,31 +62,31 @@ span{
     width: 80%;
     padding: 5%;
     position: absolute;
-    top:15vh;
+    top:20vh;
     left:5%;
 }
 
 #section2 .receipt{
-  -webkit-backdrop-filter: blur(30.8px);
-  backdrop-filter: blur(30.8px);
+  -webkit-backdrop-filter: blur(3rem);
+  backdrop-filter: blur(3rem);
   background-color: var(white);
     display: block;
-    max-width: 400px;
+    max-width: 25rem;
     margin: 0 auto;
-    height: 400px;
+    height: 22rem;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
+    border-radius: 1rem;
 }
 
 #section2 .course{
     display: block;
-    padding: 45px 8% 0;
+    padding: 2.4rem 8% 0;
 }
 #section2 .course hr{
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 #section2 h1{
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: 500;
     line-height: 1.5;
     padding: 0;
@@ -94,16 +94,16 @@ span{
     color: #3c4576;
 }
 #section2 .course span{
-    font-size: 26px;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
 #section2 .fee{
     display: block;
-    padding: 70px 20px 0;
+    padding: 3rem 8% 0;
 }
 #section2 .fee span{
-    font-size: 32px;
+    font-size: 1.7rem;
     font-weight: 600;
 }
 
@@ -111,8 +111,8 @@ span{
 
 a.btn{
     display: block;
-    max-width: 400px;
-    margin: 50px auto;
+    max-width: 23rem;
+    margin: 4rem auto;
     padding: 3px;
     text-align: center;
     color: white;
