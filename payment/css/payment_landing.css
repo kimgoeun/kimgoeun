@@ -51,9 +51,11 @@ span{
     height: 60vh;
     max-height: 50rem;
     width: 100%;
+    margin-left: -2rem;
+    padding: 0;
     background: url("../asset/hand.png");
     background-repeat: no-repeat;
-    background-size: 16rem;
+    background-size: 13rem;
     background-position: bottom left;
 }
 
@@ -122,4 +124,9 @@ a.btn{
     height: 48px;
     font-size: 20px;
     line-height: 2.4;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+a.btn:hover{
+    background-color: #2d3760;
 }
