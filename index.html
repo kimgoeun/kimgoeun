@@ -1,31 +1,610 @@
 <!DOCTYPE html>
 <html>
-    
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>김고은 웹페이지</title>
-        <meta name="theme-color" content="#ffffff">
-        <meta name="description" content="김고은의 웹페이지입니다.">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Noto+Sans+KR:100,200,300,400,500,600,700,800;display=swap" rel="stylesheet">
-        <link href="/common/asset/meta/favicon.ico" rel="icon" data-n-head="true" type="image/x-icon">
-        <link rel="stylesheet" href="main.css">
-        
-    </head>
-    <body>
-        <div id="main">
-            <p class="hello">Heollo</p>
-            <p class="name">테스트</p>
-<!--            <p class="birth">instagram ID : <a href="https://www.instagram.com/goeun_9287/">goeun_9287</a></p>-->
+<head>
+    <meta charset="UTF-8">
+    <title>학생독립만세</title>
+    <link href="common/asset/meta/favicon.ico" rel="icon" data-n-head="true" type="image/x-icon"/>
+    <link rel="canonical" href="https://www.hakdokman.com/index.html" />
+    <meta name="description" content="학생독립만세는 소득공유후불제라는 새로운 교육비 지불방식으로 다양한 분야의 취준생을 위해 '먼저 배우고, 취업 후 소득이 발생하면 교육비를 지불하는' 취업 교육을 제공하고 있습니다."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="학생독립만세"/>
+    <meta property="og:description" content="학생독립만세는 소득공유후불제라는 새로운 교육비 지불방식으로 다양한 분야의 취준생을 위해 '먼저 배우고, 취업 후 소득이 발생하면 교육비를 지불하는' 취업 교육을 제공하고 있습니다."/>
+    <meta property="og:image" content="https://www.hakdokman.com/common/asset/meta/og_image.png" />
+    <meta property="og:url" content="https://www.hakdokman.com/index.html" />
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#0a723f">
+    <link rel="stylesheet" type="text/css" href="common/css/common_new.css">
+    <link rel="stylesheet" type="text/css" href="common/css/common_page.css">
+    <link rel="stylesheet" type="text/css" href="common/css/common_page2.css">
+    <link rel="stylesheet" type="text/css" href="common/css/index.css">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P6735WT');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6735WT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <nav id="sidenav">
+        <img src="common/asset/header/close.svg" class="close">
+        <a href="/"><img src="common/asset/header/header_logo_gray.svg" class="logo"></a>
+        <ul>
+            <li class="portal_main active"><a href="/"><div class="item">메인</div></a>
+            <li class="portal_isa"><a href="./isa.html"><div class="item">소득공유 후불제란?<div></a></li>
+            <li class="portal_about"><a href="/introduce.html"><div class="item">학독만 소개</div></a></li>
+            <li class="portal_press"><a href="/press.html"><div class="item">학독만 소식</div></a></li>
+            <!--<li class="login"><a href="https://console.hakdokman.com"><div class="item">로그인</div></a></li>-->
+        </ul>
+    </nav>
+
+    <header class="m-header active">
+        <div class="container">
+            <a href="/"><img src="common/asset/header/header_logo.svg" alt="학생독립만세" id="logo"></a>
+            <div id="hambuger_menu">
+                <img src="common/asset/header/hambuger_menu.svg">
+            </div>
+            <div id="navigation">
+                <ul>
+                    <li class="portal_main active"><a href="./">메인</a>
+                    <li class="portal_isa"><a href="./isa.html">소득공유 후불제란?</a></li>
+                    <li class="portal_about"><a href="/introduce.html">학독만 소개</a></li>
+                    <li class="portal_press"><a href="/press.html">학독만 소식</a></li>
+                    <!--<li class="login"><a href="https://console.hakdokman.com">로그인</a></li>-->
+                    <!--
+                    <li class="portal_apply button"><a href="javascript:alert('메뉴 준비 중입니다')">신청&제휴</a></li>-->
+                </ul>
+            </div>
         </div>
-        <div id="cta">
-            <a href="main.html">
-                <div class="intro">
-                    들어가기
+    </header>
+
+    <!-- 개인정보 취급방침 -->
+    <div id="headline">
+        <div class="container main">
+            <div class="billborard">
+                <strong>청년의 미래에 <br />투자하세요</strong>
+                <p>청년이 성장하기 위해서는 교육비, 주거비, <br />생활비 다양한 양분들이 필요합니다. <br />학생독립만세는 이러한 청년들을 위해 <br />다양한 금융상품을 만들고 <br />성공적으로 운영해나가고 있습니다.</p>
+                <div class="in-btn">
+                    <a href="#" class="b-def">문의하기</a>
+                    <a href="#" class="b-down">투자설명회 <span>다운로드</span></a>
                 </div>
-            </a>        
+            </div>
+            <div class="m-faq">
+                <p>교육비 소득공유후불, 생활비 소액대출, <br />주거보증금 대출…</p>
+                <strong>“학생들이 정말 갚나요?”</strong>
+            </div>
+            <div class="review-list">
+                <div class="controller">
+                    <button type="button" class="btn-prev"><span>이전</span></button>
+                    <div>
+                        <a class="selected"></a>
+                        <a></a>
+                        <a></a>
+                        <a></a>
+                        <a></a>
+                        <a></a>
+                    </div>
+                    <button type="button" class="btn-next"><span>다음</span></button>
+                </div>
+                <div class="viewport">
+                    <ul>
+                        <li>
+                            <div class="thumb" style="background-image:url(common/asset/main/@thumb.jpg);"><span>항공 지상직<br />최대 납부액<br />270만 원</span></div>
+                            <div class="info">
+                                <div class="name">
+                                    <strong>박소망 님</strong>
+                                    <span>마개팅 취업스쿨 수료생</span>
+                                </div>
+                                <em>60자 까지 가능 제목을 넣는 부분인데 줄글을 바꾸는건 둘줄까지만 가능합니다. 60자 까지 가능 제목을 넣는 부분인데 줄글을 바꾸는건 둘줄까지만 가능합니다</em>
+                                <button type="button" class="b-view">후기 전문 보기</button>
+                                <p>450자 까지 가능 일하다가 디지털마케터로 전직을 결심했습니다. 사회생활을 1년 남짓 한 후였지만, 사회 초년생일 때는 모이는 돈보다 나가는 게 의외로 많아서 커리어에 추가 투자를 하는 게 재정적으로 부담이 컸어요. 그렇다고 부모님께 도움을 청하고 싶지도 않았죠. 마케팅 관련 교육과정을 검색하다가 학독만의 후불제가 눈에 띄었는데, 생소한 방식이라 처음에는 신뢰가 가지 않았어요. 그런데 차근차근 안내를 살펴보니 커리큘럼도 퀄리티가 높았고, 교육생 선발을 위한 심사 과정등이 무척 정교하게 짜여져 있다는 인상을 받았어요. 믿음을 가지고 후불제 교육을 신청했고, 전직에 성공해서 현재는 구글 전문 대행사의 AE로 일하며 월급으로 교육비를 납부하고 있습니다. 전문직으로 이직하려면 준비와 공부에 몰입할 시간이 절대적으로 중요해서, 후불제가 아니었다면 이렇게 빠르게 원하는 취업을 하기는 어려웠을 거예요. 사백오십자를 넣을 수 있을까요?</p>
+                            </div>
+                        </li>
+                        <li class="active">
+                            <div class="thumb" style="background-image:url(common/asset/main/@thumb.jpg);"><span>항공 지상직<br />최대 납부액<br />270만 원</span></div>
+                            <div class="info">
+                                <div class="name">
+                                    <strong>박소망 님</strong>
+                                    <span>마개팅 취업스쿨 수료생</span>
+                                </div>
+                                <em>“60자 까지 가능 제목을 넣는 부분인데 줄글을 바꾸는건 둘줄까지만 가능합니다”</em>
+                                <button type="button" class="b-view">후기 전문 보기</button>
+                                <p>450자 까지 가능 일하다가 디지털마케터로 전직을 결심했습니다. 사회생활을 1년 남짓 한 후였지만, 사회 초년생일 때는 모이는 돈보다 나가는 게 의외로 많아서 커리어에 추가 투자를 하는 게 재정적으로 부담이 컸어요. 그렇다고 부모님께 도움을 청하고 싶지도 않았죠. 마케팅 관련 교육과정을 검색하다가 학독만의 후불제가 눈에 띄었는데, 생소한 방식이라 처음에는 신뢰가 가지 않았어요. 그런데 차근차근 안내를 살펴보니 커리큘럼도 퀄리티가 높았고, 교육생 선발을 위한 심사 과정등이 무척 정교하게 짜여져 있다는 인상을 받았어요. 믿음을 가지고 후불제 교육을 신청했고, 전직에 성공해서 현재는 구글 전문 대행사의 AE로 일하며 월급으로 교육비를 납부하고 있습니다. 전문직으로 이직하려면 준비와 공부에 몰입할 시간이 절대적으로 중요해서, 후불제가 아니었다면 이렇게 빠르게 원하는 취업을 하기는 어려웠을 거예요. 사백오십자를 넣을 수 있을까요?</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumb" style="background-image:url(common/asset/main/@thumb.jpg);"><span>항공 지상직<br />최대 납부액<br />270만 원</span></div>
+                            <div class="info">
+                                <div class="name">
+                                    <strong>박소망 님</strong>
+                                    <span>마개팅 취업스쿨 수료생</span>
+                                </div>
+                                <em>“60자 까지 가능 제목을 넣는 부분인데 줄글을 바꾸는건 둘줄까지만 가능합니다”</em>
+                                <button type="button" class="b-view">후기 전문 보기</button>
+                                <p>450자 까지 가능 일하다가 디지털마케터로 전직을 결심했습니다. 사회생활을 1년 남짓 한 후였지만, 사회 초년생일 때는 모이는 돈보다 나가는 게 의외로 많아서 커리어에 추가 투자를 하는 게 재정적으로 부담이 컸어요. 그렇다고 부모님께 도움을 청하고 싶지도 않았죠. 마케팅 관련 교육과정을 검색하다가 학독만의 후불제가 눈에 띄었는데, 생소한 방식이라 처음에는 신뢰가 가지 않았어요. 그런데 차근차근 안내를 살펴보니 커리큘럼도 퀄리티가 높았고, 교육생 선발을 위한 심사 과정등이 무척 정교하게 짜여져 있다는 인상을 받았어요. 믿음을 가지고 후불제 교육을 신청했고, 전직에 성공해서 현재는 구글 전문 대행사의 AE로 일하며 월급으로 교육비를 납부하고 있습니다. 전문직으로 이직하려면 준비와 공부에 몰입할 시간이 절대적으로 중요해서, 후불제가 아니었다면 이렇게 빠르게 원하는 취업을 하기는 어려웠을 거예요. 사백오십자를 넣을 수 있을까요?</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumb" style="background-image:url(common/asset/main/@thumb.jpg);"><span>항공 지상직<br />최대 납부액<br />270만 원</span></div>
+                            <div class="info">
+                                <div class="name">
+                                    <strong>박소망 님</strong>
+                                    <span>마개팅 취업스쿨 수료생</span>
+                                </div>
+                                <em>“60자 까지 가능 제목을 넣는 부분인데 줄글을 바꾸는건 둘줄까지만 가능합니다”</em>
+                                <button type="button" class="b-view">후기 전문 보기</button>
+                                <p>450자 까지 가능 일하다가 디지털마케터로 전직을 결심했습니다. 사회생활을 1년 남짓 한 후였지만, 사회 초년생일 때는 모이는 돈보다 나가는 게 의외로 많아서 커리어에 추가 투자를 하는 게 재정적으로 부담이 컸어요. 그렇다고 부모님께 도움을 청하고 싶지도 않았죠. 마케팅 관련 교육과정을 검색하다가 학독만의 후불제가 눈에 띄었는데, 생소한 방식이라 처음에는 신뢰가 가지 않았어요. 그런데 차근차근 안내를 살펴보니 커리큘럼도 퀄리티가 높았고, 교육생 선발을 위한 심사 과정등이 무척 정교하게 짜여져 있다는 인상을 받았어요. 믿음을 가지고 후불제 교육을 신청했고, 전직에 성공해서 현재는 구글 전문 대행사의 AE로 일하며 월급으로 교육비를 납부하고 있습니다. 전문직으로 이직하려면 준비와 공부에 몰입할 시간이 절대적으로 중요해서, 후불제가 아니었다면 이렇게 빠르게 원하는 취업을 하기는 어려웠을 거예요. 사백오십자를 넣을 수 있을까요?</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="status-w">
+                <div class="inner">
+                    <h2>청년에게 성장을, <br />투자자에게 수익을!</h2>
+                    <p>2020.09 기준 운용현황</p>
+                    <ul>
+                        <li>
+                            <div class="box">
+                                <i>누적후불금액</i>
+                                <em>20억+ <span class="up"><span>상승</span></span></em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box">
+                                <i>누적수강생</i>
+                                <em>1,600명+ <span class="up"><span>상승</span></span></em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box">
+                                <i>손실률</i>
+                                <em>0.6% <span class="down"><span>하락</span></span></em>
+                            </div>
+                            <div class="noti">
+                                <button type="button">산정근거</button>
+                                <p><span>투자상품의 상품별 모집금액이 <br />가중 평균된 예상 수익률 (손실 미반영)</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box">
+                                <i>기대수익률</i>
+                                <em>11%</em>
+                            </div>
+                            <div class="noti">
+                                <button type="button">산정근거</button>
+                                <p><span>투자상품의 상품별 모집금액이 <br /> 가중 평균된 예상 수익률 (손실 미반영)</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fund-wrap">
+                <h2>가장 미래지향적인 투자</h2>
+                <p>내일의 전문인력에 투자합니다</p>
+                <div class="fund-list">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="thumb" style="background-image:url('common/asset/main/@thumb02.png');"></span>
+                                <div class="info">
+                                    <div class="comp"><img src="common/asset/main/logo01.png" alt="구공팩토리" /></div>
+                                    <span class="cate">개발</span>
+                                    <strong>35,000,000원</strong>
+                                    <div class="s-info">
+                                        <span class="pay">평균초봉</span>
+                                        <span class="sup">원티드 제공</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="thumb" style="background-image:url('common/asset/main/@thumb02.png');"></span>
+                                <div class="info">
+                                    <div class="comp"><img src="common/asset/main/logo01.png" alt="구공팩토리" /></div>
+                                    <span class="cate">개발</span>
+                                    <strong>35,000,000원</strong>
+                                    <div class="s-info">
+                                        <span class="pay">평균초봉</span>
+                                        <span class="sup">원티드 제공</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="thumb" style="background-image:url('common/asset/main/@thumb02.png');"></span>
+                                <div class="info">
+                                    <div class="comp"><img src="common/asset/main/logo01.png" alt="구공팩토리" /></div>
+                                    <span class="cate">개발</span>
+                                    <strong>35,000,000원</strong>
+                                    <div class="s-info">
+                                        <span class="pay">평균초봉</span>
+                                        <span class="sup">원티드 제공</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="thumb" style="background-image:url('common/asset/main/@thumb02.png');"></span>
+                                <div class="info">
+                                    <div class="comp"><img src="common/asset/main/logo01.png" alt="구공팩토리" /></div>
+                                    <span class="cate">개발</span>
+                                    <strong>35,000,000원</strong>
+                                    <div class="s-info">
+                                        <span class="pay">평균초봉</span>
+                                        <span class="sup">원티드 제공</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="thumb" style="background-image:url('common/asset/main/@thumb02.png');"></span>
+                                <div class="info">
+                                    <div class="comp"><img src="common/asset/main/logo01.png" alt="구공팩토리" /></div>
+                                    <span class="cate">개발</span>
+                                    <strong>35,000,000원</strong>
+                                    <div class="s-info">
+                                        <span class="pay">평균초봉</span>
+                                        <span class="sup">원티드 제공</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="thumb" style="background-image:url('common/asset/main/@thumb02.png');"></span>
+                                <div class="info">
+                                    <div class="comp"><img src="common/asset/main/logo01.png" alt="구공팩토리" /></div>
+                                    <span class="cate">개발</span>
+                                    <strong>35,000,000원</strong>
+                                    <div class="s-info">
+                                        <span class="pay">평균초봉</span>
+                                        <span class="sup">원티드 제공</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="thumb" style="background-image:url('common/asset/main/@thumb02.png');"></span>
+                                <div class="info">
+                                    <div class="comp"><img src="common/asset/main/logo01.png" alt="구공팩토리" /></div>
+                                    <span class="cate">개발</span>
+                                    <strong>35,000,000원</strong>
+                                    <div class="s-info">
+                                        <span class="pay">평균초봉</span>
+                                        <span class="sup">원티드 제공</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="controller">
+                    <button type="button" class="btn-prev"><span>이전</span></button>
+                    <button type="button" class="btn-next"><span>다음</span></button>
+                </div>
+            </div>
+            <div class="class-wrap">
+                <div class="viewport">
+                    <div class="cnts">
+                        <div class="inner">
+                            <div class="thumb" style="background-image:url(common/asset/main/@thumb.jpg);"><span>2020 구공팩토리 수업 사진</span></div>
+                            <div class="info">
+                                <div class="box">
+                                    <strong>소득공유 후불제 <br /> 적용 클래스 <br />수료 횟수</strong>
+                                    <div>
+                                        <span>전체 총</span>
+                                        <em>42+</em>
+                                    </div>
+                                </div>
+                                <p>학생독립만세  2019년 3월 <br />소득공유 도입 운영데이터</p>
+                                <a href="#" class="btn-dirgo">수업보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cnts type2">
+                        <div class="inner">
+                            <div class="thumb" style="background-image:url(common/asset/main/@thumb.jpg);"><span>2020 구공팩토리 수업 사진</span></div>
+                            <div class="info">
+                                <div class="box">
+                                    <strong>소득공유 후불제 <br /> 적용 클래스 <br />수료 횟수</strong>
+                                    <div>
+                                        <span>전체 총</span>
+                                        <em>42+</em>
+                                    </div>
+                                </div>
+                                <p>학생독립만세  2019년 3월 <br />소득공유 도입 운영데이터</p>
+                                <a href="#" class="btn-dirgo">수업보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cnts type3">
+                        <div class="inner">
+                            <div class="thumb" style="background-image:url(common/asset/main/@thumb.jpg);"><span>2020 구공팩토리 수업 사진</span></div>
+                            <div class="info">
+                                <div class="box">
+                                    <strong>소득공유 후불제 <br /> 적용 클래스 <br />수료 횟수</strong>
+                                    <div>
+                                        <span>전체 총</span>
+                                        <em>42+</em>
+                                    </div>
+                                </div>
+                                <p>학생독립만세  2019년 3월 <br />소득공유 도입 운영데이터</p>
+                                <a href="#" class="btn-dirgo">수업보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="controller">
+                    <button type="button" class="btn-prev"><span>이전</span></button>
+                    <div>
+                        <a class="selected"></a>
+                        <a></a>
+                        <a></a>
+                    </div>
+                    <button type="button" class="btn-next"><span>다음</span></button>
+                </div>
+            </div>
+            <div class="introduce">
+                <div class="cnts top">
+                    <div class="inner">
+                        <h2>청년 금융 <br />생태계를 만듭니다.</h2>
+                        <div>
+                            <a href="#" class="btn-dirgo">회사소개</a>
+                            <p>청년의 성장가능성이 경제적 문턱에 가로막히는 일이 없도록 학생독립만세가 함께합니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <span></span>
+                <div class="cnts btm">
+                    <div class="inner">
+                        <h2>대표상품 소개 <span>소득공유 <br />(Income Share Agreement)</span></h2>
+                        <div>
+                            <a href="#" class="btn-dirgo">소개영상</a>
+                            <p>교육비를 내지 않고 먼저 교육을 받은 뒤 일정 소득이 발생하면 정해진 횟수만큼 월소득의 N%를 납부합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="report-down">
+                <a href="#" class="b-down">소득공유 후불제 혁신리포트 2020 <span>다운로드</span></a>
+            </div>
+            <div class="away">
+                <p>모두가 함께 성장하는 방법</p>
+                <h2>청년 금융 플랫폼으로 <br />만듭니다.</h2>
+                <div>
+                    <h3>임팩트 가치 실현</h3>
+                    <ul>
+                        <li>
+                            <span>임팩트 투자수익</span>
+                            <em>투자자</em>
+                        </li>
+                        <li>
+                            <span>경제적 장벽 제거</span>
+                            <em>청년</em>
+                        </li>
+                        <li>
+                            <span>금융 및 관리 솔루션 제공</span>
+                            <em>교육, 주거 등<br />청년 기반 서비스</em>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="platform">
+                <h2><span>학생독립만세의</span>청년 금융 플랫폼은</h2>
+                <ul>
+                    <li>
+                        <div>
+                            <em>전문성</em>
+                            <p>청년전용 상품 설계에서 학생 심사평가, <br />납부관리와 수익분배에 이르기까지  <br />통합 컨설팅&amp;운영이 가능한 <br /> 국내 유일의 팀입니다. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <em>리스크 관리</em>
+                            <p>부도율 0.2%  <br />다년간 청년금융상품을 <br />서비스해 온 노하우가  <br />정교한 리스크 관리로 증명됩니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <em>임팩트</em>
+                            <p>잠재력은 충분하지만, <br />비용 문제로 성장이 미뤄지고 있는 <br />청년에게 투자합니다. <br />성장의 열매가 수익으로 돌아오는 <br />선순환 임팩트투자를 경험하세요.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="fun-partner">
+                <p>임팩트 투자로 <br />‘가치’와 ‘수익’을 한번에</p>
+                <h2>투자 파트너</h2>
+                <ul>
+                    <li><a href="#"><img src="common/asset/main/partner_fun01.png" alt="I.SEOUL.U" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner_fun02.png" alt="신용보증기금" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner_fun03.png" alt="연세대학교 기술지주회사" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner_fun04.png" alt="함께일하는재단" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner_fun05.png" alt="sopoong" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner_fun06.png" alt="NH농협은행" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner_fun07.png" alt="한국사회투자" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner_fun08.png" alt="한국토지주택공사" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner_fun09.png" alt="CrePASS" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner_fun10.png" alt="LH소셜벤처" /></a></li>
+                </ul>
+                <div class="in-btn">
+                    <a href="#" class="b-down">투자설명서 <span>다운로드</span></a>
+                </div>
+            </div>
+            <div class="edu-partner">
+                <p>소득공유 솔루션 도입으로 <br />‘학생성장’과 ‘기관성장’을 동시에</p>
+                <h2>교육 파트너</h2>
+                <ul>
+                    <li><a href="#"><img src="common/asset/main/partner_edu01.png" alt="SPARTA" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner_edu02.png" alt="오소마" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner_edu03.png" alt="구공팩토리" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner_edu04.png" alt="comento" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner_edu05.png" alt="academy JUNGLE" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner_edu06.png" alt="항공취업연구소" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner_edu07.png" alt="LEARNING SPOONS" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner_edu08.png" alt="VDAS" /></a></li>
+                </ul>
+                <div class="in-btn">
+                    <a href="#" class="b-down">제휴제안서 <span>다운로드</span></a>
+                </div>
+            </div>
+            <div class="partner">
+                <h2>파트너소개</h2>
+                <ul>
+                    <li><a href="#"><img src="common/asset/main/partner01.png" alt="서울창조경제혁신센터" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner02.png" alt="D.CAMP" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner03.png" alt="연세대학교 고등교육혁신원" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner04.png" alt="대전대학교 LINK사업단 - CEBIT" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner05.png" alt="법무법인 지평" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner06.png" alt="교육부" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner07.png" alt="MG희망나눔 - 소셜 성장 지원사업" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner08.png" alt="보증금지우개 무방" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner09.png" alt="한국사회적기업진흥원 - 사회적기업가 육성사업" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner10.png" alt="STARTUP AUDITION - E*5 KAIST" /></a></li>
+                    <li><a href="#"><img src="common/asset/main/partner11.png" alt="FRONT1 - Operated by D.CAMP" /></a></li>
+                </ul>
+            </div>
+            <div class="m-news">
+                <h2>언론에 보도된 학생독립만세</h2>
+                <div class="hash-t">
+                    <a href="#">#청년금융</a>
+                    <a href="#">#소액투자</a>
+                    <a href="#">#소득공유</a>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="thumb" style="background-image:url(common/asset/main/@thumb.jpg);"></span>
+                            <div class="info">
+                                <strong>기발한 아이디어로 사회문제 해결하는 청년 소셜벤처 소개합니다!</strong>
+                                <p>취업전선에서 살아남기 위해 많은 청년들이 자기계발하며 취업준비에 열중하고 있다. 문제는 교육 및 취업준비에는 막대한 돈이 들어간다는 점이다. 교육비는 나날이 증대되는…</p>
+                                <div>
+                                    <span class="type">이로운넷</span>
+                                    <span class="date">2020.09.11</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="thumb" style="background-image:url(common/asset/main/@thumb.jpg);"></span>
+                            <div class="info">
+                                <strong>기발한 아이디어로 사회문제 해결하는 청년 소셜벤처 소개합니다!</strong>
+                                <p>취업전선에서 살아남기 위해 많은 청년들이 자기계발하며 취업준비에 열중하고 있다. 문제는 교육 및 취업준비에는 막대한 돈이 들어간다는 점이다. 교육비는 나날이 증대되는…</p>
+                                <div>
+                                    <span class="type">이로운넷</span>
+                                    <span class="date">2020.09.11</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="thumb" style="background-image:url(common/asset/main/@thumb.jpg);"></span>
+                            <div class="info">
+                                <strong>기발한 아이디어로 사회문제 해결하는 청년 소셜벤처 소개합니다!</strong>
+                                <p>취업전선에서 살아남기 위해 많은 청년들이 자기계발하며 취업준비에 열중하고 있다. 문제는 교육 및 취업준비에는 막대한 돈이 들어간다는 점이다. 교육비는 나날이 증대되는…</p>
+                                <div>
+                                    <span class="type">이로운넷</span>
+                                    <span class="date">2020.09.11</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="thumb" style="background-image:url(common/asset/main/@thumb.jpg);"></span>
+                            <div class="info">
+                                <strong>기발한 아이디어로 사회문제 해결하는 청년 소셜벤처 소개합니다!</strong>
+                                <p>취업전선에서 살아남기 위해 많은 청년들이 자기계발하며 취업준비에 열중하고 있다. 문제는 교육 및 취업준비에는 막대한 돈이 들어간다는 점이다. 교육비는 나날이 증대되는…</p>
+                                <div>
+                                    <span class="type">이로운넷</span>
+                                    <span class="date">2020.09.11</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="thumb" style="background-image:url(common/asset/main/@thumb.jpg);"></span>
+                            <div class="info">
+                                <strong>기발한 아이디어로 사회문제 해결하는 청년 소셜벤처 소개합니다!</strong>
+                                <p>취업전선에서 살아남기 위해 많은 청년들이 자기계발하며 취업준비에 열중하고 있다. 문제는 교육 및 취업준비에는 막대한 돈이 들어간다는 점이다. 교육비는 나날이 증대되는…</p>
+                                <div>
+                                    <span class="type">이로운넷</span>
+                                    <span class="date">2020.09.11</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="thumb" style="background-image:url(common/asset/main/@thumb.jpg);"></span>
+                            <div class="info">
+                                <strong>기발한 아이디어로 사회문제 해결하는 청년 소셜벤처 소개합니다!</strong>
+                                <p>취업전선에서 살아남기 위해 많은 청년들이 자기계발하며 취업준비에 열중하고 있다. 문제는 교육 및 취업준비에는 막대한 돈이 들어간다는 점이다. 교육비는 나날이 증대되는…</p>
+                                <div>
+                                    <span class="type">이로운넷</span>
+                                    <span class="date">2020.09.11</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="btn-more">
+                    <a href="#">더 보기</a>
+                </div>
+            </div>
+            <div class="send-mail">
+                <a href="#"><span>문의하기</span></a>
+            </div>
         </div>
-        
-    </body>
-    
+    </div>
+
+    <!-- 최하단 푸터 영역 -->
+    <footer>
+        <div class="container">
+            <div class="box_logo">
+                <img class="logo" src="common/asset/footer/footer_logo.png">
+            </div>
+            <div class="box_info">
+                <p class="company_name">주식회사 학생독립만세</p>
+                <p class="address">
+                    서울시 마포구 마포대로 122 프론트원 13층 학생독립만세<br>
+                    대표자 : 장윤석 ㅣ 사업자 등록번호 : 396-87-00993 <br>
+                    통신판매업 신고번호 : 2019-서울종로-0519</p>
+                <p class="terms"><a href="/privacy.html">개인정보 취급방침</a> ㅣ <a href="/terms.html">서비스 이용약관</a></p>
+            </div>
+            <div class="box_contact">
+                <p class="title">이메일</p>
+                <p class="content"><a href="mailto:contact@hakdokman.com">contact@hakdokman.com</a></p>
+                <p class="title">문의전화</p>
+                <p class="content"><a href="tel:02-6951-1119">02-6951-1119</a></p>
+                <div class="icon_container">
+                    <a href="https://www.facebook.com/hakdokman/" target="_blank"><img class="icon" src="common/asset/footer/ico_fb.png"></a>
+                    <a href="https://www.youtube.com/channel/UCN3HZHDVT1qVqBSHuijOU7w" target="_blank"><img class="icon" src="common/asset/footer/ico_youtube.png"></a>
+                    <a href="https://www.instagram.com/hakdokman/" target="_blank"><img class="icon" src="common/asset/footer/ico_instagram.png"></a>
+                    <a href="https://blog.naver.com/hakdokman" target="_blank"><img class="icon" src="common/asset/footer/ico_naverblog.png"></a>
+                    <a href="https://pf.kakao.com/_KxmKxbj" target="_blank"><img class="icon" src="common/asset/footer/ico_kakao.png"></a>
+                    <a href="https://brunch.co.kr/@hakdokman" target="_blank"><img class="icon" src="common/asset/footer/ico_brunch.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="copyright">Copyright ⓒ  Hakdokman Inc All rights reserved.</div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="common/js/common.js"></script>
+    <script src="common/js/common_page.js"></script>
+</body>
 </html>

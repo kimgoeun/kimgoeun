@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700,800|Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean');
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.section {
+    background-color: white;
+    padding: 50px;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: -0.2px;
+    color: #515151;
+}
+
+.content_title {
+    margin-bottom: 50px;
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: -0.3px;
+    color: #515151;
+    text-align: center;
+}
+
+.item_list::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.mobile_br {
+    display: none;
+}
+
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}  
+    
+@media screen and (max-width: 1280px){
+}
+
+@media screen and (max-width: 740px){
+    .section {
+        padding: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.56;
+        letter-spacing: -0.2px;
+    }
+
+    .mobile_br {
+        display: inline-block;
+    }
+
+    .br_mobile_none {
+        display: none;
+    }
+}
