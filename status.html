@@ -1,0 +1,87 @@
+<!Doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>작업목록</title>
+		<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+		<style>
+			body {
+				margin: 0;
+				padding: 0 0 20px;
+			}
+			body > h1 {
+				margin: 0;
+				padding: 15px 20px;
+				font-size: 26px;
+				background: #000;
+				color: #fff;
+			}
+			a {
+				color: #444;
+			}
+			section {
+				padding: 20px 10px 0;
+			}
+			section > h1 {
+				margin: 0;
+				font-size: 18px;
+			}
+			table {
+				width: 100%;
+				margin-top: 10px;
+				border: 1px solid #fff;
+				border-spacing: 0;
+			}
+			th, td {
+				padding: 7px 10px;
+				text-align: left;
+				/*border-left: 1px solid #fff;*/
+				font-size: 14px;
+			}
+			td {
+				border-bottom: 1px dashed #ccc;
+			}
+			th {
+				width: 25%;
+				background: #333;
+				border-bottom: 1px dashed #111;
+				color: #fff;
+				font-weight: normal;
+			}
+			tr:first-child th, tr:first-child td {
+				border-top: none;
+			}
+			tr.modify td {
+				background: #eee;
+			}
+			tr.add td {
+				background: #fff7d4;
+			}
+			tr.acc-add td {
+				/* background: #f5daff; */
+			}
+		</style>
+	</head>
+	<body>
+		<h1>List</h1>
+		<section>
+			<table>
+				<tr>
+					<th>index</th>
+					<td><a href="index.html" target="_blank">index.html</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>문의하기 팝업</th>
+					<td><a href="index_popup.html" target="_blank">index_popup.html</a></td>
+					<td>제출하기 버튼 활성화 class는 주석 처리해두었습니다.</td>
+				</tr>
+				<tr>
+					<th>alert 팝업</th>
+					<td><a href="index_alert.html" target="_blank">index_alert.html</a></td>
+					<td></td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</html>

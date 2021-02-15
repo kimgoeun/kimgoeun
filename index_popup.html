@@ -25,7 +25,7 @@
     })(window,document,'script','dataLayer','GTM-P6735WT');</script>
     <!-- End Google Tag Manager -->
 </head>
-<body>
+<body style="overflow:hidden;"><!--  팝업 띄울때 overflow:hidden 추가 -->
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6735WT"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -34,7 +34,7 @@
         <img src="common/asset/header/close.svg" class="close">
         <a href="/"><img src="common/asset/header/header_logo_gray.svg" class="logo"></a>
         <ul>
-            <li class="portal_main active"><a href="youthloan.html"><div class="item">소액대출 신청</div></a></li>
+            <li class="portal_main active"><a href="/"><div class="item">메인</div></a></li>
             <li class="portal_isa"><a href="./isa.html"><div class="item">소득공유 후불제란?</div></a></li>
             <li class="portal_about"><a href="/introduce.html"><div class="item">학독만 소개</div></a></li>
             <li class="portal_press"><a href="/press.html"><div class="item">학독만 소식</div></a></li>
@@ -50,7 +50,7 @@
             </div>
             <div id="navigation">
                 <ul>
-                    <li class="portal_main active"><a href="youthloan.html">소액대출 신청</a>
+                    <li class="portal_main active"><a href="./">메인</a>
                     <li class="portal_isa"><a href="./isa.html">소득공유 후불제란?</a></li>
                     <li class="portal_about"><a href="/introduce.html">학독만 소개</a></li>
                     <li class="portal_press"><a href="/press.html">학독만 소식</a></li>
@@ -62,14 +62,13 @@
         </div>
     </header>
 
-    <!-- 개인정보 취급방침 -->
     <div id="headline">
         <div class="container main">
             <div class="billborard">
-                <strong>청년의 미래에 <br />투자합니다.</strong>
+                <strong>청년의 미래에 <br />투자하세요</strong>
                 <p>청년이 성장하기 위해서는 교육비, 주거비, <br />생활비 다양한 양분들이 필요합니다. <br />학생독립만세는 이러한 청년들을 위해 <br />다양한 금융상품을 만들고 <br />성공적으로 운영해나가고 있습니다.</p>
                 <div class="in-btn">
-                    <a href="index_popup.html" class="b-def">문의하기</a>
+                    <a href="#" class="b-def">문의하기</a>
                     <a href="#" class="b-down">투자설명회 <span>다운로드</span></a>
                 </div>
             </div>
@@ -578,8 +577,56 @@
                 </div>
             </div>
             <div class="send-mail">
-                <a href="index_popup.html"><span>문의하기</span></a>
+                <a href="#"><span>문의하기</span></a>
             </div>
+            <!-- 문의하기 layer -->
+            <div class="dimd-layer"><!--  팝업 띄울때 body태그에 overflow:hidden 추가 -->
+                <div class="inner-box">
+                    <section class="pop-sendpopup">
+                        <h1>HDM에 컨텍하기</h1>
+                        <div class="form">
+                            <ul>
+                                <li>
+                                    <label for="name">성함</label>
+                                    <input type="text" id="name" placeholder="성함" />
+                                </li>
+                                <li>
+                                    <label for="tell">연락처</label>
+                                    <input type="text" id="tell" placeholder="연락처" />
+                                </li>
+                                <li>
+                                    <label for="cName">회사명</label>
+                                    <input type="text" id="cName" placeholder="회사명" />
+                                </li>
+                                <li>
+                                    <label for="eMail">이메일</label>
+                                    <input type="text" id="eMail" placeholder="이메일" class="err" />
+                                    <p class="err">내용을 입력해주세요.</p>
+                                </li>
+                            </ul>
+                            <div class="cus-type">
+                                <h2>고객유형</h2>
+                                <ul>
+                                    <li><input type="radio" name="cusType" id="type1"><label for="type1">일반 투자자</label></li>
+                                    <li><input type="radio" name="cusType" id="type2"><label for="type2">임팩트 투자자</label></li>
+                                    <li><input type="radio" name="cusType" id="type3"><label for="type3">교육기관</label></li>
+                                    <li><input type="radio" name="cusType" id="type4"><label for="type4">컨설팅 요청</label></li>
+                                </ul>
+                                <p class="err">내용을 입력해주세요.</p>
+                            </div>
+                            <div class="text-area">
+                                <label for="cnts">문의사항(직접 입력)</label>
+                                <textarea id="cnts" placeholder="문의사항(직접 입력)"></textarea>
+                            </div>
+                            <div class="agree"><input type="checkbox" id="agree" /><label for="agree">개인정보 수집 이용 동의</label><a href="#" class="c-view"><span>내용보기</span></a></div>
+                            <div class="agree err"><input type="checkbox" id="agree" /><label for="agree">개인정보 수집 이용 동의</label><a href="#" class="c-view"><span>내용보기</span></a></div>
+                            <button type="submit">제출하기</button><!-- 활성화 class="active" 추가 -->
+                        </div>
+                        <button type="button" class="btn-close"><span>HDM에 컨텍하기 창 닫기</span></button>
+                    </section>
+                </div>
+            </div>
+            <!-- //문의하기 layer -->
         </div>
     </div>
 

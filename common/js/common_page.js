@@ -695,8 +695,8 @@ function loadApplyPopup(formType){
     // 스크립트 로드가 끝나면 해당 지원서용 파일을 로드한다
     loadStyle('./css/form.css');
     // 유효성 검증을 위한 스크립트 로드
-    loadScript('../js/type.js');
-    loadScript('../js/form.js');
+    loadScript('/common/js/type.js');
+    loadScript('/common/js/form.js');
 
     recreateNode(o('apply_popup').bgcover, true); // bgcover에 있던 이벤트 리스너 제거
     var loadFunction = function(){
@@ -705,8 +705,8 @@ function loadApplyPopup(formType){
             $('.btn_apply.student, .btn_apply.teacher').removeClass('disabled');
         })
     }
-    if(isScriptLoaded('../js/applyForm.js')) loadFunction();
-    else loadScript('../js/applyForm.js', loadFunction);
+    if(isScriptLoaded('/common/js/applyForm.js')) loadFunction();
+    else loadScript('/common/js/applyForm.js', loadFunction);
 }
 
 // id 항목으로의 부드러운 스크롤을 위한 함수
