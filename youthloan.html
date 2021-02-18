@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- 헤더, 푸터-->
-    <link rel="stylesheet" type="text/css" href="common/css/common_page2.css"/>
+    <link rel="stylesheet" type="text/css" href="common/css/common_page2_1.css"/>
 
     <title>청년금융만세 소액대출 서비스</title>
 </head>
@@ -24,6 +24,7 @@
     </h1>
 </section>
 
+<!--스탭1-->
 <section class="section" id="section2">
     <div class="box">
         <h4>STEP1 - 본인을 인증해주세요.</h4>
@@ -103,7 +104,9 @@
         </form>
     </div>
 </section>
-
+    
+    
+<!--스탭2-->
 <section class="section" id="section3">
     <div class="box">
         <h4>STEP2 - #{이름}님의 소속을 알려주세요. </h4>
@@ -123,15 +126,16 @@
                 <label class="form-label">#{이름}님의 소속 정보를 입력해주세요. </label>
             </div>
             <div class="form-floating mb-3">
-                <input type="name" class="form-control" id="floatingInput" placeholder="">
+                <input type="name" class="form-control" id="floatingInput" placeholder="학교명">
                 <label for="floatingInput">학교명</label>
             </div>
+            
             <div class="form-floating mb-3">
-                <input type="name" class="form-control" id="floatingInput" placeholder="">
+                <input type="name" class="form-control" id="floatingInput" placeholder="학과명">
                 <label for="floatingInput">학과명</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="name" class="form-control" id="floatingInput" placeholder="">
+                <input type="name" class="form-control" id="floatingInput" placeholder="이수학기">
                 <label for="floatingInput">이수학기</label>
             </div>
 
@@ -175,15 +179,87 @@
     </div>
 </section>
 
+    
+<!--스탭3-->
+<section class="section" id="section4">
+    <div class="box">
+        <h4>STEP3 - 원하는 대출 정보를 입력해주세요.</h4>
+
+        <fieldset>
+            <div class="mb-3">
+                <label for="Select" class="form-label">대출 희망 금액</label>
+                <select id="Select" class="form-select">
+                    <option>30만원</option>
+                    <option>40만원</option>
+                    <option>50만원</option>
+                    <option>60만원</option>
+                    <option>70만원</option>
+                    <option>80만원</option>
+                    <option>90만원</option>
+                    <option>100만원</option>
+                </select>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <div class="mb-3">
+                <label for="Select" class="form-label">상환 기간</label>
+                <select id="Select" class="form-select">
+                    <option>1개월</option>
+                    <option>2개월</option>
+                    <option>3개월</option>
+                    <option>4개월</option>
+                    <option>5개월</option>
+                    <option>6개월</option>
+                </select>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <div class="mb-3">
+                <label for="Select" class="form-label">상환 방식</label>
+                <select id="Select" class="form-select">
+<!--                    <option>기간 안에 언제든 돈이 생기면 갚을래요(자유상환)</option>-->
+                    <option>매월 이자만 내다가 만기일에 대출한 원금 전액을 한번에 갚을래요(만기일시상환)</option>
+                    <option>대출금과 이자를 매월 균등한 금액으로 나누어 갚을래요(원리금균등분할)</option>
+                </select>
+            </div>
+        </fieldset>
+        
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">상환 계획 입력</label>
+            <p class="input_tip">재원 마련 방법 및 기간 등, 대출금을 어떻게 갚으실 계획이신가요?</p>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="1개월 후 알바비 입금되면 그때 상환할 예정입니다."></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label text_field_label">대출 목적</label>
+            <p class="input_tip">대출금을 어디에 사용하실 계획이신가요?</p>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="그동안 학교 공부와 생활비를 벌기 위한 아르바이트를 병행하면서 시간적, 체력적인 한계를 많이 느꼈습니다. 공부에 집중해야 하는 상황에서도 아르바이트에 시간을 쏟아야 한다는 점이 계속되는 아쉬움이었습니다. 전역 후에 공부에만 집중하면서 학점을 끌어올리고, 진로로 선택할 세부 전공 분야를 고를 수 있도록 공부에 몰입하려고 합니다."></textarea>
+        </div>
+    </div>
+</section>
+    
+<!--스탭4-->
+<section class="section" id="section5">
+    <div class="box">
+        <h4>STEP4 - 추가로 어필할 게 있으신가요?</h4>
+        
+    </div>
+</section>
+    
+    
+<!-- 단계 버튼 -->
 <section class="section">
     <button type="button" class="btn pre_btn">전 단계로</button>
     <button type="button" class="btn next_btn">다음 단계로</button>
 </section>
 
+    
+    
 <footer>
     <div class="container">
         <div class="box_logo">
-            <img class="logo" src="common/asset/footer/footer_logo.png" alt="학생독립만세">
+            <img class="logo" src="/common/asset/footer/footer_logo.png" alt="학생독립만세">
         </div>
         <div class="box_info">
             <p class="company_name">주식회사 학생독립만세</p>
@@ -200,22 +276,22 @@
             <p class="content"><a href="tel:02-6951-1119">02-6951-1119</a></p>
             <div class="icon_container">
                 <a href="https://www.facebook.com/hakdokman/" target="_blank"><img class="icon"
-                                                                                   src="common/asset/footer/ico_fb.png"
+                                                                                   src="/common/asset/footer/ico_fb.png"
                                                                                    alt="페이스북"></a>
                 <a href="https://www.youtube.com/channel/UCN3HZHDVT1qVqBSHuijOU7w" target="_blank"><img class="icon"
-                                                                                                        src="common/asset/footer/ico_youtube.png"
+                                                                                                        src="/common/asset/footer/ico_youtube.png"
                                                                                                         alt="유투브"></a>
                 <a href="https://www.instagram.com/hakdokman/" target="_blank"><img class="icon"
-                                                                                    src="common/asset/footer/ico_instagram.png"
+                                                                                    src="/common/asset/footer/ico_instagram.png"
                                                                                     alt="인스타그램"></a>
                 <a href="https://blog.naver.com/hakdokman" target="_blank"><img class="icon"
-                                                                                src="common/asset/footer/ico_naverblog.png"
+                                                                                src="/common/asset/footer/ico_naverblog.png"
                                                                                 alt="네이버블로그"></a>
                 <a href="https://pf.kakao.com/_KxmKxbj" target="_blank"><img class="icon"
-                                                                             src="common/asset/footer/ico_kakao.png"
+                                                                             src="/common/asset/footer/ico_kakao.png"
                                                                              alt="카카오"></a>
                 <a href="https://brunch.co.kr/@jokerjang" target="_blank"><img class="icon"
-                                                                               src="common/asset/footer/ico_brunch.png"
+                                                                               src="/common/asset/footer/ico_brunch.png"
                                                                                alt="브런치"></a>
             </div>
         </div>

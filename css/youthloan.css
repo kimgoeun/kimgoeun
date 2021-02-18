@@ -176,6 +176,47 @@ p{
     font-size: 18px;
 }
 
+.input_tip{
+    line-height: 1.4;
+    font-size: 13px;
+    margin:0 0 7px;
+    color: #6b79bc;
+}
+
+#section4 fieldset{
+    margin-bottom: 20px;
+}
+#section4 .text_field_label{
+    margin-top: 20px;
+}
+
+.btn-outline-primary {
+  color: #555;
+  border-color: #00aa5f;
+    font-size: 13px;
+    padding: 10px;
+}
+.btn-outline-primary:hover {
+  color: #00aa5f;
+  background-color: #def5ee;
+  border-color: #00aa5f;
+}
+.btn-check:focus + .btn-outline-primary, .btn-outline-primary:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
+}
+.btn-check:checked + .btn-outline-primary, .btn-check:active + .btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show {
+  color: #fff;
+  background-color: #00aa5f;
+  border-color: #00aa5f;
+}
+.btn-check:checked + .btn-outline-primary:focus, .btn-check:active + .btn-outline-primary:focus, .btn-outline-primary:active:focus, .btn-outline-primary.active:focus, .btn-outline-primary.dropdown-toggle.show:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
+}
+.btn-outline-primary:disabled, .btn-outline-primary.disabled {
+  color: #00aa5f;
+  background-color: transparent;
+}
+
 
 #section2 .col-1{
     display: inline-block;
@@ -212,6 +253,7 @@ p{
     #section2 .col-1{
         display: none;
     }
+
 }
 @media (max-width: 340px) {
     #section2 .col-3 p{
