@@ -1,73 +1,24 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"  rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"  crossorigin="anonymous">
+
 html {
     font-size: 1rem;
 }
-
 body {
     font-size: 1rem;
     font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -0.04em;
 }
-
-.wrap {
-    position: relative;
-}
-
 .section{
+    position: relative;
     text-align: center;
     margin: 50px auto;
 }
-#section1{
-    margin: 100px auto 0;
-}
-#section2{
-    margin: 80px auto;
-}
-
 .btn{
     display: inline-block;
     color: white;
     padding: 14px 20px;
-}
-
-.pre_btn{
-    border-radius: 5px;
-    background-color: #939393;
-    margin-right: 10px;
-    width: 40%;
-    max-width: 160px;
-}
-.next_btn{
-    border-radius: 5px;
-    background-color: #3c4576;
-    width: 40%;
-    max-width: 160px;
-}
-
-.twin_btn{
-    display: block;
-    height: 70px;
-    width: 100%;
-    margin: 0 auto;
-}
-.btn_yesno{
-    color: #222;
-    border: 2px solid #00aa5f;
-    border-radius: 500px;
-    width: 47%;
-    height: 60px;
-}
-.btn_yesno:hover{
-    color: white;
-    border: none;
-    background-color: #00aa5f;
-}
-.yes_btn{
-    float: left;
-    margin-right: 4%;
-}
-.no_btn{btn_see_more
-    float: right;
 }
 .box{
     border-radius: 10px;
@@ -86,30 +37,70 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     line-height: 1.3;
 }
-
-h4{
+h1, h4{
     margin-bottom: 40px;
 }
-
 h2 {
     margin-top: 1.3em;
 }
-
 a {
     color: #0083e8;
 }
-
 b, strong {
     font-weight: 600;
 }
-
 input, select{
     height: 54px;
 }
-p{
-    line-height: 3.6;
+.input_tip{
+    line-height: 1.4;
+    font-size: 13px;
+    margin:0 0 7px;
+    color: #6b79bc;
+}
+.minimum_text{
+    display: inline-block;
+    margin-top: 8px;
+    line-height: 1.4;
+    font-size: 13px;
 }
 
+
+
+/* TOP */
+#top_info{
+    margin: 100px auto 0;
+}
+
+
+
+/* 스탭1 본인확인 */
+
+#personal_info{
+    margin: 80px auto;
+}
+#personal_info .col-1{
+    display: inline-block;
+}
+#personal_info .col-5{
+    min-width: 150px;
+}
+#personal_info .col-2{
+    min-width: 60px;
+}
+#personal_info .col-3{
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0;
+}
+#personal_info p{
+    line-height: 3.6;
+}
+.army{
+    margin-top: 30px;
+}
+
+/* 개인정보이용동의 */
 .step1_check{
     width: 86%;
     max-width: 540px;
@@ -134,7 +125,7 @@ p{
     padding: 3px 10px;
 }
 .step1_check .col-12 .btn_see_more:hover{
-    background-color: #efefef;
+    background-color: #e5f8f1;
 }
 .form-check-input[type=checkbox] {
   border-radius: 25em;
@@ -152,11 +143,147 @@ p{
   background-image: none;
   color: #00aa5f;
 }
-.form-check-input[type=checkbox]:indeterminate {
-  background-color: #00aa5f;
-  border-color: #00aa5f;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+
+
+@media (max-width: 490px) {
+    .step1_check .col-12 .form-check{
+        width: 70%;
+        margin: 7px auto;
+    }
+    .step1_check .col-12 .btn_see_more{
+        margin-top: 6px;
+    }
 }
+
+@media (max-width: 460px) {
+    /*    모바일에서 폰트사이즈랑 패딩 줄이기*/
+    #personal_info .col-3 p{
+        font-size: 12px;
+        line-height: 4.5;
+    }
+    #personal_info .col-1{
+        display: none;
+    }
+}
+
+@media (max-width: 340px) {
+    #personal_info .col-3 p{
+        font-size: 10px;
+        line-height: 5.5;
+    }
+}
+
+
+
+/* 스탭2 대출정보 */
+
+#loan_info fieldset{
+    margin-bottom: 40px;
+}
+
+#loan_info .text_field_label{
+    margin-top: 30px;
+}
+
+.loan_title{
+    display: inline-block;
+}
+.loan_value{
+    display: inline-block;
+    line-height: 1;
+    float: right;
+    color: #222;
+    font-size: 20px;
+    font-weight: 500;
+}
+.form-range:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 0.25rem rgba(222,245,238, 1);
+}
+.form-range::-webkit-slider-thumb {
+  width: 4rem;
+  height: 1.5rem;
+  margin-top: -0.15rem;
+  background-color: #636a91;
+  border: 0;
+  border-radius: 0.8rem;
+  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.form-range::-webkit-slider-thumb:active {
+  background-color: #00aa5f;
+}
+.form-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1.2rem;
+  color: transparent;
+  cursor: pointer;
+  background-color: #ebecf1;
+  border-color: transparent;
+  border-radius: 3rem;
+}
+
+.range_num{
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 1;
+    padding: 0; margin: 0;
+    color: #505884;
+}
+.range_mim{
+    display: inline-block;
+    float: left;
+    line-height:1;
+    margin-left: 5px;
+}
+.range_max{
+    display: inline-block;
+    float: right;
+    line-height:1;
+    margin-right: 5px;
+}
+
+
+
+/* 소속 정보 */
+.twin_btn{
+    display: block;
+    height: 70px;
+    width: 100%;
+    margin: 0 auto;
+}
+.btn_yesno{
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    width: 47%;
+    height: 62px;
+    line-height: 1;
+    border-radius: 5px;
+    color: #212529;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,.125);
+    cursor: pointer;
+}
+.btn_yesno:hover{
+    border: 1px solid #3c4576;
+}
+.btn_yesno:active{
+    border: 1px solid #00aa5f;
+    background-color: #e5f8f1;
+    color: #00aa5f;
+}
+.yes_btn{
+    float: left;
+    margin-right: 4%;
+}
+.no_btn{
+    float: right;
+}
+
+
+/* 대학생 해당 */
 .univ_status{
     margin-bottom: 60px;
 }
@@ -174,91 +301,178 @@ p{
     width: 40%;
     max-width: 100px;
     font-size: 18px;
+    line-height: 3.3;
 }
 
-.input_tip{
-    line-height: 1.4;
-    font-size: 13px;
-    margin:0 0 7px;
-    color: #6b79bc;
+
+/* 선택 입력사항 */
+.select_info_title{
+    margin:30px 0 7px;
 }
 
-#section4 fieldset{
-    margin-bottom: 20px;
-}
-#section4 .text_field_label{
+.select_list{
     margin-top: 20px;
 }
 
-.btn-outline-primary {
-  color: #555;
-  border-color: #00aa5f;
-    font-size: 13px;
-    padding: 10px;
+.select-check{
+    display: inline-block;
+    margin: 4px;
+    padding: 12px 20px 12px 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    color: #555;
+    width: 45%;
 }
-.btn-outline-primary:hover {
-  color: #00aa5f;
-  background-color: #def5ee;
-  border-color: #00aa5f;
+.select-check:hover{
+    border: 1px solid #00aa5f;
+    color: #00aa5f;
 }
-.btn-check:focus + .btn-outline-primary, .btn-outline-primary:focus {
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
+.select-check:focus {
+    border: 1px solid #00aa5f;
+    color: #00aa5f;
+  box-shadow: 0 0 0 0.25rem rgba(222,245,238, 1);
 }
-.btn-check:checked + .btn-outline-primary, .btn-check:active + .btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show {
-  color: #fff;
+.select-check:active{
+    border: 1px solid #00aa5f;
+    background-color: #e5f8f1;
+    color: #00aa5f;
+}
+.select-check-list[type=checkbox] {
+  border-radius: 25em;
+}
+.select-check-list[type=radio] {
+  border-radius: 100%;
+}
+.select-check-list:active {
+  filter: brightness(90%);
+}
+.select-check-list{
+    margin-right: 10px;
+    border-radius: 50px;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.select-check-list:checked {
   background-color: #00aa5f;
   border-color: #00aa5f;
 }
-.btn-check:checked + .btn-outline-primary:focus, .btn-check:active + .btn-outline-primary:focus, .btn-outline-primary:active:focus, .btn-outline-primary.active:focus, .btn-outline-primary.dropdown-toggle.show:focus {
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
+.select-check-list:checked[type=checkbox] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
 }
-.btn-outline-primary:disabled, .btn-outline-primary.disabled {
-  color: #00aa5f;
-  background-color: transparent;
-}
-
-
-#section2 .col-1{
+.check_text{
+    margin: 0;
+    padding: 0;
     display: inline-block;
+    line-height: 1;
 }
-#section2 .col-5{
-    min-width: 150px;
+
+@media (max-width: 430px) {
+    .select-check-list{
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+    }
+    .check_text{
+        text-align: center;
+        display: block;
+        padding-top: 10px;
+    }
 }
-#section2 .col-2{
-    min-width: 60px;
+
+
+
+/* 헥사코 검사 */
+.box_container{
+    width: 86%;
+    max-width: 540px;
+    min-width: 288px;
+    margin: 0 auto;
 }
-#section2 .col-3{
+.hexaco_item{
+    border-radius: 10px;
+    color: #545454;
+    padding: 40px 10px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgb(0,0,0,0.3);
+    border-top: 15px solid #3c4576;
+}
+
+.hexaco_item h2{
+    margin: 0 0 30px;
+    font-size: 19px;
+}
+.hexaco_item .answer_list{
+    list-style: none;
     padding: 0;
     margin: 0;
 }
+.hexaco_item .answer_list a{
+    display: inline-block;
+    font-size: 24px;
+    text-align: center;
+    width: 62px;
+    height: 62px;
+    margin: 2px;
+    line-height: 2.5;
+    border-radius: 5px;
+    color: #212529;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,.125);
+    cursor: pointer;
+}
+.hexaco_item .answer_list a:active {
+  filter: brightness(90%);
+}
+.hexaco_item .answer_list a:hover {
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.hexaco_item .answer_list a:active {
+  background-color: #e5f8f1;
+  border-color: #00aa5f;
+  color: #00aa5f;
+}
+
+
+
+/* 단계 버튼 */
+.pre_btn{
+    border-radius: 5px;
+    background-color: #939393;
+    margin-right: 10px;
+    width: 40%;
+    max-width: 160px;
+}
+.next_btn{
+    border-radius: 5px;
+    background-color: #3c4576;
+    width: 40%;
+    max-width: 160px;
+}
+
 
 
 @media (max-width: 490px) {
-
-    .step1_check .col-12 .form-check{
-        width: 70%;
-        margin: 7px auto;
+    .hexaco_item .answer_list a{
+        width: 17%;
+        font-size: 22px;
+        height: 58px;
+        padding: 0;
+        line-height: 2.6;
     }
-    .step1_check .col-12 .btn_see_more{
-        margin-top: 6px;
-    }
-}
-
-@media (max-width: 460px) {
-    /*    모바일에서 폰트사이즈랑 패딩 줄이기*/
-    #section2 .col-3 p{
-        font-size: 12px;
-        line-height: 4.5;
-    }
-    #section2 .col-1{
-        display: none;
-    }
-
-}
-@media (max-width: 340px) {
-    #section2 .col-3 p{
-        font-size: 10px;
-        line-height: 5.5;
-    }
-
 }
