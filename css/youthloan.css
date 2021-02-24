@@ -145,13 +145,17 @@ input, select{
 }
 
 
-@media (max-width: 490px) {
+@media (max-width: 570px) {
     .step1_check .col-12 .form-check{
-        width: 70%;
+        display: block;
+        width: 100%;
         margin: 7px auto;
     }
     .step1_check .col-12 .btn_see_more{
-        margin-top: 6px;
+        display: block;
+        width: 100%;
+        line-height: 2.4;
+        margin-bottom: 14px;
     }
 }
 
