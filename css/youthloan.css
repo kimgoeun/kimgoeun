@@ -34,15 +34,6 @@ body {
   pointer-events: none;
   opacity: 0.3;
 }
-.deco_none{
-    color: white;
-    text-decoration: none;
-}
-.deco_none:hover, .deco_none:checked, .deco_none:hocus{
-    color: white;
-    text-decoration: none;
-}
-
 .box{
     border-radius: 10px;
     color: #545454;

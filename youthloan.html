@@ -430,7 +430,7 @@
 <!-- 단계 버튼 -->
 <section class="section" id="btn_area">
     <button type="button" class="btn pre_btn" disabled>전 단계로</button>
-    <button type="button" class="btn next_btn"><a class="deco_none" href="#loan_info">다음 단계로</a></button>
+    <a href="#loan_info"><button type="button" class="btn next_btn">다음 단계로</button></a>
 </section>  
     
     
@@ -512,7 +512,7 @@
 <!-- 단계 버튼 -->
 <section class="section" id="btn_area">
     <button type="button" class="btn pre_btn">전 단계로</button>
-    <button type="button" class="btn next_btn"><a class="deco_none" href="#univ_info">다음 단계로</a></button>
+    <a class="deco_none" href="#univ_info"><button type="button" class="btn next_btn">다음 단계로</button></a>
 </section>
     
     
@@ -522,8 +522,8 @@
         <h4>현재 대학(원)을 다니고 계신가요?</h4>
         <form class="univ_status">
             <div class="mb-3 twin_btn">
-                <button type="button" class="btn btn_yesno yes_btn">네</button>
-                <button type="button" class="btn btn_yesno no_btn">아니오</button>
+                <a href="#belong_info"><button type="button" class="btn btn_yesno yes_btn">네</button></a>
+                <a href="#not_univ"><button type="button" class="btn btn_yesno no_btn">아니오</button></a>
             </div>
         </form>
     </div>
@@ -583,7 +583,7 @@
         
     <!--대학생 아닐 때 -->
         <hr>
-        <form>
+        <form id="not_univ">
             <h4>STEP3 - #{이름}님의 소속을 알려주세요. </h4>
             <div class="mb-3">
                 <label class="form-label">당신을 가장 잘 설명할 수 있는 것을 골라주세요</label>
@@ -908,7 +908,7 @@
 <!-- 단계 버튼 -->
 <section class="section" id="btn_area">
     <button type="button" class="btn pre_btn">전 단계로</button>
-    <button type="button" class="btn next_btn"><a class="deco_none" href="#hexaco">다음 단계로</a></button>
+    <a href="#hexaco"><button type="button" class="btn next_btn">다음 단계로</button></a>
 </section>
     
     
