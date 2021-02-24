@@ -10,6 +10,12 @@ body {
     font-family: "Noto Sans KR", sans-serif;
     letter-spacing: -0.04em;
 }
+.safearea{
+    position: relative;
+    padding: 0 30px;
+    text-align: center;
+    margin: 50px auto;
+}
 .section{
     position: relative;
     text-align: center;
@@ -40,6 +46,28 @@ h1, h2, h3, h4, h5, h6 {
 h1, h4{
     margin-bottom: 40px;
 }
+h1, .h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+    @media (min-width: 1200px) {
+          h1, .h1 {
+            font-size: 2.5rem;
+          }
+        }
+    @media (max-width: 430px) {
+        h1{
+            font-size: 1.6rem;
+        }
+    }
+    @media (max-width: 335px) {
+        h1{
+            font-size: 1.3rem;
+        }
+        .safearea{
+            padding: 0 20px;
+            margin: 50px auto;
+        }
+    }
 h2 {
     margin-top: 1.3em;
 }
@@ -146,6 +174,7 @@ input, select{
 
 
 @media (max-width: 570px) {
+    
     .step1_check .col-12 .form-check{
         display: block;
         width: 100%;
@@ -247,7 +276,6 @@ input, select{
     line-height:1;
     margin-right: 5px;
 }
-
 
 
 /* 소속 정보 */
