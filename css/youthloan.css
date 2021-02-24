@@ -26,6 +26,16 @@ body {
     color: white;
     padding: 14px 20px;
 }
+.btn-check:focus + .btn, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(229, 248, 241, 0.25);
+}
+.btn:disabled, .btn.disabled, fieldset:disabled .btn {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+
 .box{
     border-radius: 10px;
     color: #545454;
@@ -315,10 +325,13 @@ input, select{
 }
 
 
-/* 대학생 해당 */
+/* 대학생 네 아니오 */
 .univ_status{
-    margin-bottom: 60px;
+    
 }
+
+
+/* 대학생일 때 입력 */
 .univ_student .row{
     width: 100%;
     padding: 0;
@@ -576,19 +589,57 @@ input, select{
 
 
 /* 단계 버튼 */
+
+#btn_area{
+    margin: 80px auto 300px;
+}
 .pre_btn{
+    color: #fff;
     border-radius: 5px;
     background-color: #939393;
     margin-right: 10px;
     width: 40%;
     max-width: 160px;
+    border-color: #939393;    
+}
+.pre_btn:hover{
+    background-color: #888888;
+    color: #fff;
 }
 .next_btn{
+    color: #fff;
     border-radius: 5px;
     background-color: #3c4576;
     width: 40%;
     max-width: 160px;
+    border-color: #3c4576;
 }
+.next_btn:hover{
+    background-color: #30375e;
+    color: #fff;
+}
+
+.btn-check:focus + .next_btn, .next_btn:focus {
+  color: #fff;
+  background-color: #3c4576;
+  border-color: #3c4576;
+  box-shadow: 0 0 0 0.25rem rgba(216,216,228, 0.5);
+}
+.btn-check:checked + .next_btn, .btn-check:active + .next_btn, .next_btn:active, .next_btn.active, .show > .next_btn.dropdown-toggle {
+  color: #fff;
+  background-color: #00bc72;
+  border-color: #00bc72;
+}
+.btn-check:checked + .next_btn:focus, .btn-check:active + .next_btn:focus, .next_btn:active:focus, .next_btn.active:focus, .show > .next_btn.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(216,216,228, 0.5);
+}
+.next_btn:disabled, .next_btn.disabled {
+  color: #fff;
+  background-color: #2c43a3;
+  border-color: #2c43a3;
+}
+
+
 
 
 
