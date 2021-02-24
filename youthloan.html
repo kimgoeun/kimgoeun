@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ko">
-    <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
     <title>청년금융만세 소액대출 서비스</title>
 </head>
 <body>
-    
+
 <!--서비스 소개-->
 <section class="section" id="top_info">
     <h1>
@@ -105,7 +105,6 @@
         </form>
     </div>
 </section>
-      
     
 <!--스탭2 대출정보-->
 <section class="section" id="loan_info">
@@ -180,8 +179,6 @@
         </div>
     </div>
 </section>
-
-    
     
 <!--스탭3 대학 혹은 소속 정보-->
 <section class="section" id="univ_info">
@@ -196,7 +193,7 @@
             
     <!--대학생 해당-->
         <hr>
-        <div class="univ_student">
+        <form class="univ_student">
             <h4>#{이름}님의 소속 정보를 입력해주세요.</h4>
             <div class="form-floating mb-3">
                 <input type="name" class="form-control" id="floatingInput" placeholder="학교명">
@@ -230,8 +227,7 @@
                     </select>
                 </div>
             </fieldset>
-        </div>
-        
+        </form>
         
     <!--대학생 아닐 때 -->
         <hr>
@@ -246,62 +242,314 @@
                     <option>기타(직접입력)</option>
                 </select>
             </div>
-        <div class="form-floating mb-3">
-            <input type="name" class="form-control" id="floatingInput" placeholder="010-0000-0000">
-            <label for="floatingInput">직접입력</label>
-        </div>
+            <div class="form-floating mb-3">
+                <input type="name" class="form-control" id="floatingInput" placeholder="010-0000-0000">
+                <label for="floatingInput">직접입력</label>
+            </div>
+        </form>
             
     <!--추가 선택 정보 입력-->
         <hr>
         <div class="select_info">
             <h4 class="select_info_title">해당하는 내용이 있다면 알려주세요!</h4>
             <p class="input_tip">선택사항</p>
+        
             
             <div class="select_list">
-                <label class="select-check" for="select_list1">
+<!-- 자격증 -->
+                <button type="button" class="select-check" for="select_list1" data-bs-toggle="modal" data-bs-target="#select_popup1" data-bs-whatever="@getbootstrap">
                   <input class="select-check-list" type="checkbox" value="" id="select_list1">
                       <p class="check_text" for="select_list1">
                         자격증
                       </p>
-                </label>
+                </button>
+                <div class="modal fade" id="select_popup1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">자격증/면허증</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                        
+                      <div class="modal-body">
+                        <form>
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">자격증명</label>
+                            <input type="text" class="form-control" id="recipient-name"  placeholder="자격증 이름을 입력해주세요.">
+                          </div>
+                          <div class="mb-3">
+                            <label for="message-text" class="col-form-label">발행처/기관</label>
+                            <input type="text" class="form-control" id="recipient-name" placeholder="발행처/기관을 입력해주세요.">
+                          </div>
+                          <div class="mb-3">
+                            <label for="message-text" class="col-form-label">취득일</label>
+                            <input type="date" class="form-control" id="message-text">
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-add">자격증 추가</button>
+                        <button type="button" class="btn btn-submit">저장</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 
-                <label class="select-check" for="select_list2">
+<!-- 어학점수 -->
+                <button type="button" class="select-check" for="select_list2" data-bs-toggle="modal" data-bs-target="#select_popup2" data-bs-whatever="@getbootstrap">
                   <input class="select-check-list" type="checkbox" value="" id="select_list2">
                       <p class="check_text" for="select_list2">
                         어학점수
                       </p>
-                </label>
-                
-                <label class="select-check" for="select_list3">
+                </button>
+                <div class="modal fade" id="select_popup2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabe2">어학점수</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="md-3">
+                            <label for="recipient-name" class="col-form-label">언어</label>
+                            <select type="dropdown" id="recipient-name" class="form-select form-control" >
+                              <option selected>선택</option>
+                              <option>영어</option>
+                              <option>중국어</option>
+                              <option>한국어</option>
+                              <option>일본어</option>
+                              <option>스페인어</option>
+                              <option>프랑스어</option>
+                              <option>독일어</option>
+                              <option>한자</option>
+                              <option>기타</option>
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">시험명</label>
+                            <input type="text" class="form-control" id="recipient-name"  placeholder="시험 찾기">
+                          </div>
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">점수</label>
+                            <input type="text" class="form-control" id="recipient-name"  placeholder="점수를 입력해주세요.">
+                          </div>
+                          <div class="mb-3">
+                            <label for="message-text" class="col-form-label">급수</label>
+                            <input type="text" class="form-control" id="recipient-name" placeholder="급수를 입력해주세요.">
+                          </div>
+                          <div class="mb-3">
+                            <label for="message-text" class="col-form-label">취득일</label>
+                            <input type="date" class="form-control" id="message-text">
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-add">어학점수 추가</button>
+                        <button type="button" class="btn btn-submit">저장</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+<!-- 수상내역 -->
+                <button type="button" class="select-check" for="select_list3" data-bs-toggle="modal" data-bs-target="#select_popup3" data-bs-whatever="@getbootstrap">
                   <input class="select-check-list" type="checkbox" value="" id="select_list3">
                       <p class="check_text" for="select_list3">
                         수상내역
                       </p>
-                </label>
-                
-                <label class="select-check" for="select_list4">
+                </button>
+                <div class="modal fade" id="select_popup3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabe3">공모전/수상내역</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">공모명</label>
+                            <input type="text" class="form-control" id="recipient-name"  placeholder="공모명을 입력해주세요.">
+                          </div>
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">수상명</label>
+                            <input type="text" class="form-control" id="recipient-name"  placeholder="수상명을 입력해주세요.">
+                          </div>
+                          <div class="mb-3">
+                            <label for="message-text" class="col-form-label">수여기관</label>
+                            <input type="text" class="form-control" id="recipient-name" placeholder="수여기관을 입력해주세요.">
+                          </div>
+                          <div class="mb-3">
+                            <label for="message-text" class="col-form-label">수상일</label>
+                            <input type="date" class="form-control" id="message-text">
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-add">공모/수상내역 추가</button>
+                        <button type="button" class="btn btn-submit">저장</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+<!-- 대내외 활동 -->
+                <button type="button" class="select-check" for="select_list4" data-bs-toggle="modal" data-bs-target="#select_popup4" data-bs-whatever="@getbootstrap">
                   <input class="select-check-list" type="checkbox" value="" id="select_list4">
                       <p class="check_text" for="select_list4">
-                        대내외 활동
+                        대내외활동
                       </p>
-                </label>
-                
-                <label class="select-check" for="select_list5">
+                </button>
+                <div class="modal fade" id="select_popup4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabe4">대내외 활동</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="md-3">
+                            <label for="recipient-name" class="col-form-label">구분</label>
+                            <select type="dropdown" id="recipient-name" class="form-select form-control" >
+                              <option selected>선택</option>
+                              <option>봉사활동</option>
+                              <option>대외활동</option>
+                              <option>동아리</option>
+                              <option>학회</option>
+                              <option>해외연수</option>
+                              <option>기타</option>
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">기관/장소</label>
+                            <input type="text" class="form-control" id="recipient-name"  placeholder="활동기관 혹은 장소를 입력해주세요.">
+                          </div>
+                            
+                          <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">활동 기간</label>
+                                <div class="period_inline_block">
+                                    <input type="date" class="form-control period_inline" id="recipient-name" alt="시작일">
+                                    <p class="period_inline">~</p>
+                                    <input type="date" class="form-control period_inline" id="recipient-name" alt="종료일">
+                                </div>
+                          </div>
+                            
+                          <div class="mb-3">
+                            <label for="message-text" class="col-form-label">활동내용</label>
+                              <textarea type="date" class="form-control" id="message-text" placeholder="활동내용을 입력해주세요."></textarea>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-add">대내외 활동 추가</button>
+                        <button type="button" class="btn btn-submit">저장</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+<!-- 기타소득 -->
+                <button type="button" class="select-check" for="select_list5" data-bs-toggle="modal" data-bs-target="#select_popup5" data-bs-whatever="@getbootstrap">
                   <input class="select-check-list" type="checkbox" value="" id="select_list5">
                       <p class="check_text" for="select_list5">
                         기타소득
                       </p>
-                </label>
+                </button>
+                <div class="modal fade" id="select_popup5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabe4">기타소득</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">소득처</label>
+                            <input type="text" class="form-control" id="recipient-name"  placeholder="소득의 발생처를 입력해주세요.">
+                          </div>
+                          <div class="md-3">
+                            <label for="recipient-name" class="col-form-label">지속성</label>
+                            <select type="dropdown" id="recipient-name" class="form-select form-control" >
+                              <option selected>선택</option>
+                              <option>매월 기타소득이 들어와요</option>
+                              <option>일회성으로 들어와요</option>
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">소득액</label>
+                            <input type="text" class="form-control" id="recipient-name"  placeholder="기타 소득금액을 입력해주세요.">
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-add">기타소득 추가</button>
+                        <button type="button" class="btn btn-submit">저장</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 
-                <label class="select-check" for="select_list6">
+<!-- 인턴알바 경험 -->
+                <button type="button" class="select-check" for="select_list6" data-bs-toggle="modal" data-bs-target="#select_popup6" data-bs-whatever="@getbootstrap">
                   <input class="select-check-list" type="checkbox" value="" id="select_list6">
                       <p class="check_text" for="select_list6">
-                        인턴/알바 경험
+                        인턴&#8231;알바경험
                       </p>
-                </label>
+                </button>
+                <div class="modal fade" id="select_popup6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabe6">인턴.알바 경험</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">근무처명</label>
+                            <input type="text" class="form-control" id="recipient-name"  placeholder="일한 회사 또는 근무처를 입력해주세요.">
+                          </div>
+                            
+                          <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">재직 기간</label>
+                                <div class="period_inline_block">
+                                    <input type="date" class="form-control period_inline" id="recipient-name" alt="시작일">
+                                    <p class="period_inline">~</p>
+                                    <input type="date" class="form-control period_inline" id="recipient-name" alt="종료일">
+                                </div>
+                          </div>
+                          <div class="md-3">
+                            <label for="recipient-name" class="col-form-label">상태</label>
+                            <select type="dropdown" id="recipient-name" class="form-select form-control" >
+                              <option selected>선택</option>
+                              <option>그만 뒀어요</option>
+                              <option>지금도 일하는 중</option>
+                            </select>
+                          </div>
+                            
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">근무부서</label>
+                            <input type="text" class="form-control" id="recipient-name"  placeholder="근무부서를 입력해주세요.">
+                          </div>
+                            
+                          <div class="mb-3">
+                            <label for="message-text" class="col-form-label">업무내용</label>
+                              <textarea type="date" class="form-control" id="message-text" placeholder="무슨 일을 했는지 입력해주세요."></textarea>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-add">경제활동 경험 추가</button>
+                        <button type="button" class="btn btn-submit">저장</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
         </div>
-        </form>
     </div>
 </section>
 
@@ -331,7 +579,6 @@
     <button type="button" class="btn pre_btn">전 단계로</button>
     <button type="button" class="btn next_btn">다음 단계로</button>
 </section>
-
     
 <footer>
     <div class="container">

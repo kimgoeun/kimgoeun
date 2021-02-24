@@ -317,11 +317,13 @@ input, select{
 .select-check{
     display: inline-block;
     margin: 4px;
+    background-color: white;
     padding: 12px 20px 12px 10px;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.25);
     color: #555;
     width: 45%;
+    text-align: left;
 }
 .select-check:hover{
     border: 1px solid #00aa5f;
@@ -380,6 +382,9 @@ input, select{
 }
 
 @media (max-width: 430px) {
+    .select-check{
+        padding: 12px 10px 12px 10px;
+    }
     .select-check-list{
         display: block;
         margin: 0 auto;
@@ -387,13 +392,101 @@ input, select{
         text-align: center;
     }
     .check_text{
+        padding: 0;
         text-align: center;
         display: block;
         padding-top: 10px;
+        line-height: 1.4;
+        font-size: 0.9rem;
     }
 }
 
 
+/* 팝업 모달 디자인 */
+
+.btn-add {
+  color: #fff;
+  background-color: #3c4576;
+  border-color: #3c4576;
+}
+.btn-add:hover {
+  color: #555;
+  background-color: white;
+  border-color: #3c4576;
+}
+.btn-check:focus + .btn-add, .btn-add:focus {
+  color: #555;
+  background-color: white;
+  border-color: #3c4576;
+  box-shadow: 0 0 0 0.25rem rgba(222,245,238, 1);
+}
+.btn-check:checked + .btn-add, .btn-check:active + .btn-add, .btn-add:active, .btn-add.active, .show > .btn-add.dropdown-toggle {
+  color: #fff;
+  background-color: #363d6a;
+  border-color: #363d6a;
+}
+.btn-check:checked + .btn-add:focus, .btn-check:active + .btn-add:focus, .btn-add:active:focus, .btn-add.active:focus, .show > .btn-add.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(222,245,238, 1);
+}
+.btn-add:disabled, .btn-add.disabled {
+  color: #fff;
+  background-color: #1d9d5e;
+  border-color: #1d9d5e;
+}
+.btn-submit {
+  color: #fff;
+  background-color: #00aa5f;
+  border-color: #00aa5f;
+}
+.btn-submit:hover {
+  color: #555;
+  background-color: white;
+  border-color: #00aa5f;
+}
+.btn-check:focus + .btn-submit, .btn-submit:focus {
+  color: #555;
+  background-color: white;
+  border-color: #00aa5f;
+  box-shadow: 0 0 0 0.25rem rgba(222,245,238, 1);
+}
+.btn-check:checked + .btn-submit, .btn-check:active + .btn-submit, .btn-submit:active, .btn-submit.active, .show > .btn-submit.dropdown-toggle {
+  color: #fff;
+  background-color: #1d9d5e;
+  border-color: #1d9d5e;
+}
+.btn-check:checked + .btn-submit:focus, .btn-check:active + .btn-submit:focus, .btn-submit:active:focus, .btn-submit.active:focus, .show > .btn-submit.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(222,245,238, 1);
+}
+.btn-submit:disabled, .btn-submit.disabled {
+  color: #fff;
+  background-color: #1d9d5e;
+  border-color: #1d9d5e;
+}
+.period_inline{
+    display: inline-block;
+}
+.period_inline_block .form-control{
+    width: 44%;
+}
+.period_inline_block p{
+    width: 10%;
+    text-align: center;
+}
+.modal .form-select{
+    margin-bottom: 20px;
+}
+
+@media (max-width: 420px) {
+    .period_inline_block .form-control{
+        width: 100%;
+    }
+    .period_inline_block .form-control:first-child{
+        margin-bottom: 16px;
+    }
+    .period_inline_block p{
+        display: none;
+    }
+}
 
 /* 헥사코 검사 */
 .box_container{
