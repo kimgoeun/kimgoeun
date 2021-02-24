@@ -15,8 +15,11 @@ body {
     padding: 0 30px;
     text-align: center;
     margin: 50px auto;
+    max-width: 540px;
+    min-width: 288px;
 }
 .section{
+    padding: 50px 0;
     position: relative;
     text-align: center;
     margin: 50px auto;
@@ -589,7 +592,7 @@ input, select{
 /* 단계 버튼 */
 
 #btn_area{
-    margin: 80px auto 300px;
+    margin: -80px auto 260px;
 }
 .pre_btn{
     color: #fff;
