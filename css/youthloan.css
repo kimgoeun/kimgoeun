@@ -38,7 +38,7 @@ body {
     color: white;
     text-decoration: none;
 }
-.deco_none:hover{
+.deco_none:hover, .deco_none:checked, .deco_none:hocus{
     color: white;
     text-decoration: none;
 }
@@ -658,4 +658,5 @@ input, select{
         padding: 0;
         line-height: 2.6;
     }
+    
 }
