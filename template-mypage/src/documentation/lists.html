@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Lists - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "lists.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Lists</h1>
+                  <p class="lead">List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="unstyled" class="hs-docs-heading">
+              Unstyled <a class="anchorjs-link" href="#unstyled" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Remove the default <code>list-style</code> and left margin on list items (immediate children only). <span class="font-weight-bold">This only applies to immediate children list items</span>, meaning you will need to add the class for any nested lists as well.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- List -->
+                  <ul class="list-unstyled">
+                    <li>Dashboard</li>
+                    <li>Profile</li>
+                    <li>
+                      Account
+
+                      <ul>
+                        <li>Settings</li>
+                        <li>Billing</li>
+                        <li>Invoice</li>
+                      </ul>
+                    </li>
+                    <li>Projects</li>
+                    <li>
+                      Tasks
+                      <ol>
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>Three</li>
+                      </ol>
+                    </li>
+                  </ul>
+                  <!-- End List -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List --&gt;
+                      &lt;ul class="list-unstyled"&gt;
+                        &lt;li&gt;Dashboard&lt;/li&gt;
+                        &lt;li&gt;Profile&lt;/li&gt;
+                        &lt;li&gt;
+                          Account
+
+                          &lt;ul&gt;
+                            &lt;li&gt;Settings&lt;/li&gt;
+                            &lt;li&gt;Billing&lt;/li&gt;
+                            &lt;li&gt;Invoice&lt;/li&gt;
+                          &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;Projects&lt;/li&gt;
+                        &lt;li&gt;
+                          Tasks
+                          &lt;ol&gt;
+                            &lt;li&gt;One&lt;/li&gt;
+                            &lt;li&gt;Two&lt;/li&gt;
+                            &lt;li&gt;Three&lt;/li&gt;
+                          &lt;/ol&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End List --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="unstyled-spacings" class="hs-docs-heading">
+              Unstyled spacings <a class="anchorjs-link" href="#unstyled-spacings" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>You can add vertical spacings between lists with modifier classes.</p>
+
+            <p>Use <code>.list-unstyled-py-2</code> class.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <!-- List -->
+                  <ul class="list-unstyled list-unstyled-py-2">
+                    <li>Dashboard</li>
+                    <li>Profile</li>
+                    <li>Account</li>
+                    <li>Projects</li>
+                    <li>Tasks</li>
+                  </ul>
+                  <!-- End List -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List --&gt;
+                      &lt;ul class="list-unstyled list-unstyled-py-2"&gt;
+                        &lt;li&gt;Dashboard&lt;/li&gt;
+                        &lt;li&gt;Profile&lt;/li&gt;
+                        &lt;li&gt;Account&lt;/li&gt;
+                        &lt;li&gt;Projects&lt;/li&gt;
+                        &lt;li&gt;Tasks&lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End List --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Use <code>.list-unstyled-py-3</code> class.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab3" data-toggle="pill" href="#nav-result3" role="tab" aria-controls="nav-result3" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab3" data-toggle="pill" href="#nav-html3" role="tab" aria-controls="nav-html3" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent3">
+                <div class="tab-pane fade p-4 show active" id="nav-result3" role="tabpanel" aria-labelledby="nav-resultTab3">
+                  <!-- List -->
+                  <ul class="list-unstyled list-unstyled-py-3">
+                    <li>Dashboard</li>
+                    <li>Profile</li>
+                    <li>Account</li>
+                    <li>Projects</li>
+                    <li>Tasks</li>
+                  </ul>
+                  <!-- End List -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html3" role="tabpanel" aria-labelledby="nav-htmlTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List --&gt;
+                      &lt;ul class="list-unstyled list-unstyled-py-3"&gt;
+                        &lt;li&gt;Dashboard&lt;/li&gt;
+                        &lt;li&gt;Profile&lt;/li&gt;
+                        &lt;li&gt;Account&lt;/li&gt;
+                        &lt;li&gt;Projects&lt;/li&gt;
+                        &lt;li&gt;Tasks&lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End List --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Use <code>.list-unstyled-py-4</code> class.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab4" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab4" data-toggle="pill" href="#nav-result4" role="tab" aria-controls="nav-result4" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab4" data-toggle="pill" href="#nav-html4" role="tab" aria-controls="nav-html4" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent4">
+                <div class="tab-pane fade p-4 show active" id="nav-result4" role="tabpanel" aria-labelledby="nav-resultTab4">
+                  <!-- List -->
+                  <ul class="list-unstyled list-unstyled-py-4">
+                    <li>Dashboard</li>
+                    <li>Profile</li>
+                    <li>Account</li>
+                    <li>Projects</li>
+                    <li>Tasks</li>
+                  </ul>
+                  <!-- End List -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html4" role="tabpanel" aria-labelledby="nav-htmlTab4">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List --&gt;
+                      &lt;ul class="list-unstyled list-unstyled-py-4"&gt;
+                        &lt;li&gt;Dashboard&lt;/li&gt;
+                        &lt;li&gt;Profile&lt;/li&gt;
+                        &lt;li&gt;Account&lt;/li&gt;
+                        &lt;li&gt;Projects&lt;/li&gt;
+                        &lt;li&gt;Tasks&lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End List --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="inline" class="hs-docs-heading">
+              Inline <a class="anchorjs-link" href="#inline" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Remove a list's bullets and apply some light <code>margin</code> with a combination of two classes, <code>.list-inline</code> and <code>.list-inline-item</code>.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab5" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab5" data-toggle="pill" href="#nav-result5" role="tab" aria-controls="nav-result5" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab5" data-toggle="pill" href="#nav-html5" role="tab" aria-controls="nav-html5" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent5">
+                <div class="tab-pane fade p-4 show active" id="nav-result5" role="tabpanel" aria-labelledby="nav-resultTab5">
+                  <!-- List -->
+                  <ul class="list-inline">
+                    <li class="list-inline-item">Dashboard</li>
+                    <li class="list-inline-item">Profile</li>
+                    <li class="list-inline-item">Account</li>
+                    <li class="list-inline-item">Projects</li>
+                    <li class="list-inline-item">Tasks</li>
+                  </ul>
+                  <!-- End List -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html5" role="tabpanel" aria-labelledby="nav-htmlTab5">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List --&gt;
+                      &lt;ul class="list-inline"&gt;
+                        &lt;li class="list-inline-item"&gt;Dashboard&lt;/li&gt;
+                        &lt;li class="list-inline-item"&gt;Profile&lt;/li&gt;
+                        &lt;li class="list-inline-item"&gt;Account&lt;/li&gt;
+                        &lt;li class="list-inline-item"&gt;Projects&lt;/li&gt;
+                        &lt;li class="list-inline-item"&gt;Tasks&lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End List --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="uinline-spacings" class="hs-docs-heading">
+              Inline Spacings <a class="anchorjs-link" href="#uinline-spacings" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>.list-inline-m-1</code> class to add <code>margin: .25rem;</code> around the <code>.list-inline-item</code>.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab6" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab6" data-toggle="pill" href="#nav-result6" role="tab" aria-controls="nav-result6" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab6" data-toggle="pill" href="#nav-html6" role="tab" aria-controls="nav-html6" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent6">
+                <div class="tab-pane fade p-4 show active" id="nav-result6" role="tabpanel" aria-labelledby="nav-resultTab6">
+                  <!-- List -->
+                  <ul class="list-inline list-inline-m-1">
+                    <li class="list-inline-item">Dashboard</li>
+                    <li class="list-inline-item">Profile</li>
+                    <li class="list-inline-item">Account</li>
+                    <li class="list-inline-item">Projects</li>
+                    <li class="list-inline-item">Tasks</li>
+                  </ul>
+                  <!-- End List -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html6" role="tabpanel" aria-labelledby="nav-htmlTab6">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List --&gt;
+                      &lt;ul class="list-inline list-inline-m-1"&gt;
+                        &lt;li class="list-inline-item"&gt;Dashboard&lt;/li&gt;
+                        &lt;li class="list-inline-item"&gt;Profile&lt;/li&gt;
+                        &lt;li class="list-inline-item"&gt;Account&lt;/li&gt;
+                        &lt;li class="list-inline-item"&gt;Projects&lt;/li&gt;
+                        &lt;li class="list-inline-item"&gt;Tasks&lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End List --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="list-separator" class="hs-docs-heading">
+              List separator <a class="anchorjs-link" href="#list-separator" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>.list-separator</code> class with the <code>.list-inline</code> class for an inline separator with a circled shape.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab7" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab7" data-toggle="pill" href="#nav-result7" role="tab" aria-controls="nav-result7" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab7" data-toggle="pill" href="#nav-html7" role="tab" aria-controls="nav-html7" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent7">
+                <div class="tab-pane fade p-4 show active" id="nav-result7" role="tabpanel" aria-labelledby="nav-resultTab7">
+                  <!-- List Separator -->
+                  <ul class="list-inline list-separator">
+                    <li class="list-inline-item">
+                      <a class="list-separator-link" href="#">FAQ</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="list-separator-link" href="#">License</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="list-separator-link" href="#">Terms &amp; conditions</a>
+                    </li>
+                  </ul>
+                  <!-- End List Separator -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html7" role="tabpanel" aria-labelledby="nav-htmlTab7">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Separator --&gt;
+                      &lt;ul class="list-inline list-separator"&gt;
+                        &lt;li class="list-inline-item"&gt;
+                          &lt;a class="list-separator-link" href="#"&gt;FAQ&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="list-inline-item"&gt;
+                          &lt;a class="list-separator-link" href="#"&gt;License&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="list-inline-item"&gt;
+                          &lt;a class="list-separator-link" href="#"&gt;Terms &amp; conditions&lt;/a&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End List Separator --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="list-comment" class="hs-docs-heading">
+              List comment <a class="anchorjs-link" href="#list-comment" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>.list-comment</code> class and <code>.list-comment-item</code> as a child class for a comment style listing.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab8" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab8" data-toggle="pill" href="#nav-result8" role="tab" aria-controls="nav-result8" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab8" data-toggle="pill" href="#nav-html8" role="tab" aria-controls="nav-html8" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent8">
+                <div class="tab-pane fade p-4 show active" id="nav-result8" role="tabpanel" aria-labelledby="nav-resultTab8">
+                  <!-- List Comment -->
+                  <ul class="list-comment">
+                    <!-- Review -->
+                    <li class="list-comment-item">
+                      <!-- Media -->
+                      <div class="media align-items-center mb-3">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-sm avatar-circle mr-2">
+                          <img class="avatar-img" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description">
+                        </div>
+                        <!-- End Avatar -->
+
+                        <div class="media-body">
+                          <h5 class="mb-0">Amanda Harvey</h5>
+                        </div>
+                      </div>
+                      <!-- End Media -->
+
+                      <h5 class="mb-1">Great template</h5>
+                      <p>Another great template from Htmlstream! Refreshing and Thought provoking design and it changes my view about how I design the websites. Great typography, modern clean white design, nice tones of the color. SVG artifacts are a plus.</p>
+
+                      <a href="#">
+                        <i class="tio-reply"></i> Reply
+                      </a>
+                    </li>
+                    <!-- End Review -->
+
+                    <!-- Review -->
+                    <li class="list-comment-item">
+                      <!-- Media -->
+                      <div class="media align-items-center mb-3">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-sm avatar-circle mr-2">
+                          <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                        </div>
+                        <!-- End Avatar -->
+
+                        <div class="media-body">
+                          <h5 class="mb-0">David Harrison</h5>
+                        </div>
+                      </div>
+                      <!-- End Media -->
+
+                      <h5 class="mb-1">Well documented! Lots of possibilities!</h5>
+                      <p>Truly great. Well done. Carefully structured. Happy with the template.</p>
+
+                      <blockquote class="blockquote mt-4">
+                        <!-- Media -->
+                        <div class="media">
+                          <div class="avatar avatar-sm avatar-circle mb-2 mr-2">
+                            <img class="avatar-img" src="@@autopath/assets/svg/brands/htmlstream.svg" alt="Image Description">
+                          </div>
+
+                          <div class="media-body">
+                            <h5 class="mb-0">Htmlstream</h5>
+
+                            <ul class="list-inline font-size-sm">
+                              <li class="list-inline-item">Author</li>
+                              <li class="list-inline-item">3 weeks ago</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- End Media -->
+
+                        Awesome! We are super glad to hear that everything is working great for you!
+                      </blockquote>
+                    </li>
+                    <!-- End Review -->
+
+                    <!-- Review -->
+                    <li class="list-comment-item">
+                      <!-- Media -->
+                      <div class="media align-items-center mb-3">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-sm avatar-soft-dark avatar-circle mr-2">
+                          <span class="avatar-initials">B</span>
+                        </div>
+                        <!-- End Avatar -->
+
+                        <div class="media-body">
+                          <h5 class="mb-0">Bob Dean</h5>
+                        </div>
+                      </div>
+                      <!-- End Media -->
+
+                      <h5 class="mb-1">Beautifull template great support</h5>
+                      <p>Got a very quick response on my inquiry, very nice! Love the template, beautifull components!</p>
+
+                      <blockquote class="blockquote mt-4">
+                        <!-- Media -->
+                        <div class="media">
+                          <div class="avatar avatar-sm avatar-circle mb-2 mr-2">
+                            <img class="avatar-img" src="@@autopath/assets/svg/brands/htmlstream.svg" alt="Image Description">
+                          </div>
+
+                          <div class="media-body">
+                            <h5 class="mb-0">Htmlstream</h5>
+
+                            <ul class="list-inline font-size-sm">
+                              <li class="list-inline-item">Author</li>
+                              <li class="list-inline-item">2 months ago</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- End Media -->
+
+                        Hey Bob, thanks a lot for sharing your experience - we do much appreciate it! Cheers!
+                      </blockquote>
+                    </li>
+                    <!-- End Review -->
+                  </ul>
+                  <!-- End List Comment -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html8" role="tabpanel" aria-labelledby="nav-htmlTab8">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Comment --&gt;
+                      &lt;ul class="list-comment"&gt;
+                        &lt;!-- Review --&gt;
+                        &lt;li class="list-comment-item"&gt;
+                          &lt;!-- Media --&gt;
+                          &lt;div class="media align-items-center mb-3"&gt;
+                            &lt;!-- Avatar --&gt;
+                            &lt;div class="avatar avatar-sm avatar-circle mr-2"&gt;
+                              &lt;img class="avatar-img" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description"&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Avatar --&gt;
+
+                            &lt;div class="media-body"&gt;
+                              &lt;h5 class="mb-0"&gt;Amanda Harvey&lt;/h5&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Media --&gt;
+
+                          &lt;h5 class="mb-1"&gt;Great template&lt;/h5&gt;
+                          &lt;p&gt;Another great template from Htmlstream! Refreshing and Thought provoking design and it changes my view about how I design the websites. Great typography, modern clean white design, nice tones of the color. SVG artifacts are a plus.&lt;/p&gt;
+
+                          &lt;a href="#"&gt;
+                            &lt;i class="tio-reply"&gt;&lt;/i&gt; Reply
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;!-- End Review --&gt;
+
+                        &lt;!-- Review --&gt;
+                        &lt;li class="list-comment-item"&gt;
+                          &lt;!-- Media --&gt;
+                          &lt;div class="media align-items-center mb-3"&gt;
+                            &lt;!-- Avatar --&gt;
+                            &lt;div class="avatar avatar-sm avatar-circle mr-2"&gt;
+                              &lt;img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description"&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Avatar --&gt;
+
+                            &lt;div class="media-body"&gt;
+                              &lt;h5 class="mb-0"&gt;David Harrison&lt;/h5&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Media --&gt;
+
+                          &lt;h5 class="mb-1"&gt;Well documented! Lots of possibilities!&lt;/h5&gt;
+                          &lt;p&gt;Truly great. Well done. Carefully structured. Happy with the template.&lt;/p&gt;
+
+                          &lt;blockquote class="blockquote mt-4"&gt;
+                            &lt;!-- Media --&gt;
+                            &lt;div class="media"&gt;
+                              &lt;div class="avatar avatar-sm avatar-circle mb-2 mr-2"&gt;
+                                &lt;img class="avatar-img" src="@@autopath/assets/svg/brands/htmlstream.svg" alt="Image Description"&gt;
+                              &lt;/div&gt;
+
+                              &lt;div class="media-body"&gt;
+                                &lt;h5 class="mb-0"&gt;Htmlstream&lt;/h5&gt;
+
+                                &lt;ul class="list-inline font-size-sm"&gt;
+                                  &lt;li class="list-inline-item"&gt;Author&lt;/li&gt;
+                                  &lt;li class="list-inline-item"&gt;3 weeks ago&lt;/li&gt;
+                                &lt;/ul&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Media --&gt;
+
+                            Awesome! We are super glad to hear that everything is working great for you!
+                          &lt;/blockquote&gt;
+                        &lt;/li&gt;
+                        &lt;!-- End Review --&gt;
+
+                        &lt;!-- Review --&gt;
+                        &lt;li class="list-comment-item"&gt;
+                          &lt;!-- Media --&gt;
+                          &lt;div class="media align-items-center mb-3"&gt;
+                            &lt;!-- Avatar --&gt;
+                            &lt;div class="avatar avatar-sm avatar-soft-dark avatar-circle mr-2"&gt;
+                              &lt;span class="avatar-initials"&gt;B&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Avatar --&gt;
+
+                            &lt;div class="media-body"&gt;
+                              &lt;h5 class="mb-0"&gt;Bob Dean&lt;/h5&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Media --&gt;
+
+                          &lt;h5 class="mb-1"&gt;Beautifull template great support&lt;/h5&gt;
+                          &lt;p&gt;Got a very quick response on my inquiry, very nice! Love the template, beautifull components!&lt;/p&gt;
+
+                          &lt;blockquote class="blockquote mt-4"&gt;
+                            &lt;!-- Media --&gt;
+                            &lt;div class="media"&gt;
+                              &lt;div class="avatar avatar-sm avatar-circle mb-2 mr-2"&gt;
+                                &lt;img class="avatar-img" src="@@autopath/assets/svg/brands/htmlstream.svg" alt="Image Description"&gt;
+                              &lt;/div&gt;
+
+                              &lt;div class="media-body"&gt;
+                                &lt;h5 class="mb-0"&gt;Htmlstream&lt;/h5&gt;
+
+                                &lt;ul class="list-inline font-size-sm"&gt;
+                                  &lt;li class="list-inline-item"&gt;Author&lt;/li&gt;
+                                  &lt;li class="list-inline-item"&gt;2 months ago&lt;/li&gt;
+                                &lt;/ul&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Media --&gt;
+
+                            Hey Bob, thanks a lot for sharing your experience - we do much appreciate it! Cheers!
+                          &lt;/blockquote&gt;
+                        &lt;/li&gt;
+                        &lt;!-- End Review --&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End List Comment --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="list-checked" class="hs-docs-heading">
+              List checked <a class="anchorjs-link" href="#list-checked" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Replacing the default <code>list-style</code> and left margin on list items with 3 different styles of checkboxes.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab9" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab9" data-toggle="pill" href="#nav-result9" role="tab" aria-controls="nav-result9" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab9" data-toggle="pill" href="#nav-html9" role="tab" aria-controls="nav-html9" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent9">
+                <div class="tab-pane fade p-4 show active" id="nav-result9" role="tabpanel" aria-labelledby="nav-resultTab9">
+                  <div class="row">
+                    <div class="col-sm">
+                      <!-- List Checked -->
+                      <ul class="list-checked list-checked-primary">
+                        <li class="list-checked-item">Dashboard</li>
+                        <li class="list-checked-item">Profile</li>
+                        <li class="list-checked-item">Tasks</li>
+                        <li class="list-checked-item">Projects</li>
+                        <li class="list-checked-item">Members</li>
+                      </ul>
+                      <!-- End List Checked -->
+                    </div>
+
+                    <div class="col-sm">
+                      <!-- List Checked -->
+                      <ul class="list-checked list-checked-bg-primary">
+                        <li class="list-checked-item">Dashboard</li>
+                        <li class="list-checked-item">Profile</li>
+                        <li class="list-checked-item">Tasks</li>
+                        <li class="list-checked-item">Projects</li>
+                        <li class="list-checked-item">Members</li>
+                      </ul>
+                      <!-- End List Checked -->
+                    </div>
+
+                    <div class="col-sm">
+                      <!-- List Checked -->
+                      <ul class="list-checked list-checked-soft-bg-primary">
+                        <li class="list-checked-item">Dashboard</li>
+                        <li class="list-checked-item">Profile</li>
+                        <li class="list-checked-item">Tasks</li>
+                        <li class="list-checked-item">Projects</li>
+                        <li class="list-checked-item">Members</li>
+                      </ul>
+                      <!-- End List Checked -->
+                    </div>
+                  </div>
+                  <!-- End Row -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html9" role="tabpanel" aria-labelledby="nav-htmlTab9">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;div class="row"&gt;
+                        &lt;div class="col-sm"&gt;
+                          &lt;!-- List Checked --&gt;
+                          &lt;ul class="list-checked list-checked-primary"&gt;
+                            &lt;li class="list-checked-item"&gt;Dashboard&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Profile&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Tasks&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Projects&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Members&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;!-- End List Checked --&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-sm"&gt;
+                          &lt;!-- List Checked --&gt;
+                          &lt;ul class="list-checked list-checked-bg-primary"&gt;
+                            &lt;li class="list-checked-item"&gt;Dashboard&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Profile&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Tasks&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Projects&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Members&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;!-- End List Checked --&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-sm"&gt;
+                          &lt;!-- List Checked --&gt;
+                          &lt;ul class="list-checked list-checked-soft-bg-primary"&gt;
+                            &lt;li class="list-checked-item"&gt;Dashboard&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Profile&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Tasks&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Projects&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Members&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;!-- End List Checked --&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Row --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="list-checked-sizings" class="hs-docs-heading">
+              List checked Sizings <a class="anchorjs-link" href="#list-checked-sizings" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>.list-checked-sm</code> class.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab10" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab10" data-toggle="pill" href="#nav-result10" role="tab" aria-controls="nav-result10" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab10" data-toggle="pill" href="#nav-html10" role="tab" aria-controls="nav-html10" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent10">
+                <div class="tab-pane fade p-4 show active" id="nav-result10" role="tabpanel" aria-labelledby="nav-resultTab10">
+                  <div class="row">
+                    <div class="col-sm">
+                      <!-- List Checked -->
+                      <ul class="list-checked list-checked-sm list-checked-primary">
+                        <li class="list-checked-item">Dashboard</li>
+                        <li class="list-checked-item">Profile</li>
+                        <li class="list-checked-item">Tasks</li>
+                        <li class="list-checked-item">Projects</li>
+                        <li class="list-checked-item">Members</li>
+                      </ul>
+                      <!-- End List Checked -->
+                    </div>
+
+                    <div class="col-sm">
+                      <!-- List Checked -->
+                      <ul class="list-checked list-checked-sm list-checked-bg-primary">
+                        <li class="list-checked-item">Dashboard</li>
+                        <li class="list-checked-item">Profile</li>
+                        <li class="list-checked-item">Tasks</li>
+                        <li class="list-checked-item">Projects</li>
+                        <li class="list-checked-item">Members</li>
+                      </ul>
+                      <!-- End List Checked -->
+                    </div>
+
+                    <div class="col-sm">
+                      <!-- List Checked -->
+                      <ul class="list-checked list-checked-sm list-checked-soft-bg-primary">
+                        <li class="list-checked-item">Dashboard</li>
+                        <li class="list-checked-item">Profile</li>
+                        <li class="list-checked-item">Tasks</li>
+                        <li class="list-checked-item">Projects</li>
+                        <li class="list-checked-item">Members</li>
+                      </ul>
+                      <!-- End List Checked -->
+                    </div>
+                  </div>
+                  <!-- End Row -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html10" role="tabpanel" aria-labelledby="nav-htmlTab10">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;div class="row"&gt;
+                        &lt;div class="col-sm"&gt;
+                          &lt;!-- List Checked --&gt;
+                          &lt;ul class="list-checked list-checked-sm list-checked-primary"&gt;
+                            &lt;li class="list-checked-item"&gt;Dashboard&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Profile&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Tasks&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Projects&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Members&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;!-- End List Checked --&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-sm"&gt;
+                          &lt;!-- List Checked --&gt;
+                          &lt;ul class="list-checked list-checked-sm list-checked-bg-primary"&gt;
+                            &lt;li class="list-checked-item"&gt;Dashboard&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Profile&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Tasks&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Projects&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Members&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;!-- End List Checked --&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-sm"&gt;
+                          &lt;!-- List Checked --&gt;
+                          &lt;ul class="list-checked list-checked-sm list-checked-soft-bg-primary"&gt;
+                            &lt;li class="list-checked-item"&gt;Dashboard&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Profile&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Tasks&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Projects&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Members&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;!-- End List Checked --&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Row --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Use <code>.list-checked-lg</code> class.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab11" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab11" data-toggle="pill" href="#nav-result11" role="tab" aria-controls="nav-result11" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab11" data-toggle="pill" href="#nav-html11" role="tab" aria-controls="nav-html11" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent11">
+                <div class="tab-pane fade p-4 show active" id="nav-result11" role="tabpanel" aria-labelledby="nav-resultTab11">
+                  <div class="row">
+                    <div class="col-sm">
+                      <!-- List Checked -->
+                      <ul class="list-checked list-checked-lg list-checked-primary">
+                        <li class="list-checked-item">Dashboard</li>
+                        <li class="list-checked-item">Profile</li>
+                        <li class="list-checked-item">Tasks</li>
+                        <li class="list-checked-item">Projects</li>
+                        <li class="list-checked-item">Members</li>
+                      </ul>
+                      <!-- End List Checked -->
+                    </div>
+
+                    <div class="col-sm">
+                      <!-- List Checked -->
+                      <ul class="list-checked list-checked-lg list-checked-bg-primary">
+                        <li class="list-checked-item">Dashboard</li>
+                        <li class="list-checked-item">Profile</li>
+                        <li class="list-checked-item">Tasks</li>
+                        <li class="list-checked-item">Projects</li>
+                        <li class="list-checked-item">Members</li>
+                      </ul>
+                      <!-- End List Checked -->
+                    </div>
+
+                    <div class="col-sm">
+                      <!-- List Checked -->
+                      <ul class="list-checked list-checked-lg list-checked-soft-bg-primary">
+                        <li class="list-checked-item">Dashboard</li>
+                        <li class="list-checked-item">Profile</li>
+                        <li class="list-checked-item">Tasks</li>
+                        <li class="list-checked-item">Projects</li>
+                        <li class="list-checked-item">Members</li>
+                      </ul>
+                      <!-- End List Checked -->
+                    </div>
+                  </div>
+                  <!-- End Row -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html11" role="tabpanel" aria-labelledby="nav-htmlTab11">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;div class="row"&gt;
+                        &lt;div class="col-sm"&gt;
+                          &lt;!-- List Checked --&gt;
+                          &lt;ul class="list-checked list-checked-lg list-checked-primary"&gt;
+                            &lt;li class="list-checked-item"&gt;Dashboard&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Profile&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Tasks&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Projects&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Members&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;!-- End List Checked --&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-sm"&gt;
+                          &lt;!-- List Checked --&gt;
+                          &lt;ul class="list-checked list-checked-lg list-checked-bg-primary"&gt;
+                            &lt;li class="list-checked-item"&gt;Dashboard&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Profile&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Tasks&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Projects&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Members&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;!-- End List Checked --&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-sm"&gt;
+                          &lt;!-- List Checked --&gt;
+                          &lt;ul class="list-checked list-checked-lg list-checked-soft-bg-primary"&gt;
+                            &lt;li class="list-checked-item"&gt;Dashboard&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Profile&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Tasks&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Projects&lt;/li&gt;
+                            &lt;li class="list-checked-item"&gt;Members&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;!-- End List Checked --&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Row --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="color-variations" class="hs-docs-heading">
+              Color variations <a class="anchorjs-link" href="#color-variations" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab12" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab12" data-toggle="pill" href="#nav-result12" role="tab" aria-controls="nav-result12" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab12" data-toggle="pill" href="#nav-html12" role="tab" aria-controls="nav-html12" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent12">
+                <div class="tab-pane fade p-4 show active" id="nav-result12" role="tabpanel" aria-labelledby="nav-resultTab12">
+                  <div class="row">
+                    <div class="col-sm">
+                      <!-- List Checked -->
+                      <ul class="list-checked list-checked-primary">
+                        <li class="list-checked-item">Primary</li>
+                      </ul>
+                      <ul class="list-checked list-checked-secondary">
+                        <li class="list-checked-item">Secondary</li>
+                      </ul>
+                      <ul class="list-checked list-checked-success">
+                        <li class="list-checked-item">Success</li>
+                      </ul>
+                      <ul class="list-checked list-checked-danger">
+                        <li class="list-checked-item">Danger</li>
+                      </ul>
+                      <ul class="list-checked list-checked-warning">
+                        <li class="list-checked-item">Warning</li>
+                      </ul>
+                      <ul class="list-checked list-checked-info">
+                        <li class="list-checked-item">Info</li>
+                      </ul>
+                      <ul class="list-checked list-checked-light">
+                        <li class="list-checked-item">Light</li>
+                      </ul>
+                      <ul class="list-checked list-checked-dark">
+                        <li class="list-checked-item">Dark</li>
+                      </ul>
+                      <!-- End List Checked -->
+                    </div>
+
+                    <div class="col-sm">
+                      <!-- List Checked -->
+                      <ul class="list-checked list-checked-bg-primary">
+                        <li class="list-checked-item">Primary</li>
+                      </ul>
+                      <ul class="list-checked list-checked-bg-secondary">
+                        <li class="list-checked-item">Secondary</li>
+                      </ul>
+                      <ul class="list-checked list-checked-bg-success">
+                        <li class="list-checked-item">Success</li>
+                      </ul>
+                      <ul class="list-checked list-checked-bg-danger">
+                        <li class="list-checked-item">Danger</li>
+                      </ul>
+                      <ul class="list-checked list-checked-bg-warning">
+                        <li class="list-checked-item">Warning</li>
+                      </ul>
+                      <ul class="list-checked list-checked-bg-info">
+                        <li class="list-checked-item">Info</li>
+                      </ul>
+                      <ul class="list-checked list-checked-bg-light">
+                        <li class="list-checked-item">Light</li>
+                      </ul>
+                      <ul class="list-checked list-checked-bg-dark">
+                        <li class="list-checked-item">Dark</li>
+                      </ul>
+                      <!-- End List Checked -->
+                    </div>
+
+                    <div class="col-sm">
+                      <!-- List Checked -->
+                      <ul class="list-checked list-checked-soft-bg-primary">
+                        <li class="list-checked-item">Primary</li>
+                      </ul>
+                      <ul class="list-checked list-checked-soft-bg-secondary">
+                        <li class="list-checked-item">Secondary</li>
+                      </ul>
+                      <ul class="list-checked list-checked-soft-bg-success">
+                        <li class="list-checked-item">Success</li>
+                      </ul>
+                      <ul class="list-checked list-checked-soft-bg-danger">
+                        <li class="list-checked-item">Danger</li>
+                      </ul>
+                      <ul class="list-checked list-checked-soft-bg-warning">
+                        <li class="list-checked-item">Warning</li>
+                      </ul>
+                      <ul class="list-checked list-checked-soft-bg-info">
+                        <li class="list-checked-item">Info</li>
+                      </ul>
+                      <ul class="list-checked list-checked-soft-bg-light">
+                        <li class="list-checked-item">Light</li>
+                      </ul>
+                      <ul class="list-checked list-checked-soft-bg-dark">
+                        <li class="list-checked-item">Dark</li>
+                      </ul>
+                      <!-- End List Checked -->
+                    </div>
+                  </div>
+                  <!-- End Row -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html12" role="tabpanel" aria-labelledby="nav-htmlTab12">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;div class="row"&gt;
+                        &lt;div class="col-sm"&gt;
+                          &lt;!-- List Checked --&gt;
+                          &lt;ul class="list-checked list-checked-primary"&gt;
+                            &lt;li class="list-checked-item"&gt;Primary&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-secondary"&gt;
+                            &lt;li class="list-checked-item"&gt;Secondary&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-success"&gt;
+                            &lt;li class="list-checked-item"&gt;Success&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-danger"&gt;
+                            &lt;li class="list-checked-item"&gt;Danger&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-warning"&gt;
+                            &lt;li class="list-checked-item"&gt;Warning&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-info"&gt;
+                            &lt;li class="list-checked-item"&gt;Info&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-light"&gt;
+                            &lt;li class="list-checked-item"&gt;Light&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-dark"&gt;
+                            &lt;li class="list-checked-item"&gt;Dark&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;!-- End List Checked --&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-sm"&gt;
+                          &lt;!-- List Checked --&gt;
+                          &lt;ul class="list-checked list-checked-bg-primary"&gt;
+                            &lt;li class="list-checked-item"&gt;Primary&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-bg-secondary"&gt;
+                            &lt;li class="list-checked-item"&gt;Secondary&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-bg-success"&gt;
+                            &lt;li class="list-checked-item"&gt;Success&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-bg-danger"&gt;
+                            &lt;li class="list-checked-item"&gt;Danger&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-bg-warning"&gt;
+                            &lt;li class="list-checked-item"&gt;Warning&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-bg-info"&gt;
+                            &lt;li class="list-checked-item"&gt;Info&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-bg-light"&gt;
+                            &lt;li class="list-checked-item"&gt;Light&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-bg-dark"&gt;
+                            &lt;li class="list-checked-item"&gt;Dark&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;!-- End List Checked --&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-sm"&gt;
+                          &lt;!-- List Checked --&gt;
+                          &lt;ul class="list-checked list-checked-soft-bg-primary"&gt;
+                            &lt;li class="list-checked-item"&gt;Primary&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-soft-bg-secondary"&gt;
+                            &lt;li class="list-checked-item"&gt;Secondary&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-soft-bg-success"&gt;
+                            &lt;li class="list-checked-item"&gt;Success&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-soft-bg-danger"&gt;
+                            &lt;li class="list-checked-item"&gt;Danger&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-soft-bg-warning"&gt;
+                            &lt;li class="list-checked-item"&gt;Warning&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-soft-bg-info"&gt;
+                            &lt;li class="list-checked-item"&gt;Info&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-soft-bg-light"&gt;
+                            &lt;li class="list-checked-item"&gt;Light&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;ul class="list-checked list-checked-soft-bg-dark"&gt;
+                            &lt;li class="list-checked-item"&gt;Dark&lt;/li&gt;
+                          &lt;/ul&gt;
+                          &lt;!-- End List Checked --&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Row --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Calendar | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <link rel="stylesheet" href="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+    }
+    <link rel="stylesheet" href="@@autopath/node_modules/@yaireo/tagify/dist/tagify.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/fullcalendar/main.min.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/select2/dist/css/select2.min.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+  </head>
+
+  <body class="@@if(layoutBuilder.header.layoutMode === 'default'){has-navbar-vertical-aside navbar-vertical-aside-show-xl} @@if(layoutBuilder.sidebarLayout === 'compact'){navbar-vertical-aside-compact-mode} @@if(layoutBuilder.sidebarLayout === 'mini'){navbar-vertical-aside-mini-mode} footer-offset">
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.sidebarLayout !== 'mini') {
+      <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside-mini-cache.js"></script>
+    }
+
+    <!-- Search Form -->
+    @@include("@@autopath/partials/layouts-components/mobile-search.html")
+    <!-- End Search Form -->
+
+    <!-- ========== HEADER ========== -->
+    @@if (layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/header/main.html")
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'single') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/main-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/main-container.html")
+      }
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'double') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/double-line-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/double-line-container.html")
+      }
+    }
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/main.html", {
+        "category": "apps",
+        "subcategory": "",
+        "link": "apps-calendar.html"
+      })
+    }
+
+    @@if (layoutBuilder.sidebarLayout === 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/compact.html", {
+        "category": "apps",
+        "subcategory": "",
+        "link": "apps-calendar.html"
+      })
+    }
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main">
+      <!-- Content -->
+      <div class="content @@layoutBuilder.header.containerMode">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div class="row align-items-end">
+            <div class="col-sm mb-2 mb-sm-0">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-no-gutter">
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Apps</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Calendar</li>
+                </ol>
+              </nav>
+
+              <h1 class="page-header-title">Calendar</h1>
+            </div>
+
+            <div class="col-sm-auto">
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addEventToCalendarModal">
+                <i class="tio-add"></i> Create event
+              </button>
+              <!-- End Button trigger modal -->
+            </div>
+          </div>
+        </div>
+        <!-- End Page Header -->
+
+        <!-- Custom Header -->
+        <div class="row align-items-sm-center mb-4">
+          <div class="col-lg-5 mb-2 mb-lg-0">
+            <div class="d-flex align-items-center">
+              <button type="button" class="btn btn-white mr-3" data-toggle="tooltip" data-placement="top" title="" data-fc-today>Today</button>
+              
+              <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary btn-no-focus rounded-circle mr-1" data-fc-prev-month data-toggle="tooltip" data-placement="top" title="Previous month">
+                <i class="tio-chevron-left"></i>
+              </button>
+              <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary btn-no-focus rounded-circle ml-1" data-fc-next-month data-toggle="tooltip" data-placement="top" title="Next month">
+                <i class="tio-chevron-right"></i>
+              </button>
+              
+              <div class="ml-3">
+                <h4 class="h3 mb-0" data-fc-title></h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="d-sm-flex align-items-sm-center">
+              <!-- Input Group -->
+              <div class="input-group input-group-merge mr-2 mb-2 mb-sm-0">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="tio-search"></i>
+                  </div>
+                </div>
+                <input type="text" id="filter-by-title" class="form-control" placeholder="Search by title">
+              </div>
+              <!-- End Input Group -->
+
+              <!-- Unfold -->
+              <div class="hs-unfold mr-2">
+                <a class="js-hs-unfold-invoker btn btn-white dropdown-toggle" href="javascript:;"
+                   data-hs-unfold-options='{
+                     "target": "#calendarFilterDropdown",
+                     "type": "css-animation"
+                   }'>
+                  <i class="tio-filter-list mr-1"></i> Filter
+                </a>
+
+                <div id="calendarFilterDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-card" style="min-width: 15rem;">
+                  <!-- Card -->
+                  <div class="card">
+                    <div class="card-body">
+                      <small class="card-subtitle">My calendars</small>
+  
+                      <!-- Custom Checkbox -->
+                      <div class="custom-control custom-checkbox mb-2" data-filter>
+                        <input type="checkbox" id="calendarPersonalCheck" class="custom-control-input" value="fullcalendar-custom-event-hs-team" checked>
+                        <label class="custom-control-label" for="calendarPersonalCheck">HS Team</label>
+                      </div>
+                      <!-- End Custom Checkbox -->
+
+                      <!-- Custom Checkbox -->
+                      <div class="custom-control custom-checkbox checkbox-outline-danger mb-2" data-filter>
+                        <input type="checkbox" id="calendarRemindersCheck" class="custom-control-input indeterminate-checkbox" value="fullcalendar-custom-event-reminders" checked>
+                        <label class="custom-control-label" for="calendarRemindersCheck">Reminders</label>
+                      </div>
+                      <!-- End Custom Checkbox -->
+
+                      <!-- Custom Checkbox -->
+                      <div class="custom-control custom-checkbox checkbox-outline-warning" data-filter>
+                        <input type="checkbox" id="calendarTasksCheck" class="custom-control-input" value="fullcalendar-custom-event-tasks" checked>
+                        <label class="custom-control-label" for="calendarTasksCheck">Tasks</label>
+                      </div>
+                      <!-- End Custom Checkbox -->
+                    </div>
+
+                    <hr class="my-0">
+
+                    <div class="card-body">
+                      <small class="card-subtitle">Other calendars</small>
+
+                      <!-- Custom Checkbox -->
+                      <div class="custom-control custom-checkbox checkbox-outline-success" data-filter>
+                        <input type="checkbox" id="calendarHolidaysCheck" class="custom-control-input" value="fullcalendar-custom-event-holidays" checked>
+                        <label class="custom-control-label" for="calendarHolidaysCheck">Holidays</label>
+                      </div>
+                      <!-- End Custom Checkbox -->
+                    </div>
+                  </div>
+                  <!-- End Card -->
+                </div>
+              </div>
+              <!-- End Unfold -->
+
+              <!-- Unfold -->
+              <div class="hs-unfold mr-2">
+                <a class="js-hs-unfold-invoker btn btn-white dropdown-toggle" href="javascript:;"
+                   data-hs-unfold-options='{
+                     "target": "#calendarEventsDropdown",
+                     "type": "css-animation"
+                   }'>
+                  <i class="tio-event mr-1"></i> Events
+                </a>
+
+                <div id="calendarEventsDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm-right dropdown-card" style="min-width: 15rem;">
+                  <!-- Card -->
+                  <div class="card">
+                    <div class="card-body card-body-height">
+                      <small class="card-subtitle">Drag these onto the calendar:</small>
+
+                      <!-- External Events -->
+                      <div id="external-events" class="fullcalendar-custom">
+                        <!-- Event -->
+                        <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event fc-daygrid-inline-block-event fullcalendar-custom-event-hs-team'
+                             data-event='{
+                               "title": "Open a new task on Jira",
+                               "image": "@@autopath/assets/svg/brands/jira.svg",
+                               "className": "",
+                               "forceEvent": true
+                             }'>
+                          <div class='fc-event-title'>
+                            <div class='d-flex align-items-center'>
+                              <img class="avatar avatar-xss mr-2" src="@@autopath/assets/svg/brands/jira.svg" alt="Image Description">
+                              <span>Open a new task on Jira</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Event -->
+
+                        <!-- Event -->
+                        <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event fc-daygrid-inline-block-event fullcalendar-custom-event-reminders'
+                             data-event='{
+                               "title": "Send weekly invoice to John",
+                               "image": "@@autopath/assets/svg/brands/excel.svg",
+                               "className": "fc-event-success",
+                               "forceEvent": true
+                             }'>
+                          <div class='fc-event-title'>
+                            <div class='d-flex align-items-center'>
+                              <img class="avatar avatar-xss mr-2" src="@@autopath/assets/svg/brands/excel.svg" alt="Image Description">
+                              <span>Send weekly invoice to John</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Event -->
+
+                        <!-- Event -->
+                        <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event fc-daygrid-inline-block-event fullcalendar-custom-event-hs-team'
+                             data-event='{
+                               "title": "Shoot a message to Christina on Slack",
+                               "image": "@@autopath/assets/svg/brands/slack.svg",
+                               "className": "",
+                               "forceEvent": true
+                             }'>
+                          <div class='fc-event-title'>
+                            <div class='d-flex align-items-center'>
+                              <img class="avatar avatar-xss mr-2" src="@@autopath/assets/svg/brands/slack.svg" alt="Image Description">
+                              <span>Shoot a message to Christina on Slack</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Event -->
+
+                        <!-- Event -->
+                        <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event fc-daygrid-inline-block-event fullcalendar-custom-event-tasks'
+                             data-event='{
+                               "title": "First team timeline",
+                               "image": "",
+                               "className": "fc-event-success",
+                               "forceEvent": true
+                             }'>
+                          <div class='fc-event-title'>
+                            <div class='d-flex align-items-center'>
+                              <span class="avatar avatar-xss avatar-info avatar-circle mr-2">
+                                <span class="avatar-initials">F</span>
+                              </span>
+                              <span>First team timeline</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Event -->
+
+                        <!-- Event -->
+                        <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event fc-daygrid-inline-block-event fullcalendar-custom-event-reminders'
+                             data-event='{
+                               "title": "Download monthly data in DigitalOcean",
+                               "image": "@@autopath/assets/svg/brands/digitalocean.svg",
+                               "className": "",
+                               "forceEvent": true
+                             }'>
+                          <div class='fc-event-title'>
+                            <div class='d-flex align-items-center'>
+                              <img class="avatar avatar-xss mr-2" src="@@autopath/assets/svg/brands/digitalocean.svg" alt="Image Description">
+                              <span>Download monthly data in DigitalOcean</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Event -->
+
+                        <!-- Event -->
+                        <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event fc-daygrid-inline-block-event fullcalendar-custom-event-tasks'
+                             data-event='{
+                               "title": "Hire a Figma designer",
+                               "image": "@@autopath/assets/svg/brands/figma.svg",
+                               "className": "",
+                               "forceEvent": true
+                             }'>
+                          <div class='fc-event-title'>
+                            <div class='d-flex align-items-center'>
+                              <img class="avatar avatar-xss mr-2" src="@@autopath/assets/svg/brands/figma.svg" alt="Image Description">
+                              <span>Hire a Figma designer</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Event -->
+
+                        <!-- Event -->
+                        <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event fc-daygrid-inline-block-event fullcalendar-custom-event-hs-team'
+                             data-event='{
+                               "title": "Mobile App rework for (Pixeel)",
+                               "image": "",
+                               "className": "",
+                               "forceEvent": true
+                             }'>
+                          <div class='fc-event-title'>
+                            <div class='d-flex align-items-center'>
+                              <span class="avatar avatar-xss avatar-primary avatar-circle mr-2">
+                                <span class="avatar-initials">M</span>
+                              </span>
+                              <span>Mobile App rework for (Pixeel)</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Event -->
+                      </div>
+                      <!-- End External Events -->
+                    </div>
+                  </div>
+                  <!-- End Card -->
+                </div>
+              </div>
+              <!-- End Unfold -->
+
+              <!-- Select2 -->
+              <select class="js-select2-custom custom-select" size="1" style="opacity: 0;" data-fc-grid-view
+                      data-hs-select2-options='{
+                        "minimumResultsForSearch": "Infinity",
+                        "width": "100px"
+                      }'>
+                <option value="dayGridMonth">Month</option>
+                <option value="timeGridWeek">Week</option>
+                <option value="timeGridDay">Day</option>
+                <option value="listWeek">List</option>
+              </select>
+              <!-- End Select2 -->
+            </div>
+          </div>
+        </div>
+        <!-- End Custom Header -->
+
+        <!-- Fullcalendar -->
+        <div id="js-fullcalendar" class="fullcalendar-custom"></div>
+        <!-- End Fullcalendar -->
+      </div>
+      <!-- End Content -->
+
+      <!-- Footer -->
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/footer/main.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/footer/container.html")
+      }
+      <!-- End Footer -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Keyboard Shortcuts -->
+    @@include("@@autopath/partials/layouts-components/sidebar-shortcuts.html")
+    <!-- End Keyboard Shortcuts -->
+
+    <!-- Activity -->
+    @@include("@@autopath/partials/layouts-components/sidebar-activity.html")
+    <!-- End Activity -->
+
+    <!-- Welcome Message Modal -->
+    @@include("@@autopath/partials/modals/modal-welcome.html")
+    <!-- End Welcome Message Modal -->
+
+    <!-- Upload files Modal -->
+    @@include("@@autopath/partials/modals/modal-upload-files.html")
+    <!-- End Upload files Modal -->
+
+    <!-- Modal -->
+    @@include("@@autopath/partials/modals/modal-add-events-to-calendar.html")
+    <!-- End Modal -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <script src="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+    }
+    <script src="@@autopath/node_modules/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
+    <script src="@@autopath/node_modules/@yaireo/tagify/dist/tagify.min.js"></script>
+    <script src="@@autopath/node_modules/fullcalendar/main.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-fullcalendar-filter/dist/hs-fullcalendar-filter.min.js"></script>
+    <script src="@@autopath/node_modules/daterangepicker/moment.min.js"></script>
+    <script src="@@autopath/node_modules/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="@@autopath/node_modules/select2/dist/js/select2.full.min.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.fullcalendar.js"></script>
+    <script src="@@autopath/assets/js/hs.tagify.js"></script>
+    <script src="@@autopath/assets/js/hs.flatpickr.js"></script>
+    <script src="@@autopath/assets/js/hs.select2.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // =======================================================
+
+
+        // BUILDER TOGGLE INVOKER
+        // =======================================================
+        $('.js-navbar-vertical-aside-toggle-invoker').click(function () {
+          $('.js-navbar-vertical-aside-toggle-invoker i').tooltip('hide');
+        });
+
+        @@if (layoutBuilder.header.layoutMode !== 'default') {
+          // INITIALIZATION OF MEGA MENU
+          // =======================================================
+          var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+            desktop: {
+              position: 'left'
+            }
+          }).init();
+        }
+
+
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav({
+          onMini: function () {
+            setTimeout(function () {
+              fullcalendarEditable.updateSize()
+            }, 200)
+          },
+          onFull: function () {
+            setTimeout(function () {
+              fullcalendarEditable.updateSize()
+            }, 200)
+          }
+        });
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+        $(".js-nav-tooltip-link").on("show.bs.tooltip", function(e) {
+          if (!$("body").hasClass("navbar-vertical-aside-mini-mode")) {
+            return false;
+          }
+        });
+
+
+        // INITIALIZATION OF UNFOLD
+        // =======================================================
+        $('.js-hs-unfold-invoker').each(function () {
+          var unfold = new HSUnfold($(this)).init();
+        });
+
+
+        // INITIALIZATION OF FORM SEARCH
+        // =======================================================
+        $('.js-form-search').each(function () {
+          new HSFormSearch($(this)).init()
+        });
+
+
+        // INITIALIZATION OF TAGIFY
+        // =======================================================
+        $('.js-tagify').each(function () {
+          var tagify = $.HSCore.components.HSTagify.init($(this));
+        });
+
+        var gestsField = null
+
+        function getAvatar(tagData) {
+          if (tagData.src.length) {
+            return "<img class=\"avatar avatar-xs avatar-circle mr-2\" src=\"" + tagData.src.toLowerCase() + "\">"
+          } else {
+            return "<span class=\"avatar avatar-xs avatar-soft-primary avatar-xs avatar-circle mr-2\">" +
+              "<span class=\"avatar-initials\">" + tagData.value.charAt(0) + "</span>" +
+              "</span>"
+          }
+        }
+
+        $('#eventGestsLabel').each(function () {
+          var settings = $(this).attr('data-hs-tagify-options') ? JSON.parse($(this).attr('data-hs-tagify-options')) : {}
+
+          gestsField = $.HSCore.components.HSTagify.init($(this), {
+              templates: {
+                tag: function tag(tagData) {
+                  try {
+                    return "<tag title=\"" + tagData.value + "\" contenteditable=\"false\" spellcheck=\"false\" class=\"tagify__tag " + (tagData["class"] ? tagData["class"] : "") + "\" " + this.getAttributes(tagData) + ">" +
+                              "<x title=\"remove tag\" class=\"tagify__tag__removeBtn\"></x>" +
+                              "<div class=\"d-flex align-items-center\">" +
+                                getAvatar(tagData) +
+                                "<span>" + tagData.value + "</span>" +
+                              "</div>" +
+                            "</tag>";
+                  } catch (err) {}
+                },
+                dropdownItem: function dropdownItem(tagData) {
+                  try {
+                    return "<div " + this.getAttributes(tagData) + " class=\"tagify__dropdown__item " + (tagData["class"] ? tagData["class"] : "") + "\">" +
+                             getAvatar(tagData) +
+                             "<span>" + tagData.value + "</span>" +
+                           "</div>";
+                  } catch (err) {}
+                }
+              }
+            })
+
+            gestsField.addTags(settings.whitelist.slice(0, 0));
+        });
+
+
+        // INITIALIZATION OF FULLCALENDAR SELECT2
+        // =======================================================
+        $('.js-select2-custom').each(function () {
+          var select2 = $.HSCore.components.HSSelect2.init($(this));
+        });
+
+
+        // INITIALIZATION OF FLATPICKR
+        // =======================================================
+        const eventDateRange = $.HSCore.components.HSFlatpickr.init($('#eventDateRangeLabel'));
+
+
+        // INITIALIZATION OF FULLCALENDAR
+        // =======================================================
+        const prevMonthBtn = $('[data-fc-prev-month]')
+        const nextMonthBtn = $('[data-fc-next-month]')
+        const todayBtn = $('[data-fc-today]')
+        const dateTitle = $('[data-fc-title]')
+        const gridViewSelect = $('[data-fc-grid-view]')
+
+
+        const titleField = $('#eventTitleLabel')
+        const repeatField = $('#eventRepeatLabel')
+        const eventDescriptionLabel = $('#eventDescriptionLabel')
+        const eventLocationLabel = $('#eventLocationLabel')
+        const eventColorLabel = $('#eventColorLabel')
+        var editableEvent = {}
+
+        var fullcalendarEditable = $.HSCore.components.HSFullcalendar.init($('#js-fullcalendar'), {
+          initialDate: "2020-12-03",
+          headerToolbar: false,
+          editable: true,
+          defaultAllDay: false,
+          datesSet(dateSet) {
+            dateTitle.text(dateSet.view.title)
+            console.log(1)
+          },
+          select: function(date) {
+            prepareData('', date.startStr, date.endStr)
+          },
+          eventClick: function(event) {
+            $('.popover').popover('dispose')
+
+            // Get Avatars HTML
+            function getAvatars(members) {
+              const wrapper = $('<ul>').addClass('list-unstyled mb-0')
+
+              members.forEach(function (member) {
+                wrapper.append(`
+                  <li class="d-flex align-items-center mb-2">
+                    ${getAvatar(member)}
+                    <span>${member.value}</span>
+                  </li>
+                `)
+              })
+
+              return members.length > 0 ? wrapper[0].outerHTML : false
+            }
+
+            // Popover Content
+            const content = `
+              <h3 class="mb-4">${event.event.title}</h3>
+
+              <div class="media mb-4">
+                <i class="tio-time nav-icon"></i>
+                <div class="media-body">
+                  <span class="d-block text-dark mb-2">${moment(event.event.start).format('dddd, MMMM DD')} - ${moment(event.event.end).format('dddd, MMMM DD')}</span>
+                  <span class="d-block">Repeat: <span class="text-dark text-capitalize">${event.event.extendedProps.repeatField}</span></span>
+                </div>
+              </div>
+
+              <div class="media mb-4">
+                <i class="tio-group-senior nav-icon"></i>
+                <div class="media-body">
+                  <span class="d-block text-dark">${getAvatars(event.event.extendedProps.gestsField) || 'Empty'}</span>
+                </div>
+              </div>
+
+              <div class="media mb-4">
+                <i class="tio-poi nav-icon"></i>
+                <div class="media-body">
+                  <span class="d-block text-dark">${event.event.extendedProps.eventLocationLabel || 'Empty'}</span>
+                </div>
+              </div>
+
+              <div class="media mb-4">
+                <i class="tio-text-left nav-icon"></i>
+                <div class="media-body">
+                  <span class="d-block text-dark">${event.event.extendedProps.eventDescriptionLabel || 'Empty'}</span>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center mb-4">
+                <div class="avatar avatar-xs avatar-circle mr-2">
+                  <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                </div>
+                <div class="media-body">
+                  <span class="d-block text-dark">Mark Williams</span>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-end">
+                <a id="closePopover" href="javascript:;" class="btn btn-sm btn-white mr-2">Close</a>
+                <a id="modal-invoker-${event.event.id}" href="javascript:;" class="btn btn-sm btn-primary">
+                  <i class="tio-edit"></i>
+                  Edit
+                </a>
+              </div>
+            `
+
+            // Open Popover
+            $(event.el).popover({
+              html: true,
+              content: content,
+              template: '<div class="popover fullcalendar-event-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+            })
+            .popover('show')
+
+            // Open Popover For Editing
+            $(event.el).on('shown.bs.popover', function () {
+              $('#modal-invoker-' + event.event.id).click(function () {
+                $(event.el).popover('dispose')
+                prepareData(event.event.title, event.event.start, event.event.end, event.event)
+              })
+            })
+          },
+          eventContent({event}) {
+            return {
+              html: `
+                <div>
+                  <div class="fc-event-time">${gridViewSelect.val() === 'timeGridWeek' && !event.allDay ? moment(event.start).format('HH:mm') + '-' + moment(event.end).format('HH:mm') : ''}</div>
+                  <div class='d-flex align-items-center'>
+                    ${event.extendedProps.image ? `<img class="avatar avatar-xs mr-2" src="${event.extendedProps.image}" alt="Image Description">` : ''}
+                    <span class="fc-event-title fc-sticky">${event.title}</span>
+                  </div>
+                </div>
+                `
+            }
+          },
+          drop({draggedEl}) {
+            $(draggedEl).remove()
+          },
+          events: [
+            {
+              id: 1,
+              title: "English Lesson",
+              start: "2020-12-03",
+              end: "2020-12-03",
+              className: "fullcalendar-custom-event-hs-team",
+              eventDescriptionLabel: "",
+              eventLocationLabel: "",
+              repeatField: "weekdays",
+              allDay: true,
+              gestsField: [
+                {
+                  "value": "David Harrison",
+                  "src": "@@autopath/assets/img/160x160/img3.jpg"
+                }
+              ]
+            },
+            {
+              id: 2,
+              title: "Spanish Lesson",
+              start: "2020-12-03",
+              end: "2020-12-03",
+              className: "fullcalendar-custom-event-hs-team",
+              eventDescriptionLabel: "",
+              eventLocationLabel: "",
+              repeatField: "everyday",
+              allDay: true,
+              gestsField: [
+                {
+                  "value": "Anne Richard",
+                  "src": ""
+                },
+                {
+                  "value": "Finch Hoot",
+                  "src": "@@autopath/assets/img/160x160/img5.jpg"
+                }
+              ]
+            },
+            {
+              id: 3,
+              title: "Monthly presentation (in PowerPoint)",
+              start: "2020-12-03 04:00",
+              end: "2020-12-03 05:00",
+              className: "fullcalendar-custom-event-reminders",
+              eventDescriptionLabel: "",
+              eventLocationLabel: "Online",
+              repeatField: "everyday",
+              gestsField: [],
+              image: '@@autopath/assets/svg/brands/powerpoint.svg'
+            },
+            {
+              id: 4,
+              title: "Complete Figma course: Go from zero to hero in Figma",
+              start: "2020-12-06 02:00",
+              end: "2020-12-08 15:00",
+              className: "fullcalendar-custom-event-hs-team",
+              eventDescriptionLabel: "Learn Figma like a Professional! Start from the basics and go all the way to creating your own design!",
+              eventLocationLabel: "Online",
+              repeatField: "never",
+              gestsField: [
+                {
+                  "value": "Bob Dean",
+                  "src": ""
+                },
+                {
+                  "value": "Ella Lauda",
+                  "src": "@@autopath/assets/img/160x160/img9.jpg"
+                },
+                {
+                  "value": "Lori Hunter",
+                  "src": ""
+                },
+                {
+                  "value": "Costa Quinn",
+                  "src": "@@autopath/assets/img/160x160/img6.jpg"
+                }
+              ],
+              image: '@@autopath/assets/svg/brands/figma.svg'
+            },
+            {
+              id: 5,
+              title: "Independence day",
+              start: "2020-12-01",
+              end: "2020-12-02",
+              className: "fullcalendar-custom-event-holidays",
+              eventDescriptionLabel: "",
+              eventLocationLabel: "",
+              repeatField: "never",
+              gestsField: [],
+              image: ''
+            },
+            {
+              id: 6,
+              title: "Teachers day",
+              start: "2020-12-01",
+              end: "2020-12-02",
+              className: "fullcalendar-custom-event-holidays",
+              eventDescriptionLabel: "",
+              eventLocationLabel: "",
+              repeatField: "never",
+              gestsField: [],
+              image: ''
+            },
+            {
+              id: 7,
+              title: "Send weekly invoice to John",
+              start: "2020-12-10",
+              end: "2020-12-11",
+              className: "fullcalendar-custom-event-hs-team",
+              eventDescriptionLabel: "",
+              eventLocationLabel: "",
+              repeatField: "everyday",
+              allDay: true,
+              gestsField: [
+                {
+                  "value": "Linda Bates",
+                  "src": "@@autopath/assets/img/160x160/img8.jpg"
+                },
+                {
+                  "value": "Rachel Doe",
+                  "src": ""
+                }
+              ],
+              image: '@@autopath/assets/svg/brands/excel.svg'
+            },
+            {
+              id: 8,
+              title: "Shoot a message to Christina on Slack",
+              start: "2020-12-18",
+              end: "2020-12-20",
+              className: "fullcalendar-custom-event-tasks",
+              eventDescriptionLabel: "",
+              eventLocationLabel: "",
+              repeatField: "everyday",
+              gestsField: [
+                {
+                  "value": "Brian Halligan",
+                  "src": ""
+                }
+              ],
+              image: '@@autopath/assets/svg/brands/slack.svg'
+            },
+            {
+              id: 9,
+              title: "Open a calendar task on Jira",
+              start: "2020-12-03 00:00",
+              end: "2020-12-03 04:00",
+              className: "fullcalendar-custom-event-hs-team",
+              eventDescriptionLabel: "",
+              eventLocationLabel: "",
+              repeatField: "never",
+              gestsField: [
+                {
+                  "value": "Clarice Boone",
+                  "src": "@@autopath/assets/img/160x160/img7.jpg"
+                },
+                {
+                  "value": "Sam Kart",
+                  "src": "@@autopath/assets/img/160x160/img4.jpg"
+                },
+                {
+                  "value": "Mark Williams",
+                  "src": "@@autopath/assets/img/160x160/img6.jpg"
+                }
+              ],
+              image: '@@autopath/assets/svg/brands/jira.svg'
+            },
+            {
+              id: 10,
+              title: "Weekly presentation (in PowerPoint)",
+              start: "2020-12-14",
+              end: "2020-12-17",
+              className: "fullcalendar-custom-event-reminders",
+              eventDescriptionLabel: "",
+              eventLocationLabel: "Online",
+              repeatField: "everyday",
+              gestsField: [],
+              image: '@@autopath/assets/svg/brands/powerpoint.svg'
+            },
+            {
+              id: 11,
+              title: "Launch",
+              start: "2020-12-03 01:00",
+              end: "2020-12-03 02:00",
+              className: "fullcalendar-custom-event-hs-team",
+              eventDescriptionLabel: "",
+              eventLocationLabel: "",
+              repeatField: "everyday",
+              gestsField: []
+            },
+            {
+              id: 12,
+              title: "Make monthly payments via MasterCard",
+              start: "2020-12-11",
+              end: "2020-12-12",
+              className: "fullcalendar-custom-event-tasks",
+              eventDescriptionLabel: "",
+              eventLocationLabel: "Online",
+              repeatField: "everyday",
+              gestsField: [],
+              image: '@@autopath/assets/svg/brands/mastercard.svg'
+            }
+          ]
+        })
+
+        // Events
+        $('body').on('click', '#closePopover', function () {
+          $('.popover').popover('dispose')
+        })
+
+        prevMonthBtn.click(function () {
+          fullcalendarEditable.prev()
+          $('[data-toggle="tooltip"]').tooltip('hide');
+        })
+
+        nextMonthBtn.click(function () {
+          fullcalendarEditable.next()
+          $('[data-toggle="tooltip"]').tooltip('hide');
+        })
+
+        todayBtn.click(function () {
+          fullcalendarEditable.today()
+        })
+
+        gridViewSelect.on('change', function (event) {
+          fullcalendarEditable.changeView($(event.target).val())
+        })
+
+        todayBtn.attr('title', new Date().toDateString())
+
+        $('body').on('click', function (e) {
+          if (!$(e.target).closest('.fc-event').length
+            && !$(e.target).closest('.popover').length) {
+            $('.popover').popover('dispose');
+          }
+        });
+
+        $('#addEventToCalendarModal').on('hide.bs.modal', function () {
+          titleField.css({
+            height: 'auto'
+          })
+        })
+
+        $('#addEventToCalendarModal').on('show.bs.modal', function () {
+          clearForm()
+        })
+
+        $('#addEventToCalendarModal').on('shown.bs.modal', function () {
+          titleField.css({
+            height: titleField[0].scrollHeight + "px"
+          })
+
+          titleField.focus()
+        })
+
+        $(document).scroll(function () {
+          if ($('.fc-more-popover').length) {
+            $('.fc-more-popover').remove()
+          }
+        })
+
+        titleField.on('input', function () {
+          $(this).css({
+            height: this.scrollHeight + "px"
+          })
+        })
+
+        // Add/Edit Event
+        $('#processEvent').click(function () {
+          if (!Object.keys(editableEvent).length) {
+            const date = eventDateRange.selectedDates
+
+            fullcalendarEditable.addEvent({
+              id: new Date().getTime(),
+              title: titleField.val() || '(No title)',
+              repeatField: repeatField.val(),
+              gestsField: gestsField.value,
+              eventDescriptionLabel: eventDescriptionLabel.val(),
+              eventLocationLabel: eventLocationLabel.val(),
+              start: moment(date[0]).format('YYYY-MM-DD'),
+              end: date.length > 1 ? moment(date[1]).format('YYYY-MM-DD') : moment(date[0]).format('YYYY-MM-DD'),
+              classNames: eventColorLabel.val()
+            })
+          } else {
+            const date = eventDateRange.selectedDates
+
+            editableEvent.setProp('title', titleField.val())
+            editableEvent.setExtendedProp('repeatField', repeatField.val())
+            editableEvent.setExtendedProp('gestsField', gestsField.value)
+            editableEvent.setExtendedProp('eventDescriptionLabel', eventDescriptionLabel.val())
+            editableEvent.setExtendedProp('eventLocationLabel', eventLocationLabel.val())
+            editableEvent.setProp('classNames', eventColorLabel.val())
+            editableEvent.setStart(moment(date[0]).format('YYYY-MM-DD'))
+            editableEvent.setEnd(date.length > 1 ? moment(date[1]).format('YYYY-MM-DD') : moment(date[0]).format('YYYY-MM-DD'))
+          }
+          $('#addEventToCalendarModal').modal('hide')
+          filterSearchExample.filter()
+        })
+
+        // Set Form
+        function prepareData(title, start, end, event = {}) {
+          $('#addEventToCalendarModal').modal('show')
+          $('#processEvent').text('Save')
+
+          titleField.val(title)
+          eventDateRange.setDate([moment(start).format('MM/DD/YYYY'), moment(end).format('MM/DD/YYYY')])
+
+          if (Object.keys(event).length) {
+            repeatField.val(event.extendedProps.repeatField)
+            repeatField.trigger('change')
+            gestsField.addTags(event.extendedProps.gestsField)
+            eventDescriptionLabel.val(event.extendedProps.eventDescriptionLabel)
+            eventLocationLabel.val(event.extendedProps.eventLocationLabel)
+            console.log(eventColorLabel)
+            eventColorLabel.val(event.classNames[0])
+            eventColorLabel.trigger('change')
+
+            editableEvent = event
+          }
+        }
+
+        // Clear Form
+        function clearForm() {
+          titleField.val('')
+          eventDescriptionLabel.val('')
+          eventLocationLabel.val('')
+          repeatField.val('everyday')
+          repeatField.trigger('change')
+          eventColorLabel.val('hs-team')
+          eventColorLabel.trigger('change')
+          gestsField.removeAllTags()
+          editableEvent = {}
+
+          $('#processEvent').text('Create Event')
+        }
+
+        // Filter
+        const filterSearchExample = new HSFullcalendarFilter(fullcalendarEditable)
+
+        filterSearchExample.addFilter('byTitle', function (event) {
+          return event.title.toLowerCase().indexOf($('#filter-by-title').val().toLowerCase()) !== -1
+        })
+
+        filterSearchExample.addFilter('byCategory', function (event) {
+          const selectedCategories = $('[data-filter] input:checked')
+          if (!selectedCategories.length) return false
+          let show = false
+
+          selectedCategories.each(key => {
+            if (event.classNames.includes($($(selectedCategories)[key]).val()) || event.extendedProps.forceEvent) {
+              show = true
+              return false
+            }
+          })
+
+          return show
+        })
+
+        $('#filter-by-title').on('input', function () {
+          filterSearchExample.filter()
+        })
+
+        $('[data-filter]').on('change', function () {
+          filterSearchExample.filter()
+        })
+
+        filterSearchExample.filter()
+
+
+        // ADD DRAGGABLE CLASS FOR CALENDAR
+        // =======================================================
+        const Draggable = FullCalendar.Draggable;
+
+        new Draggable($('#external-events')[0], {
+          itemSelector: '.fc-event'
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

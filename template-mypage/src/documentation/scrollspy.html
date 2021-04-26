@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Scrollspy - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content"
+        data-offset="80"
+        data-hs-scrollspy-options='{
+          "target": "#navbarSettings"
+        }'>
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "scrollspy.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Scrollspy</h1>
+                  <p class="lead">Mobile-friendly interactive map library.</p>
+                  <a href="https://getbootstrap.com/docs/4.5/components/scrollspy/" target="_blank">Bootstrap Scrollspy documentation <i class="tio-open-in-new"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="how-to-use" class="hs-docs-heading">
+              How to use <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/assets/vendor/hs-scrollspy/dist/hs-scrollspy.min.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code>&lt;/body&gt;</code> tag, to enable it.</p>
+
+            <pre class="rounded">
+              <code class="language-html" data-lang="html">
+                &lt;script&gt;
+                  $(document).on('ready', function () {
+                    // INITIALIZATION OF SCROLLSPY
+                    // =======================================================
+                    var scrollspy = new HSScrollspy($('body'), {
+                      // !SETTING "resolve" PARAMETER AND RETURNING "resolve('completed')" IS REQUIRED
+                      beforeScroll: function(resolve) {
+                        if (window.innerWidth &lt; 992) {
+                          $('#navbarVerticalNavMenu').collapse('hide').on('hidden.bs.collapse', function () {
+                            return resolve('completed');
+                          });
+                        } else {
+                          return resolve('completed');
+                        }
+                      }
+                    }).init();
+                  });
+                &lt;/script&gt;
+              </code>
+            </pre>
+
+            <!-- Heading -->
+            <h2 id="how-it-works" class="hs-docs-heading">
+              How it works <a class="anchorjs-link" href="#how-it-works" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Scrollspy has a few requirements to function properly:</p>
+
+            <ul>
+              <li>Scrollspy requires <code>data-hs-scrollspy-options='{ "target": "#yourID" }'</code> on <code>&lt;body&gt;</code> element and must point to an element with the target <code>ID</code>. And also, add the <code>.js-scrollspy</code> class to the element where this <code>ID</code> is placed.</li>
+              <li>Scrollspy requires <code>position: relative;</code> on the element, you’re spying on, usually the <code>&lt;body&gt;</code>.</li>
+              <li>When spying on elements other than the <code>&lt;body&gt;</code>, be sure to have a <code>height</code> set and <code>overflow-y: scroll;</code> applied.</li>
+              <li>Anchors (<code>&lt;a&gt;</code>) are required and must point to an element with that <code>ID</code>.</li>
+            </ul>
+
+            <p>When successfully implemented, your nav or list group will update accordingly, moving the <code>.active</code> class from one item to the next based on their associated targets.</p>
+
+            <!-- Heading -->
+            <h2 id="example" class="hs-docs-heading">
+              Example <a class="anchorjs-link" href="#example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab1" data-toggle="pill" href="#nav-js1" role="tab" aria-controls="nav-js1" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Alert -->
+              <div class="alert alert-soft-dark card-alert" role="alert">
+                This example uses <a class="alert-link" href="sticky-block.html">Sticky block <i class="tio-link"></i></a> library.
+              </div>
+              <!-- End Alert -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <div class="row">
+                    <div class="col-lg-5">
+                      <!-- Navbar -->
+                      <div class="navbar-vertical navbar-expand-lg">
+                        <!-- Navbar Toggle -->
+                        <button type="button" class="navbar-toggler btn btn-block btn-white mb-3" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarVerticalNavMenu" data-toggle="collapse" data-target="#navbarVerticalNavMenu">
+                          <span class="d-flex justify-content-between align-items-center">
+                            <span class="h5 mb-0">Nav menu</span>
+
+                            <span class="navbar-toggle-default">
+                              <i class="tio-menu-hamburger"></i>
+                            </span>
+
+                            <span class="navbar-toggle-toggled">
+                              <i class="tio-clear"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <!-- End Navbar Toggle -->
+
+                        <!-- Navbar Collapse -->
+                        <div id="navbarVerticalNavMenu" class="collapse navbar-collapse">
+                          <ul id="navbarSettings" class="js-sticky-block js-scrollspy navbar-nav navbar-nav-lg nav-tabs card card-navbar-nav"
+                              data-hs-sticky-block-options='{
+                               "parentSelector": "#navbarVerticalNavMenu",
+                               "targetSelector": "#header",
+                               "breakpoint": "lg",
+                               "startPoint": "#navbarVerticalNavMenu",
+                               "endPoint": "#stickyBlockEndPoint",
+                               "stickyOffsetTop": 20
+                             }'>
+                            <li class="nav-item">
+                              <a class="nav-link active" href="#content">
+                                <i class="tio-user-outlined nav-icon"></i>
+                                Basic information
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#emailSection">
+                                <i class="tio-online nav-icon"></i>
+                                Email
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#passwordSection">
+                                <i class="tio-lock-outlined nav-icon"></i>
+                                Password
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#preferencesSection">
+                                <i class="tio-settings-outlined nav-icon"></i>
+                                Preferences
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- End Navbar Collapse -->
+                      </div>
+                      <!-- End Navbar -->
+                    </div>
+
+                    <div class="col-lg-7">
+                      <!-- Card -->
+                      <div id="basicInfo" class="card mb-5">
+                        <div class="card-header">
+                          <h3 class="card-title h4">Basic information</h3>
+                        </div>
+                        <div class="card-body">
+                          This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </div>
+                      </div>
+                      <!-- End Card -->
+
+                      <!-- Card -->
+                      <div id="emailSection" class="card mb-5">
+                        <div class="card-header">
+                          <h3 class="card-title h4">Email</h3>
+                        </div>
+                        <div class="card-body">
+                          This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </div>
+                      </div>
+                      <!-- End Card -->
+
+                      <!-- Card -->
+                      <div id="passwordSection" class="card mb-5">
+                        <div class="card-header">
+                          <h3 class="card-title h4">Password</h3>
+                        </div>
+                        <div class="card-body">
+                          This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </div>
+                      </div>
+                      <!-- End Card -->
+
+                      <!-- Card -->
+                      <div id="preferencesSection" class="card mb-5">
+                        <div class="card-header">
+                          <h3 class="card-title h4">Preferences</h3>
+                        </div>
+                        <div class="card-body">
+                          This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </div>
+                      </div>
+                      <!-- End Card -->
+
+                      <!-- Sticky Block End Point -->
+                      <div id="stickyBlockEndPoint"></div>
+                    </div>
+                  </div>
+                  <!-- End Row -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;body data-offset="0" data-hs-scrollspy-options='{ "target": "#navbarSettings" }'&gt;
+
+                      &lt;div class="row"&gt;
+                        &lt;div class="col-lg-5"&gt;
+                          &lt;!-- Navbar --&gt;
+                          &lt;div class="navbar-vertical navbar-expand-lg"&gt;
+                            &lt;!-- Navbar Toggle --&gt;
+                            &lt;button type="button" class="navbar-toggler btn btn-block btn-white mb-3" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarVerticalNavMenu" data-toggle="collapse" data-target="#navbarVerticalNavMenu"&gt;
+                              &lt;span class="d-flex justify-content-between align-items-center"&gt;
+                                &lt;span class="h5 mb-0"&gt;Nav menu&lt;/span&gt;
+
+                                &lt;span class="navbar-toggle-default"&gt;
+                                  &lt;i class="tio-menu-hamburger"&gt;&lt;/i&gt;
+                                &lt;/span&gt;
+
+                                &lt;span class="navbar-toggle-toggled"&gt;
+                                  &lt;i class="tio-clear"&gt;&lt;/i&gt;
+                                &lt;/span&gt;
+                              &lt;/span&gt;
+                            &lt;/button&gt;
+                            &lt;!-- End Navbar Toggle --&gt;
+
+                            &lt;!-- Navbar Collapse --&gt;
+                            &lt;div id="navbarVerticalNavMenu" class="collapse navbar-collapse"&gt;
+                              &lt;ul id="navbarSettings" class="js-sticky-block js-scrollspy navbar-nav navbar-nav-lg nav-tabs card card-navbar-nav"
+                                  data-hs-sticky-block-options='{
+                                   "parentSelector": "#navbarVerticalNavMenu",
+                                   "targetSelector": "#header",
+                                   "breakpoint": "lg",
+                                   "startPoint": "#navbarVerticalNavMenu",
+                                   "endPoint": "#stickyBlockEndPoint",
+                                   "stickyOffsetTop": 20
+                                 }'&gt;
+                                &lt;li class="nav-item"&gt;
+                                  &lt;a class="nav-link active" href="#basicInfo"&gt;
+                                    &lt;i class="tio-user-outlined nav-icon"&gt;&lt;/i&gt;
+                                    Basic information
+                                  &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li class="nav-item"&gt;
+                                  &lt;a class="nav-link" href="#emailSection"&gt;
+                                    &lt;i class="tio-online nav-icon"&gt;&lt;/i&gt;
+                                    Email
+                                  &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li class="nav-item"&gt;
+                                  &lt;a class="nav-link" href="#passwordSection"&gt;
+                                    &lt;i class="tio-lock-outlined nav-icon"&gt;&lt;/i&gt;
+                                    Password
+                                  &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li class="nav-item"&gt;
+                                  &lt;a class="nav-link" href="#preferencesSection"&gt;
+                                    &lt;i class="tio-settings-outlined nav-icon"&gt;&lt;/i&gt;
+                                    Preferences
+                                  &lt;/a&gt;
+                                &lt;/li&gt;
+                              &lt;/ul&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Navbar Collapse --&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Navbar --&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-lg-7"&gt;
+                          &lt;!-- Card --&gt;
+                          &lt;div id="basicInfo" class="card mb-5"&gt;
+                            &lt;div class="card-header"&gt;
+                              &lt;h3 class="card-title h4"&gt;Basic information&lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;div class="card-body"&gt;
+                              This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Card --&gt;
+
+                          &lt;!-- Card --&gt;
+                          &lt;div id="emailSection" class="card mb-5"&gt;
+                            &lt;div class="card-header"&gt;
+                              &lt;h3 class="card-title h4"&gt;Email&lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;div class="card-body"&gt;
+                              This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Card --&gt;
+
+                          &lt;!-- Card --&gt;
+                          &lt;div id="passwordSection" class="card mb-5"&gt;
+                            &lt;div class="card-header"&gt;
+                              &lt;h3 class="card-title h4"&gt;Password&lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;div class="card-body"&gt;
+                              This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Card --&gt;
+
+                          &lt;!-- Card --&gt;
+                          &lt;div id="preferencesSection" class="card mb-5"&gt;
+                            &lt;div class="card-header"&gt;
+                              &lt;h3 class="card-title h4"&gt;Preferences&lt;/h3&gt;
+                            &lt;/div&gt;
+                            &lt;div class="card-body"&gt;
+                              This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Card --&gt;
+
+                          &lt;!-- Sticky Block End Point --&gt;
+                          &lt;div id="stickyBlockEndPoint"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Row --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js1" role="tabpanel" aria-labelledby="nav-jsTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- JS Implementing Plugins --&gt;
+                      &lt;script src="@@autopath/assets/vendor/hs-sticky-block/dist/hs-sticky-block.min.js"&gt;&lt;/script&gt;
+
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          // INITIALIZATION OF STICKY BLOCKS
+                          // =======================================================
+                          $('.js-sticky-block').each(function () {
+                            var stickyBlock = new HSStickyBlock($(this)).init();
+                          });
+
+
+                          // INITIALIZATION OF SCROLLSPY
+                          // =======================================================
+                          var scrollspy = new HSScrollspy($('body'), {
+                            // !SETTING "resolve" PARAMETER AND RETURNING "resolve('completed')" IS REQUIRED
+                            beforeScroll: function(resolve) {
+                              if (window.innerWidth &lt; 992) {
+                                $('#navbarVerticalNavMenu').collapse('hide').on('hidden.bs.collapse', function () {
+                                  return resolve('completed');
+                                });
+                              } else {
+                                return resolve('completed');
+                              }
+                            }
+                          }).init();
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="methods" class="hs-docs-heading">
+              Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card overflow-hidden">
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-thead-bordered card-table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Parameters</th>
+                      <th style="width: 50%;">Description</th>
+                      <th class="text-nowrap">Default value</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p><code>topLevelComponent</code></p>
+                      </td>
+                      <td>Сontainer inside which scroll will be</td>
+                      <td><code>'html, body'</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>duration</code></p>
+                      </td>
+                      <td>Scroll speed</td>
+                      <td><code>400</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>easing</code></p>
+                      </td>
+                      <td>Easing functions specify the speed at which an animation progresses at different points within the animation. <a href="https://api.jqueryui.com/easings/" target="_blank">https://api.jqueryui.com/easings/</a></td>
+                      <td><code>'linear'</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>offset | data-offset</code></p>
+                      </td>
+                      <td>Pixels to offset from top when calculating position of scroll.</td>
+                      <td><code>0</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>topLevelComponent</code></p>
+                      </td>
+                      <td>Сontainer inside which scroll will be</td>
+                      <td><code>'html, body'</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>target | data-target</code></p>
+                      </td>
+                      <td>Finds which section the spied element is in. auto will choose the best method to get scroll coordinates. offset will use jQuery offset method to get scroll coordinates. position will use jQuery position method to get scroll coordinates.</td>
+                      <td><code>null</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>method | data-method</code></p>
+                      </td>
+                      <td>Specifies element to apply Scrollspy plugin.</td>
+                      <td><code>'auto'</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>beforeScroll</code></p>
+                      </td>
+                      <td>Callback function</td>
+                      <td><code>null</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>afterScroll</code></p>
+                      </td>
+                      <td>Callback function</td>
+                      <td><code>null</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+    <script src="@@autopath/assets/vendor/hs-sticky-block/dist/hs-sticky-block.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-scrollspy/dist/hs-scrollspy.min.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+
+
+        // INITIALIZATION OF STICKY BLOCKS
+        // =======================================================
+        $('.js-sticky-block').each(function () {
+          var stickyBlock = new HSStickyBlock($(this)).init();
+        });
+
+
+        // INITIALIZATION OF SCROLLSPY
+        // =======================================================
+        var scrollspy = new HSScrollspy($('body'), {
+          // !SETTING "resolve" PARAMETER AND RETURNING "resolve('completed')" IS REQUIRED
+          beforeScroll: function(resolve) {
+            if (window.innerWidth < 992) {
+              $('#navbarVerticalNavMenu').collapse('hide').on('hidden.bs.collapse', function () {
+                return resolve('completed');
+              });
+            } else {
+              return resolve('completed');
+            }
+          }
+        }).init();
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

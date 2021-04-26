@@ -1,0 +1,43 @@
+<header id="header" class="navbar navbar-expand-lg navbar-fixed navbar-height navbar-container navbar-light">
+  <div class="row justify-content-lg-center flex-grow-1">
+    <div class="col-lg-9">
+      <div class="navbar-nav-wrap">
+        <div class="navbar-brand-wrapper navbar-brand-wrapper-width">
+          <!-- Logo -->
+          <a class="navbar-brand d-flex align-items-center" href="@@autopath/index.html" aria-label="Front">
+            <img class="navbar-brand-logo d-none d-sm-block" src="@@autopath/assets/svg/logos/logo.svg" alt="Logo">
+            <img class="navbar-brand-logo-short d-block d-sm-none" src="@@autopath/assets/svg/logos/logo-short.svg" alt="Logo">
+          </a>
+          <!-- End Logo -->
+        </div>
+
+        <div class="navbar-nav-wrap-content-left">
+          <!-- Search Form -->
+          @@include("../documentation/docs-search.html")
+          <!-- End Search Form -->
+        </div>
+
+        <!-- Secondary Content -->
+        <div class="navbar-nav-wrap-content-right">
+          <!-- Navbar -->
+          <ul class="navbar-nav align-items-center flex-row">
+            <li class="nav-item d-lg-block">
+              <!-- Navbar Vertical Toggle -->
+              <button type="button" class="js-navbar-vertical-aside-toggle-invoker navbar-vertical-aside-toggle btn btn-icon btn-ghost-secondary rounded-circle" data-toggle="tooltip" data-placement="right" title="Collapse">
+                <i class="tio-first-page navbar-vertical-aside-toggle-short-align"></i>
+                <i class="tio-last-page navbar-vertical-aside-toggle-full-align"></i>
+              </button>
+              <!-- End Navbar Vertical Toggle -->
+            </li>
+
+            <li class="nav-item d-none d-md-block">
+              <a class="btn btn-primary" href="@@autopath/index.html">Go to Dashboard</a>
+            </li>
+          </ul>
+          <!-- End Navbar -->
+        </div>
+        <!-- End Secondary Content -->
+      </div>
+    </div>
+  </div>
+</header>

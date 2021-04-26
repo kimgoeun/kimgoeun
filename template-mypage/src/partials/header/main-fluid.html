@@ -1,0 +1,60 @@
+<header id="header" class="navbar navbar-expand-xl navbar-fixed navbar-height navbar-flush navbar-container @@if(layoutBuilder.skin !== 'light'){navbar-bordered} @@if(layoutBuilder.skin === 'dark'){navbar-dark} @@if(layoutBuilder.skin === 'light'){navbar-light}">
+  <div class="js-mega-menu navbar-nav-wrap">
+    <div class="navbar-brand-wrapper">
+      <!-- Logo -->
+      @@if(layoutBuilder.skin === 'dark') {
+        @@include("../layouts-components/navbar-single-logo-light.html")
+      }
+      @@if(layoutBuilder.skin !== 'dark') {
+        @@include("../layouts-components/navbar-single-logo.html")
+      }
+      <!-- End Logo -->
+    </div>
+
+    <!-- Secondary Content -->
+    <div class="navbar-nav-wrap-content-right">
+      <!-- Navbar -->
+      <ul class="navbar-nav align-items-center flex-row">
+        <li class="nav-item d-none d-sm-inline-block">
+          <!-- Notification -->
+          @@include("../layouts-components/dropdown-notifications.html")
+          <!-- End Notification -->
+        </li>
+
+        <li class="nav-item d-none d-sm-inline-block">
+          <!-- Apps -->
+          @@include("../layouts-components/dropdown-apps.html")
+          <!-- End Apps -->
+        </li>
+
+        <li class="nav-item d-none d-sm-inline-block">
+          <!-- Activity -->
+          @@include("../layouts-components/sidebar-activity-toggle.html")
+          <!-- Activity -->
+        </li>
+
+        <li class="nav-item">
+          <!-- Account -->
+          @@include("../layouts-components/dropdown-user.html")
+          <!-- End Account -->
+        </li>
+
+        <li class="nav-item">
+          <!-- Toggle -->
+          @@include("../layouts-components/navbar-toggle.html")
+          <!-- End Toggle -->
+        </li>
+      </ul>
+      <!-- End Navbar -->
+    </div>
+    <!-- End Secondary Content -->
+
+    <!-- Navbar -->
+    <div class="navbar-nav-wrap-content-left collapse navbar-collapse" id="navbarNavMenu">
+      <div class="navbar-body">
+        @@include("../layouts-components/navbar-nav-menu-no-gutters.html")
+      </div>
+    </div>
+    <!-- End Navbar -->
+  </div>
+</header>

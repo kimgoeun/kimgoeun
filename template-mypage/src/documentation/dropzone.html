@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Drag’ n’ Drop File Uploads (Dropzone) - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "dropzone.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Drag’ n’ Drop File Uploads (Dropzone)</h1>
+                  <p class="lead">Drag'n'drop file-attach uploads with image previews.</p>
+                  <a href="https://dropzonejs.com/" target="_blank">Dropzone documentation <i class="tio-open-in-new"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="how-to-use" class="hs-docs-heading">
+              How to use <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/node_modules/dropzone/dist/min/dropzone.min.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Front</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/assets/js/hs.dropzone.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code>&lt;/body&gt;</code> tag, to enable it.</p>
+
+            <pre class="rounded">
+              <code class="language-html" data-lang="html">
+                &lt;script&gt;
+                  $(document).on('ready', function () {
+                    // INITIALIZATION OF DROPZONE FILE ATTACH MODULE
+                    // =======================================================
+                    $('.js-dropzone').each(function () {
+                      var dropzone = $.HSCore.components.HSDropzone.init('#' + $(this).attr('id'));
+                    });
+                  });
+                &lt;/script&gt;
+              </code>
+            </pre>
+
+            <!-- Heading -->
+            <h2 id="example" class="hs-docs-heading">
+              Example <a class="anchorjs-link" href="#example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- Dropzone -->
+                  <div id="attachFilesLabel" class="js-dropzone dropzone-custom custom-file-boxed">
+                    <div class="dz-message custom-file-boxed-label">
+                      <img class="avatar avatar-xl avatar-4by3 mb-3" src="@@autopath/assets/svg/illustrations/browse.svg" alt="Image Description">
+
+                      <h5>Drag and drop your file here</h5>
+
+                      <p class="mb-2">or</p>
+
+                      <span class="btn btn-sm btn-white">Browse files</span>
+                    </div>
+                  </div>
+                  <!-- End Dropzone -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Dropzone --&gt;
+                      &lt;div id="attachFilesLabel" class="js-dropzone dropzone-custom custom-file-boxed"&gt;
+                        &lt;div class="dz-message custom-file-boxed-label"&gt;
+                          &lt;img class="avatar avatar-xl avatar-4by3 mb-3" src="@@autopath/assets/svg/illustrations/browse.svg" alt="Image Description"&gt;
+
+                          &lt;h5&gt;Drag and drop your file here&lt;/h5&gt;
+
+                          &lt;p class="mb-2"&gt;or&lt;/p&gt;
+
+                          &lt;span class="btn btn-sm btn-white"&gt;Browse files&lt;/span&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Dropzone --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="modal-example" class="hs-docs-heading">
+              Modal example <a class="anchorjs-link" href="#modal-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <!-- Button Trigger Modal -->
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Open modal
+                  </button>
+                  <!-- End Button Trigger Modal -->
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <!-- Header -->
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Drag’ n’ drop file upload</h5>
+                          <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close">
+                            <i class="tio-clear tio-lg" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                        <!-- End Header -->
+
+                        <!-- Body -->
+                        <div class="modal-body">
+                          <!-- Dropzone -->
+                          <div id="attachFilesModalEg" class="js-dropzone dropzone-custom custom-file-boxed">
+                            <div class="dz-message custom-file-boxed-label">
+                              <img class="avatar avatar-xl avatar-4by3 mb-3" src="@@autopath/assets/svg/illustrations/browse.svg" alt="Image Description">
+
+                              <h5>Drag and drop your file here</h5>
+
+                              <p class="mb-2">or</p>
+
+                              <span class="btn btn-sm btn-white">Browse files</span>
+                            </div>
+                          </div>
+                          <!-- End Dropzone -->
+                        </div>
+                        <!-- End Body -->
+
+                        <!-- Footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Continue</button>
+                        </div>
+                        <!-- End Footer -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Button Trigger Modal --&gt;
+                      &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"&gt;
+                        Open modal
+                      &lt;/button&gt;
+                      &lt;!-- End Button Trigger Modal --&gt;
+
+                      &lt;!-- Modal --&gt;
+                      &lt;div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+                        &lt;div class="modal-dialog" role="document"&gt;
+                          &lt;div class="modal-content"&gt;
+                            &lt;!-- Header --&gt;
+                            &lt;div class="modal-header"&gt;
+                              &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Advanced select&lt;/h5&gt;
+                              &lt;button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close"&gt;
+                                &lt;i class="tio-clear tio-lg" aria-hidden="true"&gt;&lt;/i&gt;
+                              &lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Header --&gt;
+
+                            &lt;!-- Body --&gt;
+                            &lt;div class="modal-body"&gt;
+                              &lt;!-- Dropzone --&gt;
+                              &lt;div id="attachFilesModalEg" class="js-dropzone dropzone-custom custom-file-boxed"&gt;
+                                &lt;div class="dz-message custom-file-boxed-label"&gt;
+                                  &lt;img class="avatar avatar-xl avatar-4by3 mb-3" src="@@autopath/assets/svg/illustrations/browse.svg" alt="Image Description"&gt;
+
+                                  &lt;h5&gt;Drag and drop your file here&lt;/h5&gt;
+
+                                  &lt;p class="mb-2"&gt;or&lt;/p&gt;
+
+                                  &lt;span class="btn btn-sm btn-white"&gt;Browse files&lt;/span&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                              &lt;!-- End Dropzone --&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Body --&gt;
+
+                            &lt;!-- Footer --&gt;
+                            &lt;div class="modal-footer"&gt;
+                              &lt;button type="button" class="btn btn-white" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                              &lt;button type="button" class="btn btn-primary"&gt;Continue&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Footer --&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Modal --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="methods" class="hs-docs-heading">
+              Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card overflow-hidden mb-7">
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-thead-bordered card-table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Parameters</th>
+                      <th style="width: 50%;">Description</th>
+                      <th class="text-nowrap">Default value</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p><code>url</code></p>
+                      </td>
+                      <td>Has to be specified on elements other than form (or when the form doesn't have an action attribute). You can also provide a function that will be called with files and must return the url</td>
+                      <td><code>"@@autopath/assets/include/dropzone-upload.html"</code></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p><code>thumbnailWidth</code></p>
+                      </td>
+                      <td>If null, the ratio of the image will be used to calculate it.</td>
+                      <td><code>300</code></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p><code>thumbnailHeight</code></p>
+                      </td>
+                      <td>The same as <code>thumbnailWidth</code>. If both are null, images will not be resized.</td>
+                      <td><code>300</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Card -->
+            <div class="card overflow-hidden">
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-thead-bordered card-table">
+                  <tbody>
+                    <tr>
+                      <td><small class="text-cap">Parameters</small></td>
+                      <td><code>previewTemplate</code></td>
+                    </tr>
+                    <tr>
+                      <td><small class="text-cap">Description</small></td>
+                      <td>A string that contains the template used for each dropped file. Change it to fulfill your needs but make sure to properly provide all elements.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap"><small class="text-cap">Default value</small></td>
+                      <td>
+                        <pre class="rounded">
+                          <code class="language-markup" data-lang="html">
+                            $('&lt;div&gt;' +
+                            '  &lt;div class="col h-100 mb-5"&gt;' +
+                            '    &lt;div class="dz-preview dz-file-preview"&gt;' +
+                            '      &lt;div class="d-flex justify-content-end dz-close-icon"&gt;' +
+                            '        &lt;small class="tio-clear" data-dz-remove&gt;&lt;/small&gt;' +
+                            '      &lt;/div&gt;' +
+                            '      &lt;div class="dz-details media"&gt;' +
+                            '        &lt;div class="dz-img"&gt;' +
+                            '         &lt;img class="img-fluid" data-dz-thumbnail&gt;' +
+                            '        &lt;/div&gt;' +
+                            '        &lt;div class="media-body dz-file-wrapper"&gt;' +
+                            '         &lt;h6 class="dz-filename"&gt;' +
+                            '          &lt;span class="dz-title" data-dz-name&gt;&lt;/span&gt;' +
+                            '         &lt;/h6&gt;' +
+                            '         &lt;div class="dz-size" data-dz-size&gt;&lt;/div&gt;' +
+                            '        &lt;/div&gt;' +
+                            '      &lt;/div&gt;' +
+                            '      &lt;div class="dz-progress progress"&gt;' +
+                            '        &lt;div class="dz-upload progress-bar bg-success" role="progressbar" style="width: 0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" data-dz-uploadprogress&gt;&lt;/div&gt;' +
+                            '      &lt;/div&gt;' +
+                            '      &lt;div class="d-flex align-items-center"&gt;' +
+                            '        &lt;div class="dz-success-mark"&gt;' +
+                            '          &lt;span class="tio-checkmark-circle"&gt;&lt;/span&gt;' +
+                            '        &lt;/div&gt;' +
+                            '        &lt;div class="dz-error-mark"&gt;' +
+                            '          &lt;span class="tio-checkmark-circle-outlined"&gt;&lt;/span&gt;' +
+                            '        &lt;/div&gt;' +
+                            '        &lt;div class="dz-error-message"&gt;' +
+                            '          &lt;small data-dz-errormessage&gt;&lt;/small&gt;' +
+                            '        &lt;/div&gt;' +
+                            '      &lt;/div&gt;' +
+                            '    &lt;/div&gt;' +
+                            '  &lt;/div&gt;' +
+                            '&lt;/div&gt;').html()
+                          </code>
+                        </pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+    <script src="@@autopath/node_modules/dropzone/dist/min/dropzone.min.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+    <script src="@@autopath/assets/js/hs.dropzone.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+
+
+        // INITIALIZATION OF DROPZONE FILE ATTACH MODULE
+        // =======================================================
+        $('.js-dropzone').each(function () {
+          var dropzone = $.HSCore.components.HSDropzone.init('#' + $(this).attr('id'));
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

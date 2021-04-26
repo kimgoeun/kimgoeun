@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Welcome Page | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <link rel="stylesheet" href="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+    }
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+  </head>
+
+  <body class="@@if(layoutBuilder.header.layoutMode === 'default'){has-navbar-vertical-aside navbar-vertical-aside-show-xl} @@if(layoutBuilder.sidebarLayout === 'compact'){navbar-vertical-aside-compact-mode} @@if(layoutBuilder.sidebarLayout === 'mini'){navbar-vertical-aside-mini-mode} footer-offset">
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.sidebarLayout !== 'mini') {
+      <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside-mini-cache.js"></script>
+    }
+
+    <!-- Search Form -->
+    @@include("@@autopath/partials/layouts-components/mobile-search.html")
+    <!-- End Search Form -->
+
+    <!-- ========== HEADER ========== -->
+    @@if (layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/header/main.html")
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'single') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/main-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/main-container.html")
+      }
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'double') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/double-line-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/double-line-container.html")
+      }
+    }
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/main.html", {
+        "category": "",
+        "subcategory": "",
+        "link": "welcome-page.html"
+      })
+    }
+
+    @@if (layoutBuilder.sidebarLayout === 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/compact.html", {
+        "category": "",
+        "subcategory": "",
+        "link": "welcome-page.html"
+      })
+    }
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main">
+      <!-- Content -->
+      <div class="content @@layoutBuilder.header.containerMode">
+        <div class="row justify-content-sm-center text-center py-10">
+          <div class="col-sm-7 col-md-5">
+            <img class="img-fluid mb-5" src="@@autopath/assets/svg/illustrations/graphs.svg" alt="Image Description" style="max-width: 21rem;">
+
+            <h1>Hello, nice to see you!</h1>
+            <p>You are now minutes away from creativity than ever before. Enjoy!</p>
+
+            <a class="btn btn-primary" href="index.html">Create my first campaign</a>
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Content -->
+
+      <!-- Footer -->
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/footer/main.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/footer/container.html")
+      }
+      <!-- End Footer -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Keyboard Shortcuts -->
+    @@include("@@autopath/partials/layouts-components/sidebar-shortcuts.html")
+    <!-- End Keyboard Shortcuts -->
+
+    <!-- Activity -->
+    @@include("@@autopath/partials/layouts-components/sidebar-activity.html")
+    <!-- End Activity -->
+
+    <!-- Welcome Message Modal -->
+    @@include("@@autopath/partials/modals/modal-welcome.html")
+    <!-- End Welcome Message Modal -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <script src="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+    }
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // =======================================================
+
+
+        // BUILDER TOGGLE INVOKER
+        // =======================================================
+        $('.js-navbar-vertical-aside-toggle-invoker').click(function () {
+          $('.js-navbar-vertical-aside-toggle-invoker i').tooltip('hide');
+        });
+
+        @@if (layoutBuilder.header.layoutMode !== 'default') {
+          // INITIALIZATION OF MEGA MENU
+          // =======================================================
+          var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+            desktop: {
+              position: 'left'
+            }
+          }).init();
+        }
+
+        
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+        
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+        $(".js-nav-tooltip-link").on("show.bs.tooltip", function(e) {
+          if (!$("body").hasClass("navbar-vertical-aside-mini-mode")) {
+            return false;
+          }
+        });
+
+        
+        // INITIALIZATION OF UNFOLD
+        // =======================================================
+        $('.js-hs-unfold-invoker').each(function () {
+          var unfold = new HSUnfold($(this)).init();
+        });
+
+        
+        // INITIALIZATION OF FORM SEARCH
+        // =======================================================
+        $('.js-form-search').each(function () {
+          new HSFormSearch($(this)).init()
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<div class="modal fade" id="addCardModal" tabindex="-1" role="dialog" aria-labelledby="addCardModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <!-- Header -->
+      <div class="modal-header">
+        <h4 id="addCardModalTitle" class="modal-title">Add card</h4>
+
+        <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close">
+          <i class="tio-clear tio-lg"></i>
+        </button>
+      </div>
+      <!-- End Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <form>
+          <!-- Button Group -->
+          <div class="btn-group btn-group-toggle btn-group-segment d-flex form-group" data-toggle="buttons">
+            <label class="btn btn-sm flex-fill focus active">
+              <input type="radio" name="options" id="option1" checked>
+              <img class="avatar avatar-xss avatar-4by3 mr-2" src="@@autopath/assets/svg/brands/mastercard.svg" alt="Image Description">
+              Credit or Debit card
+            </label>
+            <label class="btn btn-sm flex-fill disabled">
+              <input type="radio" name="options" id="option2">
+              <img class="avatar avatar-xss avatar-4by3 mr-2" src="@@autopath/assets/svg/brands/paypal-icon.svg" alt="Image Description">
+              PayPal <span class="badge badge-soft-primary">Coming soon</span>
+            </label>
+          </div>
+          <!-- End Button Group -->
+
+          <!-- Form Group -->
+          <div class="form-group">
+            <label for="cardNameLabel" class="input-label">Name on card</label>
+            <input type="text" class="form-control" id="cardNameLabel" placeholder="Payoneer" aria-label="Payoneer">
+          </div>
+          <!-- End Form Group -->
+
+          <!-- Form Group -->
+          <div class="form-group">
+            <label for="cardNumberLabel" class="input-label">Card number</label>
+            <input type="text" class="js-masked-input form-control" name="cardNumber" id="cardNumberLabel" placeholder="xxxx xxxx xxxx xxxx" aria-label="xxxx xxxx xxxx xxxx"
+                   data-hs-mask-options='{
+                    "template": "0000 0000 0000 0000"
+                  }'>
+          </div>
+          <!-- End Form Group -->
+
+          <div class="row">
+            <div class="col-sm-6">
+              <!-- Form Group -->
+              <div class="form-group">
+                <label for="expirationDateLabel" class="input-label">Expiration date</label>
+                <input type="text" class="js-masked-input form-control" name="expirationDate" id="expirationDateLabel" placeholder="xx/xxxx" aria-label="xx/xxxx"
+                       data-hs-mask-options='{
+                        "template": "00/0000"
+                      }'>
+              </div>
+              <!-- End Form Group -->
+            </div>
+
+            <div class="col-sm-6">
+              <!-- Form Group -->
+              <div class="form-group">
+                <label for="securityCodeLabel" class="input-label">CVV Code <i class="far fa-question-circle text-body ml-1" data-toggle="tooltip" data-placement="top" title="A 3 - digit number, typically printed on the back of a card."></i></label>
+                <input type="text" class="js-masked-input form-control" name="securityCode" id="securityCodeLabel" placeholder="xxx" aria-label="xxx"
+                       data-hs-mask-options='{
+                        "template": "000"
+                      }'>
+              </div>
+              <!-- End Form Group -->
+            </div>
+          </div>
+          <!-- End Row -->
+
+          <!-- Custom Checkbox -->
+          <div class="custom-control custom-checkbox form-group">
+            <input type="checkbox" class="custom-control-input" id="makePrimaryCheckbox1">
+            <label class="custom-control-label" for="makePrimaryCheckbox1">Make this primary card</label>
+          </div>
+          <!-- End Custom Checkbox -->
+
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-white mr-2" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </form>
+      </div>
+      <!-- End Body -->
+    </div>
+  </div>
+</div>

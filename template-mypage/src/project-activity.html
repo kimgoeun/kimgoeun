@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Activity | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <link rel="stylesheet" href="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+    }
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+  </head>
+
+  <body class="@@if(layoutBuilder.header.layoutMode === 'default'){has-navbar-vertical-aside navbar-vertical-aside-show-xl} @@if(layoutBuilder.sidebarLayout === 'compact'){navbar-vertical-aside-compact-mode} @@if(layoutBuilder.sidebarLayout === 'mini'){navbar-vertical-aside-mini-mode} footer-offset">
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.sidebarLayout !== 'mini') {
+      <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside-mini-cache.js"></script>
+    }
+
+    <!-- Search Form -->
+    @@include("@@autopath/partials/layouts-components/mobile-search.html")
+    <!-- End Search Form -->
+
+    <!-- ========== HEADER ========== -->
+    @@if (layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/header/main.html")
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'single') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/main-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/main-container.html")
+      }
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'double') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/double-line-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/double-line-container.html")
+      }
+    }
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/main.html", {
+        "category": "pages",
+        "subcategory": "project",
+        "link": "project-activity.html"
+      })
+    }
+
+    @@if (layoutBuilder.sidebarLayout === 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/compact.html", {
+        "category": "pages",
+        "subcategory": "project",
+        "link": "project-activity.html"
+      })
+    }
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main">
+      <!-- Content -->
+      <div class="content @@layoutBuilder.header.containerMode">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div class="row align-items-end mb-3">
+            <div class="col-sm">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-no-gutter">
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Pages</a></li>
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Project</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Activity</li>
+                </ol>
+              </nav>
+
+              <h1 class="page-header-title">Activity</h1>
+            </div>
+          </div>
+          <!-- End Row -->
+
+          <!-- Nav -->
+          @@include("@@autopath/partials/layouts-components/nav-menu-project.html", {
+            "link": "project-activity.html"
+          })
+          <!-- End Nav -->
+        </div>
+        <!-- End Page Header -->
+
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Alert -->
+            <div class="alert alert-soft-dark mb-5 mb-lg-7" role="alert">
+              <div class="media align-items-center">
+                <img class="avatar avatar-xl mr-3" src="@@autopath/assets/svg/illustrations/yelling-reverse.svg" alt="Image Description">
+
+                <div class="media-body">
+                  <h3 class="alert-heading mb-1">Attention!</h3>
+                  <p class="mb-0">Hi! This project is due for an update. The last update was published 2 days ago.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Alert -->
+
+            <!-- Step -->
+            <ul class="step">
+              <!-- Step Item -->
+              <li class="step-item">
+                <div class="step-content-wrapper">
+                  <small class="step-divider">Today</small>
+                </div>
+              </li>
+              <!-- End Step Item -->
+
+              <!-- Step Item -->
+              <li class="step-item">
+                <div class="step-content-wrapper">
+                  <div class="step-avatar">
+                    <img class="step-avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description">
+                  </div>
+
+                  <div class="step-content">
+                    <h5 class="mb-1">
+                      <a class="text-dark" href="#">Iana Robinson</a>
+                    </h5>
+
+                    <p class="font-size-sm">Uploaded weekly reports to the task <a class="text-uppercase" href="#"><i class="tio-folder-bookmarked"></i></a></p>
+
+                    <ul class="list-group">
+                      <!-- List Item -->
+                      <li class="list-group-item list-group-item-light">
+                        <div class="row gx-1">
+                          <div class="col">
+                            <div class="media">
+                              <span class="mt-1 mr-2">
+                                <img class="avatar avatar-xs" src="@@autopath/assets/svg/brands/excel.svg" alt="Image Description">
+                              </span>
+                              <div class="media-body text-truncate">
+                                <span class="d-block font-size-sm text-dark text-truncate" title="weekly-reports.xls">weekly-reports.xls</span>
+                                <small class="d-block text-muted">12kb</small>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="media">
+                              <span class="mt-1 mr-2">
+                                <img class="avatar avatar-xs" src="@@autopath/assets/svg/brands/word.svg" alt="Image Description">
+                              </span>
+                              <div class="media-body text-truncate">
+                                <span class="d-block font-size-sm text-dark text-truncate" title="weekly-reports.xls">weekly-reports.xls</span>
+                                <small class="d-block text-muted">4kb</small>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="media">
+                              <span class="mt-1 mr-2">
+                                <img class="avatar avatar-xs" src="@@autopath/assets/svg/brands/word.svg" alt="Image Description">
+                              </span>
+                              <div class="media-body text-truncate">
+                                <span class="d-block font-size-sm text-dark text-truncate" title="monthly-reports.xls">monthly-reports.xls</span>
+                                <small class="d-block text-muted">8kb</small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- End List Item -->
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <!-- End Step Item -->
+
+              <!-- Step Item -->
+              <li class="step-item">
+                <div class="step-content-wrapper">
+                  <span class="step-icon step-icon-soft-dark">B</span>
+
+                  <div class="step-content">
+                    <h5 class="mb-1">
+                      <a class="text-dark" href="#">Bob Dean</a>
+                    </h5>
+
+                    <p class="font-size-sm">Marked project status as <span class="badge badge-soft-primary badge-pill"><span class="legend-indicator bg-primary"></span>"In progress"</span></p>
+                  </div>
+                </div>
+              </li>
+              <!-- End Step Item -->
+
+              <!-- Step Item -->
+              <li class="step-item">
+                <div class="step-content-wrapper">
+                  <small class="step-divider">Yesterday</small>
+                </div>
+              </li>
+              <!-- End Step Item -->
+
+              <!-- Step Item -->
+              <li class="step-item">
+                <div class="step-content-wrapper">
+                  <div class="step-avatar">
+                    <img class="step-avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                  </div>
+
+                  <div class="step-content">
+                    <h5 class="mb-1">
+                      <a class="text-dark" href="#">David Harrison</a>
+                    </h5>
+
+                    <p class="font-size-sm">Added 5 new card styles to <a href="#">Payments</a></p>
+
+                    <ul class="list-group">
+                      <!-- List Item -->
+                      <li class="list-group-item list-group-item-light">
+                        <div class="row gx-1">
+                          <div class="col">
+                            <img class="img-fluid rounded" src="@@autopath/assets/svg/illustrations/card-1.svg" alt="Image Description">
+                          </div>
+                          <div class="col">
+                            <img class="img-fluid rounded" src="@@autopath/assets/svg/illustrations/card-2.svg" alt="Image Description">
+                          </div>
+                          <div class="col">
+                            <img class="img-fluid rounded" src="@@autopath/assets/svg/illustrations/card-3.svg" alt="Image Description">
+                          </div>
+                          <div class="col">
+                            <img class="img-fluid rounded" src="@@autopath/assets/svg/illustrations/card-4.svg" alt="Image Description">
+                          </div>
+                          <div class="col">
+                            <img class="img-fluid rounded" src="@@autopath/assets/svg/illustrations/card-5.svg" alt="Image Description">
+                          </div>
+                          <div class="col-auto align-self-center">
+                            <div class="text-center">
+                              <a href="#">+2</a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- List Item -->
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <!-- End Step Item -->
+
+              <!-- Step Item -->
+              <li class="step-item">
+                <div class="step-content-wrapper">
+                  <span class="step-icon step-icon-soft-info">D</span>
+
+                  <div class="step-content">
+                    <h5 class="mb-1">
+                      <a class="text-dark" href="#">David Lidell</a>
+                    </h5>
+
+                    <p class="font-size-sm">Added a new member to Front Dashboard</p>
+                  </div>
+                </div>
+              </li>
+              <!-- End Step Item -->
+
+              <!-- Step Item -->
+              <li class="step-item">
+                <div class="step-content-wrapper">
+                  <div class="step-avatar">
+                    <img class="step-avatar-img" src="@@autopath/assets/img/160x160/img7.jpg" alt="Image Description">
+                  </div>
+
+                  <div class="step-content">
+                    <h5 class="mb-1">
+                      <a class="text-dark" href="#">Rachel King</a>
+                    </h5>
+
+                    <p class="font-size-sm">Earned a "Top endorsed" <i class="tio-verified text-primary"></i> badge</p>
+                  </div>
+                </div>
+              </li>
+              <!-- End Step Item -->
+
+              <!-- Step Item -->
+              <li class="step-item">
+                <div class="step-content-wrapper">
+                  <small class="step-divider">Last week</small>
+                </div>
+              </li>
+              <!-- End Step Item -->
+
+              <!-- Step Item -->
+              <li class="step-item">
+                <div class="step-content-wrapper">
+                  <div class="step-avatar">
+                    <img class="step-avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                  </div>
+
+                  <div class="step-content">
+                    <h5 class="mb-1">
+                      <a class="text-dark" href="#">Mark Williams</a>
+                    </h5>
+
+                    <p class="font-size-sm">Attached two files.</p>
+
+                    <ul class="list-group list-group-sm">
+                      <!-- List Item -->
+                      <li class="list-group-item list-group-item-light">
+                        <div class="media">
+                          <i class="tio-attachment-diagonal mt-1 mr-2"></i>
+                          <div class="media-body text-truncate">
+                            <span class="d-block text-dark text-truncate">Requirements.figma</span>
+                            <small class="d-block">8mb</small>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- End List Item -->
+
+                      <!-- List Item -->
+                      <li class="list-group-item list-group-item-light">
+                        <div class="media">
+                          <i class="tio-attachment-diagonal mt-1 mr-2"></i>
+                          <div class="media-body text-truncate">
+                            <span class="d-block text-dark text-truncate">Requirements.sketch</span>
+                            <small class="d-block">4mb</small>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- End List Item -->
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <!-- End Step Item -->
+
+              <!-- Step Item -->
+              <li class="step-item">
+                <div class="step-content-wrapper">
+                  <span class="step-icon step-icon-soft-primary">C</span>
+
+                  <div class="step-content">
+                    <h5 class="mb-1">
+                      <a class="text-dark" href="#">Costa Quinn</a>
+                    </h5>
+
+                    <p class="font-size-sm">Marked project status as <span class="badge badge-soft-primary badge-pill"><span class="legend-indicator bg-primary"></span>"In progress"</span></p>
+                  </div>
+                </div>
+              </li>
+              <!-- End Step Item -->
+            </ul>
+            <!-- End Step -->
+
+            <!-- Footer -->
+            <a class="btn btn-block btn-white" href="javascript:;">
+              <i class="tio-refresh mr-1"></i> Load more activities
+            </a>
+            <!-- End Footer -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Content -->
+
+      <!-- Footer -->
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/footer/main.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/footer/container.html")
+      }
+      <!-- End Footer -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Keyboard Shortcuts -->
+    @@include("@@autopath/partials/layouts-components/sidebar-shortcuts.html")
+    <!-- End Keyboard Shortcuts -->
+
+    <!-- Activity -->
+    @@include("@@autopath/partials/layouts-components/sidebar-activity.html")
+    <!-- End Activity -->
+
+    <!-- Welcome Message Modal -->
+    @@include("@@autopath/partials/modals/modal-welcome.html")
+    <!-- End Welcome Message Modal -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <script src="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+    }
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // =======================================================
+
+
+        // BUILDER TOGGLE INVOKER
+        // =======================================================
+        $('.js-navbar-vertical-aside-toggle-invoker').click(function () {
+          $('.js-navbar-vertical-aside-toggle-invoker i').tooltip('hide');
+        });
+
+        @@if (layoutBuilder.header.layoutMode !== 'default') {
+          // INITIALIZATION OF MEGA MENU
+          // =======================================================
+          var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+            desktop: {
+              position: 'left'
+            }
+          }).init();
+        }
+
+        
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+        
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+        $(".js-nav-tooltip-link").on("show.bs.tooltip", function(e) {
+          if (!$("body").hasClass("navbar-vertical-aside-mini-mode")) {
+            return false;
+          }
+        });
+
+        
+        // INITIALIZATION OF UNFOLD
+        // =======================================================
+        $('.js-hs-unfold-invoker').each(function () {
+          var unfold = new HSUnfold($(this)).init();
+        });
+
+        
+        // INITIALIZATION OF FORM SEARCH
+        // =======================================================
+        $('.js-form-search').each(function () {
+          new HSFormSearch($(this)).init()
+        });
+
+        
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this)).init()
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

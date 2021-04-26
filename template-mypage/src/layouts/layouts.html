@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>Layouts | Front - Admin &amp; Dashboard Template</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+  <!-- Font -->
+  <link href="@@vars.googleFont" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <!-- bundlecss:vendor [@@autopath] -->
+  <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+  @@if (layoutBuilder.header.layoutMode !== 'default') {
+    <link rel="stylesheet" href="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+  }
+
+  <!-- CSS Front Template -->
+  <!-- bundlecss:theme [@@autopath] @@vars.version -->
+  <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+</head>
+<body class="@@if(layoutBuilder.header.layoutMode === 'default'){has-navbar-vertical-aside navbar-vertical-aside-show-xl} @@if(layoutBuilder.sidebarLayout === 'compact'){navbar-vertical-aside-compact-mode} @@if(layoutBuilder.sidebarLayout === 'mini'){navbar-vertical-aside-mini-mode} footer-offset">
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.sidebarLayout !== 'mini') {
+      <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside-mini-cache.js"></script>
+    }
+
+    @@if (previewMode === true) {
+      <!-- Builder -->
+      @@include("@@autopath/partials/layouts-components/sidebar-builder.html")
+      <!-- End Builder -->
+
+      <!-- Builder Toggle -->
+      @@include("@@autopath/partials/layouts-components/sidebar-builder-toggle.html")
+      <!-- End Builder Toggle -->
+
+      <!-- JS Preview mode only -->
+      <div id="headerMain" class="d-none">@@include("@@autopath/partials/header/main.html")</div>
+      <div id="headerFluid" class="d-none">@@include("@@autopath/partials/header/main-fluid.html")</div>
+      <div id="headerDouble" class="d-none">@@include("@@autopath/partials/header/double-line-fluid.html")</div>
+      <div id="sidebarMain" class="d-none">@@include("@@autopath/partials/sidebar/main.html", {"category": "", "subcategory": "", "link": "layouts.html"})</div>
+      <div id="sidebarCompact" class="d-none">@@include("@@autopath/partials/sidebar/compact.html", {"compact": "layouts.html"})</div>
+
+      <script src="@@autopath/assets/js/demo.js"></script>
+    }
+
+    <!-- Search Form -->
+    @@include("@@autopath/partials/layouts-components/mobile-search.html")
+    <!-- End Search Form -->
+
+    <!-- ========== HEADER ========== -->
+    @@if (layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/header/main.html")
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'single') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/main-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/main-container.html")
+      }
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'double') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/double-line-fluid.html")
+      }
+
+    @@if (layoutBuilder.header.containerMode === 'container') {
+      @@include("@@autopath/partials/header/double-line-container.html")
+      }
+    }
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/main.html", {
+        "category": "",
+        "subcategory": "",
+        "link": "layouts.html"
+      })
+    }
+
+    @@if (layoutBuilder.sidebarLayout === 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/compact.html", {
+        "compact": "layouts.html"
+      })
+    }
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main">
+      <!-- Content -->
+      <div class="content @@layoutBuilder.header.containerMode">
+        <div class="row justify-content-lg-center pt-lg-5 pt-xl-10">
+          <div class="col-lg-9 col-xl-8">
+            <!-- Title -->
+            <div class="text-center mb-7">
+              <h1 class="display-4">Layouts</h1>
+              <p>Customize your overview page layout. Choose the one that best fits your needs.</p>
+            </div>
+            <!-- End Title -->
+
+            <span class="divider font-weight-bold">Demo layouts</span>
+
+            <div class="row my-5 mb-lg-7">
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="demo-layouts-default-classic.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/demo-layouts-default-classic.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Default <span>(Classic)</span></h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+            </div>
+            <!-- End Row -->
+
+            <span class="divider font-weight-bold">Header</span>
+
+            <div class="row my-5 mb-lg-7">
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="header-default-fluid.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/header-default-fluid.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Default <span class="text-body">(Fluid)</span></h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="header-default-container.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/header-default-container.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Default <span class="text-body">(Container)</span></h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="header-double-line-fluid.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/header-double-line-fluid.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Double line <span class="text-body">(Fluid)</span></h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="header-double-line-container.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/header-double-line-container.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Double line <span class="text-body">(Container)</span></h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+            </div>
+            <!-- End Row -->
+
+            <span class="divider font-weight-bold">Sidebar</span>
+
+            <div class="row my-5 mb-lg-7">
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="sidebar-default-classic.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/sidebar-default-classic.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Default <span class="text-body">(Classic)</span></h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="sidebar-compact.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/sidebar-compact.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Compact</h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="sidebar-mini.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/sidebar-mini.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Mini</h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+            </div>
+            <!-- End Row -->
+
+            <span class="divider font-weight-bold">Sidebar Combinations</span>
+
+            <div class="row my-5 mb-lg-7">
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="sidebar-combinations-mini-plus-one-cols.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/sidebar-combinations-mini-plus-one-cols.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Mini + one columns</h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="sidebar-combinations-two-cols.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/sidebar-combinations-two-cols.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Two columns</h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="sidebar-combinations-two-plus-mini-cols.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/sidebar-combinations-two-plus-mini-cols.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Two + mini columns</h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="sidebar-combinations-two-cols-between.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/sidebar-combinations-two-cols-between.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Two columns between</h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+            </div>
+            <!-- End Row -->
+
+            <span class="divider font-weight-bold">Sidebar Detached</span>
+
+            <div class="row my-5 mb-lg-7">
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="sidebar-detached-fluid.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/sidebar-detached-fluid.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Fluid</h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="sidebar-detached-container.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/sidebar-detached-container.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Container</h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="sidebar-detached-overlay-fluid.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/sidebar-detached-overlay-fluid.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Overlay <span class="text-body">(Fluid)</span></h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="sidebar-detached-overlay-container.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/sidebar-detached-overlay-container.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Overlay <span class="text-body">(Container)</span></h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+            </div>
+            <!-- End Row -->
+
+            <span class="divider font-weight-bold">Content Combinations</span>
+
+            <div class="row my-5 mb-lg-7">
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="content-combinations-content-centered.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/content-combinations-content-centered.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Medium content centered</h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="content-combinations-overlay.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/content-combinations-overlay.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Overlay</h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-5">
+                <!-- Card -->
+                <a class="card" href="content-combinations-container-overlay.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/content-combinations-container-overlay.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Container Overlay</h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+            </div>
+            <!-- End Row -->
+
+            <span class="divider font-weight-bold">Footer</span>
+
+            <div class="row mt-5">
+              <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+                <!-- Card -->
+                <a class="card" href="footer-default-fluid.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/footer-default-fluid.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Default <span class="text-body">(Fluid)</span></h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <!-- Card -->
+                <a class="card" href="footer-default-container.html">
+                  <img class="card-img-top" src="@@autopath/assets/svg/layouts/footer-default-container.svg" alt="Image Description">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Default <span class="text-body">(Container)</span></h5>
+                  </div>
+                </a>
+                <!-- End Card -->
+              </div>
+            </div>
+            <!-- End Row -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Content -->
+
+      <!-- Footer -->
+      @@include("@@autopath/partials/footer/main.html")
+      <!-- End Footer -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Keyboard Shortcuts -->
+    @@include("@@autopath/partials/layouts-components/sidebar-shortcuts.html")
+    <!-- End Keyboard Shortcuts -->
+
+    <!-- Activity -->
+    @@include("@@autopath/partials/layouts-components/sidebar-activity.html")
+    <!-- End Activity -->
+
+    <!-- Welcome Message Modal -->
+    @@include("@@autopath/partials/modals/modal-welcome.html")
+    <!-- End Welcome Message Modal -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <script src="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+    }
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // =======================================================
+
+
+        // BUILDER TOGGLE INVOKER
+        // =======================================================
+        $('.js-navbar-vertical-aside-toggle-invoker').click(function () {
+          $('.js-navbar-vertical-aside-toggle-invoker i').tooltip('hide');
+        });
+
+        @@if (layoutBuilder.header.layoutMode !== 'default') {
+          // INITIALIZATION OF MEGA MENU
+          // =======================================================
+          var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+            desktop: {
+              position: 'left'
+            }
+          }).init();
+        }
+
+
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+        $(".js-nav-tooltip-link").on("show.bs.tooltip", function(e) {
+          if (!$(body).hasClass("navbar-vertical-aside-mini-mode")) {
+            return false;
+          }
+        });
+
+
+        // INITIALIZATION OF UNFOLD
+        // =======================================================
+        $('.js-hs-unfold-invoker').each(function () {
+          var unfold = new HSUnfold($(this)).init();
+        });
+
+
+        // INITIALIZATION OF FORM SEARCH
+        // =======================================================
+        $('.js-form-search').each(function () {
+          new HSFormSearch($(this)).init()
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

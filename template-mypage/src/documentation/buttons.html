@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Buttons - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+   <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "buttons.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Buttons</h1>
+                  <p class="lead">Use Front's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
+                  <a href="https://getbootstrap.com/docs/4.5/components/buttons/" target="_blank">Bootstrap Buttons documentation <i class="tio-open-in-new"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="button-types" class="hs-docs-heading">
+              Types <a class="anchorjs-link" href="#button-types" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>.btn-*</code>, <code>.btn-outline-*</code>, <code>.btn-ghost-*</code> classes to change the visual style of the button.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <button type="button" class="btn btn-primary mr-2">Primary</button>
+                  <button type="button" class="btn btn-outline-primary mr-2">Outline</button>
+                  <button type="button" class="btn btn-soft-primary mr-2">Soft</button>
+                  <button type="button" class="btn btn-ghost-primary mr-2">Ghost</button>
+                  <button type="button" class="btn btn-link mr-2">Link</button>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-outline-primary"&gt;Outline&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-ghost-primary"&gt;Ghost&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-soft-primary"&gt;Soft&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="white" class="hs-docs-heading">
+              White <a class="anchorjs-link" href="#white" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Outlined white color style is best suitable for secondary buttons.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <button type="button" class="btn btn-white">Button white</button>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;button type="button" class="btn btn-white"&gt;Button white&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="color-variants" class="hs-docs-heading">
+              Color variants <a class="anchorjs-link" href="#color-variants" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Predefined solid color button styles.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab3" data-toggle="pill" href="#nav-result3" role="tab" aria-controls="nav-result3" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab3" data-toggle="pill" href="#nav-html3" role="tab" aria-controls="nav-html3" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent3">
+                <div class="tab-pane fade p-4 show active" id="nav-result3" role="tabpanel" aria-labelledby="nav-resultTab3">
+                  <button type="button" class="btn btn-primary mb-1">Primary</button>
+                  <button type="button" class="btn btn-secondary mb-1">Secondary</button>
+                  <button type="button" class="btn btn-success mb-1">Success</button>
+                  <button type="button" class="btn btn-danger mb-1">Danger</button>
+                  <button type="button" class="btn btn-warning mb-1">Warning</button>
+                  <button type="button" class="btn btn-info mb-1">Info</button>
+                  <button type="button" class="btn btn-light mb-1">Light</button>
+                  <button type="button" class="btn btn-dark mb-1">Dark</button>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html3" role="tabpanel" aria-labelledby="nav-htmlTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-light"&gt;Light&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-dark"&gt;Dark&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="outline-buttons" class="hs-docs-heading">
+              Outline buttons <a class="anchorjs-link" href="#outline-buttons" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>.btn-outline-*</code></p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab4" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab4" data-toggle="pill" href="#nav-result4" role="tab" aria-controls="nav-result4" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab4" data-toggle="pill" href="#nav-html4" role="tab" aria-controls="nav-html4" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent4">
+                <div class="tab-pane fade p-4 show active" id="nav-result4" role="tabpanel" aria-labelledby="nav-resultTab4">
+                  <button type="button" class="btn btn-outline-primary mb-1">Primary</button>
+                  <button type="button" class="btn btn-outline-secondary mb-1">Secondary</button>
+                  <button type="button" class="btn btn-outline-success mb-1">Success</button>
+                  <button type="button" class="btn btn-outline-danger mb-1">Danger</button>
+                  <button type="button" class="btn btn-outline-warning mb-1">Warning</button>
+                  <button type="button" class="btn btn-outline-info mb-1">Info</button>
+                  <button type="button" class="btn btn-outline-light mb-1">Light</button>
+                  <button type="button" class="btn btn-outline-dark mb-1">Dark</button>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html4" role="tabpanel" aria-labelledby="nav-htmlTab4">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;button type="button" class="btn btn-outline-primary"&gt;Primary&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-outline-secondary"&gt;Secondary&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-outline-success"&gt;Success&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-outline-danger"&gt;Danger&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-outline-warning"&gt;Warning&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-outline-info"&gt;Info&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-outline-light"&gt;Light&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-outline-dark"&gt;Dark&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="soft-buttons" class="hs-docs-heading">
+              Soft buttons <a class="anchorjs-link" href="#soft-buttons" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>.btn-soft-*</code></p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab13" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab13" data-toggle="pill" href="#nav-result13" role="tab" aria-controls="nav-result13" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab13" data-toggle="pill" href="#nav-html13" role="tab" aria-controls="nav-html13" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent13">
+                <div class="tab-pane fade p-4 show active" id="nav-result13" role="tabpanel" aria-labelledby="nav-resultTab13">
+                  <button type="button" class="btn btn-soft-primary mb-1">Primary</button>
+                  <button type="button" class="btn btn-soft-secondary mb-1">Secondary</button>
+                  <button type="button" class="btn btn-soft-success mb-1">Success</button>
+                  <button type="button" class="btn btn-soft-danger mb-1">Danger</button>
+                  <button type="button" class="btn btn-soft-warning mb-1">Warning</button>
+                  <button type="button" class="btn btn-soft-info mb-1">Info</button>
+                  <button type="button" class="btn btn-soft-light mb-1">Light</button>
+                  <button type="button" class="btn btn-soft-dark mb-1">Dark</button>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html13" role="tabpanel" aria-labelledby="nav-htmlTab13">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;button type="button" class="btn btn-soft-primary"&gt;Primary&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-soft-secondary"&gt;Secondary&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-soft-success"&gt;Success&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-soft-danger"&gt;Danger&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-soft-warning"&gt;Warning&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-soft-info"&gt;Info&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-soft-light"&gt;Light&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-soft-dark"&gt;Dark&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="ghost-buttons" class="hs-docs-heading">
+              Ghost buttons <a class="anchorjs-link" href="#ghost-buttons" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>.btn-ghost-*</code></p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab5" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab5" data-toggle="pill" href="#nav-result5" role="tab" aria-controls="nav-result5" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab5" data-toggle="pill" href="#nav-html5" role="tab" aria-controls="nav-html5" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent5">
+                <div class="tab-pane fade p-4 show active" id="nav-result5" role="tabpanel" aria-labelledby="nav-resultTab5">
+                  <button type="button" class="btn btn-ghost-primary mb-1">Primary</button>
+                  <button type="button" class="btn btn-ghost-secondary mb-1">Secondary</button>
+                  <button type="button" class="btn btn-ghost-success mb-1">Success</button>
+                  <button type="button" class="btn btn-ghost-danger mb-1">Danger</button>
+                  <button type="button" class="btn btn-ghost-warning mb-1">Warning</button>
+                  <button type="button" class="btn btn-ghost-info mb-1">Info</button>
+                  <button type="button" class="btn btn-ghost-light mb-1">Light</button>
+                  <button type="button" class="btn btn-ghost-dark mb-1">Dark</button>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html5" role="tabpanel" aria-labelledby="nav-htmlTab5">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;button type="button" class="btn btn-ghost-primary"&gt;Primary&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-ghost-secondary"&gt;Secondary&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-ghost-success"&gt;Success&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-ghost-danger"&gt;Danger&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-ghost-warning"&gt;Warning&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-ghost-info"&gt;Info&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-ghost-light"&gt;Light&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-ghost-dark"&gt;Dark&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="sizes" class="hs-docs-heading">
+              Sizes <a class="anchorjs-link" href="#sizes" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Fancy larger or smaller buttons? Add <code>.btn-lg</code> or <code>.btn-sm</code> for additional sizes.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab6" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab6" data-toggle="pill" href="#nav-result6" role="tab" aria-controls="nav-result6" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab6" data-toggle="pill" href="#nav-html6" role="tab" aria-controls="nav-html6" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent6">
+                <div class="tab-pane fade p-4 show active" id="nav-result6" role="tabpanel" aria-labelledby="nav-resultTab6">
+                  <button type="button" class="btn btn-primary btn-lg mb-1">Large Button</button>
+                  <button type="button" class="btn btn-primary mb-1">Default Size</button>
+                  <button type="button" class="btn btn-primary btn-sm mb-1">Small Button</button>
+                  <button type="button" class="btn btn-primary btn-xs mb-1">Extra small Button</button>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html6" role="tabpanel" aria-labelledby="nav-htmlTab6">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;button type="button" class="btn btn-primary btn-lg"&gt;Large Button&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-primary"&gt;Default Size&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-primary btn-sm"&gt;Small Button&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-primary btn-xs"&gt;Extra small Button&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="button-pilled" class="hs-docs-heading">
+              Button pilled <a class="anchorjs-link" href="#button-pilled" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use the <code>.rounded-pill</code> utility class to make buttons more rounded.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab7" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab7" data-toggle="pill" href="#nav-result7" role="tab" aria-controls="nav-result7" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab7" data-toggle="pill" href="#nav-html7" role="tab" aria-controls="nav-html7" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent7">
+                <div class="tab-pane fade p-4 show active" id="nav-result7" role="tabpanel" aria-labelledby="nav-resultTab7">
+                  <button type="button" class="btn btn-primary btn-pill">Primary</button>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html7" role="tabpanel" aria-labelledby="nav-htmlTab7">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;button type="button" class="btn btn-primary btn-pill"&gt;Primary&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="radio-button-group" class="hs-docs-heading">
+              Radio button group <a class="anchorjs-link" href="#radio-button-group" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>This group of buttons provide checkbox or radio style button toggling.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab8" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab8" data-toggle="pill" href="#nav-result8" role="tab" aria-controls="nav-result8" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab8" data-toggle="pill" href="#nav-html8" role="tab" aria-controls="nav-html8" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent8">
+                <div class="tab-pane fade p-4 show active" id="nav-result8" role="tabpanel" aria-labelledby="nav-resultTab8">
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-primary active">
+                      <input type="radio" name="options" id="option1" checked> Active
+                    </label>
+                    <label class="btn btn-primary">
+                      <input type="radio" name="options" id="option2"> Radio
+                    </label>
+                    <label class="btn btn-primary">
+                      <input type="radio" name="options" id="option3"> Radio
+                    </label>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html8" role="tabpanel" aria-labelledby="nav-htmlTab8">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;div class="btn-group btn-group-toggle" data-toggle="buttons"&gt;
+                        &lt;label class="btn btn-primary active"&gt;
+                          &lt;input type="radio" name="options" id="option1" checked&gt; Active
+                        &lt;/label&gt;
+                        &lt;label class="btn btn-primary"&gt;
+                          &lt;input type="radio" name="options" id="option2"&gt; Radio
+                        &lt;/label&gt;
+                        &lt;label class="btn btn-primary"&gt;
+                          &lt;input type="radio" name="options" id="option3"&gt; Radio
+                        &lt;/label&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="button-icons" class="hs-docs-heading">
+              Button icons <a class="anchorjs-link" href="#button-icons" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>A contained button with an icon.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab9" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab9" data-toggle="pill" href="#nav-result9" role="tab" aria-controls="nav-result9" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab9" data-toggle="pill" href="#nav-html9" role="tab" aria-controls="nav-html9" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent9">
+                <div class="tab-pane fade p-4 show active" id="nav-result9" role="tabpanel" aria-labelledby="nav-resultTab9">
+                  <button type="button" class="btn btn-primary">
+                    Add to Cart
+                    <i class="tio-shopping-basket ml-1"></i>
+                  </button>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html9" role="tabpanel" aria-labelledby="nav-htmlTab9">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;button type="button" class="btn btn-primary"&gt;
+                        Add to Cart
+                        &lt;i class="tio-shopping-basket ml-1"&gt;&lt;/i&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>With fixed width and height.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab10" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab10" data-toggle="pill" href="#nav-result10" role="tab" aria-controls="nav-result10" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab10" data-toggle="pill" href="#nav-html10" role="tab" aria-controls="nav-html10" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent10">
+                <div class="tab-pane fade p-4 show active" id="nav-result10" role="tabpanel" aria-labelledby="nav-resultTab10">
+                  <button type="button" class="btn btn-primary btn-icon">
+                    <i class="tio-visible"></i>
+                  </button>
+                  <button type="button" class="btn btn-primary btn-icon">
+                    <i class="tio-add"></i>
+                  </button>
+                  <button type="button" class="btn btn-primary btn-icon">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  </button>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html10" role="tabpanel" aria-labelledby="nav-htmlTab10">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;button type="button" class="btn btn-primary btn-icon"&gt;
+                        &lt;i class="tio-visible"&gt;&lt;/i&gt;
+                      &lt;/button&gt;
+                      &lt;button type="button" class="btn btn-primary btn-icon"&gt;
+                        &lt;i class="tio-add"&gt;&lt;/i&gt;
+                      &lt;/button&gt;
+                      &lt;button type="button" class="btn btn-primary btn-icon"&gt;
+                        &lt;span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Also available in all button sizes.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab11" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab11" data-toggle="pill" href="#nav-result11" role="tab" aria-controls="nav-result11" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab11" data-toggle="pill" href="#nav-html11" role="tab" aria-controls="nav-html11" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent11">
+                <div class="tab-pane fade p-4 show active" id="nav-result11" role="tabpanel" aria-labelledby="nav-resultTab11">
+                  <button type="button" class="btn btn-primary btn-icon btn-lg">
+                    <i class="tio-add"></i>
+                  </button>
+                  <button type="button" class="btn btn-primary btn-icon">
+                    <i class="tio-add"></i>
+                  </button>
+                  <button type="button" class="btn btn-primary btn-icon btn-sm">
+                    <i class="tio-add"></i>
+                  </button>
+                  <button type="button" class="btn btn-primary btn-icon btn-xs">
+                    <i class="tio-add"></i>
+                  </button>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html11" role="tabpanel" aria-labelledby="nav-htmlTab11">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;button type="button" class="btn btn-primary btn-icon btn-lg"&gt;
+                        &lt;i class="tio-add"&gt;&lt;/i&gt;
+                      &lt;/button&gt;
+                      &lt;button type="button" class="btn btn-primary btn-icon"&gt;
+                        &lt;i class="tio-add"&gt;&lt;/i&gt;
+                      &lt;/button&gt;
+                      &lt;button type="button" class="btn btn-primary btn-icon btn-sm"&gt;
+                        &lt;i class="tio-add"&gt;&lt;/i&gt;
+                      &lt;/button&gt;
+                      &lt;button type="button" class="btn btn-primary btn-icon btn-xs"&gt;
+                        &lt;i class="tio-add"&gt;&lt;/i&gt;
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="button-status" class="hs-docs-heading">
+              Button status <a class="anchorjs-link" href="#button-status" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>.btn-status</code> to add all kinds of status indicators.</p>
+
+            <p>Looking for larger or smaller status size? Add <code>.btn-sm-status</code> or <code>.btn-lg-status</code> for additional sizes.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab12" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab12" data-toggle="pill" href="#nav-result12" role="tab" aria-controls="nav-result12" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab12" data-toggle="pill" href="#nav-html12" role="tab" aria-controls="nav-html12" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent12">
+                <div class="tab-pane fade p-4 show active" id="nav-result12" role="tabpanel" aria-labelledby="nav-resultTab12">
+                  <!-- Button Status -->
+                  <a class="btn btn-icon btn-primary mr-2 mb-3" href="javascript:;">
+                    <i class="tio-notifications-on-outlined"></i>
+                    <span class="btn-status btn-xs-status btn-status-primary"></span>
+                  </a>
+                  <!-- End Button Status -->
+
+                  <!-- Button Status -->
+                  <a class="btn btn-icon btn-primary mr-2 mb-3" href="javascript:;">
+                    <i class="tio-notifications-on-outlined"></i>
+                    <span class="btn-status btn-sm-status btn-status-primary"></span>
+                  </a>
+                  <!-- End Button Status -->
+
+                  <!-- Button Status -->
+                  <a class="btn btn-icon btn-primary mr-2 mb-3" href="javascript:;">
+                    <i class="tio-shopping-basket-outlined"></i>
+                    <span class="btn-status btn-status-primary">2</span>
+                  </a>
+                  <!-- End Button Status -->
+
+                  <!-- Button Status -->
+                  <a class="btn btn-icon btn-primary mr-2 mb-3" href="javascript:;">
+                    <i class="tio-voice-line"></i>
+                    <span class="btn-status btn-lg-status btn-status-primary">3</span>
+                  </a>
+                  <!-- End Button Status -->
+
+                  <!-- Button Status -->
+                  <a class="btn btn-icon btn-soft-primary rounded-circle mr-2 mb-3" href="javascript:;">
+                    <i class="tio-notifications-on-outlined"></i>
+                    <span class="btn-status btn-xs-status btn-status-primary"></span>
+                  </a>
+                  <!-- End Button Status -->
+
+                  <!-- Button Status -->
+                  <a class="btn btn-icon btn-soft-primary rounded-circle mr-2 mb-3" href="javascript:;">
+                    <i class="tio-notifications-on-outlined"></i>
+                    <span class="btn-status btn-sm-status btn-status-primary"></span>
+                  </a>
+                  <!-- End Button Status -->
+
+                  <!-- Button Status -->
+                  <a class="btn btn-icon btn-soft-primary rounded-circle mr-2 mb-3" href="javascript:;">
+                    <i class="tio-shopping-basket-outlined"></i>
+                    <span class="btn-status btn-status-primary">2</span>
+                  </a>
+                  <!-- End Button Status -->
+
+                  <!-- Button Status -->
+                  <a class="btn btn-icon btn-soft-primary rounded-circle mr-2 mb-3" href="javascript:;">
+                    <i class="tio-voice-line"></i>
+                    <span class="btn-status btn-lg-status btn-status-primary">3</span>
+                  </a>
+                  <!-- End Button Status -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html12" role="tabpanel" aria-labelledby="nav-htmlTab12">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Button Status --&gt;
+                      &lt;a class="btn btn-icon btn-primary mr-2" href="javascript:;"&gt;
+                        &lt;i class="tio-notifications-on-outlined"&gt;&lt;/i&gt;
+                        &lt;span class="btn-status btn-sm-status btn-status-primary"&gt;&lt;/span&gt;
+                      &lt;/a&gt;
+                      &lt;!-- End Button Status --&gt;
+
+                      &lt;!-- Button Status --&gt;
+                      &lt;a class="btn btn-icon btn-primary mr-2" href="javascript:;"&gt;
+                        &lt;i class="tio-shopping-basket-outlined"&gt;&lt;/i&gt;
+                        &lt;span class="btn-status btn-status-primary"&gt;2&lt;/span&gt;
+                      &lt;/a&gt;
+                      &lt;!-- End Button Status --&gt;
+
+                      &lt;!-- Button Status --&gt;
+                      &lt;a class="btn btn-icon btn-primary mr-2" href="javascript:;"&gt;
+                        &lt;i class="tio-voice-line"&gt;&lt;/i&gt;
+                        &lt;span class="btn-status btn-lg-status btn-status-primary"&gt;3&lt;/span&gt;
+                      &lt;/a&gt;
+                      &lt;!-- End Button Status --&gt;
+
+                      &lt;!-- Button Status --&gt;
+                      &lt;a class="btn btn-icon btn-soft-primary rounded-circle mr-2" href="javascript:;"&gt;
+                        &lt;i class="tio-notifications-on-outlined"&gt;&lt;/i&gt;
+                        &lt;span class="btn-status btn-sm-status btn-status-primary"&gt;&lt;/span&gt;
+                      &lt;/a&gt;
+                      &lt;!-- End Button Status --&gt;
+
+                      &lt;!-- Button Status --&gt;
+                      &lt;a class="btn btn-icon btn-soft-primary rounded-circle mr-2" href="javascript:;"&gt;
+                        &lt;i class="tio-shopping-basket-outlined"&gt;&lt;/i&gt;
+                        &lt;span class="btn-status btn-status-primary"&gt;2&lt;/span&gt;
+                      &lt;/a&gt;
+                      &lt;!-- End Button Status --&gt;
+
+                      &lt;!-- Button Status --&gt;
+                      &lt;a class="btn btn-icon btn-soft-primary rounded-circle mr-2" href="javascript:;"&gt;
+                        &lt;i class="tio-voice-line"&gt;&lt;/i&gt;
+                        &lt;span class="btn-status btn-lg-status btn-status-primary"&gt;3&lt;/span&gt;
+                      &lt;/a&gt;
+                      &lt;!-- End Button Status --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Available in all theme colors.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab15" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab15" data-toggle="pill" href="#nav-result15" role="tab" aria-controls="nav-result15" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab15" data-toggle="pill" href="#nav-html15" role="tab" aria-controls="nav-html15" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent15">
+                <div class="tab-pane fade p-4 show active" id="nav-result15" role="tabpanel" aria-labelledby="nav-resultTab15">
+                  <!-- Button Status -->
+                  <a class="btn btn-icon btn-primary mr-2 mb-3" href="javascript:;">
+                    <i class="tio-notifications-on-outlined"></i>
+                    <span class="btn-status btn-sm-status btn-status-primary"></span>
+                  </a>
+                  <!-- End Button Status -->
+
+                  <!-- Button Status -->
+                  <a class="btn btn-icon btn-primary mr-2 mb-3" href="javascript:;">
+                    <i class="tio-notifications-on-outlined"></i>
+                    <span class="btn-status btn-sm-status btn-status-secondary"></span>
+                  </a>
+                  <!-- End Button Status -->
+
+                  <!-- Button Status -->
+                  <a class="btn btn-icon btn-primary mr-2 mb-3" href="javascript:;">
+                    <i class="tio-notifications-on-outlined"></i>
+                    <span class="btn-status btn-sm-status btn-status-success"></span>
+                  </a>
+                  <!-- End Button Status -->
+
+                  <!-- Button Status -->
+                  <a class="btn btn-icon btn-primary mr-2 mb-3" href="javascript:;">
+                    <i class="tio-notifications-on-outlined"></i>
+                    <span class="btn-status btn-sm-status btn-status-danger"></span>
+                  </a>
+                  <!-- End Button Status -->
+
+                  <!-- Button Status -->
+                  <a class="btn btn-icon btn-primary mr-2 mb-3" href="javascript:;">
+                    <i class="tio-notifications-on-outlined"></i>
+                    <span class="btn-status btn-sm-status btn-status-warning"></span>
+                  </a>
+                  <!-- End Button Status -->
+
+                  <!-- Button Status -->
+                  <a class="btn btn-icon btn-primary mr-2 mb-3" href="javascript:;">
+                    <i class="tio-notifications-on-outlined"></i>
+                    <span class="btn-status btn-sm-status btn-status-info"></span>
+                  </a>
+                  <!-- End Button Status -->
+
+                  <!-- Button Status -->
+                  <a class="btn btn-icon btn-primary mr-2 mb-3" href="javascript:;">
+                    <i class="tio-notifications-on-outlined"></i>
+                    <span class="btn-status btn-sm-status btn-status-light"></span>
+                  </a>
+                  <!-- End Button Status -->
+
+                  <!-- Button Status -->
+                  <a class="btn btn-icon btn-primary mr-2 mb-3" href="javascript:;">
+                    <i class="tio-notifications-on-outlined"></i>
+                    <span class="btn-status btn-sm-status btn-status-dark"></span>
+                  </a>
+                  <!-- End Button Status -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html15" role="tabpanel" aria-labelledby="nav-htmlTab15">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Button Status --&gt;
+                      &lt;a class="btn btn-icon btn-primary mr-2" href="javascript:;"&gt;
+                        &lt;i class="tio-notifications-on-outlined"&gt;&lt;/i&gt;
+                        &lt;span class="btn-status btn-sm-status btn-status-primary"&gt;&lt;/span&gt;
+                      &lt;/a&gt;
+                      &lt;!-- End Button Status --&gt;
+
+                      &lt;!-- Button Status --&gt;
+                      &lt;a class="btn btn-icon btn-primary mr-2" href="javascript:;"&gt;
+                        &lt;i class="tio-notifications-on-outlined"&gt;&lt;/i&gt;
+                        &lt;span class="btn-status btn-sm-status btn-status-secondary"&gt;&lt;/span&gt;
+                      &lt;/a&gt;
+                      &lt;!-- End Button Status --&gt;
+
+                      &lt;!-- Button Status --&gt;
+                      &lt;a class="btn btn-icon btn-primary mr-2" href="javascript:;"&gt;
+                        &lt;i class="tio-notifications-on-outlined"&gt;&lt;/i&gt;
+                        &lt;span class="btn-status btn-sm-status btn-status-success"&gt;&lt;/span&gt;
+                      &lt;/a&gt;
+                      &lt;!-- End Button Status --&gt;
+
+                      &lt;!-- Button Status --&gt;
+                      &lt;a class="btn btn-icon btn-primary mr-2" href="javascript:;"&gt;
+                        &lt;i class="tio-notifications-on-outlined"&gt;&lt;/i&gt;
+                        &lt;span class="btn-status btn-sm-status btn-status-danger"&gt;&lt;/span&gt;
+                      &lt;/a&gt;
+                      &lt;!-- End Button Status --&gt;
+
+                      &lt;!-- Button Status --&gt;
+                      &lt;a class="btn btn-icon btn-primary mr-2" href="javascript:;"&gt;
+                        &lt;i class="tio-notifications-on-outlined"&gt;&lt;/i&gt;
+                        &lt;span class="btn-status btn-sm-status btn-status-warning"&gt;&lt;/span&gt;
+                      &lt;/a&gt;
+                      &lt;!-- End Button Status --&gt;
+
+                      &lt;!-- Button Status --&gt;
+                      &lt;a class="btn btn-icon btn-primary mr-2" href="javascript:;"&gt;
+                        &lt;i class="tio-notifications-on-outlined"&gt;&lt;/i&gt;
+                        &lt;span class="btn-status btn-sm-status btn-status-info"&gt;&lt;/span&gt;
+                      &lt;/a&gt;
+                      &lt;!-- End Button Status --&gt;
+
+                      &lt;!-- Button Status --&gt;
+                      &lt;a class="btn btn-icon btn-primary mr-2" href="javascript:;"&gt;
+                        &lt;i class="tio-notifications-on-outlined"&gt;&lt;/i&gt;
+                        &lt;span class="btn-status btn-sm-status btn-status-light"&gt;&lt;/span&gt;
+                      &lt;/a&gt;
+                      &lt;!-- End Button Status --&gt;
+
+                      &lt;!-- Button Status --&gt;
+                      &lt;a class="btn btn-icon btn-primary mr-2" href="javascript:;"&gt;
+                        &lt;i class="tio-notifications-on-outlined"&gt;&lt;/i&gt;
+                        &lt;span class="btn-status btn-sm-status btn-status-dark"&gt;&lt;/span&gt;
+                      &lt;/a&gt;
+                      &lt;!-- End Button Status --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="button-with-loader" class="hs-docs-heading">
+              Button with loader <a class="anchorjs-link" href="#button-with-loader" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use spinners within buttons to indicate an action is currently processing or taking place. You may also swap the text out of the spinner element and utilize button text as needed.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab14" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab14" data-toggle="pill" href="#nav-result14" role="tab" aria-controls="nav-result14" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab14" data-toggle="pill" href="#nav-html14" role="tab" aria-controls="nav-html14" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent14">
+                <div class="tab-pane fade p-4 show active" id="nav-result14" role="tabpanel" aria-labelledby="nav-resultTab14">
+                  <button class="btn btn-primary mb-1" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span class="sr-only">Loading...</span>
+                  </button>
+                  <button class="btn btn-primary mb-1" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Loading...
+                  </button>
+
+                  <button class="btn btn-primary mb-1" type="button" disabled>
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    <span class="sr-only">Loading...</span>
+                  </button>
+                  <button class="btn btn-primary mb-1" type="button" disabled>
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    Loading...
+                  </button>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html14" role="tabpanel" aria-labelledby="nav-htmlTab14">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;button class="btn btn-primary" type="button" disabled&gt;
+                        &lt;span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"&gt;&lt;/span&gt;
+                        &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                      &lt;/button&gt;
+                      &lt;button class="btn btn-primary" type="button" disabled&gt;
+                        &lt;span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"&gt;&lt;/span&gt;
+                        Loading...
+                      &lt;/button&gt;
+
+                      &lt;button class="btn btn-primary" type="button" disabled&gt;
+                        &lt;span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"&gt;&lt;/span&gt;
+                        &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                      &lt;/button&gt;
+                      &lt;button class="btn btn-primary" type="button" disabled&gt;
+                        &lt;span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"&gt;&lt;/span&gt;
+                        Loading...
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

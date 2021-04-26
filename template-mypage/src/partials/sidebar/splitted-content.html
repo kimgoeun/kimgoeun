@@ -1,0 +1,37 @@
+<aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-lg navbar-bordered splitted-content-navbar">
+  <div class="navbar-vertical-container">
+    <div class="navbar-vertical-footer-offset">
+      <!-- Content -->
+      <div class="navbar-vertical-content">
+        <!-- Mini Content -->
+        <div class="splitted-content-mini navbar-dark h-100 py-2">
+          <a class="navbar-brand d-flex justify-content-center mb-3" href="@@autopath/index.html" aria-label="Front">
+            <img class="navbar-brand-logo-short" src="@@autopath/assets/svg/logos/logo-short-white.svg" alt="Logo">
+          </a>
+
+          <ul class="nav nav-compact-icon nav-compact-icon-circle">
+            @@include("../layouts-components/navbar-vertical-menu-compact-icons.html", {
+              "compact": "@@link"
+            })
+          </ul>
+
+          <ul class="nav nav-compact-icon nav-compact-icon-circle mt-auto">
+            <li class="nav-item">
+              @@include("../layouts-components/dropdown-user-splitted-content-down-left.html")
+            </li>
+          </ul>
+        </div>
+        <!-- End Mini Content -->
+
+        <ul class="navbar-nav navbar-nav-lg nav-tabs navbar-vertical-without-icons pt-2">
+          @@include("../layouts-components/navbar-vertical-menu-without-icons.html", {
+            "category": "@@category",
+            "subcategory": "@@subcategory",
+            "link": "@@link"
+          })
+        </ul>
+      </div>
+      <!-- End Content -->
+    </div>
+  </div>
+</aside>

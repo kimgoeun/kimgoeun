@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Changelog - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "documentation",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "changelog.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Changelog</h1>
+                  <p class="lead">See what's new added, changed, fixed, improved or updated in the latest Front versions.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Alert -->
+            <div class="alert alert-soft-dark" role="alert">
+              <div class="media d-block d-sm-flex">
+                <img class="avatar avatar-xl mr-4 mb-2 mb-sm-0" src="@@autopath/assets/svg/illustrations/yelling-reverse.svg" alt="Image Description">
+
+                <div class="media-body">
+                  <h3>Read this before updating</h3>
+                  Do <span class="font-weight-bold">not</span> forget to <span class="font-weight-bold">backup</span> your files and <span class="font-weight-bold">read the changelog</span> before updating your Front copy. If you come across with any problems with Front template during the update and development processes, feel free to contact our support group at <a href="https://htmlstream.com/contact-us" target="_blank">htmlstream.com/contact-us <i class="fas fa-external-link-alt fa-xs"></i></a> and our team will assist you within a short time.
+                </div>
+              </div>
+            </div>
+            <!-- End Alert -->
+
+            <div id="version1_1" class="mb-7">
+              <h2 class="hs-docs-heading"><code>v1.1</code> - 3 December, 2020 <a class="anchorjs-link" href="#version1_1" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-primary p-2 mr-2">New</span>
+                <a href="@@autopath/ecommerce.html">Ecommerce</a> (11 pages)
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-primary p-2 mr-2">New</span>
+                <a href="@@autopath/apps-calendar.html">App Calendar</a> page
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-primary p-2 mr-2">New</span>
+                <a href="@@autopath/referrals.html">Referrals</a> page
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-primary p-2 mr-2">New</span>
+                <a href="@@autopath/documentation/calendar.html">Calendar (Fullcalendar)</a> plugin
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-primary p-2 mr-2">New</span>
+                <a href="@@autopath/documentation/fancybox.html">FancyBox</a> plugin
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-primary p-2 mr-2">New</span>
+                <a href="@@autopath/documentation/popovers.html#dark">Popover dark</a> option <span class="text-body">(Now, by default it's light)</span>
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-primary p-2 mr-2">New</span>
+                <a href="@@autopath/documentation/chartjs.html#chartjs-methods">Chartjs</a> <code>yearStamp</code> option
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-primary p-2 mr-2">New</span>
+                <a href="@@autopath/documentation/checks-and-switches.html">Checks &amp; Switches</a> outlined color options</span>
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-primary p-2 mr-2">New</span>
+                <a href="@@autopath/documentation/file-attach.html#methods">HS File Attach</a> types of upload files
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-primary p-2 mr-2">New</span>
+                <a href="@@autopath/documentation/step-form.html#methods">HS Step Form</a> slide to top option
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-primary p-2 mr-2">New</span>
+                Utility classes
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-info p-2 mr-2">Enhanced</span>
+                Changed variables names in SCSS-files
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-info p-2 mr-2">Enhanced</span>
+                JS code comment section in the HTML-pages only
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-info p-2 mr-2">Enhanced</span>
+                <code>hs.daterangepicker.js</code> arrows called via JS-file now
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-info p-2 mr-2">Enhanced</span>
+                Extended utility classes
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-info p-2 mr-2">Enhanced</span>
+                <code>.custom-control</code> styles
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-info p-2 mr-2">Enhanced</span>
+                Documentation
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-secondary p-2 mr-2">Updated</span>
+                Bootstrap from <code>v4.5.2</code> to <code>v4.5.3</code>
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-danger p-2 mr-2">Fixed</span>
+                HS Nav Scroller incorrect display of arrows inside the card
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-danger p-2 mr-2">Fixed</span>
+                HS Navbar Vertical Aside third level dropdown collapse issue
+              </div>
+
+              <div class="mb-3">
+                <span class="badge badge-soft-danger p-2 mr-2">Fixed</span>
+                HS Unfold "Spacebar" keyboard issue on iPhone X
+              </div>
+
+              <div class="mt-5">
+                <h4>List of important updated SCSS files:</h4>
+
+                <ul>
+                  <li><code>src/assets/scss/front-dashboard/_variables.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/avatar/_avatar-group-sizes.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/avatar/_avatar-ratio.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/avatar/_avatar-sizes.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/avatar/_avatar-status.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/buttons/_button-ghost.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/buttons/_button-icon-sizes.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/buttons/_button-custom.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/buttons/_button-soft.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/buttons/_button-sizes.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/buttons/_button-status-sizes.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/close/_close.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/forms/_form.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/forms/_custom-forms.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/forms/input-group/_input-group-flush.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/icon/_icon-sizes.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/page-header/_page-header.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/popover/_popover.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/profile/_profile-cover.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/card/_card-extensions.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/navbar/_navbar-vertical.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/navs/_navs.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/step/_step.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/utilities/_content-centered.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/utilities/_z-index.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/sidebar/_sidebar.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/vendor/_datatables.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/vendor/_daterangepicker.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/vendor/_dropzone.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/vendor/_flatpickr.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/vendor/_jvectormap.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/vendor/_leaflet.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/vendor/_select2.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/vendor/_tagify.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/vendor/_quill.scss</code></li>
+                </ul>
+              </div>
+
+              <div class="mt-5">
+                <h4>List of important added SCSS files:</h4>
+
+                <ul>
+                  <li><code>src/assets/scss/front-dashboard/vendor/_fancybox.scss</code></li>
+                  <li><code>src/assets/scss/front-dashboard/forms/checkbox/_checkbox-styles.scss</code></li>
+                </ul>
+              </div>
+
+              <div class="mt-5">
+                <h4>List of important updated JS files:</h4>
+
+                <ul>
+                  <li><code>src/assets/js/hs.chartjs.js</code></li>
+                  <li><code>src/assets/js/hs.daterangepicker.js</code></li>
+                  <li><code>src/assets/vendor/hs-file-attach/</code></li>
+                  <li><code>src/assets/vendor/hs-navbar-vertical-aside.js</code></li>
+                  <li><code>src/assets/vendor/hs-step-form/</code></li>
+                  <li><code>src/assets/vendor/hs-unfold/</code></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Heading -->
+            <h2 id="initial-release" class="hs-docs-heading">
+              <code>v1.0</code> - Initial release <a class="anchorjs-link" href="#initial-release" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

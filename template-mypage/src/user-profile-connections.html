@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Connections | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <link rel="stylesheet" href="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+    }
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+  </head>
+
+  <body class="@@if(layoutBuilder.header.layoutMode === 'default'){has-navbar-vertical-aside navbar-vertical-aside-show-xl} @@if(layoutBuilder.sidebarLayout === 'compact'){navbar-vertical-aside-compact-mode} @@if(layoutBuilder.sidebarLayout === 'mini'){navbar-vertical-aside-mini-mode} footer-offset">
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.sidebarLayout !== 'mini') {
+      <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside-mini-cache.js"></script>
+    }
+
+    <!-- Search Form -->
+    @@include("@@autopath/partials/layouts-components/mobile-search.html")
+    <!-- End Search Form -->
+
+    <!-- ========== HEADER ========== -->
+    @@if (layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/header/main.html")
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'single') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/main-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/main-container.html")
+      }
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'double') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/double-line-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/double-line-container.html")
+      }
+    }
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/main.html", {
+        "category": "pages",
+        "subcategory": "user-profile",
+        "link": "user-profile-connections.html"
+      })
+    }
+
+    @@if (layoutBuilder.sidebarLayout === 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/compact.html", {
+        "category": "pages",
+        "subcategory": "user-profile",
+        "link": "user-profile-connections.html"
+      })
+    }
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main">
+      <!-- Content -->
+      <div class="content @@layoutBuilder.header.containerMode">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-10">
+            <!-- Profile Cover -->
+            <div class="profile-cover">
+              <div class="profile-cover-img-wrapper">
+                <img class="profile-cover-img" src="@@autopath/assets/img/1920x400/img1.jpg" alt="Image Description">
+              </div>
+            </div>
+            <!-- End Profile Cover -->
+
+            <!-- Profile Header -->
+            <div class="text-center mb-5">
+              <!-- Avatar -->
+              <div class="avatar avatar-xxl avatar-circle avatar-border-lg profile-cover-avatar">
+                <img class="avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description">
+                <span class="avatar-status avatar-status-success"></span>
+              </div>
+              <!-- End Avatar -->
+
+              <h1 class="page-header-title">Ella Lauda <i class="tio-verified tio-lg text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></h1>
+
+              <!-- List -->
+              <ul class="list-inline list-inline-m-1">
+                <li class="list-inline-item">
+                  <i class="tio-city mr-1"></i>
+                  <span>Htmlstream</span>
+                </li>
+
+                <li class="list-inline-item">
+                  <i class="tio-poi-outlined mr-1"></i>
+                  <a href="#">San Francisco,</a>
+                  <a href="#">US</a>
+                </li>
+
+                <li class="list-inline-item">
+                  <i class="tio-date-range mr-1"></i>
+                  <span>Joined March 2017</span>
+                </li>
+              </ul>
+              <!-- End List -->
+            </div>
+            <!-- End Profile Header -->
+
+            <!-- Nav -->
+            @@include("@@autopath/partials/layouts-components/nav-menu-user-profile.html", {
+              "link": "user-profile-connections.html"
+            })
+            <!-- End Nav -->
+
+            <!-- Filter -->
+            <div class="row align-items-center mb-5">
+              <div class="col">
+                <h3 class="mb-0">7 connections</h3>
+              </div>
+
+              <div class="col-auto">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="connectionsTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="grid-tab" data-toggle="tab" href="#grid" role="tab" aria-controls="grid" aria-selected="true" title="Column view">
+                      <i class="tio-column-view-outlined"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false" title="List view">
+                      <i class="tio-agenda-view-outlined"></i>
+                    </a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+            </div>
+            <!-- End Filter -->
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="connectionsTabContent">
+              <div class="tab-pane fade show active" id="grid" role="tabpanel" aria-labelledby="grid-tab">
+                <!-- Connections -->
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3">
+                  <div class="col mb-3 mb-lg-5">
+                    <!-- Card -->
+                    <div class="card h-100">
+                      <!-- Unfold -->
+                      <div class="card-pinned">
+                        <div class="hs-unfold">
+                          <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                             data-hs-unfold-options='{
+                               "target": "#connectionsDropdown5",
+                               "type": "css-animation"
+                             }'>
+                            <i class="tio-more-vertical"></i>
+                          </a>
+
+                          <div id="connectionsDropdown5" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Share connection</a>
+                            <a class="dropdown-item" href="#">Block connection</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Unfold -->
+
+                      <!-- Body -->
+                      <div class="card-body text-center">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xl avatar-soft-primary avatar-circle avatar-border-lg avatar-centered mb-3">
+                          <span class="avatar-initials">R</span>
+                          <span class="avatar-status avatar-sm-status avatar-status-warning"></span>
+                        </div>
+                        <!-- End Avatar -->
+
+                        <h3 class="mb-1">
+                          <a class="text-dark" href="#">Rachel Doe</a>
+                        </h3>
+
+                        <div class="mb-3">
+                          <i class="tio-city mr-1"></i>
+                          <span>Design</span>
+                        </div>
+
+                        <!-- Badges -->
+                        <ul class="list-inline list-inline-m-1 mb-0">
+                          <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">UI/UX</a></li>
+                          <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Sketch</a></li>
+                          <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Figma</a></li>
+                        </ul>
+                        <!-- End Badges -->
+                      </div>
+                      <!-- End Body -->
+
+                      <!-- Footer -->
+                      <div class="card-footer">
+                        <div class="row justify-content-between align-items-center">
+                          <div class="col-auto py-1">
+                            <a class="font-size-sm text-body" href="#">25 connections</a>
+                          </div>
+
+                          <div class="col-auto py-1">
+                            <!-- Checkbox -->
+                            <div class="custom-control custom-checkbox-switch">
+                              <input type="checkbox" id="connectionsCheckbox7" class="custom-control-input custom-checkbox-switch-input" checked>
+                              <label class="custom-checkbox-switch-label btn-sm" for="connectionsCheckbox7">
+                                <span class="custom-checkbox-switch-default">
+                                  <i class="tio-user-add mr-1"></i> Connect
+                                </span>
+                                <span class="custom-checkbox-switch-active">
+                                  <i class="tio-done mr-1"></i> Connected
+                                </span>
+                              </label>
+                            </div>
+                            <!-- End Checkbox -->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Footer -->
+                    </div>
+                    <!-- End Card -->
+                  </div>
+
+                  <div class="col mb-3 mb-lg-5">
+                    <!-- Card -->
+                    <div class="card h-100">
+                      <!-- Unfold -->
+                      <div class="card-pinned">
+                        <div class="hs-unfold">
+                          <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                             data-hs-unfold-options='{
+                               "target": "#connectionsDropdown4",
+                               "type": "css-animation"
+                             }'>
+                            <i class="tio-more-vertical"></i>
+                          </a>
+
+                          <div id="connectionsDropdown4" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Share connection</a>
+                            <a class="dropdown-item" href="#">Block connection</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Unfold -->
+
+                      <!-- Body -->
+                      <div class="card-body text-center">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xl avatar-circle avatar-border-lg avatar-centered mb-3">
+                          <img class="avatar-img" src="@@autopath/assets/img/160x160/img8.jpg" alt="Image Description">
+                          <span class="avatar-status avatar-sm-status avatar-status-success"></span>
+                        </div>
+                        <!-- End Avatar -->
+
+                        <h3 class="mb-1">
+                          <a class="text-dark" href="#">Isabella Finley</a>
+                        </h3>
+
+                        <div class="mb-3">
+                          <i class="tio-city mr-1"></i>
+                          <span>FrontApp</span>
+                        </div>
+
+                        <!-- Badges -->
+                        <ul class="list-inline list-inline-m-1 mb-0">
+                          <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Human resources</a></li>
+                          <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Support</a></li>
+                        </ul>
+                        <!-- End Badges -->
+                      </div>
+                      <!-- End Body -->
+
+                      <!-- Footer -->
+                      <div class="card-footer">
+                        <div class="row justify-content-between align-items-center">
+                          <div class="col-auto py-1">
+                            <a class="font-size-sm text-body" href="#">79 connections</a>
+                          </div>
+
+                          <div class="col-auto py-1">
+                            <!-- Checkbox -->
+                            <div class="custom-control custom-checkbox-switch">
+                              <input type="checkbox" id="connectionsCheckbox1" class="custom-control-input custom-checkbox-switch-input" checked>
+                              <label class="custom-checkbox-switch-label btn-sm" for="connectionsCheckbox1">
+                                <span class="custom-checkbox-switch-default">
+                                  <i class="tio-user-add mr-1"></i> Connect
+                                </span>
+                                <span class="custom-checkbox-switch-active">
+                                  <i class="tio-done mr-1"></i> Connected
+                                </span>
+                              </label>
+                            </div>
+                            <!-- End Checkbox -->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Footer -->
+                    </div>
+                    <!-- End Card -->
+                  </div>
+
+                  <div class="col mb-3 mb-lg-5">
+                    <!-- Card -->
+                    <div class="card h-100">
+                      <!-- Unfold -->
+                      <div class="card-pinned">
+                        <div class="hs-unfold">
+                          <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                             data-hs-unfold-options='{
+                               "target": "#connectionsDropdown2",
+                               "type": "css-animation"
+                             }'>
+                            <i class="tio-more-vertical"></i>
+                          </a>
+
+                          <div id="connectionsDropdown2" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Share connection</a>
+                            <a class="dropdown-item" href="#">Block connection</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Unfold -->
+
+                      <!-- Body -->
+                      <div class="card-body text-center">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xl avatar-circle avatar-border-lg avatar-centered mb-3">
+                          <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                          <span class="avatar-status avatar-sm-status avatar-status-warning"></span>
+                        </div>
+                        <!-- End Avatar -->
+
+                        <h3 class="mb-1">
+                          <a class="text-dark" href="#">David Harrison</a>
+                        </h3>
+
+                        <div class="mb-3">
+                          <i class="tio-city mr-1"></i>
+                          <span>Unassigned</span>
+                        </div>
+
+                        <!-- Badges -->
+                        <ul class="list-inline list-inline-m-1 mb-0">
+                          <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Marketing</a></li>
+                        </ul>
+                        <!-- End Badges -->
+                      </div>
+                      <!-- End Body -->
+
+                      <!-- Footer -->
+                      <div class="card-footer">
+                        <div class="row justify-content-between align-items-center">
+                          <div class="col-auto py-1">
+                            <a class="font-size-sm text-body" href="#">0 connections</a>
+                          </div>
+
+                          <div class="col-auto py-1">
+                            <!-- Checkbox -->
+                            <div class="custom-control custom-checkbox-switch">
+                              <input type="checkbox" id="connectionsCheckbox2" class="custom-control-input custom-checkbox-switch-input">
+                              <label class="custom-checkbox-switch-label btn-sm" for="connectionsCheckbox2">
+                                <span class="custom-checkbox-switch-default">
+                                  <i class="tio-user-add mr-1"></i> Connect
+                                </span>
+                                <span class="custom-checkbox-switch-active">
+                                  <i class="tio-done mr-1"></i> Connected
+                                </span>
+                              </label>
+                            </div>
+                            <!-- End Checkbox -->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Footer -->
+                    </div>
+                    <!-- End Card -->
+                  </div>
+
+                  <div class="col mb-3 mb-lg-5">
+                    <!-- Card -->
+                    <div class="card h-100">
+                      <!-- Unfold -->
+                      <div class="card-pinned">
+                        <div class="hs-unfold">
+                          <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                             data-hs-unfold-options='{
+                               "target": "#connectionsDropdown3",
+                               "type": "css-animation"
+                             }'>
+                            <i class="tio-more-vertical"></i>
+                          </a>
+
+                          <div id="connectionsDropdown3" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Share connection</a>
+                            <a class="dropdown-item" href="#">Block connection</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Unfold -->
+
+                      <!-- Body -->
+                      <div class="card-body text-center">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xl avatar-soft-dark avatar-circle avatar-border-lg avatar-centered mb-3">
+                          <span class="avatar-initials">B</span>
+                          <span class="avatar-status avatar-sm-status avatar-status-danger"></span>
+                        </div>
+                        <!-- End Avatar -->
+
+                        <h3 class="mb-1">
+                          <a class="text-dark" href="#">Bob Dean</a>
+                        </h3>
+
+                        <div class="mb-3">
+                          <i class="tio-city mr-1"></i>
+                          <span>Sales</span>
+                        </div>
+
+                        <!-- Badges -->
+                        <ul class="list-inline list-inline-m-1 mb-0">
+                          <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Sales</a></li>
+                          <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Legal</a></li>
+                        </ul>
+                        <!-- End Badges -->
+                      </div>
+                      <!-- End Body -->
+
+                      <!-- Footer -->
+                      <div class="card-footer">
+                        <div class="row justify-content-between align-items-center">
+                          <div class="col-auto py-1">
+                            <a class="font-size-sm text-body" href="#">25 connections</a>
+                          </div>
+
+                          <div class="col-auto py-1">
+                            <!-- Checkbox -->
+                            <div class="custom-control custom-checkbox-switch">
+                              <input type="checkbox" id="connectionsCheckbox3" class="custom-control-input custom-checkbox-switch-input">
+                              <label class="custom-checkbox-switch-label btn-sm" for="connectionsCheckbox3">
+                                <span class="custom-checkbox-switch-default">
+                                  <i class="tio-user-add mr-1"></i> Connect
+                                </span>
+                                <span class="custom-checkbox-switch-active">
+                                  <i class="tio-done mr-1"></i> Connected
+                                </span>
+                              </label>
+                            </div>
+                            <!-- End Checkbox -->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Footer -->
+                    </div>
+                    <!-- End Card -->
+                  </div>
+
+                  <div class="col mb-3 mb-lg-5">
+                    <!-- Card -->
+                    <div class="card h-100">
+                      <!-- Unfold -->
+                      <div class="card-pinned">
+                        <div class="hs-unfold">
+                          <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                             data-hs-unfold-options='{
+                               "target": "#connectionsDropdown1",
+                               "type": "css-animation"
+                             }'>
+                            <i class="tio-more-vertical"></i>
+                          </a>
+
+                          <div id="connectionsDropdown1" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Share connection</a>
+                            <a class="dropdown-item" href="#">Block connection</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Unfold -->
+
+                      <!-- Body -->
+                      <div class="card-body text-center">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xl avatar-circle avatar-border-lg avatar-centered mb-3">
+                          <img class="avatar-img" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description">
+                          <span class="avatar-status avatar-sm-status avatar-status-success"></span>
+                        </div>
+                        <!-- End Avatar -->
+
+                        <h3 class="mb-1">
+                          <a class="text-dark" href="#">Amanda Harvey</a>
+                        </h3>
+
+                        <div class="mb-3">
+                          <i class="tio-city mr-1"></i>
+                          <span>Atlassian</span>
+                        </div>
+
+                        <!-- Badges -->
+                        <ul class="list-inline list-inline-m-1 mb-0">
+                          <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Human resources</a></li>
+                          <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Legal</a></li>
+                        </ul>
+                        <!-- End Badges -->
+                      </div>
+                      <!-- End Body -->
+
+                      <!-- Footer -->
+                      <div class="card-footer">
+                        <div class="row justify-content-between align-items-center">
+                          <div class="col-auto py-1">
+                            <a class="font-size-sm text-body" href="#">3 connections</a>
+                          </div>
+
+                          <div class="col-auto py-1">
+                            <!-- Checkbox -->
+                            <div class="custom-control custom-checkbox-switch">
+                              <input type="checkbox" id="connectionsCheckbox4" class="custom-control-input custom-checkbox-switch-input" checked>
+                              <label class="custom-checkbox-switch-label btn-sm" for="connectionsCheckbox4">
+                                <span class="custom-checkbox-switch-default">
+                                  <i class="tio-user-add mr-1"></i> Connect
+                                </span>
+                                <span class="custom-checkbox-switch-active">
+                                  <i class="tio-done mr-1"></i> Connected
+                                </span>
+                              </label>
+                            </div>
+                            <!-- End Checkbox -->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Footer -->
+                    </div>
+                    <!-- End Card -->
+                  </div>
+
+                  <div class="col mb-3 mb-lg-5">
+                    <!-- Card -->
+                    <div class="card h-100">
+                      <!-- Unfold -->
+                      <div class="card-pinned">
+                        <div class="hs-unfold">
+                          <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                             data-hs-unfold-options='{
+                               "target": "#connectionsDropdown7",
+                               "type": "css-animation"
+                             }'>
+                            <i class="tio-more-vertical"></i>
+                          </a>
+
+                          <div id="connectionsDropdown7" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Share connection</a>
+                            <a class="dropdown-item" href="#">Block connection</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Unfold -->
+
+                      <!-- Body -->
+                      <div class="card-body text-center">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xl avatar-circle avatar-border-lg avatar-centered mb-3">
+                          <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                          <span class="avatar-status avatar-sm-status avatar-status-success"></span>
+                        </div>
+                        <!-- End Avatar -->
+
+                        <h3 class="mb-1">
+                          <a class="text-dark" href="#">Finch Hoot</a>
+                        </h3>
+
+                        <div class="mb-3">
+                          <i class="tio-city mr-1"></i>
+                          <span>Dev</span>
+                        </div>
+
+                        <!-- Badges -->
+                        <ul class="list-inline list-inline-m-1 mb-0">
+                          <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">JS</a></li>
+                          <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Vue.js</a></li>
+                          <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">HTML5</a></li>
+                        </ul>
+                        <!-- End Badges -->
+                      </div>
+                      <!-- End Body -->
+
+                      <!-- Footer -->
+                      <div class="card-footer">
+                        <div class="row justify-content-between align-items-center">
+                          <div class="col-auto py-1">
+                            <a class="font-size-sm text-body" href="#">7 connections</a>
+                          </div>
+
+                          <div class="col-auto py-1">
+                            <!-- Checkbox -->
+                            <div class="custom-control custom-checkbox-switch">
+                              <input type="checkbox" id="connectionsCheckbox5" class="custom-control-input custom-checkbox-switch-input" checked>
+                              <label class="custom-checkbox-switch-label btn-sm" for="connectionsCheckbox5">
+                                <span class="custom-checkbox-switch-default">
+                                  <i class="tio-user-add mr-1"></i> Connect
+                                </span>
+                                <span class="custom-checkbox-switch-active">
+                                  <i class="tio-done mr-1"></i> Connected
+                                </span>
+                              </label>
+                            </div>
+                            <!-- End Checkbox -->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Footer -->
+                    </div>
+                    <!-- End Card -->
+                  </div>
+
+                  <div class="col mb-3 mb-lg-5">
+                    <!-- Card -->
+                    <div class="card h-100">
+                      <!-- Unfold -->
+                      <div class="card-pinned">
+                        <div class="hs-unfold">
+                          <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                             data-hs-unfold-options='{
+                               "target": "#connectionsDropdown8",
+                               "type": "css-animation"
+                             }'>
+                            <i class="tio-more-vertical"></i>
+                          </a>
+
+                          <div id="connectionsDropdown8" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Share connection</a>
+                            <a class="dropdown-item" href="#">Block connection</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Unfold -->
+
+                      <!-- Body -->
+                      <div class="card-body text-center">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xl avatar-circle avatar-border-lg avatar-centered mb-3">
+                          <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                          <span class="avatar-status avatar-sm-status avatar-status-danger"></span>
+                        </div>
+                        <!-- End Avatar -->
+
+                        <h3 class="mb-1">
+                          <a class="text-dark" href="#">Costa Quinn</a>
+                        </h3>
+
+                        <div class="mb-3">
+                          <i class="tio-city mr-1"></i>
+                          <span>Research team</span>
+                        </div>
+
+                        <!-- Badges -->
+                        <ul class="list-inline list-inline-m-1 mb-0">
+                          <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">SEO</a></li>
+                        </ul>
+                        <!-- End Badges -->
+                      </div>
+                      <!-- End Body -->
+
+                      <!-- Footer -->
+                      <div class="card-footer">
+                        <div class="row justify-content-between align-items-center">
+                          <div class="col-auto py-1">
+                            <a class="font-size-sm text-body" href="#">9 connections</a>
+                          </div>
+
+                          <div class="col-auto py-1">
+                            <!-- Checkbox -->
+                            <div class="custom-control custom-checkbox-switch">
+                              <input type="checkbox" id="connectionsCheckbox6" class="custom-control-input custom-checkbox-switch-input">
+                              <label class="custom-checkbox-switch-label btn-sm" for="connectionsCheckbox6">
+                                <span class="custom-checkbox-switch-default">
+                                  <i class="tio-user-add mr-1"></i> Connect
+                                </span>
+                                <span class="custom-checkbox-switch-active">
+                                  <i class="tio-done mr-1"></i> Connected
+                                </span>
+                              </label>
+                            </div>
+                            <!-- End Checkbox -->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Footer -->
+                    </div>
+                    <!-- End Card -->
+                  </div>
+                </div>
+                <!-- End Connections -->
+              </div>
+
+              <div class="tab-pane fade" id="list" role="tabpanel" aria-labelledby="list-tab">
+                <div class="row row-cols-1">
+                  <div class="col mb-3">
+                    <!-- Card -->
+                    <div class="card card-body">
+                      <div class="media align-items-md-center">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-lg avatar-soft-primary avatar-circle avatar-border-lg mr-3">
+                          <span class="avatar-initials">R</span>
+                          <span class="avatar-status avatar-sm-status avatar-status-warning"></span>
+                        </div>
+                        <!-- End Avatar -->
+
+                        <div class="media-body">
+                          <div class="row align-items-md-center">
+                            <div class="col-9 col-md-4 col-lg-3 mb-2 mb-md-0">
+                              <h4 class="mb-1">
+                                <a class="text-dark" href="#">Rachel Doe</a>
+                              </h4>
+
+                              <span class="d-block">
+                                <i class="tio-city mr-1"></i>
+                                <span>Design</span>
+                              </span>
+                            </div>
+
+                            <div class="col-3 col-md-auto order-md-last text-right ml-n3">
+                              <!-- Unfold -->
+                              <div class="hs-unfold">
+                                <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                   data-hs-unfold-options='{
+                                     "target": "#connectionsListDropdown1",
+                                     "type": "css-animation"
+                                   }'>
+                                  <i class="tio-more-vertical"></i>
+                                </a>
+
+                                <div id="connectionsListDropdown1" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                                  <a class="dropdown-item" href="#">Rename project </a>
+                                  <a class="dropdown-item" href="#">Add to favorites</a>
+                                  <a class="dropdown-item" href="#">Archive project</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item text-danger" href="#">Delete</a>
+                                </div>
+                              </div>
+                              <!-- End Unfold -->
+                            </div>
+
+                            <div class="col-sm mb-2 mb-sm-0">
+                              <!-- Badges -->
+                              <ul class="list-inline list-inline-m-1 mb-0">
+                                <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">UI/UX</a></li>
+                                <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Sketch</a></li>
+                                <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Figma</a></li>
+                              </ul>
+                              <!-- End Badges -->
+                            </div>
+
+                            <div class="col-sm-auto">
+                              <!-- Checkbox -->
+                              <div class="custom-control custom-checkbox-switch">
+                                <input type="checkbox" id="connectionsListCheckbox1" class="custom-control-input custom-checkbox-switch-input" checked>
+                                <label class="custom-checkbox-switch-label btn-sm" for="connectionsListCheckbox1">
+                                  <span class="custom-checkbox-switch-default">
+                                    <i class="tio-user-add mr-1"></i> Connect
+                                  </span>
+                                  <span class="custom-checkbox-switch-active">
+                                    <i class="tio-done mr-1"></i> Connected
+                                  </span>
+                                </label>
+                              </div>
+                              <!-- End Checkbox -->
+                            </div>
+                          </div>
+                          <!-- End Row -->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Card -->
+                  </div>
+
+                  <div class="col mb-3">
+                    <!-- Card -->
+                    <div class="card card-body">
+                      <div class="media align-items-md-center">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-lg avatar-circle avatar-border-lg mr-3">
+                          <img class="avatar-img" src="@@autopath/assets/img/160x160/img8.jpg" alt="Image Description">
+                          <span class="avatar-status avatar-sm-status avatar-status-success"></span>
+                        </div>
+                        <!-- End Avatar -->
+
+                        <div class="media-body">
+                          <div class="row align-items-md-center">
+                            <div class="col-9 col-md-4 col-lg-3 mb-2 mb-md-0">
+                              <h4 class="mb-1">
+                                <a class="text-dark" href="#">Isabella Finley</a>
+                              </h4>
+
+                              <span class="d-block">
+                                <i class="tio-city mr-1"></i>
+                                <span>FrontApp</span>
+                              </span>
+                            </div>
+
+                            <div class="col-3 col-md-auto order-md-last text-right ml-n3">
+                              <!-- Unfold -->
+                              <div class="hs-unfold">
+                                <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                   data-hs-unfold-options='{
+                                     "target": "#connectionsListDropdown2",
+                                     "type": "css-animation"
+                                   }'>
+                                  <i class="tio-more-vertical"></i>
+                                </a>
+
+                                <div id="connectionsListDropdown2" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                                  <a class="dropdown-item" href="#">Rename project </a>
+                                  <a class="dropdown-item" href="#">Add to favorites</a>
+                                  <a class="dropdown-item" href="#">Archive project</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item text-danger" href="#">Delete</a>
+                                </div>
+                              </div>
+                              <!-- End Unfold -->
+                            </div>
+
+                            <div class="col-sm mb-2 mb-sm-0">
+                              <!-- Badges -->
+                              <ul class="list-inline list-inline-m-1 mb-0">
+                                <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Human resources</a></li>
+                                <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Support</a></li>
+                              </ul>
+                              <!-- End Badges -->
+                            </div>
+
+                            <div class="col-sm-auto">
+                              <!-- Checkbox -->
+                              <div class="custom-control custom-checkbox-switch">
+                                <input type="checkbox" id="connectionsListCheckbox2" class="custom-control-input custom-checkbox-switch-input" checked>
+                                <label class="custom-checkbox-switch-label btn-sm" for="connectionsListCheckbox2">
+                                  <span class="custom-checkbox-switch-default">
+                                    <i class="tio-user-add mr-1"></i> Connect
+                                  </span>
+                                  <span class="custom-checkbox-switch-active">
+                                    <i class="tio-done mr-1"></i> Connected
+                                  </span>
+                                </label>
+                              </div>
+                              <!-- End Checkbox -->
+                            </div>
+                          </div>
+                          <!-- End Row -->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Card -->
+                  </div>
+
+                  <div class="col mb-3">
+                    <!-- Card -->
+                    <div class="card card-body">
+                      <div class="media align-items-md-center">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-lg avatar-circle avatar-border-lg mr-3">
+                          <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                          <span class="avatar-status avatar-sm-status avatar-status-warning"></span>
+                        </div>
+                        <!-- End Avatar -->
+
+                        <div class="media-body">
+                          <div class="row align-items-md-center">
+                            <div class="col-9 col-md-4 col-lg-3 mb-2 mb-md-0">
+                              <h4 class="mb-1">
+                                <a class="text-dark" href="#">David Harrison</a>
+                              </h4>
+
+                              <span class="d-block">
+                                <i class="tio-city mr-1"></i>
+                                <span>Unassigned</span>
+                              </span>
+                            </div>
+
+                            <div class="col-3 col-md-auto order-md-last text-right ml-n3">
+                              <!-- Unfold -->
+                              <div class="hs-unfold">
+                                <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                   data-hs-unfold-options='{
+                                     "target": "#connectionsListDropdown3",
+                                     "type": "css-animation"
+                                   }'>
+                                  <i class="tio-more-vertical"></i>
+                                </a>
+
+                                <div id="connectionsListDropdown3" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                                  <a class="dropdown-item" href="#">Rename project </a>
+                                  <a class="dropdown-item" href="#">Add to favorites</a>
+                                  <a class="dropdown-item" href="#">Archive project</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item text-danger" href="#">Delete</a>
+                                </div>
+                              </div>
+                              <!-- End Unfold -->
+                            </div>
+
+                            <div class="col-sm mb-2 mb-sm-0">
+                              <!-- Badges -->
+                              <ul class="list-inline list-inline-m-1 mb-0">
+                                <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Marketing</a></li>
+                              </ul>
+                              <!-- End Badges -->
+                            </div>
+
+                            <div class="col-sm-auto">
+                              <!-- Checkbox -->
+                              <div class="custom-control custom-checkbox-switch">
+                                <input type="checkbox" id="connectionsListCheckbox3" class="custom-control-input custom-checkbox-switch-input">
+                                <label class="custom-checkbox-switch-label btn-sm" for="connectionsListCheckbox3">
+                                  <span class="custom-checkbox-switch-default">
+                                    <i class="tio-user-add mr-1"></i> Connect
+                                  </span>
+                                  <span class="custom-checkbox-switch-active">
+                                    <i class="tio-done mr-1"></i> Connected
+                                  </span>
+                                </label>
+                              </div>
+                              <!-- End Checkbox -->
+                            </div>
+                          </div>
+                          <!-- End Row -->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Card -->
+                  </div>
+
+                  <div class="col mb-3">
+                    <!-- Card -->
+                    <div class="card card-body">
+                      <div class="media align-items-md-center">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-lg avatar-soft-dark avatar-circle avatar-border-lg mr-3">
+                          <span class="avatar-initials">B</span>
+                          <span class="avatar-status avatar-sm-status avatar-status-danger"></span>
+                        </div>
+                        <!-- End Avatar -->
+
+                        <div class="media-body">
+                          <div class="row align-items-md-center">
+                            <div class="col-9 col-md-4 col-lg-3 mb-2 mb-md-0">
+                              <h4 class="mb-1">
+                                <a class="text-dark" href="#">Bob Dean</a>
+                              </h4>
+
+                              <span class="d-block">
+                                <i class="tio-city mr-1"></i>
+                                <span>Sales</span>
+                              </span>
+                            </div>
+
+                            <div class="col-3 col-md-auto order-md-last text-right ml-n3">
+                              <!-- Unfold -->
+                              <div class="hs-unfold">
+                                <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                   data-hs-unfold-options='{
+                                     "target": "#connectionsListDropdown4",
+                                     "type": "css-animation"
+                                   }'>
+                                  <i class="tio-more-vertical"></i>
+                                </a>
+
+                                <div id="connectionsListDropdown4" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                                  <a class="dropdown-item" href="#">Rename project </a>
+                                  <a class="dropdown-item" href="#">Add to favorites</a>
+                                  <a class="dropdown-item" href="#">Archive project</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item text-danger" href="#">Delete</a>
+                                </div>
+                              </div>
+                              <!-- End Unfold -->
+                            </div>
+
+                            <div class="col-sm mb-2 mb-sm-0">
+                              <!-- Badges -->
+                              <ul class="list-inline list-inline-m-1 mb-0">
+                                <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Sales</a></li>
+                                <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Legal</a></li>
+                              </ul>
+                              <!-- End Badges -->
+                            </div>
+
+                            <div class="col-sm-auto">
+                              <!-- Checkbox -->
+                              <div class="custom-control custom-checkbox-switch">
+                                <input type="checkbox" id="connectionsListCheckbox4" class="custom-control-input custom-checkbox-switch-input">
+                                <label class="custom-checkbox-switch-label btn-sm" for="connectionsListCheckbox4">
+                                  <span class="custom-checkbox-switch-default">
+                                    <i class="tio-user-add mr-1"></i> Connect
+                                  </span>
+                                  <span class="custom-checkbox-switch-active">
+                                    <i class="tio-done mr-1"></i> Connected
+                                  </span>
+                                </label>
+                              </div>
+                              <!-- End Checkbox -->
+                            </div>
+                          </div>
+                          <!-- End Row -->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Card -->
+                  </div>
+
+                  <div class="col mb-3">
+                    <!-- Card -->
+                    <div class="card card-body">
+                      <div class="media align-items-md-center">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-lg avatar-circle avatar-border-lg mr-3">
+                          <img class="avatar-img" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description">
+                          <span class="avatar-status avatar-sm-status avatar-status-success"></span>
+                        </div>
+                        <!-- End Avatar -->
+
+                        <div class="media-body">
+                          <div class="row align-items-md-center">
+                            <div class="col-9 col-md-4 col-lg-3 mb-2 mb-md-0">
+                              <h4 class="mb-1">
+                                <a class="text-dark" href="#">Amanda Harvey</a>
+                              </h4>
+
+                              <span class="d-block">
+                                <i class="tio-city mr-1"></i>
+                                <span>Atlassian</span>
+                              </span>
+                            </div>
+
+                            <div class="col-3 col-md-auto order-md-last text-right ml-n3">
+                              <!-- Unfold -->
+                              <div class="hs-unfold">
+                                <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                   data-hs-unfold-options='{
+                                     "target": "#connectionsListDropdown5",
+                                     "type": "css-animation"
+                                   }'>
+                                  <i class="tio-more-vertical"></i>
+                                </a>
+
+                                <div id="connectionsListDropdown5" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                                  <a class="dropdown-item" href="#">Rename project </a>
+                                  <a class="dropdown-item" href="#">Add to favorites</a>
+                                  <a class="dropdown-item" href="#">Archive project</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item text-danger" href="#">Delete</a>
+                                </div>
+                              </div>
+                              <!-- End Unfold -->
+                            </div>
+
+                            <div class="col-sm mb-2 mb-sm-0">
+                              <!-- Badges -->
+                              <ul class="list-inline list-inline-m-1 mb-0">
+                                <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Human resources</a></li>
+                                <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Legal</a></li>
+                              </ul>
+                              <!-- End Badges -->
+                            </div>
+
+                            <div class="col-sm-auto">
+                              <!-- Checkbox -->
+                              <div class="custom-control custom-checkbox-switch">
+                                <input type="checkbox" id="connectionsListCheckbox5" class="custom-control-input custom-checkbox-switch-input" checked>
+                                <label class="custom-checkbox-switch-label btn-sm" for="connectionsListCheckbox5">
+                                  <span class="custom-checkbox-switch-default">
+                                    <i class="tio-user-add mr-1"></i> Connect
+                                  </span>
+                                  <span class="custom-checkbox-switch-active">
+                                    <i class="tio-done mr-1"></i> Connected
+                                  </span>
+                                </label>
+                              </div>
+                              <!-- End Checkbox -->
+                            </div>
+                          </div>
+                          <!-- End Row -->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Card -->
+                  </div>
+
+                  <div class="col mb-3">
+                    <!-- Card -->
+                    <div class="card card-body">
+                      <div class="media align-items-md-center">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-lg avatar-circle avatar-border-lg mr-3">
+                          <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                          <span class="avatar-status avatar-sm-status avatar-status-success"></span>
+                        </div>
+                        <!-- End Avatar -->
+
+                        <div class="media-body">
+                          <div class="row align-items-md-center">
+                            <div class="col-9 col-md-4 col-lg-3 mb-2 mb-md-0">
+                              <h4 class="mb-1">
+                                <a class="text-dark" href="#">Finch Hoot</a>
+                              </h4>
+
+                              <span class="d-block">
+                                <i class="tio-city mr-1"></i>
+                                <span>Dev</span>
+                              </span>
+                            </div>
+
+                            <div class="col-3 col-md-auto order-md-last text-right ml-n3">
+                              <!-- Unfold -->
+                              <div class="hs-unfold">
+                                <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                   data-hs-unfold-options='{
+                                     "target": "#connectionsListDropdown6",
+                                     "type": "css-animation"
+                                   }'>
+                                  <i class="tio-more-vertical"></i>
+                                </a>
+
+                                <div id="connectionsListDropdown6" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                                  <a class="dropdown-item" href="#">Rename project </a>
+                                  <a class="dropdown-item" href="#">Add to favorites</a>
+                                  <a class="dropdown-item" href="#">Archive project</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item text-danger" href="#">Delete</a>
+                                </div>
+                              </div>
+                              <!-- End Unfold -->
+                            </div>
+
+                            <div class="col-sm mb-2 mb-sm-0">
+                              <!-- Badges -->
+                              <ul class="list-inline list-inline-m-1 mb-0">
+                                <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">JS</a></li>
+                                <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">Vue.js</a></li>
+                                <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">HTML5</a></li>
+                              </ul>
+                              <!-- End Badges -->
+                            </div>
+
+                            <div class="col-sm-auto">
+                              <!-- Checkbox -->
+                              <div class="custom-control custom-checkbox-switch">
+                                <input type="checkbox" id="connectionsListCheckbox6" class="custom-control-input custom-checkbox-switch-input" checked>
+                                <label class="custom-checkbox-switch-label btn-sm" for="connectionsListCheckbox6">
+                                  <span class="custom-checkbox-switch-default">
+                                    <i class="tio-user-add mr-1"></i> Connect
+                                  </span>
+                                  <span class="custom-checkbox-switch-active">
+                                    <i class="tio-done mr-1"></i> Connected
+                                  </span>
+                                </label>
+                              </div>
+                              <!-- End Checkbox -->
+                            </div>
+                          </div>
+                          <!-- End Row -->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Card -->
+                  </div>
+
+                  <div class="col mb-3">
+                    <!-- Card -->
+                    <div class="card card-body">
+                      <div class="media align-items-md-center">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-lg avatar-circle avatar-border-lg mr-3">
+                          <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                          <span class="avatar-status avatar-sm-status avatar-status-danger"></span>
+                        </div>
+                        <!-- End Avatar -->
+
+                        <div class="media-body">
+                          <div class="row align-items-md-center">
+                            <div class="col-9 col-md-4 col-lg-3 mb-2 mb-md-0">
+                              <h4 class="mb-1">
+                                <a class="text-dark" href="#">Costa Quinn</a>
+                              </h4>
+
+                              <span class="d-block">
+                                <i class="tio-city mr-1"></i>
+                                <span>Research team</span>
+                              </span>
+                            </div>
+
+                            <div class="col-3 col-md-auto order-md-last text-right ml-n3">
+                              <!-- Unfold -->
+                              <div class="hs-unfold">
+                                <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                   data-hs-unfold-options='{
+                                     "target": "#connectionsListDropdown7",
+                                     "type": "css-animation"
+                                   }'>
+                                  <i class="tio-more-vertical"></i>
+                                </a>
+
+                                <div id="connectionsListDropdown7" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                                  <a class="dropdown-item" href="#">Rename project </a>
+                                  <a class="dropdown-item" href="#">Add to favorites</a>
+                                  <a class="dropdown-item" href="#">Archive project</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item text-danger" href="#">Delete</a>
+                                </div>
+                              </div>
+                              <!-- End Unfold -->
+                            </div>
+
+                            <div class="col-sm mb-2 mb-sm-0">
+                              <!-- Badges -->
+                              <ul class="list-inline list-inline-m-1 mb-0">
+                                <li class="list-inline-item"><a class="badge badge-soft-secondary p-2" href="#">SEO</a></li>
+                              </ul>
+                              <!-- End Badges -->
+                            </div>
+
+                            <div class="col-sm-auto">
+                              <!-- Checkbox -->
+                              <div class="custom-control custom-checkbox-switch">
+                                <input type="checkbox" id="connectionsListCheckbox7" class="custom-control-input custom-checkbox-switch-input">
+                                <label class="custom-checkbox-switch-label btn-sm" for="connectionsListCheckbox7">
+                                  <span class="custom-checkbox-switch-default">
+                                    <i class="tio-user-add mr-1"></i> Connect
+                                  </span>
+                                  <span class="custom-checkbox-switch-active">
+                                    <i class="tio-done mr-1"></i> Connected
+                                  </span>
+                                </label>
+                              </div>
+                              <!-- End Checkbox -->
+                            </div>
+                          </div>
+                          <!-- End Row -->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Card -->
+                  </div>
+                </div>
+                <!-- End Row -->
+              </div>
+            </div>
+            <!-- End Tab Content -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Content -->
+
+      <!-- Footer -->
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/footer/main.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/footer/container.html")
+      }
+      <!-- End Footer -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Keyboard Shortcuts -->
+    @@include("@@autopath/partials/layouts-components/sidebar-shortcuts.html")
+    <!-- End Keyboard Shortcuts -->
+
+    <!-- Activity -->
+    @@include("@@autopath/partials/layouts-components/sidebar-activity.html")
+    <!-- End Activity -->
+
+    <!-- Welcome Message Modal -->
+    @@include("@@autopath/partials/modals/modal-welcome.html")
+    <!-- End Welcome Message Modal -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <script src="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+    }
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // =======================================================
+
+
+        // BUILDER TOGGLE INVOKER
+        // =======================================================
+        $('.js-navbar-vertical-aside-toggle-invoker').click(function () {
+          $('.js-navbar-vertical-aside-toggle-invoker i').tooltip('hide');
+        });
+
+        @@if (layoutBuilder.header.layoutMode !== 'default') {
+          // INITIALIZATION OF MEGA MENU
+          // =======================================================
+          var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+            desktop: {
+              position: 'left'
+            }
+          }).init();
+        }
+
+        
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+        
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+        $(".js-nav-tooltip-link").on("show.bs.tooltip", function(e) {
+          if (!$("body").hasClass("navbar-vertical-aside-mini-mode")) {
+            return false;
+          }
+        });
+
+        
+        // INITIALIZATION OF UNFOLD
+        // =======================================================
+        $('.js-hs-unfold-invoker').each(function () {
+          var unfold = new HSUnfold($(this)).init();
+        });
+
+        
+        // INITIALIZATION OF FORM SEARCH
+        // =======================================================
+        $('.js-form-search').each(function () {
+          new HSFormSearch($(this)).init()
+        });
+
+        
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this)).init()
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

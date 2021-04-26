@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Invoice | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <link rel="stylesheet" href="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+    }
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+  </head>
+
+  <body class="@@if(layoutBuilder.header.layoutMode === 'default'){has-navbar-vertical-aside navbar-vertical-aside-show-xl} @@if(layoutBuilder.sidebarLayout === 'compact'){navbar-vertical-aside-compact-mode} @@if(layoutBuilder.sidebarLayout === 'mini'){navbar-vertical-aside-mini-mode} footer-offset">
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.sidebarLayout !== 'mini') {
+      <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside-mini-cache.js"></script>
+    }
+
+    <!-- Search Form -->
+    @@include("@@autopath/partials/layouts-components/mobile-search.html")
+    <!-- End Search Form -->
+
+    <!-- ========== HEADER ========== -->
+    @@if (layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/header/main.html")
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'single') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/main-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/main-container.html")
+      }
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'double') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/double-line-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/double-line-container.html")
+      }
+    }
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/main.html", {
+        "category": "pages",
+        "subcategory": "account",
+        "link": "account-invoice.html"
+      })
+    }
+
+    @@if (layoutBuilder.sidebarLayout === 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/compact.html", {
+        "category": "pages",
+        "subcategory": "account",
+        "link": "account-invoice.html"
+      })
+    }
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main">
+      <!-- Content -->
+      <div class="content @@layoutBuilder.header.containerMode">
+        <!-- Page Header -->
+        <div class="page-header d-print-none">
+          <div class="row align-items-end">
+            <div class="col-sm mb-2 mb-sm-0">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-no-gutter">
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Pages</a></li>
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Account</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Invoice</li>
+                </ol>
+              </nav>
+
+              <h1 class="page-header-title">Invoice</h1>
+            </div>
+
+            <div class="col-sm-auto">
+              <a class="btn btn-primary" href="apps-invoice-generator.html">
+                <i class="tio-add mr-1"></i> New Invoice
+              </a>
+            </div>
+          </div>
+          <!-- End Row -->
+        </div>
+        <!-- End Page Header -->
+
+        <div class="row">
+          <div class="col-lg-8 mb-5 mb-lg-0">
+            <!-- Card -->
+            <div class="card card-lg mb-5">
+              <div class="card-body">
+                <div class="row justify-content-lg-between">
+                  <div class="col-sm order-2 order-sm-1 mb-3">
+                    <img class="avatar mb-2" src="@@autopath/assets/svg/logos/logo-short.svg" alt="Logo">
+                    <h1 class="text-primary">Front Inc.</h1>
+                  </div>
+
+                  <div class="col-sm-auto order-1 order-sm-2 text-sm-right mb-3">
+                    <div class="mb-3">
+                      <h2>Invoice #</h2>
+                      <span class="d-block">3682303</span>
+                    </div>
+
+                    <address class="text-dark">
+                      45 Roker Terrace<br>
+                      Latheronwheel<br>
+                      KW5 8NW, London<br>
+                      United Kingdom
+                    </address>
+                  </div>
+                </div>
+                <!-- End Row -->
+
+                <!-- Bill To -->
+                <div class="row justify-content-md-between mb-3">
+                  <div class="col-md">
+                    <h4>Bill to:</h4>
+                    <h4>Sara Williams</h4>
+
+                    <address>
+                      280 Suzanne Throughway,<br>
+                      Breannabury, OR 45801,<br>
+                      United States
+                    </address>
+                  </div>
+
+                  <div class="col-md text-md-right">
+                    <dl class="row">
+                      <dt class="col-sm-4 col-md">Invoice date:</dt>
+                      <dd class="col-sm-8 col-md-auto">03/10/2018</dd>
+                    </dl>
+                    <dl class="row">
+                      <dt class="col-sm-4 col-md">Due date:</dt>
+                      <dd class="col-sm-8 col-md-auto">03/11/2018</dd>
+                    </dl>
+                  </div>
+                </div>
+                <!-- End Bill To -->
+
+                <!-- Table -->
+                <div class="table-responsive">
+                  <table class="table table-borderless table-thead-bordered table-nowrap table-align-middle card-table">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Rate</th>
+                        <th class="table-column-right-aligned">Amount</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <th>Design UX and UI</th>
+                        <td>1</td>
+                        <td>5</td>
+                        <td class="table-column-right-aligned">$500</td>
+                      </tr>
+
+                      <tr>
+                        <th>Web project</th>
+                        <td>1</td>
+                        <td>24</td>
+                        <td class="table-column-right-aligned">$1250</td>
+                      </tr>
+
+                      <tr>
+                        <th>SEO</th>
+                        <td>1</td>
+                        <td>6</td>
+                        <td class="table-column-right-aligned">$2000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- End Table -->
+
+                <hr class="my-5">
+
+                <div class="row justify-content-md-end mb-3">
+                  <div class="col-md-8 col-lg-7">
+                    <dl class="row text-sm-right">
+                      <dt class="col-sm-6">Subtotal:</dt>
+                      <dd class="col-sm-6">$2750.00</dd>
+                      <dt class="col-sm-6">Total:</dt>
+                      <dd class="col-sm-6">$2750.00</dd>
+                      <dt class="col-sm-6">Tax:</dt>
+                      <dd class="col-sm-6">$39.00</dd>
+                      <dt class="col-sm-6">Amount paid:</dt>
+                      <dd class="col-sm-6">$2789.00</dd>
+                      <dt class="col-sm-6">Due balance:</dt>
+                      <dd class="col-sm-6">$0.00</dd>
+                    </dl>
+                    <!-- End Row -->
+                  </div>
+                </div>
+                <!-- End Row -->
+
+                <!-- Contacts -->
+                <div class="mb-3">
+                  <h3>Thank you!</h3>
+                  <p>If you have any questions concerning this invoice, use the following contact information:</p>
+                </div>
+                <!-- End Contacts -->
+
+                <p class="font-size-sm mb-0">&copy; 2020 Htmlstream.</p>
+              </div>
+            </div>
+            <!-- End Card -->
+
+            <!-- Footer -->
+            <div class="d-flex justify-content-end d-print-none">
+              <a class="btn btn-white mr-2" href="#">
+                <i class="tio-download-to mr-1"></i> PDF
+              </a>
+
+              <a class="btn btn-primary" href="javascript:;" onclick="window.print(); return false;">
+                <i class="tio-print mr-1"></i> Print Details
+              </a>
+            </div>
+            <!-- End Footer -->
+          </div>
+
+          <div class="col-lg-4">
+            <!-- Card -->
+            <div class="card d-print-none">
+              <!-- Header -->
+              <div class="card-header">
+                <h5 class="card-header-title">History</h5>
+
+                <!-- Unfold -->
+                <div class="hs-unfold">
+                  <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                     data-hs-unfold-options='{
+                       "target": "#reportsOverviewDropdown1",
+                       "type": "css-animation"
+                     }'>
+                    <i class="tio-more-vertical"></i>
+                  </a>
+
+                  <div id="reportsOverviewDropdown1" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right mt-1">
+                    <span class="dropdown-header">Settings</span>
+
+                    <a class="dropdown-item" href="#">
+                      <i class="tio-share dropdown-item-icon"></i> Share reports
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <i class="tio-download-to dropdown-item-icon"></i> Download
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <i class="tio-alt dropdown-item-icon"></i> Connect other apps
+                    </a>
+
+                    <div class="dropdown-divider"></div>
+
+                    <span class="dropdown-header">Feedback</span>
+
+                    <a class="dropdown-item" href="#">
+                      <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                    </a>
+                  </div>
+                </div>
+                <!-- End Unfold -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Body -->
+              <div class="card-body">
+                <span class="h1 d-block mb-3">175 <span class="h4 text-body">Invoices</span></span>
+
+                <!-- Progress -->
+                <div class="progress rounded-pill">
+                  <div class="progress-bar" role="progressbar" style="width: 76%" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 8%" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-danger" role="progressbar" style="width: 2%" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <!-- End Progress -->
+              </div>
+              <!-- End Body -->
+
+              <hr class="my-0">
+
+              <!-- Body -->
+              <div class="card-body">
+                <!-- Nav -->
+                <ul class="nav nav-segment nav-fill nav-sm-down-break" id="invoicesStatusTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="paid-tab" data-toggle="tab" href="#paid" role="tab" aria-controls="paid" aria-selected="true">
+                      <span class="legend-indicator bg-primary"></span>Paid (162)
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="pending-tab" data-toggle="tab" href="#pending" role="tab" aria-controls="pending" aria-selected="true">
+                      <span class="legend-indicator bg-warning"></span>Pending (10)
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="declined-tab" data-toggle="tab" href="#declined" role="tab" aria-controls="declined" aria-selected="true">
+                      <span class="legend-indicator bg-danger"></span>Declined (3)
+                    </a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Body -->
+
+              <hr class="my-0">
+
+              <!-- Body -->
+              <div class="card-body card-body-height">
+                <!-- Tab Content -->
+                <div class="tab-content" id="invoicesStatusTabContent">
+                  <div class="tab-pane fade show active" id="paid" role="tabpanel" aria-labelledby="paid-tab">
+                    <!-- List Group -->
+                    <ul class="list-group list-group-flush list-group-no-gutters">
+                      <!-- List Item -->
+                      <li class="list-group-item">
+                        <div class="mb-1">
+                          <h5 class="mb-0">Update subscription method</h5>
+                          <span class="font-size-sm">Rocket Science Group</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <span class="h4 text-primary">$530.00 USD</span>
+                          <span class="font-size-sm">25 May, 2020</span>
+                        </div>
+                      </li>
+                      <!-- End List Item -->
+
+                      <!-- List Item -->
+                      <li class="list-group-item">
+                        <div class="mb-1">
+                          <h5 class="mb-0">Develop Slack mobile app</h5>
+                          <span class="font-size-sm">Slack Technologies</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <span class="h4 text-primary">$2500.00 USD</span>
+                          <span class="font-size-sm">25 May, 2020</span>
+                        </div>
+                      </li>
+                      <!-- End List Item -->
+
+                      <!-- List Item -->
+                      <li class="list-group-item">
+                        <div class="mb-1">
+                          <h5 class="mb-0">Create a new database for Webdev</h5>
+                          <span class="font-size-sm">Google LLC</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <span class="h4 text-primary">$7000.00 USD</span>
+                          <span class="font-size-sm">10 May, 2020</span>
+                        </div>
+                      </li>
+                      <!-- End List Item -->
+
+                      <!-- List Item -->
+                      <li class="list-group-item">
+                        <div class="mb-1">
+                          <h5 class="mb-0">The Hub project</h5>
+                          <span class="font-size-sm">HubSpot</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <span class="h4 text-primary">$55000.00 USD</span>
+                          <span class="font-size-sm">12 June, 2020</span>
+                        </div>
+                      </li>
+                      <!-- End List Item -->
+
+                      <!-- List Item -->
+                      <li class="list-group-item">
+                        <div class="mb-1">
+                          <h5 class="mb-0">Binance-chain</h5>
+                          <span class="font-size-sm">FrontApp</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <span class="h4 text-primary">$400.00 USD</span>
+                          <span class="font-size-sm">01 June, 2020</span>
+                        </div>
+                      </li>
+                      <!-- End List Item -->
+                    </ul>
+                    <!-- End List Group -->
+                  </div>
+
+                  <div class="tab-pane fade" id="pending" role="tabpanel" aria-labelledby="pending-tab">
+                    <!-- List Group -->
+                    <ul class="list-group list-group-flush list-group-no-gutters">
+                      <!-- List Item -->
+                      <li class="list-group-item">
+                        <div class="mb-1">
+                          <h5 class="mb-0">Marketing campaign for Slack</h5>
+                          <span class="font-size-sm">Slack Technologies</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <span class="h4 text-primary">$2500.00 USD</span>
+                          <span class="font-size-sm">15 May, 2020</span>
+                        </div>
+                      </li>
+                      <!-- End List Item -->
+
+                      <!-- List Item -->
+                      <li class="list-group-item">
+                        <div class="mb-1">
+                          <h5 class="mb-0">Android app</h5>
+                          <span class="font-size-sm">Htmlstream Ltd.</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <span class="h4 text-primary">$7000.00 USD</span>
+                          <span class="font-size-sm">14 May, 2020</span>
+                        </div>
+                      </li>
+                      <!-- End List Item -->
+
+                      <!-- List Item -->
+                      <li class="list-group-item">
+                        <div class="mb-1">
+                          <h5 class="mb-0">Building startup for brand</h5>
+                          <span class="font-size-sm">Htmlstream Ltd.</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <span class="h4 text-primary">$530.00 USD</span>
+                          <span class="font-size-sm">15 May, 2020</span>
+                        </div>
+                      </li>
+                      <!-- End List Item -->
+
+                      <!-- List Item -->
+                      <li class="list-group-item">
+                        <div class="mb-1">
+                          <h5 class="mb-0">Massive dynamic project</h5>
+                          <span class="font-size-sm">Microsoft Corporation</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <span class="h4 text-primary">$55000.00 USD</span>
+                          <span class="font-size-sm">14 Apr, 2020</span>
+                        </div>
+                      </li>
+                      <!-- End List Item -->
+                    </ul>
+                    <!-- End List Group -->
+                  </div>
+
+                  <div class="tab-pane fade" id="declined" role="tabpanel" aria-labelledby="declined-tab">
+                    <!-- List Group -->
+                    <ul class="list-group list-group-flush list-group-no-gutters">
+                      <!-- List Item -->
+                      <li class="list-group-item">
+                        <div class="mb-1">
+                          <h5 class="mb-0">Set up a datatable for Booking.com</h5>
+                          <span class="font-size-sm">United States-based Booking Holdings</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <span class="h4 text-primary">$7000.00 USD</span>
+                          <span class="font-size-sm">05 May, 2020</span>
+                        </div>
+                      </li>
+                      <!-- End List Item -->
+
+                      <!-- List Item -->
+                      <li class="list-group-item">
+                        <div class="mb-1">
+                          <h5 class="mb-0">Redesigning the Spotify main page</h5>
+                          <span class="font-size-sm">Spotify Technology S.A.</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <span class="h4 text-primary">$530.00 USD</span>
+                          <span class="font-size-sm">04 May, 2020</span>
+                        </div>
+                      </li>
+                      <!-- End List Item -->
+
+                      <!-- List Item -->
+                      <li class="list-group-item">
+                        <div class="mb-1">
+                          <h5 class="mb-0">Prosperops</h5>
+                          <span class="font-size-sm">Prosperops</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <span class="h4 text-primary">$2500.00 USD</span>
+                          <span class="font-size-sm">15 Apr, 2020</span>
+                        </div>
+                      </li>
+                      <!-- End List Item -->
+                    </ul>
+                    <!-- End List Group -->
+                  </div>
+                </div>
+                <!-- End Tab Content -->
+              </div>
+              <!-- End Body -->
+
+              <!-- Card Footer -->
+              <a class="card-footer text-center" href="#">
+                View all invoices <i class="tio-chevron-right"></i>
+              </a>
+              <!-- End Card Footer -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+      </div>
+      <!-- End Content -->
+
+      <!-- Footer -->
+      <div class="d-print-none">
+        @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+          @@include("@@autopath/partials/footer/main.html")
+        }
+
+        @@if (layoutBuilder.header.containerMode === 'container') {
+          @@include("@@autopath/partials/footer/container.html")
+        }
+      </div>
+      <!-- End Footer -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Keyboard Shortcuts -->
+    @@include("@@autopath/partials/layouts-components/sidebar-shortcuts.html")
+    <!-- End Keyboard Shortcuts -->
+
+    <!-- Activity -->
+    @@include("@@autopath/partials/layouts-components/sidebar-activity.html")
+    <!-- End Activity -->
+
+    <!-- Welcome Message Modal -->
+    @@include("@@autopath/partials/modals/modal-welcome.html")
+    <!-- End Welcome Message Modal -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <script src="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+    }
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // =======================================================
+
+
+        // BUILDER TOGGLE INVOKER
+        // =======================================================
+        $('.js-navbar-vertical-aside-toggle-invoker').click(function () {
+          $('.js-navbar-vertical-aside-toggle-invoker i').tooltip('hide');
+        });
+
+        @@if (layoutBuilder.header.layoutMode !== 'default') {
+          // INITIALIZATION OF MEGA MENU
+          // =======================================================
+          var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+            desktop: {
+              position: 'left'
+            }
+          }).init();
+        }
+
+        
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside');
+        sidebar.hsSideNav({
+          mobileOverlayClass: 'd-print-none'
+        });
+
+        $('.js-navbar-vertical-aside').addClass('d-print-none');
+
+        
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+        $(".js-nav-tooltip-link").on("show.bs.tooltip", function(e) {
+          if (!$("body").hasClass("navbar-vertical-aside-mini-mode")) {
+            return false;
+          }
+        });
+
+        
+        // INITIALIZATION OF UNFOLD
+        // =======================================================
+        $('.js-hs-unfold-invoker').each(function () {
+          var unfold = new HSUnfold($(this)).init();
+        });
+
+        
+        // INITIALIZATION OF FORM SEARCH
+        // =======================================================
+        $('.js-form-search').each(function () {
+          new HSFormSearch($(this)).init()
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

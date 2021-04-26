@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Input Group - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "input-group.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Input Group</h1>
+                  <p class="lead">Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs, custom selects, and custom file inputs.</p>
+                  <a href="https://getbootstrap.com/docs/4.5/components/input-group/" target="_blank">Bootstrap Input group documentation <i class="tio-open-in-new"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="basic-examples" class="hs-docs-heading">
+              Basic examples <a class="anchorjs-link" href="#basic-examples" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>.input-group-prepend</code> and <code>.input-group-append</code> into <code>.input-group</code></p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <div class="form-group">
+                    <label for="withPrependLabel" class="input-label">With prepend</label>
+
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                      </div>
+                      <input type="text" class="form-control" id="withPrependLabel" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="withAppendLabel" class="input-label">With append</label>
+
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="withAppendLabel" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">@example.com</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="withPrependURLLabel" class="input-label">With prepend url</label>
+
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                      </div>
+                      <input type="text" id="withPrependURLLabel" class="form-control" aria-describedby="basic-addon3">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="withPrependAndAppendLabel" class="input-label">With prepend and append</label>
+
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                      </div>
+                      <input type="text" class="form-control" id="withPrependAndAppendLabel" aria-label="Amount (to the nearest dollar)">
+                      <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="textareaWithPrependLabel" class="input-label">Textarea with prepend</label>
+
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">With textarea</span>
+                      </div>
+                      <textarea class="form-control" id="textareaWithPrependLabel" aria-label="With textarea"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="withPrependLabel" class="input-label"&gt;With prepend&lt;/label&gt;
+
+                        &lt;div class="input-group"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="basic-addon1"&gt;@&lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="withPrependLabel" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="withAppendLabel" class="input-label"&gt;With append&lt;/label&gt;
+
+                        &lt;div class="input-group"&gt;
+                          &lt;input type="text" class="form-control" id="withAppendLabel" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2"&gt;
+                          &lt;div class="input-group-append"&gt;
+                            &lt;span class="input-group-text" id="basic-addon2"&gt;@example.com&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="withPrependURLLabel" class="input-label"&gt;With prepend url&lt;/label&gt;
+
+                        &lt;div class="input-group"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="basic-addon3"&gt;https://example.com/users/&lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" id="withPrependURLLabel" class="form-control" aria-describedby="basic-addon3"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="withPrependAndAppendLabel" class="input-label"&gt;With prepend and append&lt;/label&gt;
+
+                        &lt;div class="input-group"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text"&gt;$&lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="withPrependAndAppendLabel" aria-label="Amount (to the nearest dollar)"&gt;
+                          &lt;div class="input-group-append"&gt;
+                            &lt;span class="input-group-text"&gt;.00&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="textareaWithPrependLabel" class="input-label"&gt;Textarea with prepend&lt;/label&gt;
+
+                        &lt;div class="input-group"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text"&gt;With textarea&lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;textarea class="form-control" id="textareaWithPrependLabel" aria-label="With textarea"&gt;&lt;/textarea&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="select-addon" class="hs-docs-heading">
+              Select addon <a class="anchorjs-link" href="#select-addon" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <!-- Input Group -->
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <select class="custom-select">
+                        <option value="1" selected="">All</option>
+                        <option value="2">HTML</option>
+                        <option value="3">CSS</option>
+                        <option value="4">JS</option>
+                        <option value="5">PHP</option>
+                        <option value="6">Vue.js</option>
+                        <option value="7">React</option>
+                        <option value="8">Angular</option>
+                        <option value="9">Ruby</option>
+                        <option value="10">Python</option>
+                      </select>
+                    </div>
+
+                    <input type="text" class="form-control">
+
+                    <div class="input-group-append">
+                      <a class="btn btn-icon btn-primary" href="javascript:;">
+                        <i class="tio-search"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="input-group"&gt;
+                        &lt;div class="input-group-prepend"&gt;
+                          &lt;select class="custom-select"&gt;
+                            &lt;option value="1" selected=""&gt;All&lt;/option&gt;
+                            &lt;option value="2"&gt;HTML&lt;/option&gt;
+                            &lt;option value="3"&gt;CSS&lt;/option&gt;
+                            &lt;option value="4"&gt;JS&lt;/option&gt;
+                            &lt;option value="5"&gt;PHP&lt;/option&gt;
+                            &lt;option value="6"&gt;Vue.js&lt;/option&gt;
+                            &lt;option value="7"&gt;React&lt;/option&gt;
+                            &lt;option value="8"&gt;Angular&lt;/option&gt;
+                            &lt;option value="9"&gt;Ruby&lt;/option&gt;
+                            &lt;option value="10"&gt;Python&lt;/option&gt;
+                          &lt;/select&gt;
+                        &lt;/div&gt;
+
+                        &lt;input type="text" class="form-control"&gt;
+
+                        &lt;div class="input-group-append"&gt;
+                          &lt;a class="btn btn-icon btn-primary" href="javascript:;"&gt;
+                            &lt;i class="tio-search"&gt;&lt;/i&gt;
+                          &lt;/a&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="input-group-break" class="hs-docs-heading">
+              Input group break <a class="anchorjs-link" href="#input-group-break" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Long contents don't fit in small screens? Use <code>.input-group-{breakpoint}-down-break</code> modifier classes to break horizontal alignment and keep the same style in vertical order. Reduce browser size to see it in action.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab3" data-toggle="pill" href="#nav-result3" role="tab" aria-controls="nav-result3" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab3" data-toggle="pill" href="#nav-html3" role="tab" aria-controls="nav-html3" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent3">
+                <div class="tab-pane fade p-4 show active" id="nav-result3" role="tabpanel" aria-labelledby="nav-resultTab3">
+                  <!-- Input Group -->
+                  <div class="input-group input-group-md-down-break">
+                    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                  </div>
+                  <!-- End Input Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html3" role="tabpanel" aria-labelledby="nav-htmlTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="input-group input-group-md-down-break"&gt;
+                        &lt;input type="text" class="form-control" placeholder="First name" aria-label="First name"&gt;
+                        &lt;input type="text" class="form-control" placeholder="Last name" aria-label="Last name"&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Vertical example:</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab4" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab4" data-toggle="pill" href="#nav-result4" role="tab" aria-controls="nav-result4" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab4" data-toggle="pill" href="#nav-html4" role="tab" aria-controls="nav-html4" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent4">
+                <div class="tab-pane fade p-4 show active" id="nav-result4" role="tabpanel" aria-labelledby="nav-resultTab4">
+                  <!-- Input Group -->
+                  <div class="input-group input-group-down-break" style="max-width: 18rem;">
+                    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                  </div>
+                  <!-- End Input Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html4" role="tabpanel" aria-labelledby="nav-htmlTab4">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="input-group input-group-down-break" style="max-width: 18rem;"&gt;
+                        &lt;input type="text" class="form-control" placeholder="First name" aria-label="First name"&gt;
+                        &lt;input type="text" class="form-control" placeholder="Last name" aria-label="Last name"&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="input-group-merge" class="hs-docs-heading">
+              Input group merge <a class="anchorjs-link" href="#input-group-merge" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>.input-group-merge</code> to place one add-on on either side of an input that keeps icons as a part of the form control. You may also place one on both sides of an input.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab5" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab5" data-toggle="pill" href="#nav-result5" role="tab" aria-controls="nav-result5" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab5" data-toggle="pill" href="#nav-html5" role="tab" aria-controls="nav-html5" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent5">
+                <div class="tab-pane fade p-4 show active" id="nav-result5" role="tabpanel" aria-labelledby="nav-resultTab5">
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupMergeFullName" class="input-label">Full name</label>
+
+                    <div class="input-group input-group-merge">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupMergeFullNameAddOn">
+                          <i class="tio-user-outlined"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="inputGroupMergeFullName" placeholder="Mark Williams" aria-label="Mark Williams" aria-describedby="inputGroupMergeFullNameAddOn">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupMergeEmail" class="input-label">Email</label>
+
+                    <div class="input-group input-group-merge">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupMergeEmailAddOn">
+                          <i class="tio-email-outlined"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="inputGroupMergeEmail" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupMergeEmailAddOn">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupMergeEmailOptional" class="input-label">Email <span class="input-label-secondary">(Optional)</span></label>
+
+                    <div class="input-group input-group-merge">
+                      <input type="text" class="form-control" id="inputGroupMergeEmailOptional" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupMergeEmailOptionalAddOn">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="inputGroupMergeEmailOptionalAddOn">
+                          <i class="tio-email-outlined"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupMergeGenderSelect" class="input-label">Gender</label>
+
+                    <div class="input-group input-group-merge">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="tio-user-outlined"></i>
+                        </span>
+                      </div>
+                      <select id="inputGroupMergeGenderSelect" class="custom-select">
+                        <option>Choose a gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html5" role="tabpanel" aria-labelledby="nav-htmlTab5">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupMergeFullName" class="input-label"&gt;Full name&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupMergeFullNameAddOn"&gt;
+                              &lt;i class="tio-user-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupMergeFullName" placeholder="Mark Williams" aria-label="Mark Williams" aria-describedby="inputGroupMergeFullNameAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupMergeEmail" class="input-label"&gt;Email&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupMergeEmailAddOn"&gt;
+                              &lt;i class="tio-email-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupMergeEmail" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupMergeEmailAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupMergeEmailOptional" class="input-label"&gt;Email &lt;span class="input-label-secondary"&gt;(Optional)&lt;/span&gt;&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupMergeEmailOptionalAddOn"&gt;
+                              &lt;i class="tio-email-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupMergeEmailOptional" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupMergeEmailOptionalAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupMergeGenderSelect" class="input-label"&gt;Gender&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text"&gt;
+                              &lt;i class="tio-user-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;select id="inputGroupMergeGenderSelect" class="custom-select"&gt;
+                            &lt;option&gt;Choose a gender&lt;/option&gt;
+                            &lt;option&gt;Male&lt;/option&gt;
+                            &lt;option&gt;Female&lt;/option&gt;
+                            &lt;option&gt;Other&lt;/option&gt;
+                          &lt;/select&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="input-group-pilled" class="hs-docs-heading">
+              Input group pilled <a class="anchorjs-link" href="#input-group-pilled" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use the <code>.input-group-pill</code> modifier class to make forms more rounded (with a larger <code>border-radius</code> and additional horizontal <code>padding</code>).</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab6" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab6" data-toggle="pill" href="#nav-result6" role="tab" aria-controls="nav-result6" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab6" data-toggle="pill" href="#nav-html6" role="tab" aria-controls="nav-html6" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent6">
+                <div class="tab-pane fade p-4 show active" id="nav-result6" role="tabpanel" aria-labelledby="nav-resultTab6">
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupPilledFullName" class="input-label">Full name</label>
+
+                    <div class="input-group input-group-merge input-group-pill">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPilledFullNameAddOn">
+                          <i class="tio-user-outlined"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="inputGroupPilledFullName" placeholder="Mark Williams" aria-label="Mark Williams" aria-describedby="inputGroupPilledFullNameAddOn">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupPilledEmail" class="input-label">Email</label>
+
+                    <div class="input-group input-group-merge input-group-pill">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPilledEmailAddOn">
+                          <i class="tio-email-outlined"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="inputGroupPilledEmail" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupPilledEmailAddOn">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupPilledEmailOptional" class="input-label">Email <span class="input-label-secondary">(Optional)</span></label>
+
+                    <div class="input-group input-group-merge input-group-pill">
+                      <input type="text" class="form-control" id="inputGroupPilledEmailOptional" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupPilledEmailOptionalAddOn">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="inputGroupPilledEmailOptionalAddOn">
+                          <i class="tio-email-outlined"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupPilledGenderSelect" class="input-label">Gender</label>
+
+                    <div class="input-group input-group-merge input-group-pill">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="tio-user-outlined"></i>
+                        </span>
+                      </div>
+                      <select id="inputGroupPilledGenderSelect" class="custom-select">
+                        <option>Choose a gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html6" role="tabpanel" aria-labelledby="nav-htmlTab6">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupPilledFullName" class="input-label"&gt;Full name&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-pill"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupPilledFullNameAddOn"&gt;
+                              &lt;i class="tio-user-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupPilledFullName" placeholder="Mark Williams" aria-label="Mark Williams" aria-describedby="inputGroupPilledFullNameAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupPilledEmail" class="input-label"&gt;Email&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-pill"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupPilledEmailAddOn"&gt;
+                              &lt;i class="tio-email-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupPilledEmail" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupPilledEmailAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupPilledEmailOptional" class="input-label"&gt;Email &lt;span class="input-label-secondary"&gt;(Optional)&lt;/span&gt;&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-pill"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupPilledEmailOptionalAddOn"&gt;
+                              &lt;i class="tio-email-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupPilledEmailOptional" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupPilledEmailOptionalAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupPilledGenderSelect" class="input-label"&gt;Gender&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-pill"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text"&gt;
+                              &lt;i class="tio-user-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;select id="inputGroupPilledGenderSelect" class="custom-select"&gt;
+                            &lt;option&gt;Choose a gender&lt;/option&gt;
+                            &lt;option&gt;Male&lt;/option&gt;
+                            &lt;option&gt;Female&lt;/option&gt;
+                            &lt;option&gt;Other&lt;/option&gt;
+                          &lt;/select&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="input-group-borderless" class="hs-docs-heading">
+              Input group borderless <a class="anchorjs-link" href="#input-group-borderless" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Add <code>.input-group-borderless</code> for an input without borders.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab7" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab7" data-toggle="pill" href="#nav-result7" role="tab" aria-controls="nav-result7" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab7" data-toggle="pill" href="#nav-html7" role="tab" aria-controls="nav-html7" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent7">
+                <div class="tab-pane fade p-4 show active" id="nav-result7" role="tabpanel" aria-labelledby="nav-resultTab7">
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupBorderlessFullName" class="input-label">Full name</label>
+
+                    <div class="input-group input-group-merge input-group-borderless input-group-flush">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupBorderlessFullNameAddOn">
+                          <i class="tio-user-outlined"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="inputGroupBorderlessFullName" placeholder="Mark Williams" aria-label="Mark Williams" aria-describedby="inputGroupBorderlessFullNameAddOn">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupBorderlessEmail" class="input-label">Email</label>
+
+                    <div class="input-group input-group-merge input-group-borderless input-group-flush">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupBorderlessEmailAddOn">
+                          <i class="tio-email-outlined"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="inputGroupBorderlessEmail" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupBorderlessEmailAddOn">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupBorderlessEmailOptional" class="input-label">Email <span class="input-label-secondary">(Optional)</span></label>
+
+                    <div class="input-group input-group-merge input-group-borderless input-group-flush">
+                      <input type="text" class="form-control" id="inputGroupBorderlessEmailOptional" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupBorderlessEmailOptionalAddOn">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="inputGroupBorderlessEmailOptionalAddOn">
+                          <i class="tio-email-outlined"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupBorderlessGenderSelect" class="input-label">Gender</label>
+
+                    <div class="input-group input-group-merge input-group-borderless input-group-flush">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="tio-user-outlined"></i>
+                        </span>
+                      </div>
+                      <select id="inputGroupBorderlessGenderSelect" class="custom-select">
+                        <option>Choose a gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html7" role="tabpanel" aria-labelledby="nav-htmlTab7">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupBorderlessFullName" class="input-label"&gt;Full name&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-borderless input-group-flush"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupBorderlessFullNameAddOn"&gt;
+                              &lt;i class="tio-user-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupBorderlessFullName" placeholder="Mark Williams" aria-label="Mark Williams" aria-describedby="inputGroupBorderlessFullNameAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupBorderlessEmail" class="input-label"&gt;Email&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-borderless input-group-flush"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupBorderlessEmailAddOn"&gt;
+                              &lt;i class="tio-email-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupBorderlessEmail" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupBorderlessEmailAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupBorderlessEmailOptional" class="input-label"&gt;Email &lt;span class="input-label-secondary"&gt;(Optional)&lt;/span&gt;&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-borderless input-group-flush"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupBorderlessEmailOptionalAddOn"&gt;
+                              &lt;i class="tio-email-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupBorderlessEmailOptional" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupBorderlessEmailOptionalAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupBorderlessGenderSelect" class="input-label"&gt;Gender&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-borderless input-group-flush"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text"&gt;
+                              &lt;i class="tio-user-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;select id="inputGroupBorderlessGenderSelect" class="custom-select"&gt;
+                            &lt;option&gt;Choose a gender&lt;/option&gt;
+                            &lt;option&gt;Male&lt;/option&gt;
+                            &lt;option&gt;Female&lt;/option&gt;
+                            &lt;option&gt;Other&lt;/option&gt;
+                          &lt;/select&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="input-group-flush" class="hs-docs-heading">
+              Input group flush <a class="anchorjs-link" href="#input-group-flush" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Add <code>.input-group-flush</code> to remove some borders and rounded corners to render <code>input</code> edge-to-edge in a parent container.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab8" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab8" data-toggle="pill" href="#nav-result8" role="tab" aria-controls="nav-result8" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab8" data-toggle="pill" href="#nav-html8" role="tab" aria-controls="nav-html8" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent8">
+                <div class="tab-pane fade p-4 show active" id="nav-result8" role="tabpanel" aria-labelledby="nav-resultTab8">
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupFlushFullName" class="input-label">Full name</label>
+
+                    <div class="input-group input-group-merge input-group-flush">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFlushFullNameAddOn">
+                          <i class="tio-user-outlined"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="inputGroupFlushFullName" placeholder="Mark Williams" aria-label="Mark Williams" aria-describedby="inputGroupFlushFullNameAddOn">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupFlushEmail" class="input-label">Email</label>
+
+                    <div class="input-group input-group-merge input-group-flush">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFlushEmailAddOn">
+                          <i class="tio-email-outlined"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="inputGroupFlushEmail" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupFlushEmailAddOn">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupFlushEmailOptional" class="input-label">Email <span class="input-label-secondary">(Optional)</span></label>
+
+                    <div class="input-group input-group-merge input-group-flush">
+                      <input type="text" class="form-control" id="inputGroupFlushEmailOptional" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupFlushEmailOptionalAddOn">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="inputGroupFlushEmailOptionalAddOn">
+                          <i class="tio-email-outlined"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupFlushGenderSelect" class="input-label">Gender</label>
+
+                    <div class="input-group input-group-merge input-group-flush">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="tio-user-outlined"></i>
+                        </span>
+                      </div>
+                      <select id="inputGroupFlushGenderSelect" class="custom-select">
+                        <option>Choose a gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html8" role="tabpanel" aria-labelledby="nav-htmlTab8">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupFlushFullName" class="input-label"&gt;Full name&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-flush"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupFlushFullNameAddOn"&gt;
+                              &lt;i class="tio-user-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupFlushFullName" placeholder="Mark Williams" aria-label="Mark Williams" aria-describedby="inputGroupFlushFullNameAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupFlushEmail" class="input-label"&gt;Email&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-flush"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupFlushEmailAddOn"&gt;
+                              &lt;i class="tio-email-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupFlushEmail" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupFlushEmailAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupFlushEmailOptional" class="input-label"&gt;Email &lt;span class="input-label-secondary"&gt;(Optional)&lt;/span&gt;&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-flush"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupFlushEmailOptionalAddOn"&gt;
+                              &lt;i class="tio-email-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupFlushEmailOptional" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupFlushEmailOptionalAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupFlushGenderSelect" class="input-label"&gt;Gender&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-flush"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text"&gt;
+                              &lt;i class="tio-user-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;select id="inputGroupFlushGenderSelect" class="custom-select"&gt;
+                            &lt;option&gt;Choose a gender&lt;/option&gt;
+                            &lt;option&gt;Male&lt;/option&gt;
+                            &lt;option&gt;Female&lt;/option&gt;
+                            &lt;option&gt;Other&lt;/option&gt;
+                          &lt;/select&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="input-group-light" class="hs-docs-heading">
+              Input group light <a class="anchorjs-link" href="#input-group-light" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p><code>.input-group-light</code> adds light background color.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab9" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab9" data-toggle="pill" href="#nav-result9" role="tab" aria-controls="nav-result9" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab9" data-toggle="pill" href="#nav-html9" role="tab" aria-controls="nav-html9" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent9">
+                <div class="tab-pane fade p-4 show active" id="nav-result9" role="tabpanel" aria-labelledby="nav-resultTab9">
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupLightFullName" class="input-label">Full name</label>
+
+                    <div class="input-group input-group-merge input-group-light">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupLightFullNameAddOn">
+                          <i class="tio-user-outlined"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="inputGroupLightFullName" placeholder="Mark Williams" aria-label="Mark Williams" aria-describedby="inputGroupLightFullNameAddOn">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupLightEmail" class="input-label">Email</label>
+
+                    <div class="input-group input-group-merge input-group-light">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupLightEmailAddOn">
+                          <i class="tio-email-outlined"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="inputGroupLightEmail" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupLightEmailAddOn">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupLightEmailOptional" class="input-label">Email <span class="input-label-secondary">(Optional)</span></label>
+
+                    <div class="input-group input-group-merge input-group-light">
+                      <input type="text" class="form-control" id="inputGroupLightEmailOptional" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupLightEmailOptionalAddOn">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="inputGroupLightEmailOptionalAddOn">
+                          <i class="tio-email-outlined"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupLightGenderSelect" class="input-label">Gender</label>
+
+                    <div class="input-group input-group-merge input-group-light">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="tio-user-outlined"></i>
+                        </span>
+                      </div>
+                      <select id="inputGroupLightGenderSelect" class="custom-select">
+                        <option>Choose a gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html9" role="tabpanel" aria-labelledby="nav-htmlTab9">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupLightFullName" class="input-label"&gt;Full name&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-light"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupLightFullNameAddOn"&gt;
+                              &lt;i class="tio-user-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupLightFullName" placeholder="Mark Williams" aria-label="Mark Williams" aria-describedby="inputGroupLightFullNameAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupLightEmail" class="input-label"&gt;Email&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-light"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupLightEmailAddOn"&gt;
+                              &lt;i class="tio-email-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupLightEmail" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupLightEmailAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupLightEmailOptional" class="input-label"&gt;Email &lt;span class="input-label-secondary"&gt;(Optional)&lt;/span&gt;&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-light"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupLightEmailOptionalAddOn"&gt;
+                              &lt;i class="tio-email-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupLightEmailOptional" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupLightEmailOptionalAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupLightGenderSelect" class="input-label"&gt;Gender&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-light"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text"&gt;
+                              &lt;i class="tio-user-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;select id="inputGroupLightGenderSelect" class="custom-select"&gt;
+                            &lt;option&gt;Choose a gender&lt;/option&gt;
+                            &lt;option&gt;Male&lt;/option&gt;
+                            &lt;option&gt;Female&lt;/option&gt;
+                            &lt;option&gt;Other&lt;/option&gt;
+                          &lt;/select&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="input-group-hover-light" class="hs-docs-heading">
+              Input group hover light <a class="anchorjs-link" href="#input-group-hover-light" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p><code>.input-group-hover-light</code> adds light background color on hover.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab10" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab10" data-toggle="pill" href="#nav-result10" role="tab" aria-controls="nav-result10" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab10" data-toggle="pill" href="#nav-html10" role="tab" aria-controls="nav-html10" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent10">
+                <div class="tab-pane fade p-4 show active" id="nav-result10" role="tabpanel" aria-labelledby="nav-resultTab10">
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupHoverLightFullName" class="input-label">Full name</label>
+
+                    <div class="input-group input-group-merge input-group-hover-light">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupHoverLightFullNameAddOn">
+                          <i class="tio-user-outlined"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="inputGroupHoverLightFullName" placeholder="Mark Williams" aria-label="Mark Williams" aria-describedby="inputGroupHoverLightFullNameAddOn">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupHoverLightEmail" class="input-label">Email</label>
+
+                    <div class="input-group input-group-merge input-group-hover-light">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupHoverLightEmailAddOn">
+                          <i class="tio-email-outlined"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" id="inputGroupHoverLightEmail" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupHoverLightEmailAddOn">
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupHoverLightEmailOptional" class="input-label">Email <span class="input-label-secondary">(Optional)</span></label>
+
+                    <div class="input-group input-group-merge input-group-hover-light">
+                      <input type="text" class="form-control" id="inputGroupHoverLightEmailOptional" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupHoverLightEmailOptionalAddOn">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="inputGroupHoverLightEmailOptionalAddOn">
+                          <i class="tio-email-outlined"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+
+                  <!-- Input Group -->
+                  <div class="form-group">
+                    <label for="inputGroupHoverLightGenderSelect" class="input-label">Gender</label>
+
+                    <div class="input-group input-group-merge input-group-hover-light">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="tio-user-outlined"></i>
+                        </span>
+                      </div>
+                      <select id="inputGroupHoverLightGenderSelect" class="custom-select">
+                        <option>Choose a gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- End Input Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html10" role="tabpanel" aria-labelledby="nav-htmlTab10">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupHoverLightFullName" class="input-label"&gt;Full name&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-hover-light"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupHoverLightFullNameAddOn"&gt;
+                              &lt;i class="tio-user-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupHoverLightFullName" placeholder="Mark Williams" aria-label="Mark Williams" aria-describedby="inputGroupHoverLightFullNameAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupHoverLightEmail" class="input-label"&gt;Email&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-hover-light"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupHoverLightEmailAddOn"&gt;
+                              &lt;i class="tio-email-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupHoverLightEmail" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupHoverLightEmailAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupHoverLightEmailOptional" class="input-label"&gt;Email &lt;span class="input-label-secondary"&gt;(Optional)&lt;/span&gt;&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-hover-light"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text" id="inputGroupHoverLightEmailOptionalAddOn"&gt;
+                              &lt;i class="tio-email-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;input type="text" class="form-control" id="inputGroupHoverLightEmailOptional" placeholder="mark@example.com" aria-label="mark@example.com" aria-describedby="inputGroupHoverLightEmailOptionalAddOn"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;label for="inputGroupHoverLightGenderSelect" class="input-label"&gt;Gender&lt;/label&gt;
+
+                        &lt;div class="input-group input-group-merge input-group-hover-light"&gt;
+                          &lt;div class="input-group-prepend"&gt;
+                            &lt;span class="input-group-text"&gt;
+                              &lt;i class="tio-user-outlined"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;select id="inputGroupHoverLightGenderSelect" class="custom-select"&gt;
+                            &lt;option&gt;Choose a gender&lt;/option&gt;
+                            &lt;option&gt;Male&lt;/option&gt;
+                            &lt;option&gt;Female&lt;/option&gt;
+                            &lt;option&gt;Other&lt;/option&gt;
+                          &lt;/select&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

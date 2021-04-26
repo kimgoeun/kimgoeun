@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Page Header - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "page-header.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Page Header</h1>
+                  <p class="lead">The page header component.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="basic" class="hs-docs-heading">
+              Basic <a class="anchorjs-link" href="#basic" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>The basic page header with title and text.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- Page Header -->
+                  <div class="page-header">
+                    <div class="row align-items-center">
+                      <div class="col-sm">
+                        <h1>Users</h1>
+                        <p class="page-header-text">This is a description text.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Page Header -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Page Header --&gt;
+                      &lt;div class="page-header"&gt;
+                        &lt;div class="row align-items-center"&gt;
+                          &lt;div class="col-sm"&gt;
+                            &lt;h1 class="page-header-title"&gt;Users&lt;/h1&gt;
+                            &lt;p class="page-header-text"&gt;This is a description text.&lt;/p&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Page Header --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="reset" class="hs-docs-heading">
+              Reset <a class="anchorjs-link" href="#reset" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>.page-header-reset</code> to remove border and padding spaces.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab7" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab7" data-toggle="pill" href="#nav-result7" role="tab" aria-controls="nav-result7" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab7" data-toggle="pill" href="#nav-html7" role="tab" aria-controls="nav-html7" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent7">
+                <div class="tab-pane fade p-4 show active" id="nav-result7" role="tabpanel" aria-labelledby="nav-resultTab7">
+                  <!-- Page Header -->
+                  <div class="page-header page-header-reset">
+                    <div class="row align-items-center">
+                      <div class="col-sm">
+                        <h1>Users</h1>
+                        <p class="page-header-text">This is a description text.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Page Header -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html7" role="tabpanel" aria-labelledby="nav-htmlTab7">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Page Header --&gt;
+                      &lt;div class="page-header page-header-reset"&gt;
+                        &lt;div class="row align-items-center"&gt;
+                          &lt;div class="col-sm"&gt;
+                            &lt;h1 class="page-header-title"&gt;Users&lt;/h1&gt;
+                            &lt;p class="page-header-text"&gt;This is a description text.&lt;/p&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Page Header --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="button" class="hs-docs-heading">
+              Button <a class="anchorjs-link" href="#button" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <!-- Page Header -->
+                  <div class="page-header">
+                    <div class="row align-items-center">
+                      <div class="col-sm mb-2 mb-sm-0">
+                        <h1>Users</h1>
+                      </div>
+
+                      <div class="col-sm-auto">
+                        <a class="btn btn-primary" href="javascript:;">
+                          <i class="tio-user-add mr-1"></i> Invite users
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Page Header -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Page Header --&gt;
+                      &lt;div class="page-header"&gt;
+                        &lt;div class="row align-items-center"&gt;
+                          &lt;div class="col-sm mb-2 mb-sm-0"&gt;
+                            &lt;h1 class="page-header-title"&gt;Users&lt;/h1&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class="col-sm-auto"&gt;
+                            &lt;a class="btn btn-primary" href="javascript:;"&gt;
+                              &lt;i class="tio-user-add mr-1"&gt;&lt;/i&gt; Invite users
+                            &lt;/a&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Page Header --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="breadcrumb" class="hs-docs-heading">
+              Breadcrumb <a class="anchorjs-link" href="#breadcrumb" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab3" data-toggle="pill" href="#nav-result3" role="tab" aria-controls="nav-result3" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab3" data-toggle="pill" href="#nav-html3" role="tab" aria-controls="nav-html3" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent3">
+                <div class="tab-pane fade p-4 show active" id="nav-result3" role="tabpanel" aria-labelledby="nav-resultTab3">
+                  <!-- Page Header -->
+                  <div class="page-header">
+                    <div class="row align-items-center">
+                      <div class="col-sm mb-2 mb-sm-0">
+                        <nav aria-label="breadcrumb">
+                          <ol class="breadcrumb breadcrumb-no-gutter">
+                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Pages</a></li>
+                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Users</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Overview</li>
+                          </ol>
+                        </nav>
+
+                        <h1>Users</h1>
+                      </div>
+
+                      <div class="col-sm-auto">
+                        <a class="btn btn-primary" href="javascript:;">
+                          <i class="tio-user-add mr-1"></i> Invite users
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Page Header -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html3" role="tabpanel" aria-labelledby="nav-htmlTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Page Header --&gt;
+                      &lt;div class="page-header"&gt;
+                        &lt;div class="row align-items-center"&gt;
+                          &lt;div class="col-sm mb-2 mb-sm-0"&gt;
+                            &lt;nav aria-label="breadcrumb"&gt;
+                              &lt;ol class="breadcrumb breadcrumb-no-gutter"&gt;
+                                &lt;li class="breadcrumb-item"&gt;&lt;a class="breadcrumb-link" href="javascript:;"&gt;Pages&lt;/a&gt;&lt;/li&gt;
+                                &lt;li class="breadcrumb-item"&gt;&lt;a class="breadcrumb-link" href="javascript:;"&gt;Users&lt;/a&gt;&lt;/li&gt;
+                                &lt;li class="breadcrumb-item active" aria-current="page"&gt;Overview&lt;/li&gt;
+                              &lt;/ol&gt;
+                            &lt;/nav&gt;
+
+                            &lt;h1 class="page-header-title"&gt;Users&lt;/h1&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class="col-sm-auto"&gt;
+                            &lt;a class="btn btn-primary" href="javascript:;"&gt;
+                              &lt;i class="tio-user-add mr-1"&gt;&lt;/i&gt; Invite users
+                            &lt;/a&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Page Header --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="nav" class="hs-docs-heading">
+              Nav <a class="anchorjs-link" href="#nav" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab4" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab4" data-toggle="pill" href="#nav-result4" role="tab" aria-controls="nav-result4" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab4" data-toggle="pill" href="#nav-html4" role="tab" aria-controls="nav-html4" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent4">
+                <div class="tab-pane fade p-4 show active" id="nav-result4" role="tabpanel" aria-labelledby="nav-resultTab4">
+                  <!-- Page Header -->
+                  <div class="page-header">
+                    <div class="row align-items-center">
+                      <div class="col-sm mb-2 mb-sm-0">
+                        <h1>Users</h1>
+                      </div>
+
+                      <div class="col-sm-auto">
+                        <!-- Nav -->
+                        <ul class="nav nav-segment">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">Active</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li>
+                        </ul>
+                        <!-- End Nav -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Page Header -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html4" role="tabpanel" aria-labelledby="nav-htmlTab4">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Page Header --&gt;
+                      &lt;div class="page-header"&gt;
+                        &lt;div class="row align-items-center"&gt;
+                          &lt;div class="col-sm mb-2 mb-sm-0"&gt;
+                            &lt;h1 class="page-header-title"&gt;Users&lt;/h1&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class="col-sm-auto"&gt;
+                            &lt;!-- Nav --&gt;
+                            &lt;ul class="nav nav-segment"&gt;
+                              &lt;li class="nav-item"&gt;
+                                &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li class="nav-item"&gt;
+                                &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li class="nav-item"&gt;
+                                &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                              &lt;/li&gt;
+                            &lt;/ul&gt;
+                            &lt;!-- End Nav --&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Page Header --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="nav-tabs" class="hs-docs-heading">
+              Nav tabs <a class="anchorjs-link" href="#nav-tabs" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>.page-header-tabs</code> class with a <code>.nav-tabs</code> class to align the borders in one line.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab5" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab5" data-toggle="pill" href="#nav-result5" role="tab" aria-controls="nav-result5" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab5" data-toggle="pill" href="#nav-html5" role="tab" aria-controls="nav-html5" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent5">
+                <div class="tab-pane fade p-4 show active" id="nav-result5" role="tabpanel" aria-labelledby="nav-resultTab5">
+                  <!-- Page Header -->
+                  <div class="page-header">
+                    <div class="row align-items-center">
+                      <div class="col-sm mb-2 mb-sm-0">
+                        <h1>Users</h1>
+                      </div>
+
+                      <div class="col-sm-auto">
+                        <a class="btn btn-primary" href="javascript:;">
+                          <i class="tio-user-add mr-1"></i> Invite users
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Nav -->
+                    <ul class="nav nav-tabs page-header-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                    </ul>
+                    <!-- End Nav -->
+                  </div>
+                  <!-- End Page Header -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html5" role="tabpanel" aria-labelledby="nav-htmlTab5">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Page Header --&gt;
+                      &lt;div class="page-header"&gt;
+                        &lt;div class="row align-items-center"&gt;
+                          &lt;div class="col-sm mb-2 mb-sm-0"&gt;
+                            &lt;h1 class="page-header-title"&gt;Users&lt;/h1&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class="col-sm-auto"&gt;
+                            &lt;a class="btn btn-primary" href="javascript:;"&gt;
+                              &lt;i class="tio-user-add mr-1"&gt;&lt;/i&gt; Invite users
+                            &lt;/a&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Nav --&gt;
+                        &lt;ul class="nav nav-tabs page-header-tabs"&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                          &lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;!-- End Nav --&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Page Header --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="nav-plus-avatars" class="hs-docs-heading">
+              Nav + avatars <a class="anchorjs-link" href="#nav-plus-avatars" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab6" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab6" data-toggle="pill" href="#nav-result6" role="tab" aria-controls="nav-result6" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab6" data-toggle="pill" href="#nav-html6" role="tab" aria-controls="nav-html6" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent6">
+                <div class="tab-pane fade p-4 show active" id="nav-result6" role="tabpanel" aria-labelledby="nav-resultTab6">
+                  <!-- Page Header -->
+                  <div class="page-header">
+                    <div class="row align-items-center">
+                      <div class="col-sm mb-2 mb-sm-0">
+                        <div class="media align-items-center">
+                          <!-- Avatar -->
+                          <div class="avatar avatar-xl avatar-4by3 mr-2">
+                            <img class="avatar-img" src="@@autopath/assets/svg/brands/guideline.svg" alt="Image Description">
+                          </div>
+                          <!-- End Avatar -->
+
+                          <div class="media-body">
+                            <h3>Cloud computing web service</h3>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-auto">
+                        <div class="d-flex">
+                          <!-- Avatar Group -->
+                          <div class="avatar-group avatar-circle mr-3">
+                            <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Amanda Harvey">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description">
+                            </a>
+                            <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Linda Bates">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description">
+                            </a>
+                            <a class="avatar avatar-soft-info" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="#digitalmarketing">
+                              <span class="avatar-initials">
+                                <i class="tio-group-senior"></i>
+                              </span>
+                            </a>
+                            <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="David Harrison">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                            </a>
+                            <a class="avatar avatar-soft-dark" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Antony Taylor">
+                              <span class="avatar-initials">A</span>
+                            </a>
+
+                            <a class="avatar avatar-light avatar-circle" href="javascript:;" data-toggle="modal" data-target="#shareWithPeopleModal">
+                              <span class="avatar-initials">+2</span>
+                            </a>
+                          </div>
+                          <!-- End Avatar Group -->
+
+                          <a class="btn btn-icon btn-primary rounded-circle" href="javascript:;" data-toggle="modal" data-target="#shareWithPeopleModal">
+                            <i class="tio-share"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Nav -->
+                    <ul class="nav nav-tabs page-header-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                    </ul>
+                    <!-- End Nav -->
+                  </div>
+                  <!-- End Page Header -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html6" role="tabpanel" aria-labelledby="nav-htmlTab6">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Page Header --&gt;
+                      &lt;div class="page-header"&gt;
+                        &lt;div class="row align-items-center"&gt;
+                          &lt;div class="col-sm mb-2 mb-sm-0"&gt;
+                            &lt;div class="media align-items-center"&gt;
+                              &lt;!-- Avatar --&gt;
+                              &lt;div class="avatar avatar-xl avatar-4by3 mr-2"&gt;
+                                &lt;img class="avatar-img" src="@@autopath/assets/svg/brands/guideline.svg" alt="Image Description"&gt;
+                              &lt;/div&gt;
+                              &lt;!-- End Avatar --&gt;
+
+                              &lt;div class="media-body"&gt;
+                                &lt;h3&gt;Cloud computing web service&lt;/h3&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class="col-sm-auto"&gt;
+                            &lt;div class="d-flex"&gt;
+                              &lt;!-- Avatar Group --&gt;
+                              &lt;div class="avatar-group avatar-circle mr-3"&gt;
+                                &lt;a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Amanda Harvey"&gt;
+                                  &lt;img class="avatar-img" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description"&gt;
+                                &lt;/a&gt;
+                                &lt;a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Linda Bates"&gt;
+                                  &lt;img class="avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description"&gt;
+                                &lt;/a&gt;
+                                &lt;a class="avatar avatar-soft-info" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="#digitalmarketing"&gt;
+                                  &lt;span class="avatar-initials"&gt;
+                                    &lt;i class="tio-group-senior"&gt;&lt;/i&gt;
+                                  &lt;/span&gt;
+                                &lt;/a&gt;
+                                &lt;a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="David Harrison"&gt;
+                                  &lt;img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description"&gt;
+                                &lt;/a&gt;
+                                &lt;a class="avatar avatar-soft-dark" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Antony Taylor"&gt;
+                                  &lt;span class="avatar-initials"&gt;A&lt;/span&gt;
+                                &lt;/a&gt;
+
+                                &lt;a class="avatar avatar-light avatar-circle" href="javascript:;" data-toggle="modal" data-target="#shareWithPeopleModal"&gt;
+                                  &lt;span class="avatar-initials"&gt;+2&lt;/span&gt;
+                                &lt;/a&gt;
+                              &lt;/div&gt;
+                              &lt;!-- End Avatar Group --&gt;
+
+                              &lt;a class="btn btn-icon btn-primary rounded-circle" href="javascript:;" data-toggle="modal" data-target="#shareWithPeopleModal"&gt;
+                                &lt;i class="tio-share"&gt;&lt;/i&gt;
+                              &lt;/a&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Nav --&gt;
+                        &lt;ul class="nav nav-tabs page-header-tabs"&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                          &lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;!-- End Nav --&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Page Header --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

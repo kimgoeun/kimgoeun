@@ -1,0 +1,77 @@
+<div class="modal fade" id="editCardModal" tabindex="-1" role="dialog" aria-labelledby="editCardModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <!-- Header -->
+      <div class="modal-header">
+        <h4 id="editCardModalTitle" class="modal-title">Edit card</h4>
+
+        <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close">
+          <i class="tio-clear tio-lg"></i>
+        </button>
+      </div>
+      <!-- End Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <form>
+          <!-- Form Group -->
+          <div class="form-group">
+            <label for="editCardNameLabel" class="input-label">Name on card</label>
+            <input type="text" class="form-control" id="editCardNameLabel" placeholder="Mark Williams" aria-label="Mark Williams" value="Mark Williams">
+          </div>
+          <!-- End Form Group -->
+
+          <!-- Form Group -->
+          <div class="form-group">
+            <label for="editCardNumberLabel" class="input-label">Card number</label>
+            <input type="text" class="js-masked-input form-control" name="cardNumber" id="editCardNumberLabel" placeholder="xxxx xxxx xxxx xxxx" aria-label="xxxx xxxx xxxx xxxx" value="5200 7084 8243 4242"
+                   data-hs-mask-options='{
+                    "template": "0000 0000 0000 0000"
+                  }'>
+          </div>
+          <!-- End Form Group -->
+
+          <div class="row">
+            <div class="col-sm-6">
+              <!-- Form Group -->
+              <div class="form-group">
+                <label for="editCardEexpirationDateLabel" class="input-label">Expiration date</label>
+                <input type="text" class="js-masked-input form-control" name="expirationDate" id="editCardEexpirationDateLabel" placeholder="xx/xxxx" aria-label="xx/xxxx" value="12/2022"
+                       data-hs-mask-options='{
+                        "template": "00/0000"
+                      }'>
+              </div>
+              <!-- End Form Group -->
+            </div>
+
+            <div class="col-sm-6">
+              <!-- Form Group -->
+              <div class="form-group">
+                <label for="editCardSecurityCodeLabel" class="input-label">CVV Code <i class="far fa-question-circle text-body ml-1" data-toggle="tooltip" data-placement="top" title="A 3 - digit number, typically printed on the back of a card."></i></label>
+                <input type="password" class="js-masked-input form-control" name="securityCode" id="editCardSecurityCodeLabel" placeholder="xxx" aria-label="xxx" value="789"
+                       data-hs-mask-options='{
+                        "template": "000"
+                      }'>
+              </div>
+              <!-- End Form Group -->
+            </div>
+          </div>
+          <!-- End Row -->
+
+          <!-- Custom Checkbox -->
+          <div class="custom-control custom-checkbox form-group">
+            <input type="checkbox" class="custom-control-input" id="editCardMakePrimaryCheckbox2" checked>
+            <label class="custom-control-label" for="editCardMakePrimaryCheckbox2">Make this primary card</label>
+          </div>
+          <!-- End Custom Checkbox -->
+
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-white mr-2" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </form>
+      </div>
+      <!-- End Body -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>File Manager | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <link rel="stylesheet" href="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+    }
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+  </head>
+
+  <body class="@@if(layoutBuilder.header.layoutMode === 'default'){has-navbar-vertical-aside navbar-vertical-aside-show-xl} @@if(layoutBuilder.sidebarLayout === 'compact'){navbar-vertical-aside-compact-mode} @@if(layoutBuilder.sidebarLayout === 'mini'){navbar-vertical-aside-mini-mode} footer-offset">
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.sidebarLayout !== 'mini') {
+      <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside-mini-cache.js"></script>
+    }
+
+    <!-- Search Form -->
+    @@include("@@autopath/partials/layouts-components/mobile-search.html")
+    <!-- End Search Form -->
+
+    <!-- ========== HEADER ========== -->
+    @@if (layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/header/main.html")
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'single') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/main-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/main-container.html")
+      }
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'double') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/double-line-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/double-line-container.html")
+      }
+    }
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/main.html", {
+        "category": "apps",
+        "subcategory": "",
+        "link": "apps-file-manager.html"
+      })
+    }
+
+    @@if (layoutBuilder.sidebarLayout === 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/compact.html", {
+        "category": "apps",
+        "subcategory": "",
+        "link": "apps-file-manager.html"
+      })
+    }
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main">
+      <!-- Content -->
+      <div class="content @@layoutBuilder.header.containerMode">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div class="row align-items-end">
+            <div class="col-sm mb-2 mb-sm-0">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-no-gutter">
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Apps</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">File manager</li>
+                </ol>
+              </nav>
+
+              <h1 class="page-header-title">File manager</h1>
+            </div>
+
+            <div class="col-sm-auto">
+              <!-- Button Group -->
+              <div class="btn-group" role="group">
+                <a class="btn btn-primary" href="javascript:;" data-toggle="modal" data-target="#uploadFilesModal">
+                  <i class="tio-upload-on-cloud mr-1"></i> Upload
+                </a>
+
+                <!-- Unfold -->
+                <div class="hs-unfold btn-group">
+                  <a class="js-hs-unfold-invoker btn btn-icon btn-primary dropdown-toggle dropdown-toggle-empty" href="javascript:;"
+                     data-hs-unfold-options='{
+                       "target": "#uploadGroupDropdown",
+                       "type": "css-animation"
+                     }'></a>
+
+                  <div id="uploadGroupDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#">
+                      <i class="tio-folder-add dropdown-item-icon"></i> New folder
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <i class="tio-folder-shared dropdown-item-icon"></i> New shared folder
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#uploadFilesModal">
+                      <i class="tio-file-add-outlined dropdown-item-icon"></i> Upload files
+                    </a>
+                    <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#uploadFilesModal">
+                      <i class="tio-publish dropdown-item-icon"></i> Upload folder
+                    </a>
+                  </div>
+                </div>
+                <!-- End Unfold -->
+              </div>
+              <!-- End Button Group -->
+            </div>
+          </div>
+          <!-- End Row -->
+        </div>
+        <!-- End Page Header -->
+
+        <h2 class="h4 mb-3">Pinned access <i class="tio-help-outlined text-muted" data-toggle="tooltip" data-placement="right" title="Pinned access to files you've been working on."></i></h2>
+
+        <!-- Pinned Access -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mb-5">
+          <div class="col mb-3 mb-lg-5">
+            <!-- Card -->
+            <a class="card card-sm card-hover-shadow h-100 text-center" href="#">
+              <!-- Checkbox -->
+              <div class="custom-control custom-checkbox-switch card-pinned">
+                <input type="checkbox" id="starredCheckbox1" class="custom-control-input custom-checkbox-switch-input" checked>
+                <label class="custom-checkbox-switch-label btn-icon btn-xs rounded-circle" for="starredCheckbox1">
+                  <span class="custom-checkbox-switch-default" data-toggle="tooltip" data-placement="top" title="Pin">
+                    <i class="tio-star-outlined"></i>
+                  </span>
+                  <span class="custom-checkbox-switch-active" data-toggle="tooltip" data-placement="top" title="Pinned">
+                    <i class="tio-star"></i>
+                  </span>
+                </label>
+              </div>
+              <!-- End Checkbox -->
+
+              <img class="card-img-top" src="@@autopath/assets/img/600x200/img2.jpg" alt="Image Description">
+
+              <div class="card-footer border-top-0">
+                <span class="d-block font-size-sm text-muted mb-1">1 files</span>
+                <h5>Screenshots from Figma</h5>
+              </div>
+            </a>
+            <!-- End Card -->
+          </div>
+
+          <div class="col mb-3 mb-lg-5">
+            <!-- Card -->
+            <a class="card card-sm card-hover-shadow h-100 text-center" href="#">
+              <!-- Checkbox -->
+              <div class="custom-control custom-checkbox-switch card-pinned">
+                <input type="checkbox" id="starredCheckbox2" class="custom-control-input custom-checkbox-switch-input" checked>
+                <label class="custom-checkbox-switch-label btn-icon btn-xs rounded-circle" for="starredCheckbox2">
+                  <span class="custom-checkbox-switch-default" data-toggle="tooltip" data-placement="top" title="Pin">
+                    <i class="tio-star-outlined"></i>
+                  </span>
+                  <span class="custom-checkbox-switch-active" data-toggle="tooltip" data-placement="top" title="Pinned">
+                    <i class="tio-star"></i>
+                  </span>
+                </label>
+              </div>
+              <!-- End Checkbox -->
+
+              <div class="card-body">
+                <img class="avatar avatar-4by3" src="@@autopath/assets/svg/brands/google-sheets.svg" alt="Image Description">
+              </div>
+
+              <div class="card-footer border-top-0">
+                <span class="d-block font-size-sm text-muted mb-1">0 files</span>
+                <h5>Early audit sheets for last year</h5>
+              </div>
+            </a>
+            <!-- End Card -->
+          </div>
+
+          <div class="col mb-3 mb-lg-5">
+            <!-- Card -->
+            <a class="card card-sm card-hover-shadow h-100 text-center" href="#">
+              <!-- Checkbox -->
+              <div class="custom-control custom-checkbox-switch card-pinned">
+                <input type="checkbox" id="starredCheckbox3" class="custom-control-input custom-checkbox-switch-input" checked>
+                <label class="custom-checkbox-switch-label btn-icon btn-xs rounded-circle" for="starredCheckbox3">
+                  <span class="custom-checkbox-switch-default" data-toggle="tooltip" data-placement="top" title="Pin">
+                    <i class="tio-star-outlined"></i>
+                  </span>
+                  <span class="custom-checkbox-switch-active" data-toggle="tooltip" data-placement="top" title="Pinned">
+                    <i class="tio-star"></i>
+                  </span>
+                </label>
+              </div>
+              <!-- End Checkbox -->
+
+              <div class="card-body">
+                <img class="avatar avatar-4by3" src="@@autopath/assets/svg/components/placeholder-img-format.svg" alt="Image Description">
+              </div>
+
+              <div class="card-footer border-top-0">
+                <span class="d-block font-size-sm text-muted mb-1">27 files</span>
+                <h5>Article images</h5>
+              </div>
+            </a>
+            <!-- End Card -->
+          </div>
+
+          <div class="col mb-3 mb-lg-5">
+            <!-- Card -->
+            <a class="card card-sm card-hover-shadow h-100 text-center" href="#">
+              <!-- Checkbox -->
+              <div class="custom-control custom-checkbox-switch card-pinned">
+                <input type="checkbox" id="starredCheckbox4" class="custom-control-input custom-checkbox-switch-input" checked>
+                <label class="custom-checkbox-switch-label btn-icon btn-xs rounded-circle" for="starredCheckbox4">
+                  <span class="custom-checkbox-switch-default" data-toggle="tooltip" data-placement="top" title="Pin">
+                    <i class="tio-star-outlined"></i>
+                  </span>
+                  <span class="custom-checkbox-switch-active" data-toggle="tooltip" data-placement="top" title="Pinned">
+                    <i class="tio-star"></i>
+                  </span>
+                </label>
+              </div>
+              <!-- End Checkbox -->
+
+              <div class="card-body">
+                <img class="avatar avatar-4by3" src="@@autopath/assets/svg/brands/google-slides.svg" alt="Image Description">
+              </div>
+
+              <div class="card-footer border-top-0">
+                <span class="d-block font-size-sm text-muted mb-1">8 files</span>
+                <h5>Solving product design exercises</h5>
+              </div>
+            </a>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Pinned Access -->
+
+        <h2 class="h4 mb-3">Folders</h2>
+
+        <!-- Folders -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mb-5">
+          <div class="col mb-3 mb-lg-5">
+            <!-- Card -->
+            <div class="card card-sm card-hover-shadow h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <i class="tio-folder-shared tio-xl text-body mr-2"></i>
+
+                  <h5 class="card-title text-truncate mr-2">Premium images</h5>
+
+                  <!-- Unfold -->
+                  <div class="hs-unfold ml-auto">
+                    <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary card-unfold rounded-circle" href="javascript:;"
+                       data-hs-unfold-options='{
+                         "target": "#folderDropdown1",
+                         "type": "css-animation"
+                       }'>
+                      <i class="tio-more-vertical"></i>
+                    </a>
+
+                    <div id="folderDropdown1" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                      <span class="dropdown-header">Settings</span>
+
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-share dropdown-item-icon"></i> Share folder
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-edit dropdown-item-icon"></i> Rename
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-download-to dropdown-item-icon"></i> Download
+                      </a>
+
+                      <div class="dropdown-divider"></div>
+
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                      </a>
+                    </div>
+                  </div>
+                  <!-- End Unfold -->
+                </div>
+              </div>
+              <a class="stretched-link" href="#"></a>
+            </div>
+            <!-- End Card -->
+          </div>
+
+          <div class="col mb-3 mb-lg-5">
+            <!-- Card -->
+            <div class="card card-sm card-hover-shadow h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <i class="tio-folder tio-xl text-body mr-2"></i>
+
+                  <h5 class="card-title text-truncate mr-2">Front materials</h5>
+
+                  <!-- Unfold -->
+                  <div class="hs-unfold ml-auto">
+                    <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary card-unfold rounded-circle" href="javascript:;"
+                       data-hs-unfold-options='{
+                         "target": "#folderDropdown2",
+                         "type": "css-animation"
+                       }'>
+                      <i class="tio-more-vertical"></i>
+                    </a>
+
+                    <div id="folderDropdown2" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                      <span class="dropdown-header">Settings</span>
+
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-share dropdown-item-icon"></i> Share folder
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-edit dropdown-item-icon"></i> Rename
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-download-to dropdown-item-icon"></i> Download
+                      </a>
+
+                      <div class="dropdown-divider"></div>
+
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                      </a>
+                    </div>
+                  </div>
+                  <!-- End Unfold -->
+                </div>
+              </div>
+              <a class="stretched-link" href="#"></a>
+            </div>
+            <!-- End Card -->
+          </div>
+
+          <div class="col mb-3 mb-lg-5">
+            <!-- Card -->
+            <div class="card card-sm card-hover-shadow h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <i class="tio-folder tio-xl text-body mr-2"></i>
+
+                  <h5 class="card-title text-truncate mr-2">Illustrations</h5>
+
+                  <!-- Unfold -->
+                  <div class="hs-unfold ml-auto">
+                    <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary card-unfold rounded-circle" href="javascript:;"
+                       data-hs-unfold-options='{
+                         "target": "#folderDropdown3",
+                         "type": "css-animation"
+                       }'>
+                      <i class="tio-more-vertical"></i>
+                    </a>
+
+                    <div id="folderDropdown3" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                      <span class="dropdown-header">Settings</span>
+
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-share dropdown-item-icon"></i> Share folder
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-edit dropdown-item-icon"></i> Rename
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-download-to dropdown-item-icon"></i> Download
+                      </a>
+
+                      <div class="dropdown-divider"></div>
+
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                      </a>
+                    </div>
+                  </div>
+                  <!-- End Unfold -->
+                </div>
+              </div>
+              <a class="stretched-link" href="#"></a>
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Folders -->
+
+        <!-- Header -->
+        <div class="row align-items-center mb-2">
+          <div class="col">
+            <h2 class="h4 mb-0">Files</h2>
+          </div>
+
+          <div class="col-auto">
+            <!-- Nav -->
+            <ul class="nav nav-segment" id="connectionsTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="grid-tab" data-toggle="tab" href="#grid" role="tab" aria-controls="grid" aria-selected="true" title="Column view">
+                  <i class="tio-column-view-outlined"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false" title="List view">
+                  <i class="tio-agenda-view-outlined"></i>
+                </a>
+              </li>
+            </ul>
+            <!-- End Nav -->
+          </div>
+        </div>
+        <!-- End Header -->
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="connectionsTabContent">
+          <div class="tab-pane fade show active" id="grid" role="tabpanel" aria-labelledby="grid-tab">
+            <!-- Folders -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+              <div class="col mb-3 mb-lg-5">
+                <!-- Card -->
+                <div class="card card-sm card-hover-shadow card-header-borderless h-100 text-center">
+                  <div class="card-header">
+                    <small>25kb</small>
+
+                    <!-- Unfold -->
+                    <div class="hs-unfold ml-auto">
+                      <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary card-unfold rounded-circle" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesGridDropdown1",
+                           "type": "css-animation"
+                         }'>
+                        <i class="tio-more-vertical"></i>
+                      </a>
+
+                      <div id="filesGridDropdown1" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+
+                  <div class="card-body">
+                    <img class="avatar avatar-4by3" src="@@autopath/assets/svg/brands/google-docs.svg" alt="Image Description">
+
+                    <a class="stretched-link" href="#"></a>
+                  </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">WordPress contract terms</h5>
+                    <p class="small">Updated 50 min ago</p>
+                  </div>
+                </div>
+                <!-- End Card -->
+              </div>
+
+              <div class="col mb-3 mb-lg-5">
+                <!-- Card -->
+                <div class="card card-sm card-hover-shadow card-header-borderless h-100 text-center">
+                  <div class="card-header">
+                    <small>1mb</small>
+
+                    <!-- Unfold -->
+                    <div class="hs-unfold ml-auto">
+                      <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary card-unfold rounded-circle" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesGridDropdown2",
+                           "type": "css-animation"
+                         }'>
+                        <i class="tio-more-vertical"></i>
+                      </a>
+
+                      <div id="filesGridDropdown2" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+
+                  <div class="card-body">
+                    <img class="avatar avatar-4by3" src="@@autopath/assets/svg/brands/pdf.svg" alt="Image Description">
+
+                    <a class="stretched-link" href="#"></a>
+                  </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">Dashboard layout flow</h5>
+                    <p class="small">Updated 1 hour ago</p>
+                  </div>
+                </div>
+                <!-- End Card -->
+              </div>
+
+              <div class="col mb-3 mb-lg-5">
+                <!-- Card -->
+                <div class="card card-sm card-hover-shadow card-header-borderless h-100 text-center">
+                  <div class="card-header">
+                    <small>3mb</small>
+
+                    <!-- Unfold -->
+                    <div class="hs-unfold ml-auto">
+                      <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary card-unfold rounded-circle" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesGridDropdown3",
+                           "type": "css-animation"
+                         }'>
+                        <i class="tio-more-vertical"></i>
+                      </a>
+
+                      <div id="filesGridDropdown3" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+
+                  <div class="card-body">
+                    <img class="avatar avatar-4by3" src="@@autopath/assets/svg/brands/google-slides.svg" alt="Image Description">
+
+                    <a class="stretched-link" href="#"></a>
+                  </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">WordPress theme presentation</h5>
+                    <p class="small">Updated 5 hours ago</p>
+                  </div>
+                </div>
+                <!-- End Card -->
+              </div>
+
+              <div class="col mb-3 mb-lg-5">
+                <!-- Card -->
+                <div class="card card-sm card-hover-shadow card-header-borderless h-100 text-center">
+                  <div class="card-header">
+                    <small>1mb</small>
+
+                    <!-- Unfold -->
+                    <div class="hs-unfold ml-auto">
+                      <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary card-unfold rounded-circle" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesGridDropdown4",
+                           "type": "css-animation"
+                         }'>
+                        <i class="tio-more-vertical"></i>
+                      </a>
+
+                      <div id="filesGridDropdown4" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+
+                  <div class="card-body">
+                    <img class="avatar avatar-4by3" src="@@autopath/assets/svg/brands/google-docs.svg" alt="Image Description">
+
+                    <a class="stretched-link" href="#"></a>
+                  </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">Untitled</h5>
+                    <p class="small">Updated 5 hours ago</p>
+                  </div>
+                </div>
+                <!-- End Card -->
+              </div>
+
+              <div class="col mb-3 mb-lg-5">
+                <!-- Card -->
+                <div class="card card-sm card-hover-shadow card-header-borderless h-100 text-center">
+                  <div class="card-header">
+                    <small>3mb</small>
+
+                    <!-- Unfold -->
+                    <div class="hs-unfold ml-auto">
+                      <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary card-unfold rounded-circle" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesGridDropdown5",
+                           "type": "css-animation"
+                         }'>
+                        <i class="tio-more-vertical"></i>
+                      </a>
+
+                      <div id="filesGridDropdown5" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+
+                  <div class="card-body">
+                    <img class="avatar avatar-4by3" src="@@autopath/assets/svg/brands/google-sheets.svg" alt="Image Description">
+
+                    <a class="stretched-link" href="#"></a>
+                  </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">Hot startups 2019 - Report</h5>
+                    <p class="small">Updated 3 weeks ago</p>
+                  </div>
+                </div>
+                <!-- End Card -->
+              </div>
+
+              <div class="col mb-3 mb-lg-5">
+                <!-- Card -->
+                <div class="card card-sm card-hover-shadow card-header-borderless h-100 text-center">
+                  <div class="card-header">
+                    <small>2mb</small>
+
+                    <!-- Unfold -->
+                    <div class="hs-unfold ml-auto">
+                      <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary card-unfold rounded-circle" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesGridDropdown6",
+                           "type": "css-animation"
+                         }'>
+                        <i class="tio-more-vertical"></i>
+                      </a>
+
+                      <div id="filesGridDropdown6" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+
+                  <div class="card-body">
+                    <img class="avatar avatar-4by3" src="@@autopath/assets/svg/brands/google-docs.svg" alt="Image Description">
+
+                    <a class="stretched-link" href="#"></a>
+                  </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">Marketing strategy</h5>
+                    <p class="small">Updated 2 weeks ago</p>
+                  </div>
+                </div>
+                <!-- End Card -->
+              </div>
+
+              <div class="col mb-3 mb-lg-5">
+                <!-- Card -->
+                <div class="card card-sm card-hover-shadow card-header-borderless h-100 text-center">
+                  <div class="card-header">
+                    <small>15mb</small>
+
+                    <!-- Unfold -->
+                    <div class="hs-unfold ml-auto">
+                      <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary card-unfold rounded-circle" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesGridDropdown7",
+                           "type": "css-animation"
+                         }'>
+                        <i class="tio-more-vertical"></i>
+                      </a>
+
+                      <div id="filesGridDropdown7" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+
+                  <div class="card-body">
+                    <img class="avatar avatar-4by3" src="@@autopath/assets/svg/components/placeholder-img-format.svg" alt="Image Description">
+
+                    <a class="stretched-link" href="#"></a>
+                  </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">Past-experiences.jpg</h5>
+                    <p class="small">Updated 1 month ago</p>
+                  </div>
+                </div>
+                <!-- End Card -->
+              </div>
+
+              <div class="col mb-3 mb-lg-5">
+                <!-- Card -->
+                <div class="card card-sm card-hover-shadow card-header-borderless h-100 text-center">
+                  <div class="card-header">
+                    <small>9mb</small>
+
+                    <!-- Unfold -->
+                    <div class="hs-unfold ml-auto">
+                      <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary card-unfold rounded-circle" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesGridDropdown8",
+                           "type": "css-animation"
+                         }'>
+                        <i class="tio-more-vertical"></i>
+                      </a>
+
+                      <div id="filesGridDropdown8" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+
+                  <div class="card-body">
+                    <img class="avatar avatar-4by3" src="@@autopath/assets/svg/components/placeholder-img-format.svg" alt="Image Description">
+
+                    <a class="stretched-link" href="#"></a>
+                  </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">Front_2018.jpg</h5>
+                    <p class="small">Updated 1 month ago</p>
+                  </div>
+                </div>
+                <!-- End Card -->
+              </div>
+
+              <div class="col mb-3 mb-lg-5">
+                <!-- Card -->
+                <div class="card card-sm card-hover-shadow card-header-borderless h-100 text-center">
+                  <div class="card-header">
+                    <small>4mb</small>
+
+                    <!-- Unfold -->
+                    <div class="hs-unfold ml-auto">
+                      <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary card-unfold rounded-circle" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesGridDropdown9",
+                           "type": "css-animation"
+                         }'>
+                        <i class="tio-more-vertical"></i>
+                      </a>
+
+                      <div id="filesGridDropdown9" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+
+                  <div class="card-body">
+                    <img class="avatar avatar-4by3" src="@@autopath/assets/svg/brands/pdf.svg" alt="Image Description">
+
+                    <a class="stretched-link" href="#"></a>
+                  </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title">Business opportunities</h5>
+                    <p class="small">Updated 2 months ago</p>
+                  </div>
+                </div>
+                <!-- End Card -->
+              </div>
+            </div>
+            <!-- End Folders -->
+          </div>
+
+          <div class="tab-pane fade" id="list" role="tabpanel" aria-labelledby="list-tab">
+            <ul class="list-group">
+              <!-- List Item -->
+              <li class="list-group-item">
+                <div class="row align-items-center gx-2">
+                  <div class="col-auto">
+                    <img class="avatar avatar-xs avatar-4by3" src="@@autopath/assets/svg/brands/google-docs.svg" alt="Image Description">
+                  </div>
+
+                  <div class="col">
+                    <h5 class="mb-0">
+                      <a class="text-dark" href="#">WordPress contract terms</a>
+                    </h5>
+                    <ul class="list-inline list-separator small">
+                      <li class="list-inline-item">Updated 50 min ago</li>
+                      <li class="list-inline-item">25kb</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-auto">
+                    <!-- Unfold -->
+                    <div class="hs-unfold">
+                      <a class="js-hs-unfold-invoker btn btn-sm btn-white" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesListDropdown1",
+                           "type": "css-animation"
+                         }'>
+                        <span class="d-none d-sm-inline-block mr-1">More</span>
+                        <i class="tio-chevron-down"></i>
+                      </a>
+
+                      <div id="filesListDropdown1" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+                </div>
+                <!-- End Row -->
+              </li>
+              <!-- End List Item -->
+
+              <!-- List Item -->
+              <li class="list-group-item">
+                <div class="row align-items-center gx-2">
+                  <div class="col-auto">
+                    <img class="avatar avatar-xs avatar-4by3" src="@@autopath/assets/svg/brands/pdf.svg" alt="Image Description">
+                  </div>
+
+                  <div class="col">
+                    <h5 class="mb-0">
+                      <a class="text-dark" href="#">Dashboard layout flow</a>
+                    </h5>
+                    <ul class="list-inline list-separator small">
+                      <li class="list-inline-item">Updated 1 hour ago</li>
+                      <li class="list-inline-item">1mb</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-auto">
+                    <!-- Unfold -->
+                    <div class="hs-unfold">
+                      <a class="js-hs-unfold-invoker btn btn-sm btn-white" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesListDropdown2",
+                           "type": "css-animation"
+                         }'>
+                        <span class="d-none d-sm-inline-block mr-1">More</span>
+                        <i class="tio-chevron-down"></i>
+                      </a>
+
+                      <div id="filesListDropdown2" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+                </div>
+                <!-- End Row -->
+              </li>
+              <!-- End List Item -->
+
+              <!-- List Item -->
+              <li class="list-group-item">
+                <div class="row align-items-center gx-2">
+                  <div class="col-auto">
+                    <img class="avatar avatar-xs avatar-4by3" src="@@autopath/assets/svg/brands/google-slides.svg" alt="Image Description">
+                  </div>
+
+                  <div class="col">
+                    <h5 class="mb-0">
+                      <a class="text-dark" href="#">WordPress theme presentation</a>
+                    </h5>
+                    <ul class="list-inline list-separator small">
+                      <li class="list-inline-item">Updated 5 hours ago</li>
+                      <li class="list-inline-item">3mb</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-auto">
+                    <!-- Unfold -->
+                    <div class="hs-unfold">
+                      <a class="js-hs-unfold-invoker btn btn-sm btn-white" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesListDropdown3",
+                           "type": "css-animation"
+                         }'>
+                        <span class="d-none d-sm-inline-block mr-1">More</span>
+                        <i class="tio-chevron-down"></i>
+                      </a>
+
+                      <div id="filesListDropdown3" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+                </div>
+                <!-- End Row -->
+              </li>
+              <!-- End List Item -->
+
+              <!-- List Item -->
+              <li class="list-group-item">
+                <div class="row align-items-center gx-2">
+                  <div class="col-auto">
+                    <img class="avatar avatar-xs avatar-4by3" src="@@autopath/assets/svg/brands/google-docs.svg" alt="Image Description">
+                  </div>
+
+                  <div class="col">
+                    <h5 class="mb-0">
+                      <a class="text-dark" href="#">Untitled</a>
+                    </h5>
+                    <ul class="list-inline list-separator small">
+                      <li class="list-inline-item">Updated 5 hours ago</li>
+                      <li class="list-inline-item">1mb</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-auto">
+                    <!-- Unfold -->
+                    <div class="hs-unfold">
+                      <a class="js-hs-unfold-invoker btn btn-sm btn-white" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesListDropdown4",
+                           "type": "css-animation"
+                         }'>
+                        <span class="d-none d-sm-inline-block mr-1">More</span>
+                        <i class="tio-chevron-down"></i>
+                      </a>
+
+                      <div id="filesListDropdown4" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+                </div>
+                <!-- End Row -->
+              </li>
+              <!-- End List Item -->
+
+              <!-- List Item -->
+              <li class="list-group-item">
+                <div class="row align-items-center gx-2">
+                  <div class="col-auto">
+                    <img class="avatar avatar-xs avatar-4by3" src="@@autopath/assets/svg/brands/google-sheets.svg" alt="Image Description">
+                  </div>
+
+                  <div class="col">
+                    <h5 class="mb-0">
+                      <a class="text-dark" href="#">Hot startup 2019 - Report</a>
+                    </h5>
+                    <ul class="list-inline list-separator small">
+                      <li class="list-inline-item">Updated 3 weeks ago</li>
+                      <li class="list-inline-item">3mb</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-auto">
+                    <!-- Unfold -->
+                    <div class="hs-unfold">
+                      <a class="js-hs-unfold-invoker btn btn-sm btn-white" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesListDropdown5",
+                           "type": "css-animation"
+                         }'>
+                        <span class="d-none d-sm-inline-block mr-1">More</span>
+                        <i class="tio-chevron-down"></i>
+                      </a>
+
+                      <div id="filesListDropdown5" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+                </div>
+                <!-- End Row -->
+              </li>
+              <!-- End List Item -->
+
+              <!-- List Item -->
+              <li class="list-group-item">
+                <div class="row align-items-center gx-2">
+                  <div class="col-auto">
+                    <img class="avatar avatar-xs avatar-4by3" src="@@autopath/assets/svg/brands/google-docs.svg" alt="Image Description">
+                  </div>
+
+                  <div class="col">
+                    <h5 class="mb-0">
+                      <a class="text-dark" href="#">Marketing strategy</a>
+                    </h5>
+                    <ul class="list-inline list-separator small">
+                      <li class="list-inline-item">Updated 2 weeks ago</li>
+                      <li class="list-inline-item">2mb</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-auto">
+                    <!-- Unfold -->
+                    <div class="hs-unfold">
+                      <a class="js-hs-unfold-invoker btn btn-sm btn-white" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesListDropdown6",
+                           "type": "css-animation"
+                         }'>
+                        <span class="d-none d-sm-inline-block mr-1">More</span>
+                        <i class="tio-chevron-down"></i>
+                      </a>
+
+                      <div id="filesListDropdown6" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+                </div>
+                <!-- End Row -->
+              </li>
+              <!-- End List Item -->
+
+              <!-- List Item -->
+              <li class="list-group-item">
+                <div class="row align-items-center gx-2">
+                  <div class="col-auto">
+                    <img class="avatar avatar-xs avatar-4by3" src="@@autopath/assets/svg/components/placeholder-img-format.svg" alt="Image Description">
+                  </div>
+
+                  <div class="col">
+                    <h5 class="mb-0">
+                      <a class="text-dark" href="#">Past-experience.jpg</a>
+                    </h5>
+                    <ul class="list-inline list-separator small">
+                      <li class="list-inline-item">Updated 1 month ago</li>
+                      <li class="list-inline-item">15mb</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-auto">
+                    <!-- Unfold -->
+                    <div class="hs-unfold">
+                      <a class="js-hs-unfold-invoker btn btn-sm btn-white" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesListDropdown7",
+                           "type": "css-animation"
+                         }'>
+                        <span class="d-none d-sm-inline-block mr-1">More</span>
+                        <i class="tio-chevron-down"></i>
+                      </a>
+
+                      <div id="filesListDropdown7" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+                </div>
+                <!-- End Row -->
+              </li>
+              <!-- End List Item -->
+
+              <!-- List Item -->
+              <li class="list-group-item">
+                <div class="row align-items-center gx-2">
+                  <div class="col-auto">
+                    <img class="avatar avatar-xs avatar-4by3" src="@@autopath/assets/svg/components/placeholder-img-format.svg" alt="Image Description">
+                  </div>
+
+                  <div class="col">
+                    <h5 class="mb-0">
+                      <a class="text-dark" href="#">Front_2018.jpg</a>
+                    </h5>
+                    <ul class="list-inline list-separator small">
+                      <li class="list-inline-item">Updated 1 month ago</li>
+                      <li class="list-inline-item">9mb</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-auto">
+                    <!-- Unfold -->
+                    <div class="hs-unfold">
+                      <a class="js-hs-unfold-invoker btn btn-sm btn-white" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesListDropdown8",
+                           "type": "css-animation"
+                         }'>
+                        <span class="d-none d-sm-inline-block mr-1">More</span>
+                        <i class="tio-chevron-down"></i>
+                      </a>
+
+                      <div id="filesListDropdown8" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+                </div>
+                <!-- End Row -->
+              </li>
+              <!-- End List Item -->
+
+              <!-- List Item -->
+              <li class="list-group-item">
+                <div class="row align-items-center gx-2">
+                  <div class="col-auto">
+                    <img class="avatar avatar-xs avatar-4by3" src="@@autopath/assets/svg/brands/pdf.svg" alt="Image Description">
+                  </div>
+
+                  <div class="col">
+                    <h5 class="mb-0">
+                      <a class="text-dark" href="#">Business opportunities</a>
+                    </h5>
+                    <ul class="list-inline list-separator small">
+                      <li class="list-inline-item">Updated 2 months ago</li>
+                      <li class="list-inline-item">4mb</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-auto">
+                    <!-- Unfold -->
+                    <div class="hs-unfold">
+                      <a class="js-hs-unfold-invoker btn btn-sm btn-white" href="javascript:;"
+                         data-hs-unfold-options='{
+                           "target": "#filesListDropdown9",
+                           "type": "css-animation"
+                         }'>
+                        <span class="d-none d-sm-inline-block mr-1">More</span>
+                        <i class="tio-chevron-down"></i>
+                      </a>
+
+                      <div id="filesListDropdown9" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right" style="min-width: 13rem;">
+                        <span class="dropdown-header">Settings</span>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-share dropdown-item-icon"></i> Share file
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-folder-add dropdown-item-icon"></i> Move to
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-star-outlined dropdown-item-icon"></i> Add to stared
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-edit dropdown-item-icon"></i> Rename
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-download-to dropdown-item-icon"></i> Download
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="tio-delete-outlined dropdown-item-icon"></i> Delete
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Unfold -->
+                  </div>
+                </div>
+                <!-- End Row -->
+              </li>
+              <!-- End List Item -->
+            </ul>
+          </div>
+        </div>
+        <!-- End Tab Content -->
+      </div>
+      <!-- End Content -->
+
+      <!-- Footer -->
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/footer/main.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/footer/container.html")
+      }
+      <!-- End Footer -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Keyboard Shortcuts -->
+    @@include("@@autopath/partials/layouts-components/sidebar-shortcuts.html")
+    <!-- End Keyboard Shortcuts -->
+
+    <!-- Activity -->
+    @@include("@@autopath/partials/layouts-components/sidebar-activity.html")
+    <!-- End Activity -->
+
+    <!-- Welcome Message Modal -->
+    @@include("@@autopath/partials/modals/modal-welcome.html")
+    <!-- End Welcome Message Modal -->
+
+    <!-- Upload files Modal -->
+    @@include("@@autopath/partials/modals/modal-upload-files.html")
+    <!-- End Upload files Modal -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+    <script src="@@autopath/node_modules/dropzone/dist/min/dropzone.min.js"></script>
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <script src="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+    }
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.dropzone.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // =======================================================
+
+
+        // BUILDER TOGGLE INVOKER
+        // =======================================================
+        $('.js-navbar-vertical-aside-toggle-invoker').click(function () {
+          $('.js-navbar-vertical-aside-toggle-invoker i').tooltip('hide');
+        });
+
+        @@if (layoutBuilder.header.layoutMode !== 'default') {
+          // INITIALIZATION OF MEGA MENU
+          // =======================================================
+          var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+            desktop: {
+              position: 'left'
+            }
+          }).init();
+        }
+
+        
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+        
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+        $(".js-nav-tooltip-link").on("show.bs.tooltip", function(e) {
+          if (!$("body").hasClass("navbar-vertical-aside-mini-mode")) {
+            return false;
+          }
+        });
+
+        
+        // INITIALIZATION OF UNFOLD
+        // =======================================================
+        $('.js-hs-unfold-invoker').each(function () {
+          var unfold = new HSUnfold($(this)).init();
+        });
+
+        
+        // INITIALIZATION OF FORM SEARCH
+        // =======================================================
+        $('.js-form-search').each(function () {
+          new HSFormSearch($(this)).init()
+        });
+
+        
+        // INITIALIZATION OF DROPZONE FILE ATTACH MODULE
+        // =======================================================
+        $('.js-dropzone').each(function () {
+          var dropzone = $.HSCore.components.HSDropzone.init('#' + $(this).attr('id'));
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

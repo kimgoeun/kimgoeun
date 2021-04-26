@@ -1,0 +1,2770 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Kanban | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/daterangepicker/daterangepicker.css">
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <link rel="stylesheet" href="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+    }
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+  </head>
+
+  <body class="@@if(layoutBuilder.header.layoutMode === 'default'){has-navbar-vertical-aside navbar-vertical-aside-show-xl} @@if(layoutBuilder.sidebarLayout === 'compact'){navbar-vertical-aside-compact-mode} @@if(layoutBuilder.sidebarLayout === 'mini'){navbar-vertical-aside-mini-mode} footer-offset">
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.sidebarLayout !== 'mini') {
+      <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside-mini-cache.js"></script>
+    }
+
+    <!-- Search Form -->
+    @@include("@@autopath/partials/layouts-components/mobile-search.html")
+    <!-- End Search Form -->
+
+    <!-- ========== HEADER ========== -->
+    @@if (layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/header/main.html")
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'single') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/main-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/main-container.html")
+      }
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'double') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/double-line-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/double-line-container.html")
+      }
+    }
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/main.html", {
+        "category": "apps",
+        "subcategory": "",
+        "link": "apps-kanban.html"
+      })
+    }
+
+    @@if (layoutBuilder.sidebarLayout === 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/compact.html", {
+        "category": "apps",
+        "subcategory": "",
+        "link": "apps-kanban.html"
+      })
+    }
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main">
+      <!-- Content -->
+      <div class="content @@layoutBuilder.header.containerMode">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div class="row align-items-end">
+            <div class="col-sm mb-2 mb-sm-0">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-no-gutter">
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Apps</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Kanban</li>
+                </ol>
+              </nav>
+
+              <h1 class="page-header-title">Kanban</h1>
+            </div>
+
+            <div class="col-sm-auto">
+              <small class="text-cap mb-2">Team members:</small>
+
+              <div class="d-flex">
+                <!-- Avatar Group -->
+                <div class="avatar-group avatar-circle mr-3">
+                  <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Amanda Harvey">
+                    <img class="avatar-img" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description">
+                  </a>
+                  <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Linda Bates">
+                    <img class="avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description">
+                  </a>
+                  <a class="avatar avatar-soft-info" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="#digitalmarketing">
+                    <span class="avatar-initials">
+                      <i class="tio-group-senior"></i>
+                    </span>
+                  </a>
+                  <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="David Harrison">
+                    <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                  </a>
+                  <a class="avatar avatar-soft-dark" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Antony Taylor">
+                    <span class="avatar-initials">A</span>
+                  </a>
+
+                  <a class="avatar avatar-light avatar-circle" href="javascript:;" data-toggle="modal" data-target="#shareWithPeopleModal">
+                    <span class="avatar-initials">+2</span>
+                  </a>
+                </div>
+                <!-- End Avatar Group -->
+
+                <a class="btn btn-icon btn-primary rounded-circle" href="javascript:;" data-toggle="modal" data-target="#shareWithPeopleModal">
+                  <i class="tio-share"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Page Header -->
+      </div>
+      <!-- End Content -->
+
+      <!-- Content -->
+      <div class="content @@layoutBuilder.header.containerMode my-n9">
+        <!-- Filter -->
+        <div class="row mb-5">
+          <div class="col-12 col-sm-auto mb-3">
+            <!-- Input Group -->
+            <div class="input-group input-group-merge">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="tio-search"></i>
+                </div>
+              </div>
+              <input type="search" class="form-control" placeholder="Search projects" aria-label="Search projects">
+            </div>
+            <!-- End Input Group -->
+          </div>
+
+          <div class="col-auto mb-3">
+            <!-- Daterangepicker -->
+            <button id="js-daterangepicker-predefined" class="btn btn-ghost-secondary dropdown-toggle">
+              <i class="tio-date-range"></i>
+              <span class="js-daterangepicker-predefined-preview ml-1"></span>
+            </button>
+            <!-- End Daterangepicker -->
+          </div>
+
+          <div class="col-auto mb-3 ml-auto">
+            <!-- Nav -->
+            <ul class="nav nav-segment" id="connectionsTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="grid-tab" data-toggle="tab" href="#grid" role="tab" aria-controls="grid" aria-selected="true" title="Column view">
+                  <i class="tio-column-view-outlined"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false" title="List view">
+                  <i class="tio-agenda-view-outlined"></i>
+                </a>
+              </li>
+            </ul>
+            <!-- End Nav -->
+          </div>
+        </div>
+        <!-- End Filter -->
+      </div>
+      <!-- End Content -->
+
+      <!-- Tab Content -->
+      <div class="tab-content" id="connectionsTabContent">
+        <div class="tab-pane fade show active" id="grid" role="tabpanel" aria-labelledby="grid-tab">
+          <!-- Content -->
+          <div class="content @@layoutBuilder.header.containerMode kanban-board">
+            <!-- Kanban Row -->
+            <ul class="row list-unstyled kanban-board-row">
+              <li class="js-add-field col-12"
+                 data-hs-add-field-options='{
+                  "template": "#createProjectGridTemplateToDo",
+                  "container": "#createProjectGridContainerToDo",
+                  "defaultCreated": 0
+                 }'>
+                <!-- Title -->
+                <div class="js-sortable-disabled d-flex justify-content-between align-items-center mb-3">
+                  <h6 class="text-cap mb-0">To do</h6>
+
+                  <a class="js-create-field btn btn-icon btn-xs btn-white" href="javascript:;" data-toggle="tooltip" data-placement="left" title="Add project">
+                    <i class="tio-add"></i>
+                  </a>
+                </div>
+                <!-- End Title -->
+
+                <div class="js-sortable">
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom sortablejs-custom-rotate sortablejs-custom-handle" data-href="#">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="d-flex mb-5">
+                          <div class="mr-2">
+                            <h4 class="text-wrap">Front mobile app launch</h4>
+
+                            <!-- Avatar Group -->
+                            <div class="avatar-group avatar-group-sm">
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                              </span>
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img7.jpg" alt="Image Description">
+                              </span>
+                              <span class="avatar avatar-soft-dark avatar-circle">
+                                <span class="avatar-initials">I</span>
+                              </span>
+                              <span class="font-size-sm ml-2">3 Assignees</span>
+                            </div>
+                            <!-- End Avatar Group -->
+                          </div>
+
+                          <div class="ml-auto">
+                            <!-- Unfold -->
+                            <div class="hs-unfold card-unfold">
+                              <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                 data-hs-unfold-options='{
+                                 "target": "#kanbanProjectsGridDropdown1",
+                                 "type": "css-animation"
+                               }'>
+                                <i class="tio-more-vertical"></i>
+                              </a>
+
+                              <div id="kanbanProjectsGridDropdown1" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-edit dropdown-item-icon"></i> Rename project
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-archive dropdown-item-icon"></i> Archive project
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <a class="dropdown-item text-danger" href="#">
+                                  <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                  Remove
+                                </a>
+                              </div>
+                            </div>
+                            <!-- End Unfold -->
+                          </div>
+                        </div>
+
+                        <div class="row mb-3">
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">20</span>
+                              <span class="d-block font-size-sm">Tasks</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">0</span>
+                              <span class="d-block font-size-sm">Complete</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">0</span>
+                              <span class="d-block font-size-sm">Completed</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+                        </div>
+                        <!-- End Row -->
+
+                        <!-- Progress -->
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <!-- End Progress -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card -->
+
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom sortablejs-custom-rotate sortablejs-custom-handle" data-href="#">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="d-flex mb-5">
+                          <div class="mr-2">
+                            <h4 class="text-wrap">Increase page loading speed</h4>
+
+                            <!-- Avatar Group -->
+                            <div class="avatar-group avatar-group-sm">
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                              </span>
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                              </span>
+                              <span class="font-size-sm ml-2">2 Assignees</span>
+                            </div>
+                            <!-- End Avatar Group -->
+                          </div>
+
+                          <div class="ml-auto">
+                            <!-- Unfold -->
+                            <div class="hs-unfold card-unfold">
+                              <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                 data-hs-unfold-options='{
+                                 "target": "#kanbanProjectsGridDropdown2",
+                                 "type": "css-animation"
+                               }'>
+                                <i class="tio-more-vertical"></i>
+                              </a>
+
+                              <div id="kanbanProjectsGridDropdown2" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-edit dropdown-item-icon"></i> Rename project
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-archive dropdown-item-icon"></i> Archive project
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <a class="dropdown-item text-danger" href="#">
+                                  <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                  Remove
+                                </a>
+                              </div>
+                            </div>
+                            <!-- End Unfold -->
+                          </div>
+                        </div>
+
+                        <div class="row mb-3">
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">3</span>
+                              <span class="d-block font-size-sm">Tasks</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">0</span>
+                              <span class="d-block font-size-sm">Complete</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">0</span>
+                              <span class="d-block font-size-sm">Completed</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+                        </div>
+                        <!-- End Row -->
+
+                        <!-- Progress -->
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <!-- End Progress -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card -->
+
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom sortablejs-custom-rotate sortablejs-custom-handle" data-href="#">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="d-flex mb-5">
+                          <div class="mr-2">
+                            <h4 class="text-wrap">Implement a calendar plugin</h4>
+
+                            <!-- Avatar Group -->
+                            <div class="avatar-group avatar-group-sm">
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                              </span>
+                              <span class="font-size-sm ml-2">1 Assignee</span>
+                            </div>
+                            <!-- End Avatar Group -->
+                          </div>
+
+                          <div class="ml-auto">
+                            <!-- Unfold -->
+                            <div class="hs-unfold card-unfold">
+                              <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                 data-hs-unfold-options='{
+                                 "target": "#kanbanProjectsGridDropdown3",
+                                 "type": "css-animation"
+                               }'>
+                                <i class="tio-more-vertical"></i>
+                              </a>
+
+                              <div id="kanbanProjectsGridDropdown3" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-edit dropdown-item-icon"></i> Rename project
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-archive dropdown-item-icon"></i> Archive project
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <a class="dropdown-item text-danger" href="#">
+                                  <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                  Remove
+                                </a>
+                              </div>
+                            </div>
+                            <!-- End Unfold -->
+                          </div>
+                        </div>
+
+                        <div class="row mb-3">
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">9</span>
+                              <span class="d-block font-size-sm">Tasks</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">0</span>
+                              <span class="d-block font-size-sm">Complete</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">0</span>
+                              <span class="d-block font-size-sm">Completed</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+                        </div>
+                        <!-- End Row -->
+
+                        <!-- Progress -->
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <!-- End Progress -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card -->
+                </div>
+
+                <!-- Container For Input Field -->
+                <div id="createProjectGridContainerToDo"></div>
+
+                <!-- Card -->
+                <a class="js-sortable-disabled js-create-field btn btn-block btn-white btn-dashed-outline" href="javascript:;">
+                  <i class="tio-add"></i> Add project
+                </a>
+                <!-- End Card -->
+
+                <!-- Add Create Project Template -->
+                <form id="createProjectGridTemplateToDo" style="display: none;">
+                  <div class="js-sortable-link sortablejs-custom sortablejs-custom-rotate sortablejs-custom-handle" data-href="#">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="form-group">
+                          <textarea class="form-control" placeholder="What needs to be done?" aria-label="What needs to be done?"></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                          <a class="js-delete-field btn btn-sm btn-white mr-2" href="javascript:;">Cancel</a>
+                          <a class="btn btn-sm btn-primary" href="javascript:;">Create</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <!-- End Add Create Project Template -->
+              </li>
+
+              <li class="js-add-field col-12"
+                  data-hs-add-field-options='{
+                    "template": "#createProjectGridTemplateInProgress",
+                    "container": "#createProjectGridContainerInProgress",
+                    "defaultCreated": 0
+                  }'>
+                <!-- Title -->
+                <div class="js-sortable-disabled d-flex justify-content-between align-items-center mb-3">
+                  <h6 class="text-cap mb-0">In progress</h6>
+
+                  <a class="js-create-field btn btn-icon btn-xs btn-white" href="javascript:;" data-toggle="tooltip" data-placement="left" title="Add project">
+                    <i class="tio-add"></i>
+                  </a>
+                </div>
+                <!-- End Title -->
+
+                <div class="js-sortable">
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom sortablejs-custom-rotate sortablejs-custom-handle" data-href="#">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="d-flex mb-5">
+                          <div class="mr-2">
+                            <h4 class="text-wrap">Display tasks in account page</h4>
+
+                            <!-- Avatar Group -->
+                            <div class="avatar-group avatar-group-sm">
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img7.jpg" alt="Image Description">
+                              </span>
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                              </span>
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img8.jpg" alt="Image Description">
+                              </span>
+                              <span class="font-size-sm ml-2">3 Assignees</span>
+                            </div>
+                            <!-- End Avatar Group -->
+                          </div>
+
+                          <div class="ml-auto">
+                            <!-- Unfold -->
+                            <div class="hs-unfold card-unfold">
+                              <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                  data-hs-unfold-options='{
+                                   "target": "#kanbanProjectsGridDropdown4",
+                                   "type": "css-animation"
+                                 }'>
+                                <i class="tio-more-vertical"></i>
+                              </a>
+
+                               <div id="kanbanProjectsGridDropdown4" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-edit dropdown-item-icon"></i> Rename project
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-archive dropdown-item-icon"></i> Archive project
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <a class="dropdown-item text-danger" href="#">
+                                  <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                  Remove
+                                </a>
+                              </div>
+                            </div>
+                            <!-- End Unfold -->
+                          </div>
+                        </div>
+
+                        <div class="row mb-3">
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">7</span>
+                              <span class="d-block font-size-sm">Tasks</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">12</span>
+                              <span class="d-block font-size-sm">Complete</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">3</span>
+                              <span class="d-block font-size-sm">Days left</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+                        </div>
+                        <!-- End Row -->
+
+                        <!-- Progress -->
+                        <div class="progress">
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <!-- End Progress -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card -->
+
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom sortablejs-custom-rotate sortablejs-custom-handle" data-href="#">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="d-flex mb-5">
+                          <div class="mr-2">
+                            <h4 class="text-wrap">Update Slack integration to use the new bot token</h4>
+
+                            <!-- Avatar Group -->
+                            <div class="avatar-group avatar-group-sm">
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                              </span>
+                              <span class="avatar avatar-soft-danger avatar-circle">
+                                <span class="avatar-initials">P</span>
+                              </span>
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                              </span>
+                              <span class="font-size-sm ml-2">3 Assignees</span>
+                            </div>
+                            <!-- End Avatar Group -->
+                          </div>
+
+                          <div class="ml-auto">
+                            <!-- Unfold -->
+                            <div class="hs-unfold card-unfold">
+                              <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                  data-hs-unfold-options='{
+                                   "target": "#kanbanProjectsGridDropdown5",
+                                   "type": "css-animation"
+                                 }'>
+                                <i class="tio-more-vertical"></i>
+                              </a>
+
+                               <div id="kanbanProjectsGridDropdown5" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-edit dropdown-item-icon"></i> Rename project
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-archive dropdown-item-icon"></i> Archive project
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <a class="dropdown-item text-danger" href="#">
+                                  <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                  Remove
+                                </a>
+                              </div>
+                            </div>
+                            <!-- End Unfold -->
+                          </div>
+                        </div>
+
+                        <div class="row mb-3">
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">40</span>
+                              <span class="d-block font-size-sm">Tasks</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">20</span>
+                              <span class="d-block font-size-sm">Complete</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">45</span>
+                              <span class="d-block font-size-sm">Days left</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+                        </div>
+                        <!-- End Row -->
+
+                        <!-- Progress -->
+                        <div class="progress">
+                          <div class="progress-bar bg-danger" role="progressbar" style="width: 22%" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <!-- End Progress -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card -->
+                </div>
+
+                <!-- Container For Input Field -->
+                <div id="createProjectGridContainerInProgress"></div>
+
+                <!-- Card -->
+                <a class="js-sortable-disabled js-create-field btn btn-block btn-white btn-dashed-outline" href="javascript:;">
+                  <i class="tio-add"></i> Add project
+                </a>
+                <!-- End Card -->
+
+                <!-- Add Create Project Template -->
+                <form id="createProjectGridTemplateInProgress" style="display: none;">
+                  <div class="js-sortable-link sortablejs-custom sortablejs-custom-rotate sortablejs-custom-handle" data-href="#">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="form-group">
+                          <textarea class="form-control" placeholder="What needs to be done?" aria-label="What needs to be done?"></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                          <a class="js-delete-field btn btn-sm btn-white mr-2" href="javascript:;">Cancel</a>
+                          <a class="btn btn-sm btn-primary" href="javascript:;">Create</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <!-- End Add Create Project Template -->
+              </li>
+
+              <li class="js-add-field col-12"
+                  data-hs-add-field-options='{
+                    "template": "#createProjectGridTemplateReview",
+                    "container": "#createProjectGridContainerReview",
+                    "defaultCreated": 0
+                  }'>
+                <!-- Title -->
+                <div class="js-sortable-disabled d-flex justify-content-between align-items-center mb-3">
+                  <h6 class="text-cap mb-0">Review</h6>
+
+                  <a class="js-create-field btn btn-icon btn-xs btn-white" href="javascript:;" data-toggle="tooltip" data-placement="left" title="Add project">
+                    <i class="tio-add"></i>
+                  </a>
+                </div>
+                <!-- End Title -->
+
+                <div class="js-sortable">
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom sortablejs-custom-rotate sortablejs-custom-handle" data-href="#">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="d-flex mb-5">
+                          <div class="mr-2">
+                            <h4 class="text-wrap">Design banner for social networks</h4>
+
+                            <!-- Avatar Group -->
+                            <div class="avatar-group avatar-group-sm">
+                              <span class="avatar avatar-soft-info avatar-circle">
+                                <span class="avatar-initials">L</span>
+                              </span>
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description">
+                              </span>
+                              <span class="font-size-sm ml-2">2 Assignees</span>
+                            </div>
+                            <!-- End Avatar Group -->
+                          </div>
+
+                          <div class="ml-auto">
+                            <!-- Unfold -->
+                            <div class="hs-unfold card-unfold">
+                              <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                 data-hs-unfold-options='{
+                                 "target": "#kanbanProjectsGridDropdown6",
+                                 "type": "css-animation"
+                               }'>
+                                <i class="tio-more-vertical"></i>
+                              </a>
+
+                              <div id="kanbanProjectsGridDropdown6" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-edit dropdown-item-icon"></i> Rename project
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-archive dropdown-item-icon"></i> Archive project
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <a class="dropdown-item text-danger" href="#">
+                                  <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                  Remove
+                                </a>
+                              </div>
+                            </div>
+                            <!-- End Unfold -->
+                          </div>
+                        </div>
+
+                        <div class="row mb-3">
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">7</span>
+                              <span class="d-block font-size-sm">Tasks</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">7</span>
+                              <span class="d-block font-size-sm">Complete</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">2</span>
+                              <span class="d-block font-size-sm">Days left</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+                        </div>
+                        <!-- End Row -->
+
+                        <!-- Progress -->
+                        <div class="progress">
+                          <div class="progress-bar bg-success" role="progressbar" style="width: 99%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <!-- End Progress -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card -->
+                </div>
+
+                <!-- Container For Input Field -->
+                <div id="createProjectGridContainerReview"></div>
+
+                <!-- Card -->
+                <a class="js-sortable-disabled js-create-field btn btn-block btn-white btn-dashed-outline" href="javascript:;">
+                  <i class="tio-add"></i> Add project
+                </a>
+                <!-- End Card -->
+
+                <!-- Add Create Project Template -->
+                <form id="createProjectGridTemplateReview" style="display: none;">
+                  <div class="js-sortable-link sortablejs-custom sortablejs-custom-rotate sortablejs-custom-handle" data-href="#">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="form-group">
+                          <textarea class="form-control" placeholder="What needs to be done?" aria-label="What needs to be done?"></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                          <a class="js-delete-field btn btn-sm btn-white mr-2" href="javascript:;">Cancel</a>
+                          <a class="btn btn-sm btn-primary" href="javascript:;">Create</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <!-- End Add Create Project Template -->
+              </li>
+
+              <li class="js-add-field col-12"
+                 data-hs-add-field-options='{
+                   "template": "#createProjectGridTemplateDone",
+                   "container": "#createProjectGridContainerDone",
+                   "defaultCreated": 0
+                 }'>
+                <!-- Title -->
+                <div class="js-sortable-disabled d-flex justify-content-between align-items-center mb-3">
+                  <h6 class="text-cap mb-0">Done</h6>
+
+                  <a class="js-create-field btn btn-icon btn-xs btn-white" href="javascript:;" data-toggle="tooltip" data-placement="left" title="Add project">
+                    <i class="tio-add"></i>
+                  </a>
+                </div>
+                <!-- End Title -->
+
+                <div class="js-sortable">
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom sortablejs-custom-rotate sortablejs-custom-handle" data-href="#">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="d-flex mb-5">
+                          <div class="mr-2">
+                            <h4 class="text-wrap">Create product roadmap</h4>
+
+                            <!-- Avatar Group -->
+                            <div class="avatar-group avatar-group-sm">
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                              </span>
+                              <span class="font-size-sm ml-2">1 Assignee</span>
+                            </div>
+                            <!-- End Avatar Group -->
+                          </div>
+
+                          <div class="ml-auto">
+                            <!-- Unfold -->
+                            <div class="hs-unfold card-unfold">
+                              <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                 data-hs-unfold-options='{
+                                 "target": "#kanbanProjectsGridDropdown7",
+                                 "type": "css-animation"
+                               }'>
+                                <i class="tio-more-vertical"></i>
+                              </a>
+
+                              <div id="kanbanProjectsGridDropdown7" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-edit dropdown-item-icon"></i> Rename project
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-archive dropdown-item-icon"></i> Archive project
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <a class="dropdown-item text-danger" href="#">
+                                  <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                  Remove
+                                </a>
+                              </div>
+                            </div>
+                            <!-- End Unfold -->
+                          </div>
+                        </div>
+
+                        <div class="row mb-3">
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">1</span>
+                              <span class="d-block font-size-sm">Tasks</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">1</span>
+                              <span class="d-block font-size-sm">Complete</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">0</span>
+                              <span class="d-block font-size-sm">Completed</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+                        </div>
+                        <!-- End Row -->
+
+                        <!-- Progress -->
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <!-- End Progress -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card -->
+
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom sortablejs-custom-rotate sortablejs-custom-handle" data-href="#">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="d-flex mb-5">
+                          <div class="mr-2">
+                            <h4 class="text-wrap">Mobile: notifications for subscribe pages and goals</h4>
+
+                            <!-- Avatar Group -->
+                            <div class="avatar-group avatar-group-sm">
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                              </span>
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img7.jpg" alt="Image Description">
+                              </span>
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                              </span>
+                              <span class="font-size-sm ml-2">3 Assignees</span>
+                            </div>
+                            <!-- End Avatar Group -->
+                          </div>
+
+                          <div class="ml-auto">
+                            <!-- Unfold -->
+                            <div class="hs-unfold card-unfold">
+                              <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                 data-hs-unfold-options='{
+                                 "target": "#kanbanProjectsGridDropdown8",
+                                 "type": "css-animation"
+                               }'>
+                                <i class="tio-more-vertical"></i>
+                              </a>
+
+                              <div id="kanbanProjectsGridDropdown8" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-edit dropdown-item-icon"></i> Rename project
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-archive dropdown-item-icon"></i> Archive project
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <a class="dropdown-item text-danger" href="#">
+                                  <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                  Remove
+                                </a>
+                              </div>
+                            </div>
+                            <!-- End Unfold -->
+                          </div>
+                        </div>
+
+                        <div class="row mb-3">
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">5</span>
+                              <span class="d-block font-size-sm">Tasks</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">7</span>
+                              <span class="d-block font-size-sm">Complete</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">0</span>
+                              <span class="d-block font-size-sm">Completed</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+                        </div>
+                        <!-- End Row -->
+
+                        <!-- Progress -->
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <!-- End Progress -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card -->
+
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom sortablejs-custom-rotate sortablejs-custom-handle" data-href="#">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="d-flex mb-5">
+                          <div class="mr-2">
+                            <h4 class="text-wrap">Allow commenting from the report view</h4>
+
+                            <!-- Avatar Group -->
+                            <div class="avatar-group avatar-group-sm">
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description">
+                              </span>
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img4.jpg" alt="Image Description">
+                              </span>
+                              <span class="avatar avatar-soft-info avatar-circle">
+                                <span class="avatar-initials">V</span>
+                              </span>
+                              <span class="font-size-sm ml-2">3 Assignees</span>
+                            </div>
+                            <!-- End Avatar Group -->
+                          </div>
+
+                          <div class="ml-auto">
+                            <!-- Unfold -->
+                            <div class="hs-unfold card-unfold">
+                              <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                 data-hs-unfold-options='{
+                                 "target": "#kanbanProjectsGridDropdown9",
+                                 "type": "css-animation"
+                               }'>
+                                <i class="tio-more-vertical"></i>
+                              </a>
+
+                              <div id="kanbanProjectsGridDropdown9" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-edit dropdown-item-icon"></i> Rename project
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-archive dropdown-item-icon"></i> Archive project
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <a class="dropdown-item text-danger" href="#">
+                                  <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                  Remove
+                                </a>
+                              </div>
+                            </div>
+                            <!-- End Unfold -->
+                          </div>
+                        </div>
+
+                        <div class="row mb-3">
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">3</span>
+                              <span class="d-block font-size-sm">Tasks</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">6</span>
+                              <span class="d-block font-size-sm">Complete</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">0</span>
+                              <span class="d-block font-size-sm">Completed</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+                        </div>
+                        <!-- End Row -->
+
+                        <!-- Progress -->
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <!-- End Progress -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card -->
+
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom sortablejs-custom-rotate sortablejs-custom-handle" data-href="#">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="d-flex mb-5">
+                          <div class="mr-2">
+                            <h4 class="text-wrap">Public API</h4>
+
+                            <!-- Avatar Group -->
+                            <div class="avatar-group avatar-group-sm">
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img4.jpg" alt="Image Description">
+                              </span>
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                              </span>
+                              <span class="avatar avatar-circle">
+                                <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                              </span>
+                              <span class="font-size-sm ml-2">3 Assignees</span>
+                            </div>
+                            <!-- End Avatar Group -->
+                          </div>
+
+                          <div class="ml-auto">
+                            <!-- Unfold -->
+                            <div class="hs-unfold card-unfold">
+                              <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                                 data-hs-unfold-options='{
+                                 "target": "#kanbanProjectsGridDropdown10",
+                                 "type": "css-animation"
+                               }'>
+                                <i class="tio-more-vertical"></i>
+                              </a>
+
+                              <div id="kanbanProjectsGridDropdown10" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-edit dropdown-item-icon"></i> Rename project
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                  <i class="tio-archive dropdown-item-icon"></i> Archive project
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <a class="dropdown-item text-danger" href="#">
+                                  <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                  Remove
+                                </a>
+                              </div>
+                            </div>
+                            <!-- End Unfold -->
+                          </div>
+                        </div>
+
+                        <div class="row mb-3">
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">75</span>
+                              <span class="d-block font-size-sm">Tasks</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">4</span>
+                              <span class="d-block font-size-sm">Complete</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+
+                          <div class="col-4">
+                            <!-- Stats -->
+                            <div class="text-center">
+                              <span class="d-block h4 mb-1">0</span>
+                              <span class="d-block font-size-sm">Completed</span>
+                            </div>
+                            <!-- End Stats -->
+                          </div>
+                        </div>
+                        <!-- End Row -->
+
+                        <!-- Progress -->
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <!-- End Progress -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card -->
+                </div>
+
+                <!-- Container For Input Field -->
+                <div id="createProjectGridContainerDone"></div>
+
+                <!-- Card -->
+                <a class="js-sortable-disabled js-create-field btn btn-block btn-white btn-dashed-outline" href="javascript:;">
+                  <i class="tio-add"></i> Add project
+                </a>
+                <!-- End Card -->
+
+                <!-- Add Create Project Template -->
+                <form id="createProjectGridTemplateDone" style="display: none;">
+                  <div class="js-sortable-link sortablejs-custom sortablejs-custom-rotate sortablejs-custom-handle" data-href="#">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="form-group">
+                          <textarea class="form-control" placeholder="What needs to be done?" aria-label="What needs to be done?"></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                          <a class="js-delete-field btn btn-sm btn-white mr-2" href="javascript:;">Cancel</a>
+                          <a class="btn btn-sm btn-primary" href="javascript:;">Create</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <!-- End Add Create Project Template -->
+              </li>
+
+              <li class="col-12">
+                <!-- Title -->
+                <div class="js-sortable-disabled d-flex justify-content-between align-items-center mb-3">
+                  <h6 class="text-cap mb-0">Create a new group</h6>
+
+                  <div class="js-sortable js-add-field"></div>
+
+                  <a class="btn btn-icon btn-xs btn-white" href="javascript:;" data-toggle="tooltip" data-placement="left" title="Create group">
+                    <i class="tio-add"></i>
+                  </a>
+                </div>
+                <!-- End Title -->
+              </li>
+            </ul>
+            <!-- End Kanban Row -->
+          </div>
+          <!-- End Content -->
+        </div>
+
+        <div class="tab-pane fade" id="list" role="tabpanel" aria-labelledby="list-tab">
+          <!-- Content -->
+          <div class="content @@layoutBuilder.header.containerMode">
+            <!-- Kanban List -->
+            <ul class="list-inline">
+              <li class="js-add-field"
+                 data-hs-add-field-options='{
+                    "template": "#createProjectListTemplateToDo",
+                    "container": "#createProjectListContainerToDo",
+                    "defaultCreated": 0
+                  }'>
+                <!-- Title -->
+                <div class="js-sortable-disabled d-flex justify-content-between align-items-center mb-3">
+                  <h6 class="text-cap mb-0">To do</h6>
+
+                  <a class="js-create-field btn btn-icon btn-sm btn-white" href="javascript:;" data-toggle="tooltip" data-placement="left" title="Add project">
+                    <i class="tio-add"></i>
+                  </a>
+                </div>
+                <!-- End Title -->
+
+                <div class="js-sortable">
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom-handle card mb-3" data-href="#">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col">
+                          <h4 class="text-wrap">Front mobile app launch</h4>
+                        </div>
+
+                        <div class="col-auto">
+                          <!-- Unfold -->
+                          <div class="hs-unfold card-unfold">
+                            <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                               data-hs-unfold-options='{
+                               "target": "#kanbanProjectsListDropdown1",
+                               "type": "css-animation"
+                             }'>
+                              <i class="tio-more-vertical"></i>
+                            </a>
+
+                            <div id="kanbanProjectsListDropdown1" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-edit dropdown-item-icon"></i> Rename project
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-archive dropdown-item-icon"></i> Archive project
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+
+                              <a class="dropdown-item text-danger" href="#">
+                                <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                Remove
+                              </a>
+                            </div>
+                          </div>
+                          <!-- End Unfold -->
+                        </div>
+                      </div>
+
+                      <div class="row align-items-center">
+                        <div class="col-sm-auto mb-3 mb-sm-0">
+                          <!-- Avatar Group -->
+                          <div class="avatar-group avatar-group-sm">
+                            <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                            </span>
+                              <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img7.jpg" alt="Image Description">
+                            </span>
+                            <span class="avatar avatar-soft-dark avatar-circle">
+                              <span class="avatar-initials">I</span>
+                            </span>
+                          </div>
+                          <!-- End Avatar Group -->
+
+                          <span class="d-block font-size-sm">3 Assignees</span>
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">20</span>
+                            <span class="d-block font-size-sm">Tasks</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">0</span>
+                            <span class="d-block font-size-sm">Complete</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">0</span>
+                            <span class="d-block font-size-sm">Completed</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-sm">
+                          <!-- Progress -->
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <!-- End Progress -->
+                        </div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                  </div>
+                  <!-- End Card -->
+
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom-handle card mb-3" data-href="#">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col">
+                          <h4 class="text-wrap">Increase page loading speed</h4>
+                        </div>
+
+                        <div class="col-auto">
+                          <!-- Unfold -->
+                          <div class="hs-unfold card-unfold">
+                            <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                               data-hs-unfold-options='{
+                               "target": "#kanbanProjectsListDropdown2",
+                               "type": "css-animation"
+                             }'>
+                              <i class="tio-more-vertical"></i>
+                            </a>
+
+                            <div id="kanbanProjectsListDropdown2" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-edit dropdown-item-icon"></i> Rename project
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-archive dropdown-item-icon"></i> Archive project
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+
+                              <a class="dropdown-item text-danger" href="#">
+                                <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                Remove
+                              </a>
+                            </div>
+                          </div>
+                          <!-- End Unfold -->
+                        </div>
+                      </div>
+
+                      <div class="row align-items-center">
+                        <div class="col-sm-auto mb-3 mb-sm-0">
+                          <!-- Avatar Group -->
+                          <div class="avatar-group avatar-group-sm">
+                            <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                            </span>
+                            <span class="avatar avatar-circle">
+                            <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                          </span>
+                          </div>
+                          <!-- End Avatar Group -->
+
+                          <span class="d-block font-size-sm">2 Assignees</span>
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">3</span>
+                            <span class="d-block font-size-sm">Tasks</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">0</span>
+                            <span class="d-block font-size-sm">Complete</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">0</span>
+                            <span class="d-block font-size-sm">Completed</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-sm">
+                          <!-- Progress -->
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <!-- End Progress -->
+                        </div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                  </div>
+                  <!-- End Card -->
+
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom-handle card mb-3" data-href="#">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col">
+                          <h4 class="text-wrap">Implement a calendar plugin</h4>
+                        </div>
+
+                        <div class="col-auto">
+                          <!-- Unfold -->
+                          <div class="hs-unfold card-unfold">
+                            <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                               data-hs-unfold-options='{
+                               "target": "#kanbanProjectsListDropdown3",
+                               "type": "css-animation"
+                             }'>
+                              <i class="tio-more-vertical"></i>
+                            </a>
+
+                            <div id="kanbanProjectsListDropdown3" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-edit dropdown-item-icon"></i> Rename project
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-archive dropdown-item-icon"></i> Archive project
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+
+                              <a class="dropdown-item text-danger" href="#">
+                                <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                Remove
+                              </a>
+                            </div>
+                          </div>
+                          <!-- End Unfold -->
+                        </div>
+                      </div>
+
+                      <div class="row align-items-center">
+                        <div class="col-sm-auto mb-3 mb-sm-0">
+                          <!-- Avatar Group -->
+                          <div class="avatar-group avatar-group-sm">
+                            <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                            </span>
+                            <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                            </span>
+                          </div>
+                          <!-- End Avatar Group -->
+
+                          <span class="d-block font-size-sm">2 Assignees</span>
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">9</span>
+                            <span class="d-block font-size-sm">Tasks</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">0</span>
+                            <span class="d-block font-size-sm">Complete</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">0</span>
+                            <span class="d-block font-size-sm">Completed</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-sm">
+                          <!-- Progress -->
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <!-- End Progress -->
+                        </div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                  </div>
+                  <!-- End Card -->
+                </div>
+
+                <!-- Container For Input Field -->
+                <div id="createProjectListContainerToDo"></div>
+
+                <!-- Card -->
+                <a class="js-sortable-disabled js-create-field btn btn-white btn-dashed-outline" href="javascript:;">
+                  <i class="tio-add"></i> Add project
+                </a>
+                <!-- End Card -->
+
+                <!-- Add Create Project Template -->
+                <form id="createProjectListTemplateToDo" style="display: none;">
+                  <div class="js-sortable-link sortablejs-custom-handle card mb-3" data-href="#">
+                    <div class="card-body">
+                      <div class="form-group">
+                        <textarea class="form-control" placeholder="What needs to be done?" aria-label="What needs to be done?"></textarea>
+                      </div>
+
+                      <div class="d-flex justify-content-end">
+                        <a class="js-delete-field btn btn-sm btn-white mr-2" href="javascript:;">Cancel</a>
+                        <a class="btn btn-sm btn-primary" href="javascript:;">Create</a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <!-- End Add Create Project Template -->
+              </li>
+
+              <!-- Divider -->
+              <li>
+                <hr class="my-7">
+              </li>
+              <!-- End Divider -->
+
+              <li class="js-add-field"
+                 data-hs-add-field-options='{
+                    "template": "#createProjectListTemplateInProgress",
+                    "container": "#createProjectListContainerInProgress",
+                    "defaultCreated": 0
+                  }'>
+                <!-- Title -->
+                <div class="js-sortable-disabled d-flex justify-content-between align-items-center mb-3">
+                  <h6 class="text-cap mb-0">In progress</h6>
+
+                  <a class="js-create-field btn btn-icon btn-sm btn-white" href="javascript:;" data-toggle="tooltip" data-placement="left" title="Add project">
+                    <i class="tio-add"></i>
+                  </a>
+                </div>
+                <!-- End Title -->
+
+                <div class="js-sortable">
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom-handle card mb-3" data-href="#">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col">
+                          <h4 class="text-wrap">Display tasks in account page</h4>
+                        </div>
+
+                        <div class="col-auto">
+                          <!-- Unfold -->
+                          <div class="hs-unfold card-unfold">
+                            <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                               data-hs-unfold-options='{
+                               "target": "#kanbanProjectsListDropdown4",
+                               "type": "css-animation"
+                             }'>
+                              <i class="tio-more-vertical"></i>
+                            </a>
+
+                            <div id="kanbanProjectsListDropdown4" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-edit dropdown-item-icon"></i> Rename project
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-archive dropdown-item-icon"></i> Archive project
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+
+                              <a class="dropdown-item text-danger" href="#">
+                                <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                Remove
+                              </a>
+                            </div>
+                          </div>
+                          <!-- End Unfold -->
+                        </div>
+                      </div>
+
+                      <div class="row align-items-center">
+                        <div class="col-sm-auto mb-3 mb-sm-0">
+                          <!-- Avatar Group -->
+                          <div class="avatar-group avatar-group-sm">
+                            <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img7.jpg" alt="Image Description">
+                            </span>
+                              <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                            </span>
+                            <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img8.jpg" alt="Image Description">
+                            </span>
+                          </div>
+                          <!-- End Avatar Group -->
+
+                          <span class="d-block font-size-sm">3 Assignees</span>
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">7</span>
+                            <span class="d-block font-size-sm">Tasks</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">12</span>
+                            <span class="d-block font-size-sm">Complete</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">3</span>
+                            <span class="d-block font-size-sm">Completed</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-sm">
+                          <!-- Progress -->
+                          <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <!-- End Progress -->
+                        </div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                  </div>
+                  <!-- End Card -->
+
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom-handle card mb-3" data-href="#">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col">
+                          <h4 class="text-wrap">Update Slack integration to use the new bot token</h4>
+                        </div>
+
+                        <div class="col-auto">
+                          <!-- Unfold -->
+                          <div class="hs-unfold card-unfold">
+                            <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                               data-hs-unfold-options='{
+                               "target": "#kanbanProjectsListDropdown5",
+                               "type": "css-animation"
+                             }'>
+                              <i class="tio-more-vertical"></i>
+                            </a>
+
+                            <div id="kanbanProjectsListDropdown5" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-edit dropdown-item-icon"></i> Rename project
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-archive dropdown-item-icon"></i> Archive project
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+
+                              <a class="dropdown-item text-danger" href="#">
+                                <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                Remove
+                              </a>
+                            </div>
+                          </div>
+                          <!-- End Unfold -->
+                        </div>
+                      </div>
+
+                      <div class="row align-items-center">
+                        <div class="col-sm-auto mb-3 mb-sm-0">
+                          <!-- Avatar Group -->
+                          <div class="avatar-group avatar-group-sm">
+                            <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                            </span>
+                            <span class="avatar avatar-soft-danger avatar-circle">
+                              <span class="avatar-initials">P</span>
+                            </span>
+                            <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                            </span>
+                          </div>
+                          <!-- End Avatar Group -->
+
+                          <span class="d-block font-size-sm">3 Assignees</span>
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">40</span>
+                            <span class="d-block font-size-sm">Tasks</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">20</span>
+                            <span class="d-block font-size-sm">Complete</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">45</span>
+                            <span class="d-block font-size-sm">Completed</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-sm">
+                          <!-- Progress -->
+                          <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 22%" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <!-- End Progress -->
+                        </div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                  </div>
+                  <!-- End Card -->
+                </div>
+
+                <!-- Container For Input Field -->
+                <div id="createProjectListContainerInProgress"></div>
+
+                <!-- Card -->
+                <a class="js-sortable-disabled js-create-field btn btn-white btn-dashed-outline" href="javascript:;">
+                  <i class="tio-add"></i> Add project
+                </a>
+                <!-- End Card -->
+
+                <!-- Add Create Project Template -->
+                <form id="createProjectListTemplateInProgress" style="display: none;">
+                  <div class="js-sortable-link sortablejs-custom-handle card mb-3" data-href="#">
+                    <div class="card-body">
+                      <div class="form-group">
+                        <textarea class="form-control" placeholder="What needs to be done?" aria-label="What needs to be done?"></textarea>
+                      </div>
+
+                      <div class="d-flex justify-content-end">
+                        <a class="js-delete-field btn btn-sm btn-white mr-2" href="javascript:;">Cancel</a>
+                        <a class="btn btn-sm btn-primary" href="javascript:;">Create</a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <!-- End Add Create Project Template -->
+              </li>
+
+              <!-- Divider -->
+              <li>
+                <hr class="my-7">
+              </li>
+              <!-- End Divider -->
+
+              <li class="js-add-field"
+                  data-hs-add-field-options='{
+                    "template": "#createProjectListTemplateReview",
+                    "container": "#createProjectListContainerReview",
+                    "defaultCreated": 0
+                  }'>
+                <!-- Title -->
+                <div class="js-sortable-disabled d-flex justify-content-between align-items-center mb-3">
+                  <h6 class="text-cap mb-0">Review</h6>
+
+                  <a class="js-create-field btn btn-icon btn-sm btn-white" href="javascript:;" data-toggle="tooltip" data-placement="left" title="Add project">
+                    <i class="tio-add"></i>
+                  </a>
+                </div>
+                <!-- End Title -->
+
+                <div class="js-sortable">
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom-handle card mb-3" data-href="#">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col">
+                          <h4 class="text-wrap">Design banner for social networks</h4>
+                        </div>
+
+                        <div class="col-auto">
+                          <!-- Unfold -->
+                          <div class="hs-unfold card-unfold">
+                            <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                               data-hs-unfold-options='{
+                               "target": "#kanbanProjectsListDropdown6",
+                               "type": "css-animation"
+                             }'>
+                              <i class="tio-more-vertical"></i>
+                            </a>
+
+                            <div id="kanbanProjectsListDropdown6" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-edit dropdown-item-icon"></i> Rename project
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-archive dropdown-item-icon"></i> Archive project
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+
+                              <a class="dropdown-item text-danger" href="#">
+                                <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                Remove
+                              </a>
+                            </div>
+                          </div>
+                          <!-- End Unfold -->
+                        </div>
+                      </div>
+
+                      <div class="row align-items-center">
+                        <div class="col-sm-auto mb-3 mb-sm-0">
+                          <!-- Avatar Group -->
+                          <div class="avatar-group avatar-group-sm">
+                            <span class="avatar avatar-soft-info avatar-circle">
+                              <span class="avatar-initials">L</span>
+                            </span>
+                            <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description">
+                            </span>
+                          </div>
+                          <!-- End Avatar Group -->
+
+                          <span class="d-block font-size-sm">2 Assignees</span>
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">7</span>
+                            <span class="d-block font-size-sm">Tasks</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">7</span>
+                            <span class="d-block font-size-sm">Complete</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">2</span>
+                            <span class="d-block font-size-sm">Completed</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-sm">
+                          <!-- Progress -->
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 99%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <!-- End Progress -->
+                        </div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                  </div>
+                  <!-- End Card -->
+                </div>
+
+                <!-- Container For Input Field -->
+                <div id="createProjectListContainerReview"></div>
+
+                <!-- Card -->
+                <a class="js-sortable-disabled js-create-field btn btn-white btn-dashed-outline" href="javascript:;">
+                  <i class="tio-add"></i> Add project
+                </a>
+                <!-- End Card -->
+
+                <!-- Add Create Project Template -->
+                <form id="createProjectListTemplateReview" style="display: none;">
+                  <div class="js-sortable-link sortablejs-custom-handle card mb-3" data-href="#">
+                    <div class="card-body">
+                      <div class="form-group">
+                        <textarea class="form-control" placeholder="What needs to be done?" aria-label="What needs to be done?"></textarea>
+                      </div>
+
+                      <div class="d-flex justify-content-end">
+                        <a class="js-delete-field btn btn-sm btn-white mr-2" href="javascript:;">Cancel</a>
+                        <a class="btn btn-sm btn-primary" href="javascript:;">Create</a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <!-- End Add Create Project Template -->
+              </li>
+
+              <!-- Divider -->
+              <li>
+                <hr class="my-7">
+              </li>
+              <!-- End Divider -->
+
+              <li class="js-add-field"
+                 data-hs-add-field-options='{
+                    "template": "#createProjectListTemplateDone",
+                    "container": "#createProjectListContainerDone",
+                    "defaultCreated": 0
+                  }'>
+                <!-- Title -->
+                <div class="js-sortable-disabled d-flex justify-content-between align-items-center mb-3">
+                  <h6 class="text-cap mb-0">Done</h6>
+
+                  <a class="js-create-field btn btn-icon btn-sm btn-white" href="javascript:;" data-toggle="tooltip" data-placement="left" title="Add project">
+                    <i class="tio-add"></i>
+                  </a>
+                </div>
+                <!-- End Title -->
+
+                <div class="js-sortable">
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom-handle card mb-3" data-href="#">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col">
+                          <h4 class="text-wrap">Create product roadmap</h4>
+                        </div>
+
+                        <div class="col-auto">
+                          <!-- Unfold -->
+                          <div class="hs-unfold card-unfold">
+                            <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                               data-hs-unfold-options='{
+                               "target": "#kanbanProjectsListDropdown7",
+                               "type": "css-animation"
+                             }'>
+                              <i class="tio-more-vertical"></i>
+                            </a>
+
+                            <div id="kanbanProjectsListDropdown7" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-edit dropdown-item-icon"></i> Rename project
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-archive dropdown-item-icon"></i> Archive project
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+
+                              <a class="dropdown-item text-danger" href="#">
+                                <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                Remove
+                              </a>
+                            </div>
+                          </div>
+                          <!-- End Unfold -->
+                        </div>
+                      </div>
+
+                      <div class="row align-items-center">
+                        <div class="col-sm-auto mb-3 mb-sm-0">
+                          <!-- Avatar Group -->
+                          <div class="avatar-group avatar-group-sm">
+                            <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                            </span>
+                          </div>
+                          <!-- End Avatar Group -->
+
+                          <span class="d-block font-size-sm">1 Assignee</span>
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">1</span>
+                            <span class="d-block font-size-sm">Tasks</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">1</span>
+                            <span class="d-block font-size-sm">Complete</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">0</span>
+                            <span class="d-block font-size-sm">Completed</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-sm">
+                          <!-- Progress -->
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <!-- End Progress -->
+                        </div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                  </div>
+                  <!-- End Card -->
+
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom-handle card mb-3" data-href="#">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col">
+                          <h4 class="text-wrap">Mobile: notifications for subscribe pages and goals</h4>
+                        </div>
+
+                        <div class="col-auto">
+                          <!-- Unfold -->
+                          <div class="hs-unfold card-unfold">
+                            <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                               data-hs-unfold-options='{
+                               "target": "#kanbanProjectsListDropdown8",
+                               "type": "css-animation"
+                             }'>
+                              <i class="tio-more-vertical"></i>
+                            </a>
+
+                            <div id="kanbanProjectsListDropdown8" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-edit dropdown-item-icon"></i> Rename project
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-archive dropdown-item-icon"></i> Archive project
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+
+                              <a class="dropdown-item text-danger" href="#">
+                                <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                Remove
+                              </a>
+                            </div>
+                          </div>
+                          <!-- End Unfold -->
+                        </div>
+                      </div>
+
+                      <div class="row align-items-center">
+                        <div class="col-sm-auto mb-3 mb-sm-0">
+                          <!-- Avatar Group -->
+                          <div class="avatar-group avatar-group-sm">
+                            <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                            </span>
+                              <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img7.jpg" alt="Image Description">
+                            </span>
+                            <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                            </span>
+                          </div>
+                          <!-- End Avatar Group -->
+
+                          <span class="d-block font-size-sm">3 Assignee</span>
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">5</span>
+                            <span class="d-block font-size-sm">Tasks</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">7</span>
+                            <span class="d-block font-size-sm">Complete</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">0</span>
+                            <span class="d-block font-size-sm">Completed</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-sm">
+                          <!-- Progress -->
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <!-- End Progress -->
+                        </div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                  </div>
+                  <!-- End Card -->
+
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom-handle card mb-3" data-href="#">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col">
+                          <h4 class="text-wrap">Allow commenting from the report view</h4>
+                        </div>
+
+                        <div class="col-auto">
+                          <!-- Unfold -->
+                          <div class="hs-unfold card-unfold">
+                            <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                               data-hs-unfold-options='{
+                               "target": "#kanbanProjectsListDropdown9",
+                               "type": "css-animation"
+                             }'>
+                              <i class="tio-more-vertical"></i>
+                            </a>
+
+                            <div id="kanbanProjectsListDropdown9" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-edit dropdown-item-icon"></i> Rename project
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-archive dropdown-item-icon"></i> Archive project
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+
+                              <a class="dropdown-item text-danger" href="#">
+                                <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                Remove
+                              </a>
+                            </div>
+                          </div>
+                          <!-- End Unfold -->
+                        </div>
+                      </div>
+
+                      <div class="row align-items-center">
+                        <div class="col-sm-auto mb-3 mb-sm-0">
+                          <!-- Avatar Group -->
+                          <div class="avatar-group avatar-group-sm">
+                            <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description">
+                            </span>
+                              <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img4.jpg" alt="Image Description">
+                            </span>
+                            <span class="avatar avatar-soft-info avatar-circle">
+                              <span class="avatar-initials">V</span>
+                            </span>
+                          </div>
+                          <!-- End Avatar Group -->
+
+                          <span class="d-block font-size-sm">3 Assignee</span>
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">3</span>
+                            <span class="d-block font-size-sm">Tasks</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">6</span>
+                            <span class="d-block font-size-sm">Complete</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">0</span>
+                            <span class="d-block font-size-sm">Completed</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-sm">
+                          <!-- Progress -->
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <!-- End Progress -->
+                        </div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                  </div>
+                  <!-- End Card -->
+
+                  <!-- Card -->
+                  <div class="js-sortable-link sortablejs-custom-handle card mb-3" data-href="#">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col">
+                          <h4 class="text-wrap">Public API</h4>
+                        </div>
+
+                        <div class="col-auto">
+                          <!-- Unfold -->
+                          <div class="hs-unfold card-unfold">
+                            <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;"
+                               data-hs-unfold-options='{
+                               "target": "#kanbanProjectsListDropdown10",
+                               "type": "css-animation"
+                             }'>
+                              <i class="tio-more-vertical"></i>
+                            </a>
+
+                            <div id="kanbanProjectsListDropdown10" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-edit dropdown-item-icon"></i> Rename project
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-star-outlined dropdown-item-icon"></i> Add to favorites
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="tio-archive dropdown-item-icon"></i> Archive project
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+
+                              <a class="dropdown-item text-danger" href="#">
+                                <i class="tio-delete-outlined dropdown-item-icon text-danger"></i>
+                                Remove
+                              </a>
+                            </div>
+                          </div>
+                          <!-- End Unfold -->
+                        </div>
+                      </div>
+
+                      <div class="row align-items-center">
+                        <div class="col-sm-auto mb-3 mb-sm-0">
+                          <!-- Avatar Group -->
+                          <div class="avatar-group avatar-group-sm">
+                            <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img4.jpg" alt="Image Description">
+                            </span>
+                            <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                            </span>
+                            <span class="avatar avatar-circle">
+                              <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                            </span>
+                          </div>
+                          <!-- End Avatar Group -->
+
+                          <span class="d-block font-size-sm">3 Assignee</span>
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">75</span>
+                            <span class="d-block font-size-sm">Tasks</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">4</span>
+                            <span class="d-block font-size-sm">Complete</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-auto mb-3 mb-sm-0">
+                          <!-- Stats -->
+                          <div class="text-center">
+                            <span class="d-block h4 mb-1">0</span>
+                            <span class="d-block font-size-sm">Completed</span>
+                          </div>
+                          <!-- End Stats -->
+                        </div>
+
+                        <div class="col-sm">
+                          <!-- Progress -->
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <!-- End Progress -->
+                        </div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                  </div>
+                  <!-- End Card -->
+                </div>
+
+                <!-- Container For Input Field -->
+                <div id="createProjectListContainerDone"></div>
+
+                <!-- Card -->
+                <a class="js-sortable-disabled js-create-field btn btn-white btn-dashed-outline" href="javascript:;">
+                  <i class="tio-add"></i> Add project
+                </a>
+                <!-- End Card -->
+
+                <!-- Add Create Project Template -->
+                <form id="createProjectListTemplateDone" style="display: none;">
+                  <div class="js-sortable-link sortablejs-custom-handle card mb-3" data-href="#">
+                    <div class="card-body">
+                      <div class="form-group">
+                        <textarea class="form-control" placeholder="What needs to be done?" aria-label="What needs to be done?"></textarea>
+                      </div>
+
+                      <div class="d-flex justify-content-end">
+                        <a class="js-delete-field btn btn-sm btn-white mr-2" href="javascript:;">Cancel</a>
+                        <a class="btn btn-sm btn-primary" href="javascript:;">Create</a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <!-- End Add Create Project Template -->
+              </li>
+            </ul>
+            <!-- End Kanban List -->
+          </div>
+          <!-- End Content -->
+        </div>
+      </div>
+      <!-- End Tab Content -->
+
+      <!-- Footer -->
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/footer/main.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/footer/container.html")
+      }
+      <!-- End Footer -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Keyboard Shortcuts -->
+    @@include("@@autopath/partials/layouts-components/sidebar-shortcuts.html")
+    <!-- End Keyboard Shortcuts -->
+
+    <!-- Activity -->
+    @@include("@@autopath/partials/layouts-components/sidebar-activity.html")
+    <!-- End Activity -->
+
+    <!-- Welcome Message Modal -->
+    @@include("@@autopath/partials/modals/modal-welcome.html")
+    <!-- End Welcome Message Modal -->
+
+    <!-- Share with people Modal -->
+    @@include("@@autopath/partials/modals/modal-share-with-people.html")
+    <!-- End Share with people Modal -->
+
+
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.js"></script>
+    <script src="@@autopath/assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+    <script src="@@autopath/node_modules/select2/dist/js/select2.full.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-add-field/dist/hs-add-field.min.js"></script>
+    <script src="@@autopath/node_modules/sortablejs/dist/sortable.umd.js"></script>
+    <script src="@@autopath/node_modules/daterangepicker/moment.min.js"></script>
+    <script src="@@autopath/node_modules/daterangepicker/daterangepicker.js"></script>
+    <script src="@@autopath/node_modules/clipboard/dist/clipboard.min.js"></script>
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <script src="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+    }
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.select2.js"></script>
+    <script src="@@autopath/assets/js/hs.sortable.js"></script>
+    <script src="@@autopath/assets/js/hs.clipboard.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // =======================================================
+
+
+        // BUILDER TOGGLE INVOKER
+        // =======================================================
+        $('.js-navbar-vertical-aside-toggle-invoker').click(function () {
+          $('.js-navbar-vertical-aside-toggle-invoker i').tooltip('hide');
+        });
+
+        @@if (layoutBuilder.header.layoutMode !== 'default') {
+          // INITIALIZATION OF MEGA MENU
+          // =======================================================
+          var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+            desktop: {
+              position: 'left'
+            }
+          }).init();
+        }
+
+        
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+        
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+        $(".js-nav-tooltip-link").on("show.bs.tooltip", function(e) {
+          if (!$("body").hasClass("navbar-vertical-aside-mini-mode")) {
+            return false;
+          }
+        });
+
+        
+        // INITIALIZATION OF UNFOLD
+        // =======================================================
+        $('.js-hs-unfold-invoker').each(function () {
+          var unfold = new HSUnfold($(this)).init();
+        });
+
+        
+        // INITIALIZATION OF FORM SEARCH
+        // =======================================================
+        $('.js-form-search').each(function () {
+          new HSFormSearch($(this)).init()
+        });
+
+        
+        // INITIALIZATION OF SELECT2
+        // =======================================================
+        $('.js-select2-custom').each(function () {
+          var select2 = $.HSCore.components.HSSelect2.init($(this));
+        });
+
+        
+        // INITIALIZATION OF ADD INPUT FILED
+        // =======================================================
+        $('.js-add-field').each(function () {
+          new HSAddField($(this)).init();
+        });
+
+        
+        // INITIALIZATION OF SORTABLE
+        // =======================================================
+        $('.js-sortable').each(function () {
+          var sortable = $.HSCore.components.HSSortable.init($(this), {
+            forceFallback: true,
+            animation: 0,
+            group: 'listGroup',
+            delay: 500,
+            delayOnTouchOnly: true
+          });
+        });
+
+        
+        // INITIALIZATION OF SORTABLE LINK
+        // =======================================================
+        $('.js-sortable-link').click(function (e) {
+          if ($(e.target).hasClass('hs-unfold') || $(e.target).parents('.hs-unfold').length) {
+            return false;
+          }
+
+          window.location.replace($(this).attr('data-href'))
+        });
+
+        
+        // INITIALIZATION OF DATERANGEPICKER
+        // =======================================================
+        $('.js-daterangepicker').daterangepicker();
+
+        $('.js-daterangepicker-times').daterangepicker({
+          timePicker: true,
+          startDate: moment().startOf('hour'),
+          endDate: moment().startOf('hour').add(32, 'hour'),
+          locale: {
+            format: 'M/DD hh:mm A'
+          }
+        });
+
+        var start = moment();
+        var end = moment();
+
+        function cb(start, end) {
+          $('#js-daterangepicker-predefined .js-daterangepicker-predefined-preview').html(start.format('MMM D') + ' - ' + end.format('MMM D, YYYY'));
+        }
+
+        $('#js-daterangepicker-predefined').daterangepicker({
+          startDate: start,
+          endDate: end,
+          ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          }
+        }, cb);
+
+        cb(start, end);
+
+        
+        // INITIALIZATION OF CLIPBOARD
+        // =======================================================
+        $('.js-clipboard').each(function() {
+          var clipboard = $.HSCore.components.HSClipboard.init(this);
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

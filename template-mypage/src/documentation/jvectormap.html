@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>jVector Map - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/leaflet/dist/leaflet.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "jvectormap.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">jVector Map</h1>
+                  <p class="lead">Many maps of the world, world regions, countries and cities.</p>
+                  <a href="https://jvectormap.com/" target="_blank">jVector Map documentation <i class="tio-open-in-new"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="how-to-use" class="hs-docs-heading">
+              How to use <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/assets/vendor/jvectormap/jquery-jvectormap-2.0.3.min.js"&gt;&lt;/script&gt;
+                &lt;script src="@@autopath/assets/vendor/jvectormap/tests/assets/jquery-jvectormap-world-mill-en.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Front</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/assets/js/hs.jvector-map.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code>&lt;/body&gt;</code> tag, to enable it.</p>
+
+            <pre class="rounded">
+              <code class="language-html" data-lang="html">
+                &lt;script&gt;
+                  $(document).on('ready', function () {
+                    // initialization of jvectormap
+                    $('.js-jvectormap').each(function () {
+                      var jVectorMap = $.HSCore.components.HSJVectorMap.init($(this));
+                    });
+                  });
+                &lt;/script&gt;
+              </code>
+            </pre>
+
+            <!-- Heading -->
+            <h2 id="basic-example" class="hs-docs-heading">
+              Basic example <a class="anchorjs-link" href="#basic-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- jVector Map -->
+                  <div style="height: 20rem;">
+                    <div class="js-jvectormap jvectormap-custom card-jvectormap"
+                         data-hs-jvector-map-options='{
+                           "tipCentered": true,
+                           "focusOn": {
+                             "x": 0.5,
+                             "y": 0.5,
+                             "scale": 1
+                           },
+                           "regionStyle": {
+                            "initial": {
+                              "fill": "#bdc5d1"
+                            },
+                            "hover": {
+                              "fill": "#77838f"
+                            }
+                           },
+                           "backgroundColor": "#fff",
+                           "markerStyle": {
+                             "initial": {
+                               "stroke-width": 2,
+                               "fill": "@@vars.style.color",
+                               "stroke": "#fff",
+                               "r": 6
+                             },
+                             "hover": {
+                              "fill": "@@vars.style.color",
+                              "stroke": "#fff"
+                             }
+                           },
+                           "markers": [
+                             {
+                               "latLng": [38, -97],
+                               "name": "United States"
+                             },
+                             {
+                               "latLng": [20, 77],
+                               "name": "India"
+                             },
+                             {
+                               "latLng": [60, -95],
+                               "name": "Canada"
+                             },
+                             {
+                               "latLng": [51, 9],
+                               "name": "Germany"
+                             },
+                             {
+                               "latLng": [54, -2],
+                               "name": "United Kingdom"
+                             }
+                           ]
+                         }'></div>
+                  </div>
+                  <!-- End jVector Map -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- jVector Map --&gt;
+                      &lt;div style="height: 20rem;"&gt;
+                        &lt;div class="js-jvectormap jvectormap-custom card-jvectormap"
+                             data-hs-jvector-map-options='{
+                               "tipCentered": true,
+                               "focusOn": {
+                                 "x": 0.5,
+                                 "y": 0.5,
+                                 "scale": 1
+                               },
+                               "regionStyle": {
+                                "initial": {
+                                  "fill": "#bdc5d1"
+                                },
+                                "hover": {
+                                  "fill": "#77838f"
+                                }
+                               },
+                               "backgroundColor": "#fff",
+                               "markerStyle": {
+                                 "initial": {
+                                   "stroke-width": 2,
+                                   "fill": "@@vars.style.color",
+                                   "stroke": "#fff",
+                                   "r": 6
+                                 },
+                                 "hover": {
+                                  "fill": "@@vars.style.color",
+                                  "stroke": "#fff"
+                                 }
+                               },
+                               "markers": [
+                                 {
+                                   "latLng": [38, -97],
+                                   "name": "United States"
+                                 },
+                                 {
+                                   "latLng": [20, 77],
+                                   "name": "India"
+                                 },
+                                 {
+                                   "latLng": [60, -95],
+                                   "name": "Canada"
+                                 },
+                                 {
+                                   "latLng": [51, 9],
+                                   "name": "Germany"
+                                 },
+                                 {
+                                   "latLng": [54, -2],
+                                   "name": "United Kingdom"
+                                 }
+                               ]
+                             }'&gt;&lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End jVector Map --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="custom-with-stats" class="hs-docs-heading">
+              Custom with stats <a class="anchorjs-link" href="#custom-with-stats" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab2" data-toggle="pill" href="#nav-js2" role="tab" aria-controls="nav-js2" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <!-- Vector Map -->
+                  <div style="height: 30rem;">
+                    <div class="js-jvectormap-custom-with-stats jvectormap-custom card-jvectormap"
+                         data-hs-jvector-map-options='{
+                           "tipCentered": true,
+                           "focusOn": {
+                             "x": 0.5,
+                             "y": 0.5,
+                             "scale": 1.5
+                           },
+                           "regionStyle": {
+                            "initial": {
+                              "fill": "rgba(55, 125, 255, .3)"
+                            },
+                            "hover": {
+                              "fill": "@@vars.style.color"
+                            }
+                           },
+                           "backgroundColor": "#132144",
+                           "markerStyle": {
+                             "initial": {
+                               "stroke-width": 0,
+                               "fill": "rgba(255,255,255,.5)",
+                               "stroke": "rgba(255,255,255,.5)",
+                               "r": 6
+                             },
+                             "hover": {
+                              "stroke-width": 0,
+                              "fill": "#fff",
+                              "stroke": "#fff"
+                             }
+                            }
+                           }'></div>
+                  </div>
+                  <!-- End Vector Map -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Vector Map --&gt;
+                      &lt;div style="height: 30rem;"&gt;
+                        &lt;div class="js-jvectormap-custom-with-stats jvectormap-custom card-jvectormap"
+                             data-hs-jvector-map-options='{
+                               "tipCentered": true,
+                               "focusOn": {
+                                 "x": 0.5,
+                                 "y": 0.5,
+                                 "scale": 1.5
+                               },
+                               "regionStyle": {
+                                "initial": {
+                                  "fill": "rgba(55, 125, 255, .3)"
+                                },
+                                "hover": {
+                                  "fill": "@@vars.style.color"
+                                }
+                               },
+                               "backgroundColor": "#132144",
+                               "markerStyle": {
+                                 "initial": {
+                                   "stroke-width": 0,
+                                   "fill": "rgba(255,255,255,.5)",
+                                   "stroke": "rgba(255,255,255,.5)",
+                                   "r": 6
+                                 },
+                                 "hover": {
+                                  "stroke-width": 0,
+                                  "fill": "#fff",
+                                  "stroke": "#fff"
+                                 }
+                                }
+                               }'&gt;&lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Vector Map --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js2" role="tabpanel" aria-labelledby="nav-jsTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          var markers = [
+                            {
+                              &quot;latLng&quot;: [38, -97],
+                              &quot;name&quot;: &quot;United States&quot;,
+                              &quot;active&quot;: 200,
+                              &quot;new&quot;: 40,
+                              &quot;flag&quot;: &quot;@@autopath/node_modules/flag-icon-css/flags/1x1/us.svg&quot;,
+                              &quot;code&quot;: &quot;US&quot;
+                            },
+                            {
+                              &quot;latLng&quot;: [20, 77],
+                              &quot;name&quot;: &quot;India&quot;,
+                              &quot;active&quot;: 300,
+                              &quot;new&quot;: 100,
+                              &quot;flag&quot;: &quot;@@autopath/node_modules/flag-icon-css/flags/1x1/in.svg&quot;,
+                              &quot;code&quot;: &quot;IN&quot;
+                            },
+                            {
+                              &quot;latLng&quot;: [60, -105],
+                              &quot;name&quot;: &quot;Canada&quot;,
+                              &quot;active&quot;: 400,
+                              &quot;new&quot;: 500,
+                              &quot;flag&quot;: &quot;@@autopath/node_modules/flag-icon-css/flags/1x1/ca.svg&quot;,
+                              &quot;code&quot;: &quot;CA&quot;
+                            },
+                            {
+                              &quot;latLng&quot;: [51, 9],
+                              &quot;name&quot;: &quot;Germany&quot;,
+                              &quot;active&quot;: 120,
+                              &quot;new&quot;: 600,
+                              &quot;flag&quot;: &quot;@@autopath/node_modules/flag-icon-css/flags/1x1/de.svg&quot;,
+                              &quot;code&quot;: &quot;DE&quot;
+                            },
+                            {
+                              &quot;latLng&quot;: [54, -2],
+                              &quot;name&quot;: &quot;United Kingdom&quot;,
+                              &quot;active&quot;: 140,
+                              &quot;new&quot;: 100,
+                              &quot;flag&quot;: &quot;@@autopath/node_modules/flag-icon-css/flags/1x1/gb.svg&quot;,
+                              &quot;code&quot;: &quot;GB&quot;
+                            },
+                            {
+                              &quot;latLng&quot;: [1.3, 103.8],
+                              &quot;name&quot;: &quot;Singapore&quot;,
+                              &quot;active&quot;: 56,
+                              &quot;new&quot;: 0,
+                              &quot;flag&quot;: &quot;@@autopath/node_modules/flag-icon-css/flags/1x1/sg.svg&quot;,
+                              &quot;code&quot;: &quot;SG&quot;
+                            },
+                            {
+                              &quot;latLng&quot;: [9.0, 8.6],
+                              &quot;name&quot;: &quot;Nigeria&quot;,
+                              &quot;active&quot;: 34,
+                              &quot;new&quot;: 2,
+                              &quot;flag&quot;: &quot;@@autopath/node_modules/flag-icon-css/flags/1x1/ng.svg&quot;,
+                              &quot;code&quot;: &quot;NG&quot;
+                            },
+                            {
+                              &quot;latLng&quot;: [61.5, 105.3],
+                              &quot;name&quot;: &quot;Russia&quot;,
+                              &quot;active&quot;: 135,
+                              &quot;new&quot;: 46,
+                              &quot;flag&quot;: &quot;@@autopath/node_modules/flag-icon-css/flags/1x1/ru.svg&quot;,
+                              &quot;code&quot;: &quot;RU&quot;
+                            },
+                            {
+                              &quot;latLng&quot;: [35.8, 104.1],
+                              &quot;name&quot;: &quot;China&quot;,
+                              &quot;active&quot;: 325,
+                              &quot;new&quot;: 75,
+                              &quot;flag&quot;: &quot;@@autopath/node_modules/flag-icon-css/flags/1x1/cn.svg&quot;,
+                              &quot;code&quot;: &quot;CN&quot;
+                            },
+                            {
+                              &quot;latLng&quot;: [-10, -51],
+                              &quot;name&quot;: &quot;Brazil&quot;,
+                              &quot;active&quot;: 242,
+                              &quot;new&quot;: 17,
+                              &quot;flag&quot;: &quot;@@autopath/node_modules/flag-icon-css/flags/1x1/br.svg&quot;,
+                              &quot;code&quot;: &quot;BR&quot;
+                            }
+                          ]
+
+                          $('.js-jvectormap-custom-with-stats').each(function () {
+                            var jVectorMap = $.HSCore.components.HSJVectorMap.init($(this), {
+                              markers: markers,
+                              onRegionTipShow: function(e, el, code){
+                                let marker = markers.find(function (marker) {
+                                  return marker.code == code
+                                });
+
+                                if (marker) {
+                                  el.html(
+                                    '&lt;span class=&quot;d-flex align-items-center mb-2&quot;&gt;' +
+                                    '&lt;img class=&quot;avatar avatar-xss avatar-circle mr-2&quot; src=&quot;' + marker['flag'] + '&quot; alt=&quot;Flag&quot;&gt;' +
+                                    '&lt;span class=&quot;h5 mb-0&quot;&gt;' + marker['name'] + '&lt;/span&gt;' +
+                                    '&lt;/span&gt;' +
+                                    '&lt;dl class=&quot;row&quot; style=&quot;max-width: 10rem;&quot;&gt;' +
+                                    '&lt;dt class=&quot;col-sm-6 mb-0&quot;&gt;Active:&lt;/dt&gt;' +
+                                    '&lt;dd class=&quot;col-sm-6 text-sm-right mb-0&quot;&gt;' + marker['active'] + '&lt;/dd&gt;' +
+                                    '&lt;dt class=&quot;col-sm-6 mb-0&quot;&gt;New:&lt;/dt&gt;' +
+                                    '&lt;dd class=&quot;col-sm-6 text-sm-right mb-0&quot;&gt;' + marker['new'] + '&lt;/dd&gt;' +
+                                    '&lt;/dl&gt;'
+                                  );
+                                } else {
+                                  return false;
+                                }
+                              },
+                              onMarkerTipShow: function(e, el, code){
+                                el.html(
+                                  '&lt;span class=&quot;d-flex align-items-center mb-2&quot;&gt;' +
+                                  '&lt;img class=&quot;avatar avatar-xss avatar-circle mr-2&quot; src=&quot;' + markers[code]['flag'] + '&quot; alt=&quot;Flag&quot;&gt;' +
+                                  '&lt;span class=&quot;h5 mb-0&quot;&gt;' + markers[code]['name'] + '&lt;/span&gt;' +
+                                  '&lt;/span&gt;' +
+                                  '&lt;dl class=&quot;row&quot; style=&quot;max-width: 10rem;&quot;&gt;' +
+                                  '&lt;dt class=&quot;col-sm-6 mb-0&quot;&gt;Active:&lt;/dt&gt;' +
+                                  '&lt;dd class=&quot;col-sm-6 text-sm-right mb-0&quot;&gt;' + markers[code]['active'] + '&lt;/dd&gt;' +
+                                  '&lt;dt class=&quot;col-sm-6 mb-0&quot;&gt;New:&lt;/dt&gt;' +
+                                  '&lt;dd class=&quot;col-sm-6 text-sm-right mb-0&quot;&gt;' + markers[code]['new'] + '&lt;/dd&gt;' +
+                                  '&lt;/dl&gt;'
+                                );
+                              }
+                            });
+                          });
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="methods" class="hs-docs-heading">
+              Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card overflow-hidden">
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-thead-bordered card-table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Parameters</th>
+                      <th style="width: 50%;">Description</th>
+                      <th class="text-nowrap">Default value</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p><code>zoomOnScroll</code></p>
+                      </td>
+                      <td>Zoom map on scroll event.</td>
+                      <td><code>false</code></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p><code>tipCentered</code></p>
+                      </td>
+                      <td>Set tooltip position on the top.</td>
+                      <td><code>false</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+    <script src="@@autopath/assets/vendor/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="@@autopath/assets/vendor/jvectormap/tests/assets/jquery-jvectormap-world-mill-en.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+    <script src="@@autopath/assets/js/hs.jvector-map.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+
+
+        // INITIALIZATION OF JVECTORMAP
+        // =======================================================
+        $('.js-jvectormap').each(function () {
+          var jVectorMap = $.HSCore.components.HSJVectorMap.init($(this));
+        });
+
+        
+        // INITIALIZATION OF JVECTORMAP
+        // =======================================================
+        var markers = [
+          {
+            "latLng": [38, -97],
+            "name": "United States",
+            "active": 200,
+            "new": 40,
+            "flag": "@@autopath/node_modules/flag-icon-css/flags/1x1/us.svg",
+            "code": "US"
+          },
+          {
+            "latLng": [20, 77],
+            "name": "India",
+            "active": 300,
+            "new": 100,
+            "flag": "@@autopath/node_modules/flag-icon-css/flags/1x1/in.svg",
+            "code": "IN"
+          },
+          {
+            "latLng": [60, -105],
+            "name": "Canada",
+            "active": 400,
+            "new": 500,
+            "flag": "@@autopath/node_modules/flag-icon-css/flags/1x1/ca.svg",
+            "code": "CA"
+          },
+          {
+            "latLng": [51, 9],
+            "name": "Germany",
+            "active": 120,
+            "new": 600,
+            "flag": "@@autopath/node_modules/flag-icon-css/flags/1x1/de.svg",
+            "code": "DE"
+          },
+          {
+            "latLng": [54, -2],
+            "name": "United Kingdom",
+            "active": 140,
+            "new": 100,
+            "flag": "@@autopath/node_modules/flag-icon-css/flags/1x1/gb.svg",
+            "code": "GB"
+          },
+          {
+            "latLng": [1.3, 103.8],
+            "name": "Singapore",
+            "active": 56,
+            "new": 0,
+            "flag": "@@autopath/node_modules/flag-icon-css/flags/1x1/sg.svg",
+            "code": "SG"
+          },
+          {
+            "latLng": [9.0, 8.6],
+            "name": "Nigeria",
+            "active": 34,
+            "new": 2,
+            "flag": "@@autopath/node_modules/flag-icon-css/flags/1x1/ng.svg",
+            "code": "NG"
+          },
+          {
+            "latLng": [61.5, 105.3],
+            "name": "Russia",
+            "active": 135,
+            "new": 46,
+            "flag": "@@autopath/node_modules/flag-icon-css/flags/1x1/ru.svg",
+            "code": "RU"
+          },
+          {
+            "latLng": [35.8, 104.1],
+            "name": "China",
+            "active": 325,
+            "new": 75,
+            "flag": "@@autopath/node_modules/flag-icon-css/flags/1x1/cn.svg",
+            "code": "CN"
+          },
+          {
+            "latLng": [-10, -51],
+            "name": "Brazil",
+            "active": 242,
+            "new": 17,
+            "flag": "@@autopath/node_modules/flag-icon-css/flags/1x1/br.svg",
+            "code": "BR"
+          }
+        ]
+
+        $('.js-jvectormap-custom-with-stats').each(function () {
+          var jVectorMap = $.HSCore.components.HSJVectorMap.init($(this), {
+            markers: markers,
+            onRegionTipShow: function(e, el, code){
+              let marker = markers.find(function (marker) {
+                return marker.code == code
+              });
+
+              if (marker) {
+                el.html(
+                  '<span class="d-flex align-items-center mb-2">' +
+                  '<img class="avatar avatar-xss avatar-circle mr-2" src="' + marker['flag'] + '" alt="Flag">' +
+                  '<span class="h5 mb-0">' + marker['name'] + '</span>' +
+                  '</span>' +
+                  '<dl class="row" style="max-width: 10rem;">' +
+                  '<dt class="col-sm-6 mb-0">Active:</dt>' +
+                  '<dd class="col-sm-6 text-sm-right mb-0">' + marker['active'] + '</dd>' +
+                  '<dt class="col-sm-6 mb-0">New:</dt>' +
+                  '<dd class="col-sm-6 text-sm-right mb-0">' + marker['new'] + '</dd>' +
+                  '</dl>'
+                );
+              } else {
+                return false;
+              }
+            },
+            onMarkerTipShow: function(e, el, code){
+              el.html(
+                '<span class="d-flex align-items-center mb-2">' +
+                '<img class="avatar avatar-xss avatar-circle mr-2" src="' + markers[code]['flag'] + '" alt="Flag">' +
+                '<span class="h5 mb-0">' + markers[code]['name'] + '</span>' +
+                '</span>' +
+                '<dl class="row" style="max-width: 10rem;">' +
+                '<dt class="col-sm-6 mb-0">Active:</dt>' +
+                '<dd class="col-sm-6 text-sm-right mb-0">' + markers[code]['active'] + '</dd>' +
+                '<dt class="col-sm-6 mb-0">New:</dt>' +
+                '<dd class="col-sm-6 text-sm-right mb-0">' + markers[code]['new'] + '</dd>' +
+                '</dl>'
+              );
+            }
+          });
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

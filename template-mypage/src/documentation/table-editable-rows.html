@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Editable Rows - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+    <link rel="stylesheet" href="@@autopath/assets/vendor/hs-sticky-header/src/hs.sticky-header.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "table-editable-rows.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Editable Rows</h1>
+                  <p class="lead">Table Edits is a light (1.7k) jQuery plugin for making table rows editable. Built as minimally as possible so it's easy to extend.</p>
+                  <a href="http://nathancahill.github.io/table-edits/" target="_blank">Table Edits documentation <i class="tio-open-in-new"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="how-to-use" class="hs-docs-heading">
+              How to use <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/node_modules/table-edits/build/table-edits.min.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code>&lt;/body&gt;</code> tag, to enable it.</p>
+
+            <pre class="rounded">
+              <code class="language-html" data-lang="html">
+                &lt;script&gt;
+                  $(document).on('ready', function () {
+                    // INITIALIZATION OF EDITABLE TABLE
+                    // =======================================================
+                    $('.js-editable-table tbody tr').editable({
+                      keyboard: true,
+                      dblclick: true,
+                      button: true,
+                      buttonSelector: '.js-edit',
+                      maintainWidth: true,
+                      edit: function (values) {
+                        $('.js-edit .js-edit-icon', this).removeClass('tio-edit').addClass('tio-done');
+                        $(this).find('td[data-field] input').addClass('form-control form-control-sm');
+                      },
+                      save: function (values) {
+                        $('.js-edit .js-edit-icon', this).removeClass('tio-done').addClass('tio-edit');
+                      },
+                      cancel: function (values) {
+                        $('.js-edit .js-edit-icon', this).removeClass('tio-done').addClass('tio-edit');
+                      }
+                    });
+                  });
+                &lt;/script&gt;
+              </code>
+            </pre>
+
+            <!-- Heading -->
+            <h2 id="example" class="hs-docs-heading">
+              Example <a class="anchorjs-link" href="#example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Click <code>Edit</code> button in the table to see it in action.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab14" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab14" data-toggle="pill" href="#nav-result14" role="tab" aria-controls="nav-result14" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab14" data-toggle="pill" href="#nav-html14" role="tab" aria-controls="nav-html14" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent14">
+                <div class="tab-pane fade p-4 show active" id="nav-result14" role="tabpanel" aria-labelledby="nav-resultTab14">
+                  <!-- Card -->
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="card-header-title">Users</h4>
+                    </div>
+
+                    <!-- Table -->
+                    <div class="table-responsive">
+                      <table class="js-editable-table table table-lg table-borderless table-thead-bordered table-nowrap table-align-middle">
+                        <thead class="thead-light">
+                          <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Country</th>
+                            <th>Role</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td data-field="name">Amanda Harvey <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></td>
+                            <td data-field="position">Director</td>
+                            <td data-field="country">United Kingdom <span class="text-hide">Code: GB</span></td>
+                            <td data-field="role">Employee</td>
+                            <td>
+                              <a class="js-edit btn btn-sm btn-white" href="javascript:;">
+                                <i class="js-edit-icon tio-edit"></i> Edit
+                              </a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td data-field="name">Anne Richard</td>
+                            <td data-field="position">Seller</td>
+                            <td data-field="country">United States <span class="text-hide">Code: US</span></td>
+                            <td data-field="role">Employee</td>
+                            <td>
+                              <a class="js-edit btn btn-sm btn-white" href="javascript:;">
+                                <i class="js-edit-icon tio-edit"></i> Edit
+                              </a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td data-field="name">David Harrison <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></td>
+                            <td data-field="position">Unknown</td>
+                            <td data-field="country">United States <span class="text-hide">Code: US</span></td>
+                            <td data-field="role">Employee</td>
+                            <td>
+                              <a class="js-edit btn btn-sm btn-white" href="javascript:;">
+                                <i class="js-edit-icon tio-edit"></i> Edit
+                              </a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td data-field="name">Finch Hoot</td>
+                            <td data-field="position">Designer</td>
+                            <td data-field="country">Argentina <span class="text-hide">Code: AR</span></td>
+                            <td data-field="role">Employee</td>
+                            <td>
+                              <a class="js-edit btn btn-sm btn-white" href="javascript:;">
+                                <i class="js-edit-icon tio-edit"></i> Edit
+                              </a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td data-field="name">Bob Dean</td>
+                            <td data-field="position">Executive director</td>
+                            <td data-field="country">Austria <span class="text-hide">Code: AT</span></td>
+                            <td data-field="role">Employee</td>
+                            <td>
+                              <a class="js-edit btn btn-sm btn-white" href="javascript:;">
+                                <i class="js-edit-icon tio-edit"></i> Edit
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- End Table -->
+                  </div>
+                  <!-- End Card -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html14" role="tabpanel" aria-labelledby="nav-htmlTab14">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Card --&gt;
+                      &lt;div class="card"&gt;
+                        &lt;div class="card-header"&gt;
+                          &lt;h4 class="card-header-title"&gt;Users&lt;/h4&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Table --&gt;
+                        &lt;div class="table-responsive"&gt;
+                          &lt;table class="js-editable-table table table-lg table-borderless table-thead-bordered table-nowrap table-align-middle"&gt;
+                            &lt;thead class="thead-light"&gt;
+                              &lt;tr&gt;
+                                &lt;th&gt;Name&lt;/th&gt;
+                                &lt;th&gt;Position&lt;/th&gt;
+                                &lt;th&gt;Country&lt;/th&gt;
+                                &lt;th&gt;Role&lt;/th&gt;
+                                &lt;th&gt;&lt;/th&gt;
+                              &lt;/tr&gt;
+                            &lt;/thead&gt;
+
+                            &lt;tbody&gt;
+                              &lt;tr&gt;
+                                &lt;td data-field="name"&gt;Amanda Harvey &lt;i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"&gt;&lt;/i&gt;&lt;/td&gt;
+                                &lt;td data-field="position"&gt;Director&lt;/td&gt;
+                                &lt;td data-field="country"&gt;United Kingdom &lt;span class="text-hide"&gt;Code: GB&lt;/span&gt;&lt;/td&gt;
+                                &lt;td data-field="role"&gt;Employee&lt;/td&gt;
+                                &lt;td&gt;
+                                  &lt;a class="js-edit btn btn-sm btn-white" href="javascript:;"&gt;
+                                    &lt;i class="js-edit-icon tio-edit"&gt;&lt;/i&gt; Edit
+                                  &lt;/a&gt;
+                                &lt;/td&gt;
+                              &lt;/tr&gt;
+
+                              &lt;tr&gt;
+                                &lt;td data-field="name"&gt;Anne Richard&lt;/td&gt;
+                                &lt;td data-field="position"&gt;Seller&lt;/td&gt;
+                                &lt;td data-field="country"&gt;United States &lt;span class="text-hide"&gt;Code: US&lt;/span&gt;&lt;/td&gt;
+                                &lt;td data-field="role"&gt;Employee&lt;/td&gt;
+                                &lt;td&gt;
+                                  &lt;a class="js-edit btn btn-sm btn-white" href="javascript:;"&gt;
+                                    &lt;i class="js-edit-icon tio-edit"&gt;&lt;/i&gt; Edit
+                                  &lt;/a&gt;
+                                &lt;/td&gt;
+                              &lt;/tr&gt;
+
+                              &lt;tr&gt;
+                                &lt;td data-field="name"&gt;David Harrison &lt;i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"&gt;&lt;/i&gt;&lt;/td&gt;
+                                &lt;td data-field="position"&gt;Unknown&lt;/td&gt;
+                                &lt;td data-field="country"&gt;United States &lt;span class="text-hide"&gt;Code: US&lt;/span&gt;&lt;/td&gt;
+                                &lt;td data-field="role"&gt;Employee&lt;/td&gt;
+                                &lt;td&gt;
+                                  &lt;a class="js-edit btn btn-sm btn-white" href="javascript:;"&gt;
+                                    &lt;i class="js-edit-icon tio-edit"&gt;&lt;/i&gt; Edit
+                                  &lt;/a&gt;
+                                &lt;/td&gt;
+                              &lt;/tr&gt;
+
+                              &lt;tr&gt;
+                                &lt;td data-field="name"&gt;Finch Hoot&lt;/td&gt;
+                                &lt;td data-field="position"&gt;Designer&lt;/td&gt;
+                                &lt;td data-field="country"&gt;Argentina &lt;span class="text-hide"&gt;Code: AR&lt;/span&gt;&lt;/td&gt;
+                                &lt;td data-field="role"&gt;Employee&lt;/td&gt;
+                                &lt;td&gt;
+                                  &lt;a class="js-edit btn btn-sm btn-white" href="javascript:;"&gt;
+                                    &lt;i class="js-edit-icon tio-edit"&gt;&lt;/i&gt; Edit
+                                  &lt;/a&gt;
+                                &lt;/td&gt;
+                              &lt;/tr&gt;
+
+                              &lt;tr&gt;
+                                &lt;td data-field="name"&gt;Bob Dean&lt;/td&gt;
+                                &lt;td data-field="position"&gt;Executive director&lt;/td&gt;
+                                &lt;td data-field="country"&gt;Austria &lt;span class="text-hide"&gt;Code: AT&lt;/span&gt;&lt;/td&gt;
+                                &lt;td data-field="role"&gt;Employee&lt;/td&gt;
+                                &lt;td&gt;
+                                  &lt;a class="js-edit btn btn-sm btn-white" href="javascript:;"&gt;
+                                    &lt;i class="js-edit-icon tio-edit"&gt;&lt;/i&gt; Edit
+                                  &lt;/a&gt;
+                                &lt;/td&gt;
+                              &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                          &lt;/table&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Table --&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Card --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+    <script src="@@autopath/node_modules/table-edits/build/table-edits.min.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+
+
+        // INITIALIZATION OF EDITABLE TABLE
+        // =======================================================
+        $('.js-editable-table tbody tr').editable({
+          keyboard: true,
+          dblclick: true,
+          button: true,
+          buttonSelector: '.js-edit',
+          maintainWidth: true,
+          edit: function (values) {
+            $('.js-edit .js-edit-icon', this).removeClass('tio-edit').addClass('tio-done');
+            $(this).find('td[data-field] input').addClass('form-control form-control-sm');
+          },
+          save: function (values) {
+            $('.js-edit .js-edit-icon', this).removeClass('tio-done').addClass('tio-edit');
+          },
+          cancel: function (values) {
+            $('.js-edit .js-edit-icon', this).removeClass('tio-done').addClass('tio-edit');
+          }
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

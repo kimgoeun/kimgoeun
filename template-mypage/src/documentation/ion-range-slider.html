@@ -1,0 +1,2232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Range slider - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/ion-rangeslider/css/ion.rangeSlider.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "ion-range-slider.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Range Slider</h1>
+                  <p class="lead">It is an easy and responsive range slider.</p>
+                  <a href="http://ionden.com/a/plugins/ion.rangeSlider/" target="_blank">Ion.RangeSlider documentation <i class="tio-open-in-new"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="how-to-use" class="hs-docs-heading">
+              How to use <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Copy-paste the stylesheet <code>&lt;link&gt;</code> into your <code>&lt;head&gt;</code> to load the CSS.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;link rel="stylesheet" href="@@autopath/node_modules/ion-rangeslider/css/ion.rangeSlider.css"&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/node_modules/ion-rangeslider/js/ion.rangeSlider.min.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Front</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/assets/js/ion-range-slider.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code>&lt;/body&gt;</code> tag, to enable it.</p>
+
+            <pre class="rounded">
+              <code class="language-html" data-lang="html">
+                &lt;script&gt;
+                  $(document).on('ready', function () {
+                    // INITIALIZATION OF ION RANGE SLIDER
+                    // =======================================================
+                    $('.js-ion-range-slider').each(function () {
+                      $.HSCore.components.HSIonRangeSlider.init($(this));
+                    });
+                  });
+                &lt;/script&gt;
+              </code>
+            </pre>
+
+            <!-- Heading -->
+            <h2 id="basic-examples" class="hs-docs-heading">
+              Basic examples <a class="anchorjs-link" href="#basic-examples" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Start without parameters.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade py-10 px-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- Range Slider -->
+                  <input class="js-ion-range-slider" type="text"
+                         data-hs-ion-range-slider-options='{
+                           "extra_classes": "range-slider-custom"
+                         }'>
+                  <!-- End Range Slider -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Range Slider --&gt;
+                      &lt;input class="js-ion-range-slider" type="text"
+                             data-hs-ion-range-slider-options='{
+                               "extra_classes": "range-slider-custom"
+                             }'&gt;
+                      &lt;!-- End Range Slider --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Set min value, max value and start point.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade py-10 px-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <!-- Range Slider -->
+                  <input class="js-ion-range-slider" type="text"
+                         data-hs-ion-range-slider-options='{
+                           "extra_classes": "range-slider-custom range-slider-indicator",
+                           "hide_from_to": false,
+                           "min": 100,
+                           "max": 1000,
+                           "from": 500
+                         }'>
+                  <!-- End Range Slider -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Range Slider --&gt;
+                      &lt;input class="js-ion-range-slider" type="text"
+                             data-hs-ion-range-slider-options='{
+                               "extra_classes": "range-slider-custom range-slider-indicator",
+                               "hide_from_to": false,
+                               "min": 100,
+                               "max": 1000,
+                               "from": 500
+                             }'&gt;
+                      &lt;!-- End Range Slider --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Set type to double and specify range, also showing grid and adding prefix "$".</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab3" data-toggle="pill" href="#nav-result3" role="tab" aria-controls="nav-result3" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab3" data-toggle="pill" href="#nav-html3" role="tab" aria-controls="nav-html3" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent3">
+                <div class="tab-pane fade py-10 px-4 show active" id="nav-result3" role="tabpanel" aria-labelledby="nav-resultTab3">
+                  <!-- Range Slider -->
+                  <input class="js-ion-range-slider" type="text"
+                         data-hs-ion-range-slider-options='{
+                           "extra_classes": "range-slider-custom range-slider-indicator range-slider-grid",
+                           "type": "double",
+                           "grid": true,
+                           "hide_from_to": false,
+                           "prefix": "$",
+                           "min": 0,
+                           "max": 500,
+                           "from": 25,
+                           "to": 475
+                         }'>
+                  <!-- End Range Slider -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html3" role="tabpanel" aria-labelledby="nav-htmlTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Range Slider --&gt;
+                      &lt;input class="js-ion-range-slider" type="text"
+                             data-hs-ion-range-slider-options='{
+                               "extra_classes": "range-slider-custom range-slider-indicator range-slider-grid",
+                               "type": "double",
+                               "grid": true,
+                               "hide_from_to": false,
+                               "prefix": "$",
+                               "min": 0,
+                               "max": 500,
+                               "from": 25,
+                               "to": 475
+                             }'&gt;
+                      &lt;!-- End Range Slider --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="setup-range-and-step" class="hs-docs-heading">
+              Set up range and step <a class="anchorjs-link" href="#setup-range-and-step" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Set up range with negative values.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab4" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab4" data-toggle="pill" href="#nav-result4" role="tab" aria-controls="nav-result4" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab4" data-toggle="pill" href="#nav-html4" role="tab" aria-controls="nav-html4" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent4">
+                <div class="tab-pane fade py-10 px-4 show active" id="nav-result4" role="tabpanel" aria-labelledby="nav-resultTab4">
+                  <!-- Range Slider -->
+                  <input class="js-ion-range-slider" type="text"
+                         data-hs-ion-range-slider-options='{
+                           "extra_classes": "range-slider-custom range-slider-indicator range-slider-grid",
+                           "type": "double",
+                           "grid": true,
+                           "hide_from_to": false,
+                           "min": -1000,
+                           "max": 1000,
+                           "from": -500,
+                           "to": 500
+                         }'>
+                  <!-- End Range Slider -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html4" role="tabpanel" aria-labelledby="nav-htmlTab4">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Range Slider --&gt;
+                      &lt;input class="js-ion-range-slider" type="text"
+                             data-hs-ion-range-slider-options='{
+                               "extra_classes": "range-slider-custom range-slider-indicator range-slider-grid",
+                               "type": "double",
+                               "grid": true,
+                               "hide_from_to": false,
+                               "min": -1000,
+                               "max": 1000,
+                               "from": -500,
+                               "to": 500
+                             }'&gt;
+                      &lt;!-- End Range Slider --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Using step 250.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab5" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab5" data-toggle="pill" href="#nav-result5" role="tab" aria-controls="nav-result5" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab5" data-toggle="pill" href="#nav-html5" role="tab" aria-controls="nav-html5" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent5">
+                <div class="tab-pane fade py-10 px-4 show active" id="nav-result5" role="tabpanel" aria-labelledby="nav-resultTab5">
+                  <!-- Range Slider -->
+                  <input class="js-ion-range-slider" type="text"
+                         data-hs-ion-range-slider-options='{
+                           "extra_classes": "range-slider-custom range-slider-indicator range-slider-grid",
+                           "type": "double",
+                           "grid": true,
+                           "hide_from_to": false,
+                           "min": -1000,
+                           "max": 1000,
+                           "from": -500,
+                           "to": 500,
+                           "step": 250
+                         }'>
+                  <!-- End Range Slider -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html5" role="tabpanel" aria-labelledby="nav-htmlTab5">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Range Slider --&gt;
+                      &lt;input class="js-ion-range-slider" type="text"
+                             data-hs-ion-range-slider-options='{
+                               "extra_classes": "range-slider-custom range-slider-indicator range-slider-grid",
+                               "type": "double",
+                               "grid": true,
+                               "hide_from_to": false,
+                               "min": -1000,
+                               "max": 1000,
+                               "from": -500,
+                               "to": 500,
+                               "step": 250
+                             }'&gt;
+                      &lt;!-- End Range Slider --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Set up range with fractional values, using fractional step.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab6" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab6" data-toggle="pill" href="#nav-result6" role="tab" aria-controls="nav-result6" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab6" data-toggle="pill" href="#nav-html6" role="tab" aria-controls="nav-html6" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent6">
+                <div class="tab-pane fade py-10 px-4 show active" id="nav-result6" role="tabpanel" aria-labelledby="nav-resultTab6">
+                  <!-- Range Slider -->
+                  <input class="js-ion-range-slider" type="text"
+                         data-hs-ion-range-slider-options='{
+                           "extra_classes": "range-slider-custom range-slider-indicator range-slider-grid",
+                           "type": "double",
+                           "grid": true,
+                           "hide_from_to": false,
+                           "min": -12.8,
+                           "max": 12.8,
+                           "from": -3.2,
+                           "to": 3.2,
+                           "step": 0.1
+                         }'>
+                  <!-- End Range Slider -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html6" role="tabpanel" aria-labelledby="nav-htmlTab6">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Range Slider --&gt;
+                      &lt;input class="js-ion-range-slider" type="text"
+                             data-hs-ion-range-slider-options='{
+                               "extra_classes": "range-slider-custom range-slider-indicator range-slider-grid",
+                               "type": "double",
+                               "grid": true,
+                               "hide_from_to": false,
+                               "min": -12.8,
+                               "max": 12.8,
+                               "from": -3.2,
+                               "to": 3.2,
+                               "step": 0.1
+                             }'&gt;
+                      &lt;!-- End Range Slider --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="select-required-amount" class="hs-docs-heading">
+              Select required amount <a class="anchorjs-link" href="#select-required-amount" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Set up range with a single range result.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab7" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab7" data-toggle="pill" href="#nav-result7" role="tab" aria-controls="nav-result7" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab7" data-toggle="pill" href="#nav-html7" role="tab" aria-controls="nav-html7" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent7">
+                <div class="tab-pane fade pt-10 pb-4 px-4 show active" id="nav-result7" role="tabpanel" aria-labelledby="nav-resultTab7">
+                  <!-- Range Slider -->
+                  <input class="js-ion-range-slider" type="text"
+                         data-hs-ion-range-slider-options='{
+                           "extra_classes": "range-slider-custom",
+                           "min": 0,
+                           "max": 1000,
+                           "from": 250,
+                           "to": 750,
+                           "result_min_target_el": "#rangeSliderExample1MinResult"
+                         }'>
+                  <div class="mt-8">
+                    <span>Result:</span>
+                    <span id="rangeSliderExample1MinResult" class="text-primary"></span>
+                  </div>
+                  <!-- End Range Slider -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html7" role="tabpanel" aria-labelledby="nav-htmlTab7">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Range Slider --&gt;
+                      &lt;input class="js-ion-range-slider" type="text"
+                             data-hs-ion-range-slider-options='{
+                               "extra_classes": "range-slider-custom",
+                               "min": 0,
+                               "max": 1000,
+                               "from": 250,
+                               "to": 750,
+                               "result_min_target_el": "#rangeSliderExample1MinResult"
+                             }'&gt;
+                      &lt;div class="mt-8"&gt;
+                        &lt;span&gt;Result:&lt;/span&gt;
+                        &lt;span id="rangeSliderExample1MinResult" class="text-primary"&gt;&lt;/span&gt;
+                      &lt;/div>
+                      &lt;!-- End Range Slider --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Set up range with a single (editable) result.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab8" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab8" data-toggle="pill" href="#nav-result8" role="tab" aria-controls="nav-result8" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab8" data-toggle="pill" href="#nav-html8" role="tab" aria-controls="nav-html8" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent8">
+                <div class="tab-pane fade pt-10 pb-4 px-4 show active" id="nav-result8" role="tabpanel" aria-labelledby="nav-resultTab8">
+                  <!-- Range Slider -->
+                  <input class="js-ion-range-slider" type="text"
+                         data-hs-ion-range-slider-options='{
+                           "extra_classes": "range-slider-custom range-slider-indicator range-slider-grid",
+                           "grid": true,
+                           "hide_from_to": false,
+                           "prefix": "$",
+                           "min": 0,
+                           "max": 1000,
+                           "from": 250,
+                           "to": 750,
+                           "result_min_target_el": "#rangeSliderExample2MinResult"
+                         }'>
+
+                  <div class="row align-items-center mt-8">
+                    <div class="col">
+                      <span>Select required amount</span>
+                    </div>
+
+                    <div class="col-auto">
+                      <!-- Input Group -->
+                      <div class="input-group input-group-merge">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="tio-dollar-outlined"></i>
+                          </span>
+                        </div>
+
+                        <input type="text" class="form-control" id="rangeSliderExample2MinResult" style="max-width: 7rem;">
+                      </div>
+                      <!-- End Input Group -->
+                    </div>
+                  </div>
+                  <!-- End Range Slider -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html8" role="tabpanel" aria-labelledby="nav-htmlTab8">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Range Slider --&gt;
+                      &lt;input class="js-ion-range-slider" type="text"
+                             data-hs-ion-range-slider-options='{
+                               "extra_classes": "range-slider-custom range-slider-indicator range-slider-grid",
+                               "grid": true,
+                               "hide_from_to": false,
+                               "prefix": "$",
+                               "min": 0,
+                               "max": 1000,
+                               "from": 250,
+                               "to": 750,
+                               "result_min_target_el": "#rangeSliderExample2MinResult"
+                             }'&gt;
+
+                      &lt;div class="row align-items-center mt-8"&gt;
+                        &lt;div class="col"&gt;
+                          &lt;span&gt;Select required amount&lt;/span&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-auto"&gt;
+                          &lt;!-- Input Group --&gt;
+                          &lt;div class="input-group input-group-merge"&gt;
+                            &lt;div class="input-group-prepend"&gt;
+                              &lt;span class="input-group-text"&gt;
+                                &lt;i class="tio-dollar-outlined"&gt;&lt;/i&gt;
+                              &lt;/span&gt;
+                            &lt;/div&gt;
+
+                            &lt;input type="text" class="form-control" id="rangeSliderExample2MinResult" style="max-width: 7rem;"&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Input Group --&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Range Slider --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Set up range with double range results.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab9" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab9" data-toggle="pill" href="#nav-result9" role="tab" aria-controls="nav-result9" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab9" data-toggle="pill" href="#nav-html9" role="tab" aria-controls="nav-html9" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent9">
+                <div class="tab-pane fade pt-10 pb-4 px-4 show active" id="nav-result9" role="tabpanel" aria-labelledby="nav-resultTab9">
+                  <!-- Range Slider -->
+                  <input class="js-ion-range-slider" type="text"
+                         data-hs-ion-range-slider-options='{
+                           "extra_classes": "range-slider-custom range-slider-indicator range-slider-grid",
+                           "type": "double",
+                           "grid": true,
+                           "hide_from_to": false,
+                           "prefix": "$",
+                           "min": 0,
+                           "max": 500,
+                           "from": 25,
+                           "to": 475,
+                           "result_min_target_el": "#rangeSliderExample3MinResult",
+                           "result_max_target_el": "#rangeSliderExample3MaxResult"
+                         }'>
+
+                  <div class="row justify-content-between mt-9">
+                    <div class="col-auto mb-2">
+                      <input type="text" class="form-control" id="rangeSliderExample3MinResult">
+                    </div>
+                    <div class="col-auto mb-2">
+                      <input type="text" class="form-control" id="rangeSliderExample3MaxResult">
+                    </div>
+                  </div>
+                  <!-- End Range Slider -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html9" role="tabpanel" aria-labelledby="nav-htmlTab9">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Range Slider --&gt;
+                      &lt;input class="js-ion-range-slider" type="text"
+                             data-hs-ion-range-slider-options='{
+                               "extra_classes": "range-slider-custom range-slider-indicator range-slider-grid",
+                               "type": "double",
+                               "grid": true,
+                               "hide_from_to": false,
+                               "prefix": "$",
+                               "min": 0,
+                               "max": 500,
+                               "from": 25,
+                               "to": 475,
+                               "result_min_target_el": "#rangeSliderExample3MinResult",
+                               "result_max_target_el": "#rangeSliderExample3MaxResult"
+                             }'&gt;
+
+                      &lt;div class="row justify-content-between mt-8"&gt;
+                        &lt;div class="col-auto mb-2"&gt;
+                          &lt;input type="text" class="form-control" id="rangeSliderExample3MinResult"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-auto mb-2"&gt;
+                          &lt;input type="text" class="form-control" id="rangeSliderExample3MaxResult"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Range Slider --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="modal-example" class="hs-docs-heading">
+              Modal example <a class="anchorjs-link" href="#modal-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab14" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab14" data-toggle="pill" href="#nav-result14" role="tab" aria-controls="nav-result14" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab14" data-toggle="pill" href="#nav-html14" role="tab" aria-controls="nav-html14" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent14">
+                <div class="tab-pane fade p-4 show active" id="nav-result14" role="tabpanel" aria-labelledby="nav-resultTab14">
+                  <!-- Button Trigger Modal -->
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Open modal
+                  </button>
+                  <!-- End Button Trigger Modal -->
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <!-- Header -->
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Range slider</h5>
+                          <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close">
+                            <i class="tio-clear tio-lg" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                        <!-- End Header -->
+
+                        <!-- Body -->
+                        <div class="modal-body">
+                          <!-- Range Slider -->
+                          <input class="js-ion-range-slider" type="text"
+                                 data-hs-ion-range-slider-options='{
+                                   "extra_classes": "range-slider-custom range-slider-indicator",
+                                   "hide_from_to": false,
+                                   "min": 100,
+                                   "max": 1000,
+                                   "from": 500
+                                 }'>
+                          <!-- End Range Slider -->
+                        </div>
+                        <!-- End Body -->
+
+                        <!-- Footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Continue</button>
+                        </div>
+                        <!-- End Footer -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html14" role="tabpanel" aria-labelledby="nav-htmlTab14">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Button Trigger Modal --&gt;
+                      &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"&gt;
+                        Open modal
+                      &lt;/button&gt;
+                      &lt;!-- End Button Trigger Modal --&gt;
+
+                      &lt;!-- Modal --&gt;
+                      &lt;div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+                        &lt;div class="modal-dialog" role="document"&gt;
+                          &lt;div class="modal-content"&gt;
+                            &lt;!-- Header --&gt;
+                            &lt;div class="modal-header"&gt;
+                              &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Range slider&lt;/h5&gt;
+                              &lt;button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close"&gt;
+                                &lt;i class="tio-clear tio-lg" aria-hidden="true"&gt;&lt;/i&gt;
+                              &lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Header --&gt;
+
+                            &lt;!-- Body --&gt;
+                            &lt;div class="modal-body"&gt;
+                              &lt;!-- Range Slider --&gt;
+                              &lt;input class="js-ion-range-slider" type="text"
+                                     data-hs-ion-range-slider-options='{
+                                       "extra_classes": "range-slider-custom range-slider-indicator",
+                                       "hide_from_to": false,
+                                       "min": 100,
+                                       "max": 1000,
+                                       "from": 500
+                                     }'&gt;
+                              &lt;!-- End Range Slider --&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Body --&gt;
+
+                            &lt;!-- Footer --&gt;
+                            &lt;div class="modal-footer"&gt;
+                              &lt;button type="button" class="btn btn-white" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                              &lt;button type="button" class="btn btn-primary"&gt;Continue&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Footer --&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Modal --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="range-bar-with-bar-charts" class="hs-docs-heading">
+              Range bar with Bar charts <a class="anchorjs-link" href="#range-bar-with-bar-charts" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Set up range with bar chart.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab10" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab10" data-toggle="pill" href="#nav-result10" role="tab" aria-controls="nav-result10" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab10" data-toggle="pill" href="#nav-html10" role="tab" aria-controls="nav-html10" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab10" data-toggle="pill" href="#nav-js10" role="tab" aria-controls="nav-js10" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Alert -->
+              <div class="alert alert-soft-dark card-alert" role="alert">
+                This example uses <a class="alert-link" href="chartjs.html">Chartjs <i class="tio-link"></i></a> library.
+              </div>
+              <!-- End Alert -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent10">
+                <div class="tab-pane fade p-4 show active" id="nav-result10" role="tabpanel" aria-labelledby="nav-resultTab10">
+                  <!-- Bar Chart -->
+                  <div class="position-relative overflow-hidden" style="height: 5rem;">
+                    <div class="position-absolute w-100 overflow-hidden">
+                      <div style="height: 5rem;">
+                        <canvas class="js-chart"
+                                data-hs-chartjs-options='{
+                                  "type": "bar",
+                                  "data": {
+                                    "labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+                                    "datasets": [{
+                                      "data": [2, 3, 5, 7, 8, 5, 3, 2, 3, 6, 5, 4, 7, 5, 4, 3, 2],
+                                      "backgroundColor": "@@vars.style.color",
+                                      "borderColor": "@@vars.style.color"
+                                    }]
+                                  },
+                                  "options": {
+                                    "scales": {
+                                      "yAxes": [{
+                                        "display": false,
+                                        "gridLines": {
+                                          "display": false,
+                                          "drawBorder": false
+                                        },
+                                        "ticks": {
+                                          "beginAtZero": true
+                                        }
+                                      }],
+                                      "xAxes": [{
+                                        "display": false,
+                                        "gridLines": {
+                                          "display": false,
+                                          "drawBorder": false
+                                        }
+                                      }]
+                                    },
+                                    "tooltips": {
+                                      "custom": false
+                                    }
+                                  }
+                                }'></canvas>
+                      </div>
+                    </div>
+
+                    <div id="foregroundBarChartSingleResult" class="position-absolute w-100 overflow-hidden">
+                      <div style="height: 5rem;">
+                        <canvas class="js-chart"
+                                data-hs-chartjs-options='{
+                                  "type": "bar",
+                                  "data": {
+                                    "labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+                                    "datasets": [{
+                                      "data": [2, 3, 5, 7, 8, 5, 3, 2, 3, 6, 5, 4, 7, 5, 4, 3, 2],
+                                      "backgroundColor": "#e7eaf3",
+                                      "borderColor": "#e7eaf3"
+                                    }]
+                                  },
+                                  "options": {
+                                    "scales": {
+                                      "yAxes": [{
+                                        "display": false,
+                                        "gridLines": {
+                                          "display": false,
+                                          "drawBorder": false
+                                        },
+                                        "ticks": {
+                                          "beginAtZero": true
+                                        }
+                                      }],
+                                      "xAxes": [{
+                                        "display": false,
+                                        "gridLines": {
+                                          "display": false,
+                                          "drawBorder": false
+                                        }
+                                      }]
+                                    },
+                                    "tooltips": {
+                                      "custom": false
+                                    }
+                                  }
+                                }'></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Bar Chart -->
+
+                  <!-- Range Slider -->
+                  <input class="js-ion-range-slider" type="text"
+                         data-hs-ion-range-slider-options='{
+                           "extra_classes": "range-slider-custom",
+                           "min": 0,
+                           "max": 1000,
+                           "from": 500,
+                           "result_min_target_el": "#rangeSliderExample4MinResult",
+                           "foreground_target_el": "#foregroundBarChartSingleResult"
+                         }'>
+
+                  <div class="mt-5">
+                    <span>Min price:</span>
+                    <span id="rangeSliderExample4MinResult" class="text-primary"></span>
+                  </div>
+                  <!-- End Range Slider -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html10" role="tabpanel" aria-labelledby="nav-htmlTab10">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Bar Chart --&gt;
+                      &lt;div class="position-relative overflow-hidden" style="height: 5rem;"&gt;
+                        &lt;div class="position-absolute w-100 overflow-hidden"&gt;
+                          &lt;div style="height: 5rem;"&gt;
+                            &lt;canvas class="js-chart"
+                                    data-hs-chartjs-options='{
+                                      "type": "bar",
+                                      "data": {
+                                        "labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+                                        "datasets": [{
+                                          "data": [2, 3, 5, 7, 8, 5, 3, 2, 3, 6, 5, 4, 7, 5, 4, 3, 2],
+                                          "backgroundColor": "@@vars.style.color",
+                                          "borderColor": "@@vars.style.color"
+                                        }]
+                                      },
+                                      "options": {
+                                        "scales": {
+                                          "yAxes": [{
+                                            "display": false,
+                                            "gridLines": {
+                                              "display": false,
+                                              "drawBorder": false
+                                            },
+                                            "ticks": {
+                                              "beginAtZero": true
+                                            }
+                                          }],
+                                          "xAxes": [{
+                                            "display": false,
+                                            "gridLines": {
+                                              "display": false,
+                                              "drawBorder": false
+                                            }
+                                          }]
+                                        },
+                                        "tooltips": {
+                                          "custom": false
+                                        }
+                                      }
+                                    }'&gt;&lt;/canvas&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div id="foregroundBarChartSingleResult" class="position-absolute w-100 overflow-hidden"&gt;
+                          &lt;div style="height: 5rem;"&gt;
+                            &lt;canvas class="js-chart"
+                                    data-hs-chartjs-options='{
+                                      "type": "bar",
+                                      "data": {
+                                        "labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+                                        "datasets": [{
+                                          "data": [2, 3, 5, 7, 8, 5, 3, 2, 3, 6, 5, 4, 7, 5, 4, 3, 2],
+                                          "backgroundColor": "#e7eaf3",
+                                          "borderColor": "#e7eaf3"
+                                        }]
+                                      },
+                                      "options": {
+                                        "scales": {
+                                          "yAxes": [{
+                                            "display": false,
+                                            "gridLines": {
+                                              "display": false,
+                                              "drawBorder": false
+                                            },
+                                            "ticks": {
+                                              "beginAtZero": true
+                                            }
+                                          }],
+                                          "xAxes": [{
+                                            "display": false,
+                                            "gridLines": {
+                                              "display": false,
+                                              "drawBorder": false
+                                            }
+                                          }]
+                                        },
+                                        "tooltips": {
+                                          "custom": false
+                                        }
+                                      }
+                                    }'&gt;&lt;/canvas&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Bar Chart --&gt;
+
+                      &lt;!-- Range Slider --&gt;
+                      &lt;input class="js-ion-range-slider" type="text"
+                             data-hs-ion-range-slider-options='{
+                               "extra_classes": "range-slider-custom",
+                               "min": 0,
+                               "max": 1000,
+                               "from": 500,
+                               "result_min_target_el": "#rangeSliderExample4MinResult",
+                               "foreground_target_el": "#foregroundBarChartSingleResult"
+                             }'&gt;
+
+                      &lt;div class="mt-5"&gt;
+                        &lt;span&gt;Min price:&lt;/span&gt;
+                        &lt;span id="rangeSliderExample4MinResult" class="text-primary"&gt;&lt;/span&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Range Slider --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js10" role="tabpanel" aria-labelledby="nav-jsTab10">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- JS Implementing Plugins --&gt;
+                      &lt;script src="@@autopath/node_modules/chart.js/dist/Chart.min.js"&gt;&lt;/script&gt;
+
+                      &lt;!-- JS Front --&gt;
+                      &lt;script src="@@autopath/assets/js/hs.chartjs.js"&gt;&lt;/script&gt;
+
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          // INITIALIZATION OF CHARTJS
+                          // =======================================================
+                          $('.js-chart').each(function () {
+                            $.HSCore.components.HSChartJS.init($(this));
+                          });
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Set up range with double bar chart results.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab11" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab11" data-toggle="pill" href="#nav-result11" role="tab" aria-controls="nav-result11" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab11" data-toggle="pill" href="#nav-html11" role="tab" aria-controls="nav-html11" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab11" data-toggle="pill" href="#nav-js11" role="tab" aria-controls="nav-js11" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Alert -->
+              <div class="alert alert-soft-dark card-alert" role="alert">
+                This example uses <a class="alert-link" href="chartjs.html">Chartjs <i class="tio-link"></i></a> library.
+              </div>
+              <!-- End Alert -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent11">
+                <div class="tab-pane fade p-4 show active" id="nav-result11" role="tabpanel" aria-labelledby="nav-resultTab11">
+                  <!-- Bar Chart -->
+                  <div class="position-relative overflow-hidden" style="height: 5rem;">
+                    <div class="position-absolute w-100 overflow-hidden">
+                      <div style="height: 5rem;">
+                        <canvas class="js-chart"
+                                data-hs-chartjs-options='{
+                                  "type": "bar",
+                                  "data": {
+                                    "labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+                                    "datasets": [{
+                                      "data": [2, 3, 5, 7, 8, 5, 3, 2, 3, 6, 5, 4, 7, 5, 4, 3, 2],
+                                      "backgroundColor": "#e7eaf3",
+                                      "borderColor": "#e7eaf3"
+                                    }]
+                                  },
+                                  "options": {
+                                    "scales": {
+                                      "yAxes": [{
+                                        "display": false,
+                                        "gridLines": {
+                                          "display": false,
+                                          "drawBorder": false
+                                        },
+                                        "ticks": {
+                                          "beginAtZero": true
+                                        }
+                                      }],
+                                      "xAxes": [{
+                                        "display": false,
+                                        "gridLines": {
+                                          "display": false,
+                                          "drawBorder": false
+                                        }
+                                      }]
+                                    },
+                                    "tooltips": {
+                                      "custom": false
+                                    }
+                                  }
+                                }'></canvas>
+                      </div>
+                    </div>
+
+                    <div id="foregroundBarChartDoubleResult" class="position-absolute overflow-hidden">
+                      <div style="height: 5rem;">
+                        <canvas class="js-chart"
+                                data-hs-chartjs-options='{
+                                  "type": "bar",
+                                  "data": {
+                                    "labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+                                    "datasets": [{
+                                      "data": [2, 3, 5, 7, 8, 5, 3, 2, 3, 6, 5, 4, 7, 5, 4, 3, 2],
+                                      "backgroundColor": "@@vars.style.color",
+                                      "borderColor": "@@vars.style.color"
+                                    }]
+                                  },
+                                  "options": {
+                                    "scales": {
+                                      "yAxes": [{
+                                        "display": false,
+                                        "gridLines": {
+                                          "display": false,
+                                          "drawBorder": false
+                                        },
+                                        "ticks": {
+                                          "beginAtZero": true
+                                        }
+                                      }],
+                                      "xAxes": [{
+                                        "display": false,
+                                        "gridLines": {
+                                          "display": false,
+                                          "drawBorder": false
+                                        }
+                                      }]
+                                    },
+                                    "tooltips": {
+                                      "custom": false
+                                    }
+                                  }
+                                }'></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Bar Chart -->
+
+                  <!-- Range Slider -->
+                  <input class="js-ion-range-slider" type="text"
+                         data-hs-ion-range-slider-options='{
+                           "type": "double",
+                           "extra_classes": "range-slider-custom",
+                           "min": 0,
+                           "max": 1000,
+                           "from": 250,
+                           "to": 750,
+                           "result_min_target_el": "#rangeSliderExampleDouble4MinResult",
+                           "result_max_target_el": "#rangeSliderExampleDouble4MaxResult",
+                           "foreground_target_el": "#foregroundBarChartDoubleResult"
+                         }'>
+
+                  <div class="row justify-content-between align-items-center mt-5">
+                    <div class="col-auto mb-2">
+                      <span>Min price:</span>
+                      <span id="rangeSliderExampleDouble4MinResult" class="text-primary"></span>
+                    </div>
+                    <div class="col-auto mb-2">
+                      <span>Max price:</span>
+                      <span id="rangeSliderExampleDouble4MaxResult" class="text-primary"></span>
+                    </div>
+                  </div>
+                  <!-- End Range Slider -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html11" role="tabpanel" aria-labelledby="nav-htmlTab11">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Bar Chart --&gt;
+                      &lt;div class="position-relative overflow-hidden" style="height: 5rem;"&gt;
+                        &lt;div class="position-absolute w-100 overflow-hidden"&gt;
+                          &lt;div style="height: 5rem;"&gt;
+                            &lt;canvas class="js-chart"
+                                    data-hs-chartjs-options='{
+                                      "type": "bar",
+                                      "data": {
+                                        "labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+                                        "datasets": [{
+                                          "data": [2, 3, 5, 7, 8, 5, 3, 2, 3, 6, 5, 4, 7, 5, 4, 3, 2],
+                                          "backgroundColor": "#e7eaf3",
+                                          "borderColor": "#e7eaf3"
+                                        }]
+                                      },
+                                      "options": {
+                                        "scales": {
+                                          "yAxes": [{
+                                            "display": false,
+                                            "gridLines": {
+                                              "display": false,
+                                              "drawBorder": false
+                                            },
+                                            "ticks": {
+                                              "beginAtZero": true
+                                            }
+                                          }],
+                                          "xAxes": [{
+                                            "display": false,
+                                            "gridLines": {
+                                              "display": false,
+                                              "drawBorder": false
+                                            }
+                                          }]
+                                        },
+                                        "tooltips": {
+                                          "custom": false
+                                        }
+                                      }
+                                    }'&gt;&lt;/canvas&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div id="foregroundBarChartDoubleResult" class="position-absolute overflow-hidden"&gt;
+                          &lt;div style="height: 5rem;"&gt;
+                            &lt;canvas class="js-chart"
+                                    data-hs-chartjs-options='{
+                                      "type": "bar",
+                                      "data": {
+                                        "labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+                                        "datasets": [{
+                                          "data": [2, 3, 5, 7, 8, 5, 3, 2, 3, 6, 5, 4, 7, 5, 4, 3, 2],
+                                          "backgroundColor": "@@vars.style.color",
+                                          "borderColor": "@@vars.style.color"
+                                        }]
+                                      },
+                                      "options": {
+                                        "scales": {
+                                          "yAxes": [{
+                                            "display": false,
+                                            "gridLines": {
+                                              "display": false,
+                                              "drawBorder": false
+                                            },
+                                            "ticks": {
+                                              "beginAtZero": true
+                                            }
+                                          }],
+                                          "xAxes": [{
+                                            "display": false,
+                                            "gridLines": {
+                                              "display": false,
+                                              "drawBorder": false
+                                            }
+                                          }]
+                                        },
+                                        "tooltips": {
+                                          "custom": false
+                                        }
+                                      }
+                                    }'&gt;&lt;/canvas&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Bar Chart --&gt;
+
+                      &lt;!-- Range Slider --&gt;
+                      &lt;input class="js-ion-range-slider" type="text"
+                             data-hs-ion-range-slider-options='{
+                               "type": "double",
+                               "extra_classes": "range-slider-custom",
+                               "min": 0,
+                               "max": 1000,
+                               "from": 250,
+                               "to": 750,
+                               "result_min_target_el": "#rangeSliderExampleDouble4MinResult",
+                               "result_max_target_el": "#rangeSliderExampleDouble4MaxResult",
+                               "foreground_target_el": "#foregroundBarChartDoubleResult"
+                             }'&gt;
+
+                      &lt;div class="row justify-content-between align-items-center mt-5"&gt;
+                        &lt;div class="col-auto mb-2"&gt;
+                          &lt;span&gt;Min price:&lt;/span&gt;
+                          &lt;span id="rangeSliderExampleDouble4MinResult" class="text-primary"&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-auto mb-2"&gt;
+                          &lt;span&gt;Max price:&lt;/span&gt;
+                          &lt;span id="rangeSliderExampleDouble4MaxResult" class="text-primary"&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Range Slider --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js11" role="tabpanel" aria-labelledby="nav-jsTab11">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- JS Implementing Plugins --&gt;
+                      &lt;script src="@@autopath/node_modules/chart.js/dist/Chart.min.js"&gt;&lt;/script&gt;
+
+                      &lt;!-- JS Front --&gt;
+                      &lt;script src="@@autopath/assets/js/hs.chartjs.js"&gt;&lt;/script&gt;
+
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          // INITIALIZATION OF CHARTJS
+                          // =======================================================
+                          $('.js-chart').each(function () {
+                            $.HSCore.components.HSChartJS.init($(this));
+                          });
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="range-bar-with-area-charts" class="hs-docs-heading">
+              Range bar with Area charts <a class="anchorjs-link" href="#range-bar-with-area-charts" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Set up range with area chart.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab12" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab12" data-toggle="pill" href="#nav-result12" role="tab" aria-controls="nav-result12" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab12" data-toggle="pill" href="#nav-html12" role="tab" aria-controls="nav-html12" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab12" data-toggle="pill" href="#nav-js12" role="tab" aria-controls="nav-js12" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Alert -->
+              <div class="alert alert-soft-dark card-alert" role="alert">
+                This example uses <a class="alert-link" href="chartjs.html">Chartjs <i class="tio-link"></i></a> library.
+              </div>
+              <!-- End Alert -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent12">
+                <div class="tab-pane fade p-4 show active" id="nav-result12" role="tabpanel" aria-labelledby="nav-resultTab12">
+                  <!-- Area Chart -->
+                  <div class="position-relative overflow-hidden" style="height: 5rem;">
+                    <div class="position-absolute w-100 overflow-hidden">
+                      <div style="height: 5rem;">
+                        <canvas class="js-chart"
+                                data-hs-chartjs-options='{
+                                  "type": "line",
+                                  "data": {
+                                    "labels": ["", "", "", "", "", "", "", "", ""],
+                                    "datasets": [{
+                                      "data": [0, 100, 700, 500, 1500, 200, 100, 50, 0],
+                                      "backgroundColor": "@@vars.style.color",
+                                      "borderColor": "@@vars.style.color"
+                                    }]
+                                  },
+                                  "options": {
+                                    "layout": {
+                                      "padding": {
+                                        "top": 1.5
+                                      }
+                                    },
+                                    "scales": {
+                                      "yAxes": [{
+                                        "display": false,
+                                        "gridLines": {
+                                          "display": false,
+                                          "drawBorder": false
+                                        }
+                                      }],
+                                      "xAxes": [{
+                                        "display": false,
+                                        "gridLines": {
+                                          "display": false,
+                                          "drawBorder": false
+                                        }
+                                      }]
+                                    },
+                                    "tooltips": {
+                                      "custom": false
+                                    },
+                                    "elements": {
+                                      "point": {
+                                        "radius": 0
+                                      }
+                                    }
+                                  }
+                                }'></canvas>
+                      </div>
+                    </div>
+
+                    <div id="foregroundAreaChartSingleResult" class="position-absolute w-100 overflow-hidden">
+                      <div style="height: 5rem;">
+                        <canvas class="js-chart"
+                                data-hs-chartjs-options='{
+                                  "type": "line",
+                                  "data": {
+                                    "labels": ["", "", "", "", "", "", "", "", ""],
+                                    "datasets": [{
+                                      "data": [0, 100, 700, 500, 1500, 200, 100, 50, 0],
+                                      "backgroundColor": "#e7eaf3",
+                                      "borderColor": "#e7eaf3"
+                                    }]
+                                  },
+                                  "options": {
+                                    "layout": {
+                                      "padding": {
+                                        "top": 1.5
+                                      }
+                                    },
+                                    "scales": {
+                                      "yAxes": [{
+                                        "display": false,
+                                        "gridLines": {
+                                          "display": false,
+                                          "drawBorder": false
+                                        },
+                                        "ticks": {
+                                          "beginAtZero": true
+                                        }
+                                      }],
+                                      "xAxes": [{
+                                        "display": false,
+                                        "gridLines": {
+                                          "display": false,
+                                          "drawBorder": false
+                                        }
+                                      }]
+                                    },
+                                    "tooltips": {
+                                      "custom": false
+                                    },
+                                    "elements": {
+                                      "point": {
+                                        "radius": 0
+                                      }
+                                    }
+                                  }
+                                }'></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Area Chart -->
+
+                  <!-- Range Slider -->
+                  <input class="js-ion-range-slider" type="text"
+                         data-hs-ion-range-slider-options='{
+                           "extra_classes": "range-slider-custom",
+                           "min": 0,
+                           "max": 1000,
+                           "from": 500,
+                           "result_min_target_el": "#rangeSliderExample5MinResult",
+                           "foreground_target_el": "#foregroundAreaChartSingleResult"
+                         }'>
+
+                  <div class="mt-5">
+                    <span>Min price:</span>
+                    <span id="rangeSliderExample5MinResult" class="text-primary"></span>
+                  </div>
+                  <!-- End Range Slider -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html12" role="tabpanel" aria-labelledby="nav-htmlTab12">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Area Chart --&gt;
+                      &lt;div class="position-relative overflow-hidden" style="height: 5rem;"&gt;
+                        &lt;div class="position-absolute w-100 overflow-hidden"&gt;
+                          &lt;div style="height: 5rem;"&gt;
+                            &lt;canvas class="js-chart"
+                                    data-hs-chartjs-options='{
+                                      "type": "line",
+                                      "data": {
+                                        "labels": ["", "", "", "", "", "", "", "", ""],
+                                        "datasets": [{
+                                          "data": [0, 100, 700, 500, 1500, 200, 100, 50, 0],
+                                          "backgroundColor": "@@vars.style.color",
+                                          "borderColor": "@@vars.style.color"
+                                        }]
+                                      },
+                                      "options": {
+                                        "layout": {
+                                          "padding": {
+                                            "top": 1.5
+                                          }
+                                        },
+                                        "scales": {
+                                          "yAxes": [{
+                                            "display": false,
+                                            "gridLines": {
+                                              "display": false,
+                                              "drawBorder": false
+                                            }
+                                          }],
+                                          "xAxes": [{
+                                            "display": false,
+                                            "gridLines": {
+                                              "display": false,
+                                              "drawBorder": false
+                                            }
+                                          }]
+                                        },
+                                        "tooltips": {
+                                          "custom": false
+                                        },
+                                        "elements": {
+                                          "point": {
+                                            "radius": 0
+                                          }
+                                        }
+                                      }
+                                    }'&gt;&lt;/canvas&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div id="foregroundAreaChartSingleResult" class="position-absolute w-100 overflow-hidden"&gt;
+                          &lt;div style="height: 5rem;"&gt;
+                            &lt;canvas class="js-chart"
+                                    data-hs-chartjs-options='{
+                                      "type": "line",
+                                      "data": {
+                                        "labels": ["", "", "", "", "", "", "", "", ""],
+                                        "datasets": [{
+                                          "data": [0, 100, 700, 500, 1500, 200, 100, 50, 0],
+                                          "backgroundColor": "#e7eaf3",
+                                          "borderColor": "#e7eaf3"
+                                        }]
+                                      },
+                                      "options": {
+                                        "layout": {
+                                          "padding": {
+                                            "top": 1.5
+                                          }
+                                        },
+                                        "scales": {
+                                          "yAxes": [{
+                                            "display": false,
+                                            "gridLines": {
+                                              "display": false,
+                                              "drawBorder": false
+                                            },
+                                            "ticks": {
+                                              "beginAtZero": true
+                                            }
+                                          }],
+                                          "xAxes": [{
+                                            "display": false,
+                                            "gridLines": {
+                                              "display": false,
+                                              "drawBorder": false
+                                            }
+                                          }]
+                                        },
+                                        "tooltips": {
+                                          "custom": false
+                                        },
+                                        "elements": {
+                                          "point": {
+                                            "radius": 0
+                                          }
+                                        }
+                                      }
+                                    }'&gt;&lt;/canvas&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Area Chart --&gt;
+
+                      &lt;!-- Range Slider --&gt;
+                      &lt;input class="js-ion-range-slider" type="text"
+                             data-hs-ion-range-slider-options='{
+                               "extra_classes": "range-slider-custom",
+                               "min": 0,
+                               "max": 1000,
+                               "from": 500,
+                               "result_min_target_el": "#rangeSliderExample5MinResult",
+                               "foreground_target_el": "#foregroundAreaChartSingleResult"
+                             }'&gt;
+
+                      &lt;div class="mt-5"&gt;
+                        &lt;span&gt;Min price:&lt;/span&gt;
+                        &lt;span id="rangeSliderExample5MinResult" class="text-primary"&gt;&lt;/span&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Range Slider --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js12" role="tabpanel" aria-labelledby="nav-jsTab12">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- JS Implementing Plugins --&gt;
+                      &lt;script src="@@autopath/node_modules/chart.js/dist/Chart.min.js"&gt;&lt;/script&gt;
+
+                      &lt;!-- JS Front --&gt;
+                      &lt;script src="@@autopath/assets/js/hs.chartjs.js"&gt;&lt;/script&gt;
+
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          // INITIALIZATION OF CHARTJS
+                          // =======================================================
+                          $('.js-chart').each(function () {
+                            $.HSCore.components.HSChartJS.init($(this));
+                          });
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Set up range with double bar chart results.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab13" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab13" data-toggle="pill" href="#nav-result13" role="tab" aria-controls="nav-result13" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab13" data-toggle="pill" href="#nav-html13" role="tab" aria-controls="nav-html13" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab13" data-toggle="pill" href="#nav-js13" role="tab" aria-controls="nav-js13" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Alert -->
+              <div class="alert alert-soft-dark card-alert" role="alert">
+                This example uses <a class="alert-link" href="chartjs.html">Chartjs <i class="tio-link"></i></a> library.
+              </div>
+              <!-- End Alert -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent13">
+                <div class="tab-pane fade p-4 show active" id="nav-result13" role="tabpanel" aria-labelledby="nav-resultTab13">
+                  <!-- Area Chart -->
+                  <div class="position-relative overflow-hidden" style="height: 5rem;">
+                    <div class="position-absolute w-100 overflow-hidden">
+                      <div style="height: 5rem;">
+                        <canvas class="js-chart"
+                                data-hs-chartjs-options='{
+                                  "type": "line",
+                                  "data": {
+                                    "labels": ["", "", "", "", "", "", "", "", ""],
+                                    "datasets": [{
+                                      "data": [0, 100, 700, 500, 1500, 200, 100, 50, 0],
+                                      "backgroundColor": "#e7eaf3",
+                                      "borderColor": "#e7eaf3"
+                                    }]
+                                  },
+                                  "options": {
+                                    "layout": {
+                                      "padding": {
+                                        "top": 1.5
+                                      }
+                                    },
+                                    "scales": {
+                                      "yAxes": [{
+                                        "display": false,
+                                        "gridLines": {
+                                          "display": false,
+                                          "drawBorder": false
+                                        },
+                                        "ticks": {
+                                          "beginAtZero": true
+                                        }
+                                      }],
+                                      "xAxes": [{
+                                        "display": false,
+                                        "gridLines": {
+                                          "display": false,
+                                          "drawBorder": false
+                                        }
+                                      }]
+                                    },
+                                    "tooltips": {
+                                      "custom": false
+                                    },
+                                    "elements": {
+                                      "point": {
+                                        "radius": 0
+                                      }
+                                    }
+                                  }
+                                }'></canvas>
+                      </div>
+                    </div>
+
+                    <div id="foregroundAreaChartDoubleResult" class="position-absolute overflow-hidden">
+                      <div style="height: 5rem;">
+                        <canvas class="js-chart"
+                                data-hs-chartjs-options='{
+                                  "type": "line",
+                                  "data": {
+                                    "labels": ["", "", "", "", "", "", "", "", ""],
+                                    "datasets": [{
+                                      "data": [0, 100, 700, 500, 1500, 200, 100, 50, 0],
+                                      "backgroundColor": "@@vars.style.color",
+                                      "borderColor": "@@vars.style.color"
+                                    }]
+                                  },
+                                  "options": {
+                                    "layout": {
+                                      "padding": {
+                                        "top": 1.5
+                                      }
+                                    },
+                                    "scales": {
+                                      "yAxes": [{
+                                        "display": false,
+                                        "gridLines": {
+                                          "display": false,
+                                          "drawBorder": false
+                                        },
+                                        "ticks": {
+                                          "beginAtZero": true
+                                        }
+                                      }],
+                                      "xAxes": [{
+                                        "display": false,
+                                        "gridLines": {
+                                          "display": false,
+                                          "drawBorder": false
+                                        }
+                                      }]
+                                    },
+                                    "tooltips": {
+                                      "custom": false
+                                    },
+                                    "elements": {
+                                      "point": {
+                                        "radius": 0
+                                      }
+                                    }
+                                  }
+                                }'></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Area Chart -->
+
+                  <!-- Range Slider -->
+                  <input class="js-ion-range-slider" type="text"
+                         data-hs-ion-range-slider-options='{
+                           "type": "double",
+                           "extra_classes": "range-slider-custom",
+                           "min": 0,
+                           "max": 1000,
+                           "from": 250,
+                           "to": 750,
+                           "result_min_target_el": "#rangeSliderExampleDouble5MinResult",
+                           "result_max_target_el": "#rangeSliderExampleDouble5MaxResult",
+                           "foreground_target_el": "#foregroundAreaChartDoubleResult"
+                         }'>
+
+                  <div class="d-flex justify-content-between align-items-center mt-5">
+                    <div class="col-auto mb-2">
+                      <span>Min price:</span>
+                      <span id="rangeSliderExampleDouble5MinResult" class="text-primary"></span>
+                    </div>
+
+                    <div class="col-auto mb-2">
+                      <span>Max price:</span>
+                      <span id="rangeSliderExampleDouble5MaxResult" class="text-primary"></span>
+                    </div>
+                  </div>
+                  <!-- End Range Slider -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html13" role="tabpanel" aria-labelledby="nav-htmlTab13">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Area Chart --&gt;
+                      &lt;div class="position-relative overflow-hidden" style="height: 5rem;"&gt;
+                        &lt;div class="position-absolute w-100 overflow-hidden"&gt;
+                          &lt;div style="height: 5rem;"&gt;
+                            &lt;canvas class="js-chart"
+                                    data-hs-chartjs-options='{
+                                      "type": "line",
+                                      "data": {
+                                        "labels": ["", "", "", "", "", "", "", "", ""],
+                                        "datasets": [{
+                                          "data": [0, 100, 700, 500, 1500, 200, 100, 50, 0],
+                                          "backgroundColor": "#e7eaf3",
+                                          "borderColor": "#e7eaf3"
+                                        }]
+                                      },
+                                      "options": {
+                                        "layout": {
+                                          "padding": {
+                                            "top": 1.5
+                                          }
+                                        },
+                                        "scales": {
+                                          "yAxes": [{
+                                            "display": false,
+                                            "gridLines": {
+                                              "display": false,
+                                              "drawBorder": false
+                                            },
+                                            "ticks": {
+                                              "beginAtZero": true
+                                            }
+                                          }],
+                                          "xAxes": [{
+                                            "display": false,
+                                            "gridLines": {
+                                              "display": false,
+                                              "drawBorder": false
+                                            }
+                                          }]
+                                        },
+                                        "tooltips": {
+                                          "custom": false
+                                        },
+                                        "elements": {
+                                          "point": {
+                                            "radius": 0
+                                          }
+                                        }
+                                      }
+                                    }'&gt;&lt;/canvas&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div id="foregroundAreaChartDoubleResult" class="position-absolute overflow-hidden"&gt;
+                          &lt;div style="height: 5rem;"&gt;
+                            &lt;canvas class="js-chart"
+                                    data-hs-chartjs-options='{
+                                      "type": "line",
+                                      "data": {
+                                        "labels": ["", "", "", "", "", "", "", "", ""],
+                                        "datasets": [{
+                                          "data": [0, 100, 700, 500, 1500, 200, 100, 50, 0],
+                                          "backgroundColor": "@@vars.style.color",
+                                          "borderColor": "@@vars.style.color"
+                                        }]
+                                      },
+                                      "options": {
+                                        "layout": {
+                                          "padding": {
+                                            "top": 1.5
+                                          }
+                                        },
+                                        "scales": {
+                                          "yAxes": [{
+                                            "display": false,
+                                            "gridLines": {
+                                              "display": false,
+                                              "drawBorder": false
+                                            },
+                                            "ticks": {
+                                              "beginAtZero": true
+                                            }
+                                          }],
+                                          "xAxes": [{
+                                            "display": false,
+                                            "gridLines": {
+                                              "display": false,
+                                              "drawBorder": false
+                                            }
+                                          }]
+                                        },
+                                        "tooltips": {
+                                          "custom": false
+                                        },
+                                        "elements": {
+                                          "point": {
+                                            "radius": 0
+                                          }
+                                        }
+                                      }
+                                    }'&gt;&lt;/canvas&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Area Chart --&gt;
+
+                      &lt;!-- Range Slider --&gt;
+                      &lt;input class="js-ion-range-slider" type="text"
+                             data-hs-ion-range-slider-options='{
+                               "type": "double",
+                               "extra_classes": "range-slider-custom",
+                               "min": 0,
+                               "max": 1000,
+                               "from": 250,
+                               "to": 750,
+                               "result_min_target_el": "#rangeSliderExampleDouble5MinResult",
+                               "result_max_target_el": "#rangeSliderExampleDouble5MaxResult",
+                               "foreground_target_el": "#foregroundAreaChartDoubleResult"
+                             }'&gt;
+
+                      &lt;div class="d-flex justify-content-between align-items-center mt-5"&gt;
+                        &lt;div class="col-auto mb-2"&gt;
+                          &lt;span&gt;Min price:&lt;/span&gt;
+                          &lt;span id="rangeSliderExampleDouble5MinResult" class="text-primary"&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-auto mb-2"&gt;
+                          &lt;span&gt;Max price:&lt;/span&gt;
+                          &lt;span id="rangeSliderExampleDouble5MaxResult" class="text-primary"&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Range Slider --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js13" role="tabpanel" aria-labelledby="nav-jsTab13">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- JS Implementing Plugins --&gt;
+                      &lt;script src="@@autopath/node_modules/chart.js/dist/Chart.min.js"&gt;&lt;/script&gt;
+
+                      &lt;!-- JS Front --&gt;
+                      &lt;script src="@@autopath/assets/js/hs.chartjs.js"&gt;&lt;/script&gt;
+
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          // INITIALIZATION OF CHARTJS
+                          // =======================================================
+                          $('.js-chart').each(function () {
+                            $.HSCore.components.HSChartJS.init($(this));
+                          });
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="methods" class="hs-docs-heading">
+              Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card overflow-hidden">
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-thead-bordered card-table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Parameters</th>
+                      <th style="width: 50%;">Description</th>
+                      <th class="text-nowrap">Default value</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code>type</code>
+                      </td>
+                      <td>Choose slider type, could be <code>single</code> - for one handle, or <code>double</code> for two handles.</td>
+                      <td>
+                        <code>single</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code>hide_min_max</code>
+                      </td>
+                      <td>Hide <code>min</code> and <code>max</code> labels.</td>
+                      <td>
+                        <code>true</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code>hide_from_to</code>
+                      </td>
+                      <td>Hide <code>from</code> and <code>to</code> labels.</td>
+                      <td>
+                        <code>true</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code>result_min_target_el</code>
+                      </td>
+                      <td>Element for output <code>min</code> value result.</td>
+                      <td>
+                        <code>null</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code>result_max_target_el</code>
+                      </td>
+                      <td>Element for output <code>max</code> value result.</td>
+                      <td>
+                        <code>null</code>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+    <script src="@@autopath/node_modules/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+    <script src="@@autopath/node_modules/chart.js/dist/Chart.min.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+    <script src="@@autopath/assets/js/hs.chartjs.js"></script>
+    <script src="@@autopath/assets/js/hs.ion-range-slider.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+
+        
+        // INITIALIZATION OF ION RANGE SLIDER
+        // =======================================================
+        $('.js-ion-range-slider').each(function () {
+          $.HSCore.components.HSIonRangeSlider.init($(this));
+        });
+
+        
+        // INITIALIZATION OF CHARTJS
+        // =======================================================
+        $('.js-chart').each(function () {
+          $.HSCore.components.HSChartJS.init($(this));
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

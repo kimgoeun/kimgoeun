@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Tables - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+    <link rel="stylesheet" href="@@autopath/assets/vendor/hs-sticky-header/src/hs.sticky-header.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "tables.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Tables</h1>
+                  <p class="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
+                  <a href="https://getbootstrap.com/docs/4.5/content/tables/" target="_blank">Bootstrap Tables documentation <i class="tio-open-in-new"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="examples" class="hs-docs-heading">
+              Examples <a class="anchorjs-link" href="#examples" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- Table -->
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- End Table -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Table --&gt;
+                      &lt;table class="table"&gt;
+                        &lt;thead&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="col">#&lt;/th&gt;
+                            &lt;th scope="col">First&lt;/th&gt;
+                            &lt;th scope="col">Last&lt;/th&gt;
+                            &lt;th scope="col">Handle&lt;/th&gt;
+                          &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">1&lt;/th&gt;
+                            &lt;td>Mark&lt;/td&gt;
+                            &lt;td>Otto&lt;/td&gt;
+                            &lt;td>@mdo&lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">2&lt;/th&gt;
+                            &lt;td>Jacob&lt;/td&gt;
+                            &lt;td>Thornton&lt;/td&gt;
+                            &lt;td>@fat&lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">3&lt;/th&gt;
+                            &lt;td>Larry&lt;/td&gt;
+                            &lt;td>the Bird&lt;/td&gt;
+                            &lt;td>@twitter&lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                      &lt;/table&gt;
+                      &lt;!-- End Table --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>You can also invert the colors—with light text on dark backgrounds—with <code>.table-dark</code>.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <!-- Table -->
+                  <table class="table table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- End Table -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Table --&gt;
+                      &lt;table class="table table-dark"&gt;
+                        &lt;thead&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="col">#&lt;/th&gt;
+                            &lt;th scope="col">First&lt;/th&gt;
+                            &lt;th scope="col">Last&lt;/th&gt;
+                            &lt;th scope="col">Handle&lt;/th&gt;
+                          &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">1&lt;/th&gt;
+                            &lt;td>Mark&lt;/td&gt;
+                            &lt;td>Otto&lt;/td&gt;
+                            &lt;td>@mdo&lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">2&lt;/th&gt;
+                            &lt;td>Jacob&lt;/td&gt;
+                            &lt;td>Thornton&lt;/td&gt;
+                            &lt;td>@fat&lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">3&lt;/th&gt;
+                            &lt;td>Larry&lt;/td&gt;
+                            &lt;td>the Bird&lt;/td&gt;
+                            &lt;td>@twitter&lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                      &lt;/table&gt;
+                      &lt;!-- End Table --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Use the modifier classes <code>.thead-light</code> to make <code>&lt;thead&gt;</code>s appear light.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab3" data-toggle="pill" href="#nav-result3" role="tab" aria-controls="nav-result3" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab3" data-toggle="pill" href="#nav-html3" role="tab" aria-controls="nav-html3" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent3">
+                <div class="tab-pane fade p-4 show active" id="nav-result3" role="tabpanel" aria-labelledby="nav-resultTab3">
+                  <!-- Table -->
+                  <table class="table">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- End Table -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html3" role="tabpanel" aria-labelledby="nav-htmlTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Table --&gt;
+                      &lt;table class="table"&gt;
+                        &lt;thead class="thead-light"&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="col">#&lt;/th&gt;
+                            &lt;th scope="col">First&lt;/th&gt;
+                            &lt;th scope="col">Last&lt;/th&gt;
+                            &lt;th scope="col">Handle&lt;/th&gt;
+                          &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">1&lt;/th&gt;
+                            &lt;td>Mark&lt;/td&gt;
+                            &lt;td>Otto&lt;/td&gt;
+                            &lt;td>@mdo&lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">2&lt;/th&gt;
+                            &lt;td>Jacob&lt;/td&gt;
+                            &lt;td>Thornton&lt;/td&gt;
+                            &lt;td>@fat&lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">3&lt;/th&gt;
+                            &lt;td>Larry&lt;/td&gt;
+                            &lt;td>the Bird&lt;/td&gt;
+                            &lt;td>@twitter&lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                      &lt;/table&gt;
+                      &lt;!-- End Table --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Add border to the top of the <code>thead</code> with the <code>.thead-light</code> class where <code>.table-borderless</code> class is used.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab4" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab4" data-toggle="pill" href="#nav-result4" role="tab" aria-controls="nav-result4" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab4" data-toggle="pill" href="#nav-html4" role="tab" aria-controls="nav-html4" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent4">
+                <div class="tab-pane fade p-4 show active" id="nav-result4" role="tabpanel" aria-labelledby="nav-resultTab4">
+                  <!-- Table -->
+                  <table class="table table-borderless table-thead-bordered">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- End Table -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html4" role="tabpanel" aria-labelledby="nav-htmlTab4">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Table --&gt;
+                      &lt;table class="table table-borderless table-thead-bordered"&gt;
+                        &lt;thead class="thead-light"&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="col">#&lt;/th&gt;
+                            &lt;th scope="col">First&lt;/th&gt;
+                            &lt;th scope="col">Last&lt;/th&gt;
+                            &lt;th scope="col">Handle&lt;/th&gt;
+                          &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">1&lt;/th&gt;
+                            &lt;td>Mark&lt;/td&gt;
+                            &lt;td>Otto&lt;/td&gt;
+                            &lt;td>@mdo&lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">2&lt;/th&gt;
+                            &lt;td>Jacob&lt;/td&gt;
+                            &lt;td>Thornton&lt;/td&gt;
+                            &lt;td>@fat&lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">3&lt;/th&gt;
+                            &lt;td>Larry&lt;/td&gt;
+                            &lt;td>the Bird&lt;/td&gt;
+                            &lt;td>@twitter&lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                      &lt;/table&gt;
+                      &lt;!-- End Table --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p><code>.table-nowrap</code> fixes horizontal scrollbar/alignment in responsive.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab5" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab5" data-toggle="pill" href="#nav-result5" role="tab" aria-controls="nav-result5" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab5" data-toggle="pill" href="#nav-html5" role="tab" aria-controls="nav-html5" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent5">
+                <div class="tab-pane fade p-4 show active" id="nav-result5" role="tabpanel" aria-labelledby="nav-resultTab5">
+                  <!-- Table -->
+                  <div class="table-responsive">
+                    <table class="table table-nowrap">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">First</th>
+                          <th scope="col">Last</th>
+                          <th scope="col">Handle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td>@twitter</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- End Table -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html5" role="tabpanel" aria-labelledby="nav-htmlTab5">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Table --&gt;
+                      &lt;div class="div class="table-responsive""&gt;
+                        &lt;table class="table table-nowrap"&gt;
+                          &lt;thead&gt;
+                            &lt;tr&gt;
+                              &lt;th scope="col">#&lt;/th&gt;
+                              &lt;th scope="col">First&lt;/th&gt;
+                              &lt;th scope="col">Last&lt;/th&gt;
+                              &lt;th scope="col">Handle&lt;/th&gt;
+                            &lt;/tr&gt;
+                          &lt;/thead&gt;
+                          &lt;tbody&gt;
+                            &lt;tr&gt;
+                              &lt;th scope="row">1&lt;/th&gt;
+                              &lt;td>Mark&lt;/td&gt;
+                              &lt;td>Otto&lt;/td&gt;
+                              &lt;td>@mdo&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                              &lt;th scope="row">2&lt;/th&gt;
+                              &lt;td>Jacob&lt;/td&gt;
+                              &lt;td>Thornton&lt;/td&gt;
+                              &lt;td>@fat&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                              &lt;th scope="row">3&lt;/th&gt;
+                              &lt;td>Larry&lt;/td&gt;
+                              &lt;td>the Bird&lt;/td&gt;
+                              &lt;td>@twitter&lt;/td&gt;
+                            &lt;/tr&gt;
+                          &lt;/tbody&gt;
+                        &lt;/table&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Table --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Vertically center align <code>tbody</code> items with the <code>.table-align-middle</code> class.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab6" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab6" data-toggle="pill" href="#nav-result6" role="tab" aria-controls="nav-result6" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab6" data-toggle="pill" href="#nav-html6" role="tab" aria-controls="nav-html6" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent6">
+                <div class="tab-pane fade p-4 show active" id="nav-result6" role="tabpanel" aria-labelledby="nav-resultTab6">
+                  <!-- Table -->
+                  <div class="table-responsive">
+                    <table class="table table-align-middle">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">First</th>
+                          <th scope="col">Last</th>
+                          <th scope="col">Handle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark<br>Markus</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob<br>Jacy</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Larry<br>Larry</td>
+                          <td>the Bird</td>
+                          <td>@twitter</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- End Table -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html6" role="tabpanel" aria-labelledby="nav-htmlTab6">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Table --&gt;
+                      &lt;div class="div class="table-responsive""&gt;
+                        &lt;table class="table table-align-middle"&gt;
+                          &lt;thead&gt;
+                            &lt;tr&gt;
+                              &lt;th scope="col">#&lt;/th&gt;
+                              &lt;th scope="col">First&lt;/th&gt;
+                              &lt;th scope="col">Last&lt;/th&gt;
+                              &lt;th scope="col">Handle&lt;/th&gt;
+                            &lt;/tr&gt;
+                          &lt;/thead&gt;
+                          &lt;tbody&gt;
+                            &lt;tr&gt;
+                              &lt;th scope="row">1&lt;/th&gt;
+                              &lt;td>Mark&lt;br&gt;Markus&lt;/td&gt;
+                              &lt;td>Otto&lt;/td&gt;
+                              &lt;td>@mdo&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                              &lt;th scope="row">2&lt;/th&gt;
+                              &lt;td>Jacob&lt;br&gt;Jacy&lt;/td&gt;
+                              &lt;td>Thornton&lt;/td&gt;
+                              &lt;td>@fat&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                              &lt;th scope="row">3&lt;/th&gt;
+                              &lt;td>Larry&lt;br&gt;Larry&lt;/td&gt;
+                              &lt;td>the Bird&lt;/td&gt;
+                              &lt;td>@twitter&lt;/td&gt;
+                            &lt;/tr&gt;
+                          &lt;/tbody&gt;
+                        &lt;/table&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Table --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Center align items with the <code>.table-text-center</code> class.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab7" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab7" data-toggle="pill" href="#nav-result7" role="tab" aria-controls="nav-result7" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab7" data-toggle="pill" href="#nav-html7" role="tab" aria-controls="nav-html7" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent7">
+                <div class="tab-pane fade p-4 show active" id="nav-result7" role="tabpanel" aria-labelledby="nav-resultTab7">
+                  <!-- Table -->
+                  <div class="table-responsive">
+                    <table class="table table-text-center">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">First</th>
+                          <th scope="col">Last</th>
+                          <th scope="col">Handle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td>@twitter</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- End Table -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html7" role="tabpanel" aria-labelledby="nav-htmlTab7">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Table --&gt;
+                      &lt;div class="div class="table-responsive""&gt;
+                        &lt;table class="table table-text-center"&gt;
+                          &lt;thead&gt;
+                            &lt;tr&gt;
+                              &lt;th scope="col">#&lt;/th&gt;
+                              &lt;th scope="col">First&lt;/th&gt;
+                              &lt;th scope="col">Last&lt;/th&gt;
+                              &lt;th scope="col">Handle&lt;/th&gt;
+                            &lt;/tr&gt;
+                          &lt;/thead&gt;
+                          &lt;tbody&gt;
+                            &lt;tr&gt;
+                              &lt;th scope="row">1&lt;/th&gt;
+                              &lt;td>Mark&lt;/td&gt;
+                              &lt;td>Otto&lt;/td&gt;
+                              &lt;td>@mdo&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                              &lt;th scope="row">2&lt;/th&gt;
+                              &lt;td>Jacob&lt;/td&gt;
+                              &lt;td>Thornton&lt;/td&gt;
+                              &lt;td>@fat&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                              &lt;th scope="row">3&lt;/th&gt;
+                              &lt;td>Larry&lt;/td&gt;
+                              &lt;td>the Bird&lt;/td&gt;
+                              &lt;td>@twitter&lt;/td&gt;
+                            &lt;/tr&gt;
+                          &lt;/tbody&gt;
+                        &lt;/table&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Table --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Right align items with the <code>.table-column-right-aligned</code> class.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab8" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab8" data-toggle="pill" href="#nav-result8" role="tab" aria-controls="nav-result8" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab8" data-toggle="pill" href="#nav-html8" role="tab" aria-controls="nav-html8" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent8">
+                <div class="tab-pane fade p-4 show active" id="nav-result8" role="tabpanel" aria-labelledby="nav-resultTab8">
+                  <!-- Table -->
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">First</th>
+                          <th scope="col">Last</th>
+                          <th class="table-column-right-aligned" scope="col">Handle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td class="table-column-right-aligned">@mdo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td class="table-column-right-aligned">@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td class="table-column-right-aligned">@twitter</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- End Table -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html8" role="tabpanel" aria-labelledby="nav-htmlTab8">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Table --&gt;
+                      &lt;div class="div class="table-responsive""&gt;
+                        &lt;table class="table"&gt;
+                          &lt;thead&gt;
+                            &lt;tr&gt;
+                              &lt;th scope="col">#&lt;/th&gt;
+                              &lt;th scope="col">First&lt;/th&gt;
+                              &lt;th scope="col">Last&lt;/th&gt;
+                              &lt;th scope="col">Handle&lt;/th&gt;
+                            &lt;/tr&gt;
+                          &lt;/thead&gt;
+                          &lt;tbody&gt;
+                            &lt;tr&gt;
+                              &lt;th scope="row">1&lt;/th&gt;
+                              &lt;td>Mark&lt;/td&gt;
+                              &lt;td>Otto&lt;/td&gt;
+                              &lt;td>@mdo&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                              &lt;th scope="row">2&lt;/th&gt;
+                              &lt;td>Jacob&lt;/td&gt;
+                              &lt;td>Thornton&lt;/td&gt;
+                              &lt;td>@fat&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                              &lt;th scope="row">3&lt;/th&gt;
+                              &lt;td>Larry&lt;/td&gt;
+                              &lt;td>the Bird&lt;/td&gt;
+                              &lt;td>@twitter&lt;/td&gt;
+                            &lt;/tr&gt;
+                          &lt;/tbody&gt;
+                        &lt;/table&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Table --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p><code>.table-column-pr-0</code> removes the padding right <code>.table-column-pl-0</code> or padding lefts of a single column.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab9" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab9" data-toggle="pill" href="#nav-result9" role="tab" aria-controls="nav-result9" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab9" data-toggle="pill" href="#nav-html9" role="tab" aria-controls="nav-html9" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent9">
+                <div class="tab-pane fade p-4 show active" id="nav-result9" role="tabpanel" aria-labelledby="nav-resultTab9">
+                  <!-- Table -->
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th class="table-column-pr-0" scope="col">#</th>
+                          <th class="table-column-pl-0" scope="col">First</th>
+                          <th scope="col">Last</th>
+                          <th scope="col">Handle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th class="table-column-pr-0" scope="row">1</th>
+                          <td class="table-column-pl-0">Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <th class="table-column-pr-0" scope="row">2</th>
+                          <td class="table-column-pl-0">Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th class="table-column-pr-0" scope="row">3</th>
+                          <td class="table-column-pl-0">Larry</td>
+                          <td>the Bird</td>
+                          <td>@twitter</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- End Table -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html9" role="tabpanel" aria-labelledby="nav-htmlTab9">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Table --&gt;
+                      &lt;div class="table-responsive"&gt;
+                        &lt;table class="table"&gt;
+                          &lt;thead&gt;
+                            &lt;tr&gt;
+                              &lt;th class="table-column-pr-0" scope="col"&gt;#&lt;/th&gt;
+                              &lt;th class="table-column-pl-0" scope="col"&gt;First&lt;/th&gt;
+                              &lt;th scope="col"&gt;Last&lt;/th&gt;
+                              &lt;th scope="col"&gt;Handle&lt;/th&gt;
+                            &lt;/tr&gt;
+                          &lt;/thead&gt;
+                          &lt;tbody&gt;
+                            &lt;tr&gt;
+                              &lt;th class="table-column-pr-0" scope="row"&gt;1&lt;/th&gt;
+                              &lt;td class="table-column-pl-0"&gt;Mark&lt;/td&gt;
+                              &lt;td&gt;Otto&lt;/td&gt;
+                              &lt;td&gt;@mdo&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                              &lt;th class="table-column-pr-0" scope="row"&gt;2&lt;/th&gt;
+                              &lt;td class="table-column-pl-0"&gt;Jacob&lt;/td&gt;
+                              &lt;td&gt;Thornton&lt;/td&gt;
+                              &lt;td&gt;@fat&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                              &lt;th class="table-column-pr-0" scope="row"&gt;3&lt;/th&gt;
+                              &lt;td class="table-column-pl-0"&gt;Larry&lt;/td&gt;
+                              &lt;td&gt;the Bird&lt;/td&gt;
+                              &lt;td&gt;@twitter&lt;/td&gt;
+                            &lt;/tr&gt;
+                          &lt;/tbody&gt;
+                        &lt;/table&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Table --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="sizes" class="hs-docs-heading">
+              Sizes <a class="anchorjs-link" href="#sizes" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>.table-sm</code> class.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab10" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab10" data-toggle="pill" href="#nav-result10" role="tab" aria-controls="nav-result10" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab10" data-toggle="pill" href="#nav-html10" role="tab" aria-controls="nav-html10" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent10">
+                <div class="tab-pane fade p-4 show active" id="nav-result10" role="tabpanel" aria-labelledby="nav-resultTab10">
+                  <!-- Table -->
+                  <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- End Table -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html10" role="tabpanel" aria-labelledby="nav-htmlTab10">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Table --&gt;
+                      &lt;table class="table table-sm"&gt;
+                        &lt;thead&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="col">#&lt;/th&gt;
+                            &lt;th scope="col">First&lt;/th&gt;
+                            &lt;th scope="col">Last&lt;/th&gt;
+                            &lt;th scope="col">Handle&lt;/th&gt;
+                          &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">1&lt;/th&gt;
+                            &lt;td>Mark&lt;/td&gt;
+                            &lt;td>Otto&lt;/td&gt;
+                            &lt;td>@mdo&lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">2&lt;/th&gt;
+                            &lt;td>Jacob&lt;/td&gt;
+                            &lt;td>Thornton&lt;/td&gt;
+                            &lt;td>@fat&lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">3&lt;/th&gt;
+                            &lt;td>Larry&lt;/td&gt;
+                            &lt;td>the Bird&lt;/td&gt;
+                            &lt;td>@twitter&lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                      &lt;/table&gt;
+                      &lt;!-- End Table --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Use <code>.table-lg</code> class.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab11" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab11" data-toggle="pill" href="#nav-result11" role="tab" aria-controls="nav-result11" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab11" data-toggle="pill" href="#nav-html11" role="tab" aria-controls="nav-html11" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent11">
+                <div class="tab-pane fade p-4 show active" id="nav-result11" role="tabpanel" aria-labelledby="nav-resultTab11">
+                  <!-- Table -->
+                  <table class="table table-lg">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- End Table -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html11" role="tabpanel" aria-labelledby="nav-htmlTab11">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Table --&gt;
+                      &lt;table class="table table-lg"&gt;
+                        &lt;thead&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="col">#&lt;/th&gt;
+                            &lt;th scope="col">First&lt;/th&gt;
+                            &lt;th scope="col">Last&lt;/th&gt;
+                            &lt;th scope="col">Handle&lt;/th&gt;
+                          &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">1&lt;/th&gt;
+                            &lt;td>Mark&lt;/td&gt;
+                            &lt;td>Otto&lt;/td&gt;
+                            &lt;td>@mdo&lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">2&lt;/th&gt;
+                            &lt;td>Jacob&lt;/td&gt;
+                            &lt;td>Thornton&lt;/td&gt;
+                            &lt;td>@fat&lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;th scope="row">3&lt;/th&gt;
+                            &lt;td>Larry&lt;/td&gt;
+                            &lt;td>the Bird&lt;/td&gt;
+                            &lt;td>@twitter&lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                      &lt;/table&gt;
+                      &lt;!-- End Table --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="bookmarked-checkbox" class="hs-docs-heading">
+              Bookmarked checkbox <a class="anchorjs-link" href="#bookmarked-checkbox" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>The <code>star</code> icons can be bookmarked with <code>checkbox</code>.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab12" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab12" data-toggle="pill" href="#nav-result12" role="tab" aria-controls="nav-result12" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab12" data-toggle="pill" href="#nav-html12" role="tab" aria-controls="nav-html12" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent12">
+                <div class="tab-pane fade p-4 show active" id="nav-result12" role="tabpanel" aria-labelledby="nav-resultTab12">
+                  <!-- Card -->
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="card-header-title">Users</h4>
+                    </div>
+
+                    <!-- Table -->
+                    <div class="table-responsive">
+                      <table class="table table-lg table-borderless table-thead-bordered table-nowrap table-align-middle">
+                        <thead class="thead-light">
+                          <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Country</th>
+                            <th>Status</th>
+                            <th>Favorite</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td>
+                              <a class="media align-items-center" href="user-profile.html">
+                                <div class="avatar avatar-circle mr-3">
+                                  <img class="avatar-img" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description">
+                                </div>
+                                <div class="media-body">
+                                  <span class="d-block h5 text-hover-primary mb-0">Amanda Harvey <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
+                                  <span class="d-block font-size-sm text-body">amanda@example.com</span>
+                                </div>
+                              </a>
+                            </td>
+                            <td>
+                              <span class="d-block h5 mb-0">Director</span>
+                              <span class="d-block font-size-sm">Human resources</span>
+                            </td>
+                            <td>United Kingdom <span class="text-hide">Code: GB</span></td>
+                            <td>
+                              <span class="legend-indicator bg-success"></span>Active
+                            </td>
+                            <td class="text-center">
+                              <div class="custom-control custom-checkbox-bookmark">
+                                <input type="checkbox" id="favoriteCheckbox1" class="custom-control-input custom-checkbox-bookmark-input">
+                                <label class="custom-checkbox-bookmark-label" for="favoriteCheckbox1">
+                                  <span class="custom-checkbox-bookmark-default">
+                                    <i class="tio-star-outlined"></i>
+                                  </span>
+                                  <span class="custom-checkbox-bookmark-active">
+                                    <i class="tio-star"></i>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <a class="media align-items-center" href="user-profile.html">
+                                <div class="avatar avatar-soft-primary avatar-circle mr-3">
+                                  <span class="avatar-initials">A</span>
+                                </div>
+                                <div class="media-body">
+                                  <span class="d-block h5 text-hover-primary mb-0">Anne Richard</span>
+                                  <span class="d-block font-size-sm text-body">anne@example.com</span>
+                                </div>
+                              </a>
+                            </td>
+                            <td>
+                              <span class="d-block h5 mb-0">Seller</span>
+                              <span class="d-block font-size-sm">Branding products</span>
+                            </td>
+                            <td>United States <span class="text-hide">Code: US</span></td>
+                            <td>
+                              <span class="legend-indicator bg-warning"></span>Pending
+                            </td>
+                            <td class="text-center">
+                              <div class="custom-control custom-checkbox-bookmark">
+                                <input type="checkbox" id="favoriteCheckbox2" class="custom-control-input custom-checkbox-bookmark-input" checked>
+                                <label class="custom-checkbox-bookmark-label" for="favoriteCheckbox2">
+                                  <span class="custom-checkbox-bookmark-default">
+                                    <i class="tio-star-outlined"></i>
+                                  </span>
+                                  <span class="custom-checkbox-bookmark-active">
+                                    <i class="tio-star"></i>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <a class="media align-items-center" href="user-profile.html">
+                                <div class="avatar avatar-circle mr-3">
+                                  <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                                </div>
+                                <div class="media-body">
+                                  <span class="d-block h5 text-hover-primary mb-0">David Harrison</span>
+                                  <span class="d-block font-size-sm text-body">david@example.com</span>
+                                </div>
+                              </a>
+                            </td>
+                            <td>
+                              <span class="d-block h5 mb-0">Unknown</span>
+                              <span class="d-block font-size-sm">Unknown</span>
+                            </td>
+                            <td>United States <span class="text-hide">Code: US</span></td>
+                            <td>
+                              <span class="legend-indicator bg-success"></span>Active
+                            </td>
+                            <td class="text-center">
+                              <div class="custom-control custom-checkbox-bookmark">
+                                <input type="checkbox" id="favoriteCheckbox3" class="custom-control-input custom-checkbox-bookmark-input" checked>
+                                <label class="custom-checkbox-bookmark-label" for="favoriteCheckbox3">
+                                  <span class="custom-checkbox-bookmark-default">
+                                    <i class="tio-star-outlined"></i>
+                                  </span>
+                                  <span class="custom-checkbox-bookmark-active">
+                                    <i class="tio-star"></i>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <a class="media align-items-center" href="user-profile.html">
+                                <div class="avatar avatar-circle mr-3">
+                                  <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                                </div>
+                                <div class="media-body">
+                                  <span class="d-block h5 text-hover-primary mb-0">Finch Hoot</span>
+                                  <span class="d-block font-size-sm text-body">finch@example.com</span>
+                                </div>
+                              </a>
+                            </td>
+                            <td>
+                              <span class="d-block h5 mb-0">Designer</span>
+                              <span class="d-block font-size-sm">IT department</span>
+                            </td>
+                            <td>Argentina <span class="text-hide">Code: AR</span></td>
+                            <td>
+                              <span class="legend-indicator bg-danger"></span>Suspended
+                            </td>
+                            <td class="text-center">
+                              <div class="custom-control custom-checkbox-bookmark">
+                                <input type="checkbox" id="favoriteCheckbox4" class="custom-control-input custom-checkbox-bookmark-input">
+                                <label class="custom-checkbox-bookmark-label" for="favoriteCheckbox4">
+                                  <span class="custom-checkbox-bookmark-default">
+                                    <i class="tio-star-outlined"></i>
+                                  </span>
+                                  <span class="custom-checkbox-bookmark-active">
+                                    <i class="tio-star"></i>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <a class="media align-items-center" href="user-profile.html">
+                                <div class="avatar avatar-soft-dark avatar-circle mr-3">
+                                  <span class="avatar-initials">B</span>
+                                </div>
+                                <div class="media-body">
+                                  <span class="d-block h5 text-hover-primary mb-0">Bob Dean</span>
+                                  <span class="d-block font-size-sm text-body">bob@example.com</span>
+                                </div>
+                              </a>
+                            </td>
+                            <td>
+                              <span class="d-block h5 mb-0">Executive director</span>
+                              <span class="d-block font-size-sm">Marketing</span>
+                            </td>
+                            <td>Austria <span class="text-hide">Code: AT</span></td>
+                            <td>
+                              <span class="legend-indicator bg-success"></span>Active
+                            </td>
+                            <td class="text-center">
+                              <div class="custom-control custom-checkbox-bookmark">
+                                <input type="checkbox" id="favoriteCheckbox5" class="custom-control-input custom-checkbox-bookmark-input" checked>
+                                <label class="custom-checkbox-bookmark-label" for="favoriteCheckbox5">
+                                  <span class="custom-checkbox-bookmark-default">
+                                    <i class="tio-star-outlined"></i>
+                                  </span>
+                                  <span class="custom-checkbox-bookmark-active">
+                                    <i class="tio-star"></i>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- End Table -->
+                  </div>
+                  <!-- End Card -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html12" role="tabpanel" aria-labelledby="nav-htmlTab12">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Card --&gt;
+                      &lt;div class="card"&gt;
+                        &lt;div class="card-header"&gt;
+                          &lt;h4 class="card-header-title"&gt;Users&lt;/h4&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Table --&gt;
+                        &lt;div class="table-responsive"&gt;
+                          &lt;table class="table table-lg table-borderless table-thead-bordered table-nowrap table-align-middle"&gt;
+                            &lt;thead class="thead-light"&gt;
+                              &lt;tr&gt;
+                                &lt;th&gt;Name&lt;/th&gt;
+                                &lt;th&gt;Position&lt;/th&gt;
+                                &lt;th&gt;Country&lt;/th&gt;
+                                &lt;th&gt;Status&lt;/th&gt;
+                                &lt;th&gt;Favorite&lt;/th&gt;
+                              &lt;/tr&gt;
+                            &lt;/thead&gt;
+
+                            &lt;tbody&gt;
+                              &lt;tr&gt;
+                                &lt;td&gt;
+                                  &lt;a class="media align-items-center" href="user-profile.html"&gt;
+                                    &lt;div class="avatar avatar-circle mr-3"&gt;
+                                      &lt;img class="avatar-img" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description"&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="media-body"&gt;
+                                      &lt;span class="d-block h5 text-hover-primary mb-0"&gt;Amanda Harvey &lt;i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"&gt;&lt;/i&gt;&lt;/span&gt;
+                                      &lt;span class="d-block font-size-sm text-body"&gt;amanda@example.com&lt;/span&gt;
+                                    &lt;/div&gt;
+                                  &lt;/a&gt;
+                                &lt;/td&gt;
+                                &lt;td&gt;
+                                  &lt;span class="d-block h5 mb-0"&gt;Director&lt;/span&gt;
+                                  &lt;span class="d-block font-size-sm"&gt;Human resources&lt;/span&gt;
+                                &lt;/td&gt;
+                                &lt;td&gt;United Kingdom &lt;span class="text-hide"&gt;Code: GB&lt;/span&gt;&lt;/td&gt;
+                                &lt;td&gt;
+                                  &lt;span class="legend-indicator bg-success"&gt;&lt;/span&gt;Active
+                                &lt;/td&gt;
+                                &lt;td class="text-center"&gt;
+                                  &lt;div class="custom-control custom-checkbox-bookmark"&gt;
+                                    &lt;input type="checkbox" id="favoriteCheckbox1" class="custom-control-input custom-checkbox-bookmark-input"&gt;
+                                    &lt;label class="custom-checkbox-bookmark-label" for="favoriteCheckbox1"&gt;
+                                      &lt;span class="custom-checkbox-bookmark-default"&gt;
+                                        &lt;i class="tio-star-outlined"&gt;&lt;/i&gt;
+                                      &lt;/span&gt;
+                                      &lt;span class="custom-checkbox-bookmark-active"&gt;
+                                        &lt;i class="tio-star"&gt;&lt;/i&gt;
+                                      &lt;/span&gt;
+                                    &lt;/label&gt;
+                                  &lt;/div&gt;
+                                &lt;/td&gt;
+                              &lt;/tr&gt;
+
+                              &lt;tr&gt;
+                                &lt;td&gt;
+                                  &lt;a class="media align-items-center" href="user-profile.html"&gt;
+                                    &lt;div class="avatar avatar-soft-primary avatar-circle mr-3"&gt;
+                                      &lt;span class="avatar-initials"&gt;A&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="media-body"&gt;
+                                      &lt;span class="d-block h5 text-hover-primary mb-0"&gt;Anne Richard&lt;/span&gt;
+                                      &lt;span class="d-block font-size-sm text-body"&gt;anne@example.com&lt;/span&gt;
+                                    &lt;/div&gt;
+                                  &lt;/a&gt;
+                                &lt;/td&gt;
+                                &lt;td&gt;
+                                  &lt;span class="d-block h5 mb-0"&gt;Seller&lt;/span&gt;
+                                  &lt;span class="d-block font-size-sm"&gt;Branding products&lt;/span&gt;
+                                &lt;/td&gt;
+                                &lt;td&gt;United States &lt;span class="text-hide"&gt;Code: US&lt;/span&gt;&lt;/td&gt;
+                                &lt;td&gt;
+                                  &lt;span class="legend-indicator bg-warning"&gt;&lt;/span&gt;Pending
+                                &lt;/td&gt;
+                                &lt;td class="text-center"&gt;
+                                  &lt;div class="custom-control custom-checkbox-bookmark"&gt;
+                                    &lt;input type="checkbox" id="favoriteCheckbox2" class="custom-control-input custom-checkbox-bookmark-input" checked&gt;
+                                    &lt;label class="custom-checkbox-bookmark-label" for="favoriteCheckbox2"&gt;
+                                      &lt;span class="custom-checkbox-bookmark-default"&gt;
+                                        &lt;i class="tio-star-outlined"&gt;&lt;/i&gt;
+                                      &lt;/span&gt;
+                                      &lt;span class="custom-checkbox-bookmark-active"&gt;
+                                        &lt;i class="tio-star"&gt;&lt;/i&gt;
+                                      &lt;/span&gt;
+                                    &lt;/label&gt;
+                                  &lt;/div&gt;
+                                &lt;/td&gt;
+                              &lt;/tr&gt;
+
+                              &lt;tr&gt;
+                                &lt;td&gt;
+                                  &lt;a class="media align-items-center" href="user-profile.html"&gt;
+                                    &lt;div class="avatar avatar-circle mr-3"&gt;
+                                      &lt;img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description"&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="media-body"&gt;
+                                      &lt;span class="d-block h5 text-hover-primary mb-0"&gt;David Harrison&lt;/span&gt;
+                                      &lt;span class="d-block font-size-sm text-body"&gt;david@example.com&lt;/span&gt;
+                                    &lt;/div&gt;
+                                  &lt;/a&gt;
+                                &lt;/td&gt;
+                                &lt;td&gt;
+                                  &lt;span class="d-block h5 mb-0"&gt;Unknown&lt;/span&gt;
+                                  &lt;span class="d-block font-size-sm"&gt;Unknown&lt;/span&gt;
+                                &lt;/td&gt;
+                                &lt;td&gt;United States &lt;span class="text-hide"&gt;Code: US&lt;/span&gt;&lt;/td&gt;
+                                &lt;td&gt;
+                                  &lt;span class="legend-indicator bg-success"&gt;&lt;/span&gt;Active
+                                &lt;/td&gt;
+                                &lt;td class="text-center"&gt;
+                                  &lt;div class="custom-control custom-checkbox-bookmark"&gt;
+                                    &lt;input type="checkbox" id="favoriteCheckbox3" class="custom-control-input custom-checkbox-bookmark-input" checked&gt;
+                                    &lt;label class="custom-checkbox-bookmark-label" for="favoriteCheckbox3"&gt;
+                                      &lt;span class="custom-checkbox-bookmark-default"&gt;
+                                        &lt;i class="tio-star-outlined"&gt;&lt;/i&gt;
+                                      &lt;/span&gt;
+                                      &lt;span class="custom-checkbox-bookmark-active"&gt;
+                                        &lt;i class="tio-star"&gt;&lt;/i&gt;
+                                      &lt;/span&gt;
+                                    &lt;/label&gt;
+                                  &lt;/div&gt;
+                                &lt;/td&gt;
+                              &lt;/tr&gt;
+
+                              &lt;tr&gt;
+                                &lt;td&gt;
+                                  &lt;a class="media align-items-center" href="user-profile.html"&gt;
+                                    &lt;div class="avatar avatar-circle mr-3"&gt;
+                                      &lt;img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description"&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="media-body"&gt;
+                                      &lt;span class="d-block h5 text-hover-primary mb-0"&gt;Finch Hoot&lt;/span&gt;
+                                      &lt;span class="d-block font-size-sm text-body"&gt;finch@example.com&lt;/span&gt;
+                                    &lt;/div&gt;
+                                  &lt;/a&gt;
+                                &lt;/td&gt;
+                                &lt;td&gt;
+                                  &lt;span class="d-block h5 mb-0"&gt;Designer&lt;/span&gt;
+                                  &lt;span class="d-block font-size-sm"&gt;IT department&lt;/span&gt;
+                                &lt;/td&gt;
+                                &lt;td&gt;Argentina &lt;span class="text-hide"&gt;Code: AR&lt;/span&gt;&lt;/td&gt;
+                                &lt;td&gt;
+                                  &lt;span class="legend-indicator bg-danger"&gt;&lt;/span&gt;Suspended
+                                &lt;/td&gt;
+                                &lt;td class="text-center"&gt;
+                                  &lt;div class="custom-control custom-checkbox-bookmark"&gt;
+                                    &lt;input type="checkbox" id="favoriteCheckbox4" class="custom-control-input custom-checkbox-bookmark-input"&gt;
+                                    &lt;label class="custom-checkbox-bookmark-label" for="favoriteCheckbox4"&gt;
+                                      &lt;span class="custom-checkbox-bookmark-default"&gt;
+                                        &lt;i class="tio-star-outlined"&gt;&lt;/i&gt;
+                                      &lt;/span&gt;
+                                      &lt;span class="custom-checkbox-bookmark-active"&gt;
+                                        &lt;i class="tio-star"&gt;&lt;/i&gt;
+                                      &lt;/span&gt;
+                                    &lt;/label&gt;
+                                  &lt;/div&gt;
+                                &lt;/td&gt;
+                              &lt;/tr&gt;
+
+                              &lt;tr&gt;
+                                &lt;td&gt;
+                                  &lt;a class="media align-items-center" href="user-profile.html"&gt;
+                                    &lt;div class="avatar avatar-soft-dark avatar-circle mr-3"&gt;
+                                      &lt;span class="avatar-initials"&gt;B&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="media-body"&gt;
+                                      &lt;span class="d-block h5 text-hover-primary mb-0"&gt;Bob Dean&lt;/span&gt;
+                                      &lt;span class="d-block font-size-sm text-body"&gt;bob@example.com&lt;/span&gt;
+                                    &lt;/div&gt;
+                                  &lt;/a&gt;
+                                &lt;/td&gt;
+                                &lt;td&gt;
+                                  &lt;span class="d-block h5 mb-0"&gt;Executive director&lt;/span&gt;
+                                  &lt;span class="d-block font-size-sm"&gt;Marketing&lt;/span&gt;
+                                &lt;/td&gt;
+                                &lt;td&gt;Austria &lt;span class="text-hide"&gt;Code: AT&lt;/span&gt;&lt;/td&gt;
+                                &lt;td&gt;
+                                  &lt;span class="legend-indicator bg-success"&gt;&lt;/span&gt;Active
+                                &lt;/td&gt;
+                                &lt;td class="text-center"&gt;
+                                  &lt;div class="custom-control custom-checkbox-bookmark"&gt;
+                                    &lt;input type="checkbox" id="favoriteCheckbox5" class="custom-control-input custom-checkbox-bookmark-input" checked&gt;
+                                    &lt;label class="custom-checkbox-bookmark-label" for="favoriteCheckbox5"&gt;
+                                      &lt;span class="custom-checkbox-bookmark-default"&gt;
+                                        &lt;i class="tio-star-outlined"&gt;&lt;/i&gt;
+                                      &lt;/span&gt;
+                                      &lt;span class="custom-checkbox-bookmark-active"&gt;
+                                        &lt;i class="tio-star"&gt;&lt;/i&gt;
+                                      &lt;/span&gt;
+                                    &lt;/label&gt;
+                                  &lt;/div&gt;
+                                &lt;/td&gt;
+                              &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                          &lt;/table&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Table --&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Card --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="other-classes-to-note" class="hs-docs-heading">
+              Other classes to note <a class="anchorjs-link" href="#other-classes-to-note" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card overflow-hidden">
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-thead-bordered card-table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th style="width: 40%;">Class</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td><code>.table-input-group</code></td>
+                      <td>Adds <code>min-width: 14rem;</code> to an <code>input-group</code><br>Example: <a href="@@autopath/account-api-keys.html">API Keys</a>.</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>.table-progress</code></td>
+                      <td>Replaces the default width and heights.<br>Example: Table of the main chart <a href="@@autopath/dashboard-alternative.html">Dashboard alternative</a>.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+    <script src="@@autopath/assets/vendor/hs-sticky-header/src/hs.sticky-header.js"></script>
+    <script src="@@autopath/node_modules/table-edits/build/table-edits.min.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+
+        
+        // INITIALIZATION OF STICKY THEAD
+        // =======================================================
+        $('.js-sticky-thead').HSStickyThead();
+
+        
+        // INITIALIZATION OF EDITABLE TABLE
+        // =======================================================
+        $('.js-editable-table tbody tr').editable({
+          keyboard: true,
+          dblclick: true,
+          button: true,
+          buttonSelector: '.js-edit',
+          maintainWidth: true,
+          edit: function (values) {
+            $('.js-edit .js-edit-icon', this).removeClass('tio-edit').addClass('tio-done');
+            $(this).find('td[data-field] input').addClass('form-control form-control-sm');
+          },
+          save: function (values) {
+            $('.js-edit .js-edit-icon', this).removeClass('tio-done').addClass('tio-edit');
+          },
+          cancel: function (values) {
+            $('.js-edit .js-edit-icon', this).removeClass('tio-done').addClass('tio-edit');
+          }
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

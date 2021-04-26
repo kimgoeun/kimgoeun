@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>Detached Sidebar (Container) - Layouts | Front - Admin &amp; Dashboard Template</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+  <!-- Font -->
+  <link href="@@vars.googleFont" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <!-- bundlecss:vendor [@@autopath] -->
+  <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+  <!-- CSS Front Template -->
+  <!-- bundlecss:theme [@@autopath] @@vars.version -->
+  <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+</head>
+<body class="bg-light">
+  <!-- Search Form -->
+  @@include("@@autopath/partials/layouts-components/mobile-search.html")
+  <!-- End Search Form -->
+  
+  <!-- ========== HEADER ========== -->
+  @@include("@@autopath/partials/header/basic-container-no-sidebar-toggle.html")
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main" class="main">
+    <!-- Content -->
+    <div class="content container pt-2 pt-lg-0">
+      <!-- Navbar Vertical -->
+      <div class="navbar-expand-lg">
+        <!-- Navbar Toggle -->
+        @@include("@@autopath/partials/layouts-components/navbar-vertical-toggle.html")
+        <!-- End Navbar Toggle -->
+
+        @@include("@@autopath/partials/sidebar/detached-navbar-light.html")
+      </div>
+      <!-- End Navbar Vertical -->
+
+      <!-- Sidebar Detached Content -->
+      <div class="sidebar-detached-content">
+        <!-- Card -->
+        <div class="card mb-3 mb-lg-5">
+          <div class="card-body card-body-centered py-10">
+            <!-- Title -->
+            <div class="text-center">
+              <img class="img-fluid shadow-soft mb-5" src="@@autopath/assets/svg/layouts/sidebar-detached-container.svg" alt="Image Description" style="max-width: 15rem;">
+
+              <h1>Detached Sidebar (Container)</h1>
+              <p>Customize your overview page layout. Choose the one that best fits your needs.</p>
+              <a class="btn btn-primary" href="layouts.html">Go back to Layouts</a>
+            </div>
+            <!-- End Title -->
+          </div>
+        </div>
+        <!-- End Card -->
+
+        <!-- Card -->
+        <div class="card mb-3 mb-lg-5">
+          <div class="card-body card-body-centered py-10">
+            <img class="avatar avatar-xl mb-3" src="@@autopath/assets/svg/illustrations/yelling.svg" alt="Image Description">
+            <p class="card-text">No data to show</p>
+            <a class="btn btn-sm btn-white" href="@@autopath/index.html">Get Started</a>
+          </div>
+        </div>
+        <!-- End Card -->
+
+        <!-- Card -->
+        <div class="card">
+          <div class="card-body card-body-centered py-10">
+            <img class="avatar avatar-xl mb-3" src="@@autopath/assets/svg/illustrations/yelling.svg" alt="Image Description">
+            <p class="card-text">No data to show</p>
+            <a class="btn btn-sm btn-white" href="@@autopath/index.html">Get Started</a>
+          </div>
+        </div>
+        <!-- End Card -->
+      </div>
+      <!-- End Sidebar Detached Content -->
+    </div>
+    <!-- End Content -->
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+  <!-- ========== SECONDARY CONTENTS ========== -->
+  <!-- Keyboard Shortcuts -->
+  @@include("@@autopath/partials/layouts-components/sidebar-shortcuts.html")
+  <!-- End Keyboard Shortcuts -->
+
+  <!-- Activity -->
+  @@include("@@autopath/partials/layouts-components/sidebar-activity.html")
+  <!-- End Activity -->
+
+  <!-- Welcome Message Modal -->
+  @@include("@@autopath/partials/modals/modal-welcome.html")
+  <!-- End Welcome Message Modal -->
+  <!-- ========== END SECONDARY CONTENTS ========== -->
+
+  <!-- JS Global Compulsory @@deleteLine:build -->
+  <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+  <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <!-- bundlejs:vendor [@@autopath] -->
+  <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+  <script src="@@autopath/assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+  <script src="@@autopath/assets/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+
+  <!-- JS Front -->
+  <!-- bundlejs:theme [@@autopath] -->
+  <script src="@@autopath/assets/js/hs.core.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+      // =======================================================
+      var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+      // INITIALIZATION OF UNFOLD
+      // =======================================================
+      $('.js-hs-unfold-invoker').each(function () {
+        var unfold = new HSUnfold($(this)).init();
+      });
+
+
+      // INITIALIZATION OF FORM SEARCH
+      // =======================================================
+      $('.js-form-search').each(function () {
+        new HSFormSearch($(this)).init()
+      });
+    });
+  </script>
+
+  <!-- IE Support -->
+  <script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+  </script>
+</body>
+</html>

@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Form Search - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/select2/dist/css/select2.min.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "form-search.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Form Search</h1>
+                  <p class="lead">Form search plugin with clearing value options.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="how-to-use" class="hs-docs-heading">
+              How to use <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/assets/vendor/hs-form-search/dist/hs-form-search.min.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code>&lt;/body&gt;</code> tag, to enable it.</p>
+
+            <pre class="rounded">
+              <code class="language-html" data-lang="html">
+                &lt;script&gt;
+                  $(document).on('ready', function () {
+                    // INITIALIZATION OF FORM SEARCH
+                    // =======================================================
+                    $('.js-form-search').each(function () {
+                      new HSFormSearch($(this)).init()
+                    });
+                  });
+                &lt;/script&gt;
+              </code>
+            </pre>
+
+            <!-- Heading -->
+            <h2 id="example" class="hs-docs-heading">
+              Example <a class="anchorjs-link" href="#example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- Form Group -->
+                  <div class="form-group w-md-50">
+                    <div class="input-group input-group-merge">
+                      <input type="text" class="js-form-search form-control" placeholder="Search..."
+                             data-hs-form-search-options='{
+                               "clearIcon": "#clearIconBasicEg"
+                             }'>
+                      <a class="input-group-append" href="javascript:;">
+                        <span class="input-group-text">
+                          <i id="clearIconBasicEg" class="tio-clear tio-lg" style="display: none;"></i>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- End Form Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Form Group --&gt;
+                      &lt;div class="form-group w-md-50"&gt;
+                        &lt;div class="input-group input-group-merge"&gt;
+                          &lt;input type="text" class="js-form-search form-control" placeholder="Search..."
+                                 data-hs-form-search-options='{
+                                   "clearIcon": "#clearIconBasicEg"
+                                 }'&gt;
+                          &lt;a class="input-group-append" href="javascript:;"&gt;
+                            &lt;span class="input-group-text"&gt;
+                              &lt;i id="clearIconBasicEg" class="tio-clear tio-lg" style="display: none;"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/a&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Form Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="toggle-icon" class="hs-docs-heading">
+              Toggle icon <a class="anchorjs-link" href="#toggle-icon" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>defaultIcon: "element"</code></p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <!-- Form Group -->
+                  <div class="form-group w-md-50">
+                    <div class="input-group input-group-merge">
+                      <input type="text" class="js-form-search form-control" placeholder="Search..."
+                             data-hs-form-search-options='{
+                               "clearIcon": "#clearIconToggleEg",
+                               "defaultIcon": "#defaultClearIconToggleEg"
+                             }'>
+                      <a class="input-group-append" href="javascript:;">
+                        <span class="input-group-text">
+                          <i id="clearIconToggleEg" class="tio-clear tio-lg" style="display: none;"></i>
+                          <i id="defaultClearIconToggleEg" class="tio-search" style="display: none;"></i>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- End Form Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Form Group --&gt;
+                      &lt;div class="form-group w-md-50"&gt;
+                        &lt;div class="input-group input-group-merge"&gt;
+                          &lt;input type="text" class="js-form-search form-control" placeholder="Search..."
+                                 data-hs-form-search-options='{
+                                   "clearIcon": "#clearIcon2",
+                                   "defaultIcon": "#defaultClearIconToggleEg"
+                                 }'&gt;
+                          &lt;a class="input-group-append" href="javascript:;"&gt;
+                            &lt;span class="input-group-text"&gt;
+                              &lt;i id="clearIcon2" class="tio-clear tio-lg" style="display: none;"&gt;&lt;/i&gt;
+                              &lt;i id="defaultClearIconToggleEg" class="tio-search" style="display: none;"&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                          &lt;/a&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Form Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="loading-event" class="hs-docs-heading">
+              Loading event <a class="anchorjs-link" href="#loading-event" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>loading()</code> method.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab3" data-toggle="pill" href="#nav-result3" role="tab" aria-controls="nav-result3" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab3" data-toggle="pill" href="#nav-html3" role="tab" aria-controls="nav-html3" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab3" data-toggle="pill" href="#nav-js3" role="tab" aria-controls="nav-js3" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent3">
+                <div class="tab-pane fade p-4 show active" id="nav-result3" role="tabpanel" aria-labelledby="nav-resultTab3">
+                  <!-- Form Group -->
+                  <div class="form-group w-md-50">
+                    <div class="input-group input-group-merge">
+                      <input type="text" class="form-control" id="type-loading" placeholder="Search..."
+                             data-hs-form-search-options='{
+                               "clearIcon": "#clearIconLoadingEg",
+                               "defaultIcon": "#clearIconLoadingDefaultEg",
+                               "loadingIcon": "#typeLoadingIconEg"
+                             }'>
+                      <a class="input-group-append" href="javascript:;">
+                        <span class="input-group-text">
+                          <i id="clearIconLoadingEg" class="tio-clear tio-lg" style="display: none;"></i>
+                          <i id="clearIconLoadingDefaultEg" class="tio-search" style="display: none;"></i>
+
+                          <span id="typeLoadingIconEg" class="spinner-border spinner-border-sm text-primary" role="status" style="display: none;">
+                            <span class="sr-only">Loading...</span>
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- End Form Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html3" role="tabpanel" aria-labelledby="nav-htmlTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Form Group --&gt;
+                      &lt;div class="form-group w-md-50"&gt;
+                        &lt;div class="input-group input-group-merge"&gt;
+                          &lt;input type="text" class="form-control" id="type-loading" placeholder="Search..."
+                                 data-hs-form-search-options='{
+                                   "clearIcon": "#clearIconLoadingEg",
+                                   "defaultIcon": "#clearIconLoadingDefaultEg",
+                                   "loadingIcon": "#typeLoadingIconEg"
+                                 }'&gt;
+                          &lt;a class="input-group-append" href="javascript:;"&gt;
+                            &lt;span class="input-group-text"&gt;
+                              &lt;i id="clearIconLoadingEg" class="tio-clear tio-lg" style="display: none;"&gt;&lt;/i&gt;
+                              &lt;i id="clearIconLoadingDefaultEg" class="tio-search" style="display: none;"&gt;&lt;/i&gt;
+
+                              &lt;span id="typeLoadingIconEg" class="spinner-border spinner-border-sm text-primary" role="status" style="display: none;"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/span&gt;
+                            &lt;/span&gt;
+                          &lt;/a&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Form Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js3" role="tabpanel" aria-labelledby="nav-jsTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          var clearTypeLoading = new HSFormSearch($('#type-loading')).init();
+
+                          $('#type-loading').on('input', function() {
+                            clearTypeLoading.loading();
+
+                            if (!$('#type-loading').val().length) {
+                              clearTypeLoading.loading(false);
+                            }
+                          })
+
+                          $('#type-loading').on('change', function() {
+                            clearTypeLoading.loading(false);
+                          })
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab4" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab4" data-toggle="pill" href="#nav-result4" role="tab" aria-controls="nav-result4" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab4" data-toggle="pill" href="#nav-html4" role="tab" aria-controls="nav-html4" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab4" data-toggle="pill" href="#nav-js4" role="tab" aria-controls="nav-js4" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent4">
+                <div class="tab-pane fade p-4 show active" id="nav-result4" role="tabpanel" aria-labelledby="nav-resultTab4">
+                  <!-- Form Group -->
+                  <div class="form-group w-md-50">
+                    <div class="input-group input-group-merge">
+                      <input type="text" class="form-control" id="clear-input-loading" placeholder="Search..."
+                             data-hs-form-search-options='{
+                               "clearIcon": "#clearIconLoadingBtn",
+                               "defaultIcon": "#defaultClearIconLoadingBtn",
+                               "loadingIcon": "#loadingClearIcon"
+                             }'>
+                      <a class="input-group-append" href="javascript:;">
+                        <span class="input-group-text">
+                          <i id="clearIconLoadingBtn" class="tio-clear tio-lg" style="display: none;"></i>
+                          <i id="defaultClearIconLoadingBtn" class="tio-search" style="display: none;"></i>
+
+                          <span id="loadingClearIcon" class="spinner-border spinner-border-sm text-primary" role="status" style="display: none;">
+                            <span class="sr-only">Loading...</span>
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- End Form Group -->
+
+                  <button id="loadBtn" class="btn btn-primary">Click for loading</button>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html4" role="tabpanel" aria-labelledby="nav-htmlTab4">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Form Group --&gt;
+                      &lt;div class="form-group w-md-50"&gt;
+                        &lt;div class="input-group input-group-merge"&gt;
+                          &lt;input type="text" class="form-control" id="clear-input-loading" placeholder="Search..."
+                                 data-hs-form-search-options='{
+                                   "clearIcon": "#clearIconLoadingBtn",
+                                   "defaultIcon": "#defaultClearIconLoadingBtn",
+                                   "loadingIcon": "#loadingClearIcon"
+                                 }'&gt;
+                          &lt;a class="input-group-append" href="javascript:;"&gt;
+                            &lt;span class="input-group-text"&gt;
+                              &lt;i id="clearIconLoadingBtn" class="tio-clear tio-lg" style="display: none;"&gt;&lt;/i&gt;
+                              &lt;i id="defaultClearIconLoadingBtn" class="tio-search" style="display: none;"&gt;&lt;/i&gt;
+
+                              &lt;span id="loadingClearIcon" class="spinner-border spinner-border-sm text-primary" role="status" style="display: none;"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/span&gt;
+                            &lt;/span&gt;
+                          &lt;/a&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Form Group --&gt;
+
+                      &lt;button id="loadBtn" class="btn btn-primary"&gt;Click for loading&lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js4" role="tabpanel" aria-labelledby="nav-jsTab4">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          var clearInputLoading = new HSFormSearch($('#clear-input-loading')).init();
+
+                          $('#loadBtn').on('click', function() {
+                            $('#loadBtn').prop('disabled', true);
+
+                            clearInputLoading.loading();
+
+                            setTimeout(function() {
+                              clearInputLoading.loading(false);
+                              $('#loadBtn').prop('disabled', false);
+                            }, 2000);
+                          })
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="drop-menu" class="hs-docs-heading">
+              Drop menu <a class="anchorjs-link" href="#drop-menu" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>dropMenuElement</code></p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab5" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab5" data-toggle="pill" href="#nav-result5" role="tab" aria-controls="nav-result5" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab5" data-toggle="pill" href="#nav-html5" role="tab" aria-controls="nav-html5" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent5">
+                <div class="tab-pane fade p-4 show active" id="nav-result5" role="tabpanel" aria-labelledby="nav-resultTab5">
+                  <div class="position-relative w-md-50 z-index-2">
+                    <!-- Form Group -->
+                    <div class="form-group">
+                      <div class="input-group input-group-merge">
+                        <input type="text" class="js-form-search form-control" placeholder="Search..."
+                               data-hs-form-search-options='{
+                                 "clearIcon": "#clearIconMenuEg",
+                                 "defaultIcon": "#defaultIconMenuEg",
+                                 "dropMenuElement": "#dropMenuEg",
+                                 "dropMenuOffset": 20
+                               }'>
+                        <a class="input-group-append" href="javascript:;">
+                          <span class="input-group-text">
+                            <i id="clearIconMenuEg" class="tio-clear tio-lg" style="display: none;"></i>
+                            <i id="defaultIconMenuEg" class="tio-search" style="display: none;"></i>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- End Form Group -->
+
+                    <!-- Drop Menu -->
+                    <div id="dropMenuEg" class="hs-form-search-menu-content card dropdown-menu dropdown-card overflow-hidden">
+                      <!-- Body -->
+                      <div class="card-body-height py-3">
+                        <small class="dropdown-header mb-n2">Recent searches</small>
+
+                        <div class="dropdown-item bg-transparent text-wrap my-2">
+                          <span class="h4 mr-1">
+                            <a class="btn btn-xs btn-soft-dark btn-pill" href="@@autopath/index.html">
+                              Gulp <i class="tio-search ml-1"></i>
+                            </a>
+                          </span>
+                          <span class="h4">
+                            <a class="btn btn-xs btn-soft-dark btn-pill" href="@@autopath/index.html">
+                              Notification panel <i class="tio-search ml-1"></i>
+                            </a>
+                          </span>
+                        </div>
+
+                        <div class="dropdown-divider my-3"></div>
+
+                        <small class="dropdown-header mb-n2">Tutorials</small>
+
+                        <a class="dropdown-item my-2" href="@@autopath/index.html">
+                          <div class="media align-items-center">
+                            <span class="icon icon-xs icon-soft-dark icon-circle mr-2">
+                              <i class="tio-tune"></i>
+                            </span>
+
+                            <div class="media-body text-truncate">
+                              <span>How to set up Gulp?</span>
+                            </div>
+                          </div>
+                        </a>
+
+                        <a class="dropdown-item my-2" href="@@autopath/index.html">
+                          <div class="media align-items-center">
+                            <span class="icon icon-xs icon-soft-dark icon-circle mr-2">
+                              <i class="tio-paint-bucket"></i>
+                            </span>
+
+                            <div class="media-body text-truncate">
+                              <span>How to change theme color?</span>
+                            </div>
+                          </div>
+                        </a>
+
+                        <div class="dropdown-divider my-3"></div>
+
+                        <small class="dropdown-header mb-n2">Members</small>
+
+                        <a class="dropdown-item my-2" href="@@autopath/index.html">
+                          <div class="media align-items-center">
+                            <img class="avatar avatar-xs avatar-circle mr-2" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description">
+                            <div class="media-body text-truncate">
+                              <span>Amanda Harvey <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
+                            </div>
+                          </div>
+                        </a>
+
+                        <a class="dropdown-item my-2" href="@@autopath/index.html">
+                          <div class="media align-items-center">
+                            <img class="avatar avatar-xs avatar-circle mr-2" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                            <div class="media-body text-truncate">
+                              <span>David Harrison</span>
+                            </div>
+                          </div>
+                        </a>
+
+                        <a class="dropdown-item my-2" href="@@autopath/index.html">
+                          <div class="media align-items-center">
+                            <div class="avatar avatar-xs avatar-soft-info avatar-circle mr-2">
+                              <span class="avatar-initials">A</span>
+                            </div>
+                            <div class="media-body text-truncate">
+                              <span>Anne Richard</span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- End Body -->
+
+                      <!-- Footer -->
+                      <a class="card-footer text-center" href="@@autopath/index.html">
+                        See all results
+                        <i class="tio-chevron-right"></i>
+                      </a>
+                      <!-- End Footer -->
+                    </div>
+                    <!-- End Drop Menu -->
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html5" role="tabpanel" aria-labelledby="nav-htmlTab5">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;div class="position-relative w-md-50 z-index-2"&gt;
+                        &lt;!-- Form Group --&gt;
+                        &lt;div class="form-group"&gt;
+                          &lt;div class="input-group input-group-merge"&gt;
+                            &lt;input type="text" class="js-form-search form-control" placeholder="Search..."
+                                   data-hs-form-search-options='{
+                                     "clearIcon": "#clearIconMenuEg",
+                                     "defaultIcon": "#defaultIconMenuEg",
+                                     "dropMenuElement": "#dropMenuEg",
+                                     "dropMenuOffset": 20
+                                   }'&gt;
+                            &lt;a class="input-group-append" href="javascript:;"&gt;
+                              &lt;span class="input-group-text"&gt;
+                                &lt;i id="clearIconMenuEg" class="tio-clear tio-lg" style="display: none;"&gt;&lt;/i&gt;
+                                &lt;i id="defaultIconMenuEg" class="tio-search" style="display: none;"&gt;&lt;/i&gt;
+                              &lt;/span&gt;
+                            &lt;/a&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Form Group --&gt;
+
+                        &lt;!-- Drop Menu --&gt;
+                        &lt;div id="dropMenuEg" class="hs-form-search-menu-content card dropdown-menu dropdown-card overflow-hidden"&gt;
+                          &lt;!-- Body --&gt;
+                          &lt;div class="card-body-height py-3"&gt;
+                            &lt;small class="dropdown-header mb-n2"&gt;Recent searches&lt;/small&gt;
+
+                            &lt;div class="dropdown-item bg-transparent text-wrap my-2"&gt;
+                              &lt;span class="h4 mr-1"&gt;
+                                &lt;a class="btn btn-xs btn-soft-dark btn-pill" href="@@autopath/index.html"&gt;
+                                  Gulp &lt;i class="tio-search ml-1"&gt;&lt;/i&gt;
+                                &lt;/a&gt;
+                              &lt;/span&gt;
+                              &lt;span class="h4"&gt;
+                                &lt;a class="btn btn-xs btn-soft-dark btn-pill" href="@@autopath/index.html"&gt;
+                                  Notification panel &lt;i class="tio-search ml-1"&gt;&lt;/i&gt;
+                                &lt;/a&gt;
+                              &lt;/span&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class="dropdown-divider my-3"&gt;&lt;/div&gt;
+
+                            &lt;small class="dropdown-header mb-n2"&gt;Tutorials&lt;/small&gt;
+
+                            &lt;a class="dropdown-item my-2" href="@@autopath/index.html"&gt;
+                              &lt;div class="media align-items-center"&gt;
+                                &lt;span class="icon icon-xs icon-soft-dark icon-circle mr-2"&gt;
+                                  &lt;i class="tio-tune"&gt;&lt;/i&gt;
+                                &lt;/span&gt;
+
+                                &lt;div class="media-body text-truncate"&gt;
+                                  &lt;span&gt;How to set up Gulp?&lt;/span&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/a&gt;
+
+                            &lt;a class="dropdown-item my-2" href="@@autopath/index.html"&gt;
+                              &lt;div class="media align-items-center"&gt;
+                                &lt;span class="icon icon-xs icon-soft-dark icon-circle mr-2"&gt;
+                                  &lt;i class="tio-paint-bucket"&gt;&lt;/i&gt;
+                                &lt;/span&gt;
+
+                                &lt;div class="media-body text-truncate"&gt;
+                                  &lt;span&gt;How to change theme color?&lt;/span&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/a&gt;
+
+                            &lt;div class="dropdown-divider my-3"&gt;&lt;/div&gt;
+
+                            &lt;small class="dropdown-header mb-n2"&gt;Members&lt;/small&gt;
+
+                            &lt;a class="dropdown-item my-2" href="@@autopath/index.html"&gt;
+                              &lt;div class="media align-items-center"&gt;
+                                &lt;img class="avatar avatar-xs avatar-circle mr-2" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description"&gt;
+                                &lt;div class="media-body text-truncate"&gt;
+                                  &lt;span&gt;Amanda Harvey &lt;i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"&gt;&lt;/i&gt;&lt;/span&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/a&gt;
+
+                            &lt;a class="dropdown-item my-2" href="@@autopath/index.html"&gt;
+                              &lt;div class="media align-items-center"&gt;
+                                &lt;img class="avatar avatar-xs avatar-circle mr-2" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description"&gt;
+                                &lt;div class="media-body text-truncate"&gt;
+                                  &lt;span&gt;David Harrison&lt;/span&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/a&gt;
+
+                            &lt;a class="dropdown-item my-2" href="@@autopath/index.html"&gt;
+                              &lt;div class="media align-items-center"&gt;
+                                &lt;div class="avatar avatar-xs avatar-soft-info avatar-circle mr-2"&gt;
+                                  &lt;span class="avatar-initials"&gt;A&lt;/span&gt;
+                                &lt;/div&gt;
+                                &lt;div class="media-body text-truncate"&gt;
+                                  &lt;span&gt;Anne Richard&lt;/span&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/a&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Body --&gt;
+
+                          &lt;!-- Footer --&gt;
+                          &lt;a class="card-footer text-center" href="@@autopath/index.html"&gt;
+                            See all results
+                            &lt;i class="tio-chevron-right"&gt;&lt;/i&gt;
+                          &lt;/a&gt;
+                          &lt;!-- End Footer --&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Drop Menu --&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="modal-example" class="hs-docs-heading">
+              Modal example <a class="anchorjs-link" href="#modal-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab6" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab6" data-toggle="pill" href="#nav-result6" role="tab" aria-controls="nav-result6" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab6" data-toggle="pill" href="#nav-html6" role="tab" aria-controls="nav-html6" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent6">
+                <div class="tab-pane fade p-4 show active" id="nav-result6" role="tabpanel" aria-labelledby="nav-resultTab6">
+                  <!-- Button Trigger Modal -->
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Open modal
+                  </button>
+                  <!-- End Button Trigger Modal -->
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <!-- Header -->
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Advanced select</h5>
+                          <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close">
+                            <i class="tio-clear tio-lg" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                        <!-- End Header -->
+
+                        <!-- Body -->
+                        <div class="modal-body">
+                          <!-- Form Group -->
+                          <div class="form-group">
+                            <div class="input-group input-group-merge">
+                              <input type="text" class="js-form-search form-control" placeholder="Search..."
+                                     data-hs-form-search-options='{
+                                       "clearIcon": "#clearIconModalEg"
+                                     }'>
+                              <a class="input-group-append" href="javascript:;">
+                                <span class="input-group-text">
+                                  <i id="clearIconModalEg" class="tio-clear tio-lg" style="display: none;"></i>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                          <!-- End Form Group -->
+                        </div>
+                        <!-- End Body -->
+
+                        <!-- Footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Continue</button>
+                        </div>
+                        <!-- End Footer -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html6" role="tabpanel" aria-labelledby="nav-htmlTab6">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Button Trigger Modal --&gt;
+                      &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"&gt;
+                        Open modal
+                      &lt;/button&gt;
+                      &lt;!-- End Button Trigger Modal --&gt;
+
+                      &lt;!-- Modal --&gt;
+                      &lt;div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+                        &lt;div class="modal-dialog" role="document"&gt;
+                          &lt;div class="modal-content"&gt;
+                            &lt;!-- Header --&gt;
+                            &lt;div class="modal-header"&gt;
+                              &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Advanced select&lt;/h5&gt;
+                              &lt;button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close"&gt;
+                                &lt;i class="tio-clear tio-lg" aria-hidden="true"&gt;&lt;/i&gt;
+                              &lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Header --&gt;
+
+                            &lt;!-- Body --&gt;
+                            &lt;div class="modal-body"&gt;
+                              &lt;!-- Form Group --&gt;
+                              &lt;div class="form-group"&gt;
+                                &lt;div class="input-group input-group-merge"&gt;
+                                  &lt;input type="text" class="js-form-search form-control" placeholder="Search..."
+                                         data-hs-form-search-options='{
+                                           "clearIcon": "#clearIconModalEg"
+                                         }'&gt;
+                                  &lt;a class="input-group-append" href="javascript:;"&gt;
+                                    &lt;span class="input-group-text"&gt;
+                                      &lt;i id="clearIconModalEg" class="tio-clear tio-lg" style="display: none;"&gt;&lt;/i&gt;
+                                    &lt;/span&gt;
+                                  &lt;/a&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                              &lt;!-- End Form Group --&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Body --&gt;
+
+                            &lt;!-- Footer --&gt;
+                            &lt;div class="modal-footer"&gt;
+                              &lt;button type="button" class="btn btn-white" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                              &lt;button type="button" class="btn btn-primary"&gt;Continue&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Footer --&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Modal --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="methods" class="hs-docs-heading">
+              Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card overflow-hidden">
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-thead-bordered card-table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Parameters</th>
+                      <th style="width: 50%;">Description</th>
+                      <th class="text-nowrap">Default value</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code>clearIcon</code>
+                      </td>
+                      <td>An element that when clicked will clear the field.</td>
+                      <td>
+                        <code>null</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code>defaultIcon</code>
+                      </td>
+                      <td>The element that will be the default instead <code>clearIcon</code>.</td>
+                      <td>
+                        <code>null</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code>loadingIcon</code>
+                      </td>
+                      <td>The element that will be instead <code>clearIcon and defaultIcon</code> on loading.</td>
+                      <td>
+                        <code>null</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code>delay</code>
+                      </td>
+                      <td>Animation delay.</td>
+                      <td>
+                        <code>300</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code>dropMenuElement</code>
+                      </td>
+                      <td>Drop menu element.</td>
+                      <td>
+                        <code>null</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code>dropMenuOffset</code>
+                      </td>
+                      <td>Drop menu top offset.</td>
+                      <td>
+                        <code>0</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code>activeClass</code>
+                      </td>
+                      <td>  Class which will be added when input search is active.</td>
+                      <td>
+                        <code>null</code>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="events" class="hs-docs-heading">
+              Events <a class="anchorjs-link" href="#events" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card overflow-hidden">
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-thead-bordered card-table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Name</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td><code>clear</code></td>
+                      <td>Triggered when the field is cleared</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+    <script src="@@autopath/assets/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+
+        
+        // INITIALIZATION OF FORM SEARCH
+        // =======================================================
+        $('.js-form-search').each(function () {
+          new HSFormSearch($(this)).init()
+        });
+
+        var clearTypeLoading = new HSFormSearch($('#type-loading')).init();
+
+        $('#type-loading').on('input', function() {
+          clearTypeLoading.loading();
+
+          if (!$('#type-loading').val().length) {
+            clearTypeLoading.loading(false);
+          }
+        })
+
+        $('#type-loading').on('change', function() {
+          clearTypeLoading.loading(false);
+        })
+
+        var clearInputLoading = new HSFormSearch($('#clear-input-loading')).init();
+
+        $('#loadBtn').on('click', function() {
+          $('#loadBtn').prop('disabled', true);
+
+          clearInputLoading.loading();
+
+          setTimeout(function() {
+            clearInputLoading.loading(false);
+            $('#loadBtn').prop('disabled', false);
+          }, 2000);
+        })
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

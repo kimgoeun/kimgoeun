@@ -1,0 +1,37 @@
+<header id="header" class="navbar navbar-expand-lg navbar-fixed-lg navbar-container navbar-light">
+  <div class="navbar-nav-wrap">
+    <div class="navbar-brand-wrapper">
+      <!-- Logo -->
+      @@include("../layouts-components/navbar-single-logo.html")
+      <!-- End Logo -->
+    </div>
+
+    <div class="navbar-nav-wrap-content-left">
+      <!-- Search Form -->
+      <div class="d-none d-lg-block">
+        @@include("../layouts-components/search.html")
+      </div>
+      <!-- End Search Form -->
+    </div>
+
+    <!-- Secondary Content -->
+    <div class="navbar-nav-wrap-content-right">
+      <!-- Navbar -->
+      <ul class="navbar-nav align-items-center flex-row">
+        <li class="nav-item d-lg-none">
+          <!-- Search Trigger -->
+          @@include("../layouts-components/mobile-search-toggle.html")
+          <!-- End Search Trigger -->
+        </li>
+
+        <li class="nav-item">
+          <!-- Account -->
+          @@include("../layouts-components/dropdown-user.html")
+          <!-- End Account -->
+        </li>
+      </ul>
+      <!-- End Navbar -->
+    </div>
+    <!-- End Secondary Content -->
+  </div>
+</header>

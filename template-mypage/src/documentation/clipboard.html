@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Copy to Clipboard - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "clipboard.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Copy to Clipboard</h1>
+                  <p class="lead">A modern approach to copy text to clipboard</p>
+                  <a href="https://clipboardjs.com/" target="_blank">Clipboard.js documentation <i class="tio-open-in-new"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="how-to-use" class="hs-docs-heading">
+              How to use <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/node_modules/clipboard/dist/clipboard.min.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Front</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/assets/js/hs-clipboard.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code>&lt;/body&gt;</code> tag, to enable it.</p>
+
+            <pre class="rounded">
+              <code class="language-html" data-lang="html">
+                &lt;script&gt;
+                  $(document).on('ready', function () {
+                    // INITIALIZATION OF CLIPBOARD
+                    // =======================================================
+                    $('.js-clipboard').each(function() {
+                      $.HSCore.components.HSClipboard.init(this);
+                    });
+                  });
+                &lt;/script&gt;
+              </code>
+            </pre>
+
+            <!-- Heading -->
+            <h2 id="tooltip-example" class="hs-docs-heading">
+              Tooltip example <a class="anchorjs-link" href="#tooltip-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- Input Group -->
+                  <div class="input-group input-group-merge">
+                    <input type="text" id="tooltipExample" class="form-control" value="I am a tooltip example">
+
+                    <a class="js-clipboard input-group-append" href="javascript:;" data-toggle="tooltip" title="Copy to clipboard!"
+                       data-hs-clipboard-options='{
+                         "type": "tooltip",
+                         "successText": "Copied!",
+                         "contentTarget": "#tooltipExample"
+                       }'>
+                      <span class="input-group-text">
+                        <span class="tio-copy"></span>
+                      </span>
+                    </a>
+                  </div>
+                  <!-- End Input Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;div class="row text-center"&gt;
+                        &lt;div class="col-lg-3 col-sm-6 mb-5 mb-lg-0"&gt;
+                          &lt;div class="js-counter h3 mb-1"&gt;52147&lt;/div&gt;
+                          &lt;span&gt;Code Lines&lt;/span&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-lg-3 col-sm-6 mb-5 mb-lg-0"&gt;
+                          &lt;div class="js-counter h3 mb-1"&gt;24583&lt;/div&gt;
+                          &lt;span&gt;Projects&lt;/span&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-lg-3 col-sm-6 mb-5 mb-lg-0"&gt;
+                          &lt;div class="js-counter h3 mb-1"&gt;7348&lt;/div&gt;
+                          &lt;span&gt;Working Hours&lt;/span&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-lg-3 col-sm-6 mb-5 mb-lg-0"&gt;
+                          &lt;div class="js-counter h3 mb-1"&gt;87904&lt;/div&gt;
+                          &lt;span&gt;Job Offers&lt;/span&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Row --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="change-icon" class="hs-docs-heading">
+              Change icon <a class="anchorjs-link" href="#change-icon" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <!-- Input Group -->
+                  <div class="input-group input-group-merge">
+                    <input type="text" id="iconExample" class="form-control" value="I am an icon example">
+
+                    <a class="js-clipboard input-group-append" href="javascript:;"
+                       data-hs-clipboard-options='{
+                         "contentTarget": "#iconExample",
+                         "classChangeTarget": "#iconExampleLinkIcon",
+                         "defaultClass": "tio-copy",
+                         "successClass": "tio-done"
+                       }'>
+                      <span class="input-group-text">
+                        <span id="iconExampleLinkIcon" class="tio-copy"></span>
+                      </span>
+                    </a>
+                  </div>
+                  <!-- End Input Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Input Group --&gt;
+                      &lt;div class="input-group input-group-merge"&gt;
+                        &lt;input type="text" id="iconExample" class="form-control" value="I am an icon example"&gt;
+
+                        &lt;a class="js-clipboard input-group-append" href="javascript:;"
+                           data-hs-clipboard-options='{
+                             "contentTarget": "#iconExample",
+                             "classChangeTarget": "#iconExampleLinkIcon",
+                             "defaultClass": "tio-copy",
+                             "successClass": "tio-done"
+                           }'&gt;
+                          &lt;span class="input-group-text"&gt;
+                            &lt;span id="iconExampleLinkIcon" class="tio-copy"&gt;&lt;/span&gt;
+                          &lt;/span&gt;
+                        &lt;/a&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Input Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="cut-to-clipboard" class="hs-docs-heading">
+              Cut to clipboard <a class="anchorjs-link" href="#cut-to-clipboard" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>action="cut"</code></p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab3" data-toggle="pill" href="#nav-result3" role="tab" aria-controls="nav-result3" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab3" data-toggle="pill" href="#nav-html3" role="tab" aria-controls="nav-html3" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent3">
+                <div class="tab-pane fade p-4 show active" id="nav-result3" role="tabpanel" aria-labelledby="nav-resultTab3">
+                  <div class="form-group">
+                    <textarea id="cutExample" class="form-control">Cut text example in textarea.</textarea>
+                  </div>
+
+                  <button class="btn btn-primary js-clipboard" data-toggle="tooltip" title="Copy to clipboard!"
+                          data-hs-clipboard-options='{
+                           "action": "cut",
+                           "type": "tooltip",
+                           "successText": "Copied!",
+                           "contentTarget": "#cutExample"
+                         }'>
+                    Cut to clipboard
+                  </button>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html3" role="tabpanel" aria-labelledby="nav-htmlTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;div class="form-group"&gt;
+                        &lt;textarea id="cutExample" class="form-control"&gt;Cut text example in textarea.&lt;/textarea&gt;
+                      &lt;/div&gt;
+
+                      &lt;button class="btn btn-primary js-clipboard" data-toggle="tooltip" title="Copy to clipboard!"
+                              data-hs-clipboard-options='{
+                               "action": "cut",
+                               "type": "tooltip",
+                               "successText": "Copied!",
+                               "contentTarget": "#cutExample"
+                             }'&gt;
+                        Cut to clipboard
+                      &lt;/button&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="modal-example" class="hs-docs-heading">
+              Modal example <a class="anchorjs-link" href="#modal-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab4" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab4" data-toggle="pill" href="#nav-result4" role="tab" aria-controls="nav-result4" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab4" data-toggle="pill" href="#nav-html4" role="tab" aria-controls="nav-html4" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent4">
+                <div class="tab-pane fade p-4 show active" id="nav-result4" role="tabpanel" aria-labelledby="nav-resultTab4">
+                  <!-- Button Trigger Modal -->
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Open modal
+                  </button>
+                  <!-- End Button Trigger Modal -->
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <!-- Header -->
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Copy to clipboard</h5>
+                          <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close">
+                            <i class="tio-clear tio-lg" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                        <!-- End Header -->
+
+                        <!-- Body -->
+                        <div class="modal-body">
+                          <!-- Input Group -->
+                          <div class="input-group input-group-merge">
+                            <input type="text" id="modalExample" class="form-control" value="I am a modal example">
+
+                            <a class="js-clipboard input-group-append" href="javascript:;" data-toggle="tooltip" title="Copy to clipboard!"
+                               data-hs-clipboard-options='{
+                                 "type": "tooltip",
+                                 "successText": "Copied!",
+                                 "contentTarget": "#modalExample",
+                                 "container": "#exampleModal"
+                               }'>
+                              <span class="input-group-text">
+                                <i class="tio-copy"></i>
+                              </span>
+                            </a>
+                          </div>
+                          <!-- End Input Group -->
+                        </div>
+                        <!-- End Body -->
+
+                        <!-- Footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Continue</button>
+                        </div>
+                        <!-- End Footer -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html4" role="tabpanel" aria-labelledby="nav-htmlTab4">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Button Trigger Modal --&gt;
+                      &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"&gt;
+                        Open modal
+                      &lt;/button&gt;
+                      &lt;!-- End Button Trigger Modal --&gt;
+
+                      &lt;!-- Modal --&gt;
+                      &lt;div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+                        &lt;div class="modal-dialog" role="document"&gt;
+                          &lt;div class="modal-content"&gt;
+                            &lt;!-- Header --&gt;
+                            &lt;div class="modal-header"&gt;
+                              &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Copy to clipboard&lt;/h5&gt;
+                              &lt;button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close"&gt;
+                                &lt;i class="tio-clear tio-lg" aria-hidden="true"&gt;&lt;/i&gt;
+                              &lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Header --&gt;
+
+                            &lt;!-- Body --&gt;
+                            &lt;div class="modal-body"&gt;
+                              &lt;!-- Input Group --&gt;
+                              &lt;div class="input-group input-group-merge"&gt;
+                                &lt;input type="text" id="modalExample" class="form-control" value="I am a modal example"&gt;
+
+                                &lt;a class="js-clipboard input-group-append" href="javascript:;" data-toggle="tooltip" title="Copy to clipboard!"
+                                   data-hs-clipboard-options='{
+                                     "type": "tooltip",
+                                     "successText": "Copied!",
+                                     "contentTarget": "#modalExample",
+                                     "container": "#exampleModal"
+                                   }'&gt;
+                                  &lt;span class="input-group-text"&gt;
+                                    &lt;i class="tio-copy"&gt;&lt;/i&gt;
+                                  &lt;/span&gt;
+                                &lt;/a&gt;
+                              &lt;/div&gt;
+                              &lt;!-- End Input Group --&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Body --&gt;
+
+                            &lt;!-- Footer --&gt;
+                            &lt;div class="modal-footer"&gt;
+                              &lt;button type="button" class="btn btn-white" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                              &lt;button type="button" class="btn btn-primary"&gt;Continue&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Footer --&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Modal --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="methods" class="hs-docs-heading">
+              Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card overflow-hidden">
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-thead-bordered card-table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Parameters</th>
+                      <th style="width: 50%;">Description</th>
+                      <th class="text-nowrap">Default value</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td><code>type</code></td>
+                      <td>Callback type.</td>
+                      <td><code>null</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>contentTarget</code></td>
+                      <td>Content.</td>
+                      <td><code>null</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>classChangeTarget</code></td>
+                      <td>Class to be changed.</td>
+                      <td><code>null</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>defaultClass</code></td>
+                      <td>Default class for change target.</td>
+                      <td><code>null</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>successText</code></td>
+                      <td>Add text when copy to clipboard is success.</td>
+                      <td><code>null</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>successClass</code></td>
+                      <td>Add class when copy to clipboard is success.</td>
+                      <td><code>null</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>originalTitle</code></td>
+                      <td>Default title for tooltip.</td>
+                      <td><code>null</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+    <script src="@@autopath/node_modules/clipboard/dist/clipboard.min.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+    <script src="@@autopath/assets/js/hs.clipboard.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+
+        
+        // INITIALIZATION OF CLIPBOARD
+        // =======================================================
+        $('.js-clipboard').each(function() {
+          $.HSCore.components.HSClipboard.init(this);
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

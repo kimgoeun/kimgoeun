@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Tagify - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/@yaireo/tagify/dist/tagify.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "tagify.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Tagify</h1>
+                  <p class="lead">Lightweight input "tags" script.</p>
+                  <a href="https://github.com/yairEO/tagify" target="_blank">Tagify documentation <i class="tio-open-in-new"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="how-to-use" class="hs-docs-heading">
+              How to use <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Copy-paste the stylesheet <code>&lt;link&gt;</code> into your <code>&lt;head&gt;</code> to load the CSS.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;link rel="stylesheet" href="@@autopath/node_modules/@yaireo/tagify/dist/tagify.css"&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/node_modules/@yaireo/tagify/dist/tagify.min.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Front</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/assets/js/hs.tagify.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code>&lt;/body&gt;</code> tag, to enable it.</p>
+
+            <pre class="rounded">
+              <code class="language-html" data-lang="html">
+                &lt;script&gt;
+                  $(document).on('ready', function () {
+                    // INITIALIZATION OF TAGIFY
+                    // =======================================================
+                    $('.js-tagify').each(function () {
+                      var tagify = $.HSCore.components.HSTagify.init($(this));
+                    });
+                  });
+                &lt;/script&gt;
+              </code>
+            </pre>
+
+            <!-- Heading -->
+            <h2 id="basic-example" class="hs-docs-heading">
+              Basic example <a class="anchorjs-link" href="#basic-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- Tagify -->
+                  <input type="text" class="js-tagify tagify-form-control form-control" placeholder="Write some tags" value="css, html, javascript">
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Tagify --&gt;
+                      &lt;input type="text" class="js-tagify tagify-form-control form-control" placeholder="Write some tags" value="css, html, javascript"&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="blacklist" class="hs-docs-heading">
+              Blacklist <a class="anchorjs-link" href="#blacklist" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>"blacklist": ["apple", "ananas", ...]</code> prop.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <!-- Tagify -->
+                  <input type="text" class="js-tagify tagify-form-control form-control" placeholder="Write some tags" value="new, bestseller, apple"
+                         data-hs-tagify-options='{
+                           "blacklist": ["apple", "ananas"]
+                         }'>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Tagify --&gt;
+                      &lt;input type="text" class="js-tagify tagify-form-control form-control" placeholder="Write some tags" value="new, bestseller, apple"
+                             data-hs-tagify-options='{
+                               "blacklist": ["apple", "ananas"]
+                             }'&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="remove-button" class="hs-docs-heading">
+              Remove Button <a class="anchorjs-link" href="#remove-button" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>"clearBtnSelector": "#removeTagsBtn"</code> prop.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab3" data-toggle="pill" href="#nav-result3" role="tab" aria-controls="nav-result3" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab3" data-toggle="pill" href="#nav-html3" role="tab" aria-controls="nav-html3" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent3">
+                <div class="tab-pane fade p-4 show active" id="nav-result3" role="tabpanel" aria-labelledby="nav-resultTab3">
+                  <!-- Tagify -->
+                  <div class="form-group">
+                    <input type="text" class="js-tagify tagify-form-control form-control" placeholder="Write some tags" value="css, html, javascript"
+                           data-hs-tagify-options='{
+                             "clearBtnSelector": "#removeTagsBtn"
+                           }'>
+                  </div>
+                  <!-- End Tagify -->
+
+                  <button id="removeTagsBtn" class="btn btn-primary">Remove all</button>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html3" role="tabpanel" aria-labelledby="nav-htmlTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Tagify --&gt;
+                      &lt;div class="form-group"&gt;
+                        &lt;input type="text" class="js-tagify tagify-form-control form-control" placeholder="Write some tags" value="css, html, javascript"
+                               data-hs-tagify-options='{
+                                 "clearBtnSelector": "#removeTagsBtn"
+                               }'&gt;
+
+                        &lt;button id="removeTagsBtn" class="btn btn-primary"&gt;Remove all&lt;/button&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Tagify --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="mix" class="hs-docs-heading">
+              Mix <a class="anchorjs-link" href="#mix" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Start typing 'a' with <code>@</code> or <code>#</code>. For sample <code>@apple</code></p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab4" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab4" data-toggle="pill" href="#nav-result4" role="tab" aria-controls="nav-result4" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab4" data-toggle="pill" href="#nav-html4" role="tab" aria-controls="nav-html4" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent4">
+                <div class="tab-pane fade p-4 show active" id="nav-result4" role="tabpanel" aria-labelledby="nav-resultTab4">
+                  <!-- Tagify -->
+                  <textarea class="js-tagify tagify-form-control form-control"
+                            data-hs-tagify-options='{
+                              "mode": "mix",
+                              "pattern": "@|#",
+                              "whitelist": [
+                                {
+                                  "value": "cartman",
+                                  "title": "Eric Cartman"
+                                }, {
+                                  "value": "kyle",
+                                  "title": "Kyle Broflovski"
+                                }, {
+                                  "value": "Homer simpson"
+                                }, {
+                                  "value": "apple"
+                                }
+                              ],
+                              "dropdown": {
+                                "enabled": 1,
+                                "classname": "tagify__dropdown__menu"
+                              }
+                            }'>[[cartman]] and [[kyle]] do not know [[homer simpson]] because he"s a relic.</textarea>
+
+                  <!-- End Tagify -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html4" role="tabpanel" aria-labelledby="nav-htmlTab4">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Tagify --&gt;
+                      &lt;textarea class="js-tagify tagify-form-control form-control"
+                                data-hs-tagify-options='{
+                                  "mode": "mix",
+                                  "pattern": "@|#",
+                                  "whitelist": [
+                                    {
+                                      "value": "cartman",
+                                      "title": "Eric Cartman"
+                                    }, {
+                                      "value": "kyle",
+                                      "title": "Kyle Broflovski"
+                                    }, {
+                                      "value": "Homer simpson"
+                                    }, {
+                                      "value": "apple"
+                                    }
+                                  ],
+                                  "dropdown": {
+                                    "enabled": 1,
+                                    "classname": "tagify__dropdown__menu"
+                                  }
+                                }'&gt;[[cartman]] and [[kyle]] do not know [[homer simpson]] because he"s a relic.&lt;/textarea&gt;
+
+                      &lt;!-- End Tagify --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="list-manually" class="hs-docs-heading">
+              List manually <a class="anchorjs-link" href="#list-manually" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab5" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab5" data-toggle="pill" href="#nav-result5" role="tab" aria-controls="nav-result5" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab5" data-toggle="pill" href="#nav-html5" role="tab" aria-controls="nav-html5" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent5">
+                <div class="tab-pane fade p-4 show active" id="nav-result5" role="tabpanel" aria-labelledby="nav-resultTab5">
+                  <!-- Tagify -->
+                  <input type="text" class="js-tagify tagify-form-control tagify-form-control-list form-control" placeholder="Write some tags"
+                         data-hs-tagify-options='{
+                           "whitelist": ["A# .NET", "A# (Axiom)", "A-0 System"],
+                           "enforceWhitelist": true,
+                           "dropdown": {
+                             "position": "manual",
+                             "maxItems": "Infinity",
+                             "enabled": 0,
+                             "classname": "tagify__dropdown__menu"
+                           },
+                           "hasManualList": true
+                         }'>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html5" role="tabpanel" aria-labelledby="nav-htmlTab5">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Tagify --&gt;
+                      &lt;input type="text" class="js-tagify tagify-form-control tagify-form-control-list form-control" placeholder="Write some tags"
+                             data-hs-tagify-options='{
+                               "whitelist": ["A# .NET", "A# (Axiom)", "A-0 System"],
+                               "enforceWhitelist": true,
+                               "dropdown": {
+                                 "position": "manual",
+                                 "maxItems": "Infinity",
+                                 "enabled": 0,
+                                 "classname": "tagify__dropdown__menu"
+                               },
+                               "hasManualList": true
+                             }'&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="custom-template" class="hs-docs-heading">
+              Custom template <a class="anchorjs-link" href="#custom-template" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab6" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab6" data-toggle="pill" href="#nav-result6" role="tab" aria-controls="nav-result6" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab6" data-toggle="pill" href="#nav-html6" role="tab" aria-controls="nav-html6" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab6" data-toggle="pill" href="#nav-js6" role="tab" aria-controls="nav-js6" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent6">
+                <div class="tab-pane fade p-4 show active" id="nav-result6" role="tabpanel" aria-labelledby="nav-resultTab6">
+                  <!-- Tagify -->
+                  <div class="input-group input-group-merge w-md-50">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="tio-account-square-outlined"></i>
+                      </div>
+                    </div>
+
+                    <input class="js-tagify-avatars tagify-form-control form-control" placeholder="Add creater name" aria-label="Add creater name"
+                           data-hs-tagify-options='{
+                             "delimiters": null,
+                             "enforceWhitelist": true,
+                             "whitelist": [
+                               {
+                                 "value": "Htmlstream",
+                                 "src": "@@autopath/assets/svg/brands/htmlstream.svg"
+                               },{
+                                 "value": "Digitalocean",
+                                 "src": "@@autopath/assets/svg/brands/digitalocean.svg"
+                               }, {
+                                 "value": "Google",
+                                 "src": "@@autopath/assets/svg/brands/google.svg"
+                               }, {
+                                 "value": "Mailchimp",
+                                 "src": "@@autopath/assets/svg/brands/mailchimp.svg"
+                               }, {
+                                 "value": "Prosperops",
+                                 "src": "@@autopath/assets/svg/brands/prosperops.svg"
+                               }, {
+                                 "value": "Spec",
+                                 "src": "@@autopath/assets/svg/brands/spec.svg"
+                               }, {
+                                 "value": "Spotify",
+                                 "src": "@@autopath/assets/svg/brands/spotify.svg"
+                               }, {
+                                 "value": "Frontapp",
+                                 "src": "@@autopath/assets/svg/brands/frontapp.svg"
+                               }, {
+                                 "value": "Figma",
+                                 "src": "@@autopath/assets/svg/brands/figma.svg"
+                               }, {
+                                 "value": "Bookingcom",
+                                 "src": "@@autopath/assets/svg/brands/bookingcom.svg"
+                               }
+                             ],
+                             "dropdown": {
+                               "enabled": 1,
+                               "classname": "tagify__dropdown__menu"
+                             }
+                           }'>
+                  </div>
+                  <!-- End Tagify -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html6" role="tabpanel" aria-labelledby="nav-htmlTab6">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Tagify --&gt;
+                      &lt;div class="input-group input-group-merge w-md-50"&gt;
+                        &lt;div class="input-group-prepend"&gt;
+                          &lt;div class="input-group-text"&gt;
+                            &lt;i class="tio-account-square-outlined"&gt;&lt;/i&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;input class="js-tagify-avatars tagify-form-control form-control" placeholder="Add creater name" aria-label="Add creater name"
+                               data-hs-tagify-options='{
+                                 "delimiters": null,
+                                 "enforceWhitelist": true,
+                                 "whitelist": [
+                                   {
+                                     "value": "Htmlstream",
+                                     "src": "@@autopath/assets/svg/brands/htmlstream.svg"
+                                   },{
+                                     "value": "Digitalocean",
+                                     "src": "@@autopath/assets/svg/brands/digitalocean.svg"
+                                   }, {
+                                     "value": "Google",
+                                     "src": "@@autopath/assets/svg/brands/google.svg"
+                                   }, {
+                                     "value": "Mailchimp",
+                                     "src": "@@autopath/assets/svg/brands/mailchimp.svg"
+                                   }, {
+                                     "value": "Prosperops",
+                                     "src": "@@autopath/assets/svg/brands/prosperops.svg"
+                                   }, {
+                                     "value": "Spec",
+                                     "src": "@@autopath/assets/svg/brands/spec.svg"
+                                   }, {
+                                     "value": "Spotify",
+                                     "src": "@@autopath/assets/svg/brands/spotify.svg"
+                                   }, {
+                                     "value": "Frontapp",
+                                     "src": "@@autopath/assets/svg/brands/frontapp.svg"
+                                   }, {
+                                     "value": "Figma",
+                                     "src": "@@autopath/assets/svg/brands/figma.svg"
+                                   }, {
+                                     "value": "Bookingcom",
+                                     "src": "@@autopath/assets/svg/brands/bookingcom.svg"
+                                   }
+                                 ],
+                                 "dropdown": {
+                                   "enabled": 1,
+                                   "classname": "tagify__dropdown__menu"
+                                 }
+                               }'&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Tagify --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js6" role="tabpanel" aria-labelledby="nav-jsTab6">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;script&gt;
+                       $('.js-tagify-avatars').each(function () {
+                         var settings = $(this).attr('data-hs-tagify-options') ? JSON.parse($(this).attr('data-hs-tagify-options')) : {},
+                           tagifyAvatars = $.HSCore.components.HSTagify.init($(this), {
+                             templates: {
+                               tag: function tag(tagData) {
+                                 try {
+                                  return &quot;&lt;tag title=\&quot;&quot; + tagData.value + &quot;\&quot; contenteditable=\&quot;false\&quot; spellcheck=\&quot;false\&quot; class=\&quot;tagify__tag &quot; + (tagData[&quot;class&quot;] ? tagData[&quot;class&quot;] : &quot;&quot;) + &quot;\&quot; &quot; + this.getAttributes(tagData) + &quot;&gt;&quot; +
+                                            &quot;&lt;x title=\&quot;remove tag\&quot; class=\&quot;tagify__tag__removeBtn\&quot;&gt;&lt;/x&gt;&quot; +
+                                            &quot;&lt;div class=\&quot;d-flex align-items-center\&quot;&gt;&quot; +
+                                            &quot;&quot; + (tagData.src ? &quot;&lt;img class=\&quot;avatar avatar-xss avatar-circle mr-2\&quot; src=\&quot;&quot; + tagData.src.toLowerCase() + &quot;\&quot;&gt;&quot; : &quot;&quot;) + &quot;&quot; +
+                                              &quot;&lt;span&gt;&quot; + tagData.value + &quot;&lt;/span&gt;&quot; +
+                                            &quot;&lt;/div&gt;&quot; +
+                                          &quot;&lt;/tag&gt;&quot;;
+                                 } catch (err) {}
+                               },
+                               dropdownItem: function dropdownItem(tagData) {
+                                try {
+                                  return &quot;&lt;div &quot; + this.getAttributes(tagData) + &quot; class=\&quot;tagify__dropdown__item &quot; + (tagData[&quot;class&quot;] ? tagData[&quot;class&quot;] : &quot;&quot;) + &quot;\&quot;&gt;&quot; +
+                                           &quot;&lt;img class=\&quot;avatar avatar-xss avatar-circle mr-2\&quot; src=\&quot;&quot; + tagData.src.toLowerCase() + &quot;\&quot;&gt;&quot; +
+                                           &quot;&lt;span&gt;&quot; + tagData.value + &quot;&lt;/span&gt;&quot; +
+                                         &quot;&lt;/div&gt;&quot;;
+                                } catch (err) {}
+                               }
+                             }
+                           }).addTags(settings.whitelist.slice(0, 1));
+                         });
+                       });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="modal-example" class="hs-docs-heading">
+              Modal example <a class="anchorjs-link" href="#modal-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab7" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab7" data-toggle="pill" href="#nav-result7" role="tab" aria-controls="nav-result7" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab7" data-toggle="pill" href="#nav-html7" role="tab" aria-controls="nav-html7" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent7">
+                <div class="tab-pane fade p-4 show active" id="nav-result7" role="tabpanel" aria-labelledby="nav-resultTab7">
+                  <!-- Button Trigger Modal -->
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Open modal
+                  </button>
+                  <!-- End Button Trigger Modal -->
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <!-- Header -->
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Tagify</h5>
+                          <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close">
+                            <i class="tio-clear tio-lg" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                        <!-- End Header -->
+
+                        <!-- Body -->
+                        <div class="modal-body">
+                          <!-- Tagify -->
+                          <input type="text" class="js-tagify tagify-form-control form-control" placeholder="Write some tags" value="css, html, javascript">
+                        </div>
+                        <!-- End Body -->
+
+                        <!-- Footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Continue</button>
+                        </div>
+                        <!-- End Footer -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html7" role="tabpanel" aria-labelledby="nav-htmlTab7">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Button Trigger Modal --&gt;
+                      &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"&gt;
+                        Open modal
+                      &lt;/button&gt;
+                      &lt;!-- End Button Trigger Modal --&gt;
+
+                      &lt;!-- Modal --&gt;
+                      &lt;div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+                        &lt;div class="modal-dialog" role="document"&gt;
+                          &lt;div class="modal-content"&gt;
+                            &lt;!-- Header --&gt;
+                            &lt;div class="modal-header"&gt;
+                              &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Advanced select&lt;/h5&gt;
+                              &lt;button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close"&gt;
+                                &lt;i class="tio-clear tio-lg" aria-hidden="true"&gt;&lt;/i&gt;
+                              &lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Header --&gt;
+
+                            &lt;!-- Body --&gt;
+                            &lt;div class="modal-body"&gt;
+                              &lt;!-- Tagify --&gt;
+                              &lt;input type="text" class="js-tagify tagify-form-control form-control" placeholder="Write some tags" value="css, html, javascript"&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Body --&gt;
+
+                            &lt;!-- Footer --&gt;
+                            &lt;div class="modal-footer"&gt;
+                              &lt;button type="button" class="btn btn-white" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                              &lt;button type="button" class="btn btn-primary"&gt;Continue&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Footer --&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Modal --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="methods" class="hs-docs-heading">
+              Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card overflow-hidden">
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-thead-bordered card-table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Parameters</th>
+                      <th style="width: 50%;">Description</th>
+                      <th class="text-nowrap">Default value</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code>clearBtnSelector</code>
+                      </td>
+                      <td>Clear all tags.</td>
+                      <td>
+                        <code>null</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code>hasManualList</code>
+                      </td>
+                      <td>Add menu with tags.</td>
+                      <td>
+                        <code>false</code>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+    <script src="@@autopath/node_modules/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
+    <script src="@@autopath/node_modules/@yaireo/tagify/dist/tagify.min.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+    <script src="@@autopath/assets/js/hs.tagify.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+
+        
+        // INITIALIZATION OF TAGIFY
+        // =======================================================
+        $('.js-tagify').each(function () {
+          var tagify = $.HSCore.components.HSTagify.init($(this));
+        });
+
+        $('.js-tagify-avatars').each(function () {
+          var settings = $(this).attr('data-hs-tagify-options') ? JSON.parse($(this).attr('data-hs-tagify-options')) : {},
+            tagifyAvatars = $.HSCore.components.HSTagify.init($(this), {
+              templates: {
+                tag: function tag(tagData) {
+                  try {
+                    return "<tag title=\"" + tagData.value + "\" contenteditable=\"false\" spellcheck=\"false\" class=\"tagify__tag " + (tagData["class"] ? tagData["class"] : "") + "\" " + this.getAttributes(tagData) + ">" +
+                      "<x title=\"remove tag\" class=\"tagify__tag__removeBtn\"></x>" +
+                      "<div class=\"d-flex align-items-center\">" +
+                      "" + (tagData.src ? "<img class=\"avatar avatar-xss avatar-circle mr-2\" src=\"" + tagData.src.toLowerCase() + "\">" : "") + "" +
+                      "<span>" + tagData.value + "</span>" +
+                      "</div>" +
+                      "</tag>";
+                  } catch (err) {}
+                },
+                dropdownItem: function dropdownItem(tagData) {
+                  try {
+                    return "<div " + this.getAttributes(tagData) + " class=\"tagify__dropdown__item " + (tagData["class"] ? tagData["class"] : "") + "\">" +
+                      "<img class=\"avatar avatar-xss avatar-circle mr-2\" src=\"" + tagData.src.toLowerCase() + "\">" +
+                      "<span>" + tagData.value + "</span>" +
+                      "</div>";
+                  } catch (err) {}
+                }
+              }
+            }).addTags(settings.whitelist.slice(0, 1));
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

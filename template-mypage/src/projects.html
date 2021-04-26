@@ -1,0 +1,2033 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Projects | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/@yaireo/tagify/dist/tagify.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/quill/dist/quill.snow.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/flatpickr/dist/flatpickr.min.css">
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <link rel="stylesheet" href="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+    }
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+  </head>
+
+  <body class="@@if(layoutBuilder.header.layoutMode === 'default'){has-navbar-vertical-aside navbar-vertical-aside-show-xl} @@if(layoutBuilder.sidebarLayout === 'compact'){navbar-vertical-aside-compact-mode} @@if(layoutBuilder.sidebarLayout === 'mini'){navbar-vertical-aside-mini-mode} footer-offset">
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.sidebarLayout !== 'mini') {
+      <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside-mini-cache.js"></script>
+    }
+
+    <!-- Search Form -->
+    @@include("@@autopath/partials/layouts-components/mobile-search.html")
+    <!-- End Search Form -->
+
+    <!-- ========== HEADER ========== -->
+    @@if (layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/header/main.html")
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'single') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/main-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/main-container.html")
+      }
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'double') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/double-line-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/double-line-container.html")
+      }
+    }
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/main.html", {
+        "category": "pages",
+        "subcategory": "projects",
+        "link": "projects.html"
+      })
+    }
+
+    @@if (layoutBuilder.sidebarLayout === 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/compact.html", {
+        "category": "pages",
+        "subcategory": "projects",
+        "link": "projects.html"
+      })
+    }
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main">
+      <!-- Content -->
+      <div class="content @@layoutBuilder.header.containerMode">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div class="row align-items-end">
+            <div class="col-sm mb-2 mb-sm-0">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-no-gutter">
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Pages</a></li>
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Projects</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Overview</li>
+                </ol>
+              </nav>
+
+              <h1 class="page-header-title">Overview</h1>
+            </div>
+
+            <div class="col-sm-auto">
+              <div id="newProjectPopover" data-toggle="popover" data-placement="left" title="<div class='d-flex align-items-center'>New project <a href='#!' class='close close-light ml-auto'><i id='closeNewProjectPopover' class='tio-clear'></i></a></div>" data-content="Check out this New project modal example." data-html="true">
+                <a class="btn btn-primary" href="javascript:;" data-toggle="modal" data-target="#newProjectModal">
+                  <i class="tio-add mr-1"></i> New project
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- End Row -->
+
+          <!-- Nav -->
+          <ul class="nav nav-tabs page-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="projects.html">
+                Projects <span class="badge badge-soft-dark ml-1">24</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects-timeline.html">
+                Timeline
+              </a>
+            </li>
+          </ul>
+          <!-- End Nav -->
+        </div>
+        <!-- End Page Header -->
+
+        <!-- Card -->
+        <div class="card mb-3 mb-lg-5">
+          <!-- Body -->
+          <div class="card-body">
+            <div class="media align-items-md-center">
+              <span class="display-3 text-dark mr-3">24</span>
+
+              <div class="media-body">
+                <div class="row mx-md-n3">
+                  <div class="col-md px-md-4">
+                    <span class="d-block">Total projects</span>
+                    <span class="badge badge-soft-danger badge-pill p-1">
+                      <i class="tio-trending-down"></i> -2 late in due
+                    </span>
+                  </div>
+
+                  <div class="col-md-9 col-lg-10 column-divider-md px-md-4">
+                    <!-- Legend Indicators -->
+                    <div class="row justify-content-start mb-2">
+                      <div class="col-auto">
+                        <span class="legend-indicator bg-primary"></span>
+                        In progress (10)
+                      </div>
+                      <div class="col-auto">
+                        <span class="legend-indicator bg-success"></span>
+                        Completed (8)
+                      </div>
+                      <div class="col-auto">
+                        <span class="legend-indicator"></span>
+                        To do (6)
+                      </div>
+                    </div>
+                    <!-- End Legend Indicators -->
+
+                    <!-- Progress -->
+                    <div class="progress rounded-pill">
+                      <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <!-- End Progress -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Body -->
+        </div>
+        <!-- End Card -->
+
+        <!-- Card -->
+        <div class="card">
+          <!-- Header -->
+          <div class="card-header">
+            <div class="row justify-content-between align-items-center flex-grow-1">
+              <div class="col-sm-6 col-md-4 mb-3 mb-sm-0">
+                <form>
+                  <!-- Search -->
+                  <div class="input-group input-group-merge input-group-flush">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="tio-search"></i>
+                      </div>
+                    </div>
+                    <input id="datatableSearch" type="search" class="form-control" placeholder="Search users" aria-label="Search users">
+                  </div>
+                  <!-- End Search -->
+                </form>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="d-flex justify-content-sm-end align-items-center">
+                  <!-- Datatable Info -->
+                  <div id="datatableCounterInfo" class="mr-2" style="display: none;">
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm mr-3">
+                        <span id="datatableCounter">0</span>
+                        Selected
+                      </span>
+                      <a class="btn btn-sm btn-outline-danger" href="javascript:;">
+                        <i class="tio-delete-outlined"></i> Delete
+                      </a>
+                    </div>
+                  </div>
+                  <!-- End Datatable Info -->
+
+                  <!-- Unfold -->
+                  <div class="hs-unfold mr-2">
+                    <a class="js-hs-unfold-invoker btn btn-sm btn-white dropdown-toggle" href="javascript:;"
+                       data-hs-unfold-options='{
+                         "target": "#usersExportDropdown",
+                         "type": "css-animation"
+                       }'>
+                      <i class="tio-download-to mr-1"></i> Export
+                    </a>
+
+                    <div id="usersExportDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm-right">
+                      <span class="dropdown-header">Options</span>
+                      <a id="export-copy" class="dropdown-item" href="javascript:;">
+                        <img class="avatar avatar-xss avatar-4by3 mr-2" src="@@autopath/assets/svg/illustrations/copy.svg" alt="Image Description">
+                        Copy
+                      </a>
+                      <a id="export-print" class="dropdown-item" href="javascript:;">
+                        <img class="avatar avatar-xss avatar-4by3 mr-2" src="@@autopath/assets/svg/illustrations/print.svg" alt="Image Description">
+                        Print
+                      </a>
+                      <div class="dropdown-divider"></div>
+                      <span class="dropdown-header">Download options</span>
+                      <a id="export-excel" class="dropdown-item" href="javascript:;">
+                        <img class="avatar avatar-xss avatar-4by3 mr-2" src="@@autopath/assets/svg/brands/excel.svg" alt="Image Description">
+                        Excel
+                      </a>
+                      <a id="export-csv" class="dropdown-item" href="javascript:;">
+                        <img class="avatar avatar-xss avatar-4by3 mr-2" src="@@autopath/assets/svg/components/placeholder-csv-format.svg" alt="Image Description">
+                        .CSV
+                      </a>
+                      <a id="export-pdf" class="dropdown-item" href="javascript:;">
+                        <img class="avatar avatar-xss avatar-4by3 mr-2" src="@@autopath/assets/svg/brands/pdf.svg" alt="Image Description">
+                        PDF
+                      </a>
+                    </div>
+                  </div>
+                  <!-- End Unfold -->
+
+                  <!-- Unfold -->
+                  <div class="hs-unfold">
+                    <a class="js-hs-unfold-invoker btn btn-sm btn-white" href="javascript:;"
+                       data-hs-unfold-options='{
+                         "target": "#usersFilterDropdown",
+                         "type": "css-animation",
+                         "smartPositionOff": true
+                       }'>
+                      <i class="tio-filter-list mr-1"></i> Filter <span class="badge badge-soft-dark rounded-circle ml-1">2</span>
+                    </a>
+
+                    <div id="usersFilterDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-sm-right dropdown-card card-dropdown-filter-centered" style="min-width: 22rem;">
+                      <!-- Card -->
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-header-title">Filter users</h5>
+
+                          <!-- Toggle Button -->
+                          <a class="js-hs-unfold-invoker btn btn-icon btn-xs btn-ghost-secondary ml-2" href="javascript:;"
+                             data-hs-unfold-options='{
+                              "target": "#usersFilterDropdown",
+                              "type": "css-animation",
+                              "smartPositionOff": true
+                             }'>
+                            <i class="tio-clear tio-lg"></i>
+                          </a>
+                          <!-- End Toggle Button -->
+                        </div>
+
+                        <div class="card-body">
+                          <form>
+                            <div class="form-group">
+                              <small class="text-cap mb-2">Role</small>
+
+                              <div class="form-row">
+                                <div class="col">
+                                  <!-- Checkbox -->
+                                  <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="usersFilerCheck1" checked>
+                                    <label class="custom-control-label" for="usersFilerCheck1">All</label>
+                                  </div>
+                                  <!-- End Checkbox -->
+                                </div>
+
+                                <div class="col">
+                                  <!-- Checkbox -->
+                                  <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="usersFilerCheck2">
+                                    <label class="custom-control-label" for="usersFilerCheck2">Employee</label>
+                                  </div>
+                                  <!-- End Checkbox -->
+                                </div>
+                              </div>
+                              <!-- End Row -->
+                            </div>
+
+                            <div class="form-row">
+                              <div class="col-sm form-group">
+                                <small class="text-cap mb-2">Due date</small>
+
+                                <!-- Select -->
+                                <select class="js-select2-custom js-datatable-filter custom-select" size="1" style="opacity: 0;"
+                                        data-hs-select2-options='{
+                                          "minimumResultsForSearch": "Infinity"
+                                        }'>
+                                  <option value="">Any</option>
+                                  <option value="This week">This week</option>
+                                  <option value="Next week">Next week</option>
+                                  <option value="Next month">Next month</option>
+                                </select>
+                                <!-- End Select -->
+                              </div>
+
+                              <div class="col-sm form-group">
+                                <small class="text-cap mb-2">Status</small>
+
+                                <!-- Select -->
+                                <select class="js-select2-custom js-datatable-filter custom-select" size="1" style="opacity: 0;"
+                                        data-target-column-index="4"
+                                        data-hs-select2-options='{
+                                          "minimumResultsForSearch": "Infinity"
+                                        }'>
+                                  <option value="">Any status</option>
+                                  <option value="Completed" data-option-template='<span class="legend-indicator bg-success"></span>Completed'>Completed</option>
+                                  <option value="In progress" data-option-template='<span class="legend-indicator bg-primary"></span>In progress'>In progress</option>
+                                  <option value="To do" data-option-template='<span class="legend-indicator"></span>To do'>To do</option>
+                                </select>
+                                <!-- End Select -->
+                              </div>
+
+                              <div class="col-12 form-group">
+                                <small class="text-cap mb-2">Members</small>
+
+                                <!-- Select -->
+                                <select class="js-select2-custom custom-select" size="1" style="opacity: 0;" multiple
+                                        data-hs-select2-options='{
+                                          "singleMultiple": true,
+                                          "placeholder": "Select a member"
+                                        }'>
+                                  <option label="empty"></option>
+                                  <option value="AH" selected data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description" /><span class="text-truncate">Amanda Harvey</span></span>'>Amanda Harvey</option>
+                                  <option value="DH" selected data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description" /><span class="text-truncate">David Harrison</span></span>'>David Harrison</option>
+                                  <option value="SK" data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/assets/img/160x160/img4.jpg" alt="Image Description" /><span class="text-truncate">Sam Kart</span></span>'>Sam Kart</option>
+                                  <option value="FH" data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description" /><span class="text-truncate">Finch Hoot</span></span>'>Finch Hoot</option>
+                                  <option value="CQ" selected data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description" /><span class="text-truncate">Costa Quinn</span></span>'>Costa Quinn</option>
+                                </select>
+                                <!-- End Select -->
+                              </div>
+                            </div>
+                            <!-- End Row -->
+
+                            <a class="btn btn-block btn-primary" href="javascript:;">Apply</a>
+                          </form>
+                        </div>
+                      </div>
+                      <!-- End Card -->
+                    </div>
+                  </div>
+                  <!-- End Unfold -->
+                </div>
+              </div>
+            </div>
+            <!-- End Row -->
+          </div>
+          <!-- End Header -->
+
+          <!-- Table -->
+          <div class="table-responsive datatable-custom">
+            <table id="datatable" class="table table-lg table-borderless table-thead-bordered table-nowrap table-align-middle card-table"
+                   data-hs-datatables-options='{
+                     "columnDefs": [{
+                        "targets": [0, 2, 3, 6, 7],
+                        "orderable": false
+                      }],
+                     "order": [],
+                     "info": {
+                       "totalQty": "#datatableWithPaginationInfoTotalQty"
+                     },
+                     "search": "#datatableSearch",
+                     "entries": "#datatableEntries",
+                     "pageLength": 15,
+                     "isResponsive": false,
+                     "isShowPaging": false,
+                     "pagination": "datatablePagination"
+                   }'>
+              <thead class="thead-light">
+                <tr>
+                  <th class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input id="datatableCheckAll" type="checkbox" class="custom-control-input">
+                      <label class="custom-control-label" for="datatableCheckAll"></label>
+                    </div>
+                  </th>
+                  <th class="table-column-pl-0">Project</th>
+                  <th>Tasks</th>
+                  <th>Members</th>
+                  <th>Status</th>
+                  <th>Completion</th>
+                  <th><i class="tio-attachment-diagonal"></i></th>
+                  <th><i class="tio-chat-outlined"></i></th>
+                  <th>Due date</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck1">
+                      <label class="custom-control-label" for="usersDataCheck1"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <img class="avatar" src="@@autopath/assets/svg/brands/guideline.svg" alt="Image Description">
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Cloud computing web service</span>
+                        <span class="d-block font-size-sm text-body">Updated 2 minutes ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      120 <a class="badge badge-soft-dark ml-1" href="javascript:;" data-toggle="tooltip" data-placement="top" title="tasks completed today">+2</a>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- Avatar Group -->
+                    <div class="avatar-group avatar-group-xs avatar-circle">
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Ella Lauda">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="David Harrison">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-dark" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Antony Taylor">
+                        <span class="avatar-initials">A</span>
+                      </a>
+                      <a class="avatar avatar-soft-info" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Sara Iwens">
+                        <span class="avatar-initials">S</span>
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Finch Hoot">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                      </a>
+                    </div>
+                    <!-- End Avatar Group -->
+                  </td>
+                  <td>
+                    <span class="legend-indicator"></span>In progress
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm mr-2">35%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-files.html">
+                      <i class="tio-attachment-diagonal"></i> 10
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-activity.html">
+                      <i class="tio-chat-outlined"></i> 2
+                    </a>
+                  </td>
+                  <td>05 May</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck2">
+                      <label class="custom-control-label" for="usersDataCheck2"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <div class="avatar avatar-soft-primary avatar-circle">
+                        <span class="avatar-initials">I</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Improve profile UX <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Earned extra bonus"></i></span>
+                        <span class="d-block font-size-sm text-body">Updated 4 hours ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>28</td>
+                  <td>No assignee</td>
+                  <td>
+                    <span class="legend-indicator bg-success"></span>Completed
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-success mr-2">100%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>-</td>
+                  <td>
+                    <a class="text-body" href="#">
+                      <i class="tio-chat-outlined"></i> 17
+                    </a>
+                  </td>
+                  <td>01 May</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck11">
+                      <label class="custom-control-label" for="usersDataCheck11"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <img class="avatar" src="@@autopath/assets/svg/brands/capsule.svg" alt="Image Description">
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Build stronger customer relationships</span>
+                        <span class="d-block font-size-sm text-body">Updated 1 months ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>1</td>
+                  <td>
+                    <!-- Avatar Group -->
+                    <div class="avatar-group avatar-group-xs avatar-circle">
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Costa Quinn">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Clarice Boone">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img7.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-danger" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Adam Keep">
+                        <span class="avatar-initials">A</span>
+                      </a>
+                    </div>
+                    <!-- End Avatar Group -->
+                  </td>
+                  <td>
+                    <span class="legend-indicator"></span>To do
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm mr-2">0%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-files.html">
+                      <i class="tio-attachment-diagonal"></i> 1
+                    </a>
+                  </td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck5">
+                      <label class="custom-control-label" for="usersDataCheck5"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <div class="avatar avatar-soft-info avatar-circle">
+                        <span class="avatar-initials">U</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Update social banners</span>
+                        <span class="d-block font-size-sm text-body">Updated 1 week ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>21</td>
+                  <td>
+                    <!-- Avatar Group -->
+                    <div class="avatar-group avatar-group-xs avatar-circle">
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Finch Hoot">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-dark" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Bob Bardly">
+                        <span class="avatar-initials">B</span>
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Linda Bates">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img8.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Ella Lauda">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description">
+                      </a>
+                    </div>
+                    <!-- End Avatar Group -->
+                  </td>
+                  <td>
+                    <span class="legend-indicator bg-primary"></span>In progress
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-primary mr-2">5%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-files.html">
+                      <i class="tio-attachment-diagonal"></i> 3
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-activity.html">
+                      <i class="tio-chat-outlined"></i> 21
+                    </a>
+                  </td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck6">
+                      <label class="custom-control-label" for="usersDataCheck6"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <img class="avatar" src="@@autopath/assets/svg/brands/mailchimp.svg" alt="Image Description">
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Update subscription method <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Earned extra bonus"></i></span>
+                        <span class="d-block font-size-sm text-body">Updated 2 hours ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>0</td>
+                  <td>
+                    <!-- Avatar Group -->
+                    <div class="avatar-group avatar-group-xs avatar-circle">
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Costa Quinn">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Clarice Boone">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img7.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-danger" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Adam Keep">
+                        <span class="avatar-initials">A</span>
+                      </a>
+                    </div>
+                    <!-- End Avatar Group -->
+                  </td>
+                  <td>
+                    <span class="legend-indicator bg-primary"></span>In progress
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-success mr-2">100%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>-</td>
+                  <td>
+                    <a class="text-body" href="#">
+                      <i class="tio-chat-outlined"></i> 9
+                    </a>
+                  </td>
+                  <td>25 May</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck12">
+                      <label class="custom-control-label" for="usersDataCheck12"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <div class="avatar avatar-soft-primary avatar-circle">
+                        <span class="avatar-initials">E</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Extend Spotify mobile app features</span>
+                        <span class="d-block font-size-sm text-body">Updated 1 day ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      27 <a class="badge badge-soft-dark ml-1" href="javascript:;" data-toggle="tooltip" data-placement="top" title="tasks completed today">+2</a>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- Avatar Group -->
+                    <div class="avatar-group avatar-group-xs avatar-circle">
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Costa Quinn">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-info" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Bob Bardly">
+                        <span class="avatar-initials">B</span>
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Clarice Boone">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img7.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Sam Kart">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img4.jpg" alt="Image Description">
+                      </a>
+                    </div>
+                    <!-- End Avatar Group -->
+                  </td>
+                  <td>
+                    <span class="legend-indicator bg-primary"></span>In progress
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-primary mr-2">71%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 71%" aria-valuenow="71" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-files.html">
+                      <i class="tio-attachment-diagonal"></i> 2
+                    </a>
+                  </td>
+                  <td>-</td>
+                  <td>19 May</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck9">
+                      <label class="custom-control-label" for="usersDataCheck9"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <img class="avatar" src="@@autopath/assets/svg/brands/spec.svg" alt="Image Description">
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Install Front pay</span>
+                        <span class="d-block font-size-sm text-body">Updated 23 hours ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>7</td>
+                  <td>No assignee</td>
+                  <td>
+                    <span class="legend-indicator bg-success"></span>Completed
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-primary mr-2">83%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 83%" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-files.html">
+                      <i class="tio-attachment-diagonal"></i> 1
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-activity.html">
+                      <i class="tio-chat-outlined"></i> 1
+                    </a>
+                  </td>
+                  <td>30 May</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck7">
+                      <label class="custom-control-label" for="usersDataCheck7"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <div class="avatar avatar-soft-dark avatar-circle">
+                        <span class="avatar-initials">B</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Binance-chain <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Earned extra bonus"></i></span>
+                        <span class="d-block font-size-sm text-body">Updated 14 hours ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      19 <a class="badge badge-soft-dark ml-1" href="javascript:;" data-toggle="tooltip" data-placement="top" title="tasks completed today">+1</a>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- Avatar Group -->
+                    <div class="avatar-group avatar-group-xs avatar-circle">
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Amanda Harvey">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="David Harrison">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-info" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Lisa Iston">
+                        <span class="avatar-initials">L</span>
+                      </a>
+                      <a class="avatar avatar-light avatar-circle" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Lewis Clarke, Chris Mathew and 3 more">
+                        <span class="avatar-initials">+5</span>
+                      </a>
+                    </div>
+                    <!-- End Avatar Group -->
+                  </td>
+                  <td>
+                    <span class="legend-indicator bg-success"></span>Completed
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-success mr-2">100%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck3">
+                      <label class="custom-control-label" for="usersDataCheck3"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <img class="avatar" src="@@autopath/assets/svg/brands/jira.svg" alt="Image Description">
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Develop Slack mobile app</span>
+                        <span class="d-block font-size-sm text-body">Updated 18 minutes ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      32 <a class="badge badge-soft-dark ml-1" href="javascript:;" data-toggle="tooltip" data-placement="top" title="tasks completed today">+5</a>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- Avatar Group -->
+                    <div class="avatar-group avatar-group-xs avatar-circle">
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Ella Lauda">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="David Harrison">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-dark" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Antony Taylor">
+                        <span class="avatar-initials">A</span>
+                      </a>
+                      <a class="avatar avatar-light avatar-circle" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Sam Kart, Amanda Harvey and 1 more">
+                        <span class="avatar-initials">+3</span>
+                      </a>
+                    </div>
+                    <!-- End Avatar Group -->
+                  </td>
+                  <td>
+                    <span class="legend-indicator bg-primary"></span>In progress
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-success mr-2">100%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>25 May</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck10">
+                      <label class="custom-control-label" for="usersDataCheck10"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <div class="avatar avatar-soft-info avatar-circle">
+                        <span class="avatar-initials">G</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Get a complete store audit</span>
+                        <span class="d-block font-size-sm text-body">Updated 2 weeks ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      10 <a class="badge badge-soft-dark ml-1" href="javascript:;" data-toggle="tooltip" data-placement="top" title="task completed today">+1</a>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- Avatar Group -->
+                    <div class="avatar-group avatar-group-xs avatar-circle">
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Finch Hoot">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-dark" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Bob Bardly">
+                        <span class="avatar-initials">B</span>
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Clarice Boone">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img7.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-danger" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Adam Keep">
+                        <span class="avatar-initials">A</span>
+                      </a>
+                    </div>
+                    <!-- End Avatar Group -->
+                  </td>
+                  <td>
+                    <span class="legend-indicator bg-primary"></span>In progress
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-primary mr-2">30%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-files.html">
+                      <i class="tio-attachment-diagonal"></i> 3
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-activity.html">
+                      <i class="tio-chat-outlined"></i> 15
+                    </a>
+                  </td>
+                  <td>01 June</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck4">
+                      <label class="custom-control-label" for="usersDataCheck4"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <img class="avatar" src="@@autopath/assets/svg/brands/figma.svg" alt="Image Description">
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Create a new theme <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Earned extra bonus"></i></span>
+                        <span class="d-block font-size-sm text-body">Updated 5 days ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>2</td>
+                  <td>No assignee</td>
+                  <td>
+                    <span class="legend-indicator"></span>To do
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm mr-2">0%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>-</td>
+                  <td>
+                    <a class="text-body" href="#">
+                      <i class="tio-chat-outlined"></i> 33
+                    </a>
+                  </td>
+                  <td>08 May</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck15">
+                      <label class="custom-control-label" for="usersDataCheck15"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <img class="avatar" src="@@autopath/assets/svg/brands/google-webdev.svg" alt="Image Description">
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Create a new database for Webdev</span>
+                        <span class="d-block font-size-sm text-body">Updated 2 hours ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>0</td>
+                  <td>
+                    <!-- Avatar Group -->
+                    <div class="avatar-group avatar-group-xs avatar-circle">
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Sam Kart">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img4.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-danger" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Teresa Eyker">
+                        <span class="avatar-initials">T</span>
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Amanda Harvey">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-light avatar-circle" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Brian Halligan, Rachel Doe and 7 more">
+                        <span class="avatar-initials">+9</span>
+                      </a>
+                    </div>
+                    <!-- End Avatar Group -->
+                  </td>
+                  <td>
+                    <span class="legend-indicator bg-success"></span>Completed
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-success mr-2">100%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-files.html">
+                      <i class="tio-attachment-diagonal"></i> 1
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-activity.html">
+                      <i class="tio-chat-outlined"></i> 7
+                    </a>
+                  </td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck14">
+                      <label class="custom-control-label" for="usersDataCheck14"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <div class="avatar avatar-soft-danger avatar-circle">
+                        <span class="avatar-initials">M</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Marketing &amp; Communications</span>
+                        <span class="d-block font-size-sm text-body">Updated 2 months ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      44 <a class="badge badge-soft-dark ml-1" href="javascript:;" data-toggle="tooltip" data-placement="top" title="tasks completed today">+5</a>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- Avatar Group -->
+                    <div class="avatar-group avatar-group-xs avatar-circle">
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Sam Kart">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img4.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-danger" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Teresa Eyker">
+                        <span class="avatar-initials">T</span>
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Amanda Harvey">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description">
+                      </a>
+                    </div>
+                    <!-- End Avatar Group -->
+                  </td>
+                  <td>
+                    <span class="legend-indicator bg-primary"></span>In progress
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-primary mr-2">37%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 37%" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-files.html">
+                      <i class="tio-attachment-diagonal"></i> 2
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-activity.html">
+                      <i class="tio-chat-outlined"></i> 9
+                    </a>
+                  </td>
+                  <td>14 June</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck13">
+                      <label class="custom-control-label" for="usersDataCheck13"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <img class="avatar" src="@@autopath/assets/svg/brands/bookingcom.svg" alt="Image Description">
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Set up a datatable for Booking.com</span>
+                        <span class="d-block font-size-sm text-body">Updated 13 days ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>0</td>
+                  <td>No assignee</td>
+                  <td>
+                    <span class="legend-indicator"></span>To do
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm mr-2">0%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-files.html">
+                      <i class="tio-attachment-diagonal"></i> 10
+                    </a>
+                  </td>
+                  <td>-</td>
+                  <td>05 May</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck16">
+                      <label class="custom-control-label" for="usersDataCheck16"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <div class="avatar avatar-soft-dark avatar-circle">
+                        <span class="avatar-initials">C</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Create a new marketing campaign</span>
+                        <span class="d-block font-size-sm text-body">Updated 1 day ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>5</td>
+                  <td>
+                    <!-- Avatar Group -->
+                    <div class="avatar-group avatar-group-xs avatar-circle">
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Costa Quinn">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Clarice Boone">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img7.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-dark" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Zack Ins">
+                        <span class="avatar-initials">Z</span>
+                      </a>
+                    </div>
+                    <!-- End Avatar Group -->
+                  </td>
+                  <td>
+                    <span class="legend-indicator bg-primary"></span>In progress
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-primary mr-2">90%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>-</td>
+                  <td>
+                    <a class="text-body" href="#">
+                      <i class="tio-chat-outlined"></i> 1
+                    </a>
+                  </td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck8">
+                      <label class="custom-control-label" for="usersDataCheck8"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <img class="avatar" src="@@autopath/assets/svg/brands/prosperops.svg" alt="Image Description">
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Prosperops</span>
+                        <span class="d-block font-size-sm text-body">Updated 1 hour ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>21</td>
+                  <td>No assignee</td>
+                  <td>
+                    <span class="legend-indicator bg-success"></span>Completed
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-primary mr-2">7%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 7%" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-files.html">
+                      <i class="tio-attachment-diagonal"></i> 2
+                    </a>
+                  </td>
+                  <td>-</td>
+                  <td>26 May</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck17">
+                      <label class="custom-control-label" for="usersDataCheck17"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <div class="avatar avatar-soft-primary avatar-circle">
+                        <span class="avatar-initials">I</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Increase productivity with reviews</span>
+                        <span class="d-block font-size-sm text-body">Updated 30 minutes ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      10 <a class="badge badge-soft-dark ml-1" href="javascript:;" data-toggle="tooltip" data-placement="top" title="tasks completed today">+7</a>
+                    </div>
+                  </td>
+                  <td>No assignee</td>
+                  <td>
+                    <span class="legend-indicator bg-primary"></span>In progress
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-primary mr-2">80%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>-</td>
+                  <td>
+                    <a class="text-body" href="#">
+                      <i class="tio-chat-outlined"></i> 2
+                    </a>
+                  </td>
+                  <td>06 May</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck18">
+                      <label class="custom-control-label" for="usersDataCheck18"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <img class="avatar" src="@@autopath/assets/svg/brands/spotify.svg" alt="Image Description">
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Redesigning the Spotify main page</span>
+                        <span class="d-block font-size-sm text-body">Updated 27 minutes ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>48</td>
+                  <td>
+                    <!-- Avatar Group -->
+                    <div class="avatar-group avatar-group-xs avatar-circle">
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Amanda Harvey">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="David Harrison">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-info" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Lisa Iston">
+                        <span class="avatar-initials">L</span>
+                      </a>
+                      <a class="avatar avatar-light avatar-circle" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Lewis Clarke, Chris Mathew and 3 more">
+                        <span class="avatar-initials">+5</span>
+                      </a>
+                    </div>
+                    <!-- End Avatar Group -->
+                  </td>
+                  <td>
+                    <span class="legend-indicator"></span>To do
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm mr-2">0%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>-</td>
+                  <td>
+                    <a class="text-body" href="#">
+                      <i class="tio-chat-outlined"></i> 5
+                    </a>
+                  </td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck19">
+                      <label class="custom-control-label" for="usersDataCheck19"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <div class="avatar avatar-soft-info avatar-circle">
+                        <span class="avatar-initials">T</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">The Hub project <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Earned extra bonus"></i></span>
+                        <span class="d-block font-size-sm text-body">Updated 9 hours ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>5</td>
+                  <td>
+                    <!-- Avatar Group -->
+                    <div class="avatar-group avatar-group-xs avatar-circle">
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Finch Hoot">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-dark" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Bob Bardly">
+                        <span class="avatar-initials">B</span>
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Linda Bates">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img8.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Ella Lauda">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description">
+                      </a>
+                    </div>
+                    <!-- End Avatar Group -->
+                  </td>
+                  <td>
+                    <span class="legend-indicator bg-primary"></span>In progress
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-success mr-2">100%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-files.html">
+                      <i class="tio-attachment-diagonal"></i> 1
+                    </a>
+                  </td>
+                  <td>-</td>
+                  <td>12 June</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck20">
+                      <label class="custom-control-label" for="usersDataCheck20"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <img class="avatar" src="@@autopath/assets/svg/brands/digitalocean.svg" alt="Image Description">
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Working on a new Cloud computing</span>
+                        <span class="d-block font-size-sm text-body">Updated 5 days ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>8</td>
+                  <td>
+                    <!-- Avatar Group -->
+                    <div class="avatar-group avatar-group-xs avatar-circle">
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Costa Quinn">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Clarice Boone">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img7.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-danger" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Adam Keep">
+                        <span class="avatar-initials">A</span>
+                      </a>
+                    </div>
+                    <!-- End Avatar Group -->
+                  </td>
+                  <td>
+                    <span class="legend-indicator bg-success"></span>Completed
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-primary mr-2">12%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-files.html">
+                      <i class="tio-attachment-diagonal"></i> 4
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-activity.html">
+                      <i class="tio-chat-outlined"></i> 29
+                    </a>
+                  </td>
+                  <td>22 July</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck21">
+                      <label class="custom-control-label" for="usersDataCheck21"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <div class="avatar avatar-soft-primary avatar-circle">
+                        <span class="avatar-initials">L</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Launch social network campaign</span>
+                        <span class="d-block font-size-sm text-body">Updated 46 minutes ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>1</td>
+                  <td>No assignee</td>
+                  <td>
+                    <span class="legend-indicator bg-primary"></span>In progress
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-primary mr-2">50%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-files.html">
+                      <i class="tio-attachment-diagonal"></i> 5
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-activity.html">
+                      <i class="tio-chat-outlined"></i> 11
+                    </a>
+                  </td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck22">
+                      <label class="custom-control-label" for="usersDataCheck22"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <img class="avatar" src="@@autopath/assets/svg/brands/atlassian.svg" alt="Image Description">
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">New software tool</span>
+                        <span class="d-block font-size-sm text-body">Updated 7 minutes ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>22</td>
+                  <td>
+                    <!-- Avatar Group -->
+                    <div class="avatar-group avatar-group-xs avatar-circle">
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Sam Kart">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img4.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-danger" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Teresa Eyker">
+                        <span class="avatar-initials">T</span>
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Amanda Harvey">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-light avatar-circle" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Brian Halligan, Rachel Doe and 7 more">
+                        <span class="avatar-initials">+9</span>
+                      </a>
+                    </div>
+                    <!-- End Avatar Group -->
+                  </td>
+                  <td>
+                    <span class="legend-indicator"></span>To do
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm mr-2">0%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-files.html">
+                      <i class="tio-attachment-diagonal"></i> 7
+                    </a>
+                  </td>
+                  <td>-</td>
+                  <td>05 May</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck23">
+                      <label class="custom-control-label" for="usersDataCheck23"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <img class="avatar" src="@@autopath/assets/svg/brands/frontapp.svg" alt="Image Description">
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Increase email conversion rating</span>
+                        <span class="d-block font-size-sm text-body">Updated 1 hour ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      9 <a class="badge badge-soft-dark ml-1" href="javascript:;" data-toggle="tooltip" data-placement="top" title="task completed today">+1</a>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- Avatar Group -->
+                    <div class="avatar-group avatar-group-xs avatar-circle">
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Finch Hoot">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-dark" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Bob Bardly">
+                        <span class="avatar-initials">B</span>
+                      </a>
+                      <a class="avatar" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Clarice Boone">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img7.jpg" alt="Image Description">
+                      </a>
+                      <a class="avatar avatar-soft-danger" href="user-profile.html" data-toggle="tooltip" data-placement="top" title="Adam Keep">
+                        <span class="avatar-initials">A</span>
+                      </a>
+                    </div>
+                    <!-- End Avatar Group -->
+                  </td>
+                  <td>
+                    <span class="legend-indicator"></span>To do
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm mr-2">0%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-files.html">
+                      <i class="tio-attachment-diagonal"></i> 2
+                    </a>
+                  </td>
+                  <td>
+                    <a class="text-body" href="project-activity.html">
+                      <i class="tio-chat-outlined"></i> 5
+                    </a>
+                  </td>
+                  <td>01 May</td>
+                </tr>
+
+                <tr>
+                  <td class="table-column-pr-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usersDataCheck24">
+                      <label class="custom-control-label" for="usersDataCheck24"></label>
+                    </div>
+                  </td>
+                  <td class="table-column-pl-0">
+                    <a class="d-flex align-items-center" href="project.html">
+                      <div class="avatar avatar-soft-danger avatar-circle">
+                        <span class="avatar-initials">E</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Ethereum project</span>
+                        <span class="d-block font-size-sm text-body">Updated 5 days ago</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>4</td>
+                  <td>No assignee</td>
+                  <td>
+                    <span class="legend-indicator bg-success"></span>Completed
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="font-size-sm text-primary mr-2">95%</span>
+                      <div class="progress table-progress">
+                        <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>-</td>
+                  <td>
+                    <a class="text-body" href="#">
+                      <i class="tio-chat-outlined"></i> 1
+                    </a>
+                  </td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- End Table -->
+
+          <!-- Footer -->
+          <div class="card-footer">
+            <!-- Pagination -->
+            <div class="row justify-content-center justify-content-sm-between align-items-sm-center">
+              <div class="col-sm mb-2 mb-sm-0">
+                <div class="d-flex justify-content-center justify-content-sm-start align-items-center">
+                  <span class="mr-2">Showing:</span>
+
+                  <!-- Select -->
+                  <select id="datatableEntries" class="js-select2-custom"
+                          data-hs-select2-options='{
+                            "minimumResultsForSearch": "Infinity",
+                            "customClass": "custom-select custom-select-sm custom-select-borderless",
+                            "dropdownAutoWidth": true,
+                            "width": true
+                          }'>
+                    <option value="10">10</option>
+                    <option value="15" selected>15</option>
+                    <option value="20">20</option>
+                  </select>
+                  <!-- End Select -->
+
+                  <span class="text-secondary mr-2">of</span>
+
+                  <!-- Pagination Quantity -->
+                  <span id="datatableWithPaginationInfoTotalQty"></span>
+                </div>
+              </div>
+
+              <div class="col-sm-auto">
+                <div class="d-flex justify-content-center justify-content-sm-end">
+                  <!-- Pagination -->
+                  <nav id="datatablePagination" aria-label="Activity pagination"></nav>
+                </div>
+              </div>
+            </div>
+            <!-- End Pagination -->
+          </div>
+          <!-- End Footer -->
+        </div>
+        <!-- End Card -->
+      </div>
+      <!-- End Content -->
+
+      <!-- Footer -->
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/footer/main.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/footer/container.html")
+      }
+      <!-- End Footer -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Keyboard Shortcuts -->
+    @@include("@@autopath/partials/layouts-components/sidebar-shortcuts.html")
+    <!-- End Keyboard Shortcuts -->
+
+    <!-- Activity -->
+    @@include("@@autopath/partials/layouts-components/sidebar-activity.html")
+    <!-- End Activity -->
+
+    <!-- Welcome Message Modal -->
+    @@include("@@autopath/partials/modals/modal-welcome.html")
+    <!-- End Welcome Message Modal -->
+
+    <!-- New Project Modal -->
+    @@include("@@autopath/partials/modals/modal-new-project.html")
+    <!-- End New Project Modal -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-step-form/dist/hs-step-form.min.js"></script>
+    <script src="@@autopath/node_modules/select2/dist/js/select2.full.min.js"></script>
+    <script src="@@autopath/node_modules/quill/dist/quill.min.js"></script>
+    <script src="@@autopath/node_modules/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
+    <script src="@@autopath/node_modules/@yaireo/tagify/dist/tagify.min.js"></script>
+    <script src="@@autopath/node_modules/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="@@autopath/node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="@@autopath/assets/vendor/datatables.net.extensions/select/select.min.js"></script>
+    <script src="@@autopath/node_modules/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="@@autopath/node_modules/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="@@autopath/node_modules/jszip/dist/jszip.min.js"></script>
+    <script src="@@autopath/node_modules/pdfmake/build/pdfmake.min.js"></script>
+    <script src="@@autopath/node_modules/pdfmake/build/vfs_fonts.js"></script>
+    <script src="@@autopath/node_modules/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="@@autopath/node_modules/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="@@autopath/node_modules/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="@@autopath/node_modules/flatpickr/dist/flatpickr.min.js"></script>
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <script src="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+    }
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.select2.js"></script>
+    <script src="@@autopath/assets/js/hs.quill.js"></script>
+    <script src="@@autopath/assets/js/hs.tagify.js"></script>
+    <script src="@@autopath/assets/js/hs.dropzone.js"></script>
+    <script src="@@autopath/assets/js/hs.datatables.js"></script>
+    <script src="@@autopath/assets/js/hs.chartjs.js"></script>
+    <script src="@@autopath/assets/js/hs.flatpickr.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // =======================================================
+
+
+        // BUILDER TOGGLE INVOKER
+        // =======================================================
+        $('.js-navbar-vertical-aside-toggle-invoker').click(function () {
+          $('.js-navbar-vertical-aside-toggle-invoker i').tooltip('hide');
+        });
+
+        @@if (layoutBuilder.header.layoutMode !== 'default') {
+          // INITIALIZATION OF MEGA MENU
+          // =======================================================
+          var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+            desktop: {
+              position: 'left'
+            }
+          }).init();
+        }
+
+        
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+        
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+        $(".js-nav-tooltip-link").on("show.bs.tooltip", function(e) {
+          if (!$("body").hasClass("navbar-vertical-aside-mini-mode")) {
+            return false;
+          }
+        });
+
+        
+        // INITIALIZATION OF UNFOLD
+        // =======================================================
+        $('.js-hs-unfold-invoker').each(function () {
+          var unfold = new HSUnfold($(this)).init();
+        });
+
+        
+        // INITIALIZATION OF FORM SEARCH
+        // =======================================================
+        $('.js-form-search').each(function () {
+          new HSFormSearch($(this)).init()
+        });
+
+        
+        // INITIALIZATION OF FILE ATTACH
+        // =======================================================
+        $('.js-file-attach').each(function () {
+          var customFile = new HSFileAttach($(this)).init();
+        });
+
+        
+        // INITIALIZATION OF STEP FORM
+        // =======================================================
+        $('.js-step-form').each(function () {
+          var stepForm = new HSStepForm($(this), {
+            finish: function() {
+              $("#createProjectStepFormProgress").hide();
+              $("#createProjectStepFormContent").hide();
+              $("#createProjectStepSuccessMessage").show();
+            }
+          }).init();
+        });
+
+        
+        // INITIALIZATION OF SELECT2
+        // =======================================================
+        $('.js-select2-custom').each(function () {
+          var select2 = $.HSCore.components.HSSelect2.init($(this));
+        });
+
+        
+        // INITIALIZATION OF QUILLJS EDITOR
+        // =======================================================
+        var quill = $.HSCore.components.HSQuill.init('.js-quill');
+
+        
+        // INITIALIZATION OF TAGIFY
+        // =======================================================
+        $('.js-tagify').each(function () {
+          var tagify = $.HSCore.components.HSTagify.init($(this));
+        });
+
+        $('.js-tagify-avatars').each(function () {
+          var settings = $(this).attr('data-hs-tagify-options') ? JSON.parse($(this).attr('data-hs-tagify-options')) : {},
+            tagifyAvatars = $.HSCore.components.HSTagify.init($(this), {
+              templates: {
+                tag: function tag(tagData) {
+                  try {
+                    return "<tag title=\"" + tagData.value + "\" contenteditable=\"false\" spellcheck=\"false\" class=\"tagify__tag " + (tagData["class"] ? tagData["class"] : "") + "\" " + this.getAttributes(tagData) + ">" +
+                              "<x title=\"remove tag\" class=\"tagify__tag__removeBtn\"></x>" +
+                              "<div class=\"d-flex align-items-center\">" +
+                              "" + (tagData.src ? "<img class=\"avatar avatar-xss avatar-circle mr-2\" src=\"" + tagData.src.toLowerCase() + "\">" : "") + "" +
+                                "<span>" + tagData.value + "</span>" +
+                              "</div>" +
+                            "</tag>";
+                  } catch (err) {}
+                },
+                dropdownItem: function dropdownItem(tagData) {
+                  try {
+                    return "<div " + this.getAttributes(tagData) + " class=\"tagify__dropdown__item " + (tagData["class"] ? tagData["class"] : "") + "\">" +
+                             "<img class=\"avatar avatar-xss avatar-circle mr-2\" src=\"" + tagData.src.toLowerCase() + "\">" +
+                             "<span>" + tagData.value + "</span>" +
+                           "</div>";
+                  } catch (err) {}
+                }
+              }
+            }).addTags(settings.whitelist.slice(0, 1));
+        });
+
+        
+        // INITIALIZATION OF DROPZONE FILE ATTACH MODULE
+        // =======================================================
+        $('.js-dropzone').each(function () {
+          var dropzone = $.HSCore.components.HSDropzone.init('#' + $(this).attr('id'));
+        });
+
+        
+        // INITIALIZATION OF DATATABLES
+        // =======================================================
+        var datatable = $.HSCore.components.HSDatatables.init($('#datatable'), {
+          dom: 'Bfrtip',
+          buttons: [
+            {
+              extend: 'copy',
+              className: 'd-none'
+            },
+            {
+              extend: 'excel',
+              className: 'd-none'
+            },
+            {
+              extend: 'csv',
+              className: 'd-none'
+            },
+            {
+              extend: 'pdf',
+              className: 'd-none'
+            },
+            {
+              extend: 'print',
+              className: 'd-none'
+            },
+          ],
+          select: {
+            style: 'multi',
+            selector: 'td:first-child input[type="checkbox"]',
+            classMap: {
+              checkAll: '#datatableCheckAll',
+              counter: '#datatableCounter',
+              counterInfo: '#datatableCounterInfo'
+            }
+          },
+          language: {
+            zeroRecords: '<div class="text-center p-4">' +
+                '<img class="mb-3" src="@@autopath/assets/svg/illustrations/sorry.svg" alt="Image Description" style="width: 7rem;">' +
+                '<p class="mb-0">No data to show</p>' +
+                '</div>'
+          }
+        });
+
+        $('#export-copy').click(function() {
+          datatable.button('.buttons-copy').trigger()
+        });
+
+        $('#export-excel').click(function() {
+          datatable.button('.buttons-excel').trigger()
+        });
+
+        $('#export-csv').click(function() {
+          datatable.button('.buttons-csv').trigger()
+        });
+
+        $('#export-pdf').click(function() {
+          datatable.button('.buttons-pdf').trigger()
+        });
+
+        $('#export-print').click(function() {
+          datatable.button('.buttons-print').trigger()
+        });
+
+        $('.js-datatable-filter').on('change', function() {
+          var $this = $(this),
+            elVal = $this.val(),
+            targetColumnIndex = $this.data('target-column-index');
+
+          datatable.column(targetColumnIndex).search(elVal).draw();
+        });
+
+        $('#datatableSearch').on('search', function () {
+          datatable.search('').draw();
+        });
+
+        
+        // INITIALIZATION OF CHARTJS
+        // =======================================================
+        $('.js-chart').each(function () {
+          $.HSCore.components.HSChartJS.init($(this));
+        });
+
+        
+        // INITIALIZATION OF QUICK VIEW POPOVER
+        // =======================================================
+        $('#newProjectPopover').popover('show')
+          .on('shown.bs.popover', function () {
+            $('.popover').last().addClass('popover-dark')
+          });
+
+        $(document).on('click', '#closeNewProjectPopover' , function() {
+          $('#newProjectPopover').popover('dispose');
+        });
+
+        $('#newProjectModal').on('show.bs.modal', function() {
+          $('#newProjectPopover').popover('dispose');
+        });
+
+        
+        // INITIALIZATION OF FLATPICKR
+        // =======================================================
+        $('.js-flatpickr').each(function () {
+          $.HSCore.components.HSFlatpickr.init($(this));
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Unfold - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "unfold.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Unfold (Dropdown and others)</h1>
+                  <p class="lead">Toggle contextual overlays for displaying lists of links and more with the Front unfold plugin.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="how-to-use" class="hs-docs-heading">
+              How to use <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/assets/vendor/hs-unfold/dist/hs-unfold.min.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code>&lt;/body&gt;</code> tag, to enable it.</p>
+
+            <pre class="rounded">
+              <code class="language-html" data-lang="html">
+                &lt;script&gt;
+                  $(document).on('ready', function () {
+                    // INITIALIZATION OF UNFOLD
+                    // =======================================================
+                    var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+                  });
+                &lt;/script&gt;
+              </code>
+            </pre>
+
+            <!-- Heading -->
+            <h2 id="dropdown-example" class="hs-docs-heading">
+              Dropdown example <a class="anchorjs-link" href="#dropdown-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Basic dropdown with opening on <code>hover</code>.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- Unfold -->
+                  <div class="hs-unfold">
+                    <a class="js-hs-unfold-invoker btn btn-primary dropdown-toggle" href="javascript:;"
+                       data-hs-unfold-options='{
+                         "target": "#dropdownHover",
+                         "type": "css-animation",
+                         "event": "hover"
+                       }'>Dropdow on hover</a>
+
+                    <div id="dropdownHover" class="hs-unfold-content dropdown-unfold dropdown-menu">
+                      <a class="dropdown-item active" href="#">Active</a>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                  <!-- End Unfold -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Unfold --&gt;
+                      &lt;div class="hs-unfold"&gt;
+                        &lt;a class="js-hs-unfold-invoker btn btn-primary dropdown-toggle" href="javascript:;"
+                           data-hs-unfold-options='{
+                             "target": "#dropdownHover",
+                             "type": "css-animation",
+                             "event": "hover"
+                           }'&gt;Dropdow on hover&lt;/a&gt;
+
+                        &lt;div id="dropdownHover" class="hs-unfold-content dropdown-unfold dropdown-menu"&gt;
+                          &lt;a class="dropdown-item active" href="#"&gt;Active&lt;/a&gt;
+                          &lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;
+                          &lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Unfold --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="sidebar-example" class="hs-docs-heading">
+              Sidebar example <a class="anchorjs-link" href="#sidebar-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <!-- Toggle -->
+                  <div class="hs-unfold">
+                    <a class="js-hs-unfold-invoker btn btn-primary" href="javascript:;"
+                       data-hs-unfold-options='{
+                        "target": "#activitySidebar",
+                        "type": "css-animation",
+                        "animationIn": "fadeInRight",
+                        "animationOut": "fadeOutRight",
+                        "hasOverlay": true,
+                        "smartPositionOff": true
+                       }'>
+                      Sidebar toggle
+                    </a>
+                  </div>
+                  <!-- End Toggle -->
+
+                  <!-- Sidebar -->
+                  <div id="activitySidebar" class="hs-unfold-content sidebar sidebar-bordered sidebar-box-shadow">
+                    <div class="card card-lg sidebar-card sidebar-footer-fixed">
+                      <div class="card-header">
+                        <h4 class="card-header-title">Sidebar title</h4>
+
+                        <!-- Toggle Button -->
+                        <a class="js-hs-unfold-invoker btn btn-icon btn-xs btn-ghost-dark ml-2" href="javascript:;"
+                           data-hs-unfold-options='{
+                            "target": "#activitySidebar",
+                            "type": "css-animation",
+                            "animationIn": "fadeInRight",
+                            "animationOut": "fadeOutRight",
+                            "hasOverlay": true,
+                            "smartPositionOff": true
+                           }'>
+                          <i class="tio-clear tio-lg"></i>
+                        </a>
+                        <!-- End Toggle Button -->
+                      </div>
+
+                      <!-- Body -->
+                      <div class="card-body sidebar-body sidebar-scrollbar">
+                        Sidebar body...
+                      </div>
+                      <!-- End Body -->
+
+                      <!-- Footer -->
+                      <div class="card-footer sidebar-footer">
+                        <button type="button" class="btn btn-block btn-primary">Done</button>
+                      </div>
+                      <!-- End Footer -->
+                    </div>
+                  </div>
+                  <!-- End Sidebar -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Toggle --&gt;
+                      &lt;div class="hs-unfold"&gt;
+                        &lt;a class="js-hs-unfold-invoker btn btn-primary" href="javascript:;"
+                           data-hs-unfold-options='{
+                            "target": "#activitySidebar",
+                            "type": "css-animation",
+                            "animationIn": "fadeInRight",
+                            "animationOut": "fadeOutRight",
+                            "hasOverlay": true,
+                            "smartPositionOff": true
+                           }'&gt;
+                          Sidebar toggle
+                        &lt;/a&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Toggle --&gt;
+
+                      &lt;!-- Sidebar --&gt;
+                      &lt;div id="activitySidebar" class="hs-unfold-content sidebar sidebar-bordered sidebar-box-shadow"&gt;
+                        &lt;div class="card card-lg sidebar-card sidebar-footer-fixed"&gt;
+                          &lt;div class="card-header"&gt;
+                            &lt;h4 class="card-header-title"&gt;Sidebar title&lt;/h4&gt;
+
+                            &lt;!-- Toggle Button --&gt;
+                            &lt;a class="js-hs-unfold-invoker btn btn-icon btn-xs btn-ghost-dark ml-2" href="javascript:;"
+                               data-hs-unfold-options='{
+                                "target": "#activitySidebar",
+                                "type": "css-animation",
+                                "animationIn": "fadeInRight",
+                                "animationOut": "fadeOutRight",
+                                "hasOverlay": true,
+                                "smartPositionOff": true
+                               }'&gt;
+                              &lt;i class="tio-clear tio-lg"&gt;&lt;/i&gt;
+                            &lt;/a&gt;
+                            &lt;!-- End Toggle Button --&gt;
+                          &lt;/div&gt;
+
+                          &lt;!-- Body --&gt;
+                          &lt;div class="card-body sidebar-body sidebar-scrollbar"&gt;
+                            Sidebar body...
+                          &lt;/div&gt;
+                          &lt;!-- End Body --&gt;
+
+                          &lt;!-- Footer --&gt;
+                          &lt;div class="card-footer sidebar-footer"&gt;
+                            &lt;button type="button" class="btn btn-block btn-primary"&gt;Done&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Footer --&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Sidebar --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="methods" class="hs-docs-heading">
+              Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card overflow-hidden">
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-thead-bordered card-table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Parameters</th>
+                      <th style="width: 50%;">Description</th>
+                      <th class="text-nowrap">Default value</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p><code>event</code></p>
+                      </td>
+                      <td>An event that opens / closes an element</td>
+                      <td><code>'click'</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>type</code></p>
+                      </td>
+                      <td>Type of opening / closing of an element of an element. Possible values: <code>simple</code>, <code>css-animation</code>, <code>jquery-slide</code></td>
+                      <td><code>'simple'</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>duration</code></p>
+                      </td>
+                      <td>Animation speed</td>
+                      <td><code>300</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>easing</code></p>
+                      </td>
+                      <td>Slowdown function for transition</td>
+                      <td><code>'linear'</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>animationIn</code></p>
+                      </td>
+                      <td>CSS effect (class) of opening an element of an element</td>
+                      <td><code>'slideInUp'</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>animationOut</code></p>
+                      </td>
+                      <td>CSS effect (class) of closing an element of an element</td>
+                      <td><code>'fadeOut'</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>hideOnScroll</code></p>
+                      </td>
+                      <td>If <code>true</code>, then automatically closes all open anfold elements when scrolling</td>
+                      <td><code>false</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>hasOverlay</code></p>
+                      </td>
+                      <td>Informs the script about the presence of an overlay</td>
+                      <td><code>false</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>smartPositionOff</code></p>
+                      </td>
+                      <td>If <code>true</code>, then the automatic positioning of the element's front is disabled. It is possible to determine positioning directly from css</td>
+                      <td><code>false</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>isFullWindow</code></p>
+                      </td>
+                      <td>Determines if the block is full width or not. If <code>true</code>, then the <code>smartposition</code> is disabled.</td>
+                      <td><code>false</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>overlayStyles</code></p>
+                      </td>
+                      <td>Custom styles that are added when the overlay is generated.</td>
+                      <td><code>{}</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>wrapperSelector</code></p>
+                      </td>
+                      <td>Class telling the script which element is the parent of the element</td>
+                      <td><code>'.hs-unfold'</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>contentSelector</code></p>
+                      </td>
+                      <td>A class telling the script which element inside the initialized object is the anfold element</td>
+                      <td><code>'.hs-unfold-content'</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>invokerSelector</code></p>
+                      </td>
+                      <td>A class telling the script which element inside the initialized object is an invoker</td>
+                      <td><code>'.js-hs-unfold-invoker'</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>invokerActiveClass</code></p>
+                      </td>
+                      <td>Class added to the current invoker</td>
+                      <td><code>'.hs-active'</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>reverseClass</code></p>
+                      </td>
+                      <td>This class is added to the block, in the case of an invoker is located at the bottom of the viewport. This class allows you to show a block higher than the invoker</td>
+                      <td><code>'.hs-unfold-reverse-y'</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>overlayClass</code></p>
+                      </td>
+                      <td>Overlay class. This class is added to the overlay when the script creates it</td>
+                      <td><code>'.hs-unfold-overlay'</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>closeBreakpoint</code></p>
+                      </td>
+                      <td>Close unfold if window bigger then custom window resolution {sm|md|lg|xl}</td>
+                      <td><code>false</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>resolutionsList</code></p>
+                      </td>
+                      <td>Resolution list, you can customize width if you need</td>
+                      <td><code>
+                        resolutionsList: {
+                          xs: 0,
+                          sm: 576,
+                          md: 768,
+                          lg: 992,
+                          xl: 1200
+                        }
+                      </code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>afterOpen</code></p>
+                      </td>
+                      <td>Function performed before block opening</td>
+                      <td><code>() => {}</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p><code>afterClose</code></p>
+                      </td>
+                      <td>Function performed after block closure</td>
+                      <td><code>() => {}</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+    <script src="@@autopath/assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+
+
+        // INITIALIZATION OF UNFOLD
+        // =======================================================
+        var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

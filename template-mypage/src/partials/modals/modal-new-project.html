@@ -1,0 +1,786 @@
+<div class="modal fade" id="newProjectModal" tabindex="-1" role="dialog" aria-labelledby="newProjectModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <!-- Header -->
+      <div class="modal-header">
+        <h4 id="newProjectModalTitle" class="modal-title">New project</h4>
+
+        <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close">
+          <i class="tio-clear tio-lg"></i>
+        </button>
+      </div>
+      <!-- End Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <!-- Step Form -->
+        <form class="js-step-form"
+              data-hs-step-form-options='{
+                "progressSelector": "#createProjectStepFormProgress",
+                "stepsSelector": "#createProjectStepFormContent",
+                "endSelector": "#createProjectFinishBtn",
+                "isValidate": false
+              }'>
+          <!-- Step -->
+          <ul id="createProjectStepFormProgress" class="js-step-progress step step-sm step-icon-sm step-inline step-item-between mb-7">
+            <li class="step-item">
+              <a class="step-content-wrapper" href="javascript:;"
+                 data-hs-step-form-next-options='{
+                  "targetSelector": "#createProjectStepDetails"
+                }'>
+                <span class="step-icon step-icon-soft-dark">1</span>
+                <div class="step-content">
+                  <span class="step-title">Details</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="step-item">
+              <a class="step-content-wrapper" href="javascript:;"
+                 data-hs-step-form-next-options='{
+                   "targetSelector": "#createProjectStepTerms"
+                 }'>
+                <span class="step-icon step-icon-soft-dark">2</span>
+                <div class="step-content">
+                  <span class="step-title">Terms</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="step-item">
+              <a class="step-content-wrapper" href="javascript:;"
+                 data-hs-step-form-next-options='{
+                   "targetSelector": "#createProjectStepMembers"
+                 }'>
+                <span class="step-icon step-icon-soft-dark">3</span>
+                <div class="step-content">
+                  <span class="step-title">Members</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- End Step -->
+
+          <!-- Content Step Form -->
+          <div id="createProjectStepFormContent">
+            <div id="createProjectStepDetails" class="active">
+              <!-- Form Group -->
+              <div class="form-group">
+                <label class="input-label">Project logo</label>
+
+                <div class="d-flex align-items-center">
+                  <!-- Avatar -->
+                  <label class="avatar avatar-xl avatar-circle avatar-uploader mr-5" for="avatarNewProjectUploader">
+                    <img id="avatarNewProjectImg" class="avatar-img" src="@@autopath/assets/img/160x160/img2.jpg" alt="Image Description">
+
+                    <input type="file" class="js-file-attach avatar-uploader-input" id="avatarNewProjectUploader"
+                           data-hs-file-attach-options='{
+                              "textTarget": "#avatarNewProjectImg",
+                              "mode": "image",
+                              "targetAttr": "src",
+                              "resetTarget": ".js-file-attach-reset-img",
+                              "resetImg": "@@autopath/assets/img/160x160/img1.jpg",
+                              "allowTypes": [".png", ".jpeg", ".jpg"]
+                           }'>
+
+                    <span class="avatar-uploader-trigger">
+                      <i class="tio-edit avatar-uploader-icon shadow-soft"></i>
+                    </span>
+                  </label>
+                  <!-- End Avatar -->
+
+                  <button type="button" class="js-file-attach-reset-img btn btn-white">Delete</button>
+                </div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group">
+                <label for="clientNewProjectLabel" class="input-label">Client</label>
+
+                <div class="form-row align-items-center">
+                  <div class="col-12 col-md-7 mb-3">
+                    <div class="input-group input-group-merge">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="tio-account-square-outlined"></i>
+                        </div>
+                      </div>
+                      <input class="js-tagify-avatars tagify-form-control form-control" id="clientNewProjectLabel" placeholder="Add creater name" aria-label="Add creater name"
+                             data-hs-tagify-options='{
+                               "delimiters": null,
+                               "enforceWhitelist": true,
+                               "whitelist": [
+                                 {
+                                   "value": "Htmlstream",
+                                   "src": "@@autopath/assets/svg/brands/htmlstream.svg"
+                                 },{
+                                   "value": "Digitalocean",
+                                   "src": "@@autopath/assets/svg/brands/digitalocean.svg"
+                                 }, {
+                                   "value": "Google",
+                                   "src": "@@autopath/assets/svg/brands/google.svg"
+                                 }, {
+                                   "value": "Mailchimp",
+                                   "src": "@@autopath/assets/svg/brands/mailchimp.svg"
+                                 }, {
+                                   "value": "Prosperops",
+                                   "src": "@@autopath/assets/svg/brands/prosperops.svg"
+                                 }, {
+                                   "value": "Spec",
+                                   "src": "@@autopath/assets/svg/brands/spec.svg"
+                                 }, {
+                                   "value": "Spotify",
+                                   "src": "@@autopath/assets/svg/brands/spotify.svg"
+                                 }, {
+                                   "value": "Frontapp",
+                                   "src": "@@autopath/assets/svg/brands/frontapp.svg"
+                                 }, {
+                                   "value": "Figma",
+                                   "src": "@@autopath/assets/svg/brands/figma.svg"
+                                 }, {
+                                   "value": "Bookingcom",
+                                   "src": "@@autopath/assets/svg/brands/bookingcom.svg"
+                                 }
+                               ],
+                               "dropdown": {
+                                 "enabled": 1,
+                                 "classname": "tagify__dropdown__menu"
+                               }
+                             }'>
+                    </div>
+                  </div>
+
+                  <span class="col-auto mb-3">or</span>
+
+                  <div class="col-md mb-md-3">
+                    <a class="btn btn-white" href="javascript:;">
+                      <i class="tio-add mr-1"></i>New client
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group">
+                <label for="projectNameNewProjectLabel" class="input-label">Project name <i class="tio-help-outlined text-body ml-1" data-toggle="tooltip" data-placement="top" title="Displayed on public forums, such as Front."></i></label>
+
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="tio-briefcase-outlined"></i>
+                    </div>
+                  </div>
+                  <input type="text" class="form-control" name="projectName" id="projectNameNewProjectLabel" placeholder="Enter project name here" aria-label="Enter project name here">
+                </div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Quill -->
+              <div class="form-group">
+                <label class="input-label">Project description <span class="input-label-secondary">(Optional)</span></label>
+
+                <!-- Quill -->
+                <div class="quill-custom mb-3 mb-lg-7">
+                  <div id="toolbar-container">
+                    <ul class="list-inline ql-toolbar-list">
+                      <li class="list-inline-item">
+                        <button class="ql-bold"></button>
+                      </li>
+                      <li class="list-inline-item">
+                        <button class="ql-italic"></button>
+                      </li>
+                      <li class="list-inline-item">
+                        <button class="ql-underline"></button>
+                      </li>
+                      <li class="list-inline-item">
+                        <button class="ql-strike"></button>
+                      </li>
+                      <li class="list-inline-item">
+                        <button class="ql-link"></button>
+                      </li>
+                      <li class="list-inline-item">
+                        <button class="ql-image"></button>
+                      </li>
+                      <li class="list-inline-item">
+                        <button class="ql-blockquote"></button>
+                      </li>
+                      <li class="list-inline-item">
+                        <button class="ql-code"></button>
+                      </li>
+                      <li class="list-inline-item">
+                        <button class="ql-list" value="bullet"></button>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="js-quill" style="min-height: 15rem;"
+                       data-hs-quill-options='{
+                          "placeholder": "Type your message...",
+                          "toolbarBottom": true,
+                          "attach": "#newProjectModal",
+                          "modules": {
+                            "toolbar": "#toolbar-container"
+                          }
+                         }'>
+                  </div>
+                </div>
+                <!-- End Quill -->
+              </div>
+              <!-- End Quill -->
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <!-- Form Group -->
+                  <div class="form-group">
+                    <label for="projectDeadlineFlatpickrNewProjectLabel" class="input-label">Due date</label>
+
+                    <div id="projectDeadlineNewProjectFlatpickr" class="js-flatpickr flatpickr-custom input-group input-group-merge"
+                         data-hs-flatpickr-options='{
+                          "appendTo": "#projectDeadlineNewProjectFlatpickr",
+                          "dateFormat": "d/m/Y",
+                          "wrap": true
+                        }'>
+                      <div class="input-group-prepend" data-toggle>
+                        <div class="input-group-text">
+                          <i class="tio-date-range"></i>
+                        </div>
+                      </div>
+
+                      <input type="text" class="flatpickr-custom-form-control form-control" id="projectDeadlineFlatpickrNewProjectLabel" placeholder="Select dates" data-input value="29/06/2020">
+                    </div>
+                  </div>
+                  <!-- End Form Group -->
+                </div>
+
+                <div class="col-sm-6">
+                  <!-- Form Group -->
+                  <div class="form-group">
+                    <label for="ownerNewProjectLabel" class="input-label">Owner</label>
+
+                    <!-- Select -->
+                    <div class="select2-custom">
+                      <select class="js-select2-custom custom-select" size="1" style="opacity: 0;" id="ownerNewProjectLabel"
+                              data-hs-select2-options='{
+                                "minimumResultsForSearch": "Infinity"
+                              }'>
+                        <option value="owner1" data-option-template='<span class="media align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/assets/img/160x160/img6.jpg" alt="Avatar" /><span class="media-body">Mark Williams</span></span>'>Mark Williams</option>
+                        <option value="owner2" data-option-template='<span class="media align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/assets/img/160x160/img10.jpg" alt="Avatar" /><span class="media-body">Amanda Harvey</span></span>'>Amanda Harvey</option>
+                        <option value="owner3" selected data-option-template='<span class="media align-items-center"><i class="tio-user-outlined text-body mr-2"></i><span class="media-body">Assign to owner</span></span>'>Assign to owner</option>
+                      </select>
+                     </div>
+                    <!-- End Select -->
+                  </div>
+                  <!-- End Form Group -->
+                </div>
+              </div>
+              <!-- End Row -->
+
+              <!-- Form Group -->
+              <div class="form-group">
+                <label class="input-label">Attach files</label>
+
+                <!-- Dropzone -->
+                <div id="attachFilesNewProjectLabel" class="js-dropzone dropzone-custom custom-file-boxed">
+                  <div class="dz-message custom-file-boxed-label">
+                    <img class="avatar avatar-xl avatar-4by3 mb-3" src="@@autopath/assets/svg/illustrations/browse.svg" alt="Image Description">
+                    <h5 class="mb-1">Choose files to upload</h5>
+                    <p class="mb-2">or</p>
+                    <span class="btn btn-sm btn-primary">Browse files</span>
+                  </div>
+                </div>
+                <!-- End Dropzone -->
+              </div>
+              <!-- End Form Group -->
+
+              <label class="input-label">Default view</label>
+
+              <div class="form-row mb-3">
+                <div class="col-sm mb-2 mb-sm-0">
+                  <!-- Custom Radio -->
+                  <div class="form-control">
+                    <div class="custom-control custom-radio custom-radio-reverse">
+                      <input type="radio" class="custom-control-input" name="projectViewNewProjectTypeRadio" id="projectViewNewProjectTypeRadio1">
+                      <label class="custom-control-label media align-items-center" for="projectViewNewProjectTypeRadio1">
+                        <i class="tio-agenda-view-outlined text-muted mr-2"></i>
+                        <span class="media-body">
+                          List
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- End Custom Radio -->
+                </div>
+
+                <div class="col-sm mb-2 mb-sm-0">
+                  <!-- Custom Radio -->
+                  <div class="form-control">
+                    <div class="custom-control custom-radio custom-radio-reverse">
+                      <input type="radio" class="custom-control-input" name="projectViewNewProjectTypeRadio" id="projectViewNewProjectTypeRadio2" checked>
+                      <label class="custom-control-label media align-items-center" for="projectViewNewProjectTypeRadio2">
+                        <i class="tio-table text-muted mr-2"></i>
+                        <span class="media-body">
+                          Table
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- End Custom Radio -->
+                </div>
+
+                <div class="col-sm mb-2 mb-sm-0">
+                  <!-- Custom Radio -->
+                  <div class="form-control">
+                    <div class="custom-control custom-radio custom-radio-reverse">
+                      <input type="radio" class="custom-control-input" name="projectViewNewProjectTypeRadio" id="projectViewNewProjectTypeRadio3" disabled>
+                      <label class="custom-control-label media align-items-center" for="projectViewNewProjectTypeRadio3">
+                        <i class="tio-align-to-center-outlined text-muted mr-2"></i>
+                        <span class="media-body">
+                          Timeline
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <span class="badge badge-soft-primary badge-pill mt-2">Coming soon...</span>
+                  <!-- End Custom Radio -->
+                </div>
+              </div>
+              <!-- End Row -->
+
+              <!-- Footer -->
+              <div class="d-flex align-items-center">
+                <div class="ml-auto">
+                  <button type="button" class="btn btn-primary"
+                          data-hs-step-form-next-options='{
+                            "targetSelector": "#createProjectStepTerms"
+                          }'>
+                    Next <i class="tio-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- End Footer -->
+            </div>
+
+            <div id="createProjectStepTerms" style="display: none;">
+              <!-- Form Row -->
+              <div class="row">
+                <div class="col-sm-6">
+                  <!-- Form Group -->
+                  <div class="form-group">
+                    <label for="paymentTermsNewProjectLabel" class="input-label">Terms</label>
+
+                    <!-- Select -->
+                    <div class="select2-custom">
+                      <select class="js-select2-custom custom-select" size="1" style="opacity: 0;" id="paymentTermsNewProjectLabel"
+                              data-hs-select2-options='{
+                                "minimumResultsForSearch": "Infinity"
+                              }'>
+                        <option value="fixed" selected>Fixed</option>
+                        <option value="Per hour">Per hour</option>
+                        <option value="Per day">Per day</option>
+                        <option value="Per week">Per week</option>
+                        <option value="Per month">Per month</option>
+                        <option value="Per quarter">Per quarter</option>
+                        <option value="Per year">Per year</option>
+                      </select>
+                     </div>
+                    <!-- End Select -->
+                  </div>
+                  <!-- End Form Group -->
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="expectedValueNewProjectLabel" class="input-label">Expected value</label>
+
+                  <!-- Form Group -->
+                  <div class="form-group">
+                    <div class="input-group input-group-merge">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="tio-dollar-outlined"></i>
+                        </div>
+                      </div>
+                      <input type="text" class="form-control" name="expectedValue" id="expectedValueNewProjectLabel" placeholder="Enter value here" aria-label="Enter value here">
+                    </div>
+                  </div>
+                  <!-- End Form Group -->
+                </div>
+              </div>
+              <!-- End Form Row -->
+
+              <!-- Form Row -->
+              <div class="row">
+                <div class="col-lg-6">
+                  <!-- Form Group -->
+                  <div class="form-group">
+                    <label for="milestoneNewProjectLabel" class="input-label">Milestone <a class="small ml-1" href="javascript:;">Change probability</a></label>
+
+                    <!-- Select -->
+                    <div class="select2-custom">
+                      <select class="js-select2-custom custom-select" size="1" style="opacity: 0;" id="milestoneNewProjectLabel"
+                              data-hs-select2-options='{
+                                "minimumResultsForSearch": "Infinity"
+                              }'>
+                        <option value="New">New</option>
+                        <option value="Qualified">Qualified</option>
+                        <option value="Meeting">Meeting</option>
+                        <option value="Proposal">Proposal</option>
+                        <option value="Negotiation">Negotiation</option>
+                        <option value="Contact">Contact</option>
+                      </select>
+                     </div>
+                    <!-- End Select -->
+                  </div>
+                  <!-- End Form Group -->
+                </div>
+
+                <div class="col-lg-6">
+                  <!-- Form Group -->
+                  <div class="form-group">
+                    <label for="privacyNewProjectLabel" class="input-label mr-2">Privacy</label>
+
+                    <!-- Select -->
+                    <div class="select2-custom">
+                      <select class="js-select2-custom custom-select" size="1" style="opacity: 0;" id="privacyNewProjectLabel"
+                              data-hs-select2-options='{
+                                "minimumResultsForSearch": "Infinity"
+                              }'>
+                        <option value="privacy1" data-option-template='<span class="media"><i class="tio-group-senior tio-lg text-body mr-2" style="margin-top: .125rem;"></i><span class="media-body"><span class="d-block">Everyone</span><small class="select2-custom-hide">Public to Front Dashboard</small></span></span>'>Everyone</option>
+                        <option value="privacy2" disabled data-option-template='<span class="media"><i class="tio-lock-outlined tio-lg text-body mr-2" style="margin-top: .125rem;"></i><span class="media-body"><span class="d-block">Private to project members <span class="badge badge-soft-primary">Upgrade to Premium</span></span><small class="select2-custom-hide">Only visible to project members</small></span></span>'>Private to project members</option>
+                        <option value="privacy2" data-option-template='<span class="media"><i class="tio-user-outlined tio-lg text-body mr-2" style="margin-top: .125rem;"></i><span class="media-body"><span class="d-block">Private to me</span><small class="select2-custom-hide">Only visible to you</small></span></span>'>Private to me</option>
+                      </select>
+                     </div>
+                    <!-- End Select -->
+                  </div>
+                  <!-- End Form Group -->
+                </div>
+              </div>
+              <!-- End Form Row -->
+
+              <!-- Checkbox -->
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="budgetNewProjectCheckbox">
+                <label class="custom-control-label" for="budgetNewProjectCheckbox">Budget resets every month</label>
+              </div>
+              <!-- End Checkbox -->
+
+              <!-- Checkbox -->
+              <div class="form-group custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="emailAlertNewProjectCheckbox" checked>
+                <label class="custom-control-label" for="emailAlertNewProjectCheckbox">Send email alerts if project exceeds <span class="font-weight-bold">50.00%</span> of budget</label>
+              </div>
+              <!-- End Checkbox -->
+
+              <!-- Footer -->
+              <div class="d-flex align-items-center">
+                <button type="button" class="btn btn-ghost-secondary mr-2"
+                   data-hs-step-form-prev-options='{
+                     "targetSelector": "#createProjectStepDetails"
+                   }'>
+                  <i class="tio-chevron-left"></i> Previous step
+                </button>
+
+                <div class="ml-auto">
+                  <button type="button" class="btn btn-primary"
+                          data-hs-step-form-next-options='{
+                            "targetSelector": "#createProjectStepMembers"
+                          }'>
+                    Next <i class="tio-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- End Footer -->
+            </div>
+
+            <div id="createProjectStepMembers" style="display: none;">
+              <!-- Form Group -->
+              <div class="form-group">
+                <div class="input-group input-group-merge mb-2 mb-sm-0">
+                  <div class="input-group-prepend" id="fullNameNewProject">
+                    <span class="input-group-text">
+                      <i class="tio-search"></i>
+                    </span>
+                  </div>
+
+                  <input type="text" class="form-control" name="fullNameNewProject" placeholder="Search name or emails" aria-label="Search name or emails" aria-describedby="fullNameNewProject">
+
+                  <div class="input-group-append input-group-append-last-sm-down-none">
+                    <!-- Select -->
+                    <div id="permissionNewProjectSelect" class="select2-custom select2-custom-right">
+                      <select class="js-select2-custom custom-select" size="1" style="opacity: 0;"
+                              data-hs-select2-options='{
+                                "dropdownParent": "#permissionNewProjectSelect",
+                                "minimumResultsForSearch": "Infinity",
+                                "dropdownAutoWidth": true,
+                                "dropdownWidth": "10rem"
+                              }'>
+                        <option value="guest" selected>Guest</option>
+                        <option value="can edit">Can edit</option>
+                        <option value="can comment">Can comment</option>
+                        <option value="full access">Full access</option>
+                      </select>
+                    </div>
+                    <!-- End Select -->
+
+                    <a class="btn btn-primary d-none d-sm-block" href="javascript:;">Add member</a>
+                  </div>
+                </div>
+
+                <a class="btn btn-block btn-primary d-sm-none" href="javascript:;">Add member</a>
+              </div>
+              <!-- End Form Group -->
+
+              <ul class="list-unstyled list-unstyled-py-4 mb-5">
+                <!-- List Group Item -->
+                <li>
+                  <div class="media">
+                    <span class="icon icon-sm icon-soft-dark icon-circle mr-3">
+                      <i class="tio-group-senior"></i>
+                    </span>
+
+                    <div class="media-body">
+                      <div class="row align-items-center">
+                        <div class="col-12 col-sm">
+                          <h5 class="text-body mb-0">#digitalmarketing</h5>
+                          <span class="d-block font-size-sm">8 members</span>
+                        </div>
+
+                        <div class="col-12 col-sm">
+                          <!-- Select -->
+                          <div id="inviteUserNewProjectSelect1" class="select2-custom select2-custom-sm-right d-sm-flex justify-content-sm-end">
+                            <select class="js-select2-custom custom-select-sm" size="1" style="opacity: 0;"
+                                    data-hs-select2-options='{
+                                      "dropdownParent": "#inviteUserNewProjectSelect1",
+                                      "minimumResultsForSearch": "Infinity",
+                                      "customClass": "custom-select custom-select-sm custom-select-borderless pl-0",
+                                      "dropdownAutoWidth": true,
+                                      "width": true
+                                    }'>
+                              <option value="guest">Guest</option>
+                              <option value="can edit" selected>Can edit</option>
+                              <option value="can comment">Can comment</option>
+                              <option value="full access">Full access</option>
+                              <option value="remove" data-option-template='<span class="text-danger">Remove</span>'>Remove</option>
+                            </select>
+                          </div>
+                          <!-- End Select -->
+                        </div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                  </div>
+                </li>
+                <!-- End List Group Item -->
+
+                <!-- List Group Item -->
+                <li>
+                  <div class="media">
+                    <div class="avatar avatar-sm avatar-circle mr-3">
+                      <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                    </div>
+
+                    <div class="media-body">
+                      <div class="row align-items-center">
+                        <div class="col-12 col-sm">
+                          <h5 class="text-body mb-0">David Harrison</h5>
+                          <span class="d-block font-size-sm">david@example.com</span>
+                        </div>
+
+                        <div class="col-12 col-sm">
+                          <!-- Select -->
+                          <div id="inviteUserNewProjectSelect2" class="select2-custom select2-custom-sm-right d-sm-flex justify-content-sm-end">
+                            <select class="js-select2-custom custom-select-sm" size="1" style="opacity: 0;"
+                                    data-hs-select2-options='{
+                                      "dropdownParent": "#inviteUserNewProjectSelect2",
+                                      "minimumResultsForSearch": "Infinity",
+                                      "customClass": "custom-select custom-select-sm custom-select-borderless pl-0",
+                                      "dropdownAutoWidth": true,
+                                      "width": true
+                                    }'>
+                              <option value="guest">Guest</option>
+                              <option value="can edit" selected>Can edit</option>
+                              <option value="can comment">Can comment</option>
+                              <option value="full access">Full access</option>
+                              <option value="remove" data-option-template='<span class="text-danger">Remove</span>'>Remove</option>
+                            </select>
+                          </div>
+                          <!-- End Select -->
+                        </div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                  </div>
+                </li>
+                <!-- End List Group Item -->
+
+                <!-- List Group Item -->
+                <li>
+                  <div class="media">
+                    <div class="avatar avatar-sm avatar-circle mr-3">
+                      <img class="avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description">
+                    </div>
+
+                    <div class="media-body">
+                      <div class="row align-items-center">
+                        <div class="col-12 col-sm">
+                          <h5 class="text-body mb-0">Ella Lauda <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></h5>
+                          <span class="d-block font-size-sm">Markvt@example.com</span>
+                        </div>
+
+                        <div class="col-12 col-sm">
+                          <!-- Select -->
+                          <div id="inviteUserNewProjectSelect4" class="select2-custom select2-custom-sm-right d-sm-flex justify-content-sm-end">
+                            <select class="js-select2-custom custom-select-sm" size="1" style="opacity: 0;"
+                                    data-hs-select2-options='{
+                                      "dropdownParent": "#inviteUserNewProjectSelect4",
+                                      "minimumResultsForSearch": "Infinity",
+                                      "customClass": "custom-select custom-select-sm custom-select-borderless pl-0",
+                                      "dropdownAutoWidth": true,
+                                      "width": true
+                                    }'>
+                              <option value="guest">Guest</option>
+                              <option value="can edit" selected>Can edit</option>
+                              <option value="can comment">Can comment</option>
+                              <option value="full access">Full access</option>
+                              <option value="remove" data-option-template='<span class="text-danger">Remove</span>'>Remove</option>
+                            </select>
+                          </div>
+                          <!-- End Select -->
+                        </div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                  </div>
+                </li>
+                <!-- End List Group Item -->
+
+                <!-- List Group Item -->
+                <li>
+                  <div class="media">
+                    <span class="icon icon-sm icon-soft-dark icon-circle mr-3">
+                      <i class="tio-group-senior"></i>
+                    </span>
+
+                    <div class="media-body">
+                      <div class="row align-items-center">
+                        <div class="col-12 col-sm">
+                          <h5 class="text-body mb-0">#conference</h5>
+                          <span class="d-block font-size-sm">3 members</span>
+                        </div>
+
+                        <div class="col-12 col-sm">
+                          <!-- Select -->
+                          <div id="inviteUserNewProjectSelect3" class="select2-custom select2-custom-sm-right d-sm-flex justify-content-sm-end">
+                            <select class="js-select2-custom custom-select-sm" size="1" style="opacity: 0;"
+                                    data-hs-select2-options='{
+                                      "dropdownParent": "#inviteUserNewProjectSelect3",
+                                      "minimumResultsForSearch": "Infinity",
+                                      "customClass": "custom-select custom-select-sm custom-select-borderless pl-0",
+                                      "dropdownAutoWidth": true,
+                                      "width": true
+                                    }'>
+                              <option value="guest">Guest</option>
+                              <option value="can edit" selected>Can edit</option>
+                              <option value="can comment">Can comment</option>
+                              <option value="full access">Full access</option>
+                              <option value="remove" data-option-template='<span class="text-danger">Remove</span>'>Remove</option>
+                            </select>
+                          </div>
+                          <!-- End Select -->
+                        </div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                  </div>
+                </li>
+                <!-- End List Group Item -->
+              </ul>
+
+              <!-- Toggle Switch -->
+              <label class="row toggle-switch mb-3" for="addTeamPreferencesNewProjectSwitch1">
+                <span class="col-8 col-sm-9 toggle-switch-content ml-0">
+                  <span class="d-flex align-items-center">
+                    <i class="tio-notifications-on-outlined text-primary mr-3"></i>
+                    <span class="text-dark">Inform all project members</span>
+                  </span>
+                </span>
+                <span class="col-4 col-sm-3">
+                  <input type="checkbox" class="toggle-switch-input" id="addTeamPreferencesNewProjectSwitch1" checked>
+                  <span class="toggle-switch-label ml-auto">
+                    <span class="toggle-switch-indicator"></span>
+                  </span>
+                </span>
+              </label>
+              <!-- End Toggle Switch -->
+
+              <!-- Toggle Switch -->
+              <label class="row form-group toggle-switch" for="addTeamPreferencesNewProjectSwitch2">
+                <span class="col-8 col-sm-9 toggle-switch-content ml-0">
+                  <span class="d-flex align-items-center">
+                    <i class="tio-sms-chat-outlined text-primary mr-3"></i>
+                    <span class="text-dark">Show team activity</span>
+                  </span>
+                </span>
+                <span class="col-4 col-sm-3">
+                  <input type="checkbox" class="toggle-switch-input" id="addTeamPreferencesNewProjectSwitch2">
+                  <span class="toggle-switch-label ml-auto">
+                    <span class="toggle-switch-indicator"></span>
+                  </span>
+                </span>
+              </label>
+              <!-- End Toggle Switch -->
+
+              <!-- Footer -->
+              <div class="d-sm-flex align-items-center">
+                <button type="button" class="btn btn-ghost-secondary mb-3 mb-sm-0 mr-2"
+                   data-hs-step-form-prev-options='{
+                     "targetSelector": "#createProjectStepTerms"
+                   }'>
+                  <i class="tio-chevron-left"></i> Previous step
+                </button>
+
+                <div class="d-flex justify-content-end ml-auto">
+                  <button type="button" class="btn btn-white mr-2" data-dismiss="modal" aria-label="Close">Cancel</button>
+                  <button id="createProjectFinishBtn" type="button" class="btn btn-primary">Create project</button>
+                </div>
+              </div>
+              <!-- End Footer -->
+            </div>
+          </div>
+          <!-- End Content Step Form -->
+
+          <!-- Message Body -->
+          <div id="createProjectStepSuccessMessage" style="display:none;">
+            <div class="text-center">
+              <img class="img-fluid mb-3" src="@@autopath/assets/svg/illustrations/create.svg" alt="Image Description" style="max-width: 15rem;">
+
+              <div class="mb-4">
+                <h2>Successful!</h2>
+                <p>New project has been successfully created.</p>
+              </div>
+
+              <div class="row justify-content-center gy-1 gx-2">
+                <div class="col-auto">
+                  <a class="btn btn-white" href="projects.html">
+                    <i class="tio-chevron-left ml-1"></i> Back to projects
+                  </a>
+                </div>
+
+                <div class="col-auto">
+                  <a class="btn btn-primary" href="javascript:;" data-toggle="modal" data-target="#newProjectModal">
+                    <i class="tio-city mr-1"></i> Add new project
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Message Body -->
+        </form>
+        <!-- End Step Form -->
+      </div>
+      <!-- End Body -->
+    </div>
+  </div>
+</div>

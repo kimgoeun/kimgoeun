@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Navs - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "navs.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Navs</h1>
+                  <p class="lead">Documentation and examples for how to use Bootstrap’s included navigation components.</p>
+                  <a href="https://getbootstrap.com/docs/4.5/components/navs/" target="_blank">Bootstrap Navs documentation <i class="tio-open-in-new"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="base-nav" class="hs-docs-heading">
+              Base nav <a class="anchorjs-link" href="#base-nav" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- Nav -->
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Nav --&gt;
+                      &lt;ul class="nav"&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End Nav --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Centered with <code>.justify-content-center</code>:</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <!-- Nav -->
+                  <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Nav --&gt;
+                      &lt;ul class="nav justify-content-center"&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End Nav --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Centered with <code>.justify-content-end</code>:</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab3" data-toggle="pill" href="#nav-result3" role="tab" aria-controls="nav-result3" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab3" data-toggle="pill" href="#nav-html3" role="tab" aria-controls="nav-html3" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent3">
+                <div class="tab-pane fade p-4 show active" id="nav-result3" role="tabpanel" aria-labelledby="nav-resultTab3">
+                  <!-- Nav -->
+                  <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html3" role="tabpanel" aria-labelledby="nav-htmlTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Nav --&gt;
+                      &lt;ul class="nav justify-content-end"&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End Nav --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="fill-and-justify" class="hs-docs-heading">
+              Fill and justify <a class="anchorjs-link" href="#fill-and-justify" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Force your <code>.nav’s</code> contents to extend the full available width one of two modifier classes. To proportionately fill all available space with your <code>.nav-items</code>, use <code>.nav-fill</code>. Notice that all horizontal space is occupied, but not every nav item has the same width.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab4" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab4" data-toggle="pill" href="#nav-result4" role="tab" aria-controls="nav-result4" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab4" data-toggle="pill" href="#nav-html4" role="tab" aria-controls="nav-html4" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent4">
+                <div class="tab-pane fade p-4 show active" id="nav-result4" role="tabpanel" aria-labelledby="nav-resultTab4">
+                  <!-- Nav -->
+                  <ul class="nav nav-pills nav-fill">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html4" role="tabpanel" aria-labelledby="nav-htmlTab4">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Nav --&gt;
+                      &lt;ul class="nav nav-pills nav-fill"&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End Nav --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="nav-tabs" class="hs-docs-heading">
+              Nav tabs <a class="anchorjs-link" href="#nav-tabs" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Takes the basic nav from above and adds the <code>.nav-tabs</code> class to generate a tabbed interface.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab5" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab5" data-toggle="pill" href="#nav-result5" role="tab" aria-controls="nav-result5" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab5" data-toggle="pill" href="#nav-html5" role="tab" aria-controls="nav-html5" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent5">
+                <div class="tab-pane fade p-4 show active" id="nav-result5" role="tabpanel" aria-labelledby="nav-resultTab5">
+                  <!-- Nav -->
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html5" role="tabpanel" aria-labelledby="nav-htmlTab5">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Nav --&gt;
+                      &lt;ul class="nav nav-tabs"&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End Nav --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="nav-pills" class="hs-docs-heading">
+              Nav pills <a class="anchorjs-link" href="#nav-pills" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Take that same HTML, but use <code>.nav-pills</code> instead:</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab6" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab6" data-toggle="pill" href="#nav-result6" role="tab" aria-controls="nav-result6" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab6" data-toggle="pill" href="#nav-html6" role="tab" aria-controls="nav-html6" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent6">
+                <div class="tab-pane fade p-4 show active" id="nav-result6" role="tabpanel" aria-labelledby="nav-resultTab6">
+                  <!-- Nav -->
+                  <ul class="nav nav-pills">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html6" role="tabpanel" aria-labelledby="nav-htmlTab6">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Nav --&gt;
+                      &lt;ul class="nav nav-pills"&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End Nav --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="nav-segment" class="hs-docs-heading">
+              Nav segment <a class="anchorjs-link" href="#nav-segment" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab7" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab7" data-toggle="pill" href="#nav-result7" role="tab" aria-controls="nav-result7" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab7" data-toggle="pill" href="#nav-html7" role="tab" aria-controls="nav-html7" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent7">
+                <div class="tab-pane fade p-4 show active" id="nav-result7" role="tabpanel" aria-labelledby="nav-resultTab7">
+                  <!-- Nav -->
+                  <ul class="nav nav-segment">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html7" role="tabpanel" aria-labelledby="nav-htmlTab7">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Nav --&gt;
+                      &lt;ul class="nav nav-segment"&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End Nav --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="nav-icon" class="hs-docs-heading">
+              Nav icon <a class="anchorjs-link" href="#nav-icon" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab8" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab8" data-toggle="pill" href="#nav-result8" role="tab" aria-controls="nav-result8" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab8" data-toggle="pill" href="#nav-html8" role="tab" aria-controls="nav-html8" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent8">
+                <div class="tab-pane fade p-4 show active" id="nav-result8" role="tabpanel" aria-labelledby="nav-resultTab8">
+                  <!-- Nav -->
+                  <ul class="nav nav-segment">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">
+                        <i class="tio-home-outlined nav-icon"></i> Dashboard
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="tio-user-outlined nav-icon"></i> Profile
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="tio-tune nav-icon"></i> Settings
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+                        <i class="tio-image nav-icon"></i> Media
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- End Nav -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html8" role="tabpanel" aria-labelledby="nav-htmlTab8">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Nav --&gt;
+                      &lt;ul class="nav nav-segment"&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link active" href="#"&gt;
+                            &lt;i class="tio-home-outlined nav-icon"&gt;&lt;/i&gt; Dashboard
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;
+                            &lt;i class="tio-user-outlined nav-icon"&gt;&lt;/i&gt; Profile
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;
+                            &lt;i class="tio-tune nav-icon"&gt;&lt;/i&gt; Settings
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;
+                            &lt;i class="tio-image nav-icon"&gt;&lt;/i&gt; Media
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End Nav --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="nav-break" class="hs-docs-heading">
+              Nav break <a class="anchorjs-link" href="#nav-break" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Long contents don't fit in small screens? Use <code>.nav-{breakpoint}-down-break</code> modifier classes to break horizontal alignment and keep the same style in vertical order. Reduce browser size to see it in action.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab9" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab9" data-toggle="pill" href="#nav-result9" role="tab" aria-controls="nav-result9" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab9" data-toggle="pill" href="#nav-html9" role="tab" aria-controls="nav-html9" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent9">
+                <div class="tab-pane fade p-4 show active" id="nav-result9" role="tabpanel" aria-labelledby="nav-resultTab9">
+                  <!-- Nav -->
+                  <ul class="nav nav-segment nav-xl-down-break">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">
+                        <i class="tio-home-outlined nav-icon"></i> Dashboard
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="tio-user-outlined nav-icon"></i> Profile
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="tio-survey nav-icon"></i> Projects
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="tio-format-points nav-icon"></i> Tasks
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="tio-tune nav-icon"></i> Settings
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="tio-sign-out nav-icon"></i> Log out
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- End Nav -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html9" role="tabpanel" aria-labelledby="nav-htmlTab9">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Nav --&gt;
+                      &lt;ul class="nav nav-segment nav-xl-down-break"&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link active" href="#"&gt;
+                            &lt;i class="tio-home-outlined nav-icon"&gt;&lt;/i&gt; Dashboard
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;
+                            &lt;i class="tio-user-outlined nav-icon"&gt;&lt;/i&gt; Profile
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;
+                            &lt;i class="tio-survey nav-icon"&gt;&lt;/i&gt; Projects
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;
+                            &lt;i class="tio-format-points nav-icon"&gt;&lt;/i&gt; Tasks
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;
+                            &lt;i class="tio-tune nav-icon"&gt;&lt;/i&gt; Settings
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;
+                            &lt;i class="tio-sign-out nav-icon"&gt;&lt;/i&gt; Log out
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End Nav --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="nav-vertical" class="hs-docs-heading">
+              Nav vertical <a class="anchorjs-link" href="#nav-vertical" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Stack your navigation by changing the flex item direction with the <code>.flex-column</code> utility. Need to stack them on some viewports but not others? Use the responsive versions (e.g., <code>.flex-sm-column</code>).</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab10" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab10" data-toggle="pill" href="#nav-result10" role="tab" aria-controls="nav-result10" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab10" data-toggle="pill" href="#nav-html10" role="tab" aria-controls="nav-html10" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent10">
+                <div class="tab-pane fade p-4 show active" id="nav-result10" role="tabpanel" aria-labelledby="nav-resultTab10">
+                  <!-- Nav Vertical -->
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav Vertical -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html10" role="tabpanel" aria-labelledby="nav-htmlTab10">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Nav Vertical --&gt;
+                      &lt;ul class="nav flex-column"&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End Nav Vertical --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="nav-scroller" class="hs-docs-heading">
+              Nav scroller <a class="anchorjs-link" href="#nav-scroller" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Make arrows visible by setting a <code>max-width</code> size.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab12" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab12" data-toggle="pill" href="#nav-result12" role="tab" aria-controls="nav-result12" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab12" data-toggle="pill" href="#nav-html12" role="tab" aria-controls="nav-html12" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab12" data-toggle="pill" href="#nav-js12" role="tab" aria-controls="nav-js12" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Alert -->
+              <div class="alert alert-soft-dark card-alert" role="alert">
+                This example uses <span class="font-weight-bold">Nav scroller</span> library.
+              </div>
+              <!-- End Alert -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent12">
+                <div class="tab-pane fade p-4 show active" id="nav-result12" role="tabpanel" aria-labelledby="nav-resultTab12">
+                  <!-- Nav Scroller -->
+                  <div class="js-nav-scroller hs-nav-scroller-horizontal" style="max-width: 22rem;">
+                    <span class="hs-nav-scroller-arrow-prev" style="display: none;">
+                      <a class="hs-nav-scroller-arrow-link" href="javascript:;">
+                        <i class="tio-chevron-left"></i>
+                      </a>
+                    </span>
+
+                    <span class="hs-nav-scroller-arrow-next" style="display: none;">
+                      <a class="hs-nav-scroller-arrow-link" href="javascript:;">
+                        <i class="tio-chevron-right"></i>
+                      </a>
+                    </span>
+
+                    <!-- Nav -->
+                    <ul class="nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Dashboard</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Tasks</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Settings</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Log out</a>
+                      </li>
+                    </ul>
+                    <!-- End Nav -->
+                  </div>
+                  <!-- End Nav Scroller -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html12" role="tabpanel" aria-labelledby="nav-htmlTab12">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Nav Scroller --&gt;
+                      &lt;div class="js-nav-scroller hs-nav-scroller-horizontal" style="max-width: 22rem;"&gt;
+                        &lt;span class="hs-nav-scroller-arrow-prev" style="display: none;"&gt;
+                          &lt;a class="hs-nav-scroller-arrow-link" href="javascript:;"&gt;
+                            &lt;i class="tio-chevron-left"&gt;&lt;/i&gt;
+                          &lt;/a&gt;
+                        &lt;/span&gt;
+
+                        &lt;span class="hs-nav-scroller-arrow-next" style="display: none;"&gt;
+                          &lt;a class="hs-nav-scroller-arrow-link" href="javascript:;"&gt;
+                            &lt;i class="tio-chevron-right"&gt;&lt;/i&gt;
+                          &lt;/a&gt;
+                        &lt;/span&gt;
+
+                        &lt;!-- Nav --&gt;
+                        &lt;ul class="nav"&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link active" href="#"&gt;Dashboard&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Profile&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Projects&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Tasks&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Settings&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Log out&lt;/a&gt;
+                          &lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;!-- End Nav --&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Nav Scroller --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js12" role="tabpanel" aria-labelledby="nav-jsTab12">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- JS Implementing Plugins --&gt;
+                      &lt;script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"&gt;&lt;/script&gt;
+
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          // INITIALIZATION OF NAV SCROLLER
+                          // =======================================================
+                          $('.js-nav-scroller').each(function () {
+                            new HsNavScroller($(this)).init()
+                          });
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Or don't, then they will appear when the side of the content is smaller than the content size. Reduce the browser size to see in action.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab11" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab11" data-toggle="pill" href="#nav-result11" role="tab" aria-controls="nav-result11" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab11" data-toggle="pill" href="#nav-html11" role="tab" aria-controls="nav-html11" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab11" data-toggle="pill" href="#nav-js11" role="tab" aria-controls="nav-js11" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Alert -->
+              <div class="alert alert-soft-dark card-alert" role="alert">
+                This example uses <span class="font-weight-bold">Nav scroller</span> library.
+              </div>
+              <!-- End Alert -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent11">
+                <div class="tab-pane fade p-4 show active" id="nav-result11" role="tabpanel" aria-labelledby="nav-resultTab11">
+                  <!-- Nav Scroller -->
+                  <div class="js-nav-scroller hs-nav-scroller-horizontal">
+                    <span class="hs-nav-scroller-arrow-prev" style="display: none;">
+                      <a class="hs-nav-scroller-arrow-link" href="javascript:;">
+                        <i class="tio-chevron-left"></i>
+                      </a>
+                    </span>
+
+                    <span class="hs-nav-scroller-arrow-next" style="display: none;">
+                      <a class="hs-nav-scroller-arrow-link" href="javascript:;">
+                        <i class="tio-chevron-right"></i>
+                      </a>
+                    </span>
+
+                    <!-- Nav -->
+                    <ul class="nav nav-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Dashboard</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Tasks</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Settings</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Log out</a>
+                      </li>
+                    </ul>
+                    <!-- End Nav -->
+                  </div>
+                  <!-- End Nav Scroller -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html11" role="tabpanel" aria-labelledby="nav-htmlTab11">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Nav Scroller --&gt;
+                      &lt;div class="js-nav-scroller hs-nav-scroller-horizontal"&gt;
+
+                        &lt;span class="hs-nav-scroller-arrow-prev" style="display: none;"&gt;
+                          &lt;a class="hs-nav-scroller-arrow-link" href="javascript:;"&gt;
+                            &lt;i class="tio-chevron-left"&gt;&lt;/i&gt;
+                          &lt;/a&gt;
+                        &lt;/span&gt;
+
+                        &lt;span class="hs-nav-scroller-arrow-next" style="display: none;"&gt;
+                          &lt;a class="hs-nav-scroller-arrow-link" href="javascript:;"&gt;
+                            &lt;i class="tio-chevron-right"&gt;&lt;/i&gt;
+                          &lt;/a&gt;
+                        &lt;/span&gt;
+
+                        &lt;!-- Nav --&gt;
+                        &lt;ul class="nav nav-tabs"&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link active" href="#"&gt;Dashboard&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Profile&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Projects&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Tasks&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Settings&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Log out&lt;/a&gt;
+                          &lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;!-- End Nav --&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Nav Scroller --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js11" role="tabpanel" aria-labelledby="nav-jsTab11">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- JS Implementing Plugins --&gt;
+                      &lt;script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"&gt;&lt;/script&gt;
+
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          // INITIALIZATION OF NAV SCROLLER
+                          // =======================================================
+                          $('.js-nav-scroller').each(function () {
+                            new HsNavScroller($(this)).init()
+                          });
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="nav-scroller-vertical" class="hs-docs-heading">
+              Vertical <a class="anchorjs-link" href="#nav-scroller-vertical" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>"type": "vertical"</code> for vertical alignment and the <code>.hs-nav-scroller-vertical</code> class for a scrollbar.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab14" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab14" data-toggle="pill" href="#nav-result14" role="tab" aria-controls="nav-result14" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab14" data-toggle="pill" href="#nav-html14" role="tab" aria-controls="nav-html14" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab14" data-toggle="pill" href="#nav-js14" role="tab" aria-controls="nav-js14" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Alert -->
+              <div class="alert alert-soft-dark card-alert" role="alert">
+                This example uses <span class="font-weight-bold">Nav scroller</span> library.
+              </div>
+              <!-- End Alert -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent14">
+                <div class="tab-pane fade p-4 show active" id="nav-result14" role="tabpanel" aria-labelledby="nav-resultTab14">
+                  <!-- Nav Scroller -->
+                  <div class="js-nav-scroller hs-nav-scroller-vertical" style="max-height: 12rem; max-width: 22rem;"
+                       data-hs-nav-scroller-options='{
+                         "type": "vertical"
+                       }'>
+
+                    <span class="hs-nav-scroller-arrow-prev" style="display: none;">
+                      <a class="hs-nav-scroller-arrow-link" href="javascript:;">
+                        <i class="tio-chevron-left"></i>
+                      </a>
+                    </span>
+
+                    <span class="hs-nav-scroller-arrow-next" style="display: none;">
+                      <a class="hs-nav-scroller-arrow-link" href="javascript:;">
+                        <i class="tio-chevron-right"></i>
+                      </a>
+                    </span>
+
+                    <!-- Nav -->
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Dashboard</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Tasks</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Settings</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Log out</a>
+                      </li>
+                    </ul>
+                    <!-- End Nav -->
+                  </div>
+                  <!-- End Nav Scroller -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html14" role="tabpanel" aria-labelledby="nav-htmlTab14">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Nav Scroller --&gt;
+                      &lt;div class="js-nav-scroller hs-nav-scroller-vertical" style="max-height: 12rem; max-width: 22rem;"
+                           data-hs-nav-scroller-options='{
+                             "type": "vertical"
+                           }'&gt;
+
+                        &lt;span class="hs-nav-scroller-arrow-prev" style="display: none;"&gt;
+                          &lt;a class="hs-nav-scroller-arrow-link" href="javascript:;"&gt;
+                            &lt;i class="tio-chevron-left"&gt;&lt;/i&gt;
+                          &lt;/a&gt;
+                        &lt;/span&gt;
+
+                        &lt;span class="hs-nav-scroller-arrow-next" style="display: none;"&gt;
+                          &lt;a class="hs-nav-scroller-arrow-link" href="javascript:;"&gt;
+                            &lt;i class="tio-chevron-right"&gt;&lt;/i&gt;
+                          &lt;/a&gt;
+                        &lt;/span&gt;
+
+                        &lt;!-- Nav --&gt;
+                        &lt;ul class="nav flex-column"&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link active" href="#"&gt;Dashboard&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Profile&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Projects&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Tasks&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Settings&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Log out&lt;/a&gt;
+                          &lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;!-- End Nav --&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Nav Scroller --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js14" role="tabpanel" aria-labelledby="nav-jsTab14">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- JS Implementing Plugins --&gt;
+                      &lt;script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"&gt;&lt;/script&gt;
+
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          // INITIALIZATION OF NAV SCROLLER
+                          // =======================================================
+                          $('.js-nav-scroller').each(function () {
+                            new HsNavScroller($(this)).init()
+                          });
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="nav-scroller-methods" class="hs-docs-heading">
+              Nav scroller methods <a class="anchorjs-link" href="#nav-scroller-methods" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card overflow-hidden mb-7">
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-thead-bordered table-nowrap">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Parameters</th>
+                      <th style="width: 50%;">Description</th>
+                      <th class="text-nowrap">Default value</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code>type</code>
+                      </td>
+                      <td>
+                        Scrollbar type, <code>vertical</code> or <code>horizontal</code>.
+                      </td>
+                      <td>
+                        <code>horizontal</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code>target</code>
+                      </td>
+                      <td>Element to which the scrollbar will move.</td>
+                      <td>
+                        <code>.active</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code>delay</code>
+                      </td>
+                      <td>Animation delay.</td>
+                      <td>
+                        <code>20</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code>offset</code>
+                      </td>
+                      <td>Indent back for scrollbar.</td>
+                      <td>
+                        <code>0</code>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="nav-transfor-tabs-to-btn" class="hs-docs-heading">
+              Transform tabs to btn <a class="anchorjs-link" href="#nav-transfor-tabs-to-btn" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Long contents don't fit in small screens? Plugin breaks tabs to collapse in vertical order. Reduce browser size to see it in action.</p>
+            <p>You can utilize <code>"transformResolution": "sm|md|lg|xl"</code> to change when they are vertically aligned.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab15" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab15" data-toggle="pill" href="#nav-result15" role="tab" aria-controls="nav-result15" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab15" data-toggle="pill" href="#nav-html15" role="tab" aria-controls="nav-html15" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab15" data-toggle="pill" href="#nav-js15" role="tab" aria-controls="nav-js15" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Alert -->
+              <div class="alert alert-soft-dark card-alert" role="alert">
+                This example uses <span class="font-weight-bold">Transform tabs to btn</span> library.
+              </div>
+              <!-- End Alert -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent15">
+                <div class="tab-pane fade p-4 show active" id="nav-result15" role="tabpanel" aria-labelledby="nav-resultTab15">
+                  <!-- Nav -->
+                  <ul class="js-tabs-to-dropdown nav nav-segment nav-fill nav-lg-down-break mb-5" id="editUserModalTab" role="tablist"
+                      data-hs-transform-tabs-to-btn-options='{
+                        "transformResolution": "lg",
+                        "btnClassNames": "btn btn-block btn-white dropdown-toggle justify-content-center mb-3"
+                      }'>
+                    <li class="nav-item">
+                      <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab">
+                        <i class="tio-user-outlined mr-1"></i> Profile
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="billing-address-tab" data-toggle="tab" href="#billing-address" role="tab">
+                        <i class="tio-city mr-1"></i> Billing address
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="change-password-tab" data-toggle="tab" href="#change-password" role="tab">
+                        <i class="tio-lock-outlined mr-1"></i> Change password
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab">
+                        <i class="tio-notifications-on-outlined mr-1"></i> Notifications
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- End Nav -->
+
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="editUserModalTabContent">
+                    <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                      Tab 1
+                    </div>
+
+                    <div class="tab-pane fade" id="billing-address" role="tabpanel" aria-labelledby="billing-address-tab">
+                      Tab 2
+                    </div>
+
+                    <div class="tab-pane fade" id="change-password" role="tabpanel" aria-labelledby="change-password-tab">
+                      Tab 3
+                    </div>
+
+                    <div class="tab-pane fade" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
+                      Tab 4
+                    </div>
+                  </div>
+                  <!-- End Tab Content -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html15" role="tabpanel" aria-labelledby="nav-htmlTab15">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Nav --&gt;
+                      &lt;ul class="js-tabs-to-dropdown nav nav-segment nav-fill nav-lg-down-break mb-5" id="editUserModalTab" role="tablist"
+                          data-hs-transform-tabs-to-btn-options='{
+                            "transformResolution": "lg",
+                            "btnClassNames": "btn btn-block btn-white dropdown-toggle justify-content-center mb-3"
+                          }'&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab"&gt;
+                            &lt;i class="tio-user-outlined mr-1"&gt;&lt;/i&gt; Profile
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" id="billing-address-tab" data-toggle="tab" href="#billing-address" role="tab"&gt;
+                            &lt;i class="tio-city mr-1"&gt;&lt;/i&gt; Billing address
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" id="change-password-tab" data-toggle="tab" href="#change-password" role="tab"&gt;
+                            &lt;i class="tio-lock-outlined mr-1"&gt;&lt;/i&gt; Change password
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab"&gt;
+                            &lt;i class="tio-notifications-on-outlined mr-1"&gt;&lt;/i&gt; Notifications
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End Nav --&gt;
+
+                      &lt;!-- Tab Content --&gt;
+                      &lt;div class="tab-content" id="editUserModalTabContent"&gt;
+                        &lt;div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab"&gt;
+                          Tab 1
+                        &lt;/div&gt;
+
+                        &lt;div class="tab-pane fade" id="billing-address" role="tabpanel" aria-labelledby="billing-address-tab"&gt;
+                          Tab 2
+                        &lt;/div&gt;
+
+                        &lt;div class="tab-pane fade" id="change-password" role="tabpanel" aria-labelledby="change-password-tab"&gt;
+                          Tab 3
+                        &lt;/div&gt;
+
+                        &lt;div class="tab-pane fade" id="notifications" role="tabpanel" aria-labelledby="notifications-tab"&gt;
+                          Tab 4
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Tab Content --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js15" role="tabpanel" aria-labelledby="nav-jsTab15">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- JS Implementing Plugins --&gt;
+                      &lt;script src="@@autopath/assets/vendor/hs-transform-tabs-to-btn/dist/hs-transform-tabs-to-btn.min.js"&gt;&lt;/script&gt;
+
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          // INITIALIZATION OF TRANSFORM TABS TO DROPDOWN
+                          // =======================================================
+                          $('.js-tabs-to-dropdown').each(function () {
+                            var transformTabsToBtn = new HSTransformTabsToBtn($(this)).init();
+                          });
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="nav-transfor-tabs-to-btn-methods" class="hs-docs-heading">
+              Transfor tabs to btn methods <a class="anchorjs-link" href="#nav-transfor-tabs-to-btn-methods" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card overflow-hidden mb-7">
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-thead-bordered table-nowrap">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Parameters</th>
+                      <th style="width: 50%;">Description</th>
+                      <th class="text-nowrap">Default value</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code>transformResolution</code>
+                      </td>
+                      <td>Trigger breakpoint</td>
+                      <td><code>null</code></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code>btnClassNames</code>
+                      </td>
+                      <td>Classes for tabs buttons after transform</td>
+                      <td>
+                        <code>null</code>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+    <script src="@@autopath/assets/vendor/hs-transform-tabs-to-btn/dist/hs-transform-tabs-to-btn.min.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+
+
+        // INITIALIZATION OF TRANSFORM TABS TO DROPDOWN
+        // =======================================================
+        $('.js-tabs-to-dropdown').each(function () {
+          var transformTabsToBtn = new HSTransformTabsToBtn($(this)).init();
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

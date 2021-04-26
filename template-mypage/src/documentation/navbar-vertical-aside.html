@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Navbar Vertical Aside - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/select2/dist/css/select2.min.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "navbar-vertical-aside.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Navbar Vertical Aside</h1>
+                  <p class="lead">Vertical navbar.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="how-to-use" class="hs-docs-heading">
+              How to use <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code>&lt;/body&gt;</code> tag, to enable it.</p>
+
+            <pre class="rounded">
+              <code class="language-html" data-lang="html">
+                &lt;script&gt;
+                  $(document).on('ready', function () {
+                    // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+                    // =======================================================
+                    var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+                  });
+                &lt;/script&gt;
+              </code>
+            </pre>
+
+            <!-- Heading -->
+            <h2 id="basic-example" class="hs-docs-heading">
+              Basic example <a class="anchorjs-link" href="#basic-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- Navbar Vertical -->
+                  <aside class="js-navbar-vertical-aside-docs docs-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-expand">
+                    <div class="navbar-vertical-container">
+                      <div class="navbar-brand-wrapper justify-content-between">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="@@autopath/index.html" aria-label="Front">
+                          <img class="navbar-brand-logo" src="@@autopath/assets/svg/logos/logo.svg" alt="Logo">
+                          <img class="navbar-brand-logo-mini" src="@@autopath/assets/svg/logos/logo-short.svg" alt="Logo">
+                        </a>
+                        <!-- End Logo -->
+                      </div>
+
+                      <!-- Content -->
+                      <div class="navbar-vertical-contents">
+                        <ul class="navbar-nav navbar-nav-lg nav-tabs">
+                          <!-- Dashboards -->
+                          <li class="navbar-vertical-aside-has-menu">
+                            <a class="nav-link" href="#" title="Dashboards">
+                              <i class="tio-home-vs-1-outlined nav-icon"></i>
+                              <span class="text-truncate">Dashboards</span>
+                            </a>
+                          </li>
+                          <!-- End Dashboards -->
+
+                          <li class="nav-item">
+                            <a class="nav-link" href="@@autopath/documentation/index.html" title="Documentation">
+                              <i class="tio-book-opened nav-icon"></i>
+                              <span class="text-truncate">Documentation <span class="badge badge-primary badge-pill ml-1">v1.0</span></span>
+                            </a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link" href="@@autopath/documentation/alerts.html" title="Components">
+                              <i class="tio-layers-outlined nav-icon"></i>
+                              <span class="text-truncate">Components</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- End Content -->
+                    </div>
+                  </aside>
+                  <!-- End Navbar Vertical -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-fixed navbar-expand-xl"&gt;
+                        ...
+                      &lt;/aside&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Alert -->
+            <div class="alert alert-soft-dark mt-3" role="alert">
+              For more examples, check out <a href="@@autopath/layouts/layouts.html">Layouts</a>.
+            </div>
+            <!-- End Alert -->
+
+            <!-- Heading -->
+            <h2 id="methods" class="hs-docs-heading">
+              Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card overflow-hidden">
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-thead-bordered card-table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Parameters</th>
+                      <th style="width: 50%;">Description</th>
+                      <th class="text-nowrap">Default value</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td><code>mainContainer</code></td>
+                      <td>Page container</td>
+                      <td><code>body</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>minClass</code></td>
+                      <td>Class for sidebar on mini mode</td>
+                      <td><code>.navbar-vertical-aside-mini-mode</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>closedClass</code></td>
+                      <td>Class for sidebar when closed</td>
+                      <td><code>.navbar-vertical-aside-closed-mode</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>transitionOnClassName</code></td>
+                      <td>Class for transition effect</td>
+                      <td><code>.navbar-vertical-aside-transition-on</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>mobileOverlayClass</code></td>
+                      <td>Class for overlay</td>
+                      <td><code>.navbar-vertical-aside-mobile-overlay</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>toggleInvokerClass</code></td>
+                      <td>Element for toggle sidebar</td>
+                      <td><code>.navbar-vertical-aside-toggle-invoker</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>subMenuClass</code></td>
+                      <td>Submenu class</td>
+                      <td><code>.navbar-vertical-aside-submenu</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>subMenuInvokerClass</code></td>
+                      <td>Element for toggle submenu in sidebar</td>
+                      <td><code>.navbar-vertical-aside-open-submenu-invoker</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>subMenuInvokerActiveClass</code></td>
+                      <td>Class for opened submenu in sidebar</td>
+                      <td><code>.show</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>hasSubMenuClass</code></td>
+                      <td>The element that contains the submenu</td>
+                      <td><code>.navbar-vertical-aside-has-menu</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>subMenuAnimationSpeed</code></td>
+                      <td>Animation speed for submenu</td>
+                      <td><code>200</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>subMenuOpenEvent</code></td>
+                      <td>Action which will be toggle submenu (hover, click)</td>
+                      <td><code>hover</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>showClassNames</code></td>
+                      <td>Add class to main container to control the display sidebar</td>
+                      <td><code>
+                        showClassNames: {
+                          xs: 'navbar-vertical-aside-show-xs',
+                          sm: 'navbar-vertical-aside-show-sm',
+                          md: 'navbar-vertical-aside-show-md',
+                          lg: 'navbar-vertical-aside-show-lg',
+                          xl: 'navbar-vertical-aside-show-xl'
+                          },
+                      </code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>onMini</code></td>
+                      <td>Callback event, called when sidebar is mini mode</td>
+                      <td><code>() {}</code></td>
+                    </tr>
+
+                    <tr>
+                      <td><code>onFull</code></td>
+                      <td>Callback event, called when sidebar is full mode</td>
+                      <td><code>() {}</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebarDocs = $('.js-navbar-vertical-aside-docs');
+        sidebarDocs.hsSideNav({
+          toggleInvokerClass: '.js-navbar-vertical-aside-docs-toggle-invoker',
+          subMenuClass: '.js-navbar-vertical-aside-docs-submenu',
+          subMenuInvokerClass: '.js-navbar-vertical-aside-docs-menu-link',
+          subMenuCompactSmOpenEvent: 'hover'
+        });
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

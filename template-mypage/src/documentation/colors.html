@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Colors - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "colors.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Colors</h1>
+                  <p class="lead">Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="color" class="hs-docs-heading">
+              Color <a class="anchorjs-link" href="#color" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <p class="text-primary">.text-primary</p>
+                  <p class="text-body">.text-body</p>
+                  <p class="text-success">.text-success</p>
+                  <p class="text-danger">.text-danger</p>
+                  <p class="text-warning">.text-warning</p>
+                  <p class="text-info">.text-info</p>
+                  <p class="text-dark">.text-dark</p>
+                  <p class="text-body">.text-body</p>
+                  <p class="text-muted">.text-muted</p>
+                  <p class="text-black-50">.text-black-50</p>
+                  <p class="text-white bg-dark">.text-white</p>
+                  <p class="text-white-70 bg-dark">.text-white-70</p>
+                  <p class="text-white-50 bg-dark">.text-white-50</p>
+                  <p class="text-reset">.text-reset</p>
+                  <a href="#"><p class="text-hover-primary">.text-hover-primary</p></a>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;p class="text-primary"&gt;.text-primary&lt;/p&gt;
+                      &lt;p class="text-body"&gt;.text-body&lt;/p&gt;
+                      &lt;p class="text-success"&gt;.text-success&lt;/p&gt;
+                      &lt;p class="text-danger"&gt;.text-danger&lt;/p&gt;
+                      &lt;p class="text-warning"&gt;.text-warning&lt;/p&gt;
+                      &lt;p class="text-info"&gt;.text-info&lt;/p&gt;
+                      &lt;p class="text-dark"&gt;.text-dark&lt;/p&gt;
+                      &lt;p class="text-body"&gt;.text-body&lt;/p&gt;
+                      &lt;p class="text-muted"&gt;.text-muted&lt;/p&gt;
+                      &lt;p class="text-black-50"&gt;.text-black-50&lt;/p&gt;
+                      &lt;p class="text-white bg-dark"&gt;.text-white&lt;/p&gt;
+                      &lt;p class="text-white-70 bg-dark"&gt;.text-white-70&lt;/p&gt;
+                      &lt;p class="text-white-50 bg-dark"&gt;.text-white-50&lt;/p&gt;
+                      &lt;p class="text-reset"&gt;.text-reset&lt;/p&gt;
+                      &lt;a href="#">&lt;p class="text-hover-primary"&gt;.text-hover-primary&lt;/p&gt;&lt;/a&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Contextual text classes also work well on anchors with the provided hover and focus states. <span class="text-dark font-weight-bold">Note that the <code>.text-muted</code> class has no link styling.</span></p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <p><a href="#" class="text-primary">Primary link</a></p>
+                  <p><a href="#" class="text-body">Secondary link</a></p>
+                  <p><a href="#" class="text-success">Success link</a></p>
+                  <p><a href="#" class="text-danger">Danger link</a></p>
+                  <p><a href="#" class="text-warning">Warning link</a></p>
+                  <p><a href="#" class="text-info">Info link</a></p>
+                  <p><a href="#" class="text-white-70 bg-dark">Light link</a></p>
+                  <p><a href="#" class="text-dark">Dark link</a></p>
+                  <p><a href="#" class="text-muted">Muted link</a></p>
+                  <p><a href="#" class="text-white bg-dark">White link</a></p>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;p&gt;&lt;a href="#" class="text-primary"&gt;Primary link&lt;/a&gt;&lt;/p&gt;
+                      &lt;p&gt;&lt;a href="#" class="text-body"&gt;Secondary link&lt;/a&gt;&lt;/p&gt;
+                      &lt;p&gt;&lt;a href="#" class="text-success"&gt;Success link&lt;/a&gt;&lt;/p&gt;
+                      &lt;p&gt;&lt;a href="#" class="text-danger"&gt;Danger link&lt;/a&gt;&lt;/p&gt;
+                      &lt;p&gt;&lt;a href="#" class="text-warning"&gt;Warning link&lt;/a&gt;&lt;/p&gt;
+                      &lt;p&gt;&lt;a href="#" class="text-info"&gt;Info link&lt;/a&gt;&lt;/p&gt;
+                      &lt;p&gt;&lt;a href="#" class="text-white-70 bg-dark"&gt;Light link&lt;/a&gt;&lt;/p&gt;
+                      &lt;p&gt;&lt;a href="#" class="text-dark"&gt;Dark link&lt;/a&gt;&lt;/p&gt;
+                      &lt;p&gt;&lt;a href="#" class="text-muted"&gt;Muted link&lt;/a&gt;&lt;/p&gt;
+                      &lt;p&gt;&lt;a href="#" class="text-white bg-dark"&gt;White link&lt;/a&gt;&lt;/p&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="bg-color" class="hs-docs-heading">
+              Background color <a class="anchorjs-link" href="#bg-color" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes. Background utilities <span class="text-dark font-weight-bold">do not set <code>color</code></span>, so in some cases you'll want to use <code>.text-*</code> utilities.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab3" data-toggle="pill" href="#nav-result3" role="tab" aria-controls="nav-result3" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab3" data-toggle="pill" href="#nav-html3" role="tab" aria-controls="nav-html3" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent3">
+                <div class="tab-pane fade p-4 show active" id="nav-result3" role="tabpanel" aria-labelledby="nav-resultTab3">
+                  <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+                  <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+                  <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+                  <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+                  <div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+                  <div class="p-3 mb-2 bg-info text-white">.bg-info</div>
+                  <div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+                  <div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+                  <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+                  <div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html3" role="tabpanel" aria-labelledby="nav-htmlTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;div class="p-3 mb-2 bg-primary text-white"&gt;.bg-primary&lt;/div&gt;
+                      &lt;div class="p-3 mb-2 bg-secondary text-white"&gt;.bg-secondary&lt;/div&gt;
+                      &lt;div class="p-3 mb-2 bg-success text-white"&gt;.bg-success&lt;/div&gt;
+                      &lt;div class="p-3 mb-2 bg-danger text-white"&gt;.bg-danger&lt;/div&gt;
+                      &lt;div class="p-3 mb-2 bg-warning text-dark"&gt;.bg-warning&lt;/div&gt;
+                      &lt;div class="p-3 mb-2 bg-info text-white"&gt;.bg-info&lt;/div&gt;
+                      &lt;div class="p-3 mb-2 bg-light text-dark"&gt;.bg-light&lt;/div&gt;
+                      &lt;div class="p-3 mb-2 bg-dark text-white"&gt;.bg-dark&lt;/div&gt;
+                      &lt;div class="p-3 mb-2 bg-white text-dark"&gt;.bg-white&lt;/div&gt;
+                      &lt;div class="p-3 mb-2 bg-transparent text-dark"&gt;.bg-transparent&lt;/div&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-lg navbar-bordered splitted-content-navbar">
+  <div class="navbar-vertical-container">
+    <!-- Content -->
+    <div class="js-nav-scroller navbar-vertical-content"
+         data-hs-nav-scroller-options='{
+          "type": "vertical",
+          "target": ".navbar-vertical-without-icons .active"
+         }'>
+      <!-- Mini Content -->
+      <div class="splitted-content-mini navbar-dark h-100 py-2">
+        <a class="navbar-brand d-flex justify-content-center mb-1" href="@@autopath/index.html" aria-label="Front">
+          <img class="navbar-brand-logo-short" src="@@autopath/assets/svg/logos/logo-short-white.svg" alt="Logo">
+        </a>
+
+        <div class="navbar-vertical-content">
+          <ul class="navbar-nav navbar-nav-lg nav-tabs">
+            @@include("main-navbar-vertical-menu.html", {
+              "category": "@@category",
+              "subcategory": "@@subcategory",
+              "link": "@@link"
+            })
+          </ul>
+        </div>
+
+        <div class="mt-auto">
+          <div class="h4 text-center">
+            <span class="badge badge-light badge-pill">v1.0</span>
+          </div>
+
+          <ul class="navbar-nav navbar-nav-lg nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link" href="https://htmlstream.com/contact-us" target="_blank" data-toggle="tooltip" data-placement="right" title="Get support">
+                <i class="tio-sms-chat-outlined nav-icon"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- End Mini Content -->
+
+      <ul class="navbar-nav nav-tabs navbar-vertical-without-icons py-3 mb-3">
+        @@include("sidebar-nav-menu.html", {
+          "componentlink": "@@componentlink"
+        })
+      </ul>
+
+      <!-- Navbar Vertical Toggle -->
+      <div class="position-absolute top-0 right-0 mt-3 mr-4">
+        <button type="button" class="js-navbar-vertical-aside-toggle-invoker navbar-vertical-aside-toggle btn btn-icon btn-xs btn-ghost-dark">
+          <i class="tio-clear tio-lg"></i>
+        </button>
+      </div>
+      <!-- End Navbar Vertical Toggle -->
+    </div>
+    <!-- End Content -->
+  </div>
+</aside>

@@ -1,0 +1,50 @@
+<form id="docsSearch" class="position-relative"
+      data-hs-list-options='{
+       "searchMenu": true,
+       "keyboard": true,
+       "item": "searchTemplate",
+       "valueNames": ["component", "category", {"name": "link", "attr": "href"}],
+       "empty": "#searchNoResults"
+     }'>
+  <!-- Input Group -->
+  <div class="input-group input-group-merge navbar-input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text">
+        <i class="tio-search"></i>
+      </div>
+    </div>
+
+    <input type="search" class="search form-control" placeholder="Search in front" aria-label="Search in front">
+
+    <a class="input-group-append" href="javascript:;">
+      <span class="input-group-text">
+        <i id="clearSearchResultsIcon" class="tio-clear" style="display: none;"></i>
+      </span>
+    </a>
+  </div>
+  <!-- End Input Group -->
+
+  <!-- List -->
+  <div class="list dropdown-menu w-100 overflow-auto" style="max-height: 16rem;"></div>
+  <!-- End List -->
+
+  <!-- Empty -->
+  <div id="searchNoResults" style="display: none;">
+    <div class="text-center p-4">
+      <img class="mb-3" src="@@autopath/assets/svg/illustrations/sorry.svg" alt="Image Description" style="width: 7rem;">
+      <p class="mb-0">No Results</p>
+    </div>
+  </div>
+  <!-- End Empty -->
+</form>
+
+<!-- List Item Template -->
+<div class="d-none">
+  <div id="searchTemplate" class="dropdown-item">
+    <a class="d-block link" href="#">
+      <span class="category d-block text-muted mb-1"></span>
+      <span class="component font-weight-bold text-dark"></span>
+    </a>
+  </div>
+</div>
+<!-- End List Item Template -->

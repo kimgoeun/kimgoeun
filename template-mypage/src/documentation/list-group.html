@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>List Group - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "list-group.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">List Group</h1>
+                  <p class="lead">List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.</p>
+                  <a href="https://getbootstrap.com/docs/4.5/components/list-group/" target="_blank">Bootstrap List Group documentation <i class="tio-open-in-new"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="basic-example" class="hs-docs-heading">
+              Basic example <a class="anchorjs-link" href="#basic-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- List Group -->
+                  <ul class="list-group" style="max-width: 450px;">
+                    <li class="list-group-item active">
+                      <i class="tio-home-outlined list-group-icon"></i> Dashboard
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-user-outlined list-group-icon"></i> Profile
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-format-points list-group-icon"></i> Tasks
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-layers-outlined list-group-icon"></i> Projects
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-group-senior list-group-icon"></i> Members
+                    </li>
+                  </ul>
+                  <!-- End List Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;ul class="list-group"&gt;
+                        &lt;li class="list-group-item active"&gt;
+                          &lt;i class="tio-home-outlined list-group-icon"&gt;&lt;/i&gt; Dashboard
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-user-outlined list-group-icon"&gt;&lt;/i&gt; Profile
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-format-points list-group-icon"&gt;&lt;/i&gt; Tasks
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-layers-outlined list-group-icon"&gt;&lt;/i&gt; Projects
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-group-senior list-group-icon"&gt;&lt;/i&gt; Members
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End List Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="sizes" class="hs-docs-heading">
+              Sizes <a class="anchorjs-link" href="#sizes" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>.list-group-sm</code> class.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <!-- List Group -->
+                  <ul class="list-group list-group-sm" style="max-width: 450px;">
+                    <li class="list-group-item">
+                      <i class="tio-home-outlined list-group-icon"></i> Dashboard
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-user-outlined list-group-icon"></i> Profile
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-format-points list-group-icon"></i> Tasks
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-layers-outlined list-group-icon"></i> Projects
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-group-senior list-group-icon"></i> Members
+                    </li>
+                  </ul>
+                  <!-- End List Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;ul class="list-group list-group-sm"&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-home-outlined list-group-icon"&gt;&lt;/i&gt; Dashboard
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-user-outlined list-group-icon"&gt;&lt;/i&gt; Profile
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-format-points list-group-icon"&gt;&lt;/i&gt; Tasks
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-layers-outlined list-group-icon"&gt;&lt;/i&gt; Projects
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-group-senior list-group-icon"&gt;&lt;/i&gt; Members
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End List Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Use <code>.list-group-lg</code> class.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab4" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab4" data-toggle="pill" href="#nav-result4" role="tab" aria-controls="nav-result4" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab4" data-toggle="pill" href="#nav-html4" role="tab" aria-controls="nav-html4" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent4">
+                <div class="tab-pane fade p-4 show active" id="nav-result4" role="tabpanel" aria-labelledby="nav-resultTab4">
+                  <!-- List Group -->
+                  <ul class="list-group list-group-lg" style="max-width: 450px;">
+                    <li class="list-group-item">
+                      <i class="tio-home-outlined list-group-icon"></i> Dashboard
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-user-outlined list-group-icon"></i> Profile
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-format-points list-group-icon"></i> Tasks
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-layers-outlined list-group-icon"></i> Projects
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-group-senior list-group-icon"></i> Members
+                    </li>
+                  </ul>
+                  <!-- End List Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html4" role="tabpanel" aria-labelledby="nav-htmlTab4">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;ul class="list-group list-group-lg"&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-home-outlined list-group-icon"&gt;&lt;/i&gt; Dashboard
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-user-outlined list-group-icon"&gt;&lt;/i&gt; Profile
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-format-points list-group-icon"&gt;&lt;/i&gt; Tasks
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-layers-outlined list-group-icon"&gt;&lt;/i&gt; Projects
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-group-senior list-group-icon"&gt;&lt;/i&gt; Members
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End List Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="links-and-buttons" class="hs-docs-heading">
+              Links and buttons <a class="anchorjs-link" href="#links-and-buttons" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>&lt;a&gt;</code>s or <code>&lt;button&gt;</code>s to create <em>actionable</em> list group items with hover, disabled, and active states by adding <code>.list-group-item-action</code>. We separate these pseudo-classes to ensure list groups made of non-interactive elements (like <code>&lt;li&gt;</code>s or <code>&lt;div&gt;</code>s) don’t provide a click or tap affordance.</p>
+
+            <p>Be sure to <span class="font-weight-bold">not use the standard <code>.btn</code> classes here</span>.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab5" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab5" data-toggle="pill" href="#nav-result5" role="tab" aria-controls="nav-result5" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab5" data-toggle="pill" href="#nav-html5" role="tab" aria-controls="nav-html5" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent5">
+                <div class="tab-pane fade p-4 show active" id="nav-result5" role="tabpanel" aria-labelledby="nav-resultTab5">
+                  <!-- List Group -->
+                  <div class="list-group" style="max-width: 450px;">
+                    <a class="list-group-item list-group-item-action active" href="#">
+                      <i class="tio-home-outlined list-group-icon"></i> Dashboard
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#">
+                      <i class="tio-user-outlined list-group-icon"></i> Profile
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#">
+                      <i class="tio-format-points list-group-icon"></i> Tasks
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#">
+                      <i class="tio-layers-outlined list-group-icon"></i> Projects
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#">
+                      <i class="tio-group-senior list-group-icon"></i> Members
+                    </a>
+                  </div>
+                  <!-- End List Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html5" role="tabpanel" aria-labelledby="nav-htmlTab5">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;div class="list-group"&gt;
+                        &lt;a class="list-group-item list-group-item-action active" href="#"&gt;
+                          &lt;i class="tio-home-outlined list-group-icon"&gt;&lt;/i&gt; Dashboard
+                        &lt;/a&gt;
+                        &lt;a class="list-group-item list-group-item-action" href="#"&gt;
+                          &lt;i class="tio-user-outlined list-group-icon"&gt;&lt;/i&gt; Profile
+                        &lt;/a&gt;
+                        &lt;a class="list-group-item list-group-item-action" href="#"&gt;
+                          &lt;i class="tio-format-points list-group-icon"&gt;&lt;/i&gt; Tasks
+                        &lt;/a&gt;
+                        &lt;a class="list-group-item list-group-item-action" href="#"&gt;
+                          &lt;i class="tio-layers-outlined list-group-icon"&gt;&lt;/i&gt; Projects
+                        &lt;/a&gt;
+                        &lt;a class="list-group-item list-group-item-action" href="#"&gt;
+                          &lt;i class="tio-group-senior list-group-icon"&gt;&lt;/i&gt; Members
+                        &lt;/a&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End List Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="flush" class="hs-docs-heading">
+              Flush <a class="anchorjs-link" href="#flush" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Add <code>.list-group-flush</code> to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab6" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab6" data-toggle="pill" href="#nav-result6" role="tab" aria-controls="nav-result6" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab6" data-toggle="pill" href="#nav-html6" role="tab" aria-controls="nav-html6" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent6">
+                <div class="tab-pane fade p-4 show active" id="nav-result6" role="tabpanel" aria-labelledby="nav-resultTab6">
+                  <!-- List Group -->
+                  <ul class="list-group list-group-flush" style="max-width: 450px;">
+                    <li class="list-group-item">
+                      <i class="tio-home-outlined list-group-icon"></i> Dashboard
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-user-outlined list-group-icon"></i> Profile
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-format-points list-group-icon"></i> Tasks
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-layers-outlined list-group-icon"></i> Projects
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-group-senior list-group-icon"></i> Members
+                    </li>
+                  </ul>
+                  <!-- End List Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html6" role="tabpanel" aria-labelledby="nav-htmlTab6">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;ul class="list-group list-group-flush"&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-home-outlined list-group-icon"&gt;&lt;/i&gt; Dashboard
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-user-outlined list-group-icon"&gt;&lt;/i&gt; Profile
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-format-points list-group-icon"&gt;&lt;/i&gt; Tasks
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-layers-outlined list-group-icon"&gt;&lt;/i&gt; Projects
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-group-senior list-group-icon"&gt;&lt;/i&gt; Members
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End List Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <p>Also, you can use <code>.list-group-no-gutters</code> to remove paddings from either horizontal sides.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab7" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab7" data-toggle="pill" href="#nav-result7" role="tab" aria-controls="nav-result7" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab7" data-toggle="pill" href="#nav-html7" role="tab" aria-controls="nav-html7" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent7">
+                <div class="tab-pane fade p-4 show active" id="nav-result7" role="tabpanel" aria-labelledby="nav-resultTab7">
+                  <!-- List Group -->
+                  <ul class="list-group list-group-flush list-group-no-gutters" style="max-width: 450px;">
+                    <li class="list-group-item">
+                      <i class="tio-home-outlined list-group-icon"></i> Dashboard
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-user-outlined list-group-icon"></i> Profile
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-format-points list-group-icon"></i> Tasks
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-layers-outlined list-group-icon"></i> Projects
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio-group-senior list-group-icon"></i> Members
+                    </li>
+                  </ul>
+                  <!-- End List Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html7" role="tabpanel" aria-labelledby="nav-htmlTab7">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;ul class="list-group list-group-flush list-group-no-gutters"&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-home-outlined list-group-icon"&gt;&lt;/i&gt; Dashboard
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-user-outlined list-group-icon"&gt;&lt;/i&gt; Profile
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-format-points list-group-icon"&gt;&lt;/i&gt; Tasks
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-layers-outlined list-group-icon"&gt;&lt;/i&gt; Projects
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-group-senior list-group-icon"&gt;&lt;/i&gt; Members
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End List Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="horizontal" class="hs-docs-heading">
+              Horizontal <a class="anchorjs-link" href="#horizontal" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Add <code>.list-group-horizontal</code> to change the layout of list group items from vertical to horizontal across all breakpoints. Alternatively, choose a responsive variant <code>.list-group-horizontal-{sm|md|lg|xl}</code> to make a list group horizontal starting at that breakpoint’s <code>min-width</code>. Currently <span class="font-weight-bold">horizontal list groups cannot be combined with flush list groups.</span></p>
+
+            <p><span class="font-weight-bold">ProTip:</span> Want equal-width list group items when horizontal? Add <code>.flex-fill</code> to each list group item.</p>
+
+            <!-- Card -->
+            <div class="card mb-7">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab8" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab8" data-toggle="pill" href="#nav-result8" role="tab" aria-controls="nav-result8" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab8" data-toggle="pill" href="#nav-html8" role="tab" aria-controls="nav-html8" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent8">
+                <div class="tab-pane fade p-4 show active" id="nav-result8" role="tabpanel" aria-labelledby="nav-resultTab8">
+                  <!-- List Group -->
+                  <ul class="list-group list-group-horizontal" style="max-width: 450px;">
+                    <li class="list-group-item d-sm-flex align-items-sm-center">
+                      <i class="tio-home-outlined list-group-icon"></i> Dashboard
+                    </li>
+                    <li class="list-group-item d-sm-flex align-items-sm-center">
+                      <i class="tio-user-outlined list-group-icon"></i> Profile
+                    </li>
+                    <li class="list-group-item d-sm-flex align-items-sm-center">
+                      <i class="tio-format-points list-group-icon"></i> Tasks
+                    </li>
+                  </ul>
+                  <!-- End List Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html8" role="tabpanel" aria-labelledby="nav-htmlTab8">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;ul class="list-group list-group-horizontal"&gt;
+                        &lt;li class="list-group-item d-sm-flex align-items-sm-center"&gt;
+                          &lt;i class="tio-home-outlined list-group-icon"&gt;&lt;/i&gt; Dashboard
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item d-sm-flex align-items-sm-center"&gt;
+                          &lt;i class="tio-user-outlined list-group-icon"&gt;&lt;/i&gt; Profile
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item d-sm-flex align-items-sm-center"&gt;
+                          &lt;i class="tio-format-points list-group-icon"&gt;&lt;/i&gt; Tasks
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-layers-outlined list-group-icon"&gt;&lt;/i&gt; Projects
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item"&gt;
+                          &lt;i class="tio-group-senior list-group-icon"&gt;&lt;/i&gt; Members
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End List Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="with-badges" class="hs-docs-heading">
+              With badges <a class="anchorjs-link" href="#with-badges" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Add badges to any list group item to show unread counts, activity, and more with the help of some <a href="http://getbootstrap.com/docs/4.5/utilities/flex/">utilities</a>.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab9" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab9" data-toggle="pill" href="#nav-result9" role="tab" aria-controls="nav-result9" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab9" data-toggle="pill" href="#nav-html9" role="tab" aria-controls="nav-html9" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent9">
+                <div class="tab-pane fade p-4 show active" id="nav-result9" role="tabpanel" aria-labelledby="nav-resultTab9">
+                  <!-- List Group -->
+                  <ul class="list-group" style="max-width: 450px;">
+                    <li class="list-group-item d-flex align-items-center">
+                      <i class="tio-home-outlined list-group-icon"></i> Dashboard
+                      <span class="badge badge-primary badge-pill ml-auto">14</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <i class="tio-user-outlined list-group-icon"></i> Profile
+                      <span class="badge badge-primary badge-pill ml-auto">2</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <i class="tio-format-points list-group-icon"></i> Tasks
+                      <span class="badge badge-primary badge-pill ml-auto">1</span>
+                    </li>
+                  </ul>
+                  <!-- End List Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html9" role="tabpanel" aria-labelledby="nav-htmlTab9">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;ul class="list-group"&gt;
+                        &lt;li class="list-group-item d-flex align-items-center"&gt;
+                          &lt;i class="tio-home-outlined list-group-icon"&gt;&lt;/i&gt; Dashboard
+                          &lt;span class="badge badge-primary badge-pill ml-auto"&gt;14&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item d-flex align-items-center"&gt;
+                          &lt;i class="tio-user-outlined list-group-icon"&gt;&lt;/i&gt; Profile
+                          &lt;span class="badge badge-primary badge-pill ml-auto"&gt;2&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li class="list-group-item d-flex align-items-center"&gt;
+                          &lt;i class="tio-format-points list-group-icon"&gt;&lt;/i&gt; Tasks
+                          &lt;span class="badge badge-primary badge-pill ml-auto"&gt;1&lt;/span&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;!-- End List Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

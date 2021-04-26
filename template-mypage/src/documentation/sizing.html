@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Sizing - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "sizing.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Sizing</h1>
+                  <p class="lead">Easily make an element as wide or as tall (relative to its parent) with our width and height utilities.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="relative-to-the-parent" class="hs-docs-heading">
+              Relative to the parent <a class="anchorjs-link" href="#relative-to-the-parent" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Width and height utilities are generated from the <code>$sizes</code> Sass map in <code>_variables.scss</code>. Includes support for <code>25%</code>, <code>50%</code>, <code>75%</code>, <code>100%</code>, and <code>auto</code> by default. Modify those values as you need to generate different utilities here.</p>
+
+            <pre class="rounded mb-3">
+              <code class="language-markup" data-lang="html">
+                &lt;div class="w-25"&gt;Width 25%&lt;/div&gt;
+                &lt;div class="w-50"&gt;Width 50%&lt;/div&gt;
+                &lt;div class="w-60"&gt;Width 60%&lt;/div&gt;
+                &lt;div class="w-75"&gt;Width 75%&lt;/div&gt;
+                &lt;div class="w-85"&gt;Width 85%&lt;/div&gt;
+                &lt;div class="w-100"&gt;Width 100%&lt;/div&gt;
+                &lt;div class="w-auto"&gt;Width auto&lt;/div&gt;
+              </code>
+            </pre>
+
+            <pre class="rounded mb-7">
+              <code class="language-markup" data-lang="html">
+                &lt;div class="h-25"&gt;Height 25%&lt;/div&gt;
+                &lt;div class="h-50"&gt;Height 50%&lt;/div&gt;
+                &lt;div class="h-60"&gt;Height 60%&lt;/div&gt;
+                &lt;div class="h-75"&gt;Height 75%&lt;/div&gt;
+                &lt;div class="h-85"&gt;Height 85%&lt;/div&gt;
+                &lt;div class="h-100"&gt;Height 100%&lt;/div&gt;
+                &lt;div class="h-auto"&gt;Height auto&lt;/div&gt;
+              </code>
+            </pre>
+
+            <p>You can also use <code>max-width: 100%;</code>, <code>min-height: 100%;</code> and <code>max-height: 100%;</code> utilities as needed.</p>
+
+            <pre class="rounded mb-3">
+              <code class="language-markup" data-lang="html">
+                &lt;div class="mw-100"&gt;Max-width: 100%&lt;/div&gt;
+              </code>
+            </pre>
+
+            <pre class="rounded mb-3">
+              <code class="language-markup" data-lang="html">
+                &lt;div class="mh-100"&gt;Max-height: 100%&lt;/div&gt;
+              </code>
+            </pre>
+
+            <pre class="rounded">
+              <code class="language-markup" data-lang="html">
+                &lt;div class="min-h-100"&gt;Min-height: 100%&lt;/div&gt;
+              </code>
+            </pre>
+
+            <!-- Heading -->
+            <h2 id="relative-to-the-viewport" class="hs-docs-heading">
+              Relative to the viewport <a class="anchorjs-link" href="#relative-to-the-viewport" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <pre class="rounded mb-7">
+              <code class="language-markup" data-lang="html">
+                &lt;div class="min-vw-100"&gt;Min-width 100vh&lt;/div&gt;
+                &lt;div class="min-vh-100"&gt;Min-height 100vh&lt;/div&gt;
+                &lt;div class="min-vh-lg-100"&gt;Min-height 100vh&lt;/div&gt;
+                &lt;div class="vw-100"&gt;Width 100vh&lt;/div&gt;
+                &lt;div class="vh-100"&gt;Height 100vh&lt;/div&gt;
+                &lt;div class="vh-lg-100"&gt;Height 100vh&lt;/div&gt;
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

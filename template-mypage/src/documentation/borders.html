@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Borders - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "borders.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Borders</h1>
+                  <p class="lead">Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="additive" class="hs-docs-heading">
+              Additive <a class="anchorjs-link" href="#additive" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <span class="border d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border-top d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border-right d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border-bottom d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border-left d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;span class="border"&gt;&lt;/span&gt;
+                      &lt;span class="border-top"&gt;&lt;/span&gt;
+                      &lt;span class="border-right"&gt;&lt;/span&gt;
+                      &lt;span class="border-bottom"&gt;&lt;/span&gt;
+                      &lt;span class="border-left"&gt;&lt;/span&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="subtractive" class="hs-docs-heading">
+              Subtractive <a class="anchorjs-link" href="#subtractive" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <span class="border-0 d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border border-top-0 d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border border-right-0 d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border border-bottom-0 d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border border-left-0 d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;span class="border-0"&gt;&lt;/span&gt;
+                      &lt;span class="border border-top-0"&gt;&lt;/span&gt;
+                      &lt;span class="border border-right-0"&gt;&lt;/span&gt;
+                      &lt;span class="border border-bottom-0"&gt;&lt;/span&gt;
+                      &lt;span class="border border-left-0"&gt;&lt;/span&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="border-color" class="hs-docs-heading">
+              Border color <a class="anchorjs-link" href="#border-color" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Change the border color using utilities built on our theme colors.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab3" data-toggle="pill" href="#nav-result3" role="tab" aria-controls="nav-result3" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab3" data-toggle="pill" href="#nav-html3" role="tab" aria-controls="nav-html3" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent3">
+                <div class="tab-pane fade p-4 show active" id="nav-result3" role="tabpanel" aria-labelledby="nav-resultTab3">
+                  <span class="border border-primary d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border border-secondary d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border border-success d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border border-danger d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border border-warning d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border border-info d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border border-light d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border border-dark d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border border-white d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html3" role="tabpanel" aria-labelledby="nav-htmlTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;span class="border border-primary"&gt;&lt;/span&gt;
+                      &lt;span class="border border-secondary"&gt;&lt;/span&gt;
+                      &lt;span class="border border-success"&gt;&lt;/span&gt;
+                      &lt;span class="border border-danger"&gt;&lt;/span&gt;
+                      &lt;span class="border border-warning"&gt;&lt;/span&gt;
+                      &lt;span class="border border-info"&gt;&lt;/span&gt;
+                      &lt;span class="border border-light"&gt;&lt;/span&gt;
+                      &lt;span class="border border-dark"&gt;&lt;/span&gt;
+                      &lt;span class="border border-white"&gt;&lt;/span&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="border-left-color" class="hs-docs-heading">
+              Border left color <a class="anchorjs-link" href="#border-left-color" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Change the border left color using utilities built on our theme colors.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab4" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab4" data-toggle="pill" href="#nav-result4" role="tab" aria-controls="nav-result4" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab4" data-toggle="pill" href="#nav-html4" role="tab" aria-controls="nav-html4" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent4">
+                <div class="tab-pane fade p-4 show active" id="nav-result4" role="tabpanel" aria-labelledby="nav-resultTab4">
+                  <span class="border-left border-left-primary d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border-left border-left-secondary d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border-left border-left-success d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border-left border-left-danger d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border-left border-left-warning d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border-left border-left-info d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border-left border-left-light d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border-left border-left-dark d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                  <span class="border-left border-left-white d-inline-block mr-1" style="width: 4rem; height: 4rem;"></span>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html4" role="tabpanel" aria-labelledby="nav-htmlTab4">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;span class="border-left border-left-primary"&gt;&lt;/span&gt;
+                      &lt;span class="border-left border-left-secondary"&gt;&lt;/span&gt;
+                      &lt;span class="border-left border-left-success"&gt;&lt;/span&gt;
+                      &lt;span class="border-left border-left-danger"&gt;&lt;/span&gt;
+                      &lt;span class="border-left border-left-warning"&gt;&lt;/span&gt;
+                      &lt;span class="border-left border-left-info"&gt;&lt;/span&gt;
+                      &lt;span class="border-left border-left-light"&gt;&lt;/span&gt;
+                      &lt;span class="border-left border-left-dark"&gt;&lt;/span&gt;
+                      &lt;span class="border-left border-left-white"&gt;&lt;/span&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="border-radius" class="hs-docs-heading">
+              Border radius <a class="anchorjs-link" href="#border-radius" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Add classes to an element to easily round its corners.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab5" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab5" data-toggle="pill" href="#nav-result5" role="tab" aria-controls="nav-result5" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab5" data-toggle="pill" href="#nav-html5" role="tab" aria-controls="nav-html5" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent5">
+                <div class="tab-pane fade p-4 show active" id="nav-result5" role="tabpanel" aria-labelledby="nav-resultTab5">
+                  <span class="d-inline-block mb-1" style="width: 4rem; height: 4rem;"><img class="img-fluid rounded" src="@@autopath/assets/img/160x160/img1.jpg" alt="Example rounded image" /></span>
+                  <span class="d-inline-block mb-1" style="width: 4rem; height: 4rem;"><img class="img-fluid rounded-top" src="@@autopath/assets/img/160x160/img1.jpg" alt="Example top rounded image" /></span>
+                  <span class="d-inline-block mb-1" style="width: 4rem; height: 4rem;"><img class="img-fluid rounded-right" src="@@autopath/assets/img/160x160/img1.jpg" alt="Example right rounded image" /></span>
+                  <span class="d-inline-block mb-1" style="width: 4rem; height: 4rem;"><img class="img-fluid rounded-bottom" src="@@autopath/assets/img/160x160/img1.jpg" alt="Example bottom rounded image" /></span>
+                  <span class="d-inline-block mb-1" style="width: 4rem; height: 4rem;"><img class="img-fluid rounded-left" src="@@autopath/assets/img/160x160/img1.jpg" alt="Example left rounded image" /></span>
+                  <span class="d-inline-block mb-1" style="width: 4rem; height: 4rem;"><img class="img-fluid rounded-circle" src="@@autopath/assets/img/160x160/img1.jpg" alt="Completely round image" /></span>
+                  <span class="d-inline-block mb-1" style="width: 4rem; height: 4rem;"><img class="img-fluid rounded-pill" src="@@autopath/assets/img/900x400/img1.jpg" alt="Example pilled image" /></span>
+                </div>
+
+                <div class="tab-pane fade" id="nav-html5" role="tabpanel" aria-labelledby="nav-htmlTab5">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;span class="border-left border-left-primary"&gt;&lt;/span&gt;
+                      &lt;span class="border-left border-left-secondary"&gt;&lt;/span&gt;
+                      &lt;span class="border-left border-left-success"&gt;&lt;/span&gt;
+                      &lt;span class="border-left border-left-danger"&gt;&lt;/span&gt;
+                      &lt;span class="border-left border-left-warning"&gt;&lt;/span&gt;
+                      &lt;span class="border-left border-left-info"&gt;&lt;/span&gt;
+                      &lt;span class="border-left border-left-light"&gt;&lt;/span&gt;
+                      &lt;span class="border-left border-left-dark"&gt;&lt;/span&gt;
+                      &lt;span class="border-left border-left-white"&gt;&lt;/span&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

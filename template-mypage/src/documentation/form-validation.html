@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Form Validation - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/flatpickr/dist/flatpickr.min.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "form-validation.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Form Validation</h1>
+                  <p class="lead">Provide valuable, actionable feedback to your users with HTML5 form validation.</p>
+                  <a href="https://github.com/jquery-validation/jquery-validation/" target="_blank">Validation documentation <i class="tio-open-in-new"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="how-to-use" class="hs-docs-heading">
+              How to use <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/node_modules/jquery-validation/dist/jquery.validate.min.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Front</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/assets/js/hs.validation.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code>&lt;/body&gt;</code> tag, to enable it.</p>
+
+            <pre class="rounded">
+              <code class="language-html" data-lang="html">
+                &lt;script&gt;
+                  $(document).on('ready', function () {
+                    // INITIALIZATION OF FORM VALIDATION
+                    // =======================================================
+                    $('.js-validate').each(function() {
+                      $.HSCore.components.HSValidation.init($(this));
+                    });
+                  });
+                &lt;/script&gt;
+              </code>
+            </pre>
+
+            <!-- Heading -->
+            <h2 id="example" class="hs-docs-heading">
+              Example <a class="anchorjs-link" href="#example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- Form -->
+                  <form class="js-validate">
+                    <!-- Input -->
+                    <div class="form-group row">
+                      <label for="nameLabel" class="col-sm-3 col-form-label input-label">Your name</label>
+                      <div class="col-sm-9 js-form-message">
+                        <input type="text" class="form-control" id="nameLabel" name="name" placeholder="Jack Wayley" aria-label="Jack Wayley" required data-msg="Please enter your name.">
+                      </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <!-- Input -->
+                    <div class="form-group row">
+                      <label for="emailLabel" class="col-sm-3 col-form-label input-label">Your email address</label>
+                      <div class="col-sm-9 js-form-message">
+                        <input type="email" class="form-control" id="emailLabel" name="email" placeholder="jackwayley@gmail.com" aria-label="jackwayley@gmail.com" required data-msg="Please enter a valid email address.">
+                      </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <div class="w-100"></div>
+
+                    <!-- Input -->
+                    <div class="form-group row">
+                      <label for="subjectLabel" class="col-sm-3 col-form-label input-label">Subject</label>
+                      <div class="col-sm-9 js-form-message">
+                        <input type="text" class="form-control" id="subjectLabel" name="subject" placeholder="Web design" aria-label="Web design" required data-msg="Please enter a subject.">
+                      </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <!-- Input -->
+                    <div class="form-group row">
+                      <label for="phoneLabel" class="col-sm-3 col-form-label input-label">Your phone number</label>
+                      <div class="col-sm-9 js-form-message">
+                        <input type="number" class="form-control" id="phoneLabel" name="phone" placeholder="1-800-643-4500" aria-label="1-800-643-4500" required data-msg="Please enter a valid phone number.">
+                      </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <div class="form-group row">
+                      <label for="textareaLabel" class="col-sm-3 col-form-label input-label">How can we help you?</label>
+                      <div class="col-sm-9 js-form-message">
+                        <textarea class="form-control" id="textareaLabel" rows="4" name="text" placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..." required ></textarea>
+                      </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                  <!-- End Form -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Form --&gt;
+                      &lt;form class="js-validate"&gt;
+                        &lt;!-- Input --&gt;
+                        &lt;div class="form-group row"&gt;
+                          &lt;label for="nameLabel" class="col-sm-3 col-form-label input-label"&gt;Your name&lt;/label&gt;
+                          &lt;div class="col-sm-9 js-form-message"&gt;
+                            &lt;input type="text" class="form-control" id="nameLabel" name="name" placeholder="Jack Wayley" aria-label="Jack Wayley" required data-msg="Please enter your name."&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+
+                        &lt;!-- Input --&gt;
+                        &lt;div class="form-group row"&gt;
+                          &lt;label for="emailLabel" class="col-sm-3 col-form-label input-label"&gt;Your email address&lt;/label&gt;
+                          &lt;div class="col-sm-9 js-form-message"&gt;
+                            &lt;input type="email" class="form-control" id="emailLabel" name="email" placeholder="jackwayley@gmail.com" aria-label="jackwayley@gmail.com" required data-msg="Please enter a valid email address."&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+
+                        &lt;div class="w-100"&gt;&lt;/div&gt;
+
+                        &lt;!-- Input --&gt;
+                        &lt;div class="form-group row"&gt;
+                          &lt;label for="subjectLabel" class="col-sm-3 col-form-label input-label"&gt;Subject&lt;/label&gt;
+                          &lt;div class="col-sm-9 js-form-message"&gt;
+                            &lt;input type="text" class="form-control" id="subjectLabel" name="subject" placeholder="Web design" aria-label="Web design" required data-msg="Please enter a subject."&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+
+                        &lt;!-- Input --&gt;
+                        &lt;div class="form-group row"&gt;
+                          &lt;label for="phoneLabel" class="col-sm-3 col-form-label input-label"&gt;Your phone number&lt;/label&gt;
+                          &lt;div class="col-sm-9 js-form-message"&gt;
+                            &lt;input type="number" class="form-control" id="phoneLabel" name="phone" placeholder="1-800-643-4500" aria-label="1-800-643-4500" required data-msg="Please enter a valid phone number."&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+
+                        &lt;div class="form-group row"&gt;
+                          &lt;label for="textareaLabel" class="col-sm-3 col-form-label input-label"&gt;How can we help you?&lt;/label&gt;
+                          &lt;div class="col-sm-9 js-form-message"&gt;
+                            &lt;textarea class="form-control" id="textareaLabel" rows="4" name="text" placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..." required &gt;&lt;/textarea&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+                      &lt;/form&gt;
+                      &lt;!-- End Form --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="validation-types" class="hs-docs-heading">
+              Validation types <a class="anchorjs-link" href="#validation-types" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <!-- For Validation -->
+                  <form class="js-validate">
+                    <!-- Input -->
+                    <div class="row mb-3">
+                      <label for="requiredLabel" class="col-md-3 col-form-label input-label text-md-right">Required</label>
+                      <div class="col-md-6 js-form-message">
+                        <input type="text" class="form-control" id="requiredLabel" name="form-control-required" placeholder="Placeholder" required>
+                      </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <!-- Input -->
+                    <div class="row mb-3">
+                      <label for="minlengthLabel" class="col-md-3 col-form-label input-label text-md-right">Min length</label>
+                      <div class="col-md-6 js-form-message">
+                        <input type="text" class="form-control" id="minlengthLabel" name="form-control-minlength" placeholder="Min 4 chars" minlength="4" required>
+                      </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <!-- Input -->
+                    <div class="row mb-3">
+                      <label for="maxlengthLabel" class="col-md-3 col-form-label input-label text-md-right">Max length</label>
+                      <div class="col-md-6 js-form-message">
+                        <input type="text" class="form-control" id="maxlengthLabel" name="form-control-maxlength" placeholder="Max 10 chars" maxlength="10" required>
+                      </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <!-- Input -->
+                    <div class="row mb-3">
+                      <label for="rangelengthLabel" class="col-md-3 col-form-label input-label text-md-right">Range length</label>
+                      <div class="col-md-6 js-form-message">
+                        <input type="text" class="form-control" id="rangelengthLabel" name="form-control-rangelength" placeholder="Text between 4 - 10 chars" minlength="4" maxlength="10" required>
+                      </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <!-- Input -->
+                    <div class="row mb-3">
+                      <label for="minValueLabel" class="col-md-3 col-form-label input-label text-md-right">Min value</label>
+                      <div class="col-md-6 js-form-message">
+                        <input type="number" class="form-control" id="minValueLabel" name="form-control-min-value" placeholder="Min 10 value" min="10" required>
+                      </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <!-- Input -->
+                    <div class="row mb-3">
+                      <label for="maxValueLabel" class="col-md-3 col-form-label input-label text-md-right">Max value</label>
+                      <div class="col-md-6 js-form-message">
+                        <input type="number" class="form-control" id="maxValueLabel" name="form-control-max-value" placeholder="Max 100 value" max="100" required>
+                      </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <!-- Input -->
+                    <div class="row mb-3">
+                      <label for="rangeValueLabel" class="col-md-3 col-form-label input-label text-md-right">Range value</label>
+                      <div class="col-md-6 js-form-message">
+                        <input type="number" class="form-control" id="rangeValueLabel" name="form-control-range-value" placeholder="Value between 10 - 100" min="10" max="100" required>
+                      </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <!-- Input -->
+                    <div class="row mb-3">
+                      <label for="password" class="col-md-3 col-form-label input-label text-md-right">Equal to</label>
+                      <div class="col-md-3 mb-3 mb-md-0 js-form-message">
+                        <input type="password" id="password" class="form-control" name="form-control-8" placeholder="Password" required>
+                      </div>
+                      <div class="col-md-3 js-form-message">
+                        <input type="password" class="form-control" name="form-control-9" placeholder="Repeat password" required data-rule-equalTo="#password">
+                      </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <!-- Checkboxes -->
+                    <div class="row mb-3">
+                      <label class="col-md-3 input-label text-md-right">Min check</label>
+                      <div class="col-md-6 js-form-message">
+                        <div class="d-flex">
+                          <div class="custom-control custom-checkbox form-check form-check-inline">
+                            <input type="checkbox" id="form-control-min-check-1" class="custom-control-input" name="minCheckboxes[]" required>
+                            <label class="custom-control-label" for="form-control-min-check-1">Option 1</label>
+                          </div>
+
+                          <div class="custom-control custom-checkbox form-check form-check-inline">
+                            <input type="checkbox" id="form-control-min-check-2" class="custom-control-input" name="minCheckboxes[]">
+                            <label class="custom-control-label" for="form-control-min-check-2">Option 2</label>
+                          </div>
+
+                          <div class="custom-control custom-checkbox form-check form-check-inline">
+                            <input type="checkbox" id="form-control-min-check-3" class="custom-control-input" name="minCheckboxes[]">
+                            <label class="custom-control-label" for="form-control-min-check-3">Option 3</label>
+                          </div>
+                        </div>
+                        <span class="form-text">Select minimum 2 options.</span>
+                      </div>
+                    </div>
+                    <!-- End Checkboxes -->
+
+                    <!-- Checkboxes -->
+                    <div class="row mb-3">
+                      <label class="col-md-3 input-label text-md-right">Max check</label>
+                      <div class="col-md-6 js-form-message">
+                        <div class="d-flex">
+                          <div class="custom-control custom-checkbox form-check-inline">
+                            <input type="checkbox" id="form-control-max-check-1" class="custom-control-input" name="maxCheckboxes[]" required>
+                            <label class="custom-control-label" for="form-control-max-check-1">Option 1</label>
+                          </div>
+
+                          <div class="custom-control custom-checkbox form-check-inline">
+                            <input type="checkbox" id="form-control-max-check-2" class="custom-control-input" name="maxCheckboxes[]">
+                            <label class="custom-control-label" for="form-control-max-check-2">Option 2</label>
+                          </div>
+
+                          <div class="custom-control custom-checkbox form-check-inline">
+                            <input type="checkbox" id="form-control-max-check-3" class="custom-control-input" name="maxCheckboxes[]">
+                            <label class="custom-control-label" for="form-control-max-check-3">Option 3</label>
+                          </div>
+                        </div>
+                        <span class="form-text">Select maximum 2 options.</span>
+                      </div>
+                    </div>
+                    <!-- End Checkboxes -->
+
+                    <!-- Switch -->
+                    <div class="row mb-3">
+                      <label class="col-md-3 input-label text-md-right">Switch</label>
+                      <div class="col-md-6 js-form-message">
+                        <!-- Checkbox Switch -->
+                        <label class="toggle-switch d-flex align-items-center" for="customSwitch">
+                          <input type="checkbox" class="toggle-switch-input" id="customSwitch" name="swtichToggle[]" required>
+                          <span class="toggle-switch-label">
+                            <span class="toggle-switch-indicator"></span>
+                          </span>
+                          <span class="toggle-switch-content">
+                            <span class="d-block">Enable mode</span>
+                          </span>
+                        </label>
+                        <!-- End Checkbox Switch -->
+                      </div>
+                    </div>
+                    <!-- End Switch -->
+
+                    <!-- Input -->
+                    <div class="row mb-3">
+                      <label for="emailAddressLabel" class="col-md-3 col-form-label input-label text-md-right">E-Mail address</label>
+                      <div class="col-md-6 js-form-message">
+                        <input type="email" class="form-control" id="emailAddressLabel" name="form-control-email" placeholder="Email address" required>
+                      </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <!-- Input -->
+                    <div class="row mb-3">
+                      <label for="urlLabel" class="col-md-3 col-form-label input-label text-md-right">URL</label>
+                      <div class="col-md-6 js-form-message">
+                        <input type="url" class="form-control" id="urlLabel" name="form-control-url" placeholder="http://htmlstream.com" required>
+                      </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <!-- Input -->
+                    <div class="row mb-3">
+                      <label for="digitsLabel" class="col-md-3 col-form-label input-label text-md-right">Digits</label>
+                      <div class="col-md-6 js-form-message">
+                        <input type="text" class="form-control" id="digitsLabel" name="form-control-digits" placeholder="Digits" required data-rule-digits="true">
+                      </div>
+                    </div>
+                    <!-- End Input -->
+
+                    <!-- Textarea -->
+                    <div class="row mb-3">
+                      <label for="textareaValidationLabel" class="col-md-3 col-form-label input-label text-md-right">Textarea</label>
+                      <div class="col-md-6 js-form-message">
+                        <textarea class="form-control" id="textareaValidationLabel" name="form-control-textarea" required></textarea>
+                      </div>
+                    </div>
+                    <!-- End Textarea -->
+
+                    <!-- Button Submit -->
+                    <div class="row mb-3">
+                      <div class="col-md-6 offset-md-3">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    </div>
+                    <!-- End Button Submit -->
+                  </form>
+                  <!-- End For Validation -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- For Validation --&gt;
+                      &lt;form class="js-validate"&gt;
+                        &lt;!-- Input --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label for="requiredLabel" class="col-md-3 col-form-label input-label text-md-right"&gt;Required&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;input type="text" class="form-control" id="requiredLabel" name="form-control-required" placeholder="Placeholder" required&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+
+                        &lt;!-- Input --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label for="minlengthLabel" class="col-md-3 col-form-label input-label text-md-right"&gt;Min length&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;input type="text" class="form-control" id="minlengthLabel" name="form-control-minlength" placeholder="Min 4 chars" minlength="4" required&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+
+                        &lt;!-- Input --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label for="maxlengthLabel" class="col-md-3 col-form-label input-label text-md-right"&gt;Max length&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;input type="text" class="form-control" id="maxlengthLabel" name="form-control-maxlength" placeholder="Max 10 chars" maxlength="10" required&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+
+                        &lt;!-- Input --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label for="rangelengthLabel" class="col-md-3 col-form-label input-label text-md-right"&gt;Range length&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;input type="text" class="form-control" id="rangelengthLabel" name="form-control-rangelength" placeholder="Text between 4 - 10 chars" minlength="4" maxlength="10" required&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+
+                        &lt;!-- Input --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label for="minValueLabel" class="col-md-3 col-form-label input-label text-md-right"&gt;Min value&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;input type="number" class="form-control" id="minValueLabel" name="form-control-min-value" placeholder="Min 10 value" min="10" required&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+
+                        &lt;!-- Input --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label for="maxValueLabel" class="col-md-3 col-form-label input-label text-md-right"&gt;Max value&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;input type="number" class="form-control" id="maxValueLabel" name="form-control-max-value" placeholder="Max 100 value" max="100" required&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+
+                        &lt;!-- Input --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label for="rangeValueLabel" class="col-md-3 col-form-label input-label text-md-right"&gt;Range value&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;input type="number" class="form-control" id="rangeValueLabel" name="form-control-range-value" placeholder="Value between 10 - 100" min="10" max="100" required&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+
+                        &lt;!-- Input --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label for="password" class="col-md-3 col-form-label input-label text-md-right"&gt;Equal to&lt;/label&gt;
+                          &lt;div class="col-md-3 mb-3 mb-md-0 js-form-message"&gt;
+                            &lt;input type="password" id="password" class="form-control" name="form-control-8" placeholder="Password" required&gt;
+                          &lt;/div&gt;
+                          &lt;div class="col-md-3 js-form-message"&gt;
+                            &lt;input type="password" class="form-control" name="form-control-9" placeholder="Repeat password" required data-rule-equalTo="#password"&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+
+                        &lt;!-- Checkboxes --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label class="col-md-3 input-label text-md-right"&gt;Min check&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;div class="d-flex"&gt;
+                              &lt;div class="custom-control custom-checkbox form-check form-check-inline"&gt;
+                                &lt;input type="checkbox" id="form-control-min-check-1" class="custom-control-input" name="minCheckboxes[]" required&gt;
+                                &lt;label class="custom-control-label" for="form-control-min-check-1"&gt;Option 1&lt;/label&gt;
+                              &lt;/div&gt;
+
+                              &lt;div class="custom-control custom-checkbox form-check form-check-inline"&gt;
+                                &lt;input type="checkbox" id="form-control-min-check-2" class="custom-control-input" name="minCheckboxes[]"&gt;
+                                &lt;label class="custom-control-label" for="form-control-min-check-2"&gt;Option 2&lt;/label&gt;
+                              &lt;/div&gt;
+
+                              &lt;div class="custom-control custom-checkbox form-check form-check-inline"&gt;
+                                &lt;input type="checkbox" id="form-control-min-check-3" class="custom-control-input" name="minCheckboxes[]"&gt;
+                                &lt;label class="custom-control-label" for="form-control-min-check-3"&gt;Option 3&lt;/label&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;span class="form-text"&gt;Select minimum 2 options.&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Checkboxes --&gt;
+
+                        &lt;!-- Checkboxes --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label class="col-md-3 input-label text-md-right"&gt;Max check&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;div class="d-flex"&gt;
+                              &lt;div class="custom-control custom-checkbox form-check-inline"&gt;
+                                &lt;input type="checkbox" id="form-control-max-check-1" class="custom-control-input" name="maxCheckboxes[]" required&gt;
+                                &lt;label class="custom-control-label" for="form-control-max-check-1"&gt;Option 1&lt;/label&gt;
+                              &lt;/div&gt;
+
+                              &lt;div class="custom-control custom-checkbox form-check-inline"&gt;
+                                &lt;input type="checkbox" id="form-control-max-check-2" class="custom-control-input" name="maxCheckboxes[]"&gt;
+                                &lt;label class="custom-control-label" for="form-control-max-check-2"&gt;Option 2&lt;/label&gt;
+                              &lt;/div&gt;
+
+                              &lt;div class="custom-control custom-checkbox form-check-inline"&gt;
+                                &lt;input type="checkbox" id="form-control-max-check-3" class="custom-control-input" name="maxCheckboxes[]"&gt;
+                                &lt;label class="custom-control-label" for="form-control-max-check-3"&gt;Option 3&lt;/label&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;span class="form-text"&gt;Select maximum 2 options.&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Checkboxes --&gt;
+
+                        &lt;!-- Switch --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label class="col-md-3 input-label text-md-right"&gt;Switch&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;!-- Checkbox Switch --&gt;
+                            &lt;label class="toggle-switch d-flex align-items-center" for="customSwitch"&gt;
+                              &lt;input type="checkbox" class="toggle-switch-input" id="customSwitch"&gt;
+                              &lt;span class="toggle-switch-label"&gt;
+                                &lt;span class="toggle-switch-indicator"&gt;&lt;/span&gt;
+                              &lt;/span&gt;
+                              &lt;span class="toggle-switch-content"&gt;
+                                &lt;span class="d-block"&gt;Enable mode&lt;/span&gt;
+                              &lt;/span&gt;
+                            &lt;/label&gt;
+                            &lt;!-- End Checkbox Switch --&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Switch --&gt;
+
+                        &lt;!-- Input --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label for="emailAddressLabel" class="col-md-3 col-form-label input-label text-md-right"&gt;E-Mail address&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;input type="email" class="form-control" id="emailAddressLabel" name="form-control-email" placeholder="Email address" required&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+
+                        &lt;!-- Input --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label for="urlLabel" class="col-md-3 col-form-label input-label text-md-right"&gt;URL&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;input type="url" class="form-control" id="urlLabel" name="form-control-url" placeholder="http://htmlstream.com" required&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+
+                        &lt;!-- Input --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label for="digitsLabel" class="col-md-3 col-form-label input-label text-md-right"&gt;Digits&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;input type="text" class="form-control" id="digitsLabel" name="form-control-digits" placeholder="Digits" required data-rule-digits="true"&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input --&gt;
+
+                        &lt;!-- Textarea --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label for="textareaValidationLabel" class="col-md-3 col-form-label input-label text-md-right"&gt;Textarea&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;textarea class="form-control" id="textareaValidationLabel" name="form-control-textarea" required&gt;&lt;/textarea&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Textarea --&gt;
+
+                        &lt;!-- Button Submit --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;div class="col-md-6 offset-md-3"&gt;
+                            &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Button Submit --&gt;
+                      &lt;/form&gt;
+                      &lt;!-- End For Validation --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="advanced-types" class="hs-docs-heading">
+              Advanced types <a class="anchorjs-link" href="#advanced-types" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab3" data-toggle="pill" href="#nav-result3" role="tab" aria-controls="nav-result3" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab3" data-toggle="pill" href="#nav-html3" role="tab" aria-controls="nav-html3" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-cssTab3" data-toggle="pill" href="#nav-css3" role="tab" aria-controls="nav-css3" aria-selected="false">CSS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab3" data-toggle="pill" href="#nav-js3" role="tab" aria-controls="nav-js3" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Alert -->
+              <div class="alert alert-soft-dark card-alert" role="alert">
+                This example uses <a class="alert-link" href="select2.html">select2 <i class="tio-link"></i></a>, <a class="alert-link" href="input-mask.html">Input mask <i class="tio-link"></i></a> and <a class="alert-link" href="flatpickr.html">Flatpickr <i class="tio-link"></i></a> libraries.
+              </div>
+              <!-- End Alert -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent3">
+                <div class="tab-pane fade p-4 show active" id="nav-result3" role="tabpanel" aria-labelledby="nav-resultTab3">
+                  <!-- Form Validation -->
+                  <form class="js-validate">
+                    <!-- Select2 -->
+                    <div class="row mb-3">
+                      <label class="col-md-3 col-form-label input-label text-md-right">Select2</label>
+                      <div class="col-md-6 js-form-message" data-validate-state>
+                        <select class="js-select2-custom custom-select" size="1" style="opacity: 0;" name="form-control-select2" required
+                                data-hs-select2-options='{
+                                  "minimumResultsForSearch": "Infinity",
+                                  "placeholder": "Select member"
+                                }'>
+                          <option label="empty"></option>
+                          <option value="1">Bruce Maynard</option>
+                          <option value="2">Hollis Clark</option>
+                          <option value="3">Lester Howard</option>
+                          <option value="4">George Marino</option>
+                          <option value="5">Tyler Johnson</option>
+                          <option value="6">Jennifer Craig</option>
+                          <option value="7">Martha Barnwell</option>
+                          <option value="8">Florencia Todd</option>
+                          <option value="9">Henry Sloan</option>
+                          <option value="10">Abigail Watson</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- End Select2 -->
+
+                    <!-- Flatpickr -->
+                    <div class="row mb-3">
+                      <label class="col-md-3 col-form-label input-label text-md-right">Flatpickr</label>
+                      <div class="col-md-6 js-form-message">
+                        <input type="text" class="js-flatpickr form-control flatpickr-custom w-100" name="form-control-flatpickr" placeholder="Select dates" required
+                               data-hs-flatpickr-options='{
+                                 "dateFormat": "d/m/Y"
+                               }'>
+                      </div>
+                    </div>
+                    <!-- End Flatpickr -->
+
+                    <!-- Input Masked -->
+                    <div class="row mb-3">
+                      <label class="col-md-3 col-form-label input-label text-md-right">Input masked</label>
+                      <div class="col-md-6 js-form-message">
+                        <input type="text" id="input-masked" name="input-masked" class="js-masked-input form-control" placeholder="+x(xxx)xxx-xx-xx" required
+                               data-hs-mask-options='{
+                                "template": "+0(000)000-00-00"
+                              }'>
+                      </div>
+                    </div>
+                    <!-- End Input Masked -->
+
+                    <!-- Button Submit -->
+                    <div class="row mb-3">
+                      <div class="col-md-6 offset-md-3">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    </div>
+                    <!-- End Button Submit -->
+                  </form>
+                  <!-- End Form Validation -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html3" role="tabpanel" aria-labelledby="nav-htmlTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Form Validation --&gt;
+                      &lt;form class="js-validate"&gt;
+                        &lt;!-- Select2 --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label class="col-md-3 col-form-label input-label text-md-right"&gt;Select2&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;select class="js-select2-custom custom-select" size="1" style="opacity: 0;" name="form-control-select2" required
+                                    data-hs-select2-options='{
+                                      "minimumResultsForSearch": "Infinity",
+                                      "placeholder": "Select member"
+                                    }'&gt;
+                              &lt;option&gt;&lt;/option&gt;
+                              &lt;option value="1"&gt;Bruce Maynard&lt;/option&gt;
+                              &lt;option value="2"&gt;Hollis Clark&lt;/option&gt;
+                              &lt;option value="3"&gt;Lester Howard&lt;/option&gt;
+                              &lt;option value="4"&gt;George Marino&lt;/option&gt;
+                              &lt;option value="5"&gt;Tyler Johnson&lt;/option&gt;
+                              &lt;option value="6"&gt;Jennifer Craig&lt;/option&gt;
+                              &lt;option value="7"&gt;Martha Barnwell&lt;/option&gt;
+                              &lt;option value="8"&gt;Florencia Todd&lt;/option&gt;
+                              &lt;option value="9"&gt;Henry Sloan&lt;/option&gt;
+                              &lt;option value="10"&gt;Abigail Watson&lt;/option&gt;
+                            &lt;/select&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Select2 --&gt;
+
+                        &lt;!-- Flatpickr --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label class="col-md-3 col-form-label input-label text-md-right"&gt;Flatpickr&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;input type="text" class="js-flatpickr form-control flatpickr-custom w-100" name="form-control-flatpickr" placeholder="Select dates" required
+                                   data-hs-flatpickr-options='{
+                                     "dateFormat": "d/m/Y"
+                                   }'&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Flatpickr --&gt;
+
+                        &lt;!-- Input Masked --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;label class="col-md-3 col-form-label input-label text-md-right"&gt;Input masked&lt;/label&gt;
+                          &lt;div class="col-md-6 js-form-message"&gt;
+                            &lt;input type="text" id="input-masked" name="input-masked" class="js-masked-input form-control" placeholder="+x(xxx)xxx-xx-xx" required
+                                   data-hs-mask-options='{
+                                    "template": "+0(000)000-00-00"
+                                  }'&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Input Masked --&gt;
+
+                        &lt;!-- Button Submit --&gt;
+                        &lt;div class="row mb-3"&gt;
+                          &lt;div class="col-md-6 offset-md-3"&gt;
+                            &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Button Submit --&gt;
+                      &lt;/form&gt;
+                      &lt;!-- End Form Validation --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-css3" role="tabpanel" aria-labelledby="nav-cssTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;link rel="stylesheet" href="@@autopath/node_modules/select2/dist/css/select2.min.css"&gt;
+                      &lt;link rel="stylesheet" href="@@autopath/node_modules/flatpickr/dist/flatpickr.min.css"&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js3" role="tabpanel" aria-labelledby="nav-jsTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- JS Implementing Plugins --&gt;
+                      &lt;script src="@@autopath/node_modules/select2/dist/js/select2.full.min.js"&gt;&lt;/script&gt;
+                      &lt;script src="@@autopath/node_modules/flatpickr/dist/flatpickr.min.js"&gt;&lt;/script&gt;
+                      &lt;script src="@@autopath/node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"&gt;&lt;/script&gt;
+
+                      &lt;!-- JS Front --&gt;
+                      &lt;script src="@@autopath/assets/js/hs.select2.js"&gt;&lt;/script&gt;
+                      &lt;script src="@@autopath/assets/js/hs.flatpickr.js"&gt;&lt;/script&gt;
+                      &lt;script src="@@autopath/assets/js/hs.mask.js"&gt;&lt;/script&gt;
+
+                      &lt;!-- JS Plugins Init. --&gt;
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          // INITIALIZATION OF SELECT2
+                          // =======================================================
+                          $('.js-select2-custom').each(function () {
+                            var select2 = $.HSCore.components.HSSelect2.init($(this));
+                          });
+
+
+                          // INITIALIZATION OF FLATPICKR
+                          // =======================================================
+                          $('.js-flatpickr').each(function () {
+                            $.HSCore.components.HSFlatpickr.init($(this));
+                          });
+
+
+                          // INITIALIZATION OF INPUT MASKS
+                          // =======================================================
+                          $('.js-masked-input').each(function () {
+                            $.HSCore.components.HSMask.init($(this));
+                          });
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="modal-example" class="hs-docs-heading">
+              Modal example <a class="anchorjs-link" href="#modal-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab4" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab4" data-toggle="pill" href="#nav-result4" role="tab" aria-controls="nav-result4" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab4" data-toggle="pill" href="#nav-html4" role="tab" aria-controls="nav-html4" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent4">
+                <div class="tab-pane fade p-4 show active" id="nav-result4" role="tabpanel" aria-labelledby="nav-resultTab4">
+                  <!-- Button Trigger Modal -->
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Open modal
+                  </button>
+                  <!-- End Button Trigger Modal -->
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <!-- Header -->
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Validation</h5>
+                          <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close">
+                            <i class="tio-clear tio-lg" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                        <!-- End Header -->
+
+                        <!-- Body -->
+                        <div class="modal-body">
+                          <!-- Form -->
+                          <form class="js-validate">
+                            <!-- Input -->
+                            <div class="form-group">
+                              <label for="nameModalEgLabel" class="input-label">Your name</label>
+                              <div class="js-form-message">
+                                <input type="text" class="form-control" id="nameModalEgLabel" name="nameModalEg" placeholder="Jack Wayley" aria-label="Jack Wayley" required data-msg="Please enter your name.">
+                              </div>
+                            </div>
+                            <!-- End Input -->
+
+                            <!-- Input -->
+                            <div class="form-group">
+                              <label for="emailModalEgLabel" class="input-label">Your email address</label>
+                              <div class="js-form-message">
+                                <input type="email" class="form-control" id="emailModalEgLabel" name="emailModalEg" placeholder="jackwayley@gmail.com" aria-label="jackwayley@gmail.com" required data-msg="Please enter a valid email address.">
+                              </div>
+                            </div>
+                            <!-- End Input -->
+
+                            <div class="w-100"></div>
+
+                            <!-- Input -->
+                            <div class="form-group">
+                              <label for="subjectModalEgLabel" class="input-label">Subject</label>
+                              <div class="js-form-message">
+                                <input type="text" class="form-control" id="subjectModalEgLabel" name="subjectModalEg" placeholder="Web design" aria-label="Web design" required data-msg="Please enter a subject.">
+                              </div>
+                            </div>
+                            <!-- End Input -->
+
+                            <!-- Input -->
+                            <div class="form-group">
+                              <label for="phoneModalEgLabel" class="input-label">Your phone number</label>
+                              <div class="js-form-message">
+                                <input type="number" class="form-control" id="phoneModalEgLabel" name="phoneModalEg" placeholder="1-800-643-4500" aria-label="1-800-643-4500" required data-msg="Please enter a valid phone number.">
+                              </div>
+                            </div>
+                            <!-- End Input -->
+
+                            <div class="form-group">
+                              <label for="textareaModalEgLabel" class="input-label">How can we help you?</label>
+                              <div class="js-form-message">
+                                <textarea class="form-control" id="textareaModalEgLabel" rows="4" name="textModalEg" placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..." required ></textarea>
+                              </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </form>
+                          <!-- End Form -->
+                        </div>
+                        <!-- End Body -->
+
+                        <!-- Footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Continue</button>
+                        </div>
+                        <!-- End Footer -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html4" role="tabpanel" aria-labelledby="nav-htmlTab4">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Button Trigger Modal --&gt;
+                      &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"&gt;
+                        Open modal
+                      &lt;/button&gt;
+                      &lt;!-- End Button Trigger Modal --&gt;
+
+                      &lt;!-- Modal --&gt;
+                      &lt;div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+                        &lt;div class="modal-dialog" role="document"&gt;
+                          &lt;div class="modal-content"&gt;
+                            &lt;!-- Header --&gt;
+                            &lt;div class="modal-header"&gt;
+                              &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Validation&lt;/h5&gt;
+                              &lt;button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close"&gt;
+                                &lt;i class="tio-clear tio-lg" aria-hidden="true"&gt;&lt;/i&gt;
+                              &lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Header --&gt;
+
+                            &lt;!-- Body --&gt;
+                            &lt;div class="modal-body"&gt;
+                              &lt;!-- Form --&gt;
+                              &lt;form class="js-validate"&gt;
+                                &lt;!-- Input --&gt;
+                                &lt;div class="form-group"&gt;
+                                  &lt;label for="nameModalEgLabel" class="input-label"&gt;Your name&lt;/label&gt;
+                                  &lt;div class="js-form-message"&gt;
+                                    &lt;input type="text" class="form-control" id="nameModalEgLabel" name="nameModalEg" placeholder="Jack Wayley" aria-label="Jack Wayley" required data-msg="Please enter your name."&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;!-- End Input --&gt;
+
+                                &lt;!-- Input --&gt;
+                                &lt;div class="form-group"&gt;
+                                  &lt;label for="emailModalEgLabel" class="input-label"&gt;Your email address&lt;/label&gt;
+                                  &lt;div class="js-form-message"&gt;
+                                    &lt;input type="email" class="form-control" id="emailModalEgLabel" name="emailModalEg" placeholder="jackwayley@gmail.com" aria-label="jackwayley@gmail.com" required data-msg="Please enter a valid email address."&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;!-- End Input --&gt;
+
+                                &lt;div class="w-100"&gt;&lt;/div&gt;
+
+                                &lt;!-- Input --&gt;
+                                &lt;div class="form-group"&gt;
+                                  &lt;label for="subjectModalEgLabel" class="input-label"&gt;Subject&lt;/label&gt;
+                                  &lt;div class="js-form-message"&gt;
+                                    &lt;input type="text" class="form-control" id="subjectModalEgLabel" name="subjectModalEg" placeholder="Web design" aria-label="Web design" required data-msg="Please enter a subject."&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;!-- End Input --&gt;
+
+                                &lt;!-- Input --&gt;
+                                &lt;div class="form-group"&gt;
+                                  &lt;label for="phoneModalEgLabel" class="input-label"&gt;Your phone number&lt;/label&gt;
+                                  &lt;div class="js-form-message"&gt;
+                                    &lt;input type="number" class="form-control" id="phoneModalEgLabel" name="phoneModalEg" placeholder="1-800-643-4500" aria-label="1-800-643-4500" required data-msg="Please enter a valid phone number."&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;!-- End Input --&gt;
+
+                                &lt;div class="form-group"&gt;
+                                  &lt;label for="textareaModalEgLabel" class="input-label"&gt;How can we help you?&lt;/label&gt;
+                                  &lt;div class="js-form-message"&gt;
+                                    &lt;textarea class="form-control" id="textareaModalEgLabel" rows="4" name="textModalEg" placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..." required &gt;&lt;/textarea&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+                              &lt;/form&gt;
+                              &lt;!-- End Form --&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Body --&gt;
+
+                            &lt;!-- Footer --&gt;
+                            &lt;div class="modal-footer"&gt;
+                              &lt;button type="button" class="btn btn-white" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                              &lt;button type="button" class="btn btn-primary"&gt;Continue&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Footer --&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Modal --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="methods" class="hs-docs-heading">
+              Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card overflow-hidden">
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-thead-bordered card-table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Parameters</th>
+                      <th style="width: 50%;">Description</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td><code>data-validate-state</code></td>
+                      <td>By deafult <code>.is-valid</code> and <code>.is-invalid</code> classes added to <code>&lt;input&gt;</code> or <code>&lt;select&gt;</code> tags. Adding this attribute to <code>.js-form-message</code> class or inside <code>.js-form-message</code> class children element, will determine where the <code>.is-valid</code> and <code>.is-invalid</code> classes will be added.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+    <script src="@@autopath/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="@@autopath/node_modules/select2/dist/js/select2.full.min.js"></script>
+    <script src="@@autopath/node_modules/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+    <script src="@@autopath/assets/js/hs.validation.js"></script>
+    <script src="@@autopath/assets/js/hs.select2.js"></script>
+    <script src="@@autopath/assets/js/hs.flatpickr.js"></script>
+    <script src="@@autopath/assets/js/hs.mask.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+
+        
+        // INITIALIZATION OF FORM VALIDATION
+        // =======================================================
+        $('.js-validate').each(function() {
+          $.HSCore.components.HSValidation.init($(this));
+        });
+
+        
+        // INITIALIZATION OF SELECT2
+        // =======================================================
+        $('.js-select2-custom').each(function () {
+          var select2 = $.HSCore.components.HSSelect2.init($(this));
+        });
+
+        
+        // INITIALIZATION OF FLATPICKR
+        // =======================================================
+        $('.js-flatpickr').each(function () {
+          $.HSCore.components.HSFlatpickr.init($(this));
+        });
+
+        
+        // INITIALIZATION OF INPUT MASKS
+        // =======================================================
+        $('.js-masked-input').each(function () {
+          $.HSCore.components.HSMask.init($(this));
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

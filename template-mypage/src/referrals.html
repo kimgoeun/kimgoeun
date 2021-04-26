@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Referrals | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/chart.js/dist/Chart.min.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/daterangepicker/daterangepicker.css">
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <link rel="stylesheet" href="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+    }
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+  </head>
+
+  <body class="@@if(layoutBuilder.header.layoutMode === 'default'){has-navbar-vertical-aside navbar-vertical-aside-show-xl} @@if(layoutBuilder.sidebarLayout === 'compact'){navbar-vertical-aside-compact-mode} @@if(layoutBuilder.sidebarLayout === 'mini'){navbar-vertical-aside-mini-mode} footer-offset">
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.sidebarLayout !== 'mini') {
+      <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside-mini-cache.js"></script>
+    }
+
+    <!-- Search Form -->
+    @@include("@@autopath/partials/layouts-components/mobile-search.html")
+    <!-- End Search Form -->
+
+    <!-- ========== HEADER ========== -->
+    @@if (layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/header/main.html")
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'single') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/main-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/main-container.html")
+      }
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'double') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/double-line-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/double-line-container.html")
+      }
+    }
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/main.html", {
+        "category": "pages",
+        "subcategory": "",
+        "link": "referrals.html"
+      })
+    }
+
+    @@if (layoutBuilder.sidebarLayout === 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/compact.html", {
+        "category": "pages",
+        "subcategory": "",
+        "link": "referrals.html"
+      })
+    }
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main">
+      <!-- Content -->
+      <div class="content @@layoutBuilder.header.containerMode">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div class="row align-items-center">
+            <div class="col-sm mb-2 mb-sm-0">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-no-gutter">
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Pages</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Referrals</li>
+                </ol>
+              </nav>
+
+              <h1 class="page-header-title">Referrals</h1>
+            </div>
+
+            <div class="col-sm-6 col-md-5 col-lg-4">
+              <small class="text-cap mb-2">Your referral code:</small>
+
+              <!-- Input Group -->
+              <div class="input-group">
+                <input id="referralCode" type="text" class="form-control" readonly value="https://htmlstream.com/wer9n8x">
+                <div class="input-group-append">
+                  <a class="js-clipboard btn btn-white" href="javascript:;" data-toggle="tooltip" title="Copy to clipboard"
+                     data-hs-clipboard-options='{
+                      "type": "tooltip",
+                      "successText": "Copied!",
+                      "contentTarget": "#referralCode",
+                      "classChangeTarget": "#referralCodeIcon",
+                      "defaultClass": "tio-copy",
+                      "successClass": "tio-done"
+                     }'>
+                    <i id="referralCodeIcon" class="tio-copy"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- End Input Group -->
+            </div>
+          </div>
+          <!-- End Row -->
+        </div>
+        <!-- End Page Header -->
+
+        <!-- Stats -->
+        <div class="row">
+          <div class="col-lg-4">
+            <!-- Card -->
+            <div class="text-center">
+              <img class="avatar avatar-xl avatar-4by3 mb-4" src="@@autopath/assets/svg/illustrations/click.svg" alt="Image Description">
+              <small class="text-cap">Number of referrals</small>
+              <span class="d-block display-4 text-dark mb-2">150</span>
+
+              <div class="row">
+                <div class="col text-right">
+                  <span class="d-block font-weight-bold text-success">
+                    <i class="tio-trending-up"></i> 12%
+                  </span>
+                  <span class="d-block">change</span>
+                </div>
+
+                <div class="col column-divider text-left">
+                  <span class="d-block font-weight-bold text-dark">25</span>
+                  <span class="d-block">last week</span>
+                </div>
+              </div>
+              <!-- End Row -->
+            </div>
+            <!-- End Card -->
+          </div>
+
+          <div class="col-lg-4 column-divider-lg">
+            <div class="d-lg-none">
+              <hr class="my-5">
+            </div>
+
+            <!-- Card -->
+            <div class="text-center">
+              <img class="avatar avatar-xl avatar-4by3 mb-4" src="@@autopath/assets/svg/illustrations/presenting.svg" alt="Image Description">
+              <small class="text-cap">Amount earned</small>
+              <span class="d-block display-4 text-dark mb-2">$7,253.00</span>
+
+              <div class="row">
+                <div class="col text-right">
+                  <span class="d-block font-weight-bold text-success">
+                    <i class="tio-trending-up"></i> 5.6%
+                  </span>
+                  <span class="d-block">change</span>
+                </div>
+
+                <div class="col column-divider text-left">
+                  <span class="d-block font-weight-bold text-dark">$582.00</span>
+                  <span class="d-block">last week</span>
+                </div>
+              </div>
+              <!-- End Row -->
+            </div>
+            <!-- End Card -->
+          </div>
+
+          <div class="col-lg-4 column-divider-lg">
+            <div class="d-lg-none">
+              <hr class="my-5">
+            </div>
+
+            <!-- Card -->
+            <div class="text-center">
+              <img class="avatar avatar-xl avatar-4by3 mb-4" src="@@autopath/assets/svg/illustrations/hi-five.svg" alt="Image Description">
+              <small class="text-cap">Referral completed</small>
+              <span class="d-block display-4 text-dark mb-2">25</span>
+
+              <div class="row">
+                <div class="col text-right">
+                  <span class="d-block font-weight-bold text-danger">
+                    <i class="tio-trending-down"></i> 2.3%
+                  </span>
+                  <span class="d-block">change</span>
+                </div>
+
+                <div class="col column-divider text-left">
+                  <span class="d-block font-weight-bold text-dark">7</span>
+                  <span class="d-block">last week</span>
+                </div>
+              </div>
+              <!-- End Row -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Stats -->
+        
+        <div class="my-5">
+          <p class="text-muted"><i class="tio-new-release-outlined"></i> Last referral: August 25, 2020.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 mb-3 mb-lg-5">
+            <!-- Card -->
+            <div class="card h-100">
+              <!-- Header -->
+              <div class="card-header">
+                <h4 class="card-header-title">Total sales earnings</h4>
+
+                <!-- Daterangepicker -->
+                <button id="js-daterangepicker-predefined" class="btn btn-sm btn-ghost-secondary dropdown-toggle">
+                  <i class="tio-date-range"></i>
+                  <span class="js-daterangepicker-predefined-preview ml-1"></span>
+                </button>
+                <!-- End Daterangepicker -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Body -->
+              <div class="card-body">
+                <!-- Bar Chart -->
+                <div class="chartjs-custom">
+                  <canvas class="js-chart" style="height: 15rem;"
+                          data-hs-chartjs-options='{
+                            "type": "bar",
+                            "data": {
+                              "labels": ["Jan", "Feb", "March", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                              "datasets": [{
+                                "data": [200, 300, 290, 350, 150, 350, 300, 100, 125, 220, 390, 220],
+                                "backgroundColor": "@@vars.style.color",
+                                "hoverBackgroundColor": "@@vars.style.color",
+                                "borderColor": "@@vars.style.color"
+                              }]
+                            },
+                            "options": {
+                              "scales": {
+                                "yAxes": [{
+                                  "gridLines": {
+                                    "color": "#e7eaf3",
+                                    "drawBorder": false,
+                                    "zeroLineColor": "#e7eaf3"
+                                  },
+                                  "ticks": {
+                                    "beginAtZero": true,
+                                    "stepSize": 100,
+                                    "fontSize": 12,
+                                    "fontColor": "#97a4af",
+                                    "fontFamily": "Open Sans, sans-serif",
+                                    "padding": 10,
+                                    "postfix": "$"
+                                  }
+                                }],
+                                "xAxes": [{
+                                  "gridLines": {
+                                    "display": false,
+                                    "drawBorder": false
+                                  },
+                                  "ticks": {
+                                    "fontSize": 12,
+                                    "fontColor": "#97a4af",
+                                    "fontFamily": "Open Sans, sans-serif",
+                                    "padding": 5
+                                  },
+                                  "categoryPercentage": 0.5,
+                                  "maxBarThickness": "10"
+                                }]
+                              },
+                              "cornerRadius": 2,
+                              "tooltips": {
+                                "prefix": "$",
+                                "hasIndicator": true,
+                                "mode": "index",
+                                "intersect": false
+                              },
+                              "hover": {
+                                "mode": "nearest",
+                                "intersect": true
+                              }
+                            }
+                          }'></canvas>
+                </div>
+                <!-- End Bar Chart -->
+              </div>
+              <!-- End Body -->
+            </div>
+            <!-- End Card -->
+          </div>
+            
+          <div class="col-lg-4 mb-3 mb-lg-5">
+            <!-- Card -->
+            <div class="card h-100">
+              <!-- Header -->
+              <div class="card-header">
+                <h4 class="card-header-title">Your top countries <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="This report is based on 100% of sessions."></i></h4>
+                <a class="btn btn-sm btn-ghost-secondary" href="#">View all</a>
+              </div>
+              <!-- End Header -->
+
+              <!-- Body -->
+              <div class="card-body">
+                <div class="list-group list-group-lg list-group-flush list-group-no-gutters">
+                  <!-- List Item -->
+                  <div class="list-group-item">
+                    <div class="media align-items-center">
+                      <img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/us.svg" alt="Flag">
+
+                      <div class="media-body">
+                        <div class="row align-items-center">
+                          <div class="col">
+                            <span class="d-block">United States</span>
+                          </div>
+
+                          <div class="col-auto">
+                            <h5>$4,302.00</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End List Item -->
+
+                  <!-- List Item -->
+                  <div class="list-group-item">
+                    <div class="media align-items-center">
+                      <img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/de.svg" alt="Flag">
+
+                      <div class="media-body">
+                        <div class="row align-items-center">
+                          <div class="col">
+                            <span class="d-block">Germany</span>
+                          </div>
+
+                          <div class="col-auto">
+                            <h5>$1,951.00</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End List Item -->
+
+                  <!-- List Item -->
+                  <div class="list-group-item">
+                    <div class="media align-items-center">
+                      <img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/fr.svg" alt="Flag">
+
+                      <div class="media-body">
+                        <div class="row align-items-center">
+                          <div class="col">
+                            <span class="d-block">France</span>
+                          </div>
+
+                          <div class="col-auto">
+                            <h5>$592.00</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End List Item -->
+
+                  <!-- List Item -->
+                  <div class="list-group-item">
+                    <div class="media align-items-center">
+                      <img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/ca.svg" alt="Flag">
+
+                      <div class="media-body">
+                        <div class="row align-items-center">
+                          <div class="col">
+                            <span class="d-block">Canada</span>
+                          </div>
+
+                          <div class="col-auto">
+                            <h5>$219.00</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End List Item -->
+
+                  <!-- List Item -->
+                  <div class="list-group-item">
+                    <div class="media align-items-center">
+                      <img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/it.svg" alt="Flag">
+
+                      <div class="media-body">
+                        <div class="row align-items-center">
+                          <div class="col">
+                            <span class="d-block">Italy</span>
+                          </div>
+
+                          <div class="col-auto">
+                            <h5>$191.00</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End List Item -->
+                </div>
+              </div>
+              <!-- End Body -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+
+        <!-- Card -->
+        <div class="card">
+          <!-- Header -->
+          <div class="card-header">
+            <h4 class="card-header-title">Referral users</h4>
+          </div>
+          <!-- End Header -->
+
+          <!-- Table -->
+          <div class="table-responsive datatable-custom">
+            <table id="datatable" class="table table-lg table-borderless table-thead-bordered table-nowrap table-align-middle card-table"
+                   data-hs-datatables-options='{
+                     "order": [],
+                     "info": {
+                       "totalQty": "#datatableWithPaginationInfoTotalQty"
+                     },
+                     "entries": "#datatableEntries",
+                     "pageLength": 15,
+                     "isResponsive": false,
+                     "isShowPaging": false,
+                     "pagination": "datatablePagination"
+                   }'>
+              <thead class="thead-light">
+                <tr>
+                  <th>Referrers</th>
+                  <th>Referred ID</th>
+                  <th>URL</th>
+                  <th>Visits</th>
+                  <th>Total earned</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-circle">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description">
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Amanda Harvey <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
+                        <span class="d-block font-size-sm text-body">amanda@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>24125</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>556</td>
+                  <td>$160.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-soft-primary avatar-circle">
+                        <span class="avatar-initials">A</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Anne Richard</span>
+                        <span class="d-block font-size-sm text-body">anne@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>84521</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>324</td>
+                  <td>$110.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-circle">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">David Harrison</span>
+                        <span class="d-block font-size-sm text-body">david@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>09341</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>301</td>
+                  <td>$100.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-circle">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image Description">
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Finch Hoot</span>
+                        <span class="d-block font-size-sm text-body">finch@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>09637</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>292</td>
+                  <td>$90.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-soft-dark avatar-circle">
+                        <span class="avatar-initials">B</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Bob Dean</span>
+                        <span class="d-block font-size-sm text-body">bob@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>93231</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>258</td>
+                  <td>$70.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-circle">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description">
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Ella Lauda <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
+                        <span class="d-block font-size-sm text-body">ella@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>41512</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>129</td>
+                  <td>$50.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-soft-info avatar-circle">
+                        <span class="avatar-initials">L</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Lori Hunter</span>
+                        <span class="d-block font-size-sm text-body">hunter@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>62312</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>103</td>
+                  <td>$50.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-soft-primary avatar-circle">
+                        <span class="avatar-initials">M</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Mark Colbert</span>
+                        <span class="d-block font-size-sm text-body">mark@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>46735</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>100</td>
+                  <td>$50.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-circle">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Costa Quinn</span>
+                        <span class="d-block font-size-sm text-body">costa@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>51726</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>99</td>
+                  <td>$40.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-soft-danger avatar-circle">
+                        <span class="avatar-initials">R</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Rachel Doe <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
+                        <span class="d-block font-size-sm text-body">rachel@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>89232</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>75</td>
+                  <td>$30.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-circle">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img8.jpg" alt="Image Description">
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Linda Bates</span>
+                        <span class="d-block font-size-sm text-body">linda@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>98434</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>52</td>
+                  <td>$20.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-soft-info avatar-circle">
+                        <span class="avatar-initials">B</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Brian Halligan</span>
+                        <span class="d-block font-size-sm text-body">brian@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>89340</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>39</td>
+                  <td>$20.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-soft-dark avatar-circle">
+                        <span class="avatar-initials">C</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Chris Mathew</span>
+                        <span class="d-block font-size-sm text-body">chris@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>59234</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>39</td>
+                  <td>$20.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-circle">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img7.jpg" alt="Image Description">
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Clarice Boone <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
+                        <span class="d-block font-size-sm text-body">clarice@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>96545</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>38</td>
+                  <td>$10.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-soft-dark avatar-circle">
+                        <span class="avatar-initials">L</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Lewis Clarke</span>
+                        <span class="d-block font-size-sm text-body">lewis@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>76322</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>27</td>
+                  <td>$10.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-circle">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img4.jpg" alt="Image Description">
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Sam Kart</span>
+                        <span class="d-block font-size-sm text-body">sam@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>45444</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>21</td>
+                  <td>$10.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-soft-danger avatar-circle">
+                        <span class="avatar-initials">J</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Johnny Appleseed</span>
+                        <span class="d-block font-size-sm text-body">johnny@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>15512</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>15</td>
+                  <td>$10.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-soft-danger avatar-circle">
+                        <span class="avatar-initials">P</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Phileas Fogg</span>
+                        <span class="d-block font-size-sm text-body">phileas@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>12093</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>12</td>
+                  <td>$10.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-circle">
+                        <img class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Mark Williams <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
+                        <span class="d-block font-size-sm text-body">mark@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>25639</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>9</td>
+                  <td>$10.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-soft-dark avatar-circle">
+                        <span class="avatar-initials">T</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Timothy Silva</span>
+                        <span class="d-block font-size-sm text-body">timothy@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>89314</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>3</td>
+                  <td>$10.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-soft-dark avatar-circle">
+                        <span class="avatar-initials">G</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Gary Bishop <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
+                        <span class="d-block font-size-sm text-body">gary@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>81724</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>3</td>
+                  <td>$10.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-soft-dark avatar-circle">
+                        <span class="avatar-initials">Y</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Yorker Scogings</span>
+                        <span class="d-block font-size-sm text-body">yorker@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>15033</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>2</td>
+                  <td>$10.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-soft-info avatar-circle">
+                        <span class="avatar-initials">F</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Frank Phillips</span>
+                        <span class="d-block font-size-sm text-body">frank@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>32503</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>2</td>
+                  <td>$0.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-soft-primary avatar-circle">
+                        <span class="avatar-initials">E</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Elizabeth Carter</span>
+                        <span class="d-block font-size-sm text-body">eliz@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>856734</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>1</td>
+                  <td>$0.00</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="d-flex align-items-center" href="@@autopath/user-profile.html">
+                      <div class="avatar avatar-soft-dark avatar-circle">
+                        <span class="avatar-initials">O</span>
+                      </div>
+                      <div class="ml-3">
+                        <span class="d-block h5 text-hover-primary mb-0">Olive Clarks</span>
+                        <span class="d-block font-size-sm text-body">olive@example.com</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td>856734</td>
+                  <td>https://htmlstream.com/wer9n8x</td>
+                  <td>1</td>
+                  <td>$0.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- End Table -->
+
+          <!-- Footer -->
+          <div class="card-footer">
+            <!-- Pagination -->
+            <div class="row justify-content-center justify-content-sm-between align-items-sm-center">
+              <div class="col-sm mb-2 mb-sm-0">
+                <div class="d-flex justify-content-center justify-content-sm-start align-items-center">
+                  <span class="mr-2">Showing:</span>
+
+                  <!-- Select -->
+                  <select id="datatableEntries" class="js-select2-custom"
+                          data-hs-select2-options='{
+                            "minimumResultsForSearch": "Infinity",
+                            "customClass": "custom-select custom-select-sm custom-select-borderless",
+                            "dropdownAutoWidth": true,
+                            "width": true
+                          }'>
+                    <option value="10">10</option>
+                    <option value="15" selected>15</option>
+                    <option value="20">20</option>
+                  </select>
+                  <!-- End Select -->
+
+                  <span class="text-secondary mr-2">of</span>
+
+                  <!-- Pagination Quantity -->
+                  <span id="datatableWithPaginationInfoTotalQty"></span>
+                </div>
+              </div>
+
+              <div class="col-sm-auto">
+                <div class="d-flex justify-content-center justify-content-sm-end">
+                  <!-- Pagination -->
+                  <nav id="datatablePagination" aria-label="Activity pagination"></nav>
+                </div>
+              </div>
+            </div>
+            <!-- End Pagination -->
+          </div>
+          <!-- End Footer -->
+        </div>
+        <!-- End Card -->
+      </div>
+      <!-- End Content -->
+
+      <!-- Footer -->
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/footer/main.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/footer/container.html")
+      }
+      <!-- End Footer -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Keyboard Shortcuts -->
+    @@include("@@autopath/partials/layouts-components/sidebar-shortcuts.html")
+    <!-- End Keyboard Shortcuts -->
+
+    <!-- Activity -->
+    @@include("@@autopath/partials/layouts-components/sidebar-activity.html")
+    <!-- End Activity -->
+
+    <!-- Welcome Message Modal -->
+    @@include("@@autopath/partials/modals/modal-welcome.html")
+    <!-- End Welcome Message Modal -->
+
+    <!-- Create New API Key Modal -->
+    @@include("@@autopath/partials/modals/modal-create-api-key.html")
+    <!-- End Create New API Key Modal -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+    <script src="@@autopath/node_modules/select2/dist/js/select2.full.min.js"></script>
+    <script src="@@autopath/node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="@@autopath/node_modules/clipboard/dist/clipboard.min.js"></script>
+    <script src="@@autopath/node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="@@autopath/node_modules/daterangepicker/moment.min.js"></script>
+    <script src="@@autopath/node_modules/daterangepicker/daterangepicker.js"></script>
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+     <script src="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+    }
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.select2.js"></script>
+    <script src="@@autopath/assets/js/hs.chartjs.js"></script>
+    <script src="@@autopath/assets/js/hs.clipboard.js"></script>
+    <script src="@@autopath/assets/js/hs.datatables.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // =======================================================
+
+
+        // BUILDER TOGGLE INVOKER
+        // =======================================================
+        $('.js-navbar-vertical-aside-toggle-invoker').click(function () {
+          $('.js-navbar-vertical-aside-toggle-invoker i').tooltip('hide');
+        });
+
+        @@if (layoutBuilder.header.layoutMode !== 'default') {
+          // INITIALIZATION OF MEGA MENU
+          // =======================================================
+          var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+            desktop: {
+              position: 'left'
+            }
+          }).init();
+        }
+
+        
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+        
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+        $(".js-nav-tooltip-link").on("show.bs.tooltip", function(e) {
+          if (!$("body").hasClass("navbar-vertical-aside-mini-mode")) {
+            return false;
+          }
+        });
+
+        
+        // INITIALIZATION OF UNFOLD
+        // =======================================================
+        $('.js-hs-unfold-invoker').each(function () {
+          var unfold = new HSUnfold($(this)).init();
+        });
+
+        
+        // INITIALIZATION OF FORM SEARCH
+        // =======================================================
+        $('.js-form-search').each(function () {
+          new HSFormSearch($(this)).init()
+        });
+
+        
+        // INITIALIZATION OF SELECT2
+        // =======================================================
+        $('.js-select2-custom').each(function () {
+          var select2 = $.HSCore.components.HSSelect2.init($(this));
+        });
+
+        
+        // INITIALIZATION OF CHARTJS
+        // =======================================================
+        $('.js-chart').each(function () {
+          $.HSCore.components.HSChartJS.init($(this));
+        });
+
+        
+        // INITIALIZATION OF CLIPBOARD
+        // =======================================================
+        $('.js-clipboard').each(function() {
+          var clipboard = $.HSCore.components.HSClipboard.init(this);
+        });
+
+        
+        // INITIALIZATION OF DATATABLES
+        // =======================================================
+        var datatable = $.HSCore.components.HSDatatables.init($('#datatable'), {
+          select: {
+            style: 'multi',
+            selector: 'td:first-child input[type="checkbox"]',
+            classMap: {
+              checkAll: '#datatableCheckAll',
+              counter: '#datatableCounter',
+              counterInfo: '#datatableCounterInfo'
+            }
+          },
+          language: {
+            zeroRecords: '<div class="text-center p-4">' +
+                '<img class="mb-3" src="@@autopath/assets/svg/illustrations/sorry.svg" alt="Image Description" style="width: 7rem;">' +
+                '<p class="mb-0">No data to show</p>' +
+                '</div>'
+          }
+        });
+
+        
+        // INITIALIZATION OF DATERANGEPICKER
+        // =======================================================
+        $('.js-daterangepicker').daterangepicker();
+
+        $('.js-daterangepicker-times').daterangepicker({
+          timePicker: true,
+          startDate: moment().startOf('hour'),
+          endDate: moment().startOf('hour').add(32, 'hour'),
+          locale: {
+            format: 'M/DD hh:mm A'
+          }
+        });
+
+        var start = moment();
+        var end = moment();
+
+        function cb(start, end) {
+          $('#js-daterangepicker-predefined .js-daterangepicker-predefined-preview').html(start.format('MMM D') + ' - ' + end.format('MMM D, YYYY'));
+        }
+
+        $('#js-daterangepicker-predefined').daterangepicker({
+          startDate: start,
+          endDate: end,
+          ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          }
+        }, cb);
+
+        cb(start, end);
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

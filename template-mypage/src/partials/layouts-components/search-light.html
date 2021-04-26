@@ -1,0 +1,115 @@
+<form class="position-relative">
+  <!-- Input Group -->
+  <div class="input-group input-group-merge input-group-borderless input-group-hover-light navbar-input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text">
+        <i class="tio-search"></i>
+      </div>
+    </div>
+    <input type="search" class="js-form-search form-control" placeholder="Search in front" aria-label="Search in front"
+           data-hs-form-search-options='{
+             "clearIcon": "#clearSearchResultsIcon",
+             "dropMenuElement": "#searchDropdownMenu",
+             "dropMenuOffset": 20,
+             "toggleIconOnFocus": true,
+             "activeClass": "focus"
+           }'>
+    <a class="input-group-append" href="javascript:;">
+      <span class="input-group-text">
+        <i id="clearSearchResultsIcon" class="tio-clear" style="display: none;"></i>
+      </span>
+    </a>
+  </div>
+  <!-- End Input Group -->
+
+  <!-- Card Search Content -->
+  <div id="searchDropdownMenu" class="hs-form-search-menu-content card dropdown-menu dropdown-card overflow-hidden">
+    <!-- Body -->
+    <div class="card-body-height py-3">
+      <small class="dropdown-header mb-n2">Recent searches</small>
+
+      <div class="dropdown-item bg-transparent text-wrap my-2">
+        <span class="h4 mr-1">
+          <a class="btn btn-xs btn-soft-dark btn-pill" href="@@autopath/index.html">
+            Gulp <i class="tio-search ml-1"></i>
+          </a>
+        </span>
+        <span class="h4">
+          <a class="btn btn-xs btn-soft-dark btn-pill" href="@@autopath/index.html">
+            Notification panel <i class="tio-search ml-1"></i>
+          </a>
+        </span>
+      </div>
+
+      <div class="dropdown-divider my-3"></div>
+
+      <small class="dropdown-header mb-n2">Tutorials</small>
+
+      <a class="dropdown-item my-2" href="@@autopath/index.html">
+        <div class="media align-items-center">
+          <span class="icon icon-xs icon-soft-dark icon-circle mr-2">
+            <i class="tio-tune"></i>
+          </span>
+
+          <div class="media-body text-truncate">
+            <span>How to set up Gulp?</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="dropdown-item my-2" href="@@autopath/index.html">
+        <div class="media align-items-center">
+          <span class="icon icon-xs icon-soft-dark icon-circle mr-2">
+            <i class="tio-paint-bucket"></i>
+          </span>
+
+          <div class="media-body text-truncate">
+            <span>How to change theme color?</span>
+          </div>
+        </div>
+      </a>
+
+      <div class="dropdown-divider my-3"></div>
+
+      <small class="dropdown-header mb-n2">Members</small>
+
+      <a class="dropdown-item my-2" href="@@autopath/index.html">
+        <div class="media align-items-center">
+          <img class="avatar avatar-xs avatar-circle mr-2" src="@@autopath/assets/img/160x160/img10.jpg" alt="Image Description">
+          <div class="media-body text-truncate">
+            <span>Amanda Harvey <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a class="dropdown-item my-2" href="@@autopath/index.html">
+        <div class="media align-items-center">
+          <img class="avatar avatar-xs avatar-circle mr-2" src="@@autopath/assets/img/160x160/img3.jpg" alt="Image Description">
+          <div class="media-body text-truncate">
+            <span>David Harrison</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="dropdown-item my-2" href="@@autopath/index.html">
+        <div class="media align-items-center">
+          <div class="avatar avatar-xs avatar-soft-info avatar-circle mr-2">
+            <span class="avatar-initials">A</span>
+          </div>
+          <div class="media-body text-truncate">
+            <span>Anne Richard</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- End Body -->
+
+    <!-- Footer -->
+    <a class="card-footer text-center" href="@@autopath/index.html">
+      See all results
+      <i class="tio-chevron-right"></i>
+    </a>
+    <!-- End Footer -->
+  </div>
+  <!-- End Card Search Content -->
+</form>

@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>SortableJS - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/leaflet/dist/leaflet.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "sortablejs.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">SortableJS</h1>
+                  <p class="lead">SortableJS JavaScript library for reorderable drag-and-drop lists.</p>
+                  <a href="https://sortablejs.github.io/Sortable/" target="_blank">SortableJS documentation <i class="tio-open-in-new"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="how-to-use" class="hs-docs-heading">
+              How to use <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Implementing Plugins</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/node_modules/sortablejs/dist/sortable.umd.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Front</u></em> to enable it.</p>
+
+            <pre class="rounded mb-4">
+              <code class="language-html" data-lang="html">
+                &lt;script src="@@autopath/assets/js/hs.sortable.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code>&lt;/body&gt;</code> tag, to enable it.</p>
+
+            <pre class="rounded">
+              <code class="language-html" data-lang="html">
+                &lt;script&gt;
+                  $(document).on('ready', function () {
+                    // INITIALIZATION OF SORTABLE
+                    // =======================================================
+                    $('.js-sortable').each(function () {
+                      var sortable = $.HSCore.components.HSSortable.init($(this));
+                    });
+                  });
+                &lt;/script&gt;
+              </code>
+            </pre>
+
+            <!-- Heading -->
+            <h2 id="simplelist-example" class="hs-docs-heading">
+              Simple list example <a class="anchorjs-link" href="#simplelist-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- List Group -->
+                  <div class="js-sortable sortablejs-custom list-group"
+                      data-hs-sortable-options='{
+                        "animation": 150,
+                        "group": "listGroup"
+                      }'>
+                   <div class="list-group-item">Item 1</div>
+                   <div class="list-group-item">Item 2</div>
+                   <div class="list-group-item">Item 3</div>
+                   <div class="list-group-item">Item 4</div>
+                   <div class="list-group-item">Item 5</div>
+                   <div class="list-group-item">Item 6</div>
+                 </div>
+                  <!-- End List Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;div class="js-sortable sortablejs-custom list-group"
+                          data-hs-sortable-options='{
+                            "animation": 150,
+                            "group": "listGroup"
+                          }'&gt;
+                       &lt;div class="list-group-item"&gt;Item 1&lt;/div&gt;
+                       &lt;div class="list-group-item"&gt;Item 2&lt;/div&gt;
+                       &lt;div class="list-group-item"&gt;Item 3&lt;/div&gt;
+                       &lt;div class="list-group-item"&gt;Item 4&lt;/div&gt;
+                       &lt;div class="list-group-item"&gt;Item 5&lt;/div&gt;
+                       &lt;div class="list-group-item"&gt;Item 6&lt;/div&gt;
+                     &lt;/div&gt;
+                      &lt;!-- End List Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="shared-lists" class="hs-docs-heading">
+              Shared lists <a class="anchorjs-link" href="#shared-lists" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>"group": "listGroupName"</code></p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <!-- List Group -->
+                      <div class="js-sortable sortablejs-custom list-group"
+                           data-hs-sortable-options='{
+                             "animation": 150,
+                             "group": "listGroup"
+                           }'>
+                        <div class="list-group-item">Item 1</div>
+                        <div class="list-group-item">Item 2</div>
+                        <div class="list-group-item">Item 3</div>
+                        <div class="list-group-item">Item 4</div>
+                        <div class="list-group-item">Item 5</div>
+                        <div class="list-group-item">Item 6</div>
+                      </div>
+                      <!-- End List Group -->
+                    </div>
+
+                    <div class="col-md-6">
+                      <!-- List Group -->
+                      <div class="js-sortable sortablejs-custom list-group"
+                           data-hs-sortable-options='{
+                             "animation": 150,
+                             "group": "listGroup"
+                           }'>
+                        <div class="list-group-item bg-light">Item 1</div>
+                        <div class="list-group-item bg-light">Item 2</div>
+                        <div class="list-group-item bg-light">Item 3</div>
+                        <div class="list-group-item bg-light">Item 4</div>
+                        <div class="list-group-item bg-light">Item 5</div>
+                        <div class="list-group-item bg-light">Item 6</div>
+                      </div>
+                      <!-- End List Group -->
+                    </div>
+                  </div>
+                  <!-- End Row -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;div class="row"&gt;
+                        &lt;div class="col-md-6"&gt;
+                          &lt;!-- List Group --&gt;
+                          &lt;div class="js-sortable sortablejs-custom list-group"
+                               data-hs-sortable-options='{
+                                 "animation": 150,
+                                 "group": "listGroup"
+                               }'&gt;
+                            &lt;div class="list-group-item"&gt;Item 1&lt;/div&gt;
+                            &lt;div class="list-group-item"&gt;Item 2&lt;/div&gt;
+                            &lt;div class="list-group-item"&gt;Item 3&lt;/div&gt;
+                            &lt;div class="list-group-item"&gt;Item 4&lt;/div&gt;
+                            &lt;div class="list-group-item"&gt;Item 5&lt;/div&gt;
+                            &lt;div class="list-group-item"&gt;Item 6&lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End List Group --&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-md-6"&gt;
+                          &lt;!-- List Group --&gt;
+                          &lt;div class="js-sortable sortablejs-custom list-group"
+                               data-hs-sortable-options='{
+                                 "animation": 150,
+                                 "group": "listGroup"
+                               }'&gt;
+                            &lt;div class="list-group-item bg-light"&gt;Item 1&lt;/div&gt;
+                            &lt;div class="list-group-item bg-light"&gt;Item 2&lt;/div&gt;
+                            &lt;div class="list-group-item bg-light"&gt;Item 3&lt;/div&gt;
+                            &lt;div class="list-group-item bg-light"&gt;Item 4&lt;/div&gt;
+                            &lt;div class="list-group-item bg-light"&gt;Item 5&lt;/div&gt;
+                            &lt;div class="list-group-item bg-light"&gt;Item 6&lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End List Group --&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Row --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="disable-sorting" class="hs-docs-heading">
+              Disable sorting <a class="anchorjs-link" href="#disable-sorting" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Try sorting the list on the left. It is not possible because it has it's sort option set to <code>false</code>. However, you can still drag from the list on the left to the list on the right.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab3" data-toggle="pill" href="#nav-result3" role="tab" aria-controls="nav-result3" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab3" data-toggle="pill" href="#nav-html3" role="tab" aria-controls="nav-html3" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent3">
+                <div class="tab-pane fade p-4 show active" id="nav-result3" role="tabpanel" aria-labelledby="nav-resultTab3">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <!-- List Group -->
+                      <div class="js-sortable sortablejs-custom list-group"
+                           data-hs-sortable-options='{
+                             "animation": 150,
+                             "group": {
+                               "name": "listGroup3",
+                               "pull": "clone",
+                               "put": false
+                             }
+                           }'>
+                        <div class="list-group-item">Item 1</div>
+                        <div class="list-group-item">Item 2</div>
+                        <div class="list-group-item">Item 3</div>
+                        <div class="list-group-item">Item 4</div>
+                        <div class="list-group-item">Item 5</div>
+                        <div class="list-group-item">Item 6</div>
+                      </div>
+                      <!-- End List Group -->
+                    </div>
+
+                    <div class="col-md-6">
+                      <!-- List Group -->
+                      <div class="js-sortable sortablejs-custom list-group"
+                           data-hs-sortable-options='{
+                             "animation": 150,
+                             "group": "listGroup3"
+                           }'>
+                        <div class="list-group-item bg-light">Item 1</div>
+                        <div class="list-group-item bg-light">Item 2</div>
+                        <div class="list-group-item bg-light">Item 3</div>
+                        <div class="list-group-item bg-light">Item 4</div>
+                        <div class="list-group-item bg-light">Item 5</div>
+                        <div class="list-group-item bg-light">Item 6</div>
+                      </div>
+                      <!-- End List Group -->
+                    </div>
+                  </div>
+                  <!-- End Row -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html3" role="tabpanel" aria-labelledby="nav-htmlTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;div class="row"&gt;
+                        &lt;div class="col-md-6"&gt;
+                          &lt;!-- List Group --&gt;
+                          &lt;div class="js-sortable sortablejs-custom list-group"
+                               data-hs-sortable-options='{
+                                 "animation": 150,
+                                 "group": {
+                                   "name": "listGroup3",
+                                   "pull": "clone",
+                                   "put": false
+                                 }
+                               }'&gt;
+                            &lt;div class="list-group-item"&gt;Item 1&lt;/div&gt;
+                            &lt;div class="list-group-item"&gt;Item 2&lt;/div&gt;
+                            &lt;div class="list-group-item"&gt;Item 3&lt;/div&gt;
+                            &lt;div class="list-group-item"&gt;Item 4&lt;/div&gt;
+                            &lt;div class="list-group-item"&gt;Item 5&lt;/div&gt;
+                            &lt;div class="list-group-item"&gt;Item 6&lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End List Group --&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-md-6"&gt;
+                          &lt;!-- List Group --&gt;
+                          &lt;div class="js-sortable sortablejs-custom list-group"
+                               data-hs-sortable-options='{
+                                 "animation": 150,
+                                 "group": "listGroup3"
+                               }'&gt;
+                            &lt;div class="list-group-item bg-light"&gt;Item 1&lt;/div&gt;
+                            &lt;div class="list-group-item bg-light"&gt;Item 2&lt;/div&gt;
+                            &lt;div class="list-group-item bg-light"&gt;Item 3&lt;/div&gt;
+                            &lt;div class="list-group-item bg-light"&gt;Item 4&lt;/div&gt;
+                            &lt;div class="list-group-item bg-light"&gt;Item 5&lt;/div&gt;
+                            &lt;div class="list-group-item bg-light"&gt;Item 6&lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End List Group --&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Row --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="handle" class="hs-docs-heading">
+              Handle <a class="anchorjs-link" href="#handle" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab4" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab4" data-toggle="pill" href="#nav-result4" role="tab" aria-controls="nav-result4" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab4" data-toggle="pill" href="#nav-html4" role="tab" aria-controls="nav-html4" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent4">
+                <div class="tab-pane fade p-4 show active" id="nav-result4" role="tabpanel" aria-labelledby="nav-resultTab4">
+                  <!-- List Group -->
+                  <div class="js-sortable sortablejs-custom list-group"
+                      data-hs-sortable-options='{
+                        "animation": 150,
+                        "handle": ".sortablejs-custom-handle"
+                      }'>
+                    <div class="list-group-item">
+                      <i class="sortablejs-custom-handle tio-drag list-group-icon"></i> Item 1
+                    </div>
+                    <div class="list-group-item">
+                      <i class="sortablejs-custom-handle tio-drag list-group-icon"></i> Item 2
+                    </div>
+                    <div class="list-group-item">
+                      <i class="sortablejs-custom-handle tio-drag list-group-icon"></i> Item 3
+                    </div>
+                    <div class="list-group-item">
+                      <i class="sortablejs-custom-handle tio-drag list-group-icon"></i> Item 4
+                    </div>
+                    <div class="list-group-item">
+                      <i class="sortablejs-custom-handle tio-drag list-group-icon"></i> Item 5
+                    </div>
+                    <div class="list-group-item">
+                      <i class="sortablejs-custom-handle tio-drag list-group-icon"></i> Item 6
+                    </div>
+                  </div>
+                  <!-- End List Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html4" role="tabpanel" aria-labelledby="nav-htmlTab4">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;div class="js-sortable sortablejs-custom list-group"
+                          data-hs-sortable-options='{
+                            "animation": 150,
+                            "handle": ".sortablejs-custom-handle"
+                          }'&gt;
+                        &lt;div class="list-group-item"&gt;
+                          &lt;i class="sortablejs-custom-handle tio-drag list-group-icon"&gt;&lt;/i&gt; Item 1
+                        &lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;
+                          &lt;i class="sortablejs-custom-handle tio-drag list-group-icon"&gt;&lt;/i&gt; Item 2
+                        &lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;
+                          &lt;i class="sortablejs-custom-handle tio-drag list-group-icon"&gt;&lt;/i&gt; Item 3
+                        &lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;
+                          &lt;i class="sortablejs-custom-handle tio-drag list-group-icon"&gt;&lt;/i&gt; Item 4
+                        &lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;
+                          &lt;i class="sortablejs-custom-handle tio-drag list-group-icon"&gt;&lt;/i&gt; Item 5
+                        &lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;
+                          &lt;i class="sortablejs-custom-handle tio-drag list-group-icon"&gt;&lt;/i&gt; Item 6
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End List Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="filter" class="hs-docs-heading">
+              Filter <a class="anchorjs-link" href="#filter" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Try dragging the item with a red background. It cannot be done, because that item is filtered out using the <code>filter</code> option.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab5" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab5" data-toggle="pill" href="#nav-result5" role="tab" aria-controls="nav-result5" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab5" data-toggle="pill" href="#nav-html5" role="tab" aria-controls="nav-html5" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent5">
+                <div class="tab-pane fade p-4 show active" id="nav-result5" role="tabpanel" aria-labelledby="nav-resultTab5">
+                  <!-- List Group -->
+                  <div class="js-sortable list-group"
+                       data-hs-sortable-options='{
+                          "animation": 150,
+                          "filter": ".sortablejs-custom-disabled"
+                        }'>
+                    <div class="list-group-item">Item 1</div>
+                    <div class="list-group-item sortablejs-custom-disabled bg-danger text-white">Filtered</div>
+                    <div class="list-group-item">Item 3</div>
+                    <div class="list-group-item">Item 4</div>
+                    <div class="list-group-item">Item 5</div>
+                    <div class="list-group-item">Item 6</div>
+                  </div>
+                  <!-- End List Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html5" role="tabpanel" aria-labelledby="nav-htmlTab5">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;div class="js-sortable list-group"
+                           data-hs-sortable-options='{
+                              "animation": 150,
+                              "filter": ".sortablejs-custom-disabled"
+                            }'&gt;
+                        &lt;div class="list-group-item"&gt;Item 1&lt;/div&gt;
+                        &lt;div class="list-group-item sortablejs-custom-disabled bg-danger text-white"&gt;Filtered&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 3&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 4&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 5&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 6&lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End List Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="grid" class="hs-docs-heading">
+              Grid <a class="anchorjs-link" href="#grid" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab7" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab7" data-toggle="pill" href="#nav-result7" role="tab" aria-controls="nav-result7" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab7" data-toggle="pill" href="#nav-html7" role="tab" aria-controls="nav-html7" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent7">
+                <div class="tab-pane fade p-4 show active" id="nav-result7" role="tabpanel" aria-labelledby="nav-resultTab7">
+                  <!-- List Group -->
+                  <div class="js-sortable row"
+                       data-hs-sortable-options='{
+                         "animation": 150,
+                         "ghostClass": "sortablejs-custom-chosen-child"
+                       }'>
+                    <div class="col-md-2 mb-3">
+                      <div class="card">
+                        <div class="card-body text-center">1</div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                      <div class="card">
+                        <div class="card-body text-center">2</div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                      <div class="card">
+                        <div class="card-body text-center">3</div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                      <div class="card">
+                        <div class="card-body text-center">4</div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                      <div class="card">
+                        <div class="card-body text-center">5</div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                      <div class="card">
+                        <div class="card-body text-center">6</div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                      <div class="card">
+                        <div class="card-body text-center">7</div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                      <div class="card">
+                        <div class="card-body text-center">8</div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                      <div class="card">
+                        <div class="card-body text-center">9</div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                      <div class="card">
+                        <div class="card-body text-center">10</div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                      <div class="card">
+                        <div class="card-body text-center">11</div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                      <div class="card">
+                        <div class="card-body text-center">12</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End List Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html7" role="tabpanel" aria-labelledby="nav-htmlTab7">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;div class="js-sortable row"
+                           data-hs-sortable-options='{
+                             "animation": 150,
+                             "ghostClass": "sortablejs-custom-chosen-child"
+                           }'&gt;
+                        &lt;div class="col-md-2 mb-3"&gt;
+                          &lt;div class="card"&gt;
+                            &lt;div class="card-body text-center"&gt;1&lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-md-2 mb-3"&gt;
+                          &lt;div class="card"&gt;
+                            &lt;div class="card-body text-center"&gt;2&lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-md-2 mb-3"&gt;
+                          &lt;div class="card"&gt;
+                            &lt;div class="card-body text-center"&gt;3&lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-md-2 mb-3"&gt;
+                          &lt;div class="card"&gt;
+                            &lt;div class="card-body text-center"&gt;4&lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-md-2 mb-3"&gt;
+                          &lt;div class="card"&gt;
+                            &lt;div class="card-body text-center"&gt;5&lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-md-2 mb-3"&gt;
+                          &lt;div class="card"&gt;
+                            &lt;div class="card-body text-center"&gt;6&lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-md-2 mb-3"&gt;
+                          &lt;div class="card"&gt;
+                            &lt;div class="card-body text-center"&gt;7&lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-md-2 mb-3"&gt;
+                          &lt;div class="card"&gt;
+                            &lt;div class="card-body text-center"&gt;8&lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-md-2 mb-3"&gt;
+                          &lt;div class="card"&gt;
+                            &lt;div class="card-body text-center"&gt;9&lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-md-2 mb-3"&gt;
+                          &lt;div class="card"&gt;
+                            &lt;div class="card-body text-center"&gt;10&lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-md-2 mb-3"&gt;
+                          &lt;div class="card"&gt;
+                            &lt;div class="card-body text-center"&gt;11&lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="col-md-2 mb-3"&gt;
+                          &lt;div class="card"&gt;
+                            &lt;div class="card-body text-center"&gt;12&lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End List Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="nested" class="hs-docs-heading">
+              Nested <a class="anchorjs-link" href="#nested" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab8" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab8" data-toggle="pill" href="#nav-result8" role="tab" aria-controls="nav-result8" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab8" data-toggle="pill" href="#nav-html8" role="tab" aria-controls="nav-html8" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent8">
+                <div class="tab-pane fade p-4 show active" id="nav-result8" role="tabpanel" aria-labelledby="nav-resultTab8">
+                  <!-- List Group -->
+                  <div class="js-sortable list-group"
+                      data-hs-sortable-options='{
+                        "animation": 150,
+                        "group": "listGroup4",
+                        "fallbackOnBody": true
+                      }'>
+                    <div class="list-group-item">Item 1</div>
+                    <div class="list-group-item">Item 2</div>
+                    <div class="list-group-item">
+                      <h4 class="h5">Item 3</h4>
+
+                      <div class="js-sortable list-group"
+                           data-hs-sortable-options='{
+                             "animation": 150,
+                             "group": "listGroup5"
+                           }'>
+                        <div class="list-group-item">Item 3.1</div>
+                        <div class="list-group-item">Item 3.2</div>
+                        <div class="list-group-item">Item 3.3</div>
+                        <div class="list-group-item">Item 3.4</div>
+                      </div>
+                    </div>
+                    <div class="list-group-item">Item 4</div>
+                    <div class="list-group-item">Item 5</div>
+                    <div class="list-group-item">Item 6</div>
+                  </div>
+                  <!-- End List Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html8" role="tabpanel" aria-labelledby="nav-htmlTab8">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;div class="js-sortable list-group"
+                          data-hs-sortable-options='{
+                            "animation": 150,
+                            "group": "listGroup4",
+                            "fallbackOnBody": true
+                          }'&gt;
+                        &lt;div class="list-group-item"&gt;Item 1&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 2&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;
+                          &lt;h4 class="h5"&gt;Item 3&lt;/h4&gt;
+
+                          &lt;div class="js-sortable list-group"
+                               data-hs-sortable-options='{
+                                 "animation": 150,
+                                 "group": "listGroup5"
+                               }'&gt;
+                            &lt;div class="list-group-item"&gt;Item 3.1&lt;/div&gt;
+                            &lt;div class="list-group-item"&gt;Item 3.2&lt;/div&gt;
+                            &lt;div class="list-group-item"&gt;Item 3.3&lt;/div&gt;
+                            &lt;div class="list-group-item"&gt;Item 3.4&lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 4&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 5&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 6&lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End List Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="multiple-drag" class="hs-docs-heading">
+              Multiple Drag <a class="anchorjs-link" href="#multiple-drag" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>The MultiDrag option allows for multiple items to be dragged at a time. You can click to "select" multiple items, and then drag them as one item.</p>
+
+            <p>Use <code>"multiDrag": true</code></p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab9" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab9" data-toggle="pill" href="#nav-result9" role="tab" aria-controls="nav-result9" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab9" data-toggle="pill" href="#nav-html9" role="tab" aria-controls="nav-html9" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent9">
+                <div class="tab-pane fade p-4 show active" id="nav-result9" role="tabpanel" aria-labelledby="nav-resultTab9">
+                  <!-- List Group -->
+                  <div class="js-sortable list-group"
+                       data-hs-sortable-options='{
+                         "animation": 150,
+                         "multiDrag": true,
+                         "selectedClass": "active"
+                       }'>
+                    <div class="list-group-item">Item 1</div>
+                    <div class="list-group-item">Item 2</div>
+                    <div class="list-group-item">Item 3</div>
+                    <div class="list-group-item">Item 4</div>
+                    <div class="list-group-item">Item 5</div>
+                    <div class="list-group-item">Item 6</div>
+                  </div>
+                  <!-- End List Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html9" role="tabpanel" aria-labelledby="nav-htmlTab9">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;div class="js-sortable list-group"
+                           data-hs-sortable-options='{
+                             "animation": 150,
+                             "multiDrag": true,
+                             "selectedClass": "active"
+                           }'&gt;
+                        &lt;div class="list-group-item"&gt;Item 1&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 2&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 3&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 4&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 5&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 6&lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End List Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="swap" class="hs-docs-heading">
+              Swap <a class="anchorjs-link" href="#swap" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>The Swap option changes the behaviour of Sortable to allow for items to be swapped with eachother rather than sorted.</p>
+
+            <p>Use <code>"swap": true</code></p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab10" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab10" data-toggle="pill" href="#nav-result10" role="tab" aria-controls="nav-result10" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab10" data-toggle="pill" href="#nav-html10" role="tab" aria-controls="nav-html10" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent10">
+                <div class="tab-pane fade p-4 show active" id="nav-result10" role="tabpanel" aria-labelledby="nav-resultTab10">
+                  <!-- List Group -->
+                  <div class="js-sortable list-group"
+                       data-hs-sortable-options='{
+                         "animation": 150,
+                         "swap": true,
+                         "swapClass": "active"
+                       }'>
+                    <div class="list-group-item">Item 1</div>
+                    <div class="list-group-item">Item 2</div>
+                    <div class="list-group-item">Item 3</div>
+                    <div class="list-group-item">Item 4</div>
+                    <div class="list-group-item">Item 5</div>
+                    <div class="list-group-item">Item 6</div>
+                  </div>
+                  <!-- End List Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html10" role="tabpanel" aria-labelledby="nav-htmlTab10">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;div class="js-sortable list-group"
+                           data-hs-sortable-options='{
+                             "animation": 150,
+                             "swap": true,
+                             "swapClass": "active"
+                           }'&gt;
+                        &lt;div class="list-group-item"&gt;Item 1&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 2&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 3&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 4&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 5&lt;/div&gt;
+                        &lt;div class="list-group-item"&gt;Item 6&lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End List Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="data-href" class="hs-docs-heading">
+              Data-href <a class="anchorjs-link" href="#data-href" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Use <code>data-href=""</code> to set a link instead of the traditional <code>&lt;a href=""&gt;&lt;/a&gt;</code> where you have multiple inner links.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab11" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab11" data-toggle="pill" href="#nav-result11" role="tab" aria-controls="nav-result11" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab11" data-toggle="pill" href="#nav-html11" role="tab" aria-controls="nav-html11" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab11" data-toggle="pill" href="#nav-js11" role="tab" aria-controls="nav-js11" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent11">
+                <div class="tab-pane fade p-4 show active" id="nav-result11" role="tabpanel" aria-labelledby="nav-resultTab11">
+                  <!-- List Group -->
+                  <div class="js-sortable list-group">
+                    <div class="js-sortable-link list-group-item sortablejs-custom-handle" data-href="#">Sortable with link 1</div>
+                    <div class="js-sortable-link list-group-item sortablejs-custom-handle" data-href="#">Sortable with link 2</div>
+                    <div class="js-sortable-link list-group-item sortablejs-custom-handle" data-href="#">Sortable with link 3</div>
+                    <div class="js-sortable-link list-group-item sortablejs-custom-handle" data-href="#">Sortable with link 4</div>
+                    <div class="js-sortable-link list-group-item sortablejs-custom-handle" data-href="#">Sortable with link 5</div>
+                    <div class="js-sortable-link list-group-item sortablejs-custom-handle" data-href="#">Sortable with link 6</div>
+                  </div>
+                  <!-- End List Group -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html11" role="tabpanel" aria-labelledby="nav-htmlTab11">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;div class="js-sortable list-group"&gt;
+                        &lt;div class="js-sortable-link list-group-item sortablejs-custom-handle" data-href="#"&gt;Sortable with link 1&lt;/div&gt;
+                        &lt;div class="js-sortable-link list-group-item sortablejs-custom-handle" data-href="#"&gt;Sortable with link 2&lt;/div&gt;
+                        &lt;div class="js-sortable-link list-group-item sortablejs-custom-handle" data-href="#"&gt;Sortable with link 3&lt;/div&gt;
+                        &lt;div class="js-sortable-link list-group-item sortablejs-custom-handle" data-href="#"&gt;Sortable with link 4&lt;/div&gt;
+                        &lt;div class="js-sortable-link list-group-item sortablejs-custom-handle" data-href="#"&gt;Sortable with link 5&lt;/div&gt;
+                        &lt;div class="js-sortable-link list-group-item sortablejs-custom-handle" data-href="#"&gt;Sortable with link 6&lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End List Group --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js11" role="tabpanel" aria-labelledby="nav-jsTab11">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          // INITIALIZATION OF SORTABLE LINK
+                          // =======================================================
+                          $('.js-sortable-link').click(function (e) {
+                            if ($(e.target).hasClass('hs-unfold') || $(e.target).parents('.hs-unfold').length) {
+                              return false;
+                            }
+
+                            window.location.replace($(this).attr('data-href'))
+                          });
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="data-href-with-modal-example" class="hs-docs-heading">
+              Data-href with modal example <a class="anchorjs-link" href="#data-href-with-modal-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab12" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab12" data-toggle="pill" href="#nav-result12" role="tab" aria-controls="nav-result12" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab12" data-toggle="pill" href="#nav-html12" role="tab" aria-controls="nav-html12" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab12" data-toggle="pill" href="#nav-js12" role="tab" aria-controls="nav-js12" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent12">
+                <div class="tab-pane fade p-4 show active" id="nav-result12" role="tabpanel" aria-labelledby="nav-resultTab12">
+                  <!-- List Group -->
+                  <div class="js-sortable list-group">
+                    <div class="js-sortable-modal-link list-group-item sortablejs-custom-handle" data-href="#">Sortable with modal link 1</div>
+                    <div class="js-sortable-modal-link list-group-item sortablejs-custom-handle" data-href="#">Sortable with modal link 2</div>
+                    <div class="js-sortable-modal-link list-group-item sortablejs-custom-handle" data-href="#">Sortable with modal link 3</div>
+                    <div class="js-sortable-modal-link list-group-item sortablejs-custom-handle" data-href="#">Sortable with modal link 4</div>
+                    <div class="js-sortable-modal-link list-group-item sortablejs-custom-handle" data-href="#">Sortable with modal link 5</div>
+                    <div class="js-sortable-modal-link list-group-item sortablejs-custom-handle" data-href="#">Sortable with modal link 6</div>
+                  </div>
+                  <!-- End List Group -->
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Modal -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html12" role="tabpanel" aria-labelledby="nav-htmlTab12">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- List Group --&gt;
+                      &lt;div class="js-sortable list-group"&gt;
+                        &lt;div class="js-sortable-modal-link list-group-item sortablejs-custom-handle" data-href="#"&gt;Sortable with modal link 1&lt;/div&gt;
+                        &lt;div class="js-sortable-modal-link list-group-item sortablejs-custom-handle" data-href="#"&gt;Sortable with modal link 2&lt;/div&gt;
+                        &lt;div class="js-sortable-modal-link list-group-item sortablejs-custom-handle" data-href="#"&gt;Sortable with modal link 3&lt;/div&gt;
+                        &lt;div class="js-sortable-modal-link list-group-item sortablejs-custom-handle" data-href="#"&gt;Sortable with modal link 4&lt;/div&gt;
+                        &lt;div class="js-sortable-modal-link list-group-item sortablejs-custom-handle" data-href="#"&gt;Sortable with modal link 5&lt;/div&gt;
+                        &lt;div class="js-sortable-modal-link list-group-item sortablejs-custom-handle" data-href="#"&gt;Sortable with modal link 6&lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End List Group --&gt;
+
+                      &lt;!-- Modal --&gt;
+                      &lt;div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+                        &lt;div class="modal-dialog"&gt;
+                          &lt;div class="modal-content"&gt;
+                            &lt;div class="modal-header"&gt;
+                              &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Modal title&lt;/h5&gt;
+                              &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+                                &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+                              &lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class="modal-body"&gt;
+                              ...
+                            &lt;/div&gt;
+                            &lt;div class="modal-footer"&gt;
+                              &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                              &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Modal --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js12" role="tabpanel" aria-labelledby="nav-jsTab12">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          // INITIALIZATION OF SORTABLE MODAL LINK
+                          // =======================================================
+                          $('.js-sortable-modal-link').click(function (e) {
+                            if ($(e.target).hasClass('hs-unfold') || $(e.target).parents('.hs-unfold').length) {
+                              return false;
+                            }
+
+                            $('#exampleModal').modal('show')
+                          });
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="methods" class="hs-docs-heading">
+              Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card overflow-hidden">
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-thead-bordered card-table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Parameters</th>
+                      <th style="width: 50%;">Description</th>
+                      <th class="text-nowrap">Default value</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p><code>ghostClass</code></p>
+                      </td>
+                      <td>Class when draging.</td>
+                      <td><code>sortable-chosen-main</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+    <script src="@@autopath/node_modules/sortablejs/dist/sortable.umd.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+    <script src="@@autopath/assets/js/hs.sortable.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+
+        
+        // INITIALIZATION OF SORTABLE
+        // =======================================================
+        $('.js-sortable').each(function () {
+          var sortable = $.HSCore.components.HSSortable.init($(this));
+        });
+
+        
+        // INITIALIZATION OF SORTABLE LINK
+        // =======================================================
+        $('.js-sortable-link').click(function (e) {
+          if ($(e.target).hasClass('hs-unfold') || $(e.target).parents('.hs-unfold').length) {
+            return false;
+          }
+
+          window.location.replace($(this).attr('data-href'))
+        });
+
+        
+        // INITIALIZATION OF SORTABLE MODAL LINK
+        // =======================================================
+        $('.js-sortable-modal-link').click(function (e) {
+          if ($(e.target).hasClass('hs-unfold') || $(e.target).parents('.hs-unfold').length) {
+            return false;
+          }
+
+          $('#exampleModal').modal('show')
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

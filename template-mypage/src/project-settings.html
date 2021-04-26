@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Settings | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/quill/dist/quill.snow.css">
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <link rel="stylesheet" href="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+    }
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+  </head>
+
+  <body class="@@if(layoutBuilder.header.layoutMode === 'default'){has-navbar-vertical-aside navbar-vertical-aside-show-xl} @@if(layoutBuilder.sidebarLayout === 'compact'){navbar-vertical-aside-compact-mode} @@if(layoutBuilder.sidebarLayout === 'mini'){navbar-vertical-aside-mini-mode} footer-offset">
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.sidebarLayout !== 'mini') {
+      <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside-mini-cache.js"></script>
+    }
+
+    <!-- Search Form -->
+    @@include("@@autopath/partials/layouts-components/mobile-search.html")
+    <!-- End Search Form -->
+
+    <!-- ========== HEADER ========== -->
+    @@if (layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/header/main.html")
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'single') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/main-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/main-container.html")
+      }
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'double') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/double-line-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/double-line-container.html")
+      }
+    }
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/main.html", {
+        "category": "pages",
+        "subcategory": "project",
+        "link": "project-settings.html"
+      })
+    }
+
+    @@if (layoutBuilder.sidebarLayout === 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/compact.html", {
+        "category": "pages",
+        "subcategory": "project",
+        "link": "project-settings.html"
+      })
+    }
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main">
+      <!-- Content -->
+      <div class="content @@layoutBuilder.header.containerMode">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div class="row align-items-end mb-3">
+            <div class="col-sm">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-no-gutter">
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Pages</a></li>
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Projects</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Settings</li>
+                </ol>
+              </nav>
+
+              <h1 class="page-header-title">Settings</h1>
+            </div>
+          </div>
+          <!-- End Row -->
+
+          <!-- Nav -->
+          @@include("@@autopath/partials/layouts-components/nav-menu-project.html", {
+            "link": "project-settings.html"
+          })
+          <!-- End Nav -->
+        </div>
+        <!-- End Page Header -->
+
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Card -->
+            <div class="card card-lg mb-3 mb-lg-5">
+              <!-- Header -->
+              <div class="card-header">
+                <h4 class="card-header-title">Details</h4>
+              </div>
+              <!-- End Header -->
+
+              <!-- Body -->
+              <div class="card-body">
+                <!-- Form Group -->
+                <div class="form-group">
+                  <label class="input-label">Project logo</label>
+
+                  <div class="d-flex align-items-center">
+                    <!-- Avatar -->
+                    <label class="avatar avatar-xl avatar-circle avatar-uploader mr-5" for="avatarUploader">
+                      <img id="avatarProjectSettingsImg" class="avatar-img" src="@@autopath/assets/svg/brands/guideline.svg" alt="Image Description">
+
+                      <input type="file" class="js-file-attach avatar-uploader-input" id="avatarUploader"
+                             data-hs-file-attach-options='{
+                                "textTarget": "#avatarProjectSettingsImg",
+                                "mode": "image",
+                                "targetAttr": "src",
+                                "resetTarget": ".js-file-attach-reset-img",
+                                "resetImg": "@@autopath/assets/img/160x160/img2.jpg",
+                                "allowTypes": [".png", ".jpeg", ".jpg"]
+                             }'>
+
+                      <span class="avatar-uploader-trigger">
+                        <i class="tio-edit avatar-uploader-icon shadow-soft"></i>
+                      </span>
+                    </label>
+                    <!-- End Avatar -->
+
+                    <button type="button" class="js-file-attach-reset-img btn btn-white">Delete</button>
+                  </div>
+                </div>
+                <!-- End Form Group -->
+
+                <!-- Form Group -->
+                <div class="form-group">
+                  <label for="projectNameProjectSettingsLabel" class="input-label">Project name <i class="tio-help-outlined text-body ml-1" data-toggle="tooltip" data-placement="top" title="Displayed on public forums, such as Front."></i></label>
+
+                  <div class="input-group input-group-merge">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="tio-briefcase-outlined"></i>
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" name="projectName" id="projectNameProjectSettingsLabel" placeholder="Enter project name here" aria-label="Enter project name here" value="Cloud computing web service">
+                  </div>
+                </div>
+                <!-- End Form Group -->
+
+                <!-- Quill -->
+                <label class="input-label">Project description <span class="input-label-secondary">(Optional)</span></label>
+
+                <div class="quill-custom">
+                  <div id="qlToolbarContainer">
+                    <div class="row align-items-center">
+                      <div class="col-sm">
+                        <!-- Toolbar List -->
+                        <ul class="list-inline ql-toolbar-list">
+                          <li class="list-inline-item">
+                            <button class="ql-bold"></button>
+                          </li>
+                          <li class="list-inline-item">
+                            <button class="ql-italic"></button>
+                          </li>
+                          <li class="list-inline-item">
+                            <button class="ql-underline"></button>
+                          </li>
+                          <li class="list-inline-item">
+                            <button class="ql-strike"></button>
+                          </li>
+                          <li class="list-inline-item">
+                            <button class="ql-link"></button>
+                          </li>
+                          <li class="list-inline-item">
+                            <button class="ql-image"></button>
+                          </li>
+                          <li class="list-inline-item">
+                            <button class="ql-blockquote"></button>
+                          </li>
+                          <li class="list-inline-item">
+                            <button class="ql-code"></button>
+                          </li>
+                          <li class="list-inline-item">
+                            <button class="ql-list" value="bullet"></button>
+                          </li>
+                        </ul>
+                        <!-- End Toolbar List -->
+                      </div>
+                    </div>
+                    <!-- End Row -->
+                  </div>
+
+                  <div class="js-quill ql-editor-content"
+                       data-hs-quill-options='{
+                          "placeholder": "Type your message...",
+                          "toolbarBottom": true,
+                          "modules": {
+                            "toolbar": "#qlToolbarContainer"
+                          }
+                         }'>
+                  </div>
+                </div>
+                <!-- End Quill -->
+              </div>
+              <!-- End Body -->
+
+              <!-- Footer -->
+              <div class="card-footer d-flex justify-content-end align-items-center">
+                <button type="button" class="btn btn-white mr-2">Cancel</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+              <!-- End Footer -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Card -->
+            <div class="card card-lg">
+              <!-- Header -->
+              <div class="card-header">
+                <h4 class="card-header-title">Terms</h4>
+              </div>
+              <!-- End Header -->
+
+              <!-- Body -->
+              <div class="card-body">
+                <!-- Form Row -->
+                <div class="row">
+                  <div class="col-sm-6">
+                    <!-- Form Group -->
+                    <div class="form-group">
+                      <label for="paymentTermsProjectSettingsLabel" class="input-label">Terms</label>
+
+                      <!-- Select -->
+                      <div class="select2-custom">
+                        <select class="js-select2-custom custom-select" size="1" style="opacity: 0;" id="paymentTermsProjectSettingsLabel"
+                                data-hs-select2-options='{
+                                  "minimumResultsForSearch": "Infinity"
+                                }'>
+                          <option value="fixed">Fixed</option>
+                          <option value="Per hour">Per hour</option>
+                          <option value="Per day">Per day</option>
+                          <option value="Per week">Per week</option>
+                          <option value="Per month" selected>Per month</option>
+                          <option value="Per quarter">Per quarter</option>
+                          <option value="Per year">Per year</option>
+                        </select>
+                       </div>
+                      <!-- End Select -->
+                    </div>
+                    <!-- End Form Group -->
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="expectedValueProjectSettingsLabel" class="input-label">Expected value</label>
+
+                    <!-- Form Group -->
+                    <div class="form-group">
+                      <div class="input-group input-group-merge">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <i class="tio-dollar-outlined"></i>
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" name="expectedValue" id="expectedValueProjectSettingsLabel" placeholder="Enter value here" aria-label="Enter value here" value="100,000 USD">
+                      </div>
+                    </div>
+                    <!-- End Form Group -->
+                  </div>
+                </div>
+                <!-- End Form Row -->
+
+                <!-- Form Row -->
+                <div class="row">
+                  <div class="col-lg-6">
+                    <!-- Form Group -->
+                    <div class="form-group">
+                      <label for="milestoneProjectSettingsLabel" class="input-label">Milestone <a class="small ml-1" href="javascript:;">Change probability</a></label>
+
+                      <!-- Select -->
+                      <div class="select2-custom">
+                        <select class="js-select2-custom custom-select" size="1" style="opacity: 0;" id="milestoneProjectSettingsLabel"
+                                data-hs-select2-options='{
+                                  "minimumResultsForSearch": "Infinity"
+                                }'>
+                          <option value="New">New</option>
+                          <option value="Qualified">Qualified</option>
+                          <option value="Meeting">Meeting</option>
+                          <option value="Proposal" selected>Proposal</option>
+                          <option value="Negotiation">Negotiation</option>
+                          <option value="Contact">Contact</option>
+                        </select>
+                       </div>
+                      <!-- End Select -->
+                    </div>
+                    <!-- End Form Group -->
+                  </div>
+
+                  <div class="col-lg-6">
+                    <!-- Form Group -->
+                    <div class="form-group">
+                      <label for="privacyProjectSettingsLabel" class="input-label mr-2">Privacy</label>
+
+                      <!-- Select -->
+                      <div class="select2-custom">
+                        <select class="js-select2-custom custom-select" size="1" style="opacity: 0;" id="privacyProjectSettingsLabel"
+                                data-hs-select2-options='{
+                                  "minimumResultsForSearch": "Infinity"
+                                }'>
+                          <option value="privacy1" data-option-template='<span class="media"><i class="tio-group-senior tio-lg text-body mr-2" style="margin-top: .125rem;"></i><span class="media-body"><span class="d-block">Everyone</span><small class="select2-custom-hide">Public to Front Dashboard</small></span></span>'>Everyone</option>
+                          <option value="privacy2" disabled data-option-template='<span class="media"><i class="tio-lock-outlined tio-lg text-body mr-2" style="margin-top: .125rem;"></i><span class="media-body"><span class="d-block">Private to project members <span class="badge badge-soft-primary">Upgrade to Premium</span></span><small class="select2-custom-hide">Only visible to project members</small></span></span>'>Private to project members</option>
+                          <option value="privacy2" data-option-template='<span class="media"><i class="tio-user-outlined tio-lg text-body mr-2" style="margin-top: .125rem;"></i><span class="media-body"><span class="d-block">Private to me</span><small class="select2-custom-hide">Only visible to you</small></span></span>'>Private to me</option>
+                        </select>
+                       </div>
+                      <!-- End Select -->
+                    </div>
+                    <!-- End Form Group -->
+                  </div>
+                </div>
+                <!-- End Form Row -->
+
+                <!-- Checkbox -->
+                <div class="custom-control custom-checkbox mb-3">
+                  <input type="checkbox" class="custom-control-input" id="budgetProjectSettingsCheckbox" checked>
+                  <label class="custom-control-label" for="budgetProjectSettingsCheckbox">Budget resets every month</label>
+                </div>
+                <!-- End Checkbox -->
+
+                <!-- Checkbox -->
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="emailAlertProjectSettingsCheckbox" checked>
+                  <label class="custom-control-label" for="emailAlertProjectSettingsCheckbox">Send email alerts if project exceeds <span class="font-weight-bold">50.00%</span> of budget</label>
+                </div>
+                <!-- End Checkbox -->
+              </div>
+              <!-- End Body -->
+
+              <!-- Footer -->
+              <div class="card-footer d-flex justify-content-end">
+                <button type="button" class="btn btn-white mr-2">Cancel</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+              <!-- End Footer -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Content -->
+
+      <!-- Footer -->
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/footer/main.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/footer/container.html")
+      }
+      <!-- End Footer -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Keyboard Shortcuts -->
+    @@include("@@autopath/partials/layouts-components/sidebar-shortcuts.html")
+    <!-- End Keyboard Shortcuts -->
+
+    <!-- Activity -->
+    @@include("@@autopath/partials/layouts-components/sidebar-activity.html")
+    <!-- End Activity -->
+
+    <!-- Welcome Message Modal -->
+    @@include("@@autopath/partials/modals/modal-welcome.html")
+    <!-- End Welcome Message Modal -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
+    <script src="@@autopath/node_modules/select2/dist/js/select2.full.min.js"></script>
+    <script src="@@autopath/node_modules/quill/dist/quill.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="@@autopath/node_modules/daterangepicker/moment.min.js"></script>
+    <script src="@@autopath/node_modules/daterangepicker/daterangepicker.js"></script>
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <script src="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+    }
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.select2.js"></script>
+    <script src="@@autopath/assets/js/hs.quill.js"></script>
+    <script src="@@autopath/assets/js/hs.validation.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // =======================================================
+
+
+        // BUILDER TOGGLE INVOKER
+        // =======================================================
+        $('.js-navbar-vertical-aside-toggle-invoker').click(function () {
+          $('.js-navbar-vertical-aside-toggle-invoker i').tooltip('hide');
+        });
+
+        @@if (layoutBuilder.header.layoutMode !== 'default') {
+          // INITIALIZATION OF MEGA MENU
+          // =======================================================
+          var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+            desktop: {
+              position: 'left'
+            }
+          }).init();
+        }
+
+        
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+        
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+        $(".js-nav-tooltip-link").on("show.bs.tooltip", function(e) {
+          if (!$("body").hasClass("navbar-vertical-aside-mini-mode")) {
+            return false;
+          }
+        });
+
+        
+        // INITIALIZATION OF UNFOLD
+        // =======================================================
+        $('.js-hs-unfold-invoker').each(function () {
+          var unfold = new HSUnfold($(this)).init();
+        });
+
+        
+        // INITIALIZATION OF FORM SEARCH
+        // =======================================================
+        $('.js-form-search').each(function () {
+          new HSFormSearch($(this)).init()
+        });
+
+        
+        // INITIALIZATION OF FILE ATTACH
+        // =======================================================
+        $('.js-file-attach').each(function () {
+          var customFile = new HSFileAttach($(this)).init();
+        });
+
+        
+        // INITIALIZATION OF SELECT2
+        // =======================================================
+        $('.js-select2-custom').each(function () {
+          var select2 = $.HSCore.components.HSSelect2.init($(this));
+        });
+
+        
+        // INITIALIZATION OF QUILLJS EDITOR
+        // =======================================================
+        var quill = $.HSCore.components.HSQuill.init('.js-quill');
+
+        
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this)).init()
+        });
+
+        
+        // INITIALIZATION OF FORM VALIDATION
+        // =======================================================
+        $('.js-validate').each(function() {
+          $.HSCore.components.HSValidation.init($(this));
+        });
+
+        
+        // INITIALIZATION OF DATERANGEPICKER
+        // =======================================================
+        $('.js-daterangepicker').daterangepicker();
+
+        $('.js-daterangepicker-times').daterangepicker({
+          timePicker: true,
+          startDate: moment().startOf('hour'),
+          endDate: moment().startOf('hour').add(32, 'hour'),
+          locale: {
+            format: 'M/DD hh:mm A'
+          }
+        });
+
+        var start = moment();
+        var end = moment();
+
+        function cb(start, end) {
+          $('#js-daterangepicker-predefined .js-daterangepicker-predefined-preview').html(start.format('MMM D') + ' - ' + end.format('MMM D, YYYY'));
+        }
+
+        $('#js-daterangepicker-predefined').daterangepicker({
+          startDate: start,
+          endDate: end,
+          ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          }
+        }, cb);
+
+        cb(start, end);
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

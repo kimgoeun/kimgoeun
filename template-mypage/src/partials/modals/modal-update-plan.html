@@ -1,0 +1,197 @@
+<div class="modal fade" id="updatePlanModal" tabindex="-1" role="dialog" aria-labelledby="updatePlanModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <!-- Header -->
+      <div class="modal-header">
+        <h4 id="updatePlanModalTitle" class="modal-title">Subscription plan</h4>
+
+        <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close">
+          <i class="tio-clear tio-lg"></i>
+        </button>
+      </div>
+      <!-- End Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <!-- Toggle Switch -->
+        <div class="d-flex justify-content-center align-items-center mb-5">
+          <span>Annual</span>
+          <label class="toggle-switch mx-2" for="customSwitch">
+            <input type="checkbox" class="js-toggle-switch toggle-switch-input" id="customSwitch"
+                   data-hs-toggle-switch-options='{
+                     "targetSelector": "#pricingCount1, #pricingCount2, #pricingCount3"
+                   }'>
+            <span class="toggle-switch-label">
+              <span class="toggle-switch-indicator"></span>
+            </span>
+          </label>
+          <span>Monthly</span>
+        </div>
+        <!-- End Toggle Switch -->
+
+        <!-- Pricing -->
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 mb-3 mb-sm-5">
+            <!-- Card -->
+            <div class="card custom-checkbox-card custom-checkbox-card-lg">
+              <!-- Header -->
+              <div class="card-header d-block text-center">
+                <!-- Checkbox -->
+                <input type="radio" id="billingPricingRadio1" name="billingPricingRadio" class="custom-checkbox-card-input">
+                <label class="custom-checkbox-card-label custom-checkbox-card-label-stretched" for="billingPricingRadio1"></label>
+                <!-- End Checkbox -->
+
+                <small class="card-subtitle">Basic</small>
+                <div class="mb-3">
+                  <span class="card-title display-3">Free</span>
+                </div>
+
+                <span>Forever free</span>
+                <p class="card-text font-weight-bold text-primary">$0</p>
+              </div>
+              <!-- End Header -->
+
+              <!-- Body -->
+              <div class="card-body">
+                <ul class="list-checked list-checked-primary list-unstyled-py-2">
+                  <li class="list-checked-item">15 GB storage</li>
+                </ul>
+              </div>
+              <!-- End Body -->
+
+              <!-- Footer -->
+              <div class="card-body-stretched">
+                <button type="button" class="btn btn-block btn-white custom-checkbox-card-btn">Select plan</button>
+              </div>
+
+              <div class="card-footer">
+                <p class="card-text small">
+                  <i class="tio-help-outlined mr-1"></i> Terms &amp; conditions apply
+                </p>
+              </div>
+              <!-- End Footer -->
+            </div>
+            <!-- End Card -->
+          </div>
+
+          <div class="col-sm-6 col-lg-4 mb-3 mb-sm-5">
+            <!-- Card -->
+            <div class="card custom-checkbox-card custom-checkbox-card-lg checked">
+              <!-- Header -->
+              <div class="card-header d-block text-center">
+                <!-- Checkbox -->
+                <input type="radio" id="billingPricingRadio2" name="billingPricingRadio" class="custom-checkbox-card-input" checked>
+                <label class="custom-checkbox-card-label custom-checkbox-card-label-stretched" for="billingPricingRadio2"></label>
+                <!-- End Checkbox -->
+
+                <small class="card-subtitle">Starter</small>
+                <div class="mb-3">
+                  <span class="card-title display-3">
+                    $<span id="pricingCount1"
+                           data-hs-toggle-switch-item-options='{
+                             "min": 22,
+                             "max": 32
+                           }'>32</span>
+                    <small class="font-size-sm text-muted">/ mon</small>
+                  </span>
+                </div>
+
+                <span>Or prepay annually</span>
+                <p class="card-text font-weight-bold text-primary">Save $10</p>
+              </div>
+              <!-- End Header -->
+
+              <!-- Body -->
+              <div class="card-body">
+                <ul class="list-checked list-checked-primary list-unstyled-py-2">
+                  <li class="list-checked-item">100 GB storage</li>
+                  <li class="list-checked-item">2 sources</li>
+                  <li class="list-checked-item">100 integrations</li>
+                </ul>
+              </div>
+              <!-- End Body -->
+
+              <!-- Footer -->
+              <div class="card-body-stretched">
+                <button type="button" class="btn btn-block btn-white custom-checkbox-card-btn">Select plan</button>
+              </div>
+
+              <div class="card-footer">
+                <p class="card-text small">
+                  <i class="tio-help-outlined mr-1"></i> Terms &amp; conditions apply
+                </p>
+              </div>
+              <!-- End Footer -->
+            </div>
+            <!-- End Card -->
+          </div>
+
+          <div class="col-sm-6 col-lg-4 mb-3 mb-sm-5">
+            <!-- Card -->
+            <div class="card custom-checkbox-card custom-checkbox-card-lg">
+              <!-- Header -->
+              <div class="card-header d-block text-center">
+                <!-- Checkbox -->
+                <input type="radio" id="billingPricingRadio3" name="billingPricingRadio" class="custom-checkbox-card-input">
+                <label class="custom-checkbox-card-label custom-checkbox-card-label-stretched" for="billingPricingRadio3"></label>
+                <!-- End Checkbox -->
+
+                <small class="card-subtitle">Enterprise</small>
+                <div class="mb-3">
+                  <span class="card-title display-3">
+                    $<span id="pricingCount2"
+                           data-hs-toggle-switch-item-options='{
+                             "min": 42,
+                             "max": 54
+                           }'>54</span>
+                    <small class="font-size-sm text-muted">/ mon</small>
+                  </span>
+                </div>
+
+                <span>Or prepay annually</span>
+                <p class="card-text font-weight-bold text-primary">Save $12</p>
+              </div>
+              <!-- End Header -->
+
+              <!-- Body -->
+              <div class="card-body">
+                <ul class="list-checked list-checked-primary list-unstyled-py-2">
+                  <li class="list-checked-item">200 GB storage</li>
+                  <li class="list-checked-item">10 sources</li>
+                  <li class="list-checked-item">300 integrations</li>
+                </ul>
+              </div>
+              <!-- End Body -->
+
+              <!-- Footer -->
+              <div class="card-body-stretched">
+                <button type="button" class="btn btn-block btn-white custom-checkbox-card-btn">Select plan</button>
+              </div>
+
+              <div class="card-footer">
+                <p class="card-text small">
+                  <i class="tio-help-outlined mr-1"></i> Terms &amp; conditions apply
+                </p>
+              </div>
+              <!-- End Footer -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Pricing -->
+
+        <div class="text-center mb-2 mb-sm-0">
+          <a class="btn btn-ghost-secondary" href="#">
+            <i class="tio-swap-horizontal mr-1"></i> Compare plans
+          </a>
+        </div>
+
+        <div class="d-flex justify-content-center justify-content-sm-end">
+          <button type="button" class="btn btn-white mr-2" data-dismiss="modal" aria-label="Close">Cancel</button>
+          <button type="submit" class="btn btn-primary">Upgrade plan</button>
+        </div>
+      </div>
+      <!-- End Body -->
+    </div>
+  </div>
+</div>

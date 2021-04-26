@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Profile Cover - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/select2/dist/css/select2.min.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "profile-cover.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Profile Cover</h1>
+                  <p class="lead">Beautiful profile cover panels.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="basic-example" class="hs-docs-heading">
+              Basic example <a class="anchorjs-link" href="#basic-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- Profile Cover -->
+                  <div class="profile-cover">
+                    <div class="profile-cover-img-wrapper">
+                      <img class="profile-cover-img" src="@@autopath/assets/img/1920x400/img1.jpg" alt="Image Description">
+                    </div>
+                  </div>
+                  <!-- End Profile Cover -->
+
+                  <!-- Profile Header -->
+                  <div class="text-center">
+                    <!-- Avatar -->
+                    <div class="avatar avatar-xxl avatar-circle avatar-border-lg profile-cover-avatar">
+                      <img class="avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description">
+                      <span class="avatar-status avatar-status-success"></span>
+                    </div>
+                    <!-- End Avatar -->
+
+                    <h1 class="page-header-title">Ella Lauda <i class="tio-verified tio-lg text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></h1>
+
+                    <!-- List -->
+                    <ul class="list-inline list-inline-m-1">
+                      <li class="list-inline-item">
+                        <i class="tio-city mr-1"></i>
+                        <span>Htmlstream</span>
+                      </li>
+
+                      <li class="list-inline-item">
+                        <i class="tio-poi-outlined mr-1"></i>
+                        <a href="#">San Francisco,</a>
+                        <a href="#">US</a>
+                      </li>
+
+                      <li class="list-inline-item">
+                        <i class="tio-date-range mr-1"></i>
+                        <span>Joined March 2017</span>
+                      </li>
+                    </ul>
+                    <!-- End List -->
+                  </div>
+                  <!-- End Profile Header -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Profile Cover --&gt;
+                      &lt;div class="profile-cover"&gt;
+                        &lt;div class="profile-cover-img-wrapper"&gt;
+                          &lt;img class="profile-cover-img" src="@@autopath/assets/img/1920x400/img1.jpg" alt="Image Description"&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Profile Cover --&gt;
+
+                      &lt;!-- Profile Header --&gt;
+                      &lt;div class="text-center mb-5"&gt;
+                        &lt;!-- Avatar --&gt;
+                        &lt;div class="avatar avatar-xxl avatar-circle avatar-border-lg profile-cover-avatar"&gt;
+                          &lt;img class="avatar-img" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image Description"&gt;
+                          &lt;span class="avatar-status avatar-status-success"&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Avatar --&gt;
+
+                        &lt;h1 class="page-header-title"&gt;Ella Lauda &lt;i class="tio-verified tio-lg text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"&gt;&lt;/i&gt;&lt;/h1&gt;
+
+                        &lt;!-- List --&gt;
+                        &lt;ul class="list-inline list-inline-m-1"&gt;
+                          &lt;li class="list-inline-item"&gt;
+                            &lt;i class="tio-city mr-1"&gt;&lt;/i&gt;
+                            &lt;span&gt;Htmlstream&lt;/span&gt;
+                          &lt;/li&gt;
+
+                          &lt;li class="list-inline-item"&gt;
+                            &lt;i class="tio-poi-outlined mr-1"&gt;&lt;/i&gt;
+                            &lt;a href="#"&gt;San Francisco,&lt;/a&gt;
+                            &lt;a href="#"&gt;US&lt;/a&gt;
+                          &lt;/li&gt;
+
+                          &lt;li class="list-inline-item"&gt;
+                            &lt;i class="tio-date-range mr-1"&gt;&lt;/i&gt;
+                            &lt;span&gt;Joined March 2017&lt;/span&gt;
+                          &lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;!-- End List --&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Profile Header --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="with-card" class="hs-docs-heading">
+              With card <a class="anchorjs-link" href="#with-card" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-cssTab2" data-toggle="pill" href="#nav-css2" role="tab" aria-controls="nav-css2" aria-selected="false">CSS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab2" data-toggle="pill" href="#nav-js2" role="tab" aria-controls="nav-js2" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Alert -->
+              <div class="alert alert-soft-dark card-alert" role="alert">
+                This example uses <a class="alert-link" href="file-attach.html">HS File Attach <i class="tio-link"></i></a> and <a class="alert-link" href="select2.html">Select2 <i class="tio-link"></i></a> libraries.
+              </div>
+              <!-- End Alert -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <!-- Card -->
+                  <div class="card">
+                    <!-- Profile Cover -->
+                    <div class="profile-cover">
+                      <div class="profile-cover-img-wrapper">
+                        <img id="profileCoverImg" class="profile-cover-img" src="@@autopath/assets/img/1920x400/img2.jpg" alt="Image Description">
+
+                        <!-- Custom File Cover -->
+                        <div class="profile-cover-content profile-cover-btn">
+                          <div class="custom-file-btn">
+                            <input type="file" class="js-file-attach custom-file-btn-input" id="profileCoverUplaoder"
+                                   data-hs-file-attach-options='{
+                                      "textTarget": "#profileCoverImg",
+                                      "mode": "image",
+                                      "targetAttr": "src"
+                                   }'>
+                            <label class="custom-file-btn-label btn btn-sm btn-white" for="profileCoverUplaoder">
+                              <i class="tio-add-photo mr-sm-1"></i>
+                              <span class="d-none d-sm-inline-block">Update your header</span>
+                            </label>
+                          </div>
+                        </div>
+                        <!-- End Custom File Cover -->
+                      </div>
+                    </div>
+                    <!-- End Profile Cover -->
+
+                    <!-- Avatar -->
+                    <label class="avatar avatar-xxl avatar-circle avatar-border-lg avatar-uploader profile-cover-avatar" for="avatarUploader">
+                      <img id="avatarImg" class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description">
+
+                      <input type="file" class="js-file-attach avatar-uploader-input" id="avatarUploader"
+                             data-hs-file-attach-options='{
+                                "textTarget": "#avatarImg",
+                                "mode": "image",
+                                "targetAttr": "src"
+                             }'>
+
+                      <span class="avatar-uploader-trigger">
+                        <i class="tio-edit avatar-uploader-icon shadow-soft"></i>
+                      </span>
+                    </label>
+                    <!-- End Avatar -->
+
+                    <!-- Body -->
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-sm-5">
+                          <span class="d-block font-size-sm mb-2">Who can see your profile photo? <i class="tio-help-outlined" data-toggle="tooltip" data-placement="top" title="Your visibility setting only applies to your profile photo. Your header image is always visible to anyone."></i></span>
+
+                          <!-- Select -->
+                          <div class="select2-custom">
+                            <select class="js-select2-custom custom-select" size="1" style="opacity: 0;"
+                                    data-hs-select2-options='{
+                                      "minimumResultsForSearch": "Infinity"
+                                    }'>
+                              <option value="privacy1" data-option-template='<span class="media"><i class="tio-earth-east tio-lg text-body mr-2" style="margin-top: .125rem;"></i><span class="media-body"><span class="d-block">Anyone</span><small class="select2-custom-hide">Visible to anyone who can view your content. Accessible by installed apps.</small></span></span>'>Anyone</option>
+                              <option value="privacy2" data-option-template='<span class="media"><i class="tio-lock-outlined tio-lg text-body mr-2" style="margin-top: .125rem;"></i><span class="media-body"><span class="d-block">Only you</span><small class="select2-custom-hide">Only visible to you.</small></span></span>'>Only you</option>
+                            </select>
+                           </div>
+                          <!-- End Select -->
+                         </div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                    <!-- End Body -->
+                  </div>
+                  <!-- End Card -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Card --&gt;
+                      &lt;div class="card"&gt;
+                        &lt;!-- Profile Cover --&gt;
+                        &lt;div class="profile-cover"&gt;
+                          &lt;div class="profile-cover-img-wrapper"&gt;
+                            &lt;img id="profileCoverImg" class="profile-cover-img" src="@@autopath/assets/img/1920x400/img2.jpg" alt="Image Description"&gt;
+
+                            &lt;!-- Custom File Cover --&gt;
+                            &lt;div class="profile-cover-content profile-cover-btn"&gt;
+                              &lt;div class="custom-file-btn"&gt;
+                                &lt;input type="file" class="js-file-attach custom-file-btn-input" id="profileCoverUplaoder"
+                                       data-hs-file-attach-options='{
+                                          "textTarget": "#profileCoverImg",
+                                          "mode": "image",
+                                          "targetAttr": "src"
+                                       }'&gt;
+                                &lt;label class="custom-file-btn-label btn btn-sm btn-white" for="profileCoverUplaoder"&gt;
+                                  &lt;i class="tio-add-photo mr-sm-1"&gt;&lt;/i&gt;
+                                  &lt;span class="d-none d-sm-inline-block"&gt;Update your header&lt;/span&gt;
+                                &lt;/label&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;!-- End Custom File Cover --&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Profile Cover --&gt;
+
+                        &lt;!-- Avatar --&gt;
+                        &lt;label class="avatar avatar-xxl avatar-circle avatar-border-lg avatar-uploader profile-cover-avatar" for="avatarUploader"&gt;
+                          &lt;img id="avatarImg" class="avatar-img" src="@@autopath/assets/img/160x160/img6.jpg" alt="Image Description"&gt;
+
+                          &lt;input type="file" class="js-file-attach avatar-uploader-input" id="avatarUploader"
+                                 data-hs-file-attach-options='{
+                                    "textTarget": "#avatarImg",
+                                    "mode": "image",
+                                    "targetAttr": "src"
+                                 }'&gt;
+
+                          &lt;span class="avatar-uploader-trigger"&gt;
+                            &lt;i class="tio-edit avatar-uploader-icon shadow-soft"&gt;&lt;/i&gt;
+                          &lt;/span&gt;
+                        &lt;/label&gt;
+                        &lt;!-- End Avatar --&gt;
+
+                        &lt;!-- Body --&gt;
+                        &lt;div class="card-body"&gt;
+                          &lt;div class="row"&gt;
+                            &lt;div class="col-sm-5"&gt;
+                              &lt;span class="d-block font-size-sm mb-2"&gt;Who can see your profile photo? &lt;i class="tio-help-outlined" data-toggle="tooltip" data-placement="top" title="Your visibility setting only applies to your profile photo. Your header image is always visible to anyone."&gt;&lt;/i&gt;&lt;/span&gt;
+
+                              &lt;!-- Select --&gt;
+                              &lt;div class="select2-custom"&gt;
+                                &lt;select class="js-select2-custom custom-select" size="1" style="opacity: 0;"
+                                        data-hs-select2-options='{
+                                          "minimumResultsForSearch": "Infinity"
+                                        }'&gt;
+                                  &lt;option value="privacy1" data-option-template='&lt;span class="media"&gt;&lt;i class="tio-earth-east tio-lg text-body mr-2" style="margin-top: .125rem;"&gt;&lt;/i&gt;&lt;span class="media-body"&gt;&lt;span class="d-block"&gt;Anyone&lt;/span&gt;&lt;small class="select2-custom-hide"&gt;Visible to anyone who can view your content. Accessible by installed apps.&lt;/small&gt;&lt;/span&gt;&lt;/span&gt;'&gt;Anyone&lt;/option&gt;
+                                  &lt;option value="privacy2" data-option-template='&lt;span class="media"&gt;&lt;i class="tio-lock-outlined tio-lg text-body mr-2" style="margin-top: .125rem;"&gt;&lt;/i&gt;&lt;span class="media-body"&gt;&lt;span class="d-block"&gt;Only you&lt;/span&gt;&lt;small class="select2-custom-hide"&gt;Only visible to you.&lt;/small&gt;&lt;/span&gt;&lt;/span&gt;'&gt;Only you&lt;/option&gt;
+                                &lt;/select&gt;
+                               &lt;/div&gt;
+                              &lt;!-- End Select --&gt;
+                             &lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Row --&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Body --&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Card --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-css2" role="tabpanel" aria-labelledby="nav-cssTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;link rel="stylesheet" href="@@autopath/node_modules/select2/dist/css/select2.min.css"&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js2" role="tabpanel" aria-labelledby="nav-jsTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- JS Implementing Plugins --&gt;
+                      &lt;script src="@@autopath/assets/vendor/hs-file-attach/dist/hs-file-attach.min.js"&gt;&lt;/script&gt;
+                      &lt;script src="@@autopath/node_modules/select2/dist/js/select2.full.min.js"&gt;&lt;/script&gt;
+
+                      &lt;!-- JS Front --&gt;
+                      &lt;script src="@@autopath/assets/js/hs.select2.js"&gt;&lt;/script&gt;
+
+                      &lt;!-- JS Plugins Init. --&gt;
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          // INITIALIZATION OF FILE ATTACH
+                          // =======================================================
+                          $('.js-file-attach').each(function () {
+                            var customFile = new HSFileAttach($(this)).init();
+                          });
+
+
+                          // INITIALIZATION OF SELECT2
+                          // =======================================================
+                          $('.js-select2-custom').each(function () {
+                            var select2 = $.HSCore.components.HSSelect2.init($(this));
+                          });
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+    <script src="@@autopath/assets/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
+    <script src="@@autopath/node_modules/select2/dist/js/select2.full.min.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+    <script src="@@autopath/assets/js/hs.select2.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+
+        
+        // INITIALIZATION OF FILE ATTACH
+        // =======================================================
+        $('.js-file-attach').each(function () {
+          var customFile = new HSFileAttach($(this)).init();
+        });
+
+        
+        // INITIALIZATION OF SELECT2
+        // =======================================================
+        $('.js-select2-custom').each(function () {
+          var select2 = $.HSCore.components.HSSelect2.init($(this));
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

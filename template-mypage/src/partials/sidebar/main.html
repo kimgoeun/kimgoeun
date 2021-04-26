@@ -1,0 +1,58 @@
+<aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl @@if(layoutBuilder.skin !== 'light'){navbar-bordered} @@if(layoutBuilder.skin === 'dark'){navbar-dark} @@if(layoutBuilder.skin === 'light'){navbar-light}">
+  <div class="navbar-vertical-container">
+    <div class="navbar-vertical-footer-offset">
+      <div class="navbar-brand-wrapper justify-content-between">
+        <!-- Logo -->
+        @@if(layoutBuilder.skin === 'dark') {
+          @@include("../layouts-components/navbar-logo-light.html")
+        }
+        @@if(layoutBuilder.skin !== 'dark') {
+          @@include("../layouts-components/navbar-logo.html")
+        }
+        <!-- End Logo -->
+
+        <!-- Navbar Vertical Toggle -->
+        <button type="button" class="js-navbar-vertical-aside-toggle-invoker navbar-vertical-aside-toggle btn btn-icon btn-xs btn-ghost-dark">
+          <i class="tio-clear tio-lg"></i>
+        </button>
+        <!-- End Navbar Vertical Toggle -->
+      </div>
+
+      <!-- Content -->
+      <div class="navbar-vertical-content">
+        <ul class="navbar-nav navbar-nav-lg nav-tabs">
+          @@include("../layouts-components/navbar-vertical-menu.html", {
+            "category": "@@category",
+            "subcategory": "@@subcategory",
+            "link": "@@link"
+          })
+        </ul>
+      </div>
+      <!-- End Content -->
+
+      <!-- Footer -->
+      <div class="navbar-vertical-footer">
+        <ul class="navbar-vertical-footer-list">
+          <li class="navbar-vertical-footer-list-item">
+            <!-- Unfold -->
+            @@include("../layouts-components/sidebar-builder-toggle-ghost-secondary.html")
+            <!-- End Unfold -->
+          </li>
+
+          <li class="navbar-vertical-footer-list-item">
+            <!-- Other Links -->
+            @@include("../layouts-components/dropdown-help.html")
+            <!-- End Other Links -->
+          </li>
+
+          <li class="navbar-vertical-footer-list-item">
+            <!-- Language -->
+            @@include("../layouts-components/dropdown-language.html")
+            <!-- End Language -->
+          </li>
+        </ul>
+      </div>
+      <!-- End Footer -->
+    </div>
+  </div>
+</aside>

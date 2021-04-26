@@ -1,0 +1,72 @@
+<div class="js-nav-scroller hs-nav-scroller-horizontal mb-5">
+  <span class="hs-nav-scroller-arrow-prev" style="display: none;">
+    <a class="hs-nav-scroller-arrow-link" href="javascript:;">
+      <i class="tio-chevron-left"></i>
+    </a>
+  </span>
+
+  <span class="hs-nav-scroller-arrow-next" style="display: none;">
+    <a class="hs-nav-scroller-arrow-link" href="javascript:;">
+      <i class="tio-chevron-right"></i>
+    </a>
+  </span>
+
+  <ul class="nav nav-tabs align-items-center">
+    <li class="nav-item">
+      <a class="nav-link @@if(link=='user-profile.html'){active}" href="user-profile.html">Profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link @@if(link=='user-profile-teams.html'){active}" href="user-profile-teams.html">Teams</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link @@if(link=='user-profile-projects.html'){active}" href="user-profile-projects.html">Projects <span class="badge badge-soft-dark rounded-circle ml-1">3</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link @@if(link=='user-profile-connections.html'){active}" href="user-profile-connections.html">Connections</a>
+    </li>
+
+    <li class="nav-item ml-auto">
+      <a class="btn btn-sm btn-white mr-2" href="#">
+        <i class="tio-user-add mr-1"></i> Connect
+      </a>
+
+      <a class="btn btn-icon btn-sm btn-white mr-2" href="#">
+        <i class="tio-format-points mr-1"></i>
+      </a>
+
+      <!-- Unfold -->
+      <div class="hs-unfold hs-nav-scroller-unfold">
+        <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-white" href="javascript:;"
+           data-hs-unfold-options='{
+             "target": "#profileDropdown",
+             "type": "css-animation"
+           }'>
+          <i class="tio-more-vertical"></i>
+        </a>
+
+        <div id="profileDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right mt-1">
+          <span class="dropdown-header">Settings</span>
+
+          <a class="dropdown-item" href="#">
+            <i class="tio-share dropdown-item-icon"></i> Share profile
+          </a>
+          <a class="dropdown-item" href="#">
+            <i class="tio-blocked dropdown-item-icon"></i> Block page and profile
+          </a>
+          <a class="dropdown-item" href="#">
+            <i class="tio-info-outined dropdown-item-icon"></i> Suggest edits
+          </a>
+
+          <div class="dropdown-divider"></div>
+
+          <span class="dropdown-header">Feedback</span>
+
+          <a class="dropdown-item" href="#">
+            <i class="tio-report-outlined dropdown-item-icon"></i> Report
+          </a>
+        </div>
+      </div>
+      <!-- End Unfold -->
+    </li>
+  </ul>
+</div>

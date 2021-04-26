@@ -1,0 +1,26 @@
+<aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl @@if(layoutBuilder.skin === 'default'){navbar-bordered} @@if(layoutBuilder.skin === 'dark'){navbar-dark} @@if(layoutBuilder.skin === 'light'){navbar-light}">
+  <div class="navbar-vertical-container">
+    <div class="navbar-brand d-flex justify-content-center">
+      <!-- Logo -->
+      @@if(layoutBuilder.skin === 'dark') {
+        @@include("../layouts-components/navbar-logo-short-light.html")
+      }
+      @@if(layoutBuilder.skin !== 'dark') {
+        @@include("../layouts-components/navbar-logo-short.html")
+      }
+      <!-- End Logo -->
+    </div>
+
+    <!-- Content -->
+    <div class="navbar-vertical-content">
+      <ul class="navbar-nav nav-compact">
+        @@include("../layouts-components/navbar-vertical-menu-compact.html", {
+          "category": "@@category",
+          "subcategory": "@@subcategory",
+          "link": "@@link"
+        })
+      </ul>
+    </div>
+    <!-- End Content -->
+  </div>
+</aside>

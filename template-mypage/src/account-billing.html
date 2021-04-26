@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Billing | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/select2/dist/css/select2.min.css">
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <link rel="stylesheet" href="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+    }
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+  </head>
+
+  <body class="@@if(layoutBuilder.header.layoutMode === 'default'){has-navbar-vertical-aside navbar-vertical-aside-show-xl} @@if(layoutBuilder.sidebarLayout === 'compact'){navbar-vertical-aside-compact-mode} @@if(layoutBuilder.sidebarLayout === 'mini'){navbar-vertical-aside-mini-mode} footer-offset">
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.sidebarLayout !== 'mini') {
+      <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside-mini-cache.js"></script>
+    }
+
+    <!-- Search Form -->
+    @@include("@@autopath/partials/layouts-components/mobile-search.html")
+    <!-- End Search Form -->
+
+    <!-- ========== HEADER ========== -->
+    @@if (layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/header/main.html")
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'single') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/main-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/main-container.html")
+      }
+    }
+
+    @@if (layoutBuilder.header.layoutMode === 'double') {
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/header/double-line-fluid.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/header/double-line-container.html")
+      }
+    }
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@if (layoutBuilder.sidebarLayout !== 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/main.html", {
+        "category": "pages",
+        "subcategory": "account",
+        "link": "account-billing.html"
+      })
+    }
+
+    @@if (layoutBuilder.sidebarLayout === 'compact' && layoutBuilder.header.layoutMode === 'default') {
+      @@include("@@autopath/partials/sidebar/compact.html", {
+        "category": "pages",
+        "subcategory": "account",
+        "link": "account-billing.html"
+      })
+    }
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main">
+      <!-- Content -->
+      <div class="content @@layoutBuilder.header.containerMode">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div class="row align-items-end">
+            <div class="col-sm mb-2 mb-sm-0">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-no-gutter">
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Pages</a></li>
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Account</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Billing</li>
+                </ol>
+              </nav>
+
+              <h1 class="page-header-title">Billing</h1>
+            </div>
+
+            <div class="col-sm-auto">
+              <a class="btn btn-primary" href="user-profile-my-profile.html">
+                <i class="tio-user mr-1"></i> My profile
+              </a>
+            </div>
+          </div>
+          <!-- End Row -->
+        </div>
+        <!-- End Page Header -->
+
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Card -->
+            <div class="card mb-3 mb-lg-5">
+              <!-- Header -->
+              <div class="card-header">
+                <h4 class="card-header-title">Overview</h4>
+
+                <a class="btn btn-sm btn-ghost-secondary" href="#">
+                  <i class="tio-download-to mr-1"></i> Download .CSV
+                </a>
+              </div>
+              <!-- End Header -->
+
+              <!-- Body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md mb-3 mb-md-0">
+                    <div class="mb-4">
+                      <span class="card-subtitle mb-0">Your plan (billed yearly):</span>
+                      <h3>Starter - April 2020</h3>
+                    </div>
+
+                    <span class="card-subtitle mb-0">Total per year:</span>
+                    <h2 class="h1 text-primary">$264 USD</h2>
+                  </div>
+
+                  <ul class="list-inline list-unstyled col-md-auto">
+                    <li class="list-inline-item mb-2 mr-2">
+                      <a class="btn btn-white" href="#">Cancel subscription</a>
+                    </li>
+                    <li class="list-inline-item mb-2">
+                      <div id="updatePlanPopover" data-toggle="popover" data-offset="-83" data-placement="bottom" title="<div class='d-flex align-items-center'>Subscription plan <a href='#!' class='close close-light ml-auto'><i id='closeUpdatePlanPopover' class='tio-clear'></i></a></div>" data-content="Check out this Subscription plan modal example." data-html="true">
+                        <a class="btn btn-primary" href="javascript:;" data-toggle="modal" data-target="#updatePlanModal">Update plan</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- End Row -->
+              </div>
+              <!-- End Body -->
+
+              <hr class="my-4">
+
+              <!-- Body -->
+              <div class="card-body">
+                <div class="row align-items-center flex-grow-1 mb-2">
+                  <div class="col">
+                    <h4 class="card-header-title">Storage usage</h4>
+                  </div>
+
+                  <div class="col-auto">
+                    <span class="font-weight-bold text-dark">4.27 GB</span> used of 6 GB
+                  </div>
+                </div>
+                <!-- End Row -->
+
+                <!-- Progress -->
+                <div class="progress rounded-pill mb-3">
+                  <div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar opacity" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <!-- End Progress -->
+
+                <!-- Legend Indicators -->
+                <div class="row">
+                  <div class="col-auto">
+                    <span class="legend-indicator bg-primary"></span> Personal usage space
+                  </div>
+
+                  <div class="col-auto">
+                    <span class="legend-indicator bg-primary opacity"></span> Shared space
+                  </div>
+
+                  <div class="col-auto">
+                    <span class="legend-indicator"></span> Unused space
+                  </div>
+                </div>
+                <!-- End Legend Indicators -->
+              </div>
+              <!-- End Body -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Card -->
+            <div class="card mb-3 mb-lg-5">
+              <!-- Header -->
+              <div class="card-header">
+                <h4 class="card-header-title">Billing address</h4>
+              </div>
+              <!-- End Header -->
+
+              <!-- Body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-6 mb-4 mb-sm-7">
+                    <!-- Radio Checkbox -->
+                    <div class="custom-control custom-radio custom-control-inline w-100 h-100">
+                      <input type="radio" id="billingRadio1" name="billingRadio" class="custom-control-input" checked>
+                      <label class="custom-control-label" for="billingRadio1">
+                        <span class="h4 d-block">Billing address #1</span>
+
+                        <span class="d-block mb-2">
+                          45 Roker Terrace<br>
+                          Latheronwheel<br>
+                          KW5 8NW, London<br>
+                          UK <img class="avatar avatar-xss avatar-circle ml-1" src="@@autopath/node_modules/flag-icon-css/flags/1x1/gb.svg" alt="Great Britain Flag">
+                        </span>
+
+                        <a class="btn btn-sm btn-white" href="account-settings.html#accountType">
+                          <i class="tio-edit mr-1"></i> Edit address
+                        </a>
+                      </label>
+                    </div>
+                    <!-- End Radio Checkbox -->
+                  </div>
+
+                  <div class="col-sm-6 mb-4 mb-sm-7">
+                    <!-- Radio Checkbox -->
+                    <div class="custom-control custom-radio custom-control-inline w-100 h-100">
+                      <input type="radio" id="billingRadio2" name="billingRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="billingRadio2">
+                        <span class="h4 d-block">Billing address #2</span>
+
+                        <span class="d-block mb-2">
+                          27 Thornton St<br>
+                          Hundleby<br>
+                          PE23 0ZJ, Manchester<br>
+                          UK <img class="avatar avatar-xss avatar-circle ml-1" src="@@autopath/node_modules/flag-icon-css/flags/1x1/gb.svg" alt="Great Britain Flag">
+                        </span>
+
+                        <a class="btn btn-sm btn-white" href="account-settings.html#accountType">
+                          <i class="tio-edit mr-1"></i> Edit address
+                        </a>
+                      </label>
+                    </div>
+                    <!-- End Radio Checkbox -->
+                  </div>
+
+                  <div class="col-sm-6 mb-4 mb-sm-7">
+                    <!-- Card -->
+                    <a class="card card-dashed h-100" href="javascript:;" data-toggle="modal" data-target="#addAddressModal">
+                      <div class="card-body card-body-centered card-dashed-body">
+                        <img class="avatar avatar-xl avatar-4by3 mb-2" src="@@autopath/assets/svg/illustrations/book.svg" alt="Image Description">
+                        <span class="text-primary text-hover-primary">
+                          <i class="tio-add"></i> Add a new address
+                        </span>
+                      </div>
+                    </a>
+                    <!-- End Card -->
+                  </div>
+                </div>
+                <!-- End Row -->
+
+                <div class="mb-4">
+                  <h4>Tax location</h4>
+                  <p class="mb-0">UK - 20.00% VAT</p>
+                  <a class="link" href="#">More info</a>
+                </div>
+
+                <p class="mb-0">Your text location determines the taxes that are applied to your bill.</p>
+                <a class="link" href="#">How do I correct my tax location?</a>
+              </div>
+              <!-- End Body -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Card -->
+            <div class="card mb-3 mb-lg-5">
+              <!-- Header -->
+              <div class="card-header">
+                <h4 class="card-header-title">Payment method</h4>
+              </div>
+              <!-- End Header -->
+
+              <!-- Body -->
+              <div class="card-body">
+                <div class="mb-4">
+                  <p>Cards will be charged either at the end of the month or whenever your balance exceeds the usage threshold. All major credit / debit cards accepted.</p>
+                </div>
+
+                <!-- List Group -->
+                <ul class="list-group mb-3">
+                  <!-- List Item -->
+                  <li class="list-group-item">
+                    <h4>Mark Williams <span class="badge badge-primary badge-pill text-uppercase ml-1">Primary</span></h4>
+
+                    <div class="media">
+                      <img class="avatar avatar-sm avatar-4by3 mr-3" src="@@autopath/assets/svg/brands/mastercard.svg" alt="Image Description">
+
+                      <div class="media-body">
+                        <div class="row">
+                          <div class="col-sm mb-2 mb-sm-0">
+                            <span class="d-block text-dark">MasterCard &bull;&bull;&bull;&bull; 4242</span>
+                            <small class="d-block text-muted">Checking - Expires 12/22</small>
+                          </div>
+
+                          <div class="col-sm-auto">
+                            <div class="d-flex justify-content-sm-end">
+                              <a class="btn btn-xs btn-white mr-2" href="javascript:;" data-toggle="modal" data-target="#editCardModal">
+                                <i class="tio-edit mr-1"></i> Edit
+                              </a>
+
+                              <button type="button" class="btn btn-xs btn-white">
+                                <i class="tio-delete-outlined mr-1"></i> Delete
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Row -->
+                      </div>
+                    </div>
+                  </li>
+                  <!-- End List Item -->
+
+                  <!-- List Item -->
+                  <li class="list-group-item">
+                    <h4>Mark Williams <span class="text-danger ml-1">Expired</span></h4>
+
+                    <div class="media">
+                      <img class="avatar avatar-sm avatar-4by3 mr-3" src="@@autopath/assets/svg/brands/visa.svg" alt="Image Description">
+
+                      <div class="media-body">
+                        <div class="row">
+                          <div class="col-sm mb-2 mb-sm-0">
+                            <span class="d-block text-dark">Visa &bull;&bull;&bull;&bull; 9016</span>
+                            <small class="d-block text-muted">Prepaid - Expires 04/20</small>
+                          </div>
+
+                          <div class="col-sm-auto">
+                            <div class="d-flex justify-content-sm-end">
+                              <a class="btn btn-xs btn-white mr-2" href="javascript:;" data-toggle="modal" data-target="#editCardModal">
+                                <i class="tio-edit mr-1"></i> Edit
+                              </a>
+
+                              <button type="button" class="btn btn-xs btn-white">
+                                <i class="tio-delete-outlined mr-1"></i> Delete
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Row -->
+                      </div>
+                    </div>
+                  </li>
+                  <!-- End List Item -->
+                </ul>
+                <!-- End List Group -->
+
+                <div class="row">
+                  <div class="col-lg-6">
+                    <!-- Card -->
+                    <a class="card card-dashed h-100" href="javascript:;" data-toggle="modal" data-target="#addCardModal">
+                      <div class="card-body card-body-centered card-dashed-body">
+                        <img class="avatar avatar-xl avatar-4by3 mb-2" src="@@autopath/assets/svg/illustrations/credit-card.svg" alt="Image Description">
+                        <span class="text-primary text-hover-primary">
+                          <i class="tio-add"></i> Add a new card
+                        </span>
+                      </div>
+                    </a>
+                    <!-- End Card -->
+                  </div>
+                </div>
+                <!-- End Row -->
+              </div>
+              <!-- End Body -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <h4 class="card-header-title">Order history</h4>
+              </div>
+              <!-- End Header -->
+
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-borderless table-thead-bordered table-nowrap table-align-middle card-table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Reference</th>
+                      <th>Type</th>
+                      <th>Amount</th>
+                      <th>Updated</th>
+                      <th>Invoice</th>
+                      <th style="width: 5%;"></th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td><a href="#">#3682303</a></td>
+                      <td>Standard</td>
+                      <td>$264</td>
+                      <td><a href="#">22/04/2020</a></td>
+                      <td>
+                        <a class="btn btn-sm btn-white" href="#">
+                          <i class="tio-download-to mr-1"></i> PDF
+                        </a>
+                      </td>
+                      <td>
+                        <div id="quickViewPopover" data-toggle="popover" data-placement="left" title="<div class='d-flex align-items-center'>Invoice receipt <a href='#!' class='close close-light ml-auto'><i id='closeQuickViewPopover' class='tio-clear'></i></a></div>" data-content="Check out this Invoice receipt modal example." data-html="true">
+                          <a class="btn btn-sm btn-white" href="javascript:;" data-toggle="modal" data-target="#invoiceReceiptModal">
+                            <i class="tio-visible-outlined mr-1"></i> Quick view
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="#">#2333234</a></td>
+                      <td>Standard</td>
+                      <td>$264</td>
+                      <td><a href="#">22/04/2019</a></td>
+                      <td>
+                        <a class="btn btn-sm btn-white" href="#">
+                          <i class="tio-download-to mr-1"></i> PDF
+                        </a>
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-white" href="javascript:;" data-toggle="modal" data-target="#invoiceReceiptModal">
+                          <i class="tio-visible-outlined mr-1"></i> Quick view
+                        </a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="#">#9834283</a></td>
+                      <td>Standard</td>
+                      <td>$264</td>
+                      <td><a href="#">22/04/2018</a></td>
+                      <td>
+                        <a class="btn btn-sm btn-white" href="#">
+                          <i class="tio-download-to mr-1"></i> PDF
+                        </a>
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-white" href="javascript:;" data-toggle="modal" data-target="#invoiceReceiptModal">
+                          <i class="tio-visible-outlined mr-1"></i> Quick view
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Content -->
+
+      <!-- Footer -->
+      @@if (layoutBuilder.header.containerMode === 'container-fluid') {
+        @@include("@@autopath/partials/footer/main.html")
+      }
+
+      @@if (layoutBuilder.header.containerMode === 'container') {
+        @@include("@@autopath/partials/footer/container.html")
+      }
+      <!-- End Footer -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Keyboard Shortcuts -->
+    @@include("@@autopath/partials/layouts-components/sidebar-shortcuts.html")
+    <!-- End Keyboard Shortcuts -->
+
+    <!-- Activity -->
+    @@include("@@autopath/partials/layouts-components/sidebar-activity.html")
+    <!-- End Activity -->
+
+    <!-- Welcome Message Modal -->
+    @@include("@@autopath/partials/modals/modal-welcome.html")
+    <!-- End Welcome Message Modal -->
+
+    <!-- Invoice Modal -->
+    @@include("@@autopath/partials/modals/modal-invoice.html")
+    <!-- End Invoice Modal -->
+
+    <!-- Update Plan Modal -->
+    @@include("@@autopath/partials/modals/modal-update-plan.html")
+    <!-- End Update Plan Modal -->
+
+    <!-- Add Address Modal -->
+    @@include("@@autopath/partials/modals/modal-add-address.html")
+    <!-- End Add Address Modal -->
+
+    <!-- Edit Card Modal -->
+    @@include("@@autopath/partials/modals/modal-edit-card.html")
+    <!-- End Edit Card Modal -->
+
+    <!-- Add Card Modal -->
+    @@include("@@autopath/partials/modals/modal-add-card.html")
+    <!-- End Add Card Modal -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="@@autopath/node_modules/select2/dist/js/select2.full.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-toggle-switch/dist/hs-toggle-switch.min.js"></script>
+    @@if (layoutBuilder.header.layoutMode !== 'default') {
+      <script src="@@autopath/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+    }
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.mask.js"></script>
+    <script src="@@autopath/assets/js/hs.select2.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // =======================================================
+
+
+        // BUILDER TOGGLE INVOKER
+        // =======================================================
+        $('.js-navbar-vertical-aside-toggle-invoker').click(function () {
+          $('.js-navbar-vertical-aside-toggle-invoker i').tooltip('hide');
+        });
+
+        @@if (layoutBuilder.header.layoutMode !== 'default') {
+          // INITIALIZATION OF MEGA MENU
+          // =======================================================
+          var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+            desktop: {
+              position: 'left'
+            }
+          }).init();
+        }
+
+        
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+        
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+        $(".js-nav-tooltip-link").on("show.bs.tooltip", function(e) {
+          if (!$("body").hasClass("navbar-vertical-aside-mini-mode")) {
+            return false;
+          }
+        });
+
+        
+        // INITIALIZATION OF UNFOLD
+        // =======================================================
+        $('.js-hs-unfold-invoker').each(function () {
+          var unfold = new HSUnfold($(this)).init();
+        });
+
+        
+        // INITIALIZATION OF FORM SEARCH
+        // =======================================================
+        $('.js-form-search').each(function () {
+          new HSFormSearch($(this)).init()
+        });
+
+        
+        // INITIALIZATION OF MASKED INPUT
+        // =======================================================
+        $('.js-masked-input').each(function () {
+          var mask = $.HSCore.components.HSMask.init($(this));
+        });
+
+        
+        // INITIALIZATION OF SELECT2
+        // =======================================================
+        $('.js-select2-custom').each(function () {
+          var select2 = $.HSCore.components.HSSelect2.init($(this));
+        });
+
+        // checkbox card input .checked state
+        $('.custom-checkbox-card-input').change(function (e) {
+          $('.custom-checkbox-card-input').closest('.custom-checkbox-card').removeClass('checked')
+          $(e.target).closest('.custom-checkbox-card').addClass('checked')
+        })
+
+        
+        // INITIALIZATION OF TOGGLE SWITCH
+        // =======================================================
+        $('.js-toggle-switch').each(function () {
+          var toggleSwitch = new HSToggleSwitch($(this)).init();
+        });
+
+        
+        // INITIALIZATION OF UPDATE PLAN POPOVER
+        // =======================================================
+        $('#updatePlanPopover').popover('show')
+          .on('shown.bs.popover', function () {
+            $('.popover').addClass('popover-dark')
+          });
+
+        $(document).on('click', '#closeUpdatePlanPopover' , function() {
+          $('#updatePlanPopover').popover('dispose');
+        });
+
+        $('#updatePlanModal').on('show.bs.modal', function() {
+          $('#updatePlanPopover').popover('dispose');
+        });
+
+        
+        // INITIALIZATION OF QUICK VIEW POPOVER
+        // =======================================================
+        $('#quickViewPopover').popover('show')
+          .on('shown.bs.popover', function () {
+            $('.popover').last().addClass('popover-dark')
+          });
+
+        $(document).on('click', '#closeQuickViewPopover' , function() {
+          $('#quickViewPopover').popover('dispose');
+        });
+
+        $('#invoiceReceiptModal').on('show.bs.modal', function() {
+          $('#quickViewPopover').popover('dispose');
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<header id="header" class="navbar navbar-expand-lg navbar-bordered flex-lg-column px-0">
+  <div class="navbar-dark w-100">
+    <div class="container-fluid">
+      <div class="navbar-nav-wrap">
+        <div class="navbar-brand-wrapper">
+          <!-- Logo -->
+          @@include("../layouts-components/navbar-single-logo-light.html")
+          <!-- End Logo -->
+        </div>
+
+        <div class="navbar-nav-wrap-content-left">
+          <!-- Search Form -->
+          <div class="d-none d-lg-block">
+            @@include("../layouts-components/search-light.html")
+          </div>
+          <!-- End Search Form -->
+        </div>
+
+        <!-- Secondary Content -->
+        <div class="navbar-nav-wrap-content-right">
+          <!-- Navbar -->
+          <ul class="navbar-nav align-items-center flex-row">
+            <li class="nav-item d-lg-none">
+              <!-- Search Trigger -->
+              @@include("../layouts-components/mobile-search-toggle-ghost-light.html")
+              <!-- End Search Trigger -->
+            </li>
+
+            <li class="nav-item d-none d-sm-inline-block">
+              <!-- Notification -->
+              @@include("../layouts-components/dropdown-notifications-ghost-light.html")
+              <!-- End Notification -->
+            </li>
+
+            <li class="nav-item d-none d-sm-inline-block">
+              <!-- Apps -->
+              @@include("../layouts-components/dropdown-apps-ghost-light.html")
+              <!-- End Apps -->
+            </li>
+
+            <li class="nav-item d-none d-sm-inline-block">
+              <!-- Activity -->
+              @@include("../layouts-components/sidebar-activity-toggle-ghost-light.html")
+              <!-- Activity -->
+            </li>
+
+            <li class="nav-item">
+              <!-- Account -->
+              @@include("../layouts-components/dropdown-user.html")
+              <!-- End Account -->
+            </li>
+
+            <li class="nav-item">
+              <!-- Toggle -->
+              @@include("../layouts-components/navbar-toggle-ghost-light.html")
+              <!-- End Toggle -->
+            </li>
+          </ul>
+          <!-- End Navbar -->
+        </div>
+        <!-- End Secondary Content -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <nav class="js-mega-menu flex-grow-1">
+      <!-- Navbar -->
+      <div class="navbar-nav-wrap-navbar collapse navbar-collapse" id="navbarNavMenu">
+        <div class="navbar-body">
+          @@include("../layouts-components/navbar-nav-menu.html")
+        </div>
+      </div>
+      <!-- End Navbar -->
+    </nav>
+  </div>
+</header>

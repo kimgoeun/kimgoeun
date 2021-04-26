@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Toasts - Documentation | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+    <link rel="stylesheet" href="@@autopath/assets/css/docs.css">
+  </head>
+
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl navbar-vertical-aside-closed-mode navbar-vertical-aside-compact-mini-mode splitted-content">
+    <!-- ========== HEADER ========== -->
+    @@include("@@autopath/partials/header/docs.html")
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <!-- Navbar Vertical -->
+    @@include("@@autopath/partials/documentation/sidebar.html", {
+      "category": "components",
+      "subcategory": "",
+      "link": "",
+      "componentlink": "toasts.html"
+    })
+    <!-- End Navbar Vertical -->
+
+    <main id="content" role="main" class="main splitted-content-main bg-light">
+      <!-- Fluid Content -->
+      <div class="splitted-content-fluid content-space">
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- Page Header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col-sm">
+                  <h1 class="page-header-title">Toasts</h1>
+                  <p class="lead">Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.</p>
+                  <a href="https://getbootstrap.com/docs/4.5/components/toasts/" target="_blank">Bootstrap Toasts documentation <i class="tio-open-in-new"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+            <!-- Heading -->
+            <h2 id="basic-example" class="hs-docs-heading">
+              Basic example <a class="anchorjs-link" href="#basic-example" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab1" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab1" data-toggle="pill" href="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab1" data-toggle="pill" href="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent1">
+                <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+                  <!-- Toast -->
+                  <div class="toast toast-show fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                      <img class="avatar avatar-sm avatar-circle mr-2" src="@@autopath/assets/img/160x160/img4.jpg" alt="Image description">
+                      <h5 class="mb-0">Bob Dean</h5>
+                      <small class="ml-auto">11 mins ago</small>
+                      <button type="button" class="close ml-3" data-dismiss="toast" aria-label="Close">
+                        <i class="tio-clear" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <div class="toast-body">
+                      Hello, world! This is a toast message.
+                    </div>
+                  </div>
+                  <!-- End Toast -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Toast --&gt;
+                      &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+                        &lt;div class="toast-header"&gt;
+                          &lt;img class="avatar avatar-sm avatar-circle mr-2" src="@@autopath/assets/img/160x160/img4.jpg" alt="Image description"&gt;
+                          &lt;h5 class="mb-0"&gt;Bob Dean&lt;/h5&gt;
+                          &lt;small class="ml-auto"&gt;11 mins ago&lt;/small&gt;
+                          &lt;button type="button" class="close ml-3" data-dismiss="toast" aria-label="Close"&gt;
+                            &lt;i class="tio-clear" aria-hidden="true"&gt;&lt;/i&gt;
+                          &lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="toast-body"&gt;
+                          Hello, world! This is a toast message.
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Toast --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="usage" class="hs-docs-heading">
+              Usage <a class="anchorjs-link" href="#usage" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab2" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab2" data-toggle="pill" href="#nav-result2" role="tab" aria-controls="nav-result2" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab2" data-toggle="pill" href="#nav-html2" role="tab" aria-controls="nav-html2" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-jsTab2" data-toggle="pill" href="#nav-js2" role="tab" aria-controls="nav-js2" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent2">
+                <div class="tab-pane fade p-4 show active" id="nav-result2" role="tabpanel" aria-labelledby="nav-resultTab2">
+                  <!-- Toast Luncher -->
+                  <button id="toast-invoker" class="btn btn-primary">Toast</button>
+
+                  <!-- Toast -->
+                  <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+                    <div class="toast-header">
+                      <img class="avatar avatar-sm avatar-circle mr-2" src="@@autopath/assets/img/160x160/img4.jpg" alt="Image description">
+                      <h5 class="mb-0">Bob Dean</h5>
+                      <small class="ml-auto">11 mins ago</small>
+                      <button type="button" class="close ml-3" data-dismiss="toast" aria-label="Close">
+                        <i class="tio-clear" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <div class="toast-body">
+                      Hello, world! This is a toast message.
+                    </div>
+                  </div>
+                  <!-- End Toast -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html2" role="tabpanel" aria-labelledby="nav-htmlTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Toast Luncher --&gt;
+                      &lt;button id="toast-invoker" class="btn btn-primary"&gt;Toast&lt;/button&gt;
+
+                      &lt;!-- Toast --&gt;
+                      &lt;div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"&gt;
+                        &lt;div class="toast-header"&gt;
+                          &lt;img class="avatar avatar-sm avatar-circle mr-2" src="@@autopath/assets/img/160x160/img4.jpg" alt="Image description"&gt;
+                          &lt;h5 class="mb-0"&gt;Bob Dean&lt;/h5&gt;
+                          &lt;small class="ml-auto"&gt;11 mins ago&lt;/small&gt;
+                          &lt;button type="button" class="close ml-3" data-dismiss="toast" aria-label="Close"&gt;
+                            &lt;i class="tio-clear" aria-hidden="true"&gt;&lt;/i&gt;
+                          &lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="toast-body"&gt;
+                          Hello, world! This is a toast message.
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Toast --&gt;
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="tab-pane fade" id="nav-js2" role="tabpanel" aria-labelledby="nav-jsTab2">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;script&gt;
+                        $(document).on('ready', function () {
+                          // INITIALIZATION OF TOASTS
+                          // =======================================================
+                          $('.toast-show').toast({
+                            autohide: false
+                          });
+
+                          $('.toast-show').toast('show');
+
+                          $('#toast-invoker').click(function () {
+                            $('#toast').toast({
+                              delay: 1500
+                            });
+
+                            $('#toast').toast('show');
+                          });
+                        });
+                      &lt;/script&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="stacking" class="hs-docs-heading">
+              Stacking <a class="anchorjs-link" href="#stacking" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>When you have multiple toasts, we default to vertically stacking them in a readable manner.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab3" data-toggle="pill" href="#nav-result3" role="tab" aria-controls="nav-result3" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab3" data-toggle="pill" href="#nav-html3" role="tab" aria-controls="nav-html3" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent3">
+                <div class="tab-pane fade p-4 show active" id="nav-result3" role="tabpanel" aria-labelledby="nav-resultTab3">
+                  <!-- Toast -->
+                  <div class="toast toast-show fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                      <img class="avatar avatar-sm avatar-circle mr-2" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image description">
+                      <h5 class="mb-0">Ella Lauda</h5>
+                      <small class="ml-auto">just now</small>
+                      <button type="button" class="close ml-3" data-dismiss="toast" aria-label="Close">
+                        <i class="tio-clear" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <div class="toast-body">
+                      See? Just like this.
+                    </div>
+                  </div>
+                  <!-- End Toast -->
+
+                  <!-- Toast -->
+                  <div class="toast toast-show fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                      <img class="avatar avatar-sm avatar-circle mr-2" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image description">
+                      <h5 class="mb-0">Finch Hoot</h5>
+                      <small class="ml-auto">5 minutes ago</small>
+                      <button type="button" class="close ml-3" data-dismiss="toast" aria-label="Close">
+                        <i class="tio-clear" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <div class="toast-body">
+                      Heads up, toasts will stack automatically
+                    </div>
+                  </div>
+                  <!-- End Toast -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html3" role="tabpanel" aria-labelledby="nav-htmlTab3">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Toast --&gt;
+                      &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+                        &lt;div class="toast-header"&gt;
+                          &lt;img class="avatar avatar-sm avatar-circle mr-2" src="@@autopath/assets/img/160x160/img9.jpg" alt="Image description"&gt;
+                          &lt;h5 class="mb-0"&gt;Ella Lauda&lt;/h5&gt;
+                          &lt;small class="ml-auto"&gt;just now&lt;/small&gt;
+                          &lt;button type="button" class="close ml-3" data-dismiss="toast" aria-label="Close"&gt;
+                            &lt;i class="tio-clear" aria-hidden="true"&gt;&lt;/i&gt;
+                          &lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="toast-body"&gt;
+                          See? Just like this.
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Toast --&gt;
+
+                      &lt;!-- Toast --&gt;
+                      &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+                        &lt;div class="toast-header"&gt;
+                          &lt;img class="avatar avatar-sm avatar-circle mr-2" src="@@autopath/assets/img/160x160/img5.jpg" alt="Image description"&gt;
+                          &lt;h5 class="mb-0"&gt;Finch Hoot&lt;/h5&gt;
+                          &lt;small class="ml-auto"&gt;5 minutes ago&lt;/small&gt;
+                          &lt;button type="button" class="close ml-3" data-dismiss="toast" aria-label="Close"&gt;
+                            &lt;i class="tio-clear" aria-hidden="true"&gt;&lt;/i&gt;
+                          &lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="toast-body"&gt;
+                          Heads up, toasts will stack automatically
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Toast --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Heading -->
+            <h2 id="placement" class="hs-docs-heading">
+              Placement <a class="anchorjs-link" href="#placement" aria-label="Anchor" data-anchorjs-icon="#"></a>
+            </h2>
+            <!-- End Heading -->
+
+            <p>Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle. If you’re only ever going to show one toast at a time, put the positioning styles right on the <code>.toast</code>.</p>
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <!-- Nav -->
+                <ul class="nav nav-segment" id="navTab4" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-resultTab4" data-toggle="pill" href="#nav-result4" role="tab" aria-controls="nav-result4" aria-selected="true">Preview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-htmlTab4" data-toggle="pill" href="#nav-html4" role="tab" aria-controls="nav-html4" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav -->
+              </div>
+              <!-- End Header -->
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="navTabContent4">
+                <div class="tab-pane fade p-4 show active" id="nav-result4" role="tabpanel" aria-labelledby="nav-resultTab4">
+                  <!-- Toast -->
+                  <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+                    <div class="toast toast-show fade show" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 0; right: 0;">
+                      <div class="toast-header">
+                        <img class="avatar avatar-sm avatar-circle mr-2" src="@@autopath/assets/img/160x160/img4.jpg" alt="Image description">
+                        <h5 class="mb-0">Bob Dean</h5>
+                        <small class="ml-auto">11 mins ago</small>
+                        <button type="button" class="close ml-3" data-dismiss="toast" aria-label="Close">
+                          <i class="tio-clear" aria-hidden="true"></i>
+                        </button>
+                      </div>
+                      <div class="toast-body">
+                        Hello, world! This is a toast message.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Toast -->
+                </div>
+
+                <div class="tab-pane fade" id="nav-html4" role="tabpanel" aria-labelledby="nav-htmlTab4">
+                  <pre>
+                    <code class="language-markup" data-lang="html">
+                      &lt;!-- Toast --&gt;
+                      &lt;div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;"&gt;
+                        &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 0; right: 0;"&gt;
+                          &lt;div class="toast-header"&gt;
+                            &lt;img class="avatar avatar-sm avatar-circle mr-2" src="@@autopath/assets/img/160x160/img4.jpg" alt="Image description"&gt;
+                            &lt;h5 class="mb-0"&gt;Bob Dean&lt;/h5&gt;
+                            &lt;small class="ml-auto"&gt;11 mins ago&lt;/small&gt;
+                            &lt;button type="button" class="close ml-3" data-dismiss="toast" aria-label="Close"&gt;
+                              &lt;i class="tio-clear" aria-hidden="true"&gt;&lt;/i&gt;
+                            &lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="toast-body"&gt;
+                            Hello, world! This is a toast message.
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Toast --&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- End Tab Content -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Fluid Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go to Top -->
+    @@include("@@autopath/partials/layouts-components/go-to.html")
+    <!-- End Go to Top -->
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/assets/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+    <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+    <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.list.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+        // =======================================================
+        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        $('.js-go-to').each(function () {
+          var goTo = new HSGoTo($(this)).init();
+        });
+
+
+        // INITIALIZATION OF NAV SCROLLER
+        // =======================================================
+        $('.js-nav-scroller').each(function () {
+          new HsNavScroller($(this), {
+            delay: 400,
+          }).init()
+        });
+
+
+        // INITIALIZATION OF LISTJS COMPONENT
+        // =======================================================
+        var docsSearch = $.HSCore.components.HSList.init('#docsSearch');
+
+
+        // GET JSON FILE RESULTS
+        // =======================================================
+        $.getJSON('@@autopath/assets/json/docs-search.json', function(data) {
+          docsSearch.add(data);
+        });
+
+        
+        // INITIALIZATION OF TOASTS
+        // =======================================================
+        $('.toast-show').toast({
+          autohide: false
+        });
+
+        $('.toast-show').toast('show');
+
+        $('#toast-invoker').click(function () {
+          $('#toast').toast({
+            delay: 1500
+          });
+
+          $('#toast').toast('show');
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>

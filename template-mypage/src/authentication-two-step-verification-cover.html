@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Cover 2-step Verification | Front - Admin &amp; Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+    <!-- Font -->
+    <link href="@@vars.googleFont" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <!-- bundlecss:vendor [@@autopath] -->
+    <link rel="stylesheet" href="@@autopath/assets/vendor/icon-set/style.css">
+    <link rel="stylesheet" href="@@autopath/node_modules/select2/dist/css/select2.min.css">
+
+    <!-- CSS Front Template -->
+    <!-- bundlecss:theme [@@autopath] @@vars.version -->
+    <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+  </head>
+
+  <body class="d-flex align-items-center min-h-100">
+
+    <!-- ========== HEADER ========== -->
+    <header class="position-absolute top-0 left-0 right-0 mt-3 mx-3">
+      <div class="d-flex d-lg-none justify-content-between">
+        <a href="index.html">
+          <img class="w-100" src="@@autopath/assets/svg/logos/logo.svg" alt="Image Description" style="min-width: 7rem; max-width: 7rem;">
+        </a>
+
+        <!-- Select -->
+        <div id="languageSelect2" class="select2-custom select2-custom-right z-index-2">
+          <select class="js-select2-custom custom-select-sm" size="1" style="opacity: 0;"
+                  data-hs-select2-options='{
+                    "dropdownParent": "#languageSelect2",
+                    "minimumResultsForSearch": "Infinity",
+                    "placeholder": "Select language",
+                    "customClass": "custom-select custom-select-sm custom-select-borderless bg-transparent",
+                    "dropdownAutoWidth": true,
+                    "dropdownWidth": "12rem"
+                  }'>
+            <option label="empty"></option>
+            <option value="language1" data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/us.svg" alt="Image description" width="16"/><span>English (US)</span></span>'>English (US)</option>
+            <option value="language2" selected data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/gb.svg" alt="Image description" width="16"/><span>English (UK)</span></span>'>English (UK)</option>
+            <option value="language3" data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/de.svg" alt="Image description" width="16"/><span>Deutsch</span></span>'>Deutsch</option>
+            <option value="language4" data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/dk.svg" alt="Image description" width="16"/><span>Dansk</span></span>'>Dansk</option>
+            <option value="language5" data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/es.svg" alt="Image description" width="16"/><span>Español</span></span>'>Español</option>
+            <option value="language6" data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/nl.svg" alt="Image description" width="16"/><span>Nederlands</span></span>'>Nederlands</option>
+            <option value="language7" data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/it.svg" alt="Image description" width="16"/><span>Italiano</span></span>'>Italiano</option>
+            <option value="language8" data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/cn.svg" alt="Image description" width="16"/><span>中文 (繁體)</span></span>'>中文 (繁體)</option>
+          </select>
+        </div>
+        <!-- End Select -->
+      </div>
+    </header>
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main id="content" role="main" class="main pt-0">
+      <!-- Content -->
+      <div class="container-fluid px-3">
+        <div class="row">
+          <!-- Cover -->
+          <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center min-vh-lg-100 position-relative bg-light px-0">
+            <!-- Logo & Language -->
+            <div class="position-absolute top-0 left-0 right-0 mt-3 mx-3">
+              <div class="d-none d-lg-flex justify-content-between">
+                <a href="index.html">
+                  <img class="w-100" src="@@autopath/assets/svg/logos/logo.svg" alt="Image Description" style="min-width: 7rem; max-width: 7rem;">
+                </a>
+
+                <!-- Select -->
+                <div id="languageSelect1" class="select2-custom select2-custom-right">
+                  <select class="js-select2-custom"
+                          data-hs-select2-options='{
+                            "dropdownParent": "#languageSelect1",
+                            "minimumResultsForSearch": "Infinity",
+                            "placeholder": "Select language",
+                            "customClass": "custom-select custom-select-sm custom-select-borderless bg-transparent",
+                            "dropdownAutoWidth": true,
+                            "dropdownWidth": "12rem"
+                          }'>
+                    <option label="empty"></option>
+                    <option value="language1" data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/us.svg" alt="Image description" width="16"/><span>English (US)</span></span>'>English (US)</option>
+                    <option value="language2" selected data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/gb.svg" alt="Image description" width="16"/><span>English (UK)</span></span>'>English (UK)</option>
+                    <option value="language3" data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/de.svg" alt="Image description" width="16"/><span>Deutsch</span></span>'>Deutsch</option>
+                    <option value="language4" data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/dk.svg" alt="Image description" width="16"/><span>Dansk</span></span>'>Dansk</option>
+                    <option value="language5" data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/es.svg" alt="Image description" width="16"/><span>Español</span></span>'>Español</option>
+                    <option value="language6" data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/nl.svg" alt="Image description" width="16"/><span>Nederlands</span></span>'>Nederlands</option>
+                    <option value="language7" data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/it.svg" alt="Image description" width="16"/><span>Italiano</span></span>'>Italiano</option>
+                    <option value="language8" data-option-template='<span class="d-flex align-items-center"><img class="avatar avatar-xss avatar-circle mr-2" src="@@autopath/node_modules/flag-icon-css/flags/1x1/cn.svg" alt="Image description" width="16"/><span>中文 (繁體)</span></span>'>中文 (繁體)</option>
+                  </select>
+                </div>
+                <!-- End Select -->
+              </div>
+            </div>
+            <!-- End Logo & Language -->
+
+            <div style="max-width: 23rem;">
+              <div class="text-center mb-5">
+                <img class="img-fluid" src="@@autopath/assets/svg/illustrations/chat.svg" alt="Image Description" style="width: 12rem;">
+              </div>
+
+              <div class="mb-5">
+                <h2 class="display-4">Build digital products with:</h2>
+              </div>
+
+              <!-- List Checked -->
+              <ul class="list-checked list-checked-lg list-checked-primary list-unstyled-py-4">
+                <li class="list-checked-item">
+                  <span class="d-block font-weight-bold mb-1">All-in-one tool</span>
+                  Build, run, and scale your apps - end to end
+                </li>
+
+                <li class="list-checked-item">
+                  <span class="d-block font-weight-bold mb-1">Easily add &amp; manage your services</span>
+                  It brings together your tasks, projects, timelines, files and more
+                </li>
+              </ul>
+              <!-- End List Checked -->
+
+              <div class="row justify-content-between mt-5 gx-2">
+                <div class="col">
+                  <img class="img-fluid" src="@@autopath/assets/svg/brands/gitlab-gray.svg" alt="Image Description">
+                </div>
+                <div class="col">
+                  <img class="img-fluid" src="@@autopath/assets/svg/brands/fitbit-gray.svg" alt="Image Description">
+                </div>
+                <div class="col">
+                  <img class="img-fluid" src="@@autopath/assets/svg/brands/flow-xo-gray.svg" alt="Image Description">
+                </div>
+                <div class="col">
+                  <img class="img-fluid" src="@@autopath/assets/svg/brands/layar-gray.svg" alt="Image Description">
+                </div>
+              </div>
+              <!-- End Row -->
+            </div>
+          </div>
+          <!-- End Cover -->
+
+          <div class="col-lg-6 d-flex justify-content-center align-items-center min-vh-lg-100">
+            <div class="w-100 pt-10 pt-lg-7 pb-7" style="max-width: 25rem;">
+              <!-- Form -->
+              <form class="js-validate">
+                <div class="text-center">
+                  <div class="mb-4">
+                    <img class="avatar avatar-xxl avatar-4by3" src="@@autopath/assets/svg/illustrations/unlock.svg" alt="Image Description">
+                  </div>
+
+                  <div class="mb-5">
+                    <h1 class="display-4">2-step Verification</h1>
+
+                    <p class="mb-0">We sent a verification code to your email.</p>
+
+                    <p>Enter the code from the email in the field below.</p>
+                  </div>
+
+                  <div class="row gx-2 gx-sm-3">
+                    <div class="col">
+                      <!-- Form Group -->
+                      <div class="form-group">
+                        <input type="text" class="js-masked-input form-control form-control-single-number" name="code1" id="twoStepVerificationSrCodeInput1" placeholder="" aria-label="" maxlength="1" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus
+                               data-hs-mask-options='{
+                                 "template": "0"
+                               }'>
+                      </div>
+                      <!-- End Form Group -->
+                    </div>
+
+                    <div class="col">
+                      <!-- Form Group -->
+                      <div class="form-group">
+                        <input type="text" class="js-masked-input form-control form-control-single-number" name="code2" id="twoStepVerificationSrCodeInput2" placeholder="" aria-label="" maxlength="1" autocomplete="off" autocapitalize="off" spellcheck="false"
+                               data-hs-mask-options='{
+                                 "template": "0"
+                               }'>
+                      </div>
+                      <!-- End Form Group -->
+                    </div>
+
+                    <div class="col">
+                      <!-- Form Group -->
+                      <div class="form-group">
+                        <input type="text" class="js-masked-input form-control form-control-single-number" name="code3" id="twoStepVerificationSrCodeInput3" placeholder="" aria-label="" maxlength="1" autocomplete="off" autocapitalize="off" spellcheck="false"
+                               data-hs-mask-options='{
+                                 "template": "0"
+                               }'>
+                      </div>
+                      <!-- End Form Group -->
+                    </div>
+
+                    <div class="col">
+                      <!-- Form Group -->
+                      <div class="form-group">
+                        <input type="text" class="js-masked-input form-control form-control-single-number" name="code4" id="twoStepVerificationSrCodeInput4" placeholder="" aria-label="" maxlength="1" autocomplete="off" autocapitalize="off" spellcheck="false"
+                               data-hs-mask-options='{
+                                 "template": "0"
+                               }'>
+                      </div>
+                      <!-- End Form Group -->
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-lg btn-block btn-primary">Verify my account</button>
+
+                  <div class="text-center mt-3">
+                    <p>Haven't received it? <a href="#">Resend a new code.</a></p>
+                  </div>
+                </div>
+              </form>
+              <!-- End Form -->
+            </div>
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Content -->
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- JS Global Compulsory @@deleteLine:build -->
+    <script src="@@autopath/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="@@autopath/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- bundlejs:vendor [@@autopath] -->
+    <script src="@@autopath/node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="@@autopath/node_modules/select2/dist/js/select2.full.min.js"></script>
+
+    <!-- JS Front -->
+    <!-- bundlejs:theme [@@autopath] -->
+    <script src="@@autopath/assets/js/hs.core.js"></script>
+    <script src="@@autopath/assets/js/hs.mask.js"></script>
+    <script src="@@autopath/assets/js/hs.select2.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // INITIALIZATION OF MASKED INPUT
+        // =======================================================
+        $('.js-masked-input').each(function () {
+          var mask = $.HSCore.components.HSMask.init($(this));
+        });
+        
+
+        // INITIALIZATION OF SELECT2
+        // =======================================================
+        $('.js-select2-custom').each(function () {
+          var select2 = $.HSCore.components.HSSelect2.init($(this));
+        });
+      });
+    </script>
+
+    <!-- IE Support -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="@@autopath/assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+    </script>
+  </body>
+</html>
