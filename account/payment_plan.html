@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <link href="../common/asset/meta/favicon.ico" rel="icon" data-n-head="true" type="image/x-icon"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <!-- 헤더, 푸터-->
+    <meta name="theme-color" content="#00aa5f">
+    <link rel="stylesheet" type="text/css" href="../common/css/common_page.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/common_page2.css">
+    <link rel="stylesheet" type="text/css" href="css/payment_plan.css">
+    
+
+    <title>학생독립만세ㅣ납부계획</title>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6735WT"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+    
+<nav id="sidenav">
+    <img src="../common/asset/header/hdm_close.svg" class="close">
+    <a href="#"><img src="../common/asset/header/hdm_header_logo.svg" class="logo"></a>
+    <ul>
+
+
+        <!-- 학생용 홈페이지 링크 수정 필요-->
+        <li class="portal_main active"><a href="/">
+            <div class="item">학생용 홈페이지</div>
+        </a></li>
+        <li class="portal_isa"><a href="./isa.html">
+            <div class="item">소득공유 후불제란?</div>
+        </a></li>
+        <li class="portal_about"><a href="/introduce.html">
+            <div class="item">학독만 소개</div>
+        </a></li>
+        <li class="portal_press"><a href="/press.html">
+            <div class="item">학독만 소식</div>
+        </a></li>
+        <!--<li class="login"><a href="https://console.hakdokman.com"><div class="item">로그인</div></a></li>-->
+    </ul>
+</nav>
+<header class="m-header active">
+    <div class="container">
+        <a href="#"><img src="../common/asset/header/hdm_header_logo.svg" alt="학생독립만세 토탈 청년금융 플랫폼" id="logo"></a>
+        <div id="hambuger_menu">
+            <img src="/common/asset/header/hdm_hambuger_menu.svg">
+        </div>
+        <div id="navigation">
+            <ul>
+                <li class="portal_main active"><a href="./">학생용 홈페이지</a>
+                <li class="portal_isa"><a href="./isa.html">소득공유 후불제란?</a></li>
+                <li class="portal_about"><a href="/introduce.html">학독만 소개</a></li>
+                <li class="portal_press"><a href="/press.html">학독만 소식</a></li>
+                <!--<li class="login"><a href="https://console.hakdokman.com">로그인</a></li>-->
+                <!--
+                <li class="portal_apply button"><a href="javascript:alert('메뉴 준비 중입니다')">신청&제휴</a></li>-->
+            </ul>
+        </div>
+    </div>
+</header>
+    
+<main>
+    <!--TOP 제목 및 설명-->
+    <section class="safearea" id="plan_title">
+        <h1>
+            납부 계획을 세워주세요.
+        </h1>
+        <p>납부 계획을 따로 변경하지 않는 경우, <br>자동으로 <span>#{n}</span>개월로 나누어 <br class="mobile_br">일할 계산됩니다. </p>
+    </section>  
+    
+<!--정책 요약-->
+    <section id="summary">
+        <div class="box">
+            <div class="box_top">
+                <h2><span>#{이름}</span>님이 납부하실<br>총 후불금액은 <br class="mobile_br"><span>#{000,000}</span>원 입니다.</h2>
+                <div class="plan_policy"> 
+                    <div class="policy_row">
+                        <h3>분납회차</h3>
+                        <p><span>27</span>회</p>
+                    </div>
+                    <div class="policy_row">
+                        <h3>남은 후불금액</h3>
+                        <p><span>25000,000</span>원</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!--인풋 박스-->
+    <section id="plan_box">
+        <div class="box">
+        <!-- 납부 회차에 따라 row 추가됨 -->
+            <div class="input_container">
+                <div class="input_row completed">
+                        <label for="input1">
+                            <h3 class="round"><span>#{n}</span>회차</h3>
+                            <p class="date"><span>21년 05월 31일</span></p>
+                        </label>
+                    
+                        <span class="status">납부완료</span>
+                    
+                        <input type="text" step="1000" id="input1" onkeyup="inputNumberFormat(this)" placeholder="000,000원" readonly>
+                </div>
+                <div class="input_row">
+                        <label for="input2">
+                            <h3 class="round"><span>#{n}</span>회차</h3>
+                            <p class="date"><span>21년 05월 31일</span></p>
+                        </label>
+                        <input type="text" step="1000" onkeyup="inputNumberFormat(this)" placeholder="000,000원">
+                </div>
+                <div class="input_row">
+                        <label for="input3">
+                            <h3 class="round"><span>#{n}</span>회차</h3>
+                            <p class="date"><span>21년 05월 31일</span></p>
+                        </label>
+                        <input type="text" step="1000" onkeyup="inputNumberFormat(this)" placeholder="000,000원">
+                </div>
+                <div class="input_row">
+                        <label for="input4">
+                            <h3 class="round"><span>#{n}</span>회차</h3>
+                            <p class="date"><span>21년 05월 31일</span></p>
+                        </label>
+                        <input type="text" step="1000" onkeyup="inputNumberFormat(this)" placeholder="000,000원">
+                </div>
+                <div class="input_row">
+                        <label for="input5">
+                            <h3 class="round"><span>#{n}</span>회차</h3>
+                            <p class="date"><span>21년 05월 31일</span></p>
+                        </label>
+                        <input type="text" step="1000" onkeyup="inputNumberFormat(this)" placeholder="000,000원">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--계산값 검사-->
+    <section id="plan_check">
+        <div class="plan_check"> 
+            <div class="calc">
+                <div class="check_row">
+                    <h3>총 후불납부액</h3>
+                    <p class="calc_input_total"><span>#{000,000}</span>원</p>
+                </div>
+                <div class="check_row">
+                    <h3>납부 완료액</h3>
+                    <p class="calc_input_complete"><span>#{000,000}</span>원</p>
+                </div>
+                <div class="check_row">
+                    <h3>입력값 합계</h3>
+                    <p class="calc_input_sum"><span>#{000,000}</span>원</p>
+                </div>
+                <div class="check_row">
+                    <h3>입력이 남은 금액</h3>
+                    <p class="calc_input_remain"><span>#{000,000}</span>원</p>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-complete" role="progressbar" style="width: 10%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-input-sum" role="progressbar" style="width: 60%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </section>
+
+        <!-- 단계 버튼 -->
+    <section class="btn_section" id="btn_area">
+        <a class="" href="#">
+            <button type="button" class="btn pre_btn">나가기</button>
+        </a>
+        <a class="" href="#">
+            <button type="button" class="btn next_btn">저장하기</button>
+        </a>
+    </section>
+    
+
+</main>
+
+<!-- 최하단 푸터 영역 -->
+<!--
+   <footer class="course">
+        <div class="container">
+            <div class="box_logo">
+                <img class="logo" src="/common/asset/footer/footer_logo.png">
+            </div>
+            <div class="box_info">
+                <p class="company_name">주식회사 학생독립만세</p>
+                <p class="address">
+                    서울시 마포구 마포대로 122 프론트원 13층 학생독립만세<br>
+                    대표자 : 장윤석 ㅣ 사업자 등록번호 : 396-87-00993 <br>
+                    통신판매업 신고번호 : 2019-서울종로-0519</p>
+                <p class="terms"><a href="/privacy.html">개인정보 취급방침</a> ㅣ <a href="/terms.html">서비스 이용약관</a></p>
+            </div>
+            <div class="box_contact">
+                <p class="title">이메일</p>
+                <p class="content"><a href="mailto:contact@hakdokman.com">contact@hakdokman.com</a></p>
+                <p class="title">문의전화</p>
+                <p class="content"><a href="tel:02-6951-1119">02-6951-1119</a></p>
+                <div class="icon_container">
+                    <a href="https://www.facebook.com/hakdokman/" target="_blank"><img class="icon" src="/common/asset/footer/ico_fb.png"></a>
+                    <a href="https://www.youtube.com/channel/UCN3HZHDVT1qVqBSHuijOU7w" target="_blank"><img class="icon" src="/common/asset/footer/ico_youtube.png"></a>
+                    <a href="https://www.instagram.com/hakdokman/" target="_blank"><img class="icon" src="/common/asset/footer/ico_instagram.png"></a>
+                    <a href="https://blog.naver.com/hakdokman" target="_blank"><img class="icon" src="/common/asset/footer/ico_naverblog.png"></a>
+                    <a href="https://pf.kakao.com/_KxmKxbj" target="_blank"><img class="icon" src="/common/asset/footer/ico_kakao.png"></a>
+                    <a href="https://brunch.co.kr/@hakdokman" target="_blank"><img class="icon" src="/common/asset/footer/ico_brunch.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="copyright">Copyright ⓒ  Hakdokman Inc All rights reserved.</div>
+    </footer>
+-->
+    <script src="/common/js/common.js"></script>
+    <script src="/common/js/common_page.js"></script>
+    <script src="./main/js/index.js"></script>
+    <script src="js/payment_plan.js"></script>
+</body>
+</html>
