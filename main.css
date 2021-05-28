@@ -54,6 +54,10 @@ ol{
 
 
 #main{
+    background-image: url(assets/gony.png);
+    background-size: contain;
+    background-position: center 50px;
+    background-repeat: no-repeat;
     background-color: white;
     border-radius: 18px;
     box-shadow: 0 6px 11px rgba(0, 0, 0, 0.16);
@@ -62,46 +66,13 @@ ol{
     width: 70%;
     margin: 150px auto;
     text-align : center;
-    padding: 110px 0;
+    padding: 70px 0;
 }
 
 #main .hello{
+    padding-bottom: 320px;
     font-size: 13px;
     line-height: 1.5;
     margin: 0 auto;
-    font-weight: 100;
-}
-
-#main .name{
-    font-size:28px;
-    font-weight: 500;
-}
-
-#main .birth{
-    margin: 0 auto;
-    font-weight: 200;
-}
-
-#cta{
-    background-color: white;
-    border-radius: 58px;
-    box-shadow: 0 6px 11px rgba(0, 0, 0, 0.16);
-    color: #545454;
-    max-width: 150px;
-    width: 40%;
-    height: 48px;
-    margin: 80px auto;
-}
-
-#cta .intro{
-    margin: 0 auto;
-    text-align : center;
-    padding: 11.5px 0;
-}
-
-.prepare{
-    font-size:28px;
-    font-weight: 500;
-    text-align: center;
-    padding: 160px 0;
+    font-weight: 100;    
 }
