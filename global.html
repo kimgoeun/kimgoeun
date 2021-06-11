@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HDMLㅣ학생독립만세 디자인 시스템</title>
+        <meta name="description" content="HDML 학생독립만세 디자인 시스템">
+        <link rel="stylesheet" href="css/hdml.css">
+        <link rel="stylesheet" href="css/global.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    </head>
+    <body>  
+
+<header class="header">
+	<div class="header-overflow">
+	    <div class="header_logo_container">
+	        <a href="#" class="header_logo">
+		        <img src="asset/hdm_kr_logo.svg"><br>
+		        <strong>HDML - 학독만 Look</strong>
+	        </a>
+			<p class="header_ver">Ver1 최초제작 2021.06.04</p>    
+			<p class="header_ver">Ver1 최근수정 2021.06.10</p>        
+	    </div>
+	    <div class="nav_section">
+	        <ul class="nav">
+	            <li>
+	                <a href="#field_section_title" class="nav_title">Fieldset Style Guide</a>
+	            </li>
+	        </ul>
+	    </div>
+	    <div class="nav_section">
+	        <ul class="nav">
+	            <li>
+	                <a href="#type_section_title" class="nav_title">Typography Guide</a>
+	            </li>
+	        </ul>
+	    </div>
+	    <div class="nav_section">
+	        <ul class="nav">
+	            <li>
+	                <a href="#color_section_title" class="nav_title">Color Palette</a>
+	            </li>
+	        </ul>
+	    </div>
+	    <div class="nav_section">
+	        <ul class="nav">
+	            <li>
+	                <a href="#col_section_title" class="nav_title">Col Size Guide</a>
+	            </li>
+	        </ul>
+	    </div>
+	    <div class="nav_section">
+	        <ul class="nav">
+	            <li>
+	                <a href="#field_label_section_title" class="nav_title">Field Label Guide</a>
+	            </li>
+	        </ul>
+	    </div>
+	    <div class="nav_section">
+	        <ul class="nav">
+	            <li>
+                    <ul class="nav_section_title fold_menu_title">
+                        <li>
+                            <a href="#form000_section_title" class="nav_title">000 - Form</a>
+                            <button class="menu_fold">&#9654;</button>
+                        </li>
+                    </ul>
+	                <ul class="nav_dropdown">
+	                    <li class="nav_menu_md">
+		                    <a href="#button" class="nav_menu_subtitle">050 - button</a>
+                            <ul>
+                                <li class="nav_menu_child">
+                                    <a href="#button" class="nav_menu_sm">common</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#button" class="nav_menu_sm">point</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#button" class="nav_menu_sm">prev</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#button" class="nav_menu_sm">next</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#button" class="nav_menu_sm">detail</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#button" class="nav_menu_sm">texttype</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#button" class="nav_menu_sm">linetype</a>
+                                </li>
+                            </ul>
+		                </li>
+	                </ul>
+	            </li>
+	        </ul>
+	    </div> 
+	    <div class="nav_section">
+	        <ul class="nav">
+	            <li>
+                    <ul class="nav_section_title fold_menu_title">
+                        <li>
+                            <a href="#form100_section_title" class="nav_title">100 - Input</a>
+                            <button class="menu_fold">&#9654;</button>
+                        </li>
+                    </ul>
+	                <ul class="nav_dropdown">
+	                    <li class="nav_menu_md">
+		                    <a href="#input_text" class="nav_menu_subtitle">100 - Input  type : "text"</a>
+                            <ul>
+                                <li class="nav_menu_child">
+                                    <a href="#input_inline_lab" class="nav_menu_sm">Inline Label</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#input_top_lab" class="nav_menu_sm">Top Label</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#input_no_lab" class="nav_menu_sm">No Label</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#input_inline_sep" class="nav_menu_sm">Inline seperated</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#input_top_sep" class="nav_menu_sm">Top seperated</a>
+                                </li>
+                            </ul>
+		                </li>
+	                    <li class="nav_menu_md">
+		                    <a href="#text_input_valiation" class="nav_menu_subtitle">110~160 - Input Type</a>
+                            <ul>
+                                <li class="nav_menu_child">
+                                    <a href="#input_password" class="nav_menu_sm">110 - Password</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#input_email" class="nav_menu_sm">120 - Email</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#input_tel" class="nav_menu_sm">130 - Tel</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#input_number" class="nav_menu_sm">140 - Number</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#input_address" class="nav_menu_sm">150 - Address</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#input_textarea" class="nav_menu_sm">160 - Textarea</a>
+                                </li>
+                            </ul>
+		                </li>
+	                </ul>
+	            </li>
+	        </ul>
+	    </div> 
+	    <div class="nav_section">
+	        <ul class="nav">
+	            <li>
+                    <ul class="nav_section_title fold_menu_title">
+                        <li>
+                            <a href="#form200_section_title" class="nav_title">200 - Checkbox</a>
+<!--                        <button class="menu_fold">&#9654;</button>-->
+                        </li>
+                    </ul>
+	                <ul class="nav_dropdown">
+	                    <li class="nav_menu_md">
+		                    <a href="#radio" class="nav_menu_subtitle">250 - Radio</a>
+		                </li>
+	                    <li class="nav_menu_md">
+		                    <a href="#checkbox" class="nav_menu_subtitle">260 - checkbox</a>
+		                </li>
+	                </ul>
+	            </li>
+	        </ul>
+	    </div> 
+	    <div class="nav_section">
+	        <ul class="nav">
+	            <li>
+                    <ul class="nav_section_title fold_menu_title">
+                        <li>
+                            <a href="#form300_section_title" class="nav_title">300 - Select</a>
+                            <button class="menu_fold">&#9654;</button>
+                        </li>
+                    </ul>
+	                <ul class="nav_dropdown">
+	                    <li class="nav_menu_md">
+		                    <a href="#datalist" class="nav_menu_subtitle">301 - Datalist</a>
+		                </li>
+	                    <li class="nav_menu_md">
+		                    <a href="#select" class="nav_menu_subtitle">350 - Select</a>
+                            <ul>
+                                <li class="nav_menu_child">
+                                    <a href="#option" class="nav_menu_sm">355 Option</a>
+                                </li>
+                            </ul>
+		                </li>
+	                </ul>
+	            </li>
+	        </ul>
+	    </div> 
+	    <div class="nav_section">
+	        <ul class="nav">
+	            <li>
+                    <ul class="nav_section_title fold_menu_title">
+                        <li>
+                            <a href="#form400_section_title" class="nav_title">400 - Range</a>
+<!--                        <button class="menu_fold">&#9654;</button>-->
+                        </li>
+                    </ul>
+	                <ul class="nav_dropdown">
+	                    <li class="nav_menu_md">
+		                    <a href="#range" class="nav_menu_subtitle">400 - Range</a>
+		                </li>
+	                    <li class="nav_menu_md">
+		                    <a href="#linkert" class="nav_menu_subtitle">410 - Linkert</a>
+		                </li>
+	                </ul>
+	            </li>
+	        </ul>
+	    </div> 
+	    <div class="nav_section">
+	        <ul class="nav">
+	            <li>
+                    <ul class="nav_section_title fold_menu_title">
+                        <li>
+                            <a href="#form500_section_title" class="nav_title">500 - Date</a>
+                            <button class="menu_fold">&#9654;</button>
+                        </li>
+                    </ul>
+	                <ul class="nav_dropdown">
+	                    <li class="nav_menu_md">
+		                    <a href="#date_section" class="nav_menu_subtitle">500 - Date</a>
+                            <ul>
+                                <li class="nav_menu_child">
+                                    <a href="#datetime_local" class="nav_menu_sm">501 Datetime</a>
+                                </li>
+                            </ul>
+		                </li>
+	                    <li class="nav_menu_md">
+		                    <a href="#date_split" class="nav_menu_subtitle">510 - Date Split</a>
+                            <ul>
+                                <li class="nav_menu_child">
+                                    <a href="#time_split" class="nav_menu_sm">511 Time Split</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#datetime_split" class="nav_menu_sm">512 Datetime Split</a>
+                                </li>
+                            </ul>
+		                </li>
+	                </ul>
+	            </li>
+	        </ul>
+	    </div> 
+        <div class="nav_section">
+	        <ul class="nav">
+	            <li>
+                    <ul class="nav_section_title fold_menu_title">
+                        <li>
+                            <a href="#form600_section_title" class="nav_title">600 - File</a>
+<!--                        <button class="menu_fold">&#9654;</button>-->
+                        </li>
+                    </ul>
+	                <ul class="nav_dropdown">
+	                    <li class="nav_menu_md">
+		                    <a href="#file" class="nav_menu_subtitle">600 - File</a>
+		                </li>
+	                </ul>
+	            </li>
+	        </ul>
+	    </div> 
+        <div class="nav_section">
+	        <ul class="nav">
+	            <li>
+                    <ul class="nav_section_title fold_menu_title">
+                        <li>
+                            <a href="#form700_section_title" class="nav_title">700 - Group</a>
+<!--                        <button class="menu_fold">&#9654;</button>-->
+                        </li>
+                    </ul>
+	                <ul class="nav_dropdown">
+	                    <li class="nav_menu_md">
+		                    <a href="#group" class="nav_menu_subtitle">710 - Group List</a>
+		                </li>
+	                    <li class="nav_menu_md">
+		                    <a href="#dictionary" class="nav_menu_subtitle">720 - Dictionary</a>
+		                </li>
+	                </ul>
+	            </li>
+	        </ul>
+	    </div> 
+        <div class="nav_section">
+	        <ul class="nav">
+	            <li>
+                    <ul class="nav_section_title fold_menu_title">
+                        <li>
+                            <a href="#form800_section_title" class="nav_title">800 - Content</a>
+                            <button class="menu_fold">&#9654;</button>
+                        </li>
+                    </ul>
+	                <ul class="nav_dropdown">
+	                    <li class="nav_menu_md">
+		                    <a href="#content" class="nav_menu_subtitle">800 - Content text</a>
+                            <ul>
+                                <li class="nav_menu_child">
+                                    <a href="#label" class="nav_menu_sm">801 - Label</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#link" class="nav_menu_sm">802 - Link</a>
+                                </li>
+                            </ul>
+		                </li>
+	                    <li class="nav_menu_md">
+		                    <a href="#media" class="nav_menu_subtitle">820 - Media</a>
+                            <ul>
+                                <li class="nav_menu_child">
+                                    <a href="#image" class="nav_menu_sm">821 - Image</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#video" class="nav_menu_sm">822 - Video</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#youtube" class="nav_menu_sm">829 - Youtube</a>
+                                </li>
+                            </ul>
+		                </li>
+	                    <li class="nav_menu_md">
+		                    <a href="#document" class="nav_menu_subtitle">830 - Document</a>
+                            <ul>
+                                <li class="nav_menu_child">
+                                    <a href="#html" class="nav_menu_sm">831 - HTML</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#pdf" class="nav_menu_sm">832 - PDF</a>
+                                </li>
+                            </ul>
+		                </li>
+	                    <li class="nav_menu_md">
+		                    <a href="#dialog" class="nav_menu_subtitle">850 - Dialog</a>
+                            <ul>
+                                <li class="nav_menu_child">
+                                    <a href="#simple_dialog" class="nav_menu_sm">851 - Simple Dialog</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#form_dialog" class="nav_menu_sm">852 - Form Dialog</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#browser_alert" class="nav_menu_sm">853 - Browser Alert</a>
+                                </li>
+                                <li class="nav_menu_child">
+                                    <a href="#browser_confirm" class="nav_menu_sm">854 - Browser Confirm</a>
+                                </li>
+                            </ul>
+		                </li>
+	                </ul>
+	            </li>
+	        </ul>
+	    </div> 
+	</div>
+    <span class="made">Made by. Gony</span>
+</header>
+     
+    <div class="top_section">
+        <h1>HDML-학생독립만세 디자인 시스템</h1>
+    </div>
+        
+<!-- --------------------------------------------- -->
+             
+      
+<!-- Fieldset 섹션 타이틀-->
+    <section id="field_section_title">
+        <div>
+            <legend class="legend">Fieldset Style Guide</legend>
+        </div>
+    </section>
+     
+<!-- Fieldset -->
+    <div class="fieldset section" id="field">
+        <fieldset> 
+            <div class="global_section_title">
+                <p class="global_section_id">Fieldset Style</p>
+                <button class="global_btn_open">접기</button>
+            </div>
+            <div class="global_elements">
+            <h4>HTML Templete</h4>
+<xmp>
+    <div class="fieldset">
+        <fieldset> 
+            <div>
+                <p>
+                    학생독립만세의 디자인시스템, HDML(HDM-Look)은 
+                    프로덕트 디자인에 일관된 사용자 경험을 제공하기 위해 
+                    만들어졌습니다.
+                </p>
+            </div>
+        </fieldset>
+    </div>
+    
+</xmp>
+                <h4>HDML CSS</h4>
+<xmp>
+    /* Box 디자인 */
+    fieldset{    
+        background-color: transparent;
+        border:transparent;
+        text-align: left;
+    }
+
+    .fieldset{
+        display: block;
+        box-shadow: 0px 0px 0.5rem rgb(0,0,0,0.3);
+        border-radius: 1rem;
+        padding: 2.75rem;
+        border-top: 1rem solid var(--indie-indigo);
+        margin-bottom: 80px;
+    }
+    
+</xmp>
+                <h4>적용 예시</h4>
+                <div class="fieldset">
+                    <fieldset> 
+                        <div>
+                            <p>
+                                학생독립만세의 디자인시스템, HDML(HDM-Look)은 
+                                프로덕트 디자인에 일관된 사용자 경험을 제공하기 위해 
+                                만들어졌습니다.
+                            </p>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+       
+        
+<!-- --------------------------------------------- -->
+        
+        
+<!-- 타이포 섹션 타이틀-->
+    <section id="type_section_title">
+        <div>
+            <legend class="legend">Typography Guide</legend>
+        </div>
+    </section>
+     
+<!-- 타이포 -->
+    <div class="fieldset section" id="type">
+        <fieldset> 
+            <div class="global_section_title">
+                <p class="global_section_id">Typography</p>
+                <button class="global_btn_open">접기</button>
+            </div>
+            <div class="global_elements">
+                <span>legend 섹션 타이틀 기본 가운데 정렬</span>
+                <legend>legend 태그 섹션 타이틀</legend>
+                <span>H 태그 기본 왼쪽 정렬</span>
+                <h1>학생독립만세 HDML H1</h1>
+                <h2>학생독립만세 HDML H2</h2>
+                <h3>학생독립만세 HDML H3</h3>
+                <h4>학생독립만세 HDML H4</h4>
+                <h5>학생독립만세 HDML H5 : 'fieldset_title'에 사용</h5>
+                <h6>학생독립만세 HDML H6</h6>
+                <span>P 태그</span>
+                <p>학생독립만세의 디자인시스템, HDML(HDM-Look)은 프로덕트 디자인에  일관된 사용자 경험을 제공하기 위해 만들어졌습니다.</p>
+            </div>
+        </fieldset>
+    </div>
+       
+        
+<!-- --------------------------------------------- -->
+        
+        
+                
+<!-- 컬러 섹션 타이틀-->
+    <section id="color_section_title">
+        <div>
+            <legend class="legend">Color Palette</legend>
+        </div>
+    </section>
+      
+<!-- 컬러 팔레트 -->
+    <div class="fieldset section" id="color">
+        <fieldset> 
+            <div class="global_section_title">
+                <p class="global_section_id">Color</p>
+                <button class="global_btn_open">접기</button>
+            </div>
+            <div class="global_elements">
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--indie-indigo);"></div>
+                    <div class="color_name"><strong>--indie-indigo</strong> : #3c4576;</div>
+                    <div class="color_ex" style="color: var(--indie-indigo);">예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:white; background-color: var(--indie-indigo);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--dark-indigo);"></div>
+                    <div class="color_name">--dark-indigo : #30375E;</div>
+                    <div class="color_ex" style="color: var(--dark-indigo);">예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:white; background-color: var(--dark-indigo);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--light-indigo);"></div>
+                    <div class="color_name">--light-indigo : #6b79bc;</div>
+                    <div class="color_ex" style="color: var(--light-indigo);">예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:white; background-color: var(--light-indigo);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--dim-green);"></div>
+                    <div class="color_name">--dim-green : #eff4f1;</div>
+                    <div class="color_ex" style="color: var(--dim-green)";>예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:var(--indie-indigo); background-color: var(--dim-green);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--active-green);"></div>
+                    <div class="color_name">--active-green : #67CCAE;</div>
+                    <div class="color_ex" style="color: var(--active-green)";>예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:var(--active-gray); border: 1px solid var(--active-green);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--growth-green);"></div>
+                    <div class="color_name"><strong>--growth-green </strong>: #00aa5f;</div>
+                    <div class="color_ex" style="color: var(--growth-green)";>예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:white; background-color: var(--growth-green);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--bright-green);"></div>
+                    <div class="color_name">--bright-green : #00BC72;</div>
+                    <div class="color_ex" style="color: var(--bright-green)";>예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:white; background-color: var(--bright-green);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--light-green);"></div>
+                    <div class="color_name">--light-green : #def5ee;</div>
+                    <div class="color_ex" style="color: var(--light-green);">예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:var(--indie-indigo); background-color: var(--light-green);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--bg-green);"></div>
+                    <div class="color_name">--bg-green : #def5ee;</div>
+                    <div class="color_ex" style="color: var(--bg-green)";>예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:var(--indie-indigo); background-color: var(--bg-green);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--bg-gray);"></div>
+                    <div class="color_name">--bg-gray : #f5f5f5;</div>
+                    <div class="color_ex" style="color: var(--bg-gray)";>예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:var(--indie-indigo); background-color: var(--bg-gray);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--pale-gray);"></div>
+                    <div class="color_name">--pale-gray : #eaeaea;</div>
+                    <div class="color_ex" style="color: var(--pale-gray)";>예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:var(--indie-indigo); background-color: var(--pale-gray);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--gray);"></div>
+                    <div class="color_name">--gray : #C4C4C4;</div>
+                    <div class="color_ex" style="color: var(--gray)";>예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:var(--gray); border:1px solid var(--gray);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--btn-gray);"></div>
+                    <div class="color_name">--btn-gray : #b7bcbf;</div>
+                    <div class="color_ex" style="color: var(--btn-gray)";>예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:white; background-color: var(--btn-gray);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--line-gray);"></div>
+                    <div class="color_name">--line-gray : #C7CED4;</div>
+                    <div class="color_ex" style="color: var(--line-gray)";>예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:var(--line-gray); border:1px solid var(--line-gray);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--default);"></div>
+                    <div class="color_name">--default : #94909E;</div>
+                    <div class="color_ex" style="color: var(--default)";>예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:var(--default); border:1px solid var(--default);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--active-gray);"></div>
+                    <div class="color_name">--active-gray : #54515C;</div>
+                    <div class="color_ex" style="color: var(--active-gray)";>예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:var(--active-gray); border:1px solid var(--active-gray);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--youth-peach);"></div>
+                    <div class="color_name">--youth-peach : #f3ab9c;</div>
+                    <div class="color_ex" style="color: var(--youth-peach)";>예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:var(--youth-peach); border:1px solid var(--youth-peach);">예시 텍스트</div>
+                </div>
+                <div>
+                    <div class="color_box" 
+                     style="background-color: var(--warning);"></div>
+                    <div class="color_name">--warning : #f73709;</div>
+                    <div class="color_ex" style="color: var(--warning)";>예시 텍스트</div>
+                    <div class="color_ex_box" 
+                     style="color:var(--warning); border:1px solid var(--warning);">예시 텍스트</div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+        
+           
+        
+<!-- --------------------------------------------- -->
+        
+        
+<!-- Col 섹션 타이틀-->
+    <section id="col_section_title">
+        <div>
+            <legend class="legend">Col Size Guide</legend>
+        </div>
+    </section>
+     
+<!-- col -->
+    <div class="fieldset section" id="col">
+        <fieldset> 
+            <div class="global_section_title">
+                <p class="global_section_id">Col Size</p>
+                <button class="global_btn_open">접기</button>
+            </div>
+            <div class="global_elements">
+                <div class="global_div_box col">col</div>
+                <div class="global_div_box col_auto">col_auto <span>width : auto</span></div>
+                <div class="global_div_box_ex">
+                    <div class="global_div_box_min col_1 ">col_1 </div> 
+                    <span>8%</span>
+                </div>
+                <div class="global_div_box col_2">col_2 <span>16%</span></div>
+                <div class="global_div_box col_3">col_3 <span>25%</span></div>
+                <div class="global_div_box col_4">col_4 <span>33%</span></div>
+                <div class="global_div_box col_5">col_5 <span>40%</span></div>
+                <div class="global_div_box col_6">col_6 <span>50%</span></div>
+                <div class="global_div_box col_7">col_7 <span>58%</span></div>
+                <div class="global_div_box col_8">col_8 <span>66%</span></div>
+                <div class="global_div_box col_9">col_9 <span>75%</span></div>
+                <div class="global_div_box col_10">col_10 <span>83%</span></div>
+                <div class="global_div_box col_11">col_11 <span>92%</span></div>
+                <div class="global_div_box col_12">col_12 <span>100%</span></div>
+            </div>
+        </fieldset>
+    </div>
+       
+        
+<!-- --------------------------------------------- -->
+        
+        
+<!-- Label 섹션 타이틀-->
+    <section id="field_label_section_title">
+        <div>
+            <legend class="legend">Field Label Guide</legend>
+        </div>
+    </section>
+     
+<!-- Label -->
+    <div class="fieldset section" id="field_label">
+        <fieldset> 
+            <div class="global_section_title">
+                <p class="global_section_id">Field Label Guide</p>
+                <button class="global_btn_open">접기</button>
+            </div>
+            <div class="global_elements">
+                <div class="quote">
+                    <h5 class="group_title">Legend, Title, Description, Label</h5>
+                </div>
+                <div class="form_container">
+                    <div class="sample_width">
+                        <div class="fieldset_title">
+                            <legend>Legend : 섹션 타이틀</legend>
+                            <p>P : 더욱 상세한 내용은 이곳에 입력합니다.</p>
+                        </div>      
+                        <div class="fieldset">
+                            <fieldset>
+                                <div class="form_title">
+                                    <h5>H5 : 섹션 타이틀</h5>
+                                    <h6>H6 : 서브 타이틀 디스크립션</h6>
+                                </div>
+                                <div class="full_input_group">
+                                    <div class="input_inline_label">
+                                        <div class="input_label col_4">
+                                            <label>label : 입력창 라벨</label>
+                                        </div>
+                                        <div class="input_form col_8">
+                                            <input type="text" placeholder="플레이스홀더">
+                                            <div class="hint_text">
+                                                <span class="default">span : .hint_text 힌트텍스트</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quote">
+                    <h5 class="group_title">실제 적용 예시</h5>
+                </div>
+                
+                <div class="form_container">
+                    <div class="sample_width">
+                        <div class="fieldset_title">
+                            <legend>소득공유 후불제 지원하기</legend>
+                            <p>
+                                활동 이력과 심리검사 결과를 통해,<br>
+                                정직도와 성실도를 평가에 반영합니다.
+                            </p>
+                        </div>
+                        <div class="fieldset">
+                            <fieldset>
+                                <div class="form_title">
+                                    <h5>회원님의 정보를 입력해주세요.</h5>
+                                    <h6>* 필수 입력</h6>
+                                </div>
+                                <div class="full_input_group">
+                                    <div class="input_inline_label">
+                                        <div class="input_label col_3">
+                                            <label>이름</label>
+                                        </div>
+                                        <div class="input_form col_8">
+                                            <input type="text" placeholder="홍길동">
+                                        </div>
+                                    </div>
+                                    <div class="input_inline_label">
+                                        <div class="input_label col_3">
+                                            <label>이메일</label>
+                                        </div>
+                                        <div class="input_form col_8">
+                                            <input type="text" placeholder="example@sample.com">
+                                            <div class="hint_text">
+                                                <span class="default">이메일 형식을 정확하게 입력해주세요.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="input_inline_label">
+                                        <div class="input_label col_3">
+                                            <label>성별</label>
+                                        </div>
+                                        <div class="form_check form_check_inline">
+                                            <div class="form_check_input">
+                                                <input type="radio" name="flexRadioDefault" id="flexRadioDefault0" checked>
+                                                <label for="flexRadioDefault0">
+                                                남자
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form_check form_check_inline">
+                                            <div class="form_check_input">
+                                                <input type="radio" name="flexRadioDefault" id="flexRadioDefault9">
+                                                <label for="flexRadioDefault9">
+                                                여자
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div style="width:96%; display: block; margin: 0 auto; border:1px solid var(--bg-gray); padding: 16px; border-radius: 0.4rem;">
+                            <div class="form_check" style="margin-bottom: 12px;">
+                                <div class="form_check_input" style="display: inline-block;">
+                                    <input type="checkbox" value="" id="flexCheckDefault">
+                                    <label for="flexCheckDefault">
+                                    (필수) 서비스 이용 약관 동의
+                                    </label>
+                                </div>
+                                <div class="btn hdm_btn_detail" style="display: inline-block; float: right; vertical-align: top;">
+                                    <button>자세히 보기</button>
+                                </div>
+                            </div>
+                            <div class="form_check" style="margin-bottom: 12px;">
+                                <div class="form_check_input"  style="display: inline-block;">
+                                    <input type="checkbox" value="" id="flexCheckChecked">
+                                    <label for="flexCheckChecked">
+                                    (필수) 개인정보 취급방침 동의
+                                    </label>
+                                </div>
+                                <div class="btn hdm_btn_detail" style="display: inline-block; float: right; vertical-align: top;">
+                                    <button>자세히 보기</button>
+                                </div>
+                            </div>
+                            <div class="form_check">
+                                <div class="form_check_input"  style="display: inline-block;">
+                                    <input type="checkbox" value="" id="defaultCheck3">
+                                    <label for="defaultCheck3">
+                                    (선택) 마케팅 이용 수신 동의
+                                    </label>
+                                </div>
+                                <div class="btn hdm_btn_detail" style="display: inline-block; float: right; vertical-align: top;">
+                                    <button>자세히 보기</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fieldset">
+                            <fieldset>
+                                <div class="form_title">
+                                    <h5>먼저 배우고 나중에 내는 후불제 방식을 선택한 이유가 무엇인가요?</h5>
+                                    <h6>후불제 방식이 학생에게 적합하다고 판단한 이유에 대해 구체적으로 적어주세요.</h6>
+                                </div>
+                                <div class="full_input_group">
+                                        <div class="input_form input_full_width">
+                                            <textarea placeholder="구체적으로 적어주실 수록 심사에 유리하게 작용합니다." rows="5"></textarea>
+                                            <div class="hint_text">
+                                                <span class="default">최소 200자 이상 내용을 입력해주세요! (0/200)</span>
+                                            </div>
+                                        </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+       
+        
+<!-- --------------------------------------------- -->
+        
+        
+        
+<!-- 버튼 섹션 타이틀-->
+    <section id="form000_section_title">
+        <div>
+            <legend class="legend">000 - Form</legend>
+        </div>
+    </section>
+     
+<!-- 버튼 -->
+    <div class="fieldset section" id="button">
+        <fieldset> 
+            <div class="global_section_title">
+                <p class="global_section_id"><b>050</b> - button</p>
+                <button class="global_btn_open">접기</button>
+            </div>
+            <div class="global_elements">
+                <div class="left">
+                    <h5 class="subtitle_category">Class Name</h5>
+                    <div class="global_btn_group">
+                        <p>.hdm_btn_common</p>
+                    </div>
+                    <div class="global_btn_group">
+                        <p>.hdm_btn_point</p>
+                    </div>
+                    <div class="global_btn_group">
+                        <p>.hdm_btn_prev<br>.hdm_btn_next</p>
+                    </div>
+                    <div class="global_btn_group">
+                        <p>.hdm_btn_detail</p>
+                    </div>
+                    <div class="global_btn_group">
+                        <p>.hdm_btn_texttype</p>
+                    </div>
+                    <div class="global_btn_group">
+                        <p>.hdm_btn_linetype</p>
+                    </div>
+                </div>
+                <div class="left">
+                    <h5 class="subtitle_category">Active Status</h5>
+                    <div class="global_btn_group">
+                        <div class="btn hdm_btn_common">
+                            <button>저장하기</button>
+                        </div>  
+                    </div>
+                    <div class="global_btn_group">
+                        <div class="btn hdm_btn_point">
+                            <button>제출하기</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="global_btn_group" id="prev">
+                            <div class="btn hdm_btn_prev">
+                                <button>이전</button>
+                            </div>
+                        </div>
+                        <div class="global_btn_group" id="next">
+                            <div class="btn hdm_btn_next">
+                                <button>다음</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="global_btn_group">
+                        <div class="btn hdm_btn_detail">
+                            <button>자세히 보기</button>
+                        </div>
+                    </div>
+                    <div class="global_btn_group">
+                        <div class="hdm_btn_texttype">
+                            <button>초기화</button>
+                        </div>
+                    </div>
+                    <div class="global_btn_group">
+                        <div class="hdm_btn_linetype">
+                            <button>맞다</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h5 class="subtitle_category">Inactive Status</h5>
+                    <div class="global_btn_group">
+                        <div class="btn hdm_btn_common">
+                            <button disabled>저장하기</button>
+                        </div>  
+                    </div>
+                    <div class="global_btn_group">
+                        <div class="btn hdm_btn_point">
+                            <button disabled>제출하기</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="global_btn_group" id="prev">
+                            <div class="btn hdm_btn_prev">
+                                <button disabled>이전</button>
+                            </div>
+                        </div>
+                        <div class="global_btn_group" id="next">
+                            <div class="btn hdm_btn_next">
+                                <button disabled>다음</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="global_btn_group">
+                        <div class="btn hdm_btn_detail">
+                            <button disabled>자세히 보기</button>
+                        </div>
+                    </div>
+                    <div class="global_btn_group">
+                        <div class="hdm_btn_texttype">
+                            <button disabled>초기화</button>
+                        </div>
+                    </div>
+                    <div class="global_btn_group">
+                        <div class="hdm_btn_linetype">
+                            <button disabled>맞다</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+       
+    
+        
+<!-- --------------------------------------------- -->
+        
+        
+
+<!-- 인풋 섹션 타이틀-->
+    <section id="form100_section_title">
+        <div>
+            <legend class="legend">100 - Input : Text type</legend>
+        </div>
+    </section>
+
+        
+<!-- 인풋타입 --> 
+<!-- 인풋 text Templete-->
+    <div class="fieldset section" id="text_input">
+        <fieldset> 
+            <div class="global_section_title" id="input_text">
+                <p class="global_section_id">100 - Input  type : "text"</p>
+                <button class="global_btn_open">접기</button>
+            </div>
+            <div class="global_elements">
+                
+                <div class="quote">
+                    <h5 class="group_title">full_input_group</h5>
+                </div>
+                <div class="input_group full_input_group" id="no_lable_text_input">
+                    <div id="input_inline_lab">
+                        <h5 class="subtitle_category">Inline Label</h5>
+                        <h6 class="subtitle_detail">Parent div class  : "input_inline_label"</h6>
+                    </div>
+                    <div>
+                        <div class="input_inline_label">
+                            <div class="input_label col_3">
+                                <label>Default Status</label>
+                            </div>
+                            <div class="input_form col_8">
+                                <input type="text" placeholder="플레이스홀더">
+                            </div>
+                        </div>
+                        <div class="input_inline_label">
+                            <div class="input_label col_3">
+                                <label>Inactive Stasus</label>
+                            </div>
+                            <div class="input_form col_8">
+                                <input type="text" placeholder="플레이스홀더" disabled>
+                            </div>
+                        </div>
+                        <div class="input_inline_label">
+                            <div class="input_label col_3">
+                                <label>Required Status</label>
+                            </div>
+                            <div class="input_form col_8">
+                                <input type="text" placeholder="플레이스홀더" value="기본입력값" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input_group full_input_group" id="input_top_lab">
+                    <div>
+                        <h5 class="subtitle_category">Top Label</h5>
+                        <h6 class="subtitle_detail">Parent div class : input_top_label<br>
+                        'input_form'에 : "input_full_width"</h6>
+                    </div>
+                    <div class="input_top_label">
+                        <div class="input_label">
+                            <label>입력창 라벨</label>
+                        </div>
+                        <div class="input_form input_full_width">
+                            <input type="text" placeholder="플레이스홀더">
+                        </div>
+                    </div>
+                </div>
+                <div class="input_group full_input_group" id="input_no_lab">
+                    <div>
+                        <h5 class="subtitle_category">No Label Full Width</h5>
+                        <h6 class="subtitle_detail">'input_form' class name : "input_full_width"</h6>
+                    </div>
+                    <div class="input_form input_full_width">
+                        <input type="text" placeholder="플레이스홀더">
+                    </div>
+                </div>
+                
+                <div class="quote">
+                    <h5 class="group_title">part_input_group</h5>
+                </div>
+                <div class="input_group" id="input_inline_sep" >
+                    <div>
+                        <h5 class="subtitle_category">Top Label, seperated Width</h5>
+                        <h6 class="subtitle_detail">Parent div class : "part_input_group"와 width(col_n)값 지정<br>
+                        Child div class : "input_top_label"</h6>
+                    </div>
+                    <div class="part_input_group col_4">
+                        <div class="input_top_label">
+                            <div class="input_label">
+                                <label>이름</label>
+                            </div>
+                            <div class="input_form">
+                                <input type="text" placeholder="홍길동">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part_input_group col_4">
+                        <div class="input_top_label">
+                            <div class="input_label">
+                                <label>닉네임</label>
+                            </div>
+                            <div class="input_form">
+                                <input type="text" placeholder="고니">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part_input_group col_3">
+                        <div class="input_top_label">
+                            <div class="input_label">
+                                <label>비밀번호</label>
+                            </div>
+                            <div class="input_form">
+                                <input type="password" placeholder="비밀번호">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input_group" id="input_top_sep">
+                    <div>
+                        <h5 class="subtitle_category">Inline Label, seperated Width</h5>
+                        <h6 class="subtitle_detail">Parent div class : "part_input_group"<br>
+                        Child div class : 'input_label'과 'input_form'에 각각 width(col_n)값 지정</h6>
+                    </div>
+                    <div class="part_input_group">
+                        <div class="input_label col_3">
+                            <label>이름</label>
+                        </div>
+                        <div class="input_form col_7">
+                            <input type="text" placeholder="홍길동">
+                        </div>
+                    </div>
+                    <div class="part_input_group">
+                        <div class="input_label col_3">
+                            <label>닉네임</label>
+                        </div>
+                        <div class="input_form col_7">
+                            <input type="text" placeholder="고니">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+        
+<!-- 인풋 응용 Templete -->
+    <div class="fieldset section" id="text_input_valiation">
+        <fieldset> 
+            <div class="global_section_title" id="input_password">
+                <p class="global_section_id">110~160 - Input Type : Valiation</p>
+                <button class="global_btn_open">접기</button>
+            </div>
+            <div class="global_elements">
+                <div class="input_group" id="input_password">
+                    <div>
+                        <div class="quote"></div>
+                        <h5 class="subtitle_category">110 </h5>
+                        <h6 class="subtitle_detail">input type : Password</h6>
+                    </div>
+                    <div>
+                        <div class="input_inline_label">
+                            <div class="input_label col_2">
+                                <label>비밀번호</label>
+                            </div>
+                            <div class="input_form col_3">
+                                <input type="password" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="input_inline_label">
+                            <div class="input_label col_2">
+                                <label>비밀번호</label>
+                            </div>
+                            <div class="input_form col_3">
+                                <input type="password" placeholder="Password" required>
+                                <div class="hint_text invalid_feedback">
+                                    비밀번호를 확인해주세요.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="input_group" id="input_email">
+                    <div>
+                        <div class="quote"></div>
+                        <h5 class="subtitle_category">120 </h5>
+                        <h6 class="subtitle_detail">input type : Email</h6>
+                    </div>
+                    <div>
+                        <div class="input_inline_label">
+                            <div class="input_label col_2">
+                                <label for="staticEmail">이메일</label>
+                            </div>
+                            <div class="input_form col_4">
+                                <input type="email" id="staticEmail" placeholder="email@example.com">
+                            </div>
+                        </div>
+                        <div class="input_inline_label">
+                            <div class="input_label col_2">
+                                <label for="staticEmail">이메일</label>
+                            </div>
+                            <div class="input_form col_4">
+                                <input type="email" id="staticEmail" placeholder="email@example.com" required>
+                                <div class="hint_text invalid_feedback">
+                                    이메일 형식에 맞춰 입력하세요.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input_group" id="input_tel">
+                    <div>
+                        <div class="quote"></div>
+                        <h5 class="subtitle_category">130 </h5>
+                        <h6 class="subtitle_detail">input type : Tel</h6>
+                    </div>
+                    <div>
+                        <div class="input_label col_2">
+                            <label for="staticEmail">전화번호</label>
+                        </div>
+                        <div class="input_form col_4">
+                            <input type="tel" id="staticEmail" placeholder="010-0000-0000" value="010-">
+                                <div class="hint_text default">
+                                    하이픈'-' 제외하고 숫자만 입력하세요.
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input_group" id="input_number">
+                    <div>
+                        <div class="quote"></div>
+                        <h5 class="subtitle_category">140 </h5>
+                        <h6 class="subtitle_detail">input type : Number</h6>
+                    </div>
+                    <div>
+                        <div class="input_label col_2">
+                            <label for="staticEmail">나이</label>
+                        </div>
+                        <div class="input_form">
+                            <input type="number" id="staticEmail" placeholder="000" step="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="input_group" id="input_address">
+                    <div>
+                        <div class="quote"></div>
+                        <h5 class="subtitle_category">150 </h5>
+                        <h6 class="subtitle_detail">input type : Address</h6>
+                    </div>
+                    <div>
+                        <div class="input_label col_2">
+                            <label for="staticEmail">주소</label>
+                        </div>
+                        <div class="input_form">
+                            <input type="address" id="staticEmail" placeholder="도로명 주소 검색" step="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="input_group" id="input_textarea">
+                    <div>
+                        <div class="quote"></div>
+                        <h5 class="subtitle_category">160 </h5>
+                        <h6 class="subtitle_detail">input type : Textarea</h6>
+                    </div>
+                    <div>
+                        <div class="input_label col_2">
+                            <label for="staticEmail">내용 입력</label>
+                        </div>
+                        <div class="input_form">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="내용을 입력하세요."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+       
+        
+<!-- --------------------------------------------- -->
+        
+        
+<!-- 체크박스 섹션 타이틀-->
+    <section id="form200_section_title">
+        <div>
+            <legend class="legend">200 - checkbox</legend>
+        </div>
+    </section>
+     
+<!-- 체크박스 -->
+    <div class="fieldset section" id="checkbox_section">
+        
+        
+<!-- Radio -->
+        <fieldset class="fieldset_margin" id="radio"> 
+            <div class="global_section_title">
+                <p class="global_section_id"><b>250</b> - Radio</p>
+                <button class="global_btn_open">접기</button>
+            </div>
+            <div class="global_elements">
+                
+                <div class="quote">
+                    <h5 class="group_title">기본형</h5>
+                </div>
+                <div class="input_group">
+                    <div class="form_check">
+                        <div class="form_check_input">
+                            <input type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                            <label for="flexRadioDefault1">
+                            남자
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form_check">
+                        <div class="form_check_input">
+                            <input type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label for="flexRadioDefault2">
+                            여자
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quote">
+                    <h5 class="group_title">응용형</h5>
+                </div>
+                <div class="input_group">
+                    <div class="form_check">
+                        <div class="form_check_input">
+                            <input type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label for="exampleRadios1">
+                            미필
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form_check">
+                        <div class="form_check_input">
+                            <input type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                            <label for="exampleRadios2">
+                            현역
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form_check">
+                        <div class="form_check_input">
+                            <input type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                            <label for="exampleRadios3">
+                            전역
+                            </label>
+                        </div>
+                    </div>
+                        <div class="form_check">
+                        <div class="form_check_input">
+                            <input type="radio" name="exampleRadios" id="exampleRadios4" value="option4" disabled>
+                            <label for="exampleRadios4">
+                            해당없음
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quote">
+                    <h5 class="group_title">인라인</h5>
+                </div>
+                <div class="input_group">
+                    <div class="form_check form_check_inline">
+                        <div class="form_check_input">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label for="inlineRadio1">미필</label>
+                        </div>
+                    </div>
+                    <div class="form_check form_check_inline">
+                        <div class="form_check_input">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label for="inlineRadio2">현역</label>
+                        </div>
+                    </div>
+                    <div class="form_check form_check_inline">
+                        <div class="form_check_input">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                            <label for="inlineRadio3">전역</label>
+                        </div>
+                    </div>
+                    <div class="form_check form_check_inline">
+                        <div class="form_check_input">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4" disabled>
+                            <label for="inlineRadio4">해당 없음</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        
+<!-- checkbox -->
+        <fieldset>
+            <div class="global_section_title" id="checkbox">
+                <p class="global_section_id"><b>260</b> - checkbox</p>
+                <button class="global_btn_open">접기</button>
+            </div>
+            <div class="global_elements" id="checkbox_elements">
+                
+                <div class="quote">
+                    <h5 class="group_title">기본형</h5>
+                </div>
+                <div class="input_group">
+                    <div class="form_check">
+                        <div class="form_check_input">
+                            <input type="checkbox" value="" id="flexCheckDefault">
+                            <label for="flexCheckDefault">
+                            (필수) 서비스 이용 약관 동의
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form_check">
+                        <div class="form_check_input">
+                            <input type="checkbox" value="" id="flexCheckChecked">
+                            <label for="flexCheckChecked">
+                            (필수) 개인정보 취급방침 동의
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form_check">
+                        <div class="form_check_input">
+                            <input type="checkbox" value="" id="defaultCheck3">
+                            <label for="defaultCheck3">
+                            (선택) 마케팅 이용 수신 동의
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quote">
+                    <h5 class="group_title">응용형</h5>
+                </div>
+                <div class="input_group">
+                    <div class="form_check">
+                        <div class="form_check_input">
+                            <input type="checkbox" value="" id="defaultCheck1">
+                            <label for="defaultCheck1">
+                            (필수) 서비스 이용 약관 동의
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form_check">
+                        <div class="form_check_input">
+                            <input type="checkbox" value="" id="defaultCheck2" disabled>
+                            <label for="defaultCheck2">
+                            (필수) 개인정보 취급방침 동의
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quote">
+                    <h5 class="group_title">인라인</h5>
+                </div>
+                <div class="input_group">
+                    <div class="form_check form_check_inline">
+                        <div class="form_check_input">
+                            <input type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label for="inlineCheckbox1">1</label>
+                        </div>
+                    </div>
+                    <div class="form_check form_check_inline">
+                        <div class="form_check_input">
+                            <input type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label for="inlineCheckbox2">2</label>
+                        </div>
+                    </div>
+                    <div class="form_check form_check_inline">
+                        <div class="form_check_input">
+                            <input type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                            <label for="inlineCheckbox3">3</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+        
+<!-- --------------------------------------------- -->
+        
+        
+<!-- Select 섹션 타이틀-->
+    <section id="form300_section_title">
+        <div>
+            <legend class="legend">300 - Select</legend>
+        </div>
+    </section>
+     
+<!-- Select -->
+    <div class="fieldset section" id="select_section">
+        
+    <!-- Datalist Select-->
+            <fieldset class="fieldset_margin"> 
+                <div class="global_section_title" id="datalist">
+                    <p class="global_section_id"><b>301</b> - datalist</p>
+                    <button class="global_btn_open">접기</button>
+                </div>
+                <div class="global_elements">
+            <!-- inline -->
+                    <div class="input_group">
+                        <label for="exampleDataList" class="form-label">Datalist example</label>
+                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                        <datalist id="datalistOptions">
+                            <option value="San Francisco" label="샌프란시스코">
+                            <option value="New York" label="뉴욕">
+                            <option value="Seattle" label="시애틀">
+                            <option value="Los Angeles" label="로스앤젤레스">
+                            <option value="Chicago" label="시카고">
+                        </datalist>
+                    </div>
+            <!-- block -->
+                    <div class="input_group">
+                        <label for="exampleDataList" class="form-label">Datalist example</label>
+                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                        <datalist id="datalistOptions">
+                            <option value="San Francisco" label="샌프란시스코">
+                            <option value="New York" label="뉴욕">
+                            <option value="Seattle" label="시애틀">
+                            <option value="Los Angeles" label="로스앤젤레스">
+                            <option value="Chicago" label="시카고">
+                        </datalist>
+                    </div>
+                </div>
+            </fieldset>
+
+    <!-- Option Select-->
+            <fieldset class="fieldset_margin">
+                <div class="global_section_title" id="select">
+                    <p class="global_section_id"><b>350</b> - Select</p>
+                    <button class="global_btn_open">접기</button>
+                </div>
+                <div class="global_elements">
+                    <select name="language" >
+                        <option value="none">=== 선택 ===</option>
+                        <option value="korean">한국어</option>
+                        <option value="english">영어</option>
+                        <option value="chinese">중국어</option>
+                        <option value="spanish">스페인어</option>
+                    </select>
+                    
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                            <select class="form-select" id="inputGroupSelect01">
+                            <option selected>Choose...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+
+                </div>
+            </fieldset>
+    <!-- Option Select-->
+            <fieldset>
+                <div class="global_section_title" id="select">
+                    <p class="global_section_id"><b>355</b> - Option input</p>
+                    <button class="global_btn_open">접기</button>
+                </div>
+                <div class="global_elements">
+                    <select name="language" >
+                        <option value="none">=== 선택 ===</option>
+                        <option value="korean">한국어</option>
+                        <option value="english">영어</option>
+                        <option value="chinese">중국어</option>
+                        <option value="spanish">스페인어</option>
+                    </select>
+                </div>
+            </fieldset>
+    </div>
+        
+        
+<!-- --------------------------------------------- -->
+        
+             
+<!-- Range 섹션 타이틀-->
+    <section id="form400_section_title">
+        <div>
+            <legend class="legend">400 - Range</legend>
+        </div>
+    </section>
+     
+<!-- Range -->
+    <div class="fieldset section" id="range_section">
+        <fieldset class="fieldset_margin"> 
+            <div class="global_section_title" id="range">
+                <p class="global_section_id"><b>400</b> - Range</p>
+                <button class="global_btn_open">접기</button>
+            </div>
+            <div class="global_elements">
+                
+                <div class="quote">
+                    <h5 class="group_title">Full Width</h5>
+                </div>
+                <div class="input_group">
+                    <div class="form_range">
+                        <label for="customRange1">범위를 지정해주세요.</label>
+                        <input type="range" min="0" max="5" step="0.5" id="customRange1">
+                    </div>
+                </div>
+                
+                <div class="quote">
+                    <h5 class="group_title">최소값 최대값 표시</h5>
+                </div>
+                <div class="input_group">
+                    <div class="form_range">
+                        <label for="customRange2">범위를 지정해주세요.</label>
+                        <input type="range" min="0" max="5" step="0.5" id="customRange2">
+                        <div class="range_value">
+                            <span class="min">최소값</span>
+                            <span class="max">최대값</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quote">
+                    <h5 class="group_title">Inline Width</h5>
+                </div>
+                
+                <div class="input_group">
+                    <div class="form_range form_range_inline">
+                        <label for="customRange3">범위를 지정해주세요.</label>
+                        <input type="range" min="0" max="5" step="0.5" id="customRange3">
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset> 
+            <div class="global_section_title" id="linkert">
+                <p class="global_section_id"><b>410</b> - Linkert</p>
+                <button class="global_btn_open">접기</button>
+            </div>
+            <div class="global_elements">
+                <div class="likert">
+                    <ul>
+                        <li> Not Guilty </li>
+                        <li><input type="radio" name="guilty" value="1" /></li>
+                        <li><input type="radio" name="guilty" value="2" /></li>
+                        <li><input type="radio" name="guilty" value="3" /></li>
+                        <li><input type="radio" name="guilty" value="4" /></li>
+                        <li><input type="radio" name="guilty" value="5" /></li>
+                        <li> Very Guilty </li>
+                    </ul>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+        
+<!-- --------------------------------------------- -->
+        
+        
+<!-- Date 섹션 타이틀-->
+    <section id="form500_section_title">
+        <div>
+            <legend class="legend">500 - Date</legend>
+        </div>
+    </section>
+     
+<!-- Date -->
+    <div class="fieldset section" id="date_section">
+
+    <!-- Datetime-local-->
+            <fieldset class="fieldset_margin" id="datetime_local"> 
+                <div class="global_section_title">
+                    <p class="global_section_id"><b>500</b> - date</p>
+                    <button class="global_btn_open">접기</button>
+                </div>
+                <div class="global_elements">
+                    
+                    <div class="quote">
+                        <h5 class="group_title">Date</h5>
+                    </div>
+                    <div class="input_group">
+                        <div>
+                            <input type="date">
+                        </div>
+                    </div>
+                    
+                    <div class="quote">
+                            <h5 class="group_title">Datetime Local</h5>
+                    </div>
+                    <div class="input_group">
+                        
+                        <h6 class="subtitle_detail">Datetime</h6>
+                        <div>
+                            <input type="datetime">
+                        </div>
+                        <h6 class="subtitle_detail">Datetime Local</h6>
+                        <div>
+                            <input type="datetime-local">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+    <!-- Date Split-->
+            <fieldset>
+                <div class="global_section_title" id="date_split">
+                    <p class="global_section_id"><b>510</b> - Date Split</p>
+                    <button class="global_btn_open">접기</button>
+                </div>
+                <div class="global_elements">
+                    
+                    <div class="quote">
+                            <h5 class="group_title">Date Split</h5>
+                    </div>
+                    <div class="input_group">
+                        <div>
+                            <input name="dateCL" id="dateCL" type="date" min="1909" max="2009">
+                            <input name="monthCL" id="monthCL" type="hidden"/>
+                            <input name="dayCL" id="dayCL" type="hidden"/>
+                            <input name="yearCL" id="yearCL" type="hidden"/>
+                        </div>
+                    </div>
+                    
+                    <div class="quote">
+                            <h5 class="group_title">Time Split</h5>
+                    </div>
+                    <div class="input_group">
+                        <div>
+                            <input type="time">
+                        </div>
+                        <h6 class="subtitle_detail">Datetime Split</h6>
+                        <div>
+                            <input type="date-time">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+    </div>
+
+        
+        
+        
+<!-- --------------------------------------------- -->
+        
+                     
+<!-- file 섹션 타이틀-->
+    <section id="form600_section_title">
+        <div>
+            <legend class="legend">600 - File</legend>
+        </div>
+    </section>
+     
+<!-- file -->
+    <div class="fieldset section" id="select_section">
+        <fieldset> 
+            <div class="global_section_title" id="file">
+                <p class="global_section_id"><b>600</b> - File</p>
+                <button class="global_btn_open">접기</button>
+            </div>
+            <div class="global_elements">
+                <div>
+                    <input type="file">
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+        
+        
+<!-- --------------------------------------------- -->
+        
+        
+        
+<!-- Group 섹션 타이틀-->
+    <section id="form700_section_title">
+        <div>
+            <legend class="legend">700 - Group</legend>
+        </div>
+    </section>
+     
+<!-- Group -->
+    <div class="fieldset section" id="Group_section">
+
+    <!-- Group - List-->
+            <fieldset class="fieldset_margin"> 
+                <div class="global_section_title" id="group">
+                    <p class="global_section_id"><b>710</b> - Group List</p>
+                    <button class="global_btn_open">접기</button>
+                </div>
+                <div class="global_elements">
+                    <div>
+                        Group List
+                    </div>
+                </div>
+            </fieldset>
+
+    <!-- Group - Dictionary-->
+            <fieldset>
+                <div class="global_section_title" id="dictionary">
+                    <p class="global_section_id"><b>720</b> - Dictionary Dictionary</p>
+                    <button class="global_btn_open">접기</button>
+                </div>
+                <div class="global_elements">
+                    <div>
+                        Group Dictionary
+                    </div>
+                </div>
+            </fieldset>
+    </div>
+
+        
+                
+<!-- --------------------------------------------- -->
+            
+        
+        
+<!-- Content 섹션 타이틀-->
+    <section id="form800_section_title">
+        <div>
+            <legend class="legend">800 - Content</legend>
+        </div>
+    </section>
+     
+<!-- Content -->
+    <div class="fieldset section" id="content_section">
+
+    <!-- Content-->
+            <fieldset class="fieldset_margin"> 
+                <div class="global_section_title" id="content">
+                    <p class="global_section_id"><b>800</b> - Content</p>
+                    <button class="global_btn_open">접기</button>
+                </div>
+                <div class="global_elements">
+                    <div>
+                        Content
+                    </div>
+                </div>
+            </fieldset>
+
+    <!-- 820 Media-->
+            <fieldset class="fieldset_margin">
+                <div class="global_section_title" id="media">
+                    <p class="global_section_id"><b>820</b> - Media</p>
+                    <button class="global_btn_open">접기</button>
+                </div>
+                <div class="global_elements">
+                    <div>
+                        Content Media
+                    </div>
+                </div>
+            </fieldset>
+        
+    <!-- 830 document-->
+            <fieldset class="fieldset_margin">
+                <div class="global_section_title" id="document">
+                    <p class="global_section_id"><b>830</b> - Document</p>
+                    <button class="global_btn_open">접기</button>
+                </div>
+                <div class="global_elements">
+                    <div>
+                        Content Document
+                    </div>
+                </div>
+            </fieldset>
+        
+    <!-- 850 Dialog-->
+            <fieldset>
+                <div class="global_section_title" id="dialog">
+                    <p class="global_section_id"><b>850</b> - Dialog</p>
+                    <button class="global_btn_open">접기</button>
+                </div>
+                <div class="global_elements">
+                    <div>
+                        Content Dialog
+                    </div>
+                </div>
+            </fieldset>
+    </div>
+
+        
+        
+
+<script type="text/javascript">
+    var global_elements = document.getElementsByTagName("div"); 
+        for (var i = 0; i < global_elements.length; i++) { 
+            if (global_elements[i].className == "global_elements") {
+                global_elements[i].style.display="block"; 
+            } else if (global_elements[i].className == "global_section_title") {
+                global_elements[i].onclick=switchDisplay; } 
+        } 
+        // 상태에 따라 접거나 접기 
+        function switchDisplay() { 
+            var parent = this.parentNode; 
+            var target = parent.getElementsByTagName("div")[1]; 
+
+            if (target.style.display == "none") { 
+                target.style.display="block"; 
+            } else { 
+                target.style.display="none"; 
+               } 
+            return false; 
+        } 
+</script>  
+
+<script src="js/global.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/customd/jquery-visible/master/jquery.visible.min.js"></script>
+    </body>
+</html>

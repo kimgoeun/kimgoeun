@@ -10,11 +10,12 @@ body {
 }
 
 a {
-    color: burlywood;
+    color: #f7f7f7;
     text-decoration: none;
+    cursor: pointer;
 }
 a:hover{
-    color:darksalmon;
+    color:#eaeaea;
 }
 
 li{
