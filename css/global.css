@@ -17,6 +17,18 @@ section{
     padding: 50px 30px;
     margin: 0 auto 100px;
 }
+     @media (max-width: 1080px) {
+        section{
+            padding: 50px 18px 0 ;
+         }
+         
+        .section{   
+            width: 90%;
+            padding: 50px 30px;
+            margin: 0 auto 100px;
+         }
+    }
+         
 .legend{
     border-bottom: 1px solid var(--line-gray);
     padding-bottom: 30px;
@@ -42,6 +54,7 @@ ul li {
 
 xmp{
     background-color: var(--bg-gray);
+    word-wrap: break-word;
 }
 
 
@@ -195,7 +208,8 @@ xmp{
         border-radius: 6px;
     }
     .sample_width{
-        width: 560px;
+        width: 100%;
+        max-width: 560px;
         margin: 0 auto;
     }
 
@@ -472,6 +486,12 @@ xmp{
 #text_input_valiation textarea{
     width: 550px;
 }
+    @media (max-width: 1080px) {
+        #text_input_valiation textarea{
+            display: block;
+            width: 100%;
+        }
+    }
 #text_input_valiation .subtitle_category{
     display: inline-block;
     margin-right: 10px;

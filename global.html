@@ -51,9 +51,17 @@
 	    <div class="nav_section">
 	        <ul class="nav">
 	            <li>
-	                <a href="#field_label_section_title" class="nav_title">Field Label Guide</a>
-	            </li>
-	        </ul>
+                    <a href="#field_label_section_title" class="nav_title">Field Label Guide</a>
+	                <ul class="nav_dropdown">
+	                    <li class="nav_menu_md">
+		                    <a href="#field_label" class="nav_menu_subtitle">Text Application</a>
+                        </li>
+	                    <li class="nav_menu_md">
+		                    <a href="#real_sample" class="nav_menu_subtitle">Sample Case</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
 	    </div>
 	    <div class="nav_section">
 	        <ul class="nav">
@@ -381,19 +389,26 @@
             </div>
             <div class="global_elements">
             <h4>HTML Templete</h4>
+                
+            <p class="codepen" data-height="339" data-theme-id="light" data-default-tab="html,result" data-user="kimgoeun-the-decoder" data-slug-hash="ExWdYVM" style="height: 339px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="ExWdYVM">
+              <span>See the Pen <a href="https://codepen.io/kimgoeun-the-decoder/pen/ExWdYVM">
+              ExWdYVM</a> by kimgoeun (<a href="https://codepen.io/kimgoeun-the-decoder">@kimgoeun-the-decoder</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<!--
 <xmp>
-    <div class="fieldset">
-        <fieldset> 
-            <div>
-                <p>
-                    학생독립만세의 디자인시스템, HDML(HDM-Look)은 
-                    프로덕트 디자인에 일관된 사용자 경험을 제공하기 위해 
-                    만들어졌습니다.
-                </p>
-            </div>
-        </fieldset>
-    </div>
-    
+        <div class="fieldset">
+            <fieldset> 
+                <div>
+                    <p>
+                        학생독립만세의 디자인시스템, HDML(HDM-Look)은 
+                        프로덕트 디자인에 일관된 사용자 경험을 제공하기 위해 
+                        만들어졌습니다.
+                    </p>
+                </div>
+            </fieldset>
+        </div>
 </xmp>
                 <h4>HDML CSS</h4>
 <xmp>
@@ -412,8 +427,8 @@
         border-top: 1rem solid var(--indie-indigo);
         margin-bottom: 80px;
     }
-    
 </xmp>
+-->
                 <h4>적용 예시</h4>
                 <div class="fieldset">
                     <fieldset> 
@@ -688,10 +703,10 @@
     <div class="fieldset section" id="field_label">
         <fieldset> 
             <div class="global_section_title">
-                <p class="global_section_id">Field Label Guide</p>
+                <p class="global_section_id">Text Application</p>
                 <button class="global_btn_open">접기</button>
             </div>
-            <div class="global_elements">
+            <div class="global_elements" id="title_guide">
                 <div class="quote">
                     <h5 class="group_title">Legend, Title, Description, Label</h5>
                 </div>
@@ -724,11 +739,30 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="quote">
-                    <h5 class="group_title">실제 적용 예시</h5>
+                    <h5 class="group_title">Source Code</h5>
                 </div>
-                
+                <div class="form_container">
+                    <div>
+                        <p class="codepen" data-height="422" data-theme-id="light" data-default-tab="html" data-user="kimgoeun-the-decoder" data-slug-hash="ZEeqzJw" style="height: 422px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="ZEeqzJw">
+                          <span>See the Pen <a href="https://codepen.io/kimgoeun-the-decoder/pen/ZEeqzJw">
+                          ZEeqzJw</a> by kimgoeun (<a href="https://codepen.io/kimgoeun-the-decoder">@kimgoeun-the-decoder</a>)
+                          on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+                        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset> 
+            <div class="global_section_title" id="real_sample">
+                <p class="global_section_id">실제 적용 예시</p>
+                <button class="global_btn_open">접기</button>
+            </div>
+            <div class="global_elements" id="title_guide">
+                <div class="quote">
+                    <h5 class="group_title">Sample Case</h5>
+                </div>
                 <div class="form_container">
                     <div class="sample_width">
                         <div class="fieldset_title">
@@ -791,8 +825,8 @@
                         <div style="width:96%; display: block; margin: 0 auto; border:1px solid var(--bg-gray); padding: 16px; border-radius: 0.4rem;">
                             <div class="form_check" style="margin-bottom: 12px;">
                                 <div class="form_check_input" style="display: inline-block;">
-                                    <input type="checkbox" value="" id="flexCheckDefault">
-                                    <label for="flexCheckDefault">
+                                    <input type="checkbox" value="" id="sample1">
+                                    <label for="sample1">
                                     (필수) 서비스 이용 약관 동의
                                     </label>
                                 </div>
@@ -802,8 +836,8 @@
                             </div>
                             <div class="form_check" style="margin-bottom: 12px;">
                                 <div class="form_check_input"  style="display: inline-block;">
-                                    <input type="checkbox" value="" id="flexCheckChecked">
-                                    <label for="flexCheckChecked">
+                                    <input type="checkbox" value="" id="sample2">
+                                    <label for="sample2">
                                     (필수) 개인정보 취급방침 동의
                                     </label>
                                 </div>
@@ -813,8 +847,8 @@
                             </div>
                             <div class="form_check">
                                 <div class="form_check_input"  style="display: inline-block;">
-                                    <input type="checkbox" value="" id="defaultCheck3">
-                                    <label for="defaultCheck3">
+                                    <input type="checkbox" value="" id="sample3">
+                                    <label for="sample3">
                                     (선택) 마케팅 이용 수신 동의
                                     </label>
                                 </div>
@@ -840,6 +874,17 @@
                             </fieldset>
                         </div>
                     </div>
+                </div>
+                <div class="quote">
+                    <h5 class="group_title">Source Code</h5>
+                </div>
+                <div>
+                <p class="codepen" data-height="465" data-theme-id="light" data-default-tab="html" data-user="kimgoeun-the-decoder" data-slug-hash="YzZJKep" style="height: 465px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Sample 1">
+                  <span>See the Pen <a href="https://codepen.io/kimgoeun-the-decoder/pen/YzZJKep">
+                  Sample 1</a> by kimgoeun (<a href="https://codepen.io/kimgoeun-the-decoder">@kimgoeun-the-decoder</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
                 </div>
             </div>
         </fieldset>
