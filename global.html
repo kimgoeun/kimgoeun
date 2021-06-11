@@ -1398,7 +1398,7 @@
                     </div>
                     <div class="form_check form_check_inline">
                         <div class="form_check_input">
-                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" required>
                             <label for="inlineRadio3">전역</label>
                         </div>
                     </div>
@@ -1456,7 +1456,7 @@
                 <div class="input_group">
                     <div class="form_check">
                         <div class="form_check_input">
-                            <input type="checkbox" value="" id="defaultCheck1">
+                            <input type="checkbox" value="" id="defaultCheck1" checked>
                             <label for="defaultCheck1">
                             (필수) 서비스 이용 약관 동의
                             </label>
@@ -1464,7 +1464,7 @@
                     </div>
                     <div class="form_check">
                         <div class="form_check_input">
-                            <input type="checkbox" value="" id="defaultCheck2" disabled>
+                            <input type="checkbox" value="" id="defaultCheck2" required>
                             <label for="defaultCheck2">
                             (필수) 개인정보 취급방침 동의
                             </label>
@@ -1494,6 +1494,12 @@
                             <label for="inlineCheckbox3">3</label>
                         </div>
                     </div>
+                    <div class="form_check form_check_inline">
+                        <div class="form_check_input">
+                            <input type="checkbox" id="inlineCheckbox4" value="option4" required>
+                            <label for="inlineCheckbox4">4</label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </fieldset>
@@ -1521,28 +1527,37 @@
                 </div>
                 <div class="global_elements">
             <!-- inline -->
-                    <div class="input_group">
-                        <label for="exampleDataList" class="form-label">Datalist example</label>
-                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-                        <datalist id="datalistOptions">
-                            <option value="San Francisco" label="샌프란시스코">
-                            <option value="New York" label="뉴욕">
-                            <option value="Seattle" label="시애틀">
-                            <option value="Los Angeles" label="로스앤젤레스">
-                            <option value="Chicago" label="시카고">
-                        </datalist>
+                    <div class="input_group input_inline_label">
+                        <div class="input_label col_3">
+                            <label for="exampleDataList" class="form-label">Datalist example</label>
+                        </div>
+                        <div class="input_form col_7">
+                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                            <datalist id="datalistOptions">
+                                <option value="San Francisco" label="샌프란시스코">
+                                <option value="New York" label="뉴욕">
+                                <option value="Seattle" label="시애틀">
+                                <option value="Los Angeles" label="로스앤젤레스">
+                                <option value="Chicago" label="시카고">
+                            </datalist>
+                        </div>
                     </div>
+                    
             <!-- block -->
                     <div class="input_group">
-                        <label for="exampleDataList" class="form-label">Datalist example</label>
-                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-                        <datalist id="datalistOptions">
-                            <option value="San Francisco" label="샌프란시스코">
-                            <option value="New York" label="뉴욕">
-                            <option value="Seattle" label="시애틀">
-                            <option value="Los Angeles" label="로스앤젤레스">
-                            <option value="Chicago" label="시카고">
-                        </datalist>
+                        <div class="input_label input_top_label">
+                            <label for="exampleDataList" class="form-label">Datalist example</label>
+                        </div>
+                        <div class="input_form input_full_width">
+                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                            <datalist id="datalistOptions">
+                                <option value="San Francisco" label="샌프란시스코">
+                                <option value="New York" label="뉴욕">
+                                <option value="Seattle" label="시애틀">
+                                <option value="Los Angeles" label="로스앤젤레스">
+                                <option value="Chicago" label="시카고">
+                            </datalist>
+                        </div>
                     </div>
                 </div>
             </fieldset>
@@ -1554,24 +1569,31 @@
                     <button class="global_btn_open">접기</button>
                 </div>
                 <div class="global_elements">
-                    <select name="language" >
-                        <option value="none">=== 선택 ===</option>
-                        <option value="korean">한국어</option>
-                        <option value="english">영어</option>
-                        <option value="chinese">중국어</option>
-                        <option value="spanish">스페인어</option>
-                    </select>
-                    
-                    <div class="input-group mb-3">
-                        <label class="input-group-text" for="inputGroupSelect01">Options</label>
-                            <select class="form-select" id="inputGroupSelect01">
-                            <option selected>Choose...</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
+                    <div class="input_group">
+                        <div class="form_select input_full_width">
+                            <select name="language" >
+                                <option value="none">=== 선택 ===</option>
+                                <option value="korean">한국어</option>
+                                <option value="english">영어</option>
+                                <option value="chinese">중국어</option>
+                                <option value="spanish">스페인어</option>
+                            </select>
+                        </div>
 
+                        <div class="input_label">
+                            <label class="input-group-text" for="inputGroupSelect01">
+                                Options
+                            </label>
+                        </div>
+                        <div class="form_select">
+                            <select class="form-select" id="inputGroupSelect01">
+                                <option selected>Choose...</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </fieldset>
     <!-- Option Select-->
@@ -1581,13 +1603,17 @@
                     <button class="global_btn_open">접기</button>
                 </div>
                 <div class="global_elements">
-                    <select name="language" >
-                        <option value="none">=== 선택 ===</option>
-                        <option value="korean">한국어</option>
-                        <option value="english">영어</option>
-                        <option value="chinese">중국어</option>
-                        <option value="spanish">스페인어</option>
-                    </select>
+                    <div class="input_group">
+                        <div class="form_select">
+                            <select name="language" >
+                                <option value="none">=== 선택 ===</option>
+                                <option value="korean">한국어</option>
+                                <option value="english">영어</option>
+                                <option value="chinese">중국어</option>
+                                <option value="spanish">스페인어</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </fieldset>
     </div>
@@ -1644,6 +1670,18 @@
                     <div class="form_range form_range_inline">
                         <label for="customRange3">범위를 지정해주세요.</label>
                         <input type="range" min="0" max="5" step="0.5" id="customRange3">
+                    </div>
+                </div>
+                <div class="input_group">
+                    <div class="form_range form_range_inline">
+                        <label for="customRange3">범위를 지정해주세요.</label>
+                        <input type="range" min="0" max="5" step="0.5" id="customRange3" disabled>
+                    </div>
+                </div>
+                <div class="input_group">
+                    <div class="form_range form_range_inline">
+                        <label for="customRange3">범위를 지정해주세요.</label>
+                        <input type="range" min="0" max="5" step="0.5" id="customRange3" required>
                     </div>
                 </div>
             </div>
