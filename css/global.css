@@ -359,6 +359,10 @@ xmp{
 }
 
 /* */
+.global_margin_bottom{
+    margin-bottom: 30px;
+}
+
 .global_section_title{
     cursor: pointer;
     padding: 5px 8px 14px;
@@ -384,6 +388,10 @@ xmp{
     padding: 5px 10px;
     border-radius: 0.2rem;
     font-size: 1rem;
+}
+.global_radio_sample{
+    display: inline-block;
+    padding: 0.8rem 0 0;
 }
 
 
@@ -436,7 +444,7 @@ xmp{
 }
 .left{
     display: inline-block;
-    padding: 0 25px;
+    padding: 0 16px;
     vertical-align: top;
 /*    border-right: 1px dotted var(--line-gray);*/
 }
@@ -488,7 +496,6 @@ xmp{
 }
     @media (max-width: 1080px) {
         #text_input_valiation textarea{
-            display: block;
             width: 100%;
         }
     }
@@ -505,11 +512,27 @@ xmp{
     letter-spacing: 0;
 }
 
+/* likert */
+.global_likertgroup{
+    display: block;
+    margin: 20px 0 0 ;
+}
+.likert{
+    margin: 20px;
+}
+.likert_label{
+    display: inline-block;
+    color: var(--bright-green);
+    font-weight: 500;
+    padding: 1.3rem;
+    vertical-align: top;
+    border-right: 2px solid var(--indie-indigo);
+}
 
 
 /* Radio, Checkbox */
 
-#field_label .quote .group_title, #radio .quote .group_title, #checkbox_elements .quote .group_title, #range_section .quote .group_title, #date_section .global_elements .quote .group_title{
+#field_label .quote .group_title, #radio .quote .group_title, #checkbox_elements .quote .group_title, #range_section .quote .group_title, #date_section .global_elements .quote .group_title, #select_section .global_elements .quote .group_title{
     display: inline-block;
     vertical-align: top;
     font-weight: 600;
@@ -519,6 +542,7 @@ xmp{
     font-size: 1.1rem;
     width: 300px;
 }
-#radio .input_group, #checkbox_elements .input_group, #range_section .input_group, #date_section .global_elements .input_group{
+#radio .input_group, #checkbox_elements .input_group, #range_section .input_group, #date_section .global_elements .input_group, #select_section .global_elements .input_group{
     margin-top: 13px;
 }
+

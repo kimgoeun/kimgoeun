@@ -197,7 +197,7 @@
 		                    <a href="#select" class="nav_menu_subtitle">350 - Select</a>
                             <ul>
                                 <li class="nav_menu_child">
-                                    <a href="#option" class="nav_menu_sm">355 Option</a>
+                                    <a href="#select_input" class="nav_menu_sm">355 Option</a>
                                 </li>
                             </ul>
 		                </li>
@@ -219,7 +219,7 @@
 		                    <a href="#range" class="nav_menu_subtitle">400 - Range</a>
 		                </li>
 	                    <li class="nav_menu_md">
-		                    <a href="#linkert" class="nav_menu_subtitle">410 - Linkert</a>
+		                    <a href="#likert" class="nav_menu_subtitle">410 - likert</a>
 		                </li>
 	                </ul>
 	            </li>
@@ -238,8 +238,13 @@
 	                    <li class="nav_menu_md">
 		                    <a href="#date_section" class="nav_menu_subtitle">500 - Date</a>
                             <ul>
+<!--
                                 <li class="nav_menu_child">
-                                    <a href="#datetime_local" class="nav_menu_sm">501 Datetime</a>
+                                    <a href="#date" class="nav_menu_sm">500 Date</a>
+                                </li>
+-->
+                                <li class="nav_menu_child">
+                                    <a href="#datetime_local" class="nav_menu_sm">501 Datetime Local</a>
                                 </li>
                             </ul>
 		                </li>
@@ -802,20 +807,22 @@
                                         <div class="input_label col_3">
                                             <label>성별</label>
                                         </div>
-                                        <div class="form_check form_check_inline">
-                                            <div class="form_check_input">
-                                                <input type="radio" name="flexRadioDefault" id="flexRadioDefault0" checked>
-                                                <label for="flexRadioDefault0">
-                                                남자
-                                                </label>
+                                        <div class="global_radio_sample">
+                                            <div class="form_check form_check_inline">
+                                                <div class="form_check_input">
+                                                    <input type="radio" name="flexRadioDefault" id="flexRadioDefault0" checked>
+                                                    <label for="flexRadioDefault0">
+                                                    남자
+                                                    </label>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form_check form_check_inline">
-                                            <div class="form_check_input">
-                                                <input type="radio" name="flexRadioDefault" id="flexRadioDefault9">
-                                                <label for="flexRadioDefault9">
-                                                여자
-                                                </label>
+                                            <div class="form_check form_check_inline">
+                                                <div class="form_check_input">
+                                                    <input type="radio" name="flexRadioDefault" id="flexRadioDefault9">
+                                                    <label for="flexRadioDefault9">
+                                                    여자
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1238,10 +1245,10 @@
                     </div>
                     <div>
                         <div class="input_label col_2">
-                            <label for="staticEmail">전화번호</label>
+                            <label for="telinput">전화번호</label>
                         </div>
                         <div class="input_form col_4">
-                            <input type="tel" id="staticEmail" placeholder="010-0000-0000" value="010-">
+                            <input type="tel" id="telinput" placeholder="010-0000-0000" value="010-">
                                 <div class="hint_text default">
                                     하이픈'-' 제외하고 숫자만 입력하세요.
                                 </div>
@@ -1256,10 +1263,10 @@
                     </div>
                     <div>
                         <div class="input_label col_2">
-                            <label for="staticEmail">나이</label>
+                            <label for="ageinput">나이</label>
                         </div>
                         <div class="input_form">
-                            <input type="number" id="staticEmail" placeholder="000" step="100">
+                            <input type="number" id="ageinput" placeholder="000" step="100">
                         </div>
                     </div>
                 </div>
@@ -1271,10 +1278,10 @@
                     </div>
                     <div>
                         <div class="input_label col_2">
-                            <label for="staticEmail">주소</label>
+                            <label for="addressinput">주소</label>
                         </div>
                         <div class="input_form">
-                            <input type="address" id="staticEmail" placeholder="도로명 주소 검색" step="100">
+                            <input type="address" id="addressinput" placeholder="도로명 주소 검색" step="100">
                         </div>
                     </div>
                 </div>
@@ -1286,10 +1293,10 @@
                     </div>
                     <div>
                         <div class="input_label col_2">
-                            <label for="staticEmail">내용 입력</label>
+                            <label for="textareainput">내용 입력</label>
                         </div>
                         <div class="input_form">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="내용을 입력하세요."></textarea>
+                            <textarea id="textareainput" rows="5" placeholder="내용을 입력하세요."></textarea>
                         </div>
                     </div>
                 </div>
@@ -1526,36 +1533,37 @@
                     <button class="global_btn_open">접기</button>
                 </div>
                 <div class="global_elements">
-            <!-- inline -->
+
+                    <div class="quote">
+                        <h5 class="group_title">Inline Label</h5>
+                    </div>
                     <div class="input_group input_inline_label">
                         <div class="input_label col_3">
-                            <label for="exampleDataList" class="form-label">Datalist example</label>
+                            <label for="exampleDataList1">Datalist Inline</label>
                         </div>
-                        <div class="input_form col_7">
-                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                        <div class="input_form col_8">
+                            <input list="datalistOptions" id="exampleDataList1" placeholder="원하는 수강 타입을 입력 또는 검색하세요.">
                             <datalist id="datalistOptions">
-                                <option value="San Francisco" label="샌프란시스코">
-                                <option value="New York" label="뉴욕">
-                                <option value="Seattle" label="시애틀">
-                                <option value="Los Angeles" label="로스앤젤레스">
-                                <option value="Chicago" label="시카고">
+                                <option value="코딩부트캠프" label="ISA">
+                                <option value="코딩부트캠프" label="일반후불제">
+                                <option value="코딩부트캠프" label="선불제">
                             </datalist>
                         </div>
                     </div>
-                    
-            <!-- block -->
-                    <div class="input_group">
-                        <div class="input_label input_top_label">
-                            <label for="exampleDataList" class="form-label">Datalist example</label>
+            <!--   -->
+                    <div class="quote">
+                        <h5 class="group_title">Top Label</h5>
+                    </div>
+                    <div class="input_group input_top_label">
+                        <div class="input_label">
+                            <label for="exampleDataList2">Datalist Top Label</label>
                         </div>
                         <div class="input_form input_full_width">
-                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-                            <datalist id="datalistOptions">
-                                <option value="San Francisco" label="샌프란시스코">
-                                <option value="New York" label="뉴욕">
-                                <option value="Seattle" label="시애틀">
-                                <option value="Los Angeles" label="로스앤젤레스">
-                                <option value="Chicago" label="시카고">
+                            <input list="datalistOptions2" id="exampleDataList2" placeholder="원하는 수강 타입을 입력 또는 검색하세요.">
+                            <datalist id="datalistOptions2">
+                                <option value="코딩부트캠프" label="ISA">
+                                <option value="코딩부트캠프" label="일반후불제">
+                                <option value="코딩부트캠프" label="선불제">
                             </datalist>
                         </div>
                     </div>
@@ -1569,25 +1577,39 @@
                     <button class="global_btn_open">접기</button>
                 </div>
                 <div class="global_elements">
+                    
+                    <div class="quote">
+                        <h5 class="group_title">Inline Label</h5>
+                    </div>
                     <div class="input_group">
-                        <div class="form_select input_full_width">
-                            <select name="language" >
-                                <option value="none">=== 선택 ===</option>
-                                <option value="korean">한국어</option>
-                                <option value="english">영어</option>
-                                <option value="chinese">중국어</option>
-                                <option value="spanish">스페인어</option>
-                            </select>
+                        <div class="form_select input_inline_label">
+                            <div for="langselect" class="input_label col_2">
+                                <label>선택</label>
+                            </div>
+                            <div class="input_form col_9">
+                                <select name="language" id="langselect">
+                                    <option value="none">선택</option>
+                                    <option value="korean">한국어</option>
+                                    <option value="english">영어</option>
+                                    <option value="chinese">중국어</option>
+                                    <option value="spanish">스페인어</option>
+                                </select>
+                            </div>
                         </div>
-
+                    </div>
+                    
+                    <div class="quote">
+                        <h5 class="group_title">Top Label</h5>
+                    </div>
+                    <div class="input_group input_top_label">
                         <div class="input_label">
-                            <label class="input-group-text" for="inputGroupSelect01">
-                                Options
+                            <label for="inputGroupSelect01">
+                                옵션을 선택하세요.
                             </label>
                         </div>
-                        <div class="form_select">
-                            <select class="form-select" id="inputGroupSelect01">
-                                <option selected>Choose...</option>
+                        <div class="form_select input_full_width">
+                            <select id="inputGroupSelect01">
+                                <option selected>선택</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
@@ -1598,20 +1620,28 @@
             </fieldset>
     <!-- Option Select-->
             <fieldset>
-                <div class="global_section_title" id="select">
+                <div class="global_section_title" id="select_input">
                     <p class="global_section_id"><b>355</b> - Option input</p>
                     <button class="global_btn_open">접기</button>
                 </div>
                 <div class="global_elements">
-                    <div class="input_group">
-                        <div class="form_select">
+                    <div class="input_group input_top_label">
+                        <div class="input_label">
+                            <label for="inputGroupSelect01">
+                                옵션을 선택하세요.
+                            </label>
+                        </div>
+                        <div class="form_select global_margin_bottom">
                             <select name="language" >
-                                <option value="none">=== 선택 ===</option>
+                                <option value="none">선택</option>
                                 <option value="korean">한국어</option>
                                 <option value="english">영어</option>
                                 <option value="chinese">중국어</option>
-                                <option value="spanish">스페인어</option>
+                                <option value="spanish">기타(직접 입력)</option>
                             </select>
+                        </div>
+                        <div class="input_form input_full_width">
+                            <input placeholder="직접 입력하세요.">
                         </div>
                     </div>
                 </div>
@@ -1679,7 +1709,7 @@
                     </div>
                 </div>
                 <div class="input_group">
-                    <div class="form_range form_range_inline">
+                    <div class="form_range form_range_inline warning">
                         <label for="customRange3">범위를 지정해주세요.</label>
                         <input type="range" min="0" max="5" step="0.5" id="customRange3" required>
                     </div>
@@ -1687,21 +1717,127 @@
             </div>
         </fieldset>
         <fieldset> 
-            <div class="global_section_title" id="linkert">
-                <p class="global_section_id"><b>410</b> - Linkert</p>
+            <div class="global_section_title" id="likert">
+                <p class="global_section_id"><b>410</b> - likert</p>
                 <button class="global_btn_open">접기</button>
             </div>
             <div class="global_elements">
-                <div class="likert">
-                    <ul>
-                        <li> Not Guilty </li>
-                        <li><input type="radio" name="guilty" value="1" /></li>
-                        <li><input type="radio" name="guilty" value="2" /></li>
-                        <li><input type="radio" name="guilty" value="3" /></li>
-                        <li><input type="radio" name="guilty" value="4" /></li>
-                        <li><input type="radio" name="guilty" value="5" /></li>
-                        <li> Very Guilty </li>
-                    </ul>
+                <div class="input_group">
+                    
+                    <div class="global_likertgroup">
+                        <div class="likert_label">
+                            <label for="likert1">가로형</label>
+                        </div>
+                        <div class="likert" id="likert1">
+                            <div class="likertscale_horizontal">
+                                <span>전혀 그렇지 않다.</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <input id="likertLabelA1" type="radio" name="likertSample1" value="1">
+                                    <label for="likertLabelA1">1</label>
+                                </li>
+                                <li>
+                                    <input id="likertLabelA2" type="radio" name="likertSample1" value="2">
+                                    <label for="likertLabelA2">2</label>
+                                </li>
+                                <li>
+                                    <input id="likertLabelA3" type="radio" name="likertSample1" value="3">
+                                    <label for="likertLabelA3">3</label>
+                                </li>
+                                <li>
+                                    <input id="likertLabelA4" type="radio" name="likertSample1" value="4">
+                                    <label for="likertLabelA4">4</label>
+                                </li>
+                                <li>
+                                    <input id="likertLabelA5" type="radio" name="likertSample1" value="5">
+                                    <label for="likertLabelA5">5</label>
+                                </li>
+                            </ul>
+                            <div class="likertscale_horizontal">
+                                <span>매우 그렇다.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="global_likertgroup">
+                        <div class="likert_label">
+                            <label for="likert1">상하형</label>
+                        </div>
+                        <div class="likert">
+                            <ul>
+                                <li>
+                                    <input id="likertLabel1" type="radio" name="likertSample2" value="1">
+                                    <label for="likertLabel1">1</label>
+                                </li>
+                                <li>
+                                    <input id="likertLabel2" type="radio" name="likertSample2" value="2">
+                                    <label for="likertLabel2">2</label>
+                                </li>
+                                <li>
+                                    <input id="likertLabel3" type="radio" name="likertSample2" value="3">
+                                    <label for="likertLabel3">3</label>
+                                </li>
+                                <li>
+                                    <input id="likertLabel4" type="radio" name="likertSample2" value="4">
+                                    <label for="likertLabel4">4</label>
+                                </li>
+                                <li>
+                                    <input id="likertLabel5" type="radio" name="likertSample2" value="5">
+                                    <label for="likertLabel5">5</label>
+                                </li>
+                            </ul>
+                            <div class="likertscale_vertical">
+                                <div class="likertscale_left">
+                                    <span>전혀 그렇지 않다.</span>
+                                </div>
+                                <div class="likertscale_right">
+                                    <span>매우 그렇다.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="global_likertgroup">
+                        <div class="likert_label">
+                            <label for="likert1">세로형</label>
+                        </div>
+                        <div class="likert_vertical">
+                            <ul>
+                                <li class="form_check_input">
+                                    <input type="radio" name="likertSample4" id="likertSample5" value="5" checked>
+                                    <label for="likertSample5">
+                                    매우 그렇다
+                                    </label>
+                                </li>
+                                <li class="form_check_input">
+                                    <input type="radio" name="likertSample4" id="likertSample4" value="4">
+                                    <label for="likertSample4">
+                                    그렇다
+                                    </label>
+                                </li>
+                                <li class="form_check_input">
+                                    <input type="radio" name="likertSample4" id="likertSample3" value="3">
+                                    <label for="likertSample3">
+                                    보통이다
+                                    </label>
+                                </li>
+                                <li class="form_check_input">
+                                    <input type="radio" name="likertSample4" id="likertSample2" value="2">
+                                    <label for="likertSample2">
+                                    그렇지 않다
+                                    </label>
+                                </li>
+                                <li class="form_check_input">
+                                    <input type="radio" name="likertSample4" id="likertSample1" value="1">
+                                    <label for="likertSample1">
+                                    전혀 그렇지 않다
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </fieldset>
@@ -1722,7 +1858,7 @@
     <div class="fieldset section" id="date_section">
 
     <!-- Datetime-local-->
-            <fieldset class="fieldset_margin" id="datetime_local"> 
+            <fieldset class="fieldset_margin" id="date"> 
                 <div class="global_section_title">
                     <p class="global_section_id"><b>500</b> - date</p>
                     <button class="global_btn_open">접기</button>
@@ -1733,58 +1869,264 @@
                         <h5 class="group_title">Date</h5>
                     </div>
                     <div class="input_group">
-                        <div>
-                            <input type="date">
+                        <div class="input_top_label global_margin_bottom">
+                            <div class="input_label">
+                                <label for="Date1">생년월일</label>
+                            </div>
+                            <div class="input_form col_5">
+                                <input type="date" id="Date1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input_group">
+                        <div class="input_inline_label">
+                            <div class="input_label col_2">
+                                <label for="Date1">생년월일</label>
+                            </div>
+                            <div class="input_form col_5">
+                                <input type="date" id="Date1">
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="quote">
+                    <div class="quote" id="datetime_local">
                             <h5 class="group_title">Datetime Local</h5>
                     </div>
                     <div class="input_group">
-                        
-                        <h6 class="subtitle_detail">Datetime</h6>
-                        <div>
-                            <input type="datetime">
+                        <div class="input_top_label global_margin_bottom">
+                            <div class="input_label">
+                                <label for="DatetimeLocal1">일시를 입력하세요.</label>
+                            </div>
+                            <div class="input_form col_6">
+                                <input type="datetime-local" id="DatetimeLocal1">
+                            </div>
                         </div>
-                        <h6 class="subtitle_detail">Datetime Local</h6>
-                        <div>
-                            <input type="datetime-local">
+                    </div>
+                    <div class="input_group">
+                        <div class="input_inline_label">
+                            <div class="input_label col_3">
+                                <label for="DatetimeLocal1">일시를 입력하세요.</label>
+                            </div>
+                            <div class="input_form col_6">
+                                <input type="datetime-local" id="DatetimeLocal1">
+                            </div>
                         </div>
                     </div>
                 </div>
             </fieldset>
 
     <!-- Date Split-->
-            <fieldset>
-                <div class="global_section_title" id="date_split">
+            <fieldset id="date_split">
+                <div class="global_section_title">
                     <p class="global_section_id"><b>510</b> - Date Split</p>
                     <button class="global_btn_open">접기</button>
                 </div>
                 <div class="global_elements">
                     
                     <div class="quote">
-                            <h5 class="group_title">Date Split</h5>
+                        <h5 class="group_title">Date Split</h5>
                     </div>
                     <div class="input_group">
-                        <div>
-                            <input name="dateCL" id="dateCL" type="date" min="1909" max="2009">
-                            <input name="monthCL" id="monthCL" type="hidden"/>
-                            <input name="dayCL" id="dayCL" type="hidden"/>
-                            <input name="yearCL" id="yearCL" type="hidden"/>
+                        <div class="part_input_group col_4">
+                            <div class="input_top_label">
+                                <div class="input_label">
+                                    <label>연도</label>
+                                </div>
+                                <div class="input_form">
+                                    <input type="number" value="1990" placeholder="년도를 입력하세요">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part_input_group col_2">
+                            <div class="input_top_label">
+                                <div class="input_label">
+                                    <label>월</label>
+                                </div>
+                                <div class="form_select">
+                                    <select type="">
+                                        <option value="1">1월</option>
+                                        <option value="2">2월</option>
+                                        <option value="3">3월</option>
+                                        <option value="4">4월</option>
+                                        <option value="5">5월</option>
+                                        <option value="6">6월</option>
+                                        <option value="7">7월</option>
+                                        <option value="8">8월</option>
+                                        <option value="9">9월</option>
+                                        <option value="10">10월</option>
+                                        <option value="11">11월</option>
+                                        <option value="12">12월</option>
+                                    </select>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="part_input_group col_4">
+                            <div class="input_top_label">
+                                <div class="input_label">
+                                    <label>일</label>
+                                </div>
+                                <div class="input_form">
+                                    <input type="number" placeholder="1" min="1" max="31">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input_group">
+                        <div class="part_input_group">
+                            <div class="input_inline_label">
+                                <div class="input_form">
+                                    <input type="number" value="1990" placeholder="년도를 입력하세요">
+                                </div>
+                                <div class="input_label">
+                                    <label>연도</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part_input_group col_2">
+                            <div class="input_inline_label">
+                                <div class="form_select">
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </div>  
+                                <div class="input_label">
+                                    <label>월</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part_input_group">
+                            <div class="input_inline_label">
+                                <div class="input_form">
+                                    <input type="number" placeholder="1" min="1" max="31">
+                                </div>
+                                <div class="input_label">
+                                    <label>일</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="quote">
-                            <h5 class="group_title">Time Split</h5>
+                    <div class="quote" id="time_split">
+                        <h5 class="group_title">Time Split</h5>
                     </div>
                     <div class="input_group">
-                        <div>
-                            <input type="time">
-                        </div>
-                        <h6 class="subtitle_detail">Datetime Split</h6>
-                        <div>
-                            <input type="date-time">
+                            <div class="part_input_group col_2">
+                                <div class="input_top_label">
+                                    <div class="input_label">
+                                        <label>구분</label>
+                                    </div>
+                                    <div class="form_select">
+                                        <select>
+                                            <option>오전</option>
+                                            <option>오후</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="part_input_group col_3">
+                                <div class="input_top_label">
+                                    <div class="input_label">
+                                        <label>시간</label>
+                                    </div>
+                                    <div class="input_form input_full_width">
+                                        <input type="number" placeholder="12시" min="01" max="12">
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="part_input_group col_3">
+                                <div class="input_top_label">
+                                    <div class="input_label">
+                                        <label>분</label>
+                                    </div>
+                                    <div class="input_form input_full_width">
+                                        <input type="number" placeholder="30분" min="00" max="60">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="part_input_group col_3">
+                                <div class="input_top_label">
+                                    <div class="input_label">
+                                        <label>초</label>
+                                    </div>
+                                    <div class="input_form input_full_width">
+                                        <input type="number" placeholder="25초" min="00" max="60">
+                                    </div>
+                                </div>
+                            </div>
+                        <p class="default hint_text">* form 내 '시','분','초' 단위 표기 script 작업 필요</p>
+                    </div>
+                    <div class="input_group">
+                            <div class="part_input_group col_2">
+                                <div class="input_inline_label">
+                                    <div class="form_select">
+                                        <select>
+                                            <option>오전</option>
+                                            <option>오후</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="part_input_group col_auto">
+                                <div class="input_inline_label">
+                                    <div class="input_form">
+                                        <input type="number" placeholder="12" min="01" max="12">
+                                    </div>
+                                    <div class="input_label">
+                                        <label>시</label>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="part_input_group col_auto">
+                                <div class="input_inline_label">
+                                    <div class="input_form">
+                                        <input type="number" placeholder="30" min="00" max="60">
+                                    </div>
+                                    <div class="input_label">
+                                        <label>분</label>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="part_input_group col_auto">
+                                <div class="input_inline_label">
+                                    <div class="input_form">
+                                        <input type="number" placeholder="25" min="00" max="60">
+                                    </div>
+                                    <div class="input_label">
+                                        <label>초</label>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    
+                    <div class="quote" id="datetime_split">
+                        <h5 class="group_title">Datetime Split</h5>
+                    </div>
+                    <div class="input_group">
+                        <div class="input_top_label">
+                            <div class="input_label">
+                                <label for="">Datetime Split</label>
+                            </div>
+                            <div>
+                                <input type="date">
+                                <input type="time">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1812,8 +2154,71 @@
                 <button class="global_btn_open">접기</button>
             </div>
             <div class="global_elements">
-                <div>
-                    <input type="file">
+                
+                <div class="quote">
+                        <h5 class="group_title">Top Label</h5>
+                </div>
+
+                <div class="input_group">
+            <!-- input file Default-->
+                    <div class="global_margin_bottom input_top_label">
+                        <div class="input_label">
+                            <label for="formFile">파일 업로드</label>
+                        </div>
+                        <div class="form_control input_full_width">
+                            <input type="file" id="formFile">
+                        </div>
+                    </div>
+            <!-- input file Disabled-->
+                    <div class="global_margin_bottom input_top_label">
+                        <div class="input_label">
+                            <label for="formFileDisabled">파일 업로드</label>
+                        </div>
+                        <div class="form_control input_full_width">
+                            <input type="file" id="formFileDisabled" disabled>
+                        </div>
+                    </div>
+            <!-- input file required-->
+                    <div class="input_top_label">
+                        <div class="input_label warning">
+                            <label for="formFileDisabled">파일 업로드</label>
+                        </div>
+                        <div class="form_control input_full_width">
+                            <input type="file" id="formFileDisabled" required>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="quote">
+                        <h5 class="group_title">Inline Label</h5>
+                </div>
+                <div class="input_group">
+            <!-- input file Default-->
+                    <div class="input_inline_label">
+                        <div class="input_label col_2">
+                            <label for="formFile">파일 업로드</label>
+                        </div>
+                        <div class="form_control col_9">
+                            <input type="file" id="formFile">
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="quote">
+                        <h5 class="group_title">multiple 여러 파일 선택</h5>
+                </div>
+                <div class="input_group">
+            <!-- 여러개 input file-->
+                    <div class="input_top_label">
+                        <div class="input_label">
+                            <label for="formFile">파일 업로드</label>
+                        </div>
+                        <div class="form_control input_full_width">
+                            <input type="file" id="formFile" multiple>
+                        </div>
+                    </div>
                 </div>
             </div>
         </fieldset>
@@ -1843,7 +2248,11 @@
                 </div>
                 <div class="global_elements">
                     <div>
-                        Group List
+                        인풋그룹, 그 중 하나만
+                        순서바꾸기
+                        접기
+                        삭제하기
+                        추가하기
                     </div>
                 </div>
             </fieldset>
@@ -1856,7 +2265,11 @@
                 </div>
                 <div class="global_elements">
                     <div>
-                        Group Dictionary
+                        인풋그룹, 전체 덩어리를
+                        순서바꾸기
+                        접기
+                        삭제하기
+                        추가하기
                     </div>
                 </div>
             </fieldset>
@@ -1886,7 +2299,10 @@
                 </div>
                 <div class="global_elements">
                     <div>
-                        Content
+                        801 LABEL
+                    </div>
+                    <div>
+                        802 LINK
                     </div>
                 </div>
             </fieldset>
@@ -1899,7 +2315,13 @@
                 </div>
                 <div class="global_elements">
                     <div>
-                        Content Media
+                        821 IMAGE
+                    </div>
+                    <div>
+                        822 VIDEO
+                    </div>
+                    <div>
+                        829 YOUTUBE
                     </div>
                 </div>
             </fieldset>
@@ -1912,7 +2334,10 @@
                 </div>
                 <div class="global_elements">
                     <div>
-                        Content Document
+                        831 HTML
+                    </div>
+                    <div>
+                        832 PDF
                     </div>
                 </div>
             </fieldset>
@@ -1925,7 +2350,16 @@
                 </div>
                 <div class="global_elements">
                     <div>
-                        Content Dialog
+                        851 SIMPLE DIALOG
+                    </div>
+                    <div>
+                        852 FORM DIALOG
+                    </div>
+                    <div>
+                        855 BROWSER ALERT
+                    </div>
+                    <div>
+                        865 BROWSER CONFIRM
                     </div>
                 </div>
             </fieldset>
