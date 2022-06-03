@@ -45,7 +45,7 @@
     "jquery": "^3.5.1",
     "jquery-mask-plugin": "^1.14.16",
     "jquery-migrate": "^3.3.0",
-    "jquery-validation": "^1.19.1",
+    "jquery-validation": "^1.19.4",
     "jszip": "^3.4.0",
     "leaflet": "^1.6.0",
     "list.js": "^1.5.0",
